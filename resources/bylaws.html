@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The official bylaws of SEIU Local 503 at Oregon State University.">
+    <meta name="author" content="SEIU Local 503 at OSU">
+    <title>Bylaws - SEIU Local 503, OSU</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Lora:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --brand-purple-dark: #4C1D95; /* Deep Purple */
+            --brand-purple: #7C3AED;      /* Vibrant Purple */
+            --brand-purple-light: #EDE9FE; /* Lighter Lavender for high contrast */
+            --brand-dark: #111827;         /* Near-black for high contrast text/bg */
+            --brand-light: #F9FAFB;        /* Off-white Background */
+            --text-primary: #1F2937;
+            --text-secondary: #374151;     /* Darker secondary text for better contrast */
+            --border-color: #D1D5DB;
+        }
+
+        html {
+            scroll-padding-top: 80px; /* Offset for sticky header */
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--brand-light);
+            color: var(--text-primary);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Lora', serif;
+            color: var(--brand-purple-dark);
+        }
+
+        /* Accessibility: Clear focus indicators for all interactive elements */
+        a:focus-visible, button:focus-visible, details:focus-visible, input:focus-visible, textarea:focus-visible {
+            outline: 3px solid var(--brand-purple);
+            outline-offset: 2px;
+            border-radius: 4px;
+        }
+        
+        .btn {
+            @apply font-bold py-3 px-6 rounded-lg transition-all duration-300 ease-in-out transform hover:scale-105;
+        }
+        .btn-primary {
+            @apply bg-gradient-to-r from-brand-purple to-violet-600 text-white shadow-md hover:shadow-lg;
+        }
+        .btn-secondary {
+            @apply bg-brand-dark text-white hover:bg-black;
+        }
+        .btn-outline {
+             @apply bg-white text-brand-purple border-2 border-brand-purple hover:bg-brand-purple hover:text-white;
+        }
+
+        /* Custom Tailwind config for our CSS variables */
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-purple-dark': 'var(--brand-purple-dark)',
+                        'brand-purple': 'var(--brand-purple)',
+                        'brand-purple-light': 'var(--brand-purple-light)',
+                        'brand-dark': 'var(--brand-dark)',
+                        'brand-light': 'var(--brand-light)',
+                        'text-primary': 'var(--text-primary)',
+                        'text-secondary': 'var(--text-secondary)',
+                        'border-color': 'var(--border-color)',
+                    }
+                }
+            }
+        }
+    </style>
+</head>
+<body class="bg-brand-light">
+
+    <!-- Header -->
+    <header class="bg-white/80 backdrop-blur-lg border-b border-border-color sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="/index.html" class="flex items-center space-x-2">
+                <span class="text-2xl font-bold text-brand-purple-dark">SEIU 503</span>
+                <span class="text-lg text-text-secondary hidden md:block">| Oregon State University</span>
+            </a>
+            <div class="hidden lg:flex space-x-8">
+                <a href="/about.html" class="text-text-secondary hover:text-brand-purple transition-colors">About</a>
+                <a href="/events.html" class="text-text-secondary hover:text-brand-purple transition-colors">Events</a>
+                <a href="/news.html" class="text-text-secondary hover:text-brand-purple transition-colors">News</a>
+                <a href="/resources.html" class="text-brand-purple font-bold">Resources & Rights</a>
+                <a href="/leadership.html" class="text-text-secondary hover:text-brand-purple transition-colors">Leadership</a>
+                <a href="/contact.html" class="text-text-secondary hover:text-brand-purple transition-colors">Contact</a>
+            </div>
+            <div class="lg:hidden">
+                <button id="mobile-menu-button" class="text-text-secondary hover:text-brand-purple focus:outline-none" aria-label="Open menu">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden absolute top-full left-0 w-full bg-white border-t border-border-color shadow-lg">
+            <a href="/about.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">About</a>
+            <a href="/events.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Events</a>
+            <a href="/news.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">News</a>
+            <a href="/resources.html" class="block text-center py-3 px-6 text-lg text-brand-purple bg-brand-purple-light font-semibold">Resources & Rights</a>
+            <a href="/leadership.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Leadership</a>
+            <a href="/contact.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Contact</a>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="bg-brand-purple-light border-b border-border-color">
+        <div class="container mx-auto px-6 py-16 text-center">
+            <h1 class="text-5xl font-bold">Our Union Bylaws</h1>
+            <p class="mt-4 text-lg text-text-secondary max-w-3xl mx-auto">The governing rules of SEIU Local 503 at Oregon State University, as adopted and amended by the membership.</p>
+        </div>
+    </section>
+
+    <main class="container mx-auto px-6 py-16">
+        <div class="max-w-4xl mx-auto bg-white p-8 md:p-12 rounded-xl border border-border-color">
+            
+            <div class="text-center mb-12">
+                <p class="text-text-secondary text-lg">These documents define the structure, governance, and procedures of our local union. They ensure we operate in a democratic, transparent, and fair manner, accountable to the members we serve.</p>
+                <a href="/resources/Local_083_OSU_Bylaws.pdf" class="btn btn-primary mt-6" download>Download Full Bylaws (PDF)</a>
+            </div>
+
+            <!-- Bylaws Content -->
+            <div class="prose max-w-none text-text-secondary text-lg leading-relaxed space-y-8">
+                
+                <h1 class="text-4xl font-bold text-brand-purple-dark text-center">Constitution</h1>
+
+                <h2 class="text-3xl font-bold text-brand-purple-dark border-b border-border-color pb-2">Article 1- Name</h2>
+                <p>The name of this organization shall be the Oregon State University Local 083 (the Local) of SEIU Local 503, OPEU (the Union).</p>
+
+                <h2 class="text-3xl font-bold text-brand-purple-dark border-b border-border-color pb-2">Article 2-Purpose</h2>
+                <p>Local 083 is a basic membership group of the Union and is established for the purpose of representing the classified employees of Oregon State University.</p>
+
+                <h2 class="text-3xl font-bold text-brand-purple-dark border-b border-border-color pb-2">Article 3 - Membership</h2>
+                <p>Membership is open to all SEIU Local 503, OPEU bargaining unit members of Oregon State University.</p>
+
+                <h2 class="text-3xl font-bold text-brand-purple-dark border-b border-border-color pb-2">Article 4- Officers</h2>
+                <p>The officers of the Local shall be the President, the Vice President, the Secretary, the Treasurer, the Chief Steward, and the Membership Coordinator.</p>
+
+                <h2 class="text-3xl font-bold text-brand-purple-dark border-b border-border-color pb-2">Article 5 - Amendments</h2>
+                <p>The Constitution may only be amended by a majority vote of two-thirds (2/3) of the ballots cast in a mail-in vote following proper notice to the membership. Proper notice means the Local shall send to the membership the proposed amendment(s) by mail or email, for members to review 30 days prior to the vote. The notice will include the date of the vote.</p>
+                
+                <hr class="my-12">
+
+                <h1 class="text-4xl font-bold text-brand-purple-dark text-center">Local 083 Bylaws</h1>
+
+                <h2 class="text-3xl font-bold text-brand-purple-dark border-b border-border-color pb-2">Article 1 - Duties of the Local</h2>
+                <p>The primary duties of the Local shall be to administer collective bargaining agreements for the betterment of the members of the Local, to develop a system of communication for bargaining information, to vote on the ratification of the collective bargaining agreement, to elect officers and stewards from within, and to foster and protect the general goals of the Union.</p>
+
+                <h2 class="text-3xl font-bold text-brand-purple-dark border-b border-border-color pb-2">Article 2-Duties of the Executive Committee</h2>
+                <p>The officers shall constitute the Executive Committee. The Executive Committee shall consist of the President, the Vice President, the Secretary, the Treasurer, the Chief Steward, and the Membership Coordinator. The Executive Committee shall meet as necessary to conduct business affecting the membership of the Local. A quorum of four (4) is empowered to transact such business.</p>
+
+                <h2 class="text-3xl font-bold text-brand-purple-dark border-b border-border-color pb-2">Article 3-Duties of Officers</h2>
+                <p><strong>Section 1- President</strong></p>
+                <ul class="list-disc pl-8">
+                    <li>The President shall preside over all meetings of the Local and the Executive Committee.</li>
+                    <li>The President shall be an automatic General Council Delegate and attend General Council.</li>
+                    <li>The President shall act as spokesperson for the Local.</li>
+                    <li>The President, with council from the Executive Committee, shall appoint special committees and their members, replace inactive members and/or committees and dismiss committees in their entirety. In the event of a vacancy in the Executive Committee, the President shall appoint a non-voting interim officer until an election can be held.</li>
+                </ul>
+                <p><strong>Section 2 - Vice President</strong></p>
+                <ul class="list-disc pl-8">
+                    <li>The Vice President shall, in the absence of or upon request of the President, perform the duties of the President.</li>
+                    <li>The Vice President shall replace the President for the unexpired term in the event of the President's death, incapacity, resignation, removal from office or any other reason preventing the President from completing her/his term.</li>
+                    <li>The Vice President shall assist the Membership Coordinator and maintain a working communication system.</li>
+                </ul>
+                <p><strong>Section 3-Secretary</strong></p>
+                <ul class="list-disc pl-8">
+                    <li>The Secretary shall record minutes for all Local and Executive Committee meetings.</li>
+                    <li>The Secretary shall maintain a file of all such minutes.</li>
+                </ul>
+                <p><strong>Section 4-Treasurer</strong></p>
+                <ul class="list-disc pl-8">
+                    <li>The Treasurer shall maintain the financial records of the Local and shall be responsible for disbursement of funds on behalf of the Local. Requests for disbursement of funds shall be made to Union Headquarters in care of the statewide Union Treasurer who shall comply with such requests when they are in compliance with the Constitution and Bylaws of the Union.</li>
+                    <li>The Treasurer shall provide a financial report at all Local and Executive Committee Meetings or upon request.</li>
+                </ul>
+                <p><strong>Section 5 - Chief Steward</strong></p>
+                <ul class="list-disc pl-8">
+                    <li>The Chief Steward shall be responsible for the local enforcement of the collective bargaining agreement.</li>
+                    <li>The Chief Steward shall recruit, mentor and provide training opportunities for stewards.</li>
+                    <li>The Chief Steward shall preside over Steward Council Meetings.</li>
+                    <li>The Chief Steward shall ensure that all stewards' timelines are met.</li>
+                    <li>The Chief Steward shall assign and assist Stewards as necessary through the grievance process.</li>
+                    <li>The Chief Steward shall monitor grievances filed by stewards and regularly report to the Executive Committee.</li>
+                    <li>The Chief Steward shall maintain a catalog of all issues and grievances filed against Oregon State University or its subdivisions by the grievant's name. This catalog shall indicate the grievance's final disposition and shall include any other pertinent information that may be of help with future grievances or in bargaining.</li>
+                    <li>The Chief Steward shall handle, maintain, and safeguard records of members of the bargaining unit.</li>
+                    <li>The Chief Steward shall be an automatic General Council Delegate and attend General Council.</li>
+                    <li>A candidate for Chief Steward shall be an active Steward in the Steward Council.</li>
+                </ul>
+                <p><strong>Section 6- Membership Coordinator</strong></p>
+                <ul class="list-disc pl-8">
+                    <li>The Membership Coordinator shall be responsible for the recruitment of new members and the retention of current members.</li>
+                    <li>The Membership Coordinator shall assist with the development and maintenance of the Communication Action Team.</li>
+                    <li>The Membership Coordinator shall receive all university new employee lists, and all Local 083 membership lists and shall use these lists to recruit new members and correct discrepancies.</li>
+                    <li>The Membership Coordinator shall be responsible for the Union presentation at the New Employee Orientation.</li>
+                    <li>The Membership Coordinator shall send out a letter to all Fair Share employees annually urging them to become members.</li>
+                    <li>The Membership Coordinator shall be an automatic General Council Delegate and attend General Council.</li>
+                </ul>
+
+                <h2 class="text-3xl font-bold text-brand-purple-dark border-b border-border-color pb-2">Article 4-General Council Resolutions</h2>
+                <p>Resolutions to the General Council may be presented by any member of the Local at any Classified Workers' Meeting. The Executive Committee shall, by majority vote, endorse or reject sponsorship of the resolution. If endorsed, the resolution will be submitted to the Resolution Review Committee for further review, and, if accepted, it will be passed on to the General Council of the Union. It is the duty of the Executive Committee of the Local to insure that all resolutions, submitted to the Resolution Review Committee, follow standard form. In the event the Local's Executive Committee does not endorse the resolution, the author of the resolution may, after having obtained the signatures of fifty (50) active members, present it to the Resolutions Review Committee.</p>
+
+                <h2 class="text-3xl font-bold text-brand-purple-dark border-b border-border-color pb-2">Article 5 - Delegates to General Council</h2>
+                <p>In addition to the President, the Local's Chief Steward and Membership Coordinator shall serve as delegates to the Union's General Council. Additional delegates, as mandated by the Union's Constitution and Bylaws, shall be elected from the membership of the Local. Nominations may be made by direct mail or email.</p>
+
+                <h2 class="text-3xl font-bold text-brand-purple-dark border-b border-border-color pb-2">Article 6-Committees</h2>
+                <p>Necessary committees may be appointed by the President or nominated by the Executive Committee.</p>
+                <p>Standing Committees will be:</p>
+                <ol class="list-decimal pl-8">
+                    <li>Executive Committee (elected by members)</li>
+                    <li>Stewards' Council</li>
+                    <li>Communication Action Team</li>
+                </ol>
+
+                <h2 class="text-3xl font-bold text-brand-purple-dark border-b border-border-color pb-2">Article 7 - Union Stewards and Stewards' Council</h2>
+                <p><strong>Section 1-</strong> The Local's Union Stewards shall comprise the Local's Stewards' Council. The Stewards' Council shall nominate one of its members to serve as the Local's Chief Steward. The Chief Steward shall be elected by a vote of the general membership for a term of two years at the same time as the other Local officers. Any member in good standing may volunteer to become a Union Steward.</p>
+                <p><strong>Section 2 - Union Stewards</strong></p>
+                <ul class="list-disc pl-8">
+                    <li>Union Stewards shall complete an SEIU Steward training and be certified prior to becoming an active Steward.</li>
+                    <li>Union Stewards shall handle grievances of members of the bargaining unit as required by the Union.</li>
+                    <li>Union Stewards shall act as the primary communication link amongst the Union, the Local, and the membership in the worksites represented by the Union Steward.</li>
+                    <li>Union Stewards shall collectively maintain a catalog of all issues and grievances brought forward by represented workers.</li>
+                    <li>Union Stewards shall organize and build the Union in those worksites represented by the Union Steward.</li>
+                    <li>Union Stewards shall adhere to the responsibilities and duties as set forth in the SEIU Local Steward's Pledge.</li>
+                    <li>Union Stewards shall report to the Chief Steward.</li>
+                </ul>
+                <p><strong>Section 3-Stewards' Council</strong></p>
+                <ul class="list-disc pl-8">
+                    <li>The Local's Stewards' Council shall work collaboratively to enforce the contract and represent the membership.</li>
+                    <li>The Local's Stewards' Council shall support the mission as set forth by the Executive Committee.</li>
+                    <li>The Local's Stewards' Council shall have the authority to remove inactive or incompetent Union Stewards by a majority vote.</li>
+                    <li>The Local's Stewards' Council may, at times, equal the maximum amount of Stewards allowed by the Collective Bargaining Agreement. In this case, if an additional member wishes to be a Steward, the Stewards' Council shall have the authority to decide, by majority vote, who shall comprise the Stewards' Council.</li>
+                </ul>
+
+                <h2 class="text-3xl font-bold text-brand-purple-dark border-b border-border-color pb-2">Article 8-Communication Action Team</h2>
+                <p>The Communication Action Team is a network of Union members throughout Local 083 who volunteer to spread Union communications and organize actions in their workplace or area.</p>
+
+                <h2 class="text-3xl font-bold text-brand-purple-dark border-b border-border-color pb-2">Article 9 - Bargaining Delegates</h2>
+                <p><strong>Section 1-</strong> Bargaining Delegates will be elected at the same time as Local officers, and with the same procedure and serve the same term. Should any Bargaining Delegate position become vacant for any reason, vacancies will be filled by duly elected Alternates. The number of Bargaining Delegates will be determined by the Union's Administrative Policies and Procedures.</p>
+                <p><strong>Section 2 - Bargaining Delegates:</strong></p>
+                <ul class="list-disc pl-8">
+                    <li>Bargaining Delegates shall attend all scheduled bargaining conferences.</li>
+                    <li>Bargaining Delegates shall educate and inform local members of bargaining issues at regular intervals.</li>
+                    <li>Bargaining Delegates shall solicit input from local members and represent the Local at bargaining sessions.</li>
+                    <li>Bargaining Delegates shall utilize and maintain a communication system to communicate bargaining issues.</li>
+                    <li>Bargaining Delegates shall elect, from the group of bargaining delegates, one table representative and one alternate table representative.</li>
+                </ul>
+
+                <h2 class="text-3xl font-bold text-brand-purple-dark border-b border-border-color pb-2">Article 10  Elections</h2>
+                <p><strong>Section 1-</strong> All Local elections of Officers, Bargaining Delegates and General Council Delegates shall be held every two years in accordance with the Union's Bylaws. All terms of office shall be two (2) years beginning May 1 of even numbered years.</p>
+                <p><strong>Section 2 -</strong> The President, at the January Local meeting, shall announce the appointment of the Election Committee. The Election Committee shall consist of at least three (3) active members of the Local, who are not nominees, to:</p>
+                <ul class="list-disc pl-8">
+                    <li>Accept nominations.</li>
+                    <li>Prepare, distribute, receive, and count valid ballots.</li>
+                    <li>Certify and announce election results.</li>
+                </ul>
+                <p><strong>Section 3 -</strong> After the Election Committee's appointment has been announced, nominations can be submitted in writing to the elections committee.</p>
+                <p><strong>Section 4-Election Process</strong></p>
+                <ul class="list-disc pl-8">
+                    <li>Newly-elected Officers, Bargaining Delegates and General Council Delegates will be installed at the April Classified Workers' Meeting, with their term beginning on May 1st.</li>
+                    <li>Ballots will be counted no later than one (1) day before the April Classified Workers' Meeting.</li>
+                    <li>Ballots will be due back no later that two (2) days prior to the April Classified Workers' Meeting.</li>
+                    <li>Ballots will be mailed no later than twenty-one (21) days prior to the ballot due date.</li>
+                    <li>Nominations will close no later than thirty-five (35) days prior to the ballot due date.</li>
+                    <li>Nominations will open no later than the February Classified Workers' Meeting.</li>
+                </ul>
+                <p><strong>Section 5-</strong> The election will be by mail-in secret ballot.</p>
+                <p><strong>Section 6-</strong> The Committee will announce the results within seventy-two (72) hours of the final count.</p>
+                <p><strong>Section 7-</strong> In the event of a Local officer position vacancy that will last more than six (6) months, other than that of President, adequate notice for nominations shall be given to the voting membership and an election held in accordance to the Union's Bylaws.</p>
+
+                <h2 class="text-3xl font-bold text-brand-purple-dark border-b border-border-color pb-2">Article 11 - Classified Workers' Meetings</h2>
+                <p><strong>Section 1-</strong> The Local shall meet at least six times per year and at least one of these meetings shall be prior to the Union's General Council to comply with the Union's Bylaws.</p>
+                <p><strong>Section 2-</strong> All members attending a duly publicized meeting of the Local shall constitute a quorum, whereby and hereinafter "duly publicized" shall mean with at least a seven (7) day notice.</p>
+
+                <h2 class="text-3xl font-bold text-brand-purple-dark border-b border-border-color pb-2">Article 12 - The Union's Governing Documents</h2>
+                <p>In all conflicts, errors, and omissions, the governing documents of the Union shall prevail.</p>
+
+                <h2 class="text-3xl font-bold text-brand-purple-dark border-b border-border-color pb-2">Article 13- Amendments</h2>
+                <p>The Bylaws may only be amended by a majority vote of two-thirds (2/3) of the ballots cast in a mail-in vote following proper notice to the membership. Proper notice means the Local shall send to the membership the proposed amendment(s) by mail or email, for members to review thirty (30) days prior to the vote. The notice will include the date of the vote.</p>
+
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark text-white mt-24">
+        <div class="container mx-auto px-6 py-8">
+            <div class="flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+                <p class="text-gray-400">&copy; 2025 SEIU Local 503, Oregon State University.</p>
+                <div class="flex mt-6 md:mt-0 space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white" aria-label="Facebook page">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" /></svg>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white" aria-label="Twitter profile">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.71v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" /></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // --- Mobile Menu Toggle ---
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = document.querySelectorAll('#mobile-menu a');
+
+        mobileMenuButton.addEventListener('click', () => {
+            const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+            mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenuButton.setAttribute('aria-expanded', 'false');
+            });
+        });
+    </script>
+</body>
+</html>
