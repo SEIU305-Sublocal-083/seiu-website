@@ -73,6 +73,14 @@
             color: white;
             border-radius: 50%;
         }
+        
+        /* Style for highlighting event card */
+        .highlight-event {
+            transition: all 0.3s ease-in-out;
+            background-color: var(--brand-purple-light);
+            transform: scale(1.02);
+            box-shadow: 0 0 0 2px var(--brand-purple);
+        }
 
         /* Custom Tailwind config for our CSS variables */
         tailwind.config = {
@@ -147,11 +155,11 @@
             </div>
 
             <!-- Upcoming Events List -->
-            <div class="lg:col-span-2">
+            <div id="events-list" class="lg:col-span-2">
                 <h2 class="text-4xl font-bold mb-8">Upcoming Events</h2>
                 <div class="space-y-6">
                      <!-- Steward Meeting -->
-                    <div class="bg-white p-6 rounded-xl border border-border-color flex flex-col md:flex-row gap-6">
+                    <div id="event-2025-08-24" class="bg-white p-6 rounded-xl border border-border-color flex flex-col md:flex-row gap-6">
                         <div class="flex-shrink-0 text-center md:text-left">
                             <p class="text-brand-purple font-bold text-lg">AUG</p>
                             <p class="text-4xl font-bold">24</p>
@@ -159,14 +167,14 @@
                         <div class="flex-grow">
                             <div class="flex justify-between items-start mb-2">
                                 <h3 class="text-2xl font-bold">Steward Meeting</h3>
-                                <div class="bg-brand-purple-light text-brand-purple-dark font-bold rounded-full px-3 py-1 text-sm whitespace-nowrap">Hybrid Meeting</div>
+                                <div class="bg-brand-purple-light text-brand-purple-dark font-bold rounded-full px-3 py-1 text-sm whitespace-nowrap">Zoom Meeting</div>
                             </div>
                             <p class="text-text-secondary mb-4">Monthly meeting for all stewards to discuss workplace issues and union business.</p>
                             <a href="events/2025-08-24-Steward-Meeting.html" class="font-semibold text-brand-purple hover:underline">Get Zoom Link & Details &rarr;</a>
                         </div>
                     </div>
                     <!-- CAT Meeting -->
-                    <div class="bg-white p-6 rounded-xl border border-border-color flex flex-col md:flex-row gap-6">
+                    <div id="event-2025-09-03-1" class="bg-white p-6 rounded-xl border border-border-color flex flex-col md:flex-row gap-6">
                         <div class="flex-shrink-0 text-center md:text-left">
                             <p class="text-brand-purple font-bold text-lg">SEP</p>
                             <p class="text-4xl font-bold">03</p>
@@ -174,14 +182,14 @@
                         <div class="flex-grow">
                             <div class="flex justify-between items-start mb-2">
                                 <h3 class="text-2xl font-bold">CAT Meeting</h3>
-                                <div class="bg-brand-purple-light text-brand-purple-dark font-bold rounded-full px-3 py-1 text-sm whitespace-nowrap">Hybrid Meeting</div>
+                                <div class="bg-brand-purple-light text-brand-purple-dark font-bold rounded-full px-3 py-1 text-sm whitespace-nowrap">Zoom Meeting</div>
                             </div>
                             <p class="text-text-secondary mb-4">Contract Action Team meeting to plan and coordinate actions to support bargaining.</p>
                             <a href="events/2025-09-03-CAT-Meeting.html" class="font-semibold text-brand-purple hover:underline">Get Zoom Link & Details &rarr;</a>
                         </div>
                     </div>
                      <!-- New Employee Orientation -->
-                    <div class="bg-white p-6 rounded-xl border border-border-color flex flex-col md:flex-row gap-6">
+                    <div id="event-2025-09-03-2" class="bg-white p-6 rounded-xl border border-border-color flex flex-col md:flex-row gap-6">
                         <div class="flex-shrink-0 text-center md:text-left">
                             <p class="text-brand-purple font-bold text-lg">SEP</p>
                             <p class="text-4xl font-bold">03</p>
@@ -196,7 +204,7 @@
                         </div>
                     </div>
                      <!-- Bargaining Committee Meeting -->
-                    <div class="bg-white p-6 rounded-xl border border-border-color flex flex-col md:flex-row gap-6">
+                    <div id="event-2025-09-04" class="bg-white p-6 rounded-xl border border-border-color flex flex-col md:flex-row gap-6">
                         <div class="flex-shrink-0 text-center md:text-left">
                             <p class="text-brand-purple font-bold text-lg">SEP</p>
                             <p class="text-4xl font-bold">04</p>
@@ -204,14 +212,14 @@
                         <div class="flex-grow">
                             <div class="flex justify-between items-start mb-2">
                                 <h3 class="text-2xl font-bold">Bargaining Committee Meeting</h3>
-                                <div class="bg-brand-purple-light text-brand-purple-dark font-bold rounded-full px-3 py-1 text-sm whitespace-nowrap">Hybrid Meeting</div>
+                                <div class="bg-brand-purple-light text-brand-purple-dark font-bold rounded-full px-3 py-1 text-sm whitespace-nowrap">Zoom Meeting</div>
                             </div>
                             <p class="text-text-secondary mb-4">The bargaining committee will meet to prepare for upcoming negotiations.</p>
                             <a href="events/2025-09-04-Bargaining-Committee-Meeting.html" class="font-semibold text-brand-purple hover:underline">Get Zoom Link & Details &rarr;</a>
                         </div>
                     </div>
                      <!-- Executive Team Meeting -->
-                    <div class="bg-white p-6 rounded-xl border border-border-color flex flex-col md:flex-row gap-6">
+                    <div id="event-2025-09-11" class="bg-white p-6 rounded-xl border border-border-color flex flex-col md:flex-row gap-6">
                         <div class="flex-shrink-0 text-center md:text-left">
                             <p class="text-brand-purple font-bold text-lg">SEP</p>
                             <p class="text-4xl font-bold">11</p>
@@ -219,14 +227,14 @@
                         <div class="flex-grow">
                             <div class="flex justify-between items-start mb-2">
                                 <h3 class="text-2xl font-bold">Executive Team Meeting</h3>
-                                <div class="bg-brand-purple-light text-brand-purple-dark font-bold rounded-full px-3 py-1 text-sm whitespace-nowrap">Union Office</div>
+                                <div class="bg-brand-purple-light text-brand-purple-dark font-bold rounded-full px-3 py-1 text-sm whitespace-nowrap">Zoom Meeting</div>
                             </div>
                             <p class="text-text-secondary mb-4">Regularly scheduled meeting for the Local 083 Executive Team.</p>
                             <a href="events/2025-09-11-Executive-Team-Meeting.html" class="font-semibold text-brand-purple hover:underline">View Details &rarr;</a>
                         </div>
                     </div>
                     <!-- Event Item for Bowling Night -->
-                    <div class="bg-white p-6 rounded-xl border-2 border-brand-purple shadow-lg flex flex-col md:flex-row gap-6">
+                    <div id="event-2025-10-22" class="bg-white p-6 rounded-xl border-2 border-brand-purple shadow-lg flex flex-col md:flex-row gap-6">
                         <div class="flex-shrink-0 text-center md:text-left">
                             <p class="text-brand-purple font-bold text-lg">OCT</p>
                             <p class="text-4xl font-bold">22</p>
@@ -335,16 +343,18 @@
 
             // Add days of the month
             for (let i = 1; i <= daysInMonth; i++) {
-                let dayClasses = 'calendar-day w-9 h-9 flex items-center justify-center';
+                let dayClasses = 'calendar-day w-9 h-9 flex items-center justify-center rounded-full';
+                let dayAttributes = '';
                 // Check if the day is today
                 if (i === today.getDate() && month === today.getMonth() && year === today.getFullYear()) {
                     dayClasses += ' is-today';
                 } 
                 // Check if the day has an event
-                else if (events[month] && events[month].includes(i) && year === 2025) {
-                     dayClasses += ' has-event';
+                if (events[month] && events[month].includes(i) && year === 2025) {
+                     dayClasses += ' has-event cursor-pointer hover:bg-violet-200 transition-colors';
+                     dayAttributes = `data-date="${year}-${month}-${i}" role="button" tabindex="0" aria-label="View events for ${monthName} ${i}"`;
                 }
-                html += `<div class="${dayClasses}">${i}</div>`;
+                html += `<div class="${dayClasses}" ${dayAttributes}>${i}</div>`;
             }
 
             html += `</div></div>`;
@@ -368,6 +378,52 @@
         // Initial calendar generation
         generateCalendar(currentDate.getMonth(), currentDate.getFullYear());
 
+        // --- Interactive Calendar Logic ---
+        function highlightEvent(dateStr) {
+            const targetEvents = document.querySelectorAll(`[id^='event-${dateStr}']`);
+            if (targetEvents.length > 0) {
+                // Scroll the first event into view
+                targetEvents[0].scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'center'
+                });
+
+                // Highlight all events for that day
+                targetEvents.forEach(eventEl => {
+                    eventEl.classList.add('highlight-event');
+                    setTimeout(() => {
+                        eventEl.classList.remove('highlight-event');
+                    }, 2500); // Highlight for 2.5 seconds
+                });
+            }
+        }
+
+        calendarContainer.addEventListener('click', (e) => {
+            const dayEl = e.target.closest('.calendar-day');
+            if (dayEl && dayEl.dataset.date) {
+                const [year, month, day] = dayEl.dataset.date.split('-');
+                // Format date to YYYY-MM-DD
+                const formattedMonth = String(parseInt(month, 10) + 1).padStart(2, '0');
+                const formattedDay = String(day).padStart(2, '0');
+                const dateStr = `${year}-${formattedMonth}-${formattedDay}`;
+                highlightEvent(dateStr);
+            }
+        });
+
+        // Handle keyboard navigation for accessibility
+        calendarContainer.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                const dayEl = e.target.closest('.calendar-day');
+                if (dayEl && dayEl.dataset.date) {
+                    e.preventDefault(); // Prevent space from scrolling the page
+                    const [year, month, day] = dayEl.dataset.date.split('-');
+                    const formattedMonth = String(parseInt(month, 10) + 1).padStart(2, '0');
+                    const formattedDay = String(day).padStart(2, '0');
+                    const dateStr = `${year}-${formattedMonth}-${formattedDay}`;
+                    highlightEvent(dateStr);
+                }
+            }
+        });
 
         // --- Mobile Menu Toggle ---
         const mobileMenuButton = document.getElementById('mobile-menu-button');
