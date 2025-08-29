@@ -158,36 +158,6 @@
             <div id="events-list" class="lg:col-span-2">
                 <h2 class="text-4xl font-bold mb-8">Upcoming Events</h2>
                 <div class="space-y-6">
-                     <!-- Steward Meeting -->
-                    <div id="event-2025-08-24" class="bg-white p-6 rounded-xl border border-border-color flex flex-col md:flex-row gap-6">
-                        <div class="flex-shrink-0 text-center md:text-left">
-                            <p class="text-brand-purple font-bold text-lg">AUG</p>
-                            <p class="text-4xl font-bold">28</p>
-                        </div>
-                        <div class="flex-grow">
-                            <div class="flex justify-between items-start mb-2">
-                                <h3 class="text-2xl font-bold">Steward Meeting</h3>
-                                <div class="bg-brand-purple-light text-brand-purple-dark font-bold rounded-full px-3 py-1 text-sm whitespace-nowrap">Zoom Meeting</div>
-                            </div>
-                            <p class="text-text-secondary mb-4">Monthly meeting for all stewards to discuss workplace issues and union business.</p>
-                            <a href="events/2025-08-28-Steward-Meeting.html" class="font-semibold text-brand-purple hover:underline">Get Zoom Link & Details &rarr;</a>
-                        </div>
-                    </div>
-                    <!-- CAT Meeting -->
-                    <div id="event-2025-09-03-1" class="bg-white p-6 rounded-xl border border-border-color flex flex-col md:flex-row gap-6">
-                        <div class="flex-shrink-0 text-center md:text-left">
-                            <p class="text-brand-purple font-bold text-lg">SEP</p>
-                            <p class="text-4xl font-bold">03</p>
-                        </div>
-                        <div class="flex-grow">
-                            <div class="flex justify-between items-start mb-2">
-                                <h3 class="text-2xl font-bold">CAT Meeting</h3>
-                                <div class="bg-brand-purple-light text-brand-purple-dark font-bold rounded-full px-3 py-1 text-sm whitespace-nowrap">Zoom Meeting</div>
-                            </div>
-                            <p class="text-text-secondary mb-4">Contract Action Team meeting to plan and coordinate actions to support bargaining.</p>
-                            <a href="events/2025-09-03-CAT-Meeting.html" class="font-semibold text-brand-purple hover:underline">Get Zoom Link & Details &rarr;</a>
-                        </div>
-                    </div>
                      <!-- New Employee Orientation -->
                     <div id="event-2025-09-03-2" class="bg-white p-6 rounded-xl border border-border-color flex flex-col md:flex-row gap-6">
                         <div class="flex-shrink-0 text-center md:text-left">
@@ -262,6 +232,19 @@
             <div class="max-w-4xl mx-auto space-y-4">
                 <details class="bg-white rounded-xl border border-border-color group">
                     <summary class="font-semibold text-lg cursor-pointer flex justify-between items-center p-6 transition-colors group-hover:bg-gray-50">
+                        <span>September 2025</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-brand-purple transform group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="p-6 pt-0 text-text-secondary border-t border-border-color">
+                        <ul class="list-disc pl-5 space-y-2 mt-4">
+                            <li><strong>September 3:</strong> A C.A.T. meeting to plan and coordinate actions to support bargaining.</li>
+                        </ul>
+                    </div>
+                </details>
+                <details class="bg-white rounded-xl border border-border-color group">
+                    <summary class="font-semibold text-lg cursor-pointer flex justify-between items-center p-6 transition-colors group-hover:bg-gray-50">
                         <span>August 2025</span>
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-brand-purple transform group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
@@ -269,6 +252,7 @@
                     </summary>
                     <div class="p-6 pt-0 text-text-secondary border-t border-border-color">
                         <ul class="list-disc pl-5 space-y-2 mt-4">
+                            <li><strong>August 28:</strong> Steward Meeting. <a href="events/2025-08-28-Steward-Meeting.html" class="font-semibold text-brand-purple hover:underline">View Details</a></li>
                             <li><strong>August 21:</strong> Monthly Membership Meeting.</li>
                             <li><strong>August 14:</strong> A meeting with the leadership of our Sub Local.</li>
                             <li><strong>August 6:</strong> A C.A.T. meeting focusing on upcoming events.</li>
@@ -305,7 +289,6 @@
         // Dates of events for highlighting
         // Note: Months are 0-indexed (7=Aug, 8=Sep, 9=Oct)
         const events = {
-            7: [24], // August 2025
             8: [3, 4, 11], // September 2025
             9: [22]  // October 2025
         };
