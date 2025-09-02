@@ -1,0 +1,83 @@
+[
+    {
+      "date": "2025-10-22",
+      "time": "6:00 PM - 8:00 PM",
+      "title": "Member & Family Bowling Night",
+      "description": "Join us for a fun night of bowling, food, and community. All members and their families are welcome!",
+      "type": "Social Event",
+      "url": "/events/2025-10-22-Bowling.html",
+      "featured": true,
+      "location_detail": "Lanes & Games, MU Basement"
+    },
+    {
+      "date": "2025-09-11",
+      "time": "6:00 PM - 8:00 PM",
+      "title": "Executive Team Meeting",
+      "description": "Regularly scheduled meeting for the Local 083 Executive Team.",
+      "type": "Zoom Meeting",
+      "url": "/events/2025-09-11-Executive-Team-Meeting.html",
+      "featured": false
+    },
+    {
+      "date": "2025-09-04",
+      "time": "5:30 PM",
+      "title": "Bargaining Committee Meeting",
+      "description": "The regular monthly strategy meeting for the elected Bargaining Committee.",
+      "type": "Zoom Meeting",
+      "url": "/events/2025-09-04-Bargaining-Committee-Meeting.html",
+      "featured": false
+    },
+    {
+      "date": "2025-09-03",
+      "time": "6:30 PM - 8:00 PM",
+      "title": "CAT Meeting",
+      "description": "Contract Action Team meeting to plan and coordinate actions to support bargaining.",
+      "type": "Zoom Meeting",
+      "url": "/events/2025-09-03-CAT-Meeting.html",
+      "featured": false
+    },
+    {
+      "date": "2025-09-03",
+      "time": "11:45 AM - 12:15 PM",
+      "title": "New Employee Orientation",
+      "description": "Welcome new members! Learn about your union, your rights, and how to get involved.",
+      "type": "In Person",
+      "url": "/events/2025-09-03-New-Employee-Orientation.html",
+      "featured": false
+    },
+    {
+      "date": "2025-08-28",
+      "time": "6:00 PM - 7:30 PM",
+      "title": "Steward Meeting",
+      "description": "A monthly meeting for current stewards to connect, share information, and build skills.",
+      "type": "Online Meeting",
+      "url": "/events/2025-08-28-Steward-Meeting.html",
+      "featured": false
+    },
+    {
+      "date": "2025-08-21",
+      "time": "12:00 PM - 1:00 PM",
+      "title": "Membership Meeting",
+      "description": "Monthly meeting with updates on bargaining, events, and more. Lunch provided!",
+      "type": "Hybrid",
+      "url": "/events/2025-08-21-Membership-Meeting.html",
+      "featured": false
+    },
+    {
+      "date": "2025-08-14",
+      "title": "Sub Local Leadership Meeting",
+      "description": "A meeting with the leadership of our Sub Local.",
+      "type": "Meeting",
+      "url": "#",
+      "featured": false
+    },
+      {
+      "date": "2025-08-06",
+      "title": "CAT Meeting",
+      "description": "A C.A.T. meeting focusing on upcoming events.",
+      "type": "Meeting",
+      "url": "#",
+      "featured": false
+    }
+  ]
+  

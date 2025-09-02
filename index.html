@@ -181,61 +181,9 @@
         <!-- Upcoming Events Section -->
         <section id="events" class="mb-24">
             <h2 class="text-4xl font-bold text-center mb-12">Upcoming Events</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Event Card 1 -->
-                <div class="bg-white rounded-xl border border-border-color overflow-hidden flex flex-col">
-                    <div class="p-6 flex-grow">
-                        <div class="flex items-center justify-between mb-4">
-                            <div class="bg-brand-purple-light text-brand-purple-dark font-bold rounded-full px-3 py-1 text-sm">Online Meeting</div>
-                            <div class="flex items-center text-text-secondary">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.414-1.414L11 9.586V6z" clip-rule="evenodd" /></svg>
-                                <span>12:00 PM</span>
-                            </div>
-                        </div>
-                        <h3 class="font-bold text-2xl mb-2">Steward Meeting</h3>
-                        <p class="text-text-secondary">Monthly steward meeting.</p>
-                    </div>
-                    <div class="bg-gray-50 border-t border-border-color p-4 flex items-center justify-between">
-                         <div class="font-bold text-text-primary">Sun, Aug 24, 2025</div>
-                         <a href="events/2025-08-24-Steward-Meeting.html" class="text-brand-purple font-semibold hover:underline">More Info &rarr;</a>
-                    </div>
-                </div>
-                <!-- Event Card 2 -->
-                <div class="bg-white rounded-xl border border-border-color overflow-hidden flex flex-col">
-                    <div class="p-6 flex-grow">
-                        <div class="flex items-center justify-between mb-4">
-                            <div class="bg-brand-purple-light text-brand-purple-dark font-bold rounded-full px-3 py-1 text-sm">Online Meeting</div>
-                             <div class="flex items-center text-text-secondary">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.414-1.414L11 9.586V6z" clip-rule="evenodd" /></svg>
-                                <span>12:00 PM</span>
-                            </div>
-                        </div>
-                        <h3 class="font-bold text-2xl mb-2">CAT Meeting</h3>
-                        <p class="text-text-secondary">Contract Action Team meeting.</p>
-                    </div>
-                    <div class="bg-gray-50 border-t border-border-color p-4 flex items-center justify-between">
-                         <div class="font-bold text-text-primary">Wed, Sep 3, 2025</div>
-                         <a href="events/2025-09-03-CAT-Meeting.html" class="text-brand-purple font-semibold hover:underline">More Info &rarr;</a>
-                    </div>
-                </div>
-                <!-- Event Card 3 -->
-                <div class="bg-white rounded-xl border border-border-color overflow-hidden flex flex-col">
-                    <div class="p-6 flex-grow">
-                        <div class="flex items-center justify-between mb-4">
-                            <div class="bg-brand-purple-light text-brand-purple-dark font-bold rounded-full px-3 py-1 text-sm">In-Person</div>
-                             <div class="flex items-center text-text-secondary">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.414-1.414L11 9.586V6z" clip-rule="evenodd" /></svg>
-                                <span>5:30 PM</span>
-                            </div>
-                        </div>
-                        <h3 class="font-bold text-2xl mb-2">Bargaining Committee Meeting</h3>
-                        <p class="text-text-secondary">Join the bargaining committee for their regular meeting.</p>
-                    </div>
-                    <div class="bg-gray-50 border-t border-border-color p-4 flex items-center justify-between">
-                        <div class="font-bold text-text-primary">Thu, Sep 4, 2025</div>
-                        <a href="events/2025-09-04-Bargaining-Committee-Meeting.html" class="text-brand-purple font-semibold hover:underline">More Info &rarr;</a>
-                    </div>
-                </div>
+            <div id="upcoming-events-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Events will be dynamically injected here -->
+                <p class="text-center text-text-secondary col-span-full">Loading events...</p>
             </div>
         </section>
 
@@ -378,23 +326,83 @@
     </footer>
 
     <script>
-        // Mobile menu toggle
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const navLinks = document.querySelectorAll('#mobile-menu a');
+        // --- Mobile Menu Toggle ---
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const navLinks = document.querySelectorAll('#mobile-menu a');
 
-        mobileMenuButton.addEventListener('click', () => {
-            const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
-            mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        // Close mobile menu when a link is clicked
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-                mobileMenuButton.setAttribute('aria-expanded', 'false');
+            mobileMenuButton.addEventListener('click', () => {
+                const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+                mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
+                mobileMenu.classList.toggle('hidden');
             });
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenuButton.setAttribute('aria-expanded', 'false');
+                });
+            });
+
+            // --- Load Upcoming Events ---
+            const eventsContainer = document.getElementById('upcoming-events-container');
+
+            fetch('/events/events.json')
+                .then(response => response.json())
+                .then(events => {
+                    const today = new Date();
+                    today.setHours(0, 0, 0, 0); // Set to start of day for accurate comparison
+
+                    const upcomingEvents = events
+                        .filter(event => new Date(event.date.replace(/-/g, '\/')) >= today)
+                        .sort((a, b) => new Date(a.date) - new Date(b.date))
+                        .slice(0, 3);
+
+                    if (upcomingEvents.length > 0) {
+                        eventsContainer.innerHTML = upcomingEvents.map(event => {
+                            const eventDate = new Date(event.date.replace(/-/g, '\/'));
+                            const formattedDate = eventDate.toLocaleDateString('en-US', {
+                                weekday: 'short',
+                                month: 'short',
+                                day: 'numeric',
+                                year: 'numeric'
+                            });
+
+                            let timeHtml = '';
+                            if (event.time) {
+                                timeHtml = `
+                                <div class="flex items-center text-text-secondary">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.414-1.414L11 9.586V6z" clip-rule="evenodd" /></svg>
+                                    <span>${event.time.split(' - ')[0]}</span>
+                                </div>`;
+                            }
+
+                            return `
+                                <div class="bg-white rounded-xl border border-border-color overflow-hidden flex flex-col">
+                                    <div class="p-6 flex-grow">
+                                        <div class="flex items-center justify-between mb-4">
+                                            <div class="bg-brand-purple-light text-brand-purple-dark font-bold rounded-full px-3 py-1 text-sm">${event.type}</div>
+                                            ${timeHtml}
+                                        </div>
+                                        <h3 class="font-bold text-2xl mb-2">${event.title}</h3>
+                                        <p class="text-text-secondary">${event.description}</p>
+                                    </div>
+                                    <div class="bg-gray-50 border-t border-border-color p-4 flex items-center justify-between">
+                                        <div class="font-bold text-text-primary">${formattedDate}</div>
+                                        <a href="${event.url}" class="text-brand-purple font-semibold hover:underline">More Info &rarr;</a>
+                                    </div>
+                                </div>
+                            `;
+                        }).join('');
+                    } else {
+                        eventsContainer.innerHTML = '<p class="text-center text-text-secondary col-span-full">No upcoming events at this time. Please check back soon!</p>';
+                    }
+                })
+                .catch(error => {
+                    console.error('Error fetching events:', error);
+                    eventsContainer.innerHTML = '<p class="text-center text-red-500 col-span-full">Could not load events. Please try again later.</p>';
+                });
         });
     </script>
 </body>
