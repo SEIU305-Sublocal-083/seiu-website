@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /bargaining/
+Disallow: /private/
+
+User-agent: YandexBot
+Disallow: /
+Sitemap: https://seiu.jaxsnjohnson.com/sitemap.xml
