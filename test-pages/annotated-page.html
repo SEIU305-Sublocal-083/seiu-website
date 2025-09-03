@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="An interactive, annotated version of the SEIU Local 503 contract with Oregon State University.">
+    <meta name="author" content="SEIU Local 503 at OSU">
+    <title>Annotated Contract - SEIU Local 503, OSU</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="/images/logo.png" type="image/png">
+    <link rel="apple-touch-icon" href="/images/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Lora:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --brand-purple-dark: #4C1D95; /* Deep Purple */
+            --brand-purple: #7C3AED;      /* Vibrant Purple */
+            --brand-purple-light: #EDE9FE; /* Lighter Lavender for high contrast */
+            --brand-dark: #111827;         /* Near-black for high contrast text/bg */
+            --brand-light: #F9FAFB;        /* Off-white Background */
+            --text-primary: #1F2937;
+            --text-secondary: #374151;     /* Darker secondary text for better contrast */
+            --border-color: #D1D5DB;
+        }
+
+        html {
+            scroll-padding-top: 80px; /* Offset for sticky header */
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--brand-light);
+            color: var(--text-primary);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Lora', serif;
+            color: var(--brand-purple-dark);
+        }
+        
+        a:focus-visible, button:focus-visible, [tabindex="0"]:focus-visible {
+            outline: 3px solid var(--brand-purple);
+            outline-offset: 2px;
+            border-radius: 4px;
+        }
+
+        .contract-section {
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            border-radius: 4px;
+            padding: 2px 4px;
+            margin: -2px -4px;
+        }
+
+        .contract-section:hover {
+            background-color: #f3e8ff; /* A lighter purple for hover */
+        }
+        
+        .contract-section.active {
+            background-color: var(--brand-purple-light);
+            font-weight: 600;
+        }
+
+        .annotation-card {
+            display: none;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .annotation-card.active {
+            display: block;
+            transform: scale(1); /* Reset scale for animation start */
+            animation: fadeInScale 0.3s ease-out forwards;
+        }
+        
+        @keyframes fadeInScale {
+            from {
+                opacity: 0;
+                transform: scale(0.98);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* Custom Tailwind config for our CSS variables */
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-purple-dark': 'var(--brand-purple-dark)',
+                        'brand-purple': 'var(--brand-purple)',
+                        'brand-purple-light': 'var(--brand-purple-light)',
+                        'brand-dark': 'var(--brand-dark)',
+                        'brand-light': 'var(--brand-light)',
+                        'text-primary': 'var(--text-primary)',
+                        'text-secondary': 'var(--text-secondary)',
+                        'border-color': 'var(--border-color)',
+                    }
+                }
+            }
+        }
+    </style>
+</head>
+<body class="bg-brand-light">
+
+    <!-- Header -->
+    <header class="bg-white/80 backdrop-blur-lg border-b border-border-color sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-2">
+                <span class="text-2xl font-bold text-brand-purple-dark">SEIU 503</span>
+                <span class="text-lg text-text-secondary hidden md:block">| Oregon State University</span>
+            </a>
+            <div class="hidden lg:flex space-x-8">
+                <a href="about.html" class="text-text-secondary hover:text-brand-purple transition-colors">About</a>
+                <a href="events.html" class="text-text-secondary hover:text-brand-purple transition-colors">Events</a>
+                <a href="news.html" class="text-text-secondary hover:text-brand-purple transition-colors">News</a>
+                <a href="resources.html" class="text-brand-purple font-bold">Resources & Rights</a>
+                <a href="leadership.html" class="text-text-secondary hover:text-brand-purple transition-colors">Leadership</a>
+                <a href="contact.html" class="text-text-secondary hover:text-brand-purple transition-colors">Contact</a>
+            </div>
+            <div class="lg:hidden">
+                <button id="mobile-menu-button" class="text-text-secondary hover:text-brand-purple focus:outline-none" aria-label="Open menu">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden absolute top-full left-0 w-full bg-white border-t border-border-color shadow-lg">
+            <a href="about.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">About</a>
+            <a href="events.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Events</a>
+            <a href="news.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">News</a>
+            <a href="resources.html" class="block text-center py-3 px-6 text-lg text-brand-purple bg-brand-purple-light font-semibold">Resources & Rights</a>
+            <a href="leadership.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Leadership</a>
+            <a href="contact.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Contact</a>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="bg-brand-purple-light border-b border-border-color">
+        <div class="container mx-auto px-6 py-16 text-center">
+            <h1 class="text-5xl font-bold">Annotated Contract</h1>
+            <p class="mt-4 text-lg text-text-secondary max-w-3xl mx-auto">An interactive guide to our Collective Bargaining Agreement. Click on any highlighted section to see a simple explanation.</p>
+        </div>
+    </section>
+
+    <main class="container mx-auto px-6 py-16">
+        <div class="grid lg:grid-cols-5 gap-12 items-start">
+
+            <!-- Contract Text -->
+            <div class="lg:col-span-3 bg-white p-8 rounded-xl border border-border-color">
+                <div id="contract-text-container" class="prose max-w-none text-text-secondary text-lg leading-relaxed space-y-6">
+                    <h2 class="text-center">Collective Bargaining Agreement (Excerpt)</h2>
+                    
+                    <h3 class="!mt-8">Article 12: Grievance Procedure</h3>
+                    <p>
+                        <span class="contract-section" data-target="grievance-def" tabindex="0" role="button" aria-label="View explanation for Grievance Definition">
+                        Section 1. A grievance is a complaint by an employee or the Union that there has been a violation of a specific provision of this Agreement.
+                        </span>
+                    </p>
+                    <p>
+                        <span class="contract-section" data-target="grievance-step1" tabindex="0" role="button" aria-label="View explanation for Step 1">
+                        Section 2. Step 1: The employee and/or their Union Steward shall first attempt to resolve the issue informally with the employee's immediate supervisor within ten (10) business days of the event giving rise to the grievance.
+                        </span>
+                    </p>
+                     <p>
+                        <span class="contract-section" data-target="grievance-step2" tabindex="0" role="button" aria-label="View explanation for Step 2">
+                        Section 3. Step 2: If not resolved, a formal grievance shall be filed in writing with Human Resources within fifteen (15) business days of the Step 1 discussion.
+                        </span>
+                    </p>
+
+                    <h3 class="!mt-12">Article 15: Disciplinary Action</h3>
+                    <p>
+                        <span class="contract-section" data-target="just-cause" tabindex="0" role="button" aria-label="View explanation for Just Cause">
+                        Section 1. Disciplinary action may be imposed upon an employee only for just cause. Just cause shall include, but not be limited to, unsatisfactory performance of duties, violation of University policies, or misconduct.
+                        </span>
+                    </p>
+                     <p>
+                        <span class="contract-section" data-target="progressive-discipline" tabindex="0" role="button" aria-label="View explanation for Progressive Discipline">
+                        Section 2. The University shall follow the principles of progressive discipline, which may include verbal warnings, written warnings, suspension, and termination, as appropriate to the circumstances.
+                        </span>
+                    </p>
+                     <p>
+                        <span class="contract-section" data-target="weingarten-rights" tabindex="0" role="button" aria-label="View explanation for Investigatory Interviews">
+                        Section 3. An employee shall have the right to Union representation at any investigatory interview which the employee reasonably believes may result in disciplinary action. The employee must request representation.
+                        </span>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Annotations Column -->
+            <div id="annotations-container" class="lg:col-span-2 space-y-6 lg:sticky top-28">
+                 <div id="placeholder" class="bg-white p-6 rounded-xl border border-dashed text-center text-text-secondary h-48 flex items-center justify-center">
+                    <p>Click on a highlighted contract section to the left to see its explanation here.</p>
+                </div>
+
+                <div id="weingarten-rights" class="annotation-card bg-white p-6 rounded-xl border border-brand-purple-dark">
+                    <button class="share-btn absolute top-2 right-2 p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition" title="Copy link to this section" data-section-id="weingarten-rights">
+                        <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg>
+                    </button>
+                    <h3 class="text-xl font-bold mb-2">Investigatory Interviews (Weingarten Rights)</h3>
+                    <p class="text-text-secondary">This is one of your most important rights. If a manager pulls you into a meeting that could possibly lead to you being disciplined, you have the legal right to ask for a Union Steward to be present. You must state this request clearly.</p>
+                </div>
+
+                <div id="grievance-def" class="annotation-card bg-white p-6 rounded-xl border border-brand-purple-dark">
+                    <button class="share-btn absolute top-2 right-2 p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition" title="Copy link to this section" data-section-id="grievance-def">
+                        <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg>
+                    </button>
+                    <h3 class="text-xl font-bold mb-2">What is a Grievance?</h3>
+                    <p class="text-text-secondary">This defines what counts as a "grievance." It's not just any complaint; it has to be about a specific rule in the contract that you believe management has broken.</p>
+                </div>
+
+                <div id="grievance-step1" class="annotation-card bg-white p-6 rounded-xl border border-brand-purple-dark">
+                    <button class="share-btn absolute top-2 right-2 p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition" title="Copy link to this section" data-section-id="grievance-step1">
+                        <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg>
+                    </button>
+                    <h3 class="text-xl font-bold mb-2">Step 1: Talk First</h3>
+                    <p class="text-text-secondary">This clause requires you to try and solve the problem informally first by talking to your direct supervisor. You have a right to bring your steward to this conversation. It also sets a deadline: you must do this within 10 business days of the incident.</p>
+                </div>
+
+                 <div id="grievance-step2" class="annotation-card bg-white p-6 rounded-xl border border-brand-purple-dark">
+                    <button class="share-btn absolute top-2 right-2 p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition" title="Copy link to this section" data-section-id="grievance-step2">
+                        <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg>
+                    </button>
+                    <h3 class="text-xl font-bold mb-2">Step 2: Make it Formal</h3>
+                    <p class="text-text-secondary">If the informal chat doesn't work, you can file a formal, written grievance. This formalizes the complaint and sends it up the chain of command for an official response. Note the strict timeline.</p>
+                </div>
+
+                <div id="just-cause" class="annotation-card bg-white p-6 rounded-xl border border-brand-purple-dark">
+                    <button class="share-btn absolute top-2 right-2 p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition" title="Copy link to this section" data-section-id="just-cause">
+                        <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg>
+                    </button>
+                    <h3 class="text-xl font-bold mb-2">Just Cause</h3>
+                    <p class="text-text-secondary">This is a key protection. It means management can't discipline or fire you for no reason or for an unfair reason. They must have a legitimate, work-related justification for their actions.</p>
+                </div>
+                
+                <div id="progressive-discipline" class="annotation-card bg-white p-6 rounded-xl border border-brand-purple-dark">
+                    <button class="share-btn absolute top-2 right-2 p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition" title="Copy link to this section" data-section-id="progressive-discipline">
+                        <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg>
+                    </button>
+                    <h3 class="text-xl font-bold mb-2">Progressive Discipline</h3>
+                    <p class="text-text-secondary">This means management should try to correct a problem with smaller steps (like a verbal warning) before jumping to severe punishment like termination. The goal is to correct behavior, not just to punish. However, for serious issues, they can skip steps.</p>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark text-white mt-24">
+        <div class="container mx-auto px-6 py-8">
+            <div class="flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+                <p class="text-gray-400">&copy; 2025 SEIU Local 503, Oregon State University.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- Mobile Menu Toggle ---
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            if (mobileMenuButton && mobileMenu) {
+                const navLinks = mobileMenu.querySelectorAll('a');
+                mobileMenuButton.addEventListener('click', () => {
+                    const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+                    mobileMenuButton.setAttribute('aria-expanded', String(!isExpanded));
+                    mobileMenu.classList.toggle('hidden');
+                });
+                navLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                        mobileMenuButton.setAttribute('aria-expanded', 'false');
+                    });
+                });
+            }
+
+            // --- Annotated Contract Logic ---
+            const contractContainer = document.getElementById('contract-text-container');
+            const annotationsContainer = document.getElementById('annotations-container');
+
+            if (contractContainer && annotationsContainer) {
+                const allSections = contractContainer.querySelectorAll('.contract-section');
+                const allAnnotations = annotationsContainer.querySelectorAll('.annotation-card');
+                const placeholder = document.getElementById('placeholder');
+
+                const setActive = (targetId, updateHistory = true) => {
+                    if(placeholder) placeholder.style.display = 'none';
+
+                    allSections.forEach(s => s.classList.remove('active'));
+                    allAnnotations.forEach(a => a.classList.remove('active'));
+
+                    if (!targetId) {
+                        if(placeholder) placeholder.style.display = 'flex';
+                        if (updateHistory) {
+                             history.pushState(null, '', window.location.pathname);
+                        }
+                        return;
+                    }
+
+                    const activeSection = contractContainer.querySelector(`.contract-section[data-target="${targetId}"]`);
+                    const activeAnnotation = annotationsContainer.querySelector(`#${targetId}`);
+
+                    if (activeSection && activeAnnotation) {
+                        activeSection.classList.add('active');
+                        activeAnnotation.classList.add('active');
+                        if (updateHistory) {
+                            const newUrl = `${window.location.pathname}?section=${targetId}`;
+                            history.pushState({section: targetId}, '', newUrl);
+                        }
+                    } else {
+                        // If targetId from URL is invalid, show placeholder
+                        if(placeholder) placeholder.style.display = 'flex';
+                    }
+                };
+
+                contractContainer.addEventListener('click', (e) => {
+                    const section = e.target.closest('.contract-section');
+                    if (section) {
+                        setActive(section.dataset.target);
+                    }
+                });
+
+                contractContainer.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        const section = e.target.closest('.contract-section');
+                        if (section) {
+                            e.preventDefault();
+                            setActive(section.dataset.target);
+                        }
+                    }
+                });
+
+                // Handle Share Button Clicks
+                annotationsContainer.addEventListener('click', e => {
+                    const shareBtn = e.target.closest('.share-btn');
+                    if (shareBtn) {
+                        const sectionId = shareBtn.dataset.sectionId;
+                        const url = `${window.location.origin}${window.location.pathname}?section=${sectionId}`;
+                        
+                        const tempInput = document.createElement('input');
+                        tempInput.value = url;
+                        document.body.appendChild(tempInput);
+                        tempInput.select();
+                        document.execCommand('copy');
+                        document.body.removeChild(tempInput);
+
+                        // Provide feedback
+                        const originalIcon = shareBtn.innerHTML;
+                        shareBtn.innerHTML = `<svg class="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>`;
+                        setTimeout(() => {
+                           shareBtn.innerHTML = originalIcon;
+                        }, 2000);
+                    }
+                });
+                
+                // Check for URL parameters on initial page load
+                const params = new URLSearchParams(window.location.search);
+                const sectionFromUrl = params.get('section');
+                setActive(sectionFromUrl, false); // false to not create a new history entry on load
+
+                // Handle back/forward browser navigation
+                window.addEventListener('popstate', (e) => {
+                    const newParams = new URLSearchParams(window.location.search);
+                    const newSection = newParams.get('section');
+                    setActive(newSection, false);
+                });
+            }
+        });
+    </script>
+</body>
+</html>
