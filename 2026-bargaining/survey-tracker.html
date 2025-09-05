@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Track the 2026 bargaining survey participation rates across departments at Oregon State University.">
+    <meta name="author" content="SEIU Local 503 at OSU">
+    <title>Bargaining Survey Tracker - SEIU Local 503, OSU</title>
+    <link rel="icon" href="/images/logo.png" type="image/png">
+    <link rel="apple-touch-icon" href="/images/logo.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Lora:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --brand-purple-dark: #4C1D95;
+            --brand-purple: #7C3AED;
+            --brand-purple-light: #EDE9FE;
+            --brand-dark: #111827;
+            --brand-light: #F9FAFB;
+            --text-primary: #1F2937;
+            --text-secondary: #374151;
+            --border-color: #D1D5DB;
+        }
+        html { scroll-padding-top: 80px; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--brand-light); color: var(--text-primary); -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Lora', serif; color: var(--brand-purple-dark); }
+        a:focus-visible, button:focus-visible { outline: 3px solid var(--brand-purple); outline-offset: 2px; border-radius: 4px; }
+        .thermometer-track { transition: width 1s ease-in-out; }
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-purple-dark': 'var(--brand-purple-dark)',
+                        'brand-purple': 'var(--brand-purple)',
+                        'brand-purple-light': 'var(--brand-purple-light)',
+                        'brand-dark': 'var(--brand-dark)',
+                        'brand-light': 'var(--brand-light)',
+                        'text-primary': 'var(--text-primary)',
+                        'text-secondary': 'var(--text-secondary)',
+                        'border-color': 'var(--border-color)',
+                    }
+                }
+            }
+        }
+    </style>
+</head>
+<body class="bg-brand-light">
+
+    <!-- Header -->
+    <header class="bg-white/80 backdrop-blur-lg border-b border-border-color sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="/index.html" class="flex items-center space-x-2">
+                <span class="text-2xl font-bold text-brand-purple-dark">SEIU 503</span>
+                <span class="text-lg text-text-secondary hidden md:block">| Oregon State University</span>
+            </a>
+            <div class="hidden lg:flex space-x-8">
+                <a href="/about.html" class="text-text-secondary hover:text-brand-purple transition-colors">About</a>
+                <a href="/2026-bargaining/bargaining-survey-landing-page.html" class="text-text-secondary hover:text-brand-purple transition-colors">Bargaining Survey</a>
+                <a href="/2026-bargaining/survey-tracker.html" class="text-brand-purple font-bold">Survey Tracker</a>
+                <a href="/events.html" class="text-text-secondary hover:text-brand-purple transition-colors">Events</a>
+                <a href="/news.html" class="text-text-secondary hover:text-brand-purple transition-colors">News</a>
+                <a href="/resources.html" class="text-text-secondary hover:text-brand-purple transition-colors">Resources & Rights</a>
+                <a href="/leadership.html" class="text-text-secondary hover:text-brand-purple transition-colors">Leadership</a>
+                <a href="/contact.html" class="text-text-secondary hover:text-brand-purple transition-colors">Contact</a>
+            </div>
+            <div class="lg:hidden">
+                <button id="mobile-menu-button" class="text-text-secondary hover:text-brand-purple focus:outline-none" aria-label="Open menu">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden absolute top-full left-0 w-full bg-white border-t border-border-color shadow-lg">
+             <a href="/about.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">About</a>
+            <a href="/2026-bargaining/bargaining-survey-landing-page.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Bargaining Survey</a>
+            <a href="/2026-bargaining/survey-tracker.html" class="block text-center py-3 px-6 text-lg text-brand-purple bg-brand-purple-light font-semibold">Survey Tracker</a>
+            <a href="/events.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Events</a>
+            <a href="/news.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">News</a>
+            <a href="/resources.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Resources & Rights</a>
+            <a href="/leadership.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Leadership</a>
+            <a href="/contact.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Contact</a>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="bg-brand-purple-light border-b border-border-color">
+        <div class="container mx-auto px-6 py-16 text-center">
+            <h1 class="text-5xl font-bold">Bargaining Survey Tracker</h1>
+            <p class="mt-4 text-lg text-text-secondary max-w-3xl mx-auto">See our progress! Higher participation means a stronger voice at the bargaining table. Let's get to 100%!</p>
+        </div>
+    </section>
+
+    <main class="container mx-auto px-6 py-16">
+        <div id="tracker-container" class="max-w-4xl mx-auto space-y-12">
+            <!-- Department trackers will be injected here by JavaScript -->
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark text-white mt-24">
+        <div class="container mx-auto px-6 py-8">
+            <div class="flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+                <p class="text-gray-400">&copy; 2025 SEIU Local 503, Oregon State University.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- Mobile Menu Toggle ---
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            if (mobileMenuButton && mobileMenu) {
+                const navLinks = mobileMenu.querySelectorAll('a');
+                mobileMenuButton.addEventListener('click', () => {
+                    const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+                    mobileMenuButton.setAttribute('aria-expanded', String(!isExpanded));
+                    mobileMenu.classList.toggle('hidden');
+                });
+                navLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                        mobileMenuButton.setAttribute('aria-expanded', 'false');
+                    });
+                });
+            }
+
+            // --- Survey Data ---
+            // To update the trackers, just change the numbers in 'completed' and 'total'.
+            const departmentData = [
+                {
+                    name: "LInC",
+                    completed: 3,
+                    total: 10
+                },
+                {
+                    name: "UHDS",
+                    completed: 7,
+                    total: 10
+                }
+            ];
+
+            // --- Render Trackers ---
+            const trackerContainer = document.getElementById('tracker-container');
+            if (trackerContainer) {
+                if (departmentData.length > 0) {
+                    trackerContainer.innerHTML = departmentData.map(dept => {
+                        const percentage = dept.total > 0 ? (dept.completed / dept.total) * 100 : 0;
+                        return `
+                            <div class="bg-white p-6 md:p-8 rounded-xl border border-border-color shadow-md">
+                                <div class="flex justify-between items-baseline mb-3">
+                                    <h2 class="text-3xl font-bold">${dept.name}</h2>
+                                    <p class="text-xl font-semibold text-text-secondary">
+                                        <span class="text-brand-purple-dark text-2xl">${dept.completed}</span> / ${dept.total}
+                                    </p>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-8 border border-gray-300 overflow-hidden">
+                                    <div class="thermometer-track bg-gradient-to-r from-violet-500 to-brand-purple h-full rounded-full flex items-center justify-end pr-3 text-black font-bold text-sm" style="width: ${percentage}%;">
+                                        <span>${percentage.toFixed(0)}%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        `;
+                    }).join('');
+                } else {
+                    trackerContainer.innerHTML = '<p class="text-center text-text-secondary">No department data is available yet. Please check back soon.</p>';
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>
