@@ -183,7 +183,6 @@
         <section id="events" class="mb-24">
             <h2 class="text-4xl font-bold text-center mb-12">Upcoming Events</h2>
             <div id="upcoming-events-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Events will be dynamically injected here -->
                 <p class="text-center text-text-secondary col-span-full">Loading events...</p>
             </div>
         </section>
@@ -191,29 +190,8 @@
         <!-- News & Member Spotlight Section -->
         <section id="news" class="mb-24">
             <h2 class="text-4xl font-bold text-center mb-12">News & Updates</h2>
-            <div class="grid lg:grid-cols-2 gap-8 lg:gap-12">
-                <!-- Main Story -->
-                <div class="lg:col-span-1 bg-white rounded-xl border border-border-color p-6 group">
-                    <p class="text-text-secondary text-sm mb-2">August 22, 2025</p>
-                    <h3 class="font-bold text-2xl md:text-3xl mb-3">Ice Cream Social</h3>
-                    <p class="text-text-secondary">Join us for an ice cream social to celebrate the end of summer! We'll have free ice cream, toppings, and a chance to connect with fellow union members. It's a great opportunity to relax, socialize, and enjoy a sweet treat on us. We look forward to seeing you there!</p>
-                    <a href="news/2025-08-22-Icecream.html" class="text-brand-purple font-semibold mt-4 inline-block group-hover:underline">Read More &rarr;</a>
-                </div>
-                <!-- Side Stories -->
-                <div class="lg:col-span-1 space-y-8">
-                    <div class="bg-white rounded-xl border border-border-color p-6 group">
-                        <p class="text-text-secondary text-sm mb-2">August 1, 2025</p>
-                        <h3 class="font-bold text-xl mb-3">Bargaining Update: New Contract Ratified!</h3>
-                        <p class="text-text-secondary">The new collective bargaining agreement has been overwhelmingly ratified by members. This is a huge victory!</p>
-                        <a href="#" class="text-brand-purple font-semibold mt-4 inline-block group-hover:underline">Read the Full Summary &rarr;</a>
-                    </div>
-                    <div class="bg-white rounded-xl border border-border-color p-6 group">
-                        <p class="text-text-secondary text-sm mb-2">June 15, 2025</p>
-                        <h3 class="font-bold text-xl mb-3">COLA Increase Takes Effect</h3>
-                        <p class="text-text-secondary">A reminder that the cost-of-living adjustment we won in our last contract takes effect this month. Check your pay stub!</p>
-                        <a href="news/2025-06-15-COLA.html" class="text-brand-purple font-semibold mt-4 inline-block group-hover:underline">Learn More &rarr;</a>
-                    </div>
-                </div>
+            <div id="news-grid-container" class="grid lg:grid-cols-2 gap-8 lg:gap-12">
+                <p class="text-center text-text-secondary col-span-full">Loading news...</p>
             </div>
         </section>
         
@@ -374,8 +352,8 @@
     </footer>
 
     <script>
-        // --- Mobile Menu Toggle ---
         document.addEventListener('DOMContentLoaded', () => {
+            // --- Mobile Menu Toggle ---
             const mobileMenuButton = document.getElementById('mobile-menu-button');
             const mobileMenu = document.getElementById('mobile-menu');
             const navLinks = document.querySelectorAll('#mobile-menu a');
@@ -394,13 +372,13 @@
             });
 
             // --- Load Upcoming Events ---
-            const eventsContainer = document.getElementById('upcoming-events-container');
-
-            fetch('/events/events.json')
-                .then(response => response.json())
-                .then(events => {
+            const loadUpcomingEvents = async () => {
+                const eventsContainer = document.getElementById('upcoming-events-container');
+                try {
+                    const response = await fetch('/events/events.json');
+                    const events = await response.json();
                     const today = new Date();
-                    today.setHours(0, 0, 0, 0); // Set to start of day for accurate comparison
+                    today.setHours(0, 0, 0, 0);
 
                     const upcomingEvents = events
                         .filter(event => new Date(event.date.replace(/-/g, '\/')) >= today)
@@ -446,11 +424,65 @@
                     } else {
                         eventsContainer.innerHTML = '<p class="text-center text-text-secondary col-span-full">No upcoming events at this time. Please check back soon!</p>';
                     }
-                })
-                .catch(error => {
+                } catch (error) {
                     console.error('Error fetching events:', error);
                     eventsContainer.innerHTML = '<p class="text-center text-red-500 col-span-full">Could not load events. Please try again later.</p>';
-                });
+                }
+            };
+
+            // --- Load News ---
+            const loadNews = async () => {
+                const newsGridContainer = document.getElementById('news-grid-container');
+                 try {
+                    const response = await fetch('/news/news.json');
+                    const newsItems = await response.json();
+
+                    const sortedNews = newsItems
+                        .sort((a, b) => new Date(b.date) - new Date(a.date))
+                        .slice(0, 3);
+                    
+                    if (sortedNews.length > 0) {
+                        const mainStory = sortedNews[0];
+                        const sideStories = sortedNews.slice(1);
+
+                        const mainStoryHtml = `
+                            <!-- Main Story -->
+                            <div class="lg:col-span-1 bg-white rounded-xl border border-border-color p-6 group">
+                                <p class="text-text-secondary text-sm mb-2">${new Date(mainStory.date.replace(/-/g, '\/')).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</p>
+                                <h3 class="font-bold text-2xl md:text-3xl mb-3">${mainStory.title}</h3>
+                                <p class="text-text-secondary">${mainStory.description}</p>
+                                <a href="${mainStory.url}" class="text-brand-purple font-semibold mt-4 inline-block group-hover:underline">Read More &rarr;</a>
+                            </div>`;
+                        
+                        const sideStoriesHtml = sideStories.map(story => `
+                            <div class="bg-white rounded-xl border border-border-color p-6 group">
+                                <p class="text-text-secondary text-sm mb-2">${new Date(story.date.replace(/-/g, '\/')).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</p>
+                                <h3 class="font-bold text-xl mb-3">${story.title}</h3>
+                                <p class="text-text-secondary">${story.description}</p>
+                                <a href="${story.url}" class="text-brand-purple font-semibold mt-4 inline-block group-hover:underline">Learn More &rarr;</a>
+                            </div>
+                        `).join('');
+
+                        newsGridContainer.innerHTML = `
+                            ${mainStoryHtml}
+                            <!-- Side Stories -->
+                            <div class="lg:col-span-1 space-y-8">
+                                ${sideStoriesHtml}
+                            </div>
+                        `;
+                    } else {
+                        newsGridContainer.innerHTML = '<p class="text-center text-text-secondary col-span-full">No news to display at this time.</p>';
+                    }
+
+                } catch(error) {
+                    console.error('Error fetching news:', error);
+                    newsGridContainer.innerHTML = '<p class="text-center text-red-500 col-span-full">Could not load news. Please try again later.</p>';
+                }
+            };
+
+            // Initialize dynamic content loading
+            loadUpcomingEvents();
+            loadNews();
         });
     </script>
 </body>

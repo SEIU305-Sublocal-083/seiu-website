@@ -1,5 +1,25 @@
 [
     {
+      "date": "2025-09-16",
+      "time": "10:00 AM - 2:00 PM",
+      "title": "University Day at PRAx",
+      "description": "Volunteer with us at our union booth! We'll be connecting with colleagues and building community at this campus-wide event.",
+      "type": "Volunteer",
+      "url": "/events/2025-09-16-University-Day.html",
+      "featured":false,
+      "location_detail": "Patricia Reser Center (PRAx)"
+    },
+    {
+      "date": "2025-09-13",
+      "time": "8:00 AM - 4:00 PM",
+      "title": "Bargaining Confrence",
+      "description": "Volunteer with us at our union booth! We'll be connecting with colleagues and building community at this campus-wide event.",
+      "type": "Confrence",
+      "url": "/events/2025-09-13-Bargaining-Conference.html",
+      "featured":false,
+      "location_detail": "Roth's Event Center"
+    },
+    {
       "date": "2025-10-22",
       "time": "6:00 PM - 8:00 PM",
       "title": "Member & Family Bowling Night",
@@ -10,12 +30,12 @@
       "location_detail": "Lanes & Games, MU Basement"
     },
     {
-      "date": "2025-09-08",
+      "date": "2025-09-09",
       "time": "6:00 PM - 8:00 PM",
       "title": "Executive Team Meeting",
       "description": "Regularly scheduled meeting for the Local 083 Executive Team.",
       "type": "Zoom Meeting",
-      "url": "/events/2025-09-11-Executive-Team-Meeting.html",
+      "url": "/events/2025-09-09-Executive-Team-Meeting.html",
       "featured": false
     },
     {
