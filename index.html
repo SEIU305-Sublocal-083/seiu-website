@@ -344,9 +344,9 @@
                 Please check your inbox for an email with the title <strong class="text-brand-dark">"It's time for your 2025 Higher Ed Bargaining Survey"</strong> from <strong class="text-brand-dark">alert@seiu503.org</strong>.
             </p>
             <div class="space-y-3 flex flex-col items-center">
-                <button id="modal-btn-done" class="btn btn-primary w-full">Yes, I see it! / Done It!</button>
-                <a href="mailto:prentisss@seiu503.org?subject=Missing%202025%20Bargaining%20Survey" class="btn btn-outline w-full block">I am a member and not seeing it</a>
-                <button id="modal-btn-not-member" class="text-sm text-text-secondary hover:text-brand-purple underline py-2">I am not a member</button>
+                <button id="modal-btn-done" class="btn btn-primary w-full">Yes, I've got it!</button>
+                <a href="mailto:prentisss@seiu503.org?subject=Missing%202025%20Bargaining%20Survey&body=Hi%20Stephanie,%0A%0AI'm%20an%20SEIU%20503%20member%20at%20OSU,%20but%20I%20can't%20find%20the%20bargaining%20survey%20email.%20Can%20you%20please%20help?%0A%0AThank%20you,%0A%0A[Your%20Name]%0A[Department/Work%20Location]" class="btn btn-outline w-full block text-center">Member, but can't find the email?</a>
+                <a href="https://seiu503signup.org" target="_blank" rel="noopener noreferrer" class="btn btn-secondary w-full">Not a member yet? Join Us!</a>
             </div>
         </div>
     </div>
@@ -377,8 +377,7 @@
             const modalContent = document.getElementById('modal-content');
             const closeButton = document.getElementById('modal-close-button');
             const doneButton = document.getElementById('modal-btn-done');
-            const notMemberButton = document.getElementById('modal-btn-not-member');
-
+            
             // Function to open the modal with a smooth animation
             const openModal = () => {
                 surveyModal.classList.remove('hidden');
@@ -402,8 +401,9 @@
             }
 
             // --- Event listeners to close the modal ---
-            // Close with the 'X' button, the "Done" button, or the "Not a member" button
-            [closeButton, doneButton, notMemberButton].forEach(btn => {
+            // Close with the 'X' button or the "Done" button.
+            // The other buttons are links and will navigate away.
+            [closeButton, doneButton].forEach(btn => {
                 btn.addEventListener('click', closeModal);
             });
 
