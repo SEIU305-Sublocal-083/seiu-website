@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # The base URL of your website, taken from the CNAME file.
-BASE_URL="https://seiu.jaxsnjohnson.com"
+BASE_URL="https://www.local083.org"
 
 # The output file for the sitemap.
 OUTPUT_FILE="sitemap.xml"
