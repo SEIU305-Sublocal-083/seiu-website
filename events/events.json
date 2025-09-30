@@ -80,16 +80,6 @@
     "location_detail": "Online via Zoom"
   },
   {
-    "date": "2026-01-01",
-    "time": "6:00 PM",
-    "title": "Bargaining Committee Meeting",
-    "description": "The regular monthly strategy meeting for the elected Bargaining Committee.",
-    "type": "Zoom Meeting",
-    "url": "/events/2026-01-01-Bargaining-Committee-Meeting.html",
-    "featured": false,
-    "location_detail": "Online via Zoom"
-  },
-  {
     "date": "2026-02-05",
     "time": "6:00 PM",
     "title": "Bargaining Committee Meeting",
@@ -216,16 +206,6 @@
     "description": "A monthly meeting for current stewards to connect, share information, and build skills.",
     "type": "Online Meeting",
     "url": "/events/2025-11-27-Stewards-Meeting.html",
-    "featured": false,
-    "location_detail": "Online via Zoom"
-  },
-  {
-    "date": "2025-12-25",
-    "time": "6:00 PM",
-    "title": "Stewards Meeting",
-    "description": "A monthly meeting for current stewards to connect, share information, and build skills.",
-    "type": "Online Meeting",
-    "url": "/events/2025-12-25-Stewards-Meeting.html",
     "featured": false,
     "location_detail": "Online via Zoom"
   },
