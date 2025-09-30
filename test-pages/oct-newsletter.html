@@ -61,19 +61,20 @@
                  @apply bg-white text-brand-purple border-2 border-brand-purple hover:bg-brand-purple hover:text-white;
             }
     
+            /* === MODIFIED CODE START === */
             /* Custom Tailwind config for our CSS variables */
             tailwind.config = {
                 theme: {
                     extend: {
                         colors: {
-                            'brand-purple-dark': 'var(--brand-purple-dark)',
-                            'brand-purple': 'var(--brand-purple)',
-                            'brand-purple-light': 'var(--brand-purple-light)',
-                            'brand-dark': 'var(--brand-dark)',
-                            'brand-light': 'var(--brand-light)',
-                            'text-primary': 'var(--text-primary)',
-                            'text-secondary': 'var(--text-secondary)',
-                            'border-color': 'var(--border-color)',
+                            'brand-purple-dark': '#4C1D95',
+                            'brand-purple': '#7C3AED',
+                            'brand-purple-light': '#EDE9FE',
+                            'brand-dark': '#111827',
+                            'brand-light': '#F9FAFB',
+                            'text-primary': '#1F2937',
+                            'text-secondary': '#374151',
+                            'border-color': '#D1D5DB',
                         }
                     }
                 }
@@ -83,7 +84,6 @@
 
 <body class="bg-brand-light">
 
-    <!-- Header -->
     <header class="bg-white/80 backdrop-blur-lg border-b border-border-color sticky top-0 z-50">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="/index.html" class="flex items-center space-x-2">
@@ -150,12 +150,12 @@
                 <p>This is a monumental victory and a perfect example of what happens when we stand together and advocate for ourselves. This fight isn't just about jobs; it's about the essential services we provide to Oregonians every day. As SEIU 503 Executive Director Melissa Unger said:</p>
                 <blockquote class="border-l-4 border-brand-purple bg-brand-purple-light p-4 my-4 rounded-r-lg">
                     <p class="italic text-brand-purple">"...legislators voted for this package because of you, because they know the important work you do to keep our communities and our roads safe."</p>
-                    <cite class="block text-right not-italic mt-2 font-bold text-lg text-brand-purple-dark" style="font-family: 'Lora', serif;">&mdash; Melissa Unger, SEIU 503 Executive Director</cite>
+                    <cite class="block text-right not-italic mt-2 font-bold text-lg text-brand-purple-dark" style="font-family: 'Lora', serif;">— Melissa Unger, SEIU 503 Executive Director</cite>
                 </blockquote>
                 <p>Their fight is our fight, and their victory is a win for all of us in the labor movement. POWERFUL!</p>
                 
-                <div class="video-container my-6 border-4 text-brand-purple">
-                    <iframe src="https://www.youtube.com/embed/b702ZGG0Ew0" title="YouTube video player" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="my-6 w-full aspect-video border-4 border-brand-purple rounded-lg overflow-hidden">
+                    <iframe class="w-full h-full" src="https://www.youtube.com/embed/b702ZGG0Ew0" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
 
                 <hr class="my-8">
@@ -181,13 +181,11 @@
         </article>
     </main>
 
-    <!-- Footer -->
     <footer class="bg-brand-dark text-white pt-12 pb-8">
         <div class="container mx-auto px-6">
             <div class="mt-10 pt-8 border-t border-gray-700 text-center">
             </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Column 1: About the Union -->
                 <div class="md:col-span-2 lg:col-span-1">
                     <div class="flex items-center mb-4">
                         <img src="/images/logo.png" alt="SEIU 503 Logo" class="h-12 w-12 mr-3 bg-white p-1 rounded">
@@ -199,7 +197,6 @@
                     <p class="text-black leading-relaxed">Representing the classified employees of Oregon State University. We fight for fair contracts, defend workplace rights, and build a united community.</p>
                 </div>
     
-                <!-- Column 2: Quick Links -->
                 <div>
                     <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase">Quick Links</h4>
                     <ul class="space-y-3">
@@ -210,7 +207,6 @@
                     </ul>
                 </div>
     
-                <!-- Column 3: Resources -->
                 <div>
                     <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase"><a href="/resources.html" class="hover:text-gray-500 transition-colors">Resources</a></h4>
                     <ul class="space-y-3">
@@ -221,29 +217,24 @@
                     </ul>
                 </div>
     
-                <!-- Column 4: Contact -->
                 <div>
                     <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase"><a href="/contact.html" class="hover:text-gray-500 transition-colors">Contact Us</a></h4>
                      <ul class="space-y-3 text-black">
                         <li class="flex items-start">
-                            <span class="mr-2 mt-1">✉️</span> <!-- Mail icon -->
-                            <a href="mailto:083execteam@seiu503.org" class="hover:text-gray-500 transition-colors">083execteam@seiu503.org</a>
+                            <span class="mr-2 mt-1">✉️</span> <a href="mailto:083execteam@seiu503.org" class="hover:text-gray-500 transition-colors">083execteam@seiu503.org</a>
                         </li>
                         <li class="flex items-start">
-                            <span class="mr-2 mt-1">✉️</span> <!-- Mail icon -->
-                            <a href="mailto:083stewards@seiu503.org" class="hover:text-gray-500 transition-colors">083stewards@seiu503.org</a>
+                            <span class="mr-2 mt-1">✉️</span> <a href="mailto:083stewards@seiu503.org" class="hover:text-gray-500 transition-colors">083stewards@seiu503.org</a>
                         </li>
                         <li class="flex items-start">
-                            <span class="mr-2 mt-1">&#128205;</span> <!-- Pin icon -->
-                            <a href="https://maps.app.goo.gl/9TWRZ9F4wjVjacsZ7" class="hover:text-gray-500 transition-colors">Adams Hall, Room 109<br>Corvallis, OR 97331</a>
+                            <span class="mr-2 mt-1">📍</span> <a href="https://maps.app.goo.gl/9TWRZ9F4wjVjacsZ7" class="hover:text-gray-500 transition-colors">Adams Hall, Room 109<br>Corvallis, OR 97331</a>
                         </li>
                     </ul>
                 </div>
             </div>
     
-            <!-- Bottom Bar -->
             <div class="mt-10 pt-8 border-t border-gray-700 text-center">
-                <p class="text-gray-400 text-sm">&copy; 2025 SEIU Local 503, Oregon State University. All rights reserved.</p>
+                <p class="text-gray-400 text-sm">© 2025 SEIU Local 503, Oregon State University. All rights reserved.</p>
             </div>
         </div>
     </footer>
