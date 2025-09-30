@@ -4,4 +4,4 @@ Disallow: /private/
 
 User-agent: YandexBot
 Disallow: /
-Sitemap: https://seiu.jaxsnjohnson.com/sitemap.xml
+Sitemap: https://www.local083.org/sitemap.xml
