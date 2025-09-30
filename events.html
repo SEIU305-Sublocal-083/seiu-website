@@ -42,7 +42,7 @@
         }
 
         /* Accessibility: Clear focus indicators for all interactive elements */
-        a:focus-visible, button:focus-visible, details:focus-visible, input:focus-visible, textarea:focus-visible {
+        a:focus-visible, button:focus-visible, details:focus-visible, input:focus-visible, textarea:focus-visible, [tabindex="0"]:focus-visible {
             outline: 3px solid var(--brand-purple);
             outline-offset: 2px;
             border-radius: 4px;
@@ -77,9 +77,8 @@
         /* Style for highlighting event card */
         .highlight-event {
             transition: all 0.3s ease-in-out;
-            background-color: var(--brand-purple-light);
-            transform: scale(1.02);
-            box-shadow: 0 0 0 2px var(--brand-purple);
+            box-shadow: 0 0 0 3px var(--brand-purple);
+            transform: scale(1.01);
         }
 
         /* Custom Tailwind config for our CSS variables */
@@ -148,25 +147,35 @@
         <!-- Calendar and Upcoming Events Section -->
         <div class="grid lg:grid-cols-3 lg:items-start gap-12 mb-24">
             <!-- Calendar -->
-            <div class="lg:col-span-1 bg-white p-6 rounded-xl border border-border-color">
+            <div class="lg:col-span-1 bg-white p-6 rounded-xl border border-border-color lg:sticky top-28">
                 <div id="calendar-container">
                     <!-- Calendar will be generated here by JavaScript -->
                 </div>
             </div>
 
-            <!-- Upcoming Events List -->
-            <div id="events-list" class="lg:col-span-2">
-                <h2 class="text-4xl font-bold mb-8">Upcoming Events</h2>
-                <div id="upcoming-events-container" class="space-y-6">
-                     <!-- Events will be dynamically injected here -->
-                     <p class="text-center text-text-secondary">Loading events...</p>
+            <!-- Main Events Column -->
+            <div class="lg:col-span-2">
+                <div id="events-list">
+                    <h2 class="text-4xl font-bold mb-8">Coming Up Soon</h2>
+                    <div id="upcoming-events-container" class="space-y-6">
+                         <!-- Events will be dynamically injected here -->
+                         <p class="text-center text-text-secondary">Loading events...</p>
+                    </div>
                 </div>
+                
+                <!-- Later This Year Events Section -->
+                <section id="more-events" class="mt-24">
+                    <h2 class="text-4xl font-bold mb-8 pt-12 border-t border-border-color">Later This Year</h2>
+                    <div id="stacked-events-container" class="space-y-6">
+                        <!-- Event cards will be injected here -->
+                    </div>
+                </section>
             </div>
         </div>
         
         <!-- Past Events Section -->
         <section id="past-events">
-            <h2 class="text-4xl font-bold text-center mb-12">Past Events</h2>
+            <h2 class="text-4xl font-bold text-center mb-12">Archived Events</h2>
             <div id="past-events-container" class="max-w-4xl mx-auto space-y-4">
                 <!-- Past events will be dynamically injected here -->
             </div>
@@ -245,6 +254,7 @@
             // --- Global Variables ---
             const calendarContainer = document.getElementById('calendar-container');
             const upcomingEventsContainer = document.getElementById('upcoming-events-container');
+            const stackedEventsContainer = document.getElementById('stacked-events-container');
             const pastEventsContainer = document.getElementById('past-events-container');
             let currentDate = new Date();
             let eventsForCalendar = {};
@@ -253,17 +263,12 @@
             async function loadEvents() {
                 try {
                     const response = await fetch('events/events.json');
-                    if (!response.ok) {
-                        throw new Error(`HTTP error! status: ${response.status}`);
-                    }
+                    if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
                     const allEvents = await response.json();
-
-                    // Process and render all parts of the page
                     processAndRenderEvents(allEvents);
-                    
                 } catch (error) {
                     console.error('Error fetching or processing events:', error);
-                    upcomingEventsContainer.innerHTML = '<p class="text-center text-red-500 col-span-full">Could not load events. Please try again later.</p>';
+                    if(upcomingEventsContainer) upcomingEventsContainer.innerHTML = '<p class="text-center text-red-500 col-span-full">Could not load events. Please try again later.</p>';
                 }
             }
             
@@ -271,58 +276,68 @@
                 const today = new Date();
                 today.setHours(0, 0, 0, 0);
 
-                const upcomingEvents = allEvents
+                const thirtyDaysFromNow = new Date(today);
+                thirtyDaysFromNow.setDate(today.getDate() + 30);
+
+                const allUpcomingEvents = allEvents
                     .filter(event => new Date(event.date.replace(/-/g, '\/')) >= today)
                     .sort((a, b) => new Date(a.date) - new Date(b.date));
+
+                const displayNowEvents = allUpcomingEvents.filter(event => {
+                    const eventDate = new Date(event.date.replace(/-/g, '\/'));
+                    return event.featured || eventDate <= thirtyDaysFromNow;
+                });
+
+                const stackedFutureEvents = allUpcomingEvents.filter(event => {
+                    const eventDate = new Date(event.date.replace(/-/g, '\/'));
+                    return !event.featured && eventDate > thirtyDaysFromNow;
+                });
 
                 const pastEvents = allEvents
                     .filter(event => new Date(event.date.replace(/-/g, '\/')) < today)
                     .sort((a, b) => new Date(b.date) - new Date(a.date));
 
-                renderUpcomingEvents(upcomingEvents);
+                renderUpcomingEvents(displayNowEvents);
+                renderStackedEvents(stackedFutureEvents);
                 renderPastEvents(pastEvents);
                 
-                // Prepare data for the calendar and render it
                 eventsForCalendar = createCalendarEventObject(allEvents);
                 generateCalendar(currentDate.getMonth(), currentDate.getFullYear());
             }
 
             // --- Rendering Functions ---
             function renderUpcomingEvents(events) {
+                if (!upcomingEventsContainer) return;
                 if (events.length === 0) {
-                    upcomingEventsContainer.innerHTML = '<p class="text-text-secondary">No upcoming events scheduled. Please check back soon!</p>';
+                    upcomingEventsContainer.innerHTML = '<p class="text-text-secondary">No events scheduled in the next 30 days. Please check back soon!</p>';
                     return;
                 }
 
                 upcomingEventsContainer.innerHTML = events.map(event => {
-                    // Using replace(/-/g, '\/') to avoid timezone issues with `new Date()`
                     const eventDate = new Date(event.date.replace(/-/g, '\/'));
                     const month = eventDate.toLocaleString('en-US', { month: 'short' }).toUpperCase();
                     const day = eventDate.getDate().toString().padStart(2, '0');
                     const featuredClass = event.featured ? 'border-2 border-brand-purple shadow-lg' : 'border border-border-color';
                     
-                    let detailsHtml = `<a href="${event.url}" class="font-semibold text-brand-purple hover:underline">View Details &rarr;</a>`;
+                    let detailsHtml = `<a href="${event.url}" class="font-semibold text-brand-purple hover:underline mt-4 inline-block">View Details &rarr;</a>`;
                     if (event.location_detail && event.time) {
-                        detailsHtml = `
-                            <p class="text-text-secondary mb-3">${event.time} | ${event.location_detail}</p>
-                            ${detailsHtml}
-                        `;
+                        detailsHtml = `<p class="text-text-secondary mt-2">${event.time} | ${event.location_detail}</p>${detailsHtml}`;
                     } else if (event.time) {
-                         detailsHtml = `<p class="text-text-secondary mb-3">${event.time}</p>${detailsHtml}`;
+                         detailsHtml = `<p class="text-text-secondary mt-2">${event.time}</p>${detailsHtml}`;
                     }
 
                     return `
-                        <div id="event-${event.date}" class="bg-white p-6 rounded-xl ${featuredClass} flex flex-col md:flex-row gap-6">
-                            <div class="flex-shrink-0 text-center md:text-left">
+                        <div id="event-${event.date}" class="bg-white p-6 rounded-xl ${featuredClass} flex flex-col md:flex-row gap-6 items-start">
+                            <div class="flex-shrink-0 text-center w-full md:w-20">
                                 <p class="text-brand-purple font-bold text-lg">${month}</p>
-                                <p class="text-4xl font-bold">${day}</p>
+                                <p class="text-4xl font-bold text-brand-purple-dark">${day}</p>
                             </div>
-                            <div class="flex-grow">
-                                <div class="flex justify-between items-start mb-2">
-                                    <h3 class="text-2xl font-bold">${event.title}</h3>
-                                    <div class="bg-brand-purple-light text-brand-purple-dark font-bold rounded-full px-3 py-1 text-sm whitespace-nowrap">${event.type}</div>
+                            <div class="flex-grow w-full">
+                                <div class="flex flex-col sm:flex-row justify-between items-start mb-2">
+                                    <h3 class="text-2xl font-bold mb-2 sm:mb-0">${event.title}</h3>
+                                    <div class="bg-brand-purple-light text-brand-purple-dark font-bold rounded-full px-3 py-1 text-sm whitespace-nowrap self-start">${event.type}</div>
                                 </div>
-                                <p class="text-text-secondary mb-4">${event.description}</p>
+                                <p class="text-text-secondary">${event.description}</p>
                                 ${detailsHtml}
                             </div>
                         </div>
@@ -330,7 +345,38 @@
                 }).join('');
             }
 
+            function renderStackedEvents(events) {
+                if (!stackedEventsContainer) return;
+                const moreEventsSection = document.getElementById('more-events');
+
+                if (events.length === 0) {
+                    if (moreEventsSection) moreEventsSection.classList.add('hidden');
+                    return;
+                }
+                
+                if (moreEventsSection) moreEventsSection.classList.remove('hidden');
+
+                stackedEventsContainer.innerHTML = events.map(event => {
+                    const eventDate = new Date(event.date.replace(/-/g, '\/'));
+                    const formattedDate = eventDate.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+
+                    return `
+                        <a href="${event.url}" id="event-${event.date}" class="block w-full bg-white p-6 rounded-xl border border-border-color shadow-md transition-shadow duration-300 hover:shadow-xl focus-within:shadow-xl">
+                            <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
+                                <div class="text-center sm:text-left">
+                                     <h3 class="text-2xl font-bold text-brand-purple-dark">${event.title}</h3>
+                                     <p class="font-semibold text-text-secondary">${formattedDate}</p>
+                                </div>
+                                <div class="btn btn-outline flex-shrink-0">View Details &rarr;</div>
+                            </div>
+                        </a>
+                    `;
+                }).join('');
+            }
+
+
             function renderPastEvents(events) {
+                if (!pastEventsContainer) return;
                 if (events.length === 0) {
                     pastEventsContainer.innerHTML = '<p class="text-text-secondary text-center">No past events to show.</p>';
                     return;
@@ -339,23 +385,21 @@
                 const groupedByMonth = events.reduce((acc, event) => {
                     const eventDate = new Date(event.date.replace(/-/g, '\/'));
                     const monthYear = eventDate.toLocaleString('default', { month: 'long', year: 'numeric' });
-                    if (!acc[monthYear]) {
-                        acc[monthYear] = [];
-                    }
+                    if (!acc[monthYear]) acc[monthYear] = [];
                     acc[monthYear].push(event);
                     return acc;
                 }, {});
 
                 pastEventsContainer.innerHTML = Object.entries(groupedByMonth).map(([monthYear, monthEvents]) => {
                     const eventListItems = monthEvents.map(event => `
-                        <li>
-                            <strong>${new Date(event.date.replace(/-/g, '\/')).getDate()}:</strong> ${event.title} - ${event.description}
+                        <li class="py-2">
+                            <strong>${new Date(event.date.replace(/-/g, '\/')).getDate()}:</strong> ${event.title}
                             ${event.url !== '#' ? `<a href="${event.url}" class="font-semibold text-brand-purple hover:underline ml-2">View Details</a>` : ''}
                         </li>
                     `).join('');
 
                     return `
-                        <details class="bg-white rounded-xl border border-border-color group">
+                        <details class="bg-white rounded-xl border border-border-color group transition-shadow duration-300 open:shadow-md">
                             <summary class="font-semibold text-lg cursor-pointer flex justify-between items-center p-6 transition-colors group-hover:bg-gray-50">
                                 <span>${monthYear}</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-brand-purple transform group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -363,7 +407,7 @@
                                 </svg>
                             </summary>
                             <div class="p-6 pt-0 text-text-secondary border-t border-border-color">
-                                <ul class="list-disc pl-5 space-y-2 mt-4">
+                                <ul class="divide-y divide-border-color">
                                     ${eventListItems}
                                 </ul>
                             </div>
@@ -373,23 +417,19 @@
             }
 
             function createCalendarEventObject(allEvents) {
-                const eventsObj = {};
-                allEvents.forEach(event => {
+                return allEvents.reduce((acc, event) => {
                     const date = new Date(event.date.replace(/-/g, '\/'));
                     const month = date.getMonth();
                     const day = date.getDate();
-                    if (!eventsObj[month]) {
-                        eventsObj[month] = [];
-                    }
-                    if (!eventsObj[month].includes(day)) {
-                         eventsObj[month].push(day);
-                    }
-                });
-                return eventsObj;
+                    if (!acc[month]) acc[month] = [];
+                    if (!acc[month].includes(day)) acc[month].push(day);
+                    return acc;
+                }, {});
             }
 
             // --- Calendar Generation ---
             function generateCalendar(month, year) {
+                if (!calendarContainer) return;
                 calendarContainer.innerHTML = '';
                 const today = new Date();
                 const firstDay = new Date(year, month, 1);
@@ -410,7 +450,7 @@
                                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
                             </button>
                         </div>
-                        <div class="grid grid-cols-7 gap-2 text-center text-sm text-text-secondary">
+                        <div class="grid grid-cols-7 gap-2 text-center text-sm text-text-secondary font-semibold">
                             <div>S</div><div>M</div><div>T</div><div>W</div><div>T</div><div>F</div><div>S</div>
                         </div>
                         <div class="grid grid-cols-7 gap-2 mt-2">`;
@@ -446,7 +486,13 @@
 
             // --- Interactive Calendar Logic ---
             function highlightEvent(dateStr) {
-                const targetEvent = document.getElementById(`event-${dateStr}`);
+                document.querySelectorAll('.highlight-event').forEach(el => el.classList.remove('highlight-event'));
+
+                let targetEvent = document.querySelector(`#upcoming-events-container #event-${dateStr}`);
+                if (!targetEvent) {
+                    targetEvent = document.querySelector(`#stacked-events-container #event-${dateStr}`);
+                }
+
                 if (targetEvent) {
                     targetEvent.scrollIntoView({ behavior: 'smooth', block: 'center' });
                     targetEvent.classList.add('highlight-event');
