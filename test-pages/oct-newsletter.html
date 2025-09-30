@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="The latest news, updates, and press releases from SEIU Local 503 at Oregon State University.">
+        <meta name="author" content="SEIU Local 503 at OSU">
+        <title>News - SEIU Local 503, OSU</title>
+        <link rel="icon" href="/images/logo.png" type="image/png">
+        <link rel="apple-touch-icon" href="/images/logo.png">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Lora:wght@400;500;700&display=swap" rel="stylesheet">
+        <style>
+            :root {
+                --brand-purple-dark: #4C1D95; /* Deep Purple */
+                --brand-purple: #7C3AED;      /* Vibrant Purple */
+                --brand-purple-light: #EDE9FE; /* Lighter Lavender for high contrast */
+                --brand-dark: #111827;         /* Near-black for high contrast text/bg */
+                --brand-light: #F9FAFB;        /* Off-white Background */
+                --text-primary: #1F2937;
+                --text-secondary: #374151;     /* Darker secondary text for better contrast */
+                --border-color: #D1D5DB;
+            }
+    
+            html {
+                scroll-padding-top: 80px; /* Offset for sticky header */
+            }
+    
+            body {
+                font-family: 'Inter', sans-serif;
+                background-color: var(--brand-light);
+                color: var(--text-primary);
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+            }
+    
+            h1, h2, h3, h4, h5, h6 {
+                font-family: 'Lora', serif;
+                color: var(--brand-purple-dark);
+            }
+    
+            /* Accessibility: Clear focus indicators for all interactive elements */
+            a:focus-visible, button:focus-visible, details:focus-visible, input:focus-visible, textarea:focus-visible {
+                outline: 3px solid var(--brand-purple);
+                outline-offset: 2px;
+                border-radius: 4px;
+            }
+            
+            .btn {
+                @apply font-bold py-3 px-6 rounded-lg transition-all duration-300 ease-in-out transform hover:scale-105;
+            }
+            .btn-primary {
+                @apply bg-gradient-to-r from-brand-purple to-violet-600 text-white shadow-md hover:shadow-lg;
+            }
+            .btn-secondary {
+                @apply bg-brand-dark text-white hover:bg-black;
+            }
+            .btn-outline {
+                 @apply bg-white text-brand-purple border-2 border-brand-purple hover:bg-brand-purple hover:text-white;
+            }
+    
+            /* Custom Tailwind config for our CSS variables */
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            'brand-purple-dark': 'var(--brand-purple-dark)',
+                            'brand-purple': 'var(--brand-purple)',
+                            'brand-purple-light': 'var(--brand-purple-light)',
+                            'brand-dark': 'var(--brand-dark)',
+                            'brand-light': 'var(--brand-light)',
+                            'text-primary': 'var(--text-primary)',
+                            'text-secondary': 'var(--text-secondary)',
+                            'border-color': 'var(--border-color)',
+                        }
+                    }
+                }
+            }
+        </style>
+    </head>
+
+<body class="bg-brand-light">
+
+    <!-- Header -->
+    <header class="bg-white/80 backdrop-blur-lg border-b border-border-color sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="/index.html" class="flex items-center space-x-2">
+                <span class="text-2xl font-bold text-brand-purple-dark">SEIU 503</span>
+                <span class="text-lg text-text-secondary hidden md:block">| Oregon State University</span>
+            </a>
+            <div class="hidden lg:flex space-x-8">
+                <a href="/about.html" class="text-text-secondary hover:text-brand-purple transition-colors">About</a>
+                <a href="/events.html" class="text-text-secondary hover:text-brand-purple transition-colors">Events</a>
+                <a href="/news.html" class="text-brand-purple font-bold">News</a>
+                <a href="/resources.html" class="text-text-secondary hover:text-brand-purple transition-colors">Resources & Rights</a>
+                <a href="/leadership.html" class="text-text-secondary hover:text-brand-purple transition-colors">Leadership</a>
+                <a href="/contact.html" class="text-text-secondary hover:text-brand-purple transition-colors">Contact</a>
+            </div>
+            <div class="lg:hidden">
+                <button id="mobile-menu-button" class="text-text-secondary hover:text-brand-purple focus:outline-none" aria-label="Open menu">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </nav>
+        <div id="mobile-menu" class="hidden lg:hidden absolute top-full left-0 w-full bg-white border-t border-border-color shadow-lg">
+            <a href="/about.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">About</a>
+            <a href="/events.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Events</a>
+            <a href="/news.html" class="block text-center py-3 px-6 text-lg text-brand-purple bg-brand-purple-light font-semibold">News</a>
+            <a href="/resources.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Resources & Rights</a>
+            <a href="/leadership.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Leadership</a>
+            <a href="/contact.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Contact</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-16">
+        <article class="max-w-4xl mx-auto bg-white p-8 md:p-12 rounded-xl border border-border-color">
+            
+            <header class="text-center border-b border-border-color pb-8 mb-8">
+                <p class="text-brand-purple font-bold mb-2">OCTOBER NEWSLETTER</p>
+                <h1 class="text-4xl md:text-5xl font-bold">Website Launch, Bowling Strikes, & Big Wins!</h1>
+                <p class="mt-4 text-lg text-text-secondary">Published on October 2, 2025</p>
+            </header>
+
+            <div class="prose max-w-none text-text-secondary text-lg leading-relaxed">
+                <p>Hello Siblings,</p>
+                <p>For those I haven't had the pleasure of meeting yet, my name is Jax Johnson, and I’m honored to be your new Communications Chair. I'm incredibly excited to be in this role, especially with all the great things we have on the horizon. There's a big project I've been pouring my energy into that's finally ready, a chance for us to get together and knock down some pins, and a major victory for our union family to celebrate. So, let’s get right to the good stuff.</p>
+                
+                <hr class="my-8">
+
+                <h3 class="text-2xl font-bold mt-8 mb-4 text-brand-purple-dark">Behold! The Website Has Arrived!</h3>
+                <p>It's ALIVE! After countless hours of wrangling code, chasing pixels, and imbibing truly heroic amounts of coffee, our new digital home is officially open for business. I am incredibly proud to launch <a href="https://www.local083.org" target="_blank" class="text-brand-purple hover:underline">www.local083.org</a>! This website is built for you – to be a one-stop shop for your contract, event info, news, and resources. A massive, heartfelt thank you to our entire executive team and the nascent Comms Committee who empowered me and provided the support to make this happen. You all rock.</p>
+                <img src="/images/72c9eb7a-2a29-4ef4-a7c4-a80d51950949-october-newsletter-homepage-preview.webp" alt="Screenshot of the new SEIU 503 Sub Local 083 website homepage." class="w-full h-auto object-cover rounded-lg my-6 border-4 border-brand-purple">
+
+                <p>Now that we have this great new tool, it's time to use it to get together. Which brings me to...</p>
+                
+                <hr class="my-8">
+
+                <h3 class="text-2xl font-bold mt-8 mb-4 text-brand-purple-dark">Let’s Go Bowling!</h3>
+                <p>That’s right, it’s time to trade our work shoes for something a little more… slippery. Join us for our <strong>Member & Family Bowling Night</strong>! It’s all going down on <strong>Thursday, October 23rd, from 6:00 PM to 8:00 PM</strong> at Lanes & Games in the MU Basement. We’ll cover the food, lanes, and shoes. You just bring your amazing self, your family, and your questionable bowling form. It's less about strikes and more about solidarity (and maybe a little friendly trash talk). Let's pack the lanes!</p>
+                <a href="/events/2025-10-23-Bowling.html" class="btn btn-primary my-4 inline-block">RSVP for Bowling Night!</a>
+                
+                <p>Building community is what our union is all about, and that spirit of solidarity is how we win real victories for workers. Speaking of victories...</p>
+                
+                <hr class="my-8">
+
+                <h3 class="text-2xl font-bold mt-8 mb-4 text-brand-purple-dark">Solidarity in Action: A HUGE Win for ODOT!</h3>
+                <p>Let's give a massive round of applause to our union siblings in the Oregon Department of Transportation! After months of sleepless nights and difficult conversations, their powerful organizing and unwavering solidarity have paid off. They successfully fought back against planned layoffs, which have now been reversed thanks to a new funding package passed in Salem.</p>
+                <p>This is a monumental victory and a perfect example of what happens when we stand together and advocate for ourselves. This fight isn't just about jobs; it's about the essential services we provide to Oregonians every day. As SEIU 503 Executive Director Melissa Unger said:</p>
+                <blockquote class="border-l-4 border-brand-purple bg-brand-purple-light p-4 my-4 rounded-r-lg">
+                    <p class="italic text-brand-purple">"...legislators voted for this package because of you, because they know the important work you do to keep our communities and our roads safe."</p>
+                    <cite class="block text-right not-italic mt-2 font-bold text-lg text-brand-purple-dark" style="font-family: 'Lora', serif;">&mdash; Melissa Unger, SEIU 503 Executive Director</cite>
+                </blockquote>
+                <p>Their fight is our fight, and their victory is a win for all of us in the labor movement. POWERFUL!</p>
+                
+                <div class="video-container my-6 border-4 text-brand-purple">
+                    <iframe src="https://www.youtube.com/embed/b702ZGG0Ew0" title="YouTube video player" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+
+                <hr class="my-8">
+
+                <h3 class="text-2xl font-bold mt-8 mb-4 text-brand-purple-dark">Your Union Needs YOU!</h3>
+                <p>Feeling inspired? Good! That victory was won by members getting involved, and you can do the same. Here are a couple of key ways to get more involved right now:</p>
+                <ul class="list-disc pl-5 space-y-2">
+                    <li><strong>Come to Bowling Night!</strong> Seriously, just showing up and connecting with your fellow members is a powerful act of solidarity.</li>
+                    <li><strong>Become a CAT!</strong> Our Contract Action Team (CAT) is the eyes and ears of our union in every workplace. You'll be a key communicator, helping to share info and organize your coworkers. It’s a vital role as we head toward bargaining.</li>
+                    <li><strong>Got a Workplace Concern?</strong> Don't go it alone. If something doesn't feel right at work, your first step should be to <a href="/resources/stewards.html" class="text-brand-purple hover:underline">reach out to a steward</a>. They're trained to help you understand your rights and navigate workplace issues.</li>
+                </ul>
+                <p>That's all for now, folks. Go check out the new site, sign up for bowling, and let’s keep building our power together.</p>
+                <p>In Solidarity (and occasional absurdity),<br>
+                <strong>Jax Johnson</strong><br>
+                Communications Chair, SEIU 503 Sub Local 083</p>
+            </div>
+
+            <div class="mt-12 text-center border-t border-border-color pt-8">
+                <h3 class="text-2xl font-bold">Ready to Get Involved?</h3>
+                <a href="mailto:083execteam@seiu503.org?subject=I'm%20interested%20in%20becoming%20a%20CAT" class="btn btn-primary mt-4">Sign Up to be a CAT</a>
+            </div>
+
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark text-white pt-12 pb-8">
+        <div class="container mx-auto px-6">
+            <div class="mt-10 pt-8 border-t border-gray-700 text-center">
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Column 1: About the Union -->
+                <div class="md:col-span-2 lg:col-span-1">
+                    <div class="flex items-center mb-4">
+                        <img src="/images/logo.png" alt="SEIU 503 Logo" class="h-12 w-12 mr-3 bg-white p-1 rounded">
+                        <div>
+                            <h3 class="text-xl font-bold">SEIU Local 503</h3>
+                            <p class="text-gray-400 text-sm">Oregon State University</p>
+                        </div>
+                    </div>
+                    <p class="text-black leading-relaxed">Representing the classified employees of Oregon State University. We fight for fair contracts, defend workplace rights, and build a united community.</p>
+                </div>
+    
+                <!-- Column 2: Quick Links -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="/about.html" class="text-black hover:text-gray-500 transition-colors">About Us</a></li>
+                        <li><a href="/events.html" class="text-black hover:text-gray-500 transition-colors">Events</a></li>
+                        <li><a href="/news.html" class="text-black hover:text-gray-500 transition-colors">News</a></li>
+                        <li><a href="/leadership.html" class="text-black hover:text-gray-500 transition-colors">Leadership</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Column 3: Resources -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase"><a href="/resources.html" class="hover:text-gray-500 transition-colors">Resources</a></h4>
+                    <ul class="space-y-3">
+                        <li><a href="/resources.html" class="text-black hover:text-gray-500 transition-colors">Resources & Rights</a></li>
+                        <li><a href="/resources/seiu_cba_2022-2026.pdf" class="text-black hover:text-gray-500 transition-colors">Our Contract (PDF)</a></li>
+                        <li><a href="/resources/stewards.html" class="text-black hover:text-gray-500 transition-colors">Find a Steward</a></li>
+                        <li><a href="/resources/weingarten-rights.html" class="text-black hover:text-gray-500 transition-colors">Weingarten Rights</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Column 4: Contact -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase"><a href="/contact.html" class="hover:text-gray-500 transition-colors">Contact Us</a></h4>
+                     <ul class="space-y-3 text-black">
+                        <li class="flex items-start">
+                            <span class="mr-2 mt-1">✉️</span> <!-- Mail icon -->
+                            <a href="mailto:083execteam@seiu503.org" class="hover:text-gray-500 transition-colors">083execteam@seiu503.org</a>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-2 mt-1">✉️</span> <!-- Mail icon -->
+                            <a href="mailto:083stewards@seiu503.org" class="hover:text-gray-500 transition-colors">083stewards@seiu503.org</a>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-2 mt-1">&#128205;</span> <!-- Pin icon -->
+                            <a href="https://maps.app.goo.gl/9TWRZ9F4wjVjacsZ7" class="hover:text-gray-500 transition-colors">Adams Hall, Room 109<br>Corvallis, OR 97331</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+    
+            <!-- Bottom Bar -->
+            <div class="mt-10 pt-8 border-t border-gray-700 text-center">
+                <p class="text-gray-400 text-sm">&copy; 2025 SEIU Local 503, Oregon State University. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // --- Mobile Menu Toggle ---
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = document.querySelectorAll('#mobile-menu a');
+
+        mobileMenuButton.addEventListener('click', () => {
+            const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+            mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenuButton.setAttribute('aria-expanded', 'false');
+            });
+        });
+    </script>
+</body>
+</html>
