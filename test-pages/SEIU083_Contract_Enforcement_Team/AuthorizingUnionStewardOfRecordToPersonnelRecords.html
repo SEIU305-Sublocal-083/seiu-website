@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authorization to Access Personnel Records</title>
+    <link rel="icon" href="../../images/logo.png" type="image/png">
+    <link rel="apple-touch-icon" href="../../images/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Lora:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #1F2937;
+            background-color: #F9FAFB;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #FFFFFF;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        h2 {
+            font-family: 'Lora', serif;
+            text-align: center;
+            font-size: 24px;
+            color: #4C1D95;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            text-align: center;
+            font-size: 16px;
+            color: #4B5563;
+            margin-bottom: 30px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            font-weight: 500;
+            color: #374151;
+        }
+        input[type="text"],
+        input[type="date"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #D1D5DB;
+            border-radius: 6px;
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        .checkbox-group {
+            padding-left: 20px;
+            margin-top: 10px;
+        }
+        .checkbox-group label {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            font-weight: normal;
+        }
+        .checkbox-group input[type="checkbox"] {
+            margin-right: 10px;
+            width: 18px;
+            height: 18px;
+        }
+        .quote {
+            background-color: #F3F4F6;
+            padding: 15px;
+            border-left: 4px solid #7C3AED;
+            margin: 25px 0;
+            font-size: 14px;
+            font-style: italic;
+        }
+        .signature-section {
+            display: flex;
+            gap: 20px;
+            align-items: flex-end;
+            margin-top: 40px;
+        }
+        .signature-section .form-group {
+            flex-grow: 1;
+        }
+         .signature-section .date-group {
+            width: 200px;
+            flex-shrink: 0;
+        }
+        .footer-info {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #E5E7EB;
+            gap: 20px;
+        }
+        .footer-info .form-group {
+            width: 30%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Union Steward of Record<br>Authorization to Personnel Records</h2>
+        <p class="subtitle">Based on Article 16: Personnel Records, Section 1(A) The Official Personnel File</p>
+
+        <div class="form-group">
+            <label for="employee_name">I, <input type="text" id="employee_name" name="employee_name" placeholder="Employee’s Name" style="width: 400px; display: inline-block;"></label>
+            <p style="margin-top: 10px;">hereby give my Union Steward of Record authorization to:</p>
+        </div>
+
+        <div class="checkbox-group">
+            <label>
+                <input type="checkbox" name="auth_hr" checked>
+                Schedule, request, and inspect all Human Resource files kept on me.
+            </label>
+            <label>
+                <input type="checkbox" name="auth_supervisor" checked>
+                Schedule, request, and inspect all Supervisor files kept on me.
+            </label>
+            <label>
+                <input type="checkbox" name="auth_other" checked>
+                Schedule, request, and inspect all other files kept on me.
+            </label>
+            <label>
+                <input type="checkbox" name="auth_copies" checked>
+                Receive copies of anything within said files that the Steward of Record, in their sole discretion, deems necessary to have a copy of.
+            </label>
+        </div>
+
+        <p style="margin-top: 20px;">By providing such written authorization to my Steward, I acknowledge and agree that the Steward will be able to view personally identifiable information otherwise protected from disclosure.</p>
+
+        <div class="quote">
+            <p>Upon reasonable notice, an employee may inspect the records, excluding any confidential reports from previous employers, in the employee’s official university personnel file within five (5) work days of the employee’s request. With the employee’s written authorization authorizing the employee’s Union Steward to inspect the employee’s official personnel file, consistent with the time requirements provided above.</p>
+        </div>
+
+        <p>A signed copy of this agreement transmitted by facsimile, email, or other means of transmission shall be deemed to have the same legal effect as delivery of an original executed copy of this agreement for all purposes. Unless I submit a written letter revoking this authorization, it shall remain in effect until the Steward of Records determines this case has been closed.</p>
+
+        <div class="signature-section">
+            <div class="form-group">
+                <label for="signature">Signature of Employee:</label>
+                <input type="text" id="signature" name="signature" placeholder="X _________________________________">
+            </div>
+            <div class="form-group date-group">
+                <label for="signature_date">Date:</label>
+                <input type="date" id="signature_date" name="signature_date">
+            </div>
+        </div>
+
+        <div class="footer-info">
+            <div class="form-group">
+                <label for="footer_date">Date:</label>
+                <input type="date" id="footer_date" name="footer_date">
+            </div>
+            <div class="form-group">
+                <label for="case_number">Case #:</label>
+                <input type="text" id="case_number" name="case_number">
+            </div>
+            <div class="form-group">
+                <label for="page_number">Page ___ of ___:</label>
+                <input type="text" id="page_number" name="page_number">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
