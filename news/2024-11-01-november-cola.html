@@ -3,15 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A reminder that the next cost-of-living adjustment (COLA) from our new contract takes effect this November.">
+    <title>News: Your 3% COLA Increase Arrives Nov 1st! - SEIU Local 503, OSU</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="The final COLA from our contract arrives Nov 1, 2025! See what we've won and take the 2025 bargaining survey to help shape our next contract.">
+    <meta name="keywords" content="SEIU 503, OSU, Bargaining Survey, union, COLA, cost-of-living adjustment, contract, salary increase, classified staff, university workers">
     <meta name="author" content="SEIU Local 503 at OSU">
-    <title>News: November COLA Increase Coming Soon! - SEIU Local 503, OSU</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="canonical" href="https://seiu503osu.org/news/november-2025-cola-and-survey">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://seiu503osu.org/news/november-2025-cola-and-survey">
+    <meta property="og:title" content="News: Your 3% COLA Increase Arrives Nov 1st! - SEIU Local 503, OSU">
+    <meta property="og:description" content="The final COLA from our contract arrives Nov 1, 2025! See what we've won and take the 2025 bargaining survey to help shape our next contract.">
+    <meta property="og:image" content="https://placehold.co/1200x630/7C3AED/FFFFFF?text=3%25+Raise+And+Bargaining+Survey!">
+    <meta property="og:site_name" content="SEIU Local 503 at OSU">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://seiu503osu.org/news/november-2025-cola-and-survey">
+    <meta property="twitter:title" content="News: Your 3% COLA Increase Arrives Nov 1st! - SEIU Local 503, OSU">
+    <meta property="twitter:description" content="The final COLA from our contract arrives Nov 1, 2025! See what we've won and take the 2025 bargaining survey to help shape our next contract.">
+    <meta property="twitter:image" content="https://placehold.co/1200x630/7C3AED/FFFFFF?text=3%25+Raise+And+Bargaining+Survey!">
+
+    <!-- Favicons -->
     <link rel="icon" href="/images/logo.png" type="image/png">
     <link rel="apple-touch-icon" href="/images/logo.png">
+
+    <!-- Fonts and Styles -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Lora:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Chart.js Library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         :root {
             --brand-purple-dark: #4C1D95; /* Deep Purple */
@@ -54,12 +79,6 @@
         .btn-primary {
             @apply bg-gradient-to-r from-brand-purple to-violet-600 text-white shadow-md hover:shadow-lg;
         }
-        .btn-secondary {
-            @apply bg-brand-dark text-white hover:bg-black;
-        }
-        .btn-outline {
-             @apply bg-white text-brand-purple border-2 border-brand-purple hover:bg-brand-purple hover:text-white;
-        }
 
         /* Custom Tailwind config for our CSS variables */
         tailwind.config = {
@@ -79,6 +98,34 @@
             }
         }
     </style>
+    
+    <!-- JSON-LD Structured Data for Google -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "NewsArticle",
+      "headline": "Another Raise is Coming: Your 3% COLA Arrives November 1st!",
+      "image": [
+        "https://seiu503osu.org/images/cola-chart.png"
+       ],
+      "datePublished": "2025-10-18T14:00:00-07:00",
+      "dateModified": "2025-10-18T14:00:00-07:00",
+      "author": [{
+          "@type": "Organization",
+          "name": "SEIU Local 503 at OSU",
+          "url": "https://seiu503osu.org"
+        }],
+      "publisher": {
+          "@type": "Organization",
+          "name": "SEIU Local 503 at OSU",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://seiu503osu.org/images/logo.png"
+          }
+       },
+      "description": "A reminder that the next cost-of-living adjustment (COLA) from our contract takes effect this November, and the 2025 bargaining survey is now open."
+    }
+    </script>
 </head>
 <body class="bg-brand-light">
 
@@ -98,7 +145,7 @@
                 <a href="/contact.html" class="text-text-secondary hover:text-brand-purple transition-colors">Contact</a>
             </div>
             <div class="lg:hidden">
-                <button id="mobile-menu-button" class="text-text-secondary hover:text-brand-purple focus:outline-none" aria-label="Open menu">
+                <button id="mobile-menu-button" class="text-text-secondary hover:text-brand-purple focus:outline-none" aria-label="Open menu" aria-expanded="false">
                     <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
                 </button>
             </div>
@@ -115,41 +162,61 @@
     </header>
 
     <main class="container mx-auto px-6 py-16">
-        <article class="max-w-4xl mx-auto bg-white p-8 md:p-12 rounded-xl border border-border-color">
+        <article class="max-w-4xl mx-auto bg-white p-8 md:p-12 rounded-xl border border-border-color shadow-sm">
 
             <!-- Article Header -->
             <header class="text-center border-b border-border-color pb-8 mb-8">
-                <p class="text-brand-purple font-bold mb-2">CONTRACT UPDATE</p>
-                <h1 class="text-4xl md:text-5xl font-bold">Our Next COLA Increase is Coming!</h1>
+                <p class="text-brand-purple font-bold mb-2">CONTRACT UPDATE & CALL TO ACTION</p>
+                <h1 class="text-4xl md:text-5xl font-bold">Another Raise is Coming: Your 3% COLA Arrives November 1st!</h1>
                 <p class="mt-4 text-text-secondary">
-                    <span class="text-lg">Published on October 18, 2024</span>
+                    <span class="text-lg">Published on October 18, 2025</span>
                 </p>
             </header>
 
             <!-- Article Body -->
             <div class="prose max-w-none text-text-secondary text-lg leading-relaxed space-y-6">
-                <img src="https://placehold.co/900x500/EDE9FE/4C1D95?text=Our+Union+Wins" alt="A graphic celebrating our union's contract victory." class="w-full h-auto object-cover rounded-lg">
+                <p>Get ready for another increase in your paycheck! The final cost-of-living adjustment (COLA) that we won together in our current contract takes effect on <strong>November 1, 2025</strong>. All classified staff will see a <strong>3% raise</strong> reflected in their November paycheck.</p>
+                
+                <p>This is a big win and a direct result of our collective action and solidarity. Let's take a moment to look at what we've accomplished together with this contract, which has resulted in a cumulative compounded raise of nearly 16%!</p>
+                
+                <!-- Chart.js Canvas -->
+                <div class="w-full h-96 bg-slate-50 p-4 rounded-lg my-8">
+                    <canvas id="colaChart" aria-label="A bar chart showing cumulative COLA increases over time" role="img"></canvas>
+                </div>
 
-                <p>A friendly reminder to all of us: the next cost-of-living adjustment (COLA) that we won together in our recently ratified contract takes effect on November 1st. You should see this important increase reflected in your November paycheck.</p>
 
-                <p>This victory is a direct result of our collective action and solidarity. Every one of us who wore purple, attended a meeting, or talked to a coworker helped send a clear message to university management: we deserve wages that keep up with the rising cost of living.</p>
-
-                <h3 class="text-2xl font-bold !mt-10 !mb-4 text-brand-purple-dark">What This Means For Us</h3>
-                <p>Our contract secures a guaranteed **2% COLA** for all classified staff effective November 1, 2024. This is the second of four raises we secured in our contract. The upcoming raises are:</p>
-                <ul class="list-disc list-inside">
-                    <li><strong>3.5%</strong> effective June 1, 2025</li>
-                    <li><strong>3%</strong> effective November 1, 2025</li>
+                <h3 class="text-2xl font-bold !mt-10 !mb-4 text-brand-purple-dark">A Look Back at Our Historic Wins</h3>
+                <p>The upcoming 3% raise is the capstone on a series of significant gains. Since our contract was ratified, our unity has secured:</p>
+                <ul class="list-disc list-inside space-y-2">
+                    <li>A <strong>$1,500</strong> one-time payment (April 2024)</li>
+                    <li>A <strong>6.5%</strong> COLA (April 1, 2024)</li>
+                    <li>A <strong>2%</strong> COLA (November 1, 2024)</li>
+                    <li>A <strong>3.5%</strong> COLA (June 1, 2025)</li>
                 </ul>
-                <p>These guaranteed increases ensure that our hard-earned pay won't lose value to inflation, providing much-needed financial stability for ourselves and our families.</p>
+
+                <h3 class="text-2xl font-bold !mt-10 !mb-4 text-brand-purple-dark">Who Gets This Raise?</h3>
+                <p>To be clear: every classified employee will receive this raise. If you are employed by the university in a classified position on November 1, 2025, you are entitled to the 3% COLA, even if you were hired just a few days prior. It's a benefit for all of us.</p>
+
+
+                <h3 class="text-2xl font-bold !mt-10 !mb-4 text-brand-purple-dark">Share Your Story, Build Our Power</h3>
+                <p>This raise makes a real difference. What will it mean for you and your family? Paying off a bill, saving for the future, or just having a little less stress at the grocery store? Sharing our stories shows the real-world impact of our collective power. Talk to your steward or a coworker about what this raise means to you. Our numbers and our stories give us strength for the next fight.</p>
+
+                <!-- Bargaining Survey Section -->
+                <div class="!mt-12 p-6 rounded-lg border-2 border-brand-purple bg-brand-purple-light space-y-4">
+                    <h3 class="text-2xl font-bold !mt-0 !mb-2 text-brand-purple-dark">Shape Our Next Contract: Take the Bargaining Survey!</h3>
+                    <p class="text-text-secondary">As we celebrate this win, we must prepare for the next round of negotiations. It is crucial that we hear from you!</p>
+                    <p class="text-text-secondary">Please check your inbox for an email with the title <strong class="text-brand-purple-dark">"It's time for your 2025 Higher Ed Bargaining Survey"</strong> from <strong class="text-brand-purple-dark">alert@seiu503.org</strong>. Your confidential feedback will directly shape our priorities.</p>
+                    <p class="text-text-secondary">Not a member yet? Your voice is still essential. <a href="join.html" class="font-bold text-brand-purple hover:underline">Join Us Today</a> and take the survey to make sure your priorities are heard!</p>
+                </div>
 
                 <h3 class="text-2xl font-bold !mt-10 !mb-4 text-brand-purple-dark">Questions About Your Pay?</h3>
-                <p>We encourage everyone to check their pay stubs to ensure the increase has been correctly applied. If you have any questions or feel there is an issue, please don't hesitate to reach out to a department steward or contact our union office for support. We're here to help.</p>
+                <p>We encourage everyone to check their pay stubs in November to ensure the 3% increase has been correctly applied. If you have any questions or believe there is an error, please don't hesitate to reach out to a department steward or contact our union office for support. We're here to help.</p>
             </div>
 
             <!-- Action CTA -->
             <div class="mt-12 text-center border-t border-border-color pt-8">
                 <h3 class="text-2xl font-bold">We're Stronger Together</h3>
-                <p class="text-text-secondary my-4">If you have any questions about our new contract or your pay, please reach out. We have your back.</p>
+                <p class="text-text-secondary my-4">Take the bargaining survey, check your paycheck in November, and let's keep building our power.</p>
                 <a href="contact.html" class="btn btn-primary">Contact Our Union</a>
             </div>
 
@@ -157,7 +224,7 @@
     </main>
 
     <!-- Footer -->
-        <footer class="bg-brand-dark text-white pt-12 pb-8">
+    <footer class="bg-brand-dark text-white pt-12 pb-8">
         <div class="container mx-auto px-6">
             <div class="mt-10 pt-8 border-t border-gray-700 text-center">
             </div>
@@ -171,51 +238,51 @@
                             <p class="text-gray-400 text-sm">Oregon State University</p>
                         </div>
                     </div>
-                    <p class="text-gray-300 leading-relaxed">Representing the classified employees of Oregon State University. We fight for fair contracts, defend workplace rights, and build a united community.</p>
+                    <p class="text-black leading-relaxed">Representing the classified employees of Oregon State University. We fight for fair contracts, defend workplace rights, and build a united community.</p>
                 </div>
-
+    
                 <!-- Column 2: Quick Links -->
                 <div>
                     <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase">Quick Links</h4>
                     <ul class="space-y-3">
-                        <li><a href="/about.html" class="text-gray-300 hover:text-white transition-colors">About Us</a></li>
-                        <li><a href="/events.html" class="text-gray-300 hover:text-white transition-colors">Events</a></li>
-                        <li><a href="/news.html" class="text-gray-300 hover:text-white transition-colors">News</a></li>
-                        <li><a href="/leadership.html" class="text-gray-300 hover:text-white transition-colors">Leadership</a></li>
+                        <li><a href="/about.html" class="text-black hover:text-gray-500 transition-colors">About Us</a></li>
+                        <li><a href="/events.html" class="text-black hover:text-gray-500 transition-colors">Events</a></li>
+                        <li><a href="/news.html" class="text-black hover:text-gray-500 transition-colors">News</a></li>
+                        <li><a href="/leadership.html" class="text-black hover:text-gray-500 transition-colors">Leadership</a></li>
                     </ul>
                 </div>
-
+    
                 <!-- Column 3: Resources -->
                 <div>
-                    <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase"><a href="/resources.html" class="hover:text-white transition-colors">Resources</a></h4>
+                    <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase"><a href="/resources.html" class="hover:text-gray-500 transition-colors">Resources</a></h4>
                     <ul class="space-y-3">
-                        <li><a href="/resources.html" class="text-gray-300 hover:text-white transition-colors">Resources & Rights</a></li>
-                        <li><a href="/resources/seiu_cba_2022-2026.pdf" class="text-gray-300 hover:text-white transition-colors">Our Contract (PDF)</a></li>
-                        <li><a href="/resources/stewards.html" class="text-gray-300 hover:text-white transition-colors">Find a Steward</a></li>
-                        <li><a href="/resources/weingarten-rights.html" class="text-gray-300 hover:text-white transition-colors">Weingarten Rights</a></li>
+                        <li><a href="/resources.html" class="text-black hover:text-gray-500 transition-colors">Resources & Rights</a></li>
+                        <li><a href="/resources/seiu_cba_2022-2026.pdf" class="text-black hover:text-gray-500 transition-colors">Our Contract (PDF)</a></li>
+                        <li><a href="/resources/stewards.html" class="text-black hover:text-gray-500 transition-colors">Find a Steward</a></li>
+                        <li><a href="/resources/weingarten-rights.html" class="text-black hover:text-gray-500 transition-colors">Weingarten Rights</a></li>
                     </ul>
                 </div>
-
+    
                 <!-- Column 4: Contact -->
                 <div>
-                    <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase"><a href="/contact.html" class="hover:text-white transition-colors">Contact Us</a></h4>
-                     <ul class="space-y-3 text-gray-300">
+                    <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase"><a href="/contact.html" class="hover:text-gray-500 transition-colors">Contact Us</a></h4>
+                     <ul class="space-y-3 text-black">
                         <li class="flex items-start">
                             <span class="mr-2 mt-1">✉️</span> <!-- Mail icon -->
-                            <a href="mailto:083execteam@seiu503.org" class="hover:text-white transition-colors">083execteam@seiu503.org</a>
+                            <a href="mailto:083execteam@seiu503.org" class="hover:text-gray-500 transition-colors">083execteam@seiu503.org</a>
                         </li>
                         <li class="flex items-start">
                             <span class="mr-2 mt-1">✉️</span> <!-- Mail icon -->
-                            <a href="mailto:083stewards@seiu503.org" class="hover:text-white transition-colors">083stewards@seiu503.org</a>
+                            <a href="mailto:083stewards@seiu503.org" class="hover:text-gray-500 transition-colors">083stewards@seiu503.org</a>
                         </li>
                         <li class="flex items-start">
                             <span class="mr-2 mt-1">&#128205;</span> <!-- Pin icon -->
-                            <a href="https://maps.app.goo.gl/9TWRZ9F4wjVjacsZ7" class="hover:text-white transition-colors">Adams Hall, Room 109<br>Corvallis, OR 97331</a>
+                            <a href="https://maps.app.goo.gl/9TWRZ9F4wjVjacsZ7" class="hover:text-gray-500 transition-colors">Adams Hall, Room 109<br>Corvallis, OR 97331</a>
                         </li>
                     </ul>
                 </div>
             </div>
-
+    
             <!-- Bottom Bar -->
             <div class="mt-10 pt-8 border-t border-gray-700 text-center">
                 <p class="text-gray-400 text-sm">&copy; 2025 SEIU Local 503, Oregon State University. All rights reserved.</p>
@@ -235,13 +302,44 @@
             mobileMenu.classList.toggle('hidden');
         });
 
-        // Close mobile menu when a link is clicked
         navLinks.forEach(link => {
             link.addEventListener('click', () => {
                 mobileMenu.classList.add('hidden');
                 mobileMenuButton.setAttribute('aria-expanded', 'false');
             });
         });
+
+        // --- Image Carousel Logic ---
+        const slides = document.querySelectorAll('.carousel-slide');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+        let currentSlide = 0;
+
+        function showSlide(n) {
+            slides.forEach((slide, index) => {
+                slide.classList.remove('active');
+                if (index === n) {
+                    slide.classList.add('active');
+                }
+            });
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        nextBtn.addEventListener('click', nextSlide);
+        prevBtn.addEventListener('click', prevSlide);
+
+        // Auto-play functionality (optional)
+        // setInterval(nextSlide, 5000); // Change slide every 5 seconds
+
     </script>
 </body>
 </html>
