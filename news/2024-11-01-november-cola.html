@@ -3,27 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>News: Your 3% COLA Increase Arrives Nov 1st! - SEIU Local 503, OSU</title>
+    <title>News: Union Power Delivers 3% Raise Nov 1st - SEIU 503, OSU</title>
     
     <!-- SEO Meta Tags -->
-    <meta name="description" content="The final COLA from our contract arrives Nov 1, 2025! See what we've won and take the 2025 bargaining survey to help shape our next contract.">
-    <meta name="keywords" content="SEIU 503, OSU, Bargaining Survey, union, COLA, cost-of-living adjustment, contract, salary increase, classified staff, university workers">
+    <meta name="description" content="Victory! Your final 3% union-won COLA arrives Nov 1, 2025. See the full breakdown of our contract wins and take the crucial 2025 bargaining survey now.">
+    <meta name="keywords" content="SEIU 503, OSU, Oregon State University, Bargaining Survey, union, COLA, cost-of-living adjustment, union contract, salary increase, classified staff, university workers, worker rights">
     <meta name="author" content="SEIU Local 503 at OSU">
     <link rel="canonical" href="https://seiu503osu.org/news/november-2025-cola-and-survey">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://seiu503osu.org/news/november-2025-cola-and-survey">
-    <meta property="og:title" content="News: Your 3% COLA Increase Arrives Nov 1st! - SEIU Local 503, OSU">
-    <meta property="og:description" content="The final COLA from our contract arrives Nov 1, 2025! See what we've won and take the 2025 bargaining survey to help shape our next contract.">
+    <meta property="og:title" content="News: Union Power Delivers 3% Raise Nov 1st - SEIU 503, OSU">
+    <meta property="og:description" content="Victory! Your final 3% union-won COLA arrives Nov 1, 2025. See the full breakdown of our contract wins and take the crucial 2025 bargaining survey now.">
     <meta property="og:image" content="https://placehold.co/1200x630/7C3AED/FFFFFF?text=3%25+Raise+And+Bargaining+Survey!">
     <meta property="og:site_name" content="SEIU Local 503 at OSU">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://seiu503osu.org/news/november-2025-cola-and-survey">
-    <meta property="twitter:title" content="News: Your 3% COLA Increase Arrives Nov 1st! - SEIU Local 503, OSU">
-    <meta property="twitter:description" content="The final COLA from our contract arrives Nov 1, 2025! See what we've won and take the 2025 bargaining survey to help shape our next contract.">
+    <meta property="twitter:title" content="News: Union Power Delivers 3% Raise Nov 1st - SEIU 503, OSU">
+    <meta property="twitter:description" content="Victory! Your final 3% union-won COLA arrives Nov 1, 2025. See the full breakdown of our contract wins and take the crucial 2025 bargaining survey now.">
     <meta property="twitter:image" content="https://placehold.co/1200x630/7C3AED/FFFFFF?text=3%25+Raise+And+Bargaining+Survey!">
 
     <!-- Favicons -->
@@ -104,7 +104,7 @@
     {
       "@context": "https://schema.org",
       "@type": "NewsArticle",
-      "headline": "Another Raise is Coming: Your 3% COLA Arrives November 1st!",
+      "headline": "Union Power Delivers: Your Final 3% COLA Raise Arrives November 1st!",
       "image": [
         "https://seiu503osu.org/images/cola-chart.png"
        ],
@@ -123,7 +123,7 @@
             "url": "https://seiu503osu.org/images/logo.png"
           }
        },
-      "description": "A reminder that the next cost-of-living adjustment (COLA) from our contract takes effect this November, and the 2025 bargaining survey is now open."
+      "description": "Victory! Your final 3% union-won COLA arrives Nov 1, 2025. See the full breakdown of our contract wins and take the crucial 2025 bargaining survey now."
     }
     </script>
 </head>
@@ -166,8 +166,8 @@
 
             <!-- Article Header -->
             <header class="text-center border-b border-border-color pb-8 mb-8">
-                <p class="text-brand-purple font-bold mb-2">CONTRACT UPDATE & CALL TO ACTION</p>
-                <h1 class="text-4xl md:text-5xl font-bold">Another Raise is Coming: Your 3% COLA Arrives November 1st!</h1>
+                <p class="text-brand-purple font-bold mb-2">CONTRACT VICTORY & CALL TO ACTION</p>
+                <h1 class="text-4xl md:text-5xl font-bold">Union Power Delivers: Your Final 3% COLA Raise Arrives November 1st!</h1>
                 <p class="mt-4 text-text-secondary">
                     <span class="text-lg">Published on October 18, 2025</span>
                 </p>
@@ -302,6 +302,7 @@
             mobileMenu.classList.toggle('hidden');
         });
 
+        // Close mobile menu when a link is clicked
         navLinks.forEach(link => {
             link.addEventListener('click', () => {
                 mobileMenu.classList.add('hidden');
@@ -309,37 +310,87 @@
             });
         });
 
-        // --- Image Carousel Logic ---
-        const slides = document.querySelectorAll('.carousel-slide');
-        const prevBtn = document.getElementById('prev-btn');
-        const nextBtn = document.getElementById('next-btn');
-        let currentSlide = 0;
+        // --- Chart.js Graph ---
+        document.addEventListener('DOMContentLoaded', () => {
+            const ctx = document.getElementById('colaChart').getContext('2d');
+            
+            const gradient = ctx.createLinearGradient(0, 0, 0, 400);
+            gradient.addColorStop(0, '#8B5CF6');   
+            gradient.addColorStop(1, '#4C1D95');
 
-        function showSlide(n) {
-            slides.forEach((slide, index) => {
-                slide.classList.remove('active');
-                if (index === n) {
-                    slide.classList.add('active');
+            const chartData = {
+                labels: ['Apr 2024', 'Nov 2024', 'Jun 2025', 'Nov 2025'],
+                datasets: [{
+                    label: 'Cumulative COLA %',
+                    data: [6.5, 8.6, 12.4, 15.8],
+                    backgroundColor: gradient,
+                    borderColor: '#4C1D95',
+                    borderWidth: 2,
+                    borderRadius: 5,
+                    hoverBackgroundColor: '#A78BFA'
+                }]
+            };
+
+            const chartOptions = {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    title: {
+                        display: true,
+                        text: 'Our Contract Wins: Cumulative Raises',
+                        font: {
+                            size: 18,
+                            family: "'Lora', serif"
+                        },
+                        color: '#4C1D95',
+                        padding: {
+                            bottom: 20
+                        }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                let label = context.dataset.label || '';
+                                if (label) {
+                                    label += ': ';
+                                }
+                                if (context.parsed.y !== null) {
+                                    label += context.parsed.y + '%';
+                                }
+                                return label;
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        grid: {
+                            color: '#E5E7EB'
+                        },
+                        ticks: {
+                            callback: function(value) {
+                                return value + '%';
+                            }
+                        }
+                    },
+                    x: {
+                        grid: {
+                            display: false
+                        }
+                    }
                 }
+            };
+
+            new Chart(ctx, {
+                type: 'bar',
+                data: chartData,
+                options: chartOptions
             });
-        }
-
-        function nextSlide() {
-            currentSlide = (currentSlide + 1) % slides.length;
-            showSlide(currentSlide);
-        }
-
-        function prevSlide() {
-            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-            showSlide(currentSlide);
-        }
-
-        nextBtn.addEventListener('click', nextSlide);
-        prevBtn.addEventListener('click', prevSlide);
-
-        // Auto-play functionality (optional)
-        // setInterval(nextSlide, 5000); // Change slide every 5 seconds
-
+        });
     </script>
 </body>
 </html>
