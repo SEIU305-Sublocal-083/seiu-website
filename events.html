@@ -319,7 +319,12 @@
                     const day = eventDate.getDate().toString().padStart(2, '0');
                     const featuredClass = event.featured ? 'border-2 border-brand-purple shadow-lg' : 'border border-border-color';
                     
-                    let detailsHtml = `<a href="${event.url}" class="font-semibold text-brand-purple hover:underline mt-4 inline-block">View Details &rarr;</a>`;
+                    let detailsHtml = `<div class="mt-4 flex items-center gap-4"><a href="${event.url}" class="font-semibold text-brand-purple hover:underline">View Details &rarr;</a>`;
+                    if (event.calendar_link) {
+                        detailsHtml += `<a href="${event.calendar_link}" download class="btn btn-outline !py-2 !px-4 text-sm">Add to Calendar</a>`;
+                    }
+                    detailsHtml += '</div>';
+
                     if (event.location_detail && event.time) {
                         detailsHtml = `<p class="text-text-secondary mt-2">${event.time} | ${event.location_detail}</p>${detailsHtml}`;
                     } else if (event.time) {
@@ -360,16 +365,24 @@
                     const eventDate = new Date(event.date.replace(/-/g, '\/'));
                     const formattedDate = eventDate.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
 
+                    let calendarButton = '';
+                    if (event.calendar_link) {
+                        calendarButton = `<a href="${event.calendar_link}" download class="btn btn-outline !py-2 !px-4 text-sm">Add to Calendar</a>`;
+                    }
+
                     return `
-                        <a href="${event.url}" id="event-${event.date}" class="block w-full bg-white p-6 rounded-xl border border-border-color shadow-md transition-shadow duration-300 hover:shadow-xl focus-within:shadow-xl">
+                        <div id="event-${event.date}" class="bg-white p-6 rounded-xl border border-border-color shadow-md transition-shadow duration-300 hover:shadow-xl focus-within:shadow-xl">
                             <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
                                 <div class="text-center sm:text-left">
                                      <h3 class="text-2xl font-bold text-brand-purple-dark">${event.title}</h3>
                                      <p class="font-semibold text-text-secondary">${formattedDate}</p>
                                 </div>
-                                <div class="btn btn-outline flex-shrink-0">View Details &rarr;</div>
+                                <div class="flex items-center gap-4">
+                                    <a href="${event.url}" class="btn btn-outline">View Details &rarr;</a>
+                                    ${calendarButton}
+                                </div>
                             </div>
-                        </a>
+                        </div>
                     `;
                 }).join('');
             }

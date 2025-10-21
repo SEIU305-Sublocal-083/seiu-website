@@ -17,14 +17,15 @@ The website uses a simple, flat-file structure. There is no complex build proces
 
 ### Events
 
-To add a new event, you need to do two things:
+To add a new event, you need to do three things:
 
-1.  **Create an HTML file for the event** in the `/events` directory.
-2.  **Add an entry to `events/events.json`**.
+1.  **Create an HTML file for the event** in the `/events` directory. Use the `template.html` as a starting point.
+2.  **Create an iCalendar (`.ics`) file** in the `/events/ical` directory. This allows users to add the event to their calendar.
+3.  **Add an entry to `events/events.json`**.
 
 The `index.html` and `events.html` pages will automatically display upcoming events based on the data in `events.json`.
 
-#### Event Naming Convention
+#### 1. Event Naming Convention
 
 Event files should be named using the following format:
 
@@ -32,7 +33,23 @@ Event files should be named using the following format:
 
 For example: `2025-10-31-halloween-party.html`
 
-#### `events.json` Structure
+#### 2. Creating the iCalendar (`.ics`) File
+
+To make an "Add to Calendar" link for your event, follow these steps:
+
+1.  **Copy the template:** Duplicate the file `/events/ical/template.ics`.
+2.  **Rename the file:** Name it to match your event, e.g., `2025-10-31-halloween-party.ics`.
+3.  **Edit the contents:** Open the new `.ics` file and replace the `{{PLACEHOLDERS}}` with the event's details.
+    *   `SUMMARY`: The title of the event.
+    *   `UID`: A unique identifier for the event. The format `YYYYMMDD-event-name` is recommended.
+    *   `DTSTAMP`: The time the event was created, in UTC. Format: `YYYYMMDDTHHMMSSZ`. (e.g., `20251021T153500Z`)
+    *   `DTSTART`: The start time of the event. Format: `YYYYMMDDTHHMMSSZ`.
+    *   `DTEND`: The end time of the event. Format: `YYYYMMDDTHHMMSSZ`.
+    *   `DESCRIPTION`: A short description of the event.
+    *   `LOCATION`: The location of the event.
+    *   `URL`: The full URL to the event page on the website.
+
+#### 3. `events.json` Structure
 
 Each event in `events.json` is an object with the following properties:
 
@@ -45,7 +62,8 @@ Each event in `events.json` is an object with the following properties:
   "type": "Event Type (e.g., Meeting, Social)",
   "url": "/events/YYYY-MM-DD-short-title.html",
   "featured": false,
-  "location_detail": "Location of the event"
+  "location_detail": "Location of the event",
+  "calendar_link": "/events/ical/YYYY-MM-DD-short-title.ics"
 }
 ```
 
@@ -57,6 +75,7 @@ Each event in `events.json` is an object with the following properties:
 *   `url`: The path to the event's HTML file.
 *   `featured`: Set to `true` to highlight the event.
 *   `location_detail`: A more specific location (e.g., "MU Ballroom").
+*   `calendar_link`: (Optional) The path to the corresponding `.ics` file.
 
 ### News
 

@@ -287,7 +287,8 @@
     "type": "Social Event",
     "url": "/events/2025-10-23-Bowling.html",
     "featured": true,
-    "location_detail": "Lanes & Games, MU Basement"
+    "location_detail": "Lanes & Games, MU Basement",
+    "calendar_link": "/events/ical/2025-10-23-Bowling.ics"
   },
   {
     "date": "2025-09-09",

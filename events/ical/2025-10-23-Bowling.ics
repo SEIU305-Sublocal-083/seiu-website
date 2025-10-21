@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//SEIU Local 503 OSU//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+SUMMARY:Member & Family Bowling Night
+UID:20251023-bowling-night@seiu503.org
+DTSTAMP:20251021T153500Z
+DTSTART;TZID=America/Los_Angeles:20251023T170000
+DTEND;TZID=America/Los_Angeles:20251023T200000
+DESCRIPTION:Join us for a fun night of bowling, food, and community. All members and their families are welcome!
+LOCATION:Lanes & Games, MU Basement
+URL;VALUE=URI:/events/2025-10-23-Bowling.html
+END:VEVENT
+END:VCALENDAR
