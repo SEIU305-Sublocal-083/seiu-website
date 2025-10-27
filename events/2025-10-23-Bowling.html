@@ -15,10 +15,10 @@
     <style>
         :root {
             --brand-purple-dark: #4C1D95; /* Deep Purple */
-            --brand-purple: #7C3AED;      /* Vibrant Purple */
+            --brand-purple: #7C3AED;     /* Vibrant Purple */
             --brand-purple-light: #EDE9FE; /* Lighter Lavender for high contrast */
             --brand-dark: #111827;         /* Near-black for high contrast text/bg */
-            --brand-light: #F9FAFB;        /* Off-white Background */
+            --brand-light: #F9FAFB;       /* Off-white Background */
             --text-primary: #1F2937;
             --text-secondary: #374151;     /* Darker secondary text for better contrast */
             --border-color: #D1D5DB;
@@ -117,9 +117,12 @@
     <!-- Event Header Section -->
     <section class="bg-brand-purple-light border-b border-border-color">
         <div class="container mx-auto px-6 py-16 text-center">
+            <!-- === PAST EVENT BADGE ADDED === -->
+            <span class="inline-block bg-gray-200 text-gray-700 font-bold py-1 px-4 rounded-full text-sm uppercase mb-4">Past Event</span>
             <p class="text-brand-purple font-bold mb-2">Thursday, October 23, 2025</p>
             <h1 class="text-5xl font-bold">Member & Family Bowling Night</h1>
-            <p class="mt-4 text-lg text-text-secondary max-w-3xl mx-auto">Join fellow SEIU 503 members and their families for a fun-filled evening of bowling, food, and solidarity!</p>
+            <!-- === TEXT CHANGED TO PAST TENSE === -->
+            <p class="mt-4 text-lg text-text-secondary max-w-3xl mx-auto">SEIU 503 members and their families gathered for a fun-filled evening of bowling, food, and solidarity!</p>
         </div>
     </section>
 
@@ -131,9 +134,10 @@
                 <img src="https://mu.oregonstate.edu/sites/mu.oregonstate.edu/files/2024-07/lanesgames_billiards-24.jpg" alt="People playing billiards and bowling at Lane Games in the Memorial Union" class="w-full h-80 object-cover rounded-lg mb-8">
                 
                 <h2 class="text-3xl font-bold mb-6">About this Event</h2>
+                <!-- === TEXT CHANGED TO PAST TENSE === -->
                 <div class="prose max-w-none text-text-secondary text-lg leading-relaxed">
-                    <p>Take a break and connect with your union siblings! SEIU Local 503 is excited to host a casual bowling night for members and their families at Lanes & Games in the Memorial Union basement. It's a great chance to relax, have fun, and build community outside of work.</p>
-                    <p>We'll provide the lanes, the shoes, and the food. You just bring your family and your best bowling form (or lack thereof - all skill levels are welcome!). More details will be provided as the date gets closer, but be sure to save the date for this fantastic event.</p>
+                    <p>Members took a break and connected with their union siblings! SEIU Local 503 hosted a casual bowling night for members and their families at Lanes & Games in the Memorial Union basement. It was a great chance to relax, have fun, and build community outside of work.</p>
+                    <p>We provided the lanes, the shoes, and the food. Members brought their families for this fantastic event.</p>
                 </div>
             </div>
 
@@ -157,13 +161,16 @@
                             </div>
                         </div>
                     </div>
+                    
+                    <!-- === NEW BUTTON ADDED HERE === -->
+                    <!-- This button links to the news recap article. -->
                     <div class="mt-8">
                         <a
-                          href="https://seiu503.us18.list-manage.com/track/click?u=0eab8f11133c965a81c06f0cd&id=83d6ce9ca5&e=33610058f8"
+                          href="/news/2025-10-26-bowling-striking-success.html"
                           class="w-full inline-flex items-center justify-center gap-2 rounded-lg px-6 py-4 text-lg font-bold text-white shadow-md hover:shadow-lg transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-purple"
                           style="background-color: var(--brand-purple);"
                         >
-                          Register
+                          Read Event Recap
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             class="h-5 w-5 opacity-90"
@@ -176,7 +183,18 @@
                             />
                           </svg>
                         </a>
-                      </div>
+                    </div>
+                    <!-- === END NEW BUTTON === -->
+
+                    <!-- === REGISTER BUTTON REPLACED WITH DISABLED STATE === -->
+                    <div class="mt-4">
+                        <button
+                          disabled
+                          class="w-full inline-flex items-center justify-center gap-2 rounded-lg px-6 py-4 text-lg font-bold text-gray-100 bg-gray-400 shadow-md transition cursor-not-allowed"
+                        >
+                          Registration Closed
+                        </button>
+                    </div>
                     <div class="mt-4">
                         <a href="/events/ical/2025-10-23-Bowling.ics" download class="w-full text-center btn btn-outline">Add to Calendar</a>
                     </div>
@@ -207,7 +225,7 @@
                     </div>
                     <p class="text-black leading-relaxed">Representing the classified employees of Oregon State University. We fight for fair contracts, defend workplace rights, and build a united community.</p>
                 </div>
-    
+        
                 <!-- Column 2: Quick Links -->
                 <div>
                     <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase">Quick Links</h4>
@@ -218,7 +236,7 @@
                         <li><a href="/leadership.html" class="text-black hover:text-gray-500 transition-colors">Leadership</a></li>
                     </ul>
                 </div>
-    
+        
                 <!-- Column 3: Resources -->
                 <div>
                     <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase"><a href="/resources.html" class="hover:text-gray-500 transition-colors">Resources</a></h4>
@@ -229,7 +247,7 @@
                         <li><a href="/resources/weingarten-rights.html" class="text-black hover:text-gray-500 transition-colors">Weingarten Rights</a></li>
                     </ul>
                 </div>
-    
+        
                 <!-- Column 4: Contact -->
                 <div>
                     <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase"><a href="/contact.html" class="hover:text-gray-500 transition-colors">Contact Us</a></h4>
@@ -249,7 +267,7 @@
                     </ul>
                 </div>
             </div>
-    
+        
             <!-- Bottom Bar -->
             <div class="mt-10 pt-8 border-t border-gray-700 text-center">
                 <p class="text-gray-400 text-sm">&copy; 2025 SEIU Local 503, Oregon State University. All rights reserved.</p>
