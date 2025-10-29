@@ -4,13 +4,29 @@
     "title": "Bowling Night Was a Striking Success!",
     "description": "A fun-filled bowling night brought our union members together for an evening of strikes, spares, and solidarity.",
     "url": "/news/2025-10-27-bowling-striking-success.html",
-    "image": "/images/70197688-ecfb-482c-890e-6902b235e21e-2025-10-23-Kary-Bowling.webp"
+    "image": "/images/70197688-ecfb-482c-890e-6902b235e21e-2025-10-23-Kary-Bowling.webp",
+    "tags": ["Events", "Membership Meetings"],
+    "author": {
+      "name": "SEIU 503 Comms",
+      "title": "Communications Team"
+    },
+    "publishedAt": "2025-10-27",
+    "createdAt": "2025-10-27",
+    "updatedAt": "2025-10-27"
   },
   {
     "date": "2025-08-22",
     "title": "Ice Cream Social Was Sweet!",
     "description": "Thank you to all the members, family, and friends who joined us for our Solidarity Ice Cream Party outside the Kerr Administration building!",
     "url": "/news/2025-08-22-Icecream.html",
-    "image": "/images/719dac94-a776-4f31-b327-08861bd991d5-icecream.webp"
+    "image": "/images/719dac94-a776-4f31-b327-08861bd991d5-icecream.webp",
+    "tags": ["Events", "Membership Meetings"],
+    "author": {
+      "name": "SEIU 503 Comms",
+      "title": "Communications Team"
+    },
+    "publishedAt": "2025-08-22",
+    "createdAt": "2025-08-22",
+    "updatedAt": "2025-08-22"
   }
 ]
