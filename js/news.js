@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const searchInput = document.getElementById('search-input');
     const sortSelect = document.getElementById('sort-select');
     const tagsContainer = document.getElementById('tags-container');
+    const featuredArticleSection = document.getElementById('featured-article-section');
 
     let allArticles = [];
     let activeFilters = {
@@ -20,6 +21,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Sort by publishedAt date descending by default
             allArticles.sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt));
+
+            const featuredArticle = allArticles.find(article => article.featured);
+            if (featuredArticle) {
+                renderFeaturedArticle(featuredArticle);
+            }
 
             populateTags(allArticles);
             renderArticles();
@@ -93,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function createTagButton(tag) {
         const button = document.createElement('button');
-        button.className = 'tag-button bg-brand-purple-light text-brand-purple-dark px-4 py-2 rounded-full text-sm font-semibold transition-colors hover:bg-brand-purple hover:text-white';
+        button.className = 'tag-button px-4 py-2 rounded-full text-sm font-semibold transition-colors hover:bg-brand-purple hover:text-white';
         button.textContent = tag;
         return button;
     }
@@ -105,8 +111,28 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    function renderFeaturedArticle(article) {
+        featuredArticleSection.innerHTML = `
+            <div class="bg-white rounded-xl border border-border-color overflow-hidden">
+                <a href="${article.url}" class="block group">
+                    <div class="grid lg:grid-cols-2">
+                        <div class="p-8 lg:p-12">
+                            <p class="text-text-secondary text-sm mb-2 font-semibold">FEATURED STORY</p>
+                            <h2 class="text-4xl font-bold mb-4 group-hover:text-brand-purple transition-colors">${article.title}</h2>
+                            <p class="text-text-secondary text-lg mb-6">${article.description}</p>
+                            <span class="font-semibold text-brand-purple">Read More →</span>
+                        </div>
+                        <div class="hidden lg:block">
+                            <img src="${article.image}" alt="${article.title}" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </a>
+            </div>
+        `;
+    }
+
     function renderArticles() {
-        let filteredArticles = [...allArticles];
+        let filteredArticles = allArticles.filter(article => !article.featured);
 
         // Filter by search term
         if (activeFilters.searchTerm) {
