@@ -102,12 +102,27 @@ Each news item in `news.json` is an object with the following properties:
   "title": "News Story Title",
   "description": "A brief summary of the news.",
   "url": "/news/YYYY-MM-DD-short-title.html",
-  "image": "/images/your-image.webp"
+  "image": "/images/your-image.webp",
+  "tags": ["Events", "Membership Meetings"],
+  "author": {
+    "name": "Author Name",
+    "title": "Author Title"
+  },
+  "publishedAt": "YYYY-MM-DD",
+  "createdAt": "YYYY-MM-DD",
+  "updatedAt": "YYYY-MM-DD",
+  "featured": false
 }
 ```
 
-*   `date`: The publication date in `YYYY-MM-DD` format.
+*   `date`: The publication date in `YYYY-MM-DD` format. This field is deprecated and will be removed in a future update. Please use `publishedAt` instead.
 *   `title`: The headline of the news story.
 *   `description`: A short summary.
 *   `url`: The path to the news story's HTML file.
 *   `image`: The path to an accompanying image.
+*   `tags`: An array of strings to categorize the news story.
+*   `author`: An object containing the name and title of the author.
+*   `publishedAt`: The date the story was published in `YYYY-MM-DD` format.
+*   `createdAt`: The date the story was created in `YYYY-MM-DD` format.
+*   `updatedAt`: The date the story was last updated in `YYYY-MM-DD` format.
+*   `featured`: Set to `true` to highlight the news story.
