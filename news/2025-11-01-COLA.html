@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 
+      - SEO FIX 1: Title Tag
+      - Your old title was long and buried the lead.
+      - This new one is shorter, punchier, and front-loads the key info: "3% Raise" and "Bargaining Survey". 
+      - This is better for search engine result pages (SERPs).
+    -->
+    <title>3% COLA Raise (Nov 1, 2025) & Bargaining Survey | SEIU 503, OSU</title>
+    
+    <!-- SEO Meta Tags --><meta name="description" content="Victory! Your 3% union-won COLA arrives Nov 1, 2025. See the full breakdown of our contract wins and take the crucial 2025 bargaining survey now.">
+    <!-- 
+      - SEO FIX 2: Removed Keywords Tag
+      - The <meta name="keywords"> tag is obsolete. Google hasn't used it for ranking in over a decade. 
+      - It's just clutter. Don't waste your time on it. Focus on the title, description, and content.
+    -->
+    <meta name="author" content="SEIU Local 503 at OSU">
+    <link rel="canonical" href="https://seiu503osu.org/news/november-2025-cola-and-survey">
+
+    <!-- Open Graph / Facebook --><meta property="og:type" content="article">
+    <meta property="og:url" content="https://seiu503osu.org/news/november-2025-cola-and-survey">
+    <!-- 
+      - SEO FIX 3: Updated Title
+      - Matching the new, optimized <title> tag for brand consistency.
+    -->
+    <meta property="og:title" content="3% COLA Raise (Nov 1, 2025) & Bargaining Survey | SEIU 503, OSU">
+    <meta property="og:description" content="Victory! Your 3% union-won COLA arrives Nov 1, 2025. See the full breakdown of our contract wins and take the crucial 2025 bargaining survey now.">
+    <!-- 
+      - SEO FIX 4: CRITICAL Image Fix
+      - You were using a `placehold.co` URL. This is the #1 thing that screams "unfinished" and kills trust.
+      - I've replaced it with the *actual* chart image you're already using in your JSON-LD data.
+      - Ideally, you'd create a dedicated 1200x630 banner, but this is an immediate, massive improvement.
+    -->
+    <meta property="og:image" content="https://seiu503osu.org/images/cola-chart.png">
+    <meta property="og:site_name" content="SEIU Local 503 at OSU">
+
+    <!-- Twitter --><meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://seiu503osu.org/news/november-2025-cola-and-survey">
+    <!-- 
+      - SEO FIX 5: Updated Title
+      - Matching the new, optimized <title> tag.
+    -->
+    <meta property="twitter:title" content="3% COLA Raise (Nov 1, 2025) & Bargaining Survey | SEIU 503, OSU">
+    <meta property="twitter:description" content="Victory! Your  3% union-won COLA arrives Nov 1, 2025. See the full breakdown of our contract wins and take the crucial 2025 bargaining survey now.">
+    <!-- 
+      - SEO FIX 6: CRITICAL Image Fix
+      - Same as the Open Graph fix. Replaced the placeholder.
+    -->
+    <meta property="twitter:image" content="https://seiu503osu.org/images/cola-chart.png">
+
+    <!-- Favicons --><link rel="icon" href="/images/logo.png" type="image/png">
+    <link rel="apple-touch-icon" href="/images/logo.png">
+
+    <!-- Fonts and Styles --><script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Lora:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Chart.js Library --><script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        :root {
+            --brand-purple-dark: #4C1D95; /* Deep Purple */
+            --brand-purple: #7C3AED;      /* Vibrant Purple */
+            --brand-purple-light: #EDE9FE; /* Lighter Lavender for high contrast */
+            --brand-dark: #111827;         /* Near-black for high contrast text/bg */
+            --brand-light: #F9FAFB;        /* Off-white Background */
+            --text-primary: #1F2937;
+            --text-secondary: #374151;     /* Darker secondary text for better contrast */
+            --border-color: #D1D5DB;
+        }
+
+        html {
+            scroll-padding-top: 80px; /* Offset for sticky header */
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--brand-light);
+            color: var(--text-primary);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Lora', serif;
+            color: var(--brand-purple-dark);
+        }
+
+        /* Accessibility: Clear focus indicators for all interactive elements */
+        a:focus-visible, button:focus-visible, details:focus-visible, input:focus-visible, textarea:focus-visible {
+            outline: 3px solid var(--brand-purple);
+            outline-offset: 2px;
+            border-radius: 4px;
+        }
+
+        .btn {
+            @apply font-bold py-3 px-6 rounded-lg transition-all duration-300 ease-in-out transform hover:scale-105;
+        }
+        .btn-primary {
+            @apply bg-gradient-to-r from-brand-purple to-violet-600 text-white shadow-md hover:shadow-lg;
+        }
+
+        /* Custom Tailwind config for our CSS variables */
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-purple-dark': 'var(--brand-purple-dark)',
+                        'brand-purple': 'var(--brand-purple)',
+                        'brand-purple-light': 'var(--brand-purple-light)',
+                        'brand-dark': 'var(--brand-dark)',
+                        'brand-light': 'var(--brand-light)',
+                        'text-primary': 'var(--text-primary)',
+                        'text-secondary': 'var(--text-secondary)',
+                        'border-color': 'var(--border-color)',
+                    }
+                }
+            }
+        }
+    </style>
+    
+    <!-- JSON-LD Structured Data for Google --><script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "NewsArticle",
+      "headline": "Union Power Delivers: Your  3% COLA Raise Arrives November 1st!",
+      "image": [
+        "https://seiu503osu.org/images/cola-chart.png"
+       ],
+      "datePublished": "2025-10-18T14:00:00-07:00",
+      "dateModified": "2025-10-18T14:00:00-07:00",
+      "author": [{
+          "@type": "Organization",
+          "name": "SEIU Local 503 at OSU",
+          "url": "https://seiu503osu.org"
+        }],
+      "publisher": {
+          "@type": "Organization",
+          "name": "SEIU Local 503 at OSU",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://seiu503osu.org/images/logo.png"
+          }
+       },
+      "description": "Victory! Your  3% union-won COLA arrives Nov 1, 2025. See the full breakdown of our contract wins and take the crucial 2025 bargaining survey now."
+    }
+    </script>
+</head>
+<body class="bg-brand-light">
+
+    <!-- Header --><header class="bg-white/80 backdrop-blur-lg border-b border-border-color sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="/index.html" class="flex items-center space-x-2">
+                <span class="text-2xl font-bold text-brand-purple-dark">SEIU 503</span>
+                <span class="text-lg text-text-secondary hidden md:block">| Oregon State University</span>
+            </a>
+            <div class="hidden lg:flex space-x-8">
+                <a href="/about.html" class="text-text-secondary hover:text-brand-purple transition-colors">About</a>
+                <a href="/events.html" class="text-text-secondary hover:text-brand-purple transition-colors">Events</a>
+                <a href="/news.html" class="text-brand-purple font-bold">News</a>
+                <a href="/resources.html" class="text-text-secondary hover:text-brand-purple transition-colors">Resources & Rights</a>
+                <a href="/leadership.html" class="text-text-secondary hover:text-brand-purple transition-colors">Leadership</a>
+                <a href="/contact.html" class="text-text-secondary hover:text-brand-purple transition-colors">Contact</a>
+            </div>
+            <div class="lg:hidden">
+                <button id="mobile-menu-button" class="text-text-secondary hover:text-brand-purple focus:outline-none" aria-label="Open menu" aria-expanded="false">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile Menu --><div id="mobile-menu" class="hidden lg:hidden absolute top-full left-0 w-full bg-white border-t border-border-color shadow-lg">
+            <a href="/about.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">About</a>
+            <a href="/events.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Events</a>
+            <a href="/news.html" class="block text-center py-3 px-6 text-lg text-brand-purple bg-brand-purple-light font-semibold">News</a>
+            <a href="/resources.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Resources & Rights</a>
+            <a href="/leadership.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Leadership</a>
+            <a href="/contact.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Contact</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-16">
+        <article class="max-w-4xl mx-auto bg-white p-8 md:p-12 rounded-xl border border-border-color shadow-sm">
+
+            <!-- Article Header --><header class="text-center border-b border-border-color pb-8 mb-8">
+                <p class="text-brand-purple font-bold mb-2">CONTRACT VICTORY & CALL TO ACTION</p>
+                <h1 class="text-4xl md:text-5xl font-bold">Union Power Delivers: Your  3% COLA Raise Arrives November 1st!</h1>
+                <p class="mt-4 text-text-secondary">
+                    <span class="text-lg">Published on October 18, 2025</span>
+                </p>
+            </header>
+
+            <!-- Article Body --><div class="prose max-w-none text-text-secondary text-lg leading-relaxed space-y-6">
+                <p>Get ready for another increase in your paycheck! The  cost-of-living adjustment (COLA) that we won together in our current contract takes effect on <strong>November 1, 2025</strong>. All classified staff will see a <strong>3% raise</strong> reflected in their November paycheck.</p>
+                
+                <p>This is a big win and a direct result of our collective action and solidarity. Let's take a moment to look at what we've accomplished together with this contract, which has resulted in a cumulative compounded raise of nearly 16%!</p>
+                
+                <!-- Chart.js Canvas --><div class="w-full h-96 bg-slate-50 p-4 rounded-lg my-8">
+                    <canvas id="colaChart" aria-label="A bar chart showing cumulative COLA increases over time" role="img"></canvas>
+                </div>
+
+
+                <h3 class="text-2xl font-bold !mt-10 !mb-4 text-brand-purple-dark">A Look Back at Our Historic Wins</h3>
+                <p>The upcoming 3% raise is the capstone on a series of significant gains. Since our contract was ratified, our unity has secured:</p>
+                <ul class="list-disc list-inside space-y-2">
+                    <li>A <strong>$1,500</strong> one-time payment (April 2024)</li>
+                    <li>A <strong>6.5%</strong> COLA (April 1, 2024)</li>
+                    <li>A <strong>2%</strong> COLA (November 1, 2024)</li>
+                    <li>A <strong>3.5%</strong> COLA (June 1, 2025)</li>
+                </ul>
+                <!-- Interactive Raise Calculator -->
+                <details class="!mt-8 bg-brand-purple-light border-l-4 border-brand-purple p-6 rounded-r-lg rounded-l-md cursor-pointer group">
+                    <summary class="font-lora font-bold text-xl text-brand-purple-dark list-none flex justify-between items-center">
+                        <span>Calculate Your New Pay Rate</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 transform transition-transform duration-300 group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
+                    <div class="mt-4 space-y-4">
+                        <div>
+                            <label for="current-pay" class="block text-sm font-medium text-text-secondary mb-2">Enter your current hourly or monthly pay:</label>
+                            <div class="relative">
+                                <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-text-secondary" aria-hidden="true">$</span>
+                                <input type="number" id="current-pay" name="current-pay" class="pl-7 pr-4 py-2 w-full max-w-xs border bg-white border-border-color rounded-md shadow-sm focus:ring-brand-purple focus:border-brand-purple" placeholder="e.g., 20.50" min="0" step="0.01">
+                            </div>
+                        </div>
+                        <div class="space-y-2 text-base">
+                            <p class="text-text-secondary">Your 3% raise is approximately: <strong id="raise-amount" class="text-lg text-brand-purple-dark">$0.00</strong></p>
+                            <p class="text-text-secondary">Your new pay will be approximately: <strong id="new-pay" class="text-lg text-brand-purple-dark">$0.00</strong></p>
+                        </div>
+                        <p class="text-xs text-text-secondary italic pt-2">Note: This calculation is for estimation purposes. Your data is not saved or collected.</p>
+                    </div>
+                </details>
+
+                <h3 class="text-2xl font-bold !mt-10 !mb-4 text-brand-purple-dark">Share Your Story, Build Our Power</h3>
+                <p>This raise makes a real difference. What will it mean for you and your family? Paying off a bill, saving for the future, or just having a little less stress at the grocery store? Sharing our stories shows the real-world impact of our collective power. Talk to your steward or a coworker about what this raise means to you. Our numbers and our stories give us strength for the next fight.</p>
+
+                <!-- Bargaining Survey Section --><div class="!mt-12 p-6 rounded-lg border-2 border-brand-purple bg-brand-purple-light space-y-4">
+                    <h3 class="text-2xl font-bold !mt-0 !mb-2 text-brand-purple-dark">Shape Our Next Contract: Take the Bargaining Survey!</h3>
+                    <p class="text-text-secondary">As we celebrate this win, we must prepare for the next round of negotiations. It is crucial that we hear from you!</p>
+                    <p class="text-text-secondary">Please check your inbox for an email with the title <strong class="text-brand-purple-dark">"It's time for your 2025 Higher Ed Bargaining Survey"</strong> from <strong class="text-brand-purple-dark">alert@seiu503.org</strong>. Your confidential feedback will directly shape our priorities.</p>
+                    
+                    <!-- New "Missing Email" CTA --><div class="border-t border-violet-300 pt-4 mt-4 text-center">
+                        <p class="text-text-secondary mb-4">Can't find the email? Let us know so we can help!</p>
+                        <a href="mailto:083execteam@seiu503.org,083cat@seiu503.org,prentisss@seiu503.org?subject=Missing%202025%20Bargaining%20Survey%20Link&body=Hello%20Sublocal%20083%20leadership,%0A%0AI%20am%20writing%20because%20I%20have%20not%20yet%20received%20the%202025%20Higher%20Ed%20Bargaining%20Survey%20email%20from%20alert@seiu503.org.%0A%0APlease%20send%20the%20survey%20link%20to%20this%20email%20address%20so%20I%20can%20provide%20my%20input%20for%20the%20upcoming%20contract%20negotiations.%0A%0AThank%20you,%0A%0A[Your%20First%20and%20Last%20Name]" class="btn btn-primary">
+                            Email Us to Get the Survey
+                        </a>
+                    </div>
+
+                    <p class="text-text-secondary pt-4">Not a member yet? Your voice is still essential. <a href="join.html" class="font-bold text-brand-purple hover:underline">Join Us Today</a> and take the survey to make sure your priorities are heard!</p>
+                </div>
+
+                <h3 class="text-2xl font-bold !mt-10 !mb-4 text-brand-purple-dark">Questions About Your Pay?</h3>
+                <p>We encourage everyone to check their pay stubs to ensure the 3% increase has been correctly applied. If you have any questions or believe there is an error, please don't hesitate to reach out to a department steward or contact our union office for support. We're here to help.</p>
+            </div>
+
+            <!-- Action CTA --><div class="mt-12 text-center border-t border-border-color pt-8">
+                <h3 class="text-2xl font-bold">We're Stronger Together</h3>
+                <p class="text-text-secondary my-4">Take the bargaining survey, check your paycheck in November, and let's keep building our power.</p>
+                <a href="contact.html" class="btn btn-primary">Contact Our Union</a>
+            </div>
+
+        </article>
+    </main>
+
+    <!-- Footer --><footer class="bg-brand-dark text-white pt-12 pb-8">
+        <div class="container mx-auto px-6">
+            <div class="mt-10 pt-8 border-t border-gray-700 text-center">
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Column 1: About the Union --><div class="md:col-span-2 lg:col-span-1">
+                    <div class="flex items-center mb-4">
+                        <img src="/images/logo.png" alt="SEIU 503 Logo" class="h-12 w-12 mr-3 bg-white p-1 rounded">
+                        <div>
+                            <h3 class="text-xl font-bold">SEIU Local 503</h3>
+                            <p class="text-gray-400 text-sm">Oregon State University</p>
+                        </div>
+                    </div>
+                    <!-- 
+                      - SEO FIX 7: Footer Readability
+                      - Your footer text was set to `text-black` on a `bg-brand-dark` background, making it invisible.
+                      - This is a huge accessibility and credibility problem. I've changed it to `text-gray-300`.
+                    -->
+                    <p class="text-gray-300 leading-relaxed">Representing the classified employees of Oregon State University. We fight for fair contracts, defend workplace rights, and build a united community.</p>
+                </div>
+    
+                <!-- Column 2: Quick Links --><div>
+                    <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <!-- 
+                          - SEO FIX 8: Footer Readability
+                          - Fixed all link colors in the footer for readability.
+                        -->
+                        <li><a href="/about.html" class="text-gray-300 hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="/events.html" class="text-gray-300 hover:text-white transition-colors">Events</a></li>
+                        <li><a href="/news.html" class="text-gray-300 hover:text-white transition-colors">News</a></li>
+                        <li><a href="/leadership.html" class="text-gray-300 hover:text-white transition-colors">Leadership</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Column 3: Resources --><div>
+                    <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase"><a href="/resources.html" class="hover:text-white transition-colors">Resources</a></h4>
+                    <ul class="space-y-3">
+                        <li><a href="/resources.html" class="text-gray-300 hover:text-white transition-colors">Resources & Rights</a></li>
+                        <li><a href="/resources/seiu_cba_2022-2026.pdf" class="text-gray-300 hover:text-white transition-colors">Our Contract (PDF)</a></li>
+                        <li><a href="/resources/stewards.html" class="text-gray-300 hover:text-white transition-colors">Find a Steward</a></li>
+                        <li><a href="/resources/weingarten-rights.html" class="text-gray-300 hover:text-white transition-colors">Weingarten Rights</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Column 4: Contact --><div>
+                    <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase"><a href="/contact.html" class="hover:text-white transition-colors">Contact Us</a></h4>
+                     <ul class="space-y-3 text-gray-300">
+                        <li class="flex items-start">
+                            <span class="mr-2 mt-1">✉️</span> <!-- Mail icon --><a href="mailto:083execteam@seiu503.org" class="hover:text-white transition-colors">083execteam@seiu503.org</a>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-2 mt-1">✉️</span> <!-- Mail icon --><a href="mailto:083stewards@seiu503.org" class="hover:text-white transition-colors">083stewards@seiu503.org</a>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-2 mt-1">📍</span> <!-- Pin icon --><a href="https://maps.app.goo.gl/9TWRZ9F4wjVjacsZ7" class="hover:text-white transition-colors">Adams Hall, Room 109<br>Corvallis, OR 97331</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+    
+            <!-- Bottom Bar --><div class="mt-10 pt-8 border-t border-gray-700 text-center">
+                <p class="text-gray-400 text-sm">&copy; 2025 SEIU Local 503, Oregon State University. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // --- Mobile Menu Toggle ---
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = document.querySelectorAll('#mobile-menu a');
+
+        mobileMenuButton.addEventListener('click', () => {
+            const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+            mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenuButton.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        // --- Chart.js Graph ---
+        document.addEventListener('DOMContentLoaded', () => {
+            const ctx = document.getElementById('colaChart').getContext('2d');
+            
+            const gradient = ctx.createLinearGradient(0, 0, 0, 400);
+            gradient.addColorStop(0, '#8B5CF6');   
+            gradient.addColorStop(1, '#4C1D95');
+
+            const chartData = {
+                labels: ['Apr 2024', 'Nov 2024', 'Jun 2025', 'Nov 2025'],
+                datasets: [{
+                    label: 'Cumulative COLA %',
+                    data: [6.5, 8.6, 12.4, 15.8],
+                    backgroundColor: gradient,
+                    borderColor: '#4C1D95',
+                    borderWidth: 2,
+                    borderRadius: 5,
+                    hoverBackgroundColor: '#A78BFA'
+                }]
+            };
+
+            const chartOptions = {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    title: {
+                        display: true,
+                        text: 'Our Contract Wins: Cumulative Raises',
+                        font: {
+                            size: 18,
+                            family: "'Lora', serif"
+                        },
+                        color: '#4C1D95',
+                        padding: {
+                            bottom: 20
+                        }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                let label = context.dataset.label || '';
+                                if (label) {
+                                    label += ': ';
+                                }
+                                if (context.parsed.y !== null) {
+                                    label += context.parsed.y + '%';
+                                }
+                                return label;
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        grid: {
+                            color: '#E5E7EB'
+                        },
+                        ticks: {
+                            callback: function(value) {
+                                return value + '%';
+                            }
+                        }
+                    },
+                    x: {
+                        grid: {
+                            display: false
+                        }
+                    }
+                }
+            };
+
+            new Chart(ctx, {
+                type: 'bar',
+                data: chartData,
+                options: chartOptions
+            });
+
+            // --- Raise Calculator ---
+            const payInput = document.getElementById('current-pay');
+            const raiseAmountEl = document.getElementById('raise-amount');
+            const newPayEl = document.getElementById('new-pay');
+
+            if (payInput) { // Check if the element exists before adding listener
+                payInput.addEventListener('input', () => {
+                    const currentPay = parseFloat(payInput.value) || 0;
+                    const raise = currentPay * 0.03;
+                    const newPay = currentPay * 1.03;
+
+                    raiseAmountEl.textContent = '$' + raise.toFixed(2);
+                    newPayEl.textContent = '$' + newPay.toFixed(2);
+                });
+            }
+        });
+    </script>
+</body>
+</html>
