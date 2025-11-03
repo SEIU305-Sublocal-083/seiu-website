@@ -1,19 +1,19 @@
 [
   {
-    "date": "2025-10-27",
-    "title": "Bowling Night Was a Striking Success!",
-    "description": "A fun-filled bowling night brought our union members together for an evening of strikes, spares, and solidarity.",
-    "url": "/news/2025-10-27-bowling-striking-success.html",
-    "image": "/images/70197688-ecfb-482c-890e-6902b235e21e-2025-10-23-Kary-Bowling.webp",
-    "tags": ["Events", "Membership Meetings"],
+    "date": "2025-11-03",
+    "title": "Your Voice, Our Contract: Bargaining Survey Update",
+    "description": "An update from the bargaining committee on the contract survey and the importance of member participation.",
+    "url": "/news/2025-11-03-bargaining-survey-update.html",
+    "image": "/images/01d4b1b3-b65e-4614-9618-4eeba50f6407-Barg-Update.webp",
+    "tags": ["Bargaining", "Contract"],
     "author": {
       "name": "Jax SN Johnson",
       "title": "083 Communications Chair"
     },
-    "publishedAt": "2025-10-27",
-    "createdAt": "2025-10-27",
-    "updatedAt": "2025-10-27",
-    "featured": true
+    "publishedAt": "2025-11-03",
+    "createdAt": "2025-11-03",
+    "updatedAt": "2025-11-03",
+    "featured": false
   },
   {
     "date": "2025-11-01",
@@ -32,6 +32,22 @@
     "featured": false
   },
   {
+    "date": "2025-10-27",
+    "title": "Bowling Night Was a Striking Success!",
+    "description": "A fun-filled bowling night brought our union members together for an evening of strikes, spares, and solidarity.",
+    "url": "/news/2025-10-27-bowling-striking-success.html",
+    "image": "/images/70197688-ecfb-482c-890e-6902b235e21e-2025-10-23-Kary-Bowling.webp",
+    "tags": ["Events", "Membership Meetings"],
+    "author": {
+      "name": "Jax SN Johnson",
+      "title": "083 Communications Chair"
+    },
+    "publishedAt": "2025-10-27",
+    "createdAt": "2025-10-27",
+    "updatedAt": "2025-10-27",
+    "featured": true
+  },
+  {
     "date": "2025-08-22",
     "title": "Ice Cream Social Was Sweet!",
     "description": "Thank you to all the members, family, and friends who joined us for our Solidarity Ice Cream Party outside the Kerr Administration building!",
@@ -45,5 +61,20 @@
     "publishedAt": "2025-08-22",
     "createdAt": "2025-08-22",
     "updatedAt": "2025-08-22"
+  },
+  {
+    "date": "2025-10-01",
+    "title": "Make Your Voice Heard! The 2026 Bargaining Survey is Here!",
+    "description": "The SEIU 503 bargaining survey for the 2026 contract is now open. Share your priorities and help shape our negotiations with OSU management.",
+    "url": "/news/2025-10-01-bargaining-survey-live.html",
+    "image": "/images/989fb357-b161-4ae0-a2b0-3b0ca7808420-seiu-salem.jpg",
+    "tags": ["Bargaining", "Contract"],
+    "author": {
+      "name": "Jax SN Johnson",
+      "title": "083 Communications Chair"
+    },
+    "publishedAt": "2025-10-01",
+    "createdAt": "2025-10-01",
+    "updatedAt": "2025-10-01"
   }
 ]
