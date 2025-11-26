@@ -68,6 +68,12 @@
             font-weight: bold;
             border-radius: 50%;
         }
+        .calendar-day.has-important-event {
+            background-color: #FECACA; /* Red-200 */
+            color: #DC2626; /* Red-600 */
+            font-weight: bold;
+            border-radius: 50%;
+        }
         .calendar-day.is-today {
             background-color: var(--brand-purple);
             color: white;
@@ -434,8 +440,11 @@
                     const date = new Date(event.date.replace(/-/g, '\/'));
                     const month = date.getMonth();
                     const day = date.getDate();
-                    if (!acc[month]) acc[month] = [];
-                    if (!acc[month].includes(day)) acc[month].push(day);
+                    if (!acc[month]) acc[month] = {};
+                    acc[month][day] = {
+                        hasEvent: true,
+                        important: event.important || false
+                    };
                     return acc;
                 }, {});
             }
@@ -476,8 +485,13 @@
                     if (i === today.getDate() && month === today.getMonth() && year === today.getFullYear()) {
                         dayClasses += ' is-today';
                     } 
-                    if (eventsForCalendar[month] && eventsForCalendar[month].includes(i)) {
-                         dayClasses += ' has-event cursor-pointer hover:bg-violet-200 transition-colors';
+                    if (eventsForCalendar[month] && eventsForCalendar[month][i]) {
+                        if (eventsForCalendar[month][i].important) {
+                            dayClasses += ' has-important-event';
+                        } else {
+                            dayClasses += ' has-event';
+                        }
+                         dayClasses += ' cursor-pointer hover:bg-violet-200 transition-colors';
                          const dateStr = `${year}-${String(month + 1).padStart(2, '0')}-${String(i).padStart(2, '0')}`;
                          dayAttributes = `data-date="${dateStr}" role="button" tabindex="0" aria-label="View events for ${monthName} ${i}"`;
                     }

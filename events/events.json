@@ -1,13 +1,14 @@
 [
   {
-    "date": "2025-11-26",
+    "date": "2025-12-12",
     "time": "12:00 PM - 1:00 PM",
     "title": "Day of Action: Stand Against Unlawful Eviction",
     "description": "Join us to protest OSU's unlawful eviction of our union from Adams Hall and demand they respect their employees.",
     "type": "Rally",
-    "url": "/events/2025-11-26-eviction-day.html",
+    "url": "/events/2025-12-12-eviction-day.html",
     "featured": true,
-    "location_detail": "Adams Hall"
+    "location_detail": "Adams Hall",
+    "important": true
   },
   {
     "date": "2025-10-22",
