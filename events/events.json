@@ -1,5 +1,16 @@
 [
   {
+    "date": "2025-12-12",
+    "time": "12:00 PM - 1:00 PM",
+    "title": "Call to Action: Stand Against Unlawful Eviction",
+    "description": "Join us in a call to action to talk to ELR and the University about this injustice and demand they respect their employees.",
+    "type": "Call to Action",
+    "url": "/events/2025-12-12-eviction-day.html",
+    "featured": true,
+    "location_detail": "Adams Hall",
+    "important": true
+  },
+  {
     "date": "2025-10-22",
     "time": "12:00 PM - 1:00 PM",
     "title": "Contact Action Team (CAT) Meeting",
