@@ -1,6 +1,32 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
+    <!-- Anti-FOUC (Flash of Unstyled Content) Fix -->
+    <style id="anti-fouc">html{visibility:hidden;opacity:0;}</style>
+    <script>
+    (function(){
+      var s = document.getElementById('anti-fouc');
+      var r = function(){
+        if(s){
+          s.remove();
+          document.documentElement.style.visibility='visible';
+          document.documentElement.style.opacity='1';
+        }
+      };
+      // Safety timeout in case of script error or slow load
+      setTimeout(r, 1500);
+
+      // Wait for DOMContentLoaded, then give a small buffer for Tailwind to parse
+      document.addEventListener('DOMContentLoaded', function(){
+        setTimeout(r, 100);
+      });
+    })();
+    </script>
+    <noscript>
+      <style>html{visibility:visible!important;opacity:1!important;}</style>
+    </noscript>
+    <!-- End Anti-FOUC Fix -->
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Details for the upcoming SEIU Local 083 Executive Team Meeting at Oregon State University.">
