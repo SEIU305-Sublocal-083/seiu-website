@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Anti-FOUC (Flash of Unstyled Content) Fix -->
+    <style id="anti-fouc">html{visibility:hidden;opacity:0;}</style>
+    <script>
+    (function(){
+      var s = document.getElementById('anti-fouc');
+      var r = function(){
+        if(s){
+          s.remove();
+          document.documentElement.style.visibility='visible';
+          document.documentElement.style.opacity='1';
+        }
+      };
+      // Safety timeout in case of script error or slow load
+      setTimeout(r, 1500);
+
+      // Wait for DOMContentLoaded, then give a small buffer for Tailwind to parse
+      document.addEventListener('DOMContentLoaded', function(){
+        setTimeout(r, 100);
+      });
+    })();
+    </script>
+    <noscript>
+      <style>html{visibility:visible!important;opacity:1!important;}</style>
+    </noscript>
+    <!-- End Anti-FOUC Fix -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEIU 503 - 2026 Bargaining Petition</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #333;
+        }
+        /* Container to simulate an 8.5x11 page */
+        .page {
+            position: relative;
+            width: 90vw;
+            max-width: 816px; /* 8.5in * 96dpi = 816px */
+            margin: 2rem auto;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            /* Enforce 8.5x11 aspect ratio */
+            aspect-ratio: 8.5 / 11;
+            overflow: hidden;
+            background-color: white; /* Fallback */
+        }
+        .flyer-content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            /* Using a generic solidarity/crowd image */
+            background-image: url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+        }
+        /* Purple overlay for branding and text readability */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #4D2D72; /* SEIU Purple */
+            opacity: 0.90; /* Slightly higher opacity for text readability */
+        }
+        /* Custom text shadow for better visibility */
+        .text-shadow {
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+        }
+
+        /* List styling */
+        ul.goals-list li {
+            margin-bottom: 0.5em;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <div class="page">
+        <div class="flyer-content">
+            <div class="overlay"></div>
+            <!-- Main content container using flexbox for layout -->
+            <div class="absolute inset-0 flex flex-col p-[3vw] text-white">
+
+                <!-- Header: SEIU 503 Logo -->
+                <header class="w-full flex justify-between items-start">
+                    <div class="bg-white text-[#4D2D72] font-black text-[1vw] py-1 px-2 inline-block rounded-md shadow-lg">
+                        SEIU 083 | Higher Education Workers
+                    </div>
+                </header>
+
+                <!-- Main Section: Title and Goals -->
+                <main class="flex-grow flex flex-col mt-[2vw]">
+                    <h1 class="text-[6vw] font-black leading-none text-shadow tracking-tight uppercase mb-[2vw]">
+                        Stand With Us
+                    </h1>
+
+                    <p class="text-[1.8vw] font-bold text-shadow mb-[2vw] max-w-[90%]">
+                        The bargaining survey is closed. Now we need every higher education worker to stand with us by signing the petition for our main contract goals:
+                    </p>
+
+                    <div class="bg-white/10 backdrop-blur-sm p-[2vw] rounded-xl border border-white/20 shadow-2xl">
+                        <ul class="goals-list text-[1.4vw] leading-tight text-shadow font-medium space-y-[1.5vw]">
+                            <li class="flex items-start">
+                                <span class="bg-yellow-400 text-[#4D2D72] font-bold rounded px-1 mr-2 mt-0.5">ECONOMICS</span>
+                                <span>Fair wages that keep up with the cost of living.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="bg-yellow-400 text-[#4D2D72] font-bold rounded px-1 mr-2 mt-0.5">BENEFITS</span>
+                                <span>Affordable health insurance and strong PERS contributions.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="bg-yellow-400 text-[#4D2D72] font-bold rounded px-1 mr-2 mt-0.5">WORKLOAD</span>
+                                <span>Sustainable workloads, remote work equity, and employment protections.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="bg-yellow-400 text-[#4D2D72] font-bold rounded px-1 mr-2 mt-0.5">POWER</span>
+                                <span>Mandatory New employee orientations, union communication access, and strong layoff language.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <p class="text-[1.8vw] mt-[3vw] font-bold text-shadow italic text-center">
+                        "When we stand together, we are powerful. With all of us united, there is nothing we can’t win."
+                    </p>
+                </main>
+
+                <!-- Footer: QR Code and Call to Action -->
+                <footer class="w-full flex flex-col items-center justify-end mt-auto pb-[2vw]">
+
+                    <div class="flex flex-col items-center">
+                         <!-- QR Code -->
+                        <div class="bg-white p-2 rounded-lg shadow-xl w-[15vw] aspect-square mb-[1vw] flex items-center justify-center">
+                            <img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=https://canvasser-7217.my.site.com/survey/ArdiraSurvey/SurveyResponse.app?su=k9e5Il" alt="QR Code to Sign Petition" class="max-w-full max-h-full block">
+                        </div>
+
+                        <div class="text-center">
+                            <p class="font-black text-[2.5vw] text-shadow uppercase bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 to-yellow-200" style="-webkit-text-stroke: 1px rgba(0,0,0,0.5);">SCAN TO SIGN</p>
+                            <p class="text-[1vw] text-white/80 font-mono mt-1">canvasser-7217.my.site.com</p>
+                        </div>
+                    </div>
+
+                </footer>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
