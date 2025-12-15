@@ -6,61 +6,50 @@
     <meta name="description" content="The official website for SEIU Local 503 at Oregon State University, providing news, events, resources, and contact information for members.">
     <meta name="author" content="SEIU Local 503 at OSU">
     <title>SEIU Local 503 - Oregon State University</title>
-    <!-- UPDATED: Relative path for favicon -->
-    <link rel="icon" href="./images/logo.png" type="image/png">
-    <link rel="apple-touch-icon" href="./images/logo.png">
-
-    <!-- 1. LOAD TAILWIND LIBRARY FIRST -->
+    <link rel="icon" href="/images/logo.png" type="image/png">
+    <link rel="apple-touch-icon" href="/images/logo.png">
     <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- 2. DEFINE CONFIG NEXT -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'brand-purple-dark': '#4C1D95',
-                        'brand-purple': '#7C3AED',
-                        'brand-purple-light': '#EDE9FE',
-                        'brand-dark': '#111827',
-                        'brand-light': '#F9FAFB',
-                        'text-primary': '#1F2937',
-                        'text-secondary': '#374151',
-                        'border-color': '#D1D5DB',
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        serif: ['Lora', 'serif'],
-                    }
-                }
-            }
-        }
-    </script>
-
-    <!-- 3. LOAD FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Lora:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /*
+         * V9 Style Revision:
+         * - Redesigned "About Us" with a dynamic "What We Do" section.
+         * - Reverted "News & Updates" to a more traditional grid layout.
+         * - Placed "Get Involved" and "FAQ" side-by-side on desktop.
+         */
+        :root {
+            --brand-purple-dark: #4C1D95; /* Deep Purple */
+            --brand-purple: #7C3AED;      /* Vibrant Purple */
+            --brand-purple-light: #EDE9FE; /* Lighter Lavender for high contrast */
+            --brand-dark: #111827;         /* Near-black for high contrast text/bg */
+            --brand-light: #F9FAFB;        /* Off-white Background */
+            --text-primary: #1F2937;
+            --text-secondary: #374151;     /* Darker secondary text for better contrast */
+            --border-color: #D1D5DB;
+        }
 
-    <!-- 4. DEFINE CUSTOM STYLES -->
-    <style type="text/tailwindcss">
         html {
-            scroll-padding-top: 80px;
+            scroll-padding-top: 80px; /* Offset for sticky header */
         }
 
         body {
-            @apply font-sans bg-brand-light text-text-primary;
+            font-family: 'Inter', sans-serif;
+            background-color: var(--brand-light);
+            color: var(--text-primary);
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
         }
 
         h1, h2, h3, h4, h5, h6 {
-            @apply font-serif text-brand-purple-dark;
+            font-family: 'Lora', serif;
+            color: var(--brand-purple-dark);
         }
 
-        /* Accessibility: Clear focus indicators */
+        /* Accessibility: Clear focus indicators for all interactive elements */
         a:focus-visible, button:focus-visible, details:focus-visible, input:focus-visible, textarea:focus-visible {
-            outline: 3px solid #7C3AED;
+            outline: 3px solid var(--brand-purple);
             outline-offset: 2px;
             border-radius: 4px;
         }
@@ -77,19 +66,35 @@
         .btn-outline {
              @apply bg-white text-brand-purple border-2 border-brand-purple hover:bg-brand-purple hover:text-white;
         }
+
+        /* Custom Tailwind config for our CSS variables */
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-purple-dark': 'var(--brand-purple-dark)',
+                        'brand-purple': 'var(--brand-purple)',
+                        'brand-purple-light': 'var(--brand-purple-light)',
+                        'brand-dark': 'var(--brand-dark)',
+                        'brand-light': 'var(--brand-light)',
+                        'text-primary': 'var(--text-primary)',
+                        'text-secondary': 'var(--text-secondary)',
+                        'border-color': 'var(--border-color)',
+                    }
+                }
+            }
+        }
     </style>
 </head>
 <body class="bg-brand-light">
 
     <header class="bg-white/80 backdrop-blur-lg border-b border-border-color sticky top-0 z-50">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <!-- UPDATED: Relative path -->
             <a href="index.html" class="flex items-center space-x-2">
                 <span class="text-2xl font-bold text-brand-purple-dark">SEIU 503</span>
                 <span class="text-lg text-text-secondary hidden md:block">| Oregon State University</span>
             </a>
             <div class="hidden lg:flex space-x-8">
-                <!-- UPDATED: Relative paths for navigation -->
                 <a href="about.html" class="text-text-secondary hover:text-brand-purple transition-colors">About</a>
                 <a href="events.html" class="text-text-secondary hover:text-brand-purple transition-colors">Events</a>
                 <a href="news.html" class="text-text-secondary hover:text-brand-purple transition-colors">News</a>
@@ -98,13 +103,12 @@
                 <a href="contact.html" class="text-text-secondary hover:text-brand-purple transition-colors">Contact</a>
             </div>
             <div class="lg:hidden">
-                <button id="mobile-menu-button" class="text-text-secondary hover:text-brand-purple focus:outline-none" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false">
+                <button id="mobile-menu-button" class="text-text-secondary hover:text-brand-purple focus:outline-none" aria-label="Open menu">
                     <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
                 </button>
             </div>
         </nav>
         <div id="mobile-menu" class="hidden lg:hidden absolute top-full left-0 w-full bg-white border-t border-border-color shadow-lg">
-            <!-- UPDATED: Relative paths for mobile menu -->
             <a href="about.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">About</a>
             <a href="events.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Events</a>
             <a href="news.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">News</a>
@@ -114,21 +118,20 @@
         </div>
     </header>
 
-    <main class="container mx-auto px-6 py-16">
-        <!-- Hero Section -->
-        <section class="bg-white mb-24 rounded-xl p-8 md:p-12 border border-border-color shadow-sm">
-            <div class="flex flex-col md:flex-row items-center">
-                <div class="md:w-3/5 text-center md:text-left">
-                    <h1 class="text-4xl md:text-6xl font-bold leading-tight">Stronger Together at OSU</h1>
-                    <p class="mt-4 text-lg md:text-xl text-text-secondary max-w-2xl">Fighting for fair wages, better benefits, and a voice for all classified staff at Oregon State University.</p>
-                    <a href="#involved" class="mt-8 inline-block btn btn-primary">Join Us Today</a>
-                </div>
-                <div class="md:w-2/5 mt-12 md:mt-0 flex justify-center">
-                     <!-- UPDATED: Relative path for image -->
-                     <img src="./images/8672a150-f638-4ad4-ba19-72ab754f74b8-homepage.webp" onerror="this.src='https://placehold.co/400x400/7C3AED/white?text=SEIU+503'" alt="SEIU 503 Union Logo" class="rounded-full shadow-2xl">
-                </div>
+    <section class="bg-white">
+        <div class="container mx-auto px-6 py-20 md:py-28 flex flex-col md:flex-row items-center">
+            <div class="md:w-3/5 text-center md:text-left">
+                <h1 class="text-4xl md:text-6xl font-bold leading-tight">Stronger Together at OSU</h1>
+                <p class="mt-4 text-lg md:text-xl text-text-secondary max-w-2xl">Fighting for fair wages, better benefits, and a voice for all classified staff at Oregon State University.</p>
+                <a href="#involved" class="mt-8 inline-block btn btn-primary">Join Us Today</a>
             </div>
-        </section>
+            <div class="md:w-2/5 mt-12 md:mt-0 flex justify-center">
+                 <img src="/images/8672a150-f638-4ad4-ba19-72ab754f74b8-homepage.webp" alt="SEIU 503 Union Logo" class="rounded-full shadow-2xl">
+            </div>
+        </div>
+    </section>
+
+    <main class="container mx-auto px-6 py-16">
 
         <section id="about" class="mb-24">
             <h2 class="text-4xl font-bold text-center mb-12">About SEIU 503 at OSU</h2>
@@ -142,7 +145,7 @@
                         <div>
                             <div class="flex justify-center mb-4">
                                 <span class="bg-brand-purple-light p-4 rounded-full">
-                                    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-brand-purple" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-brand-purple" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
                                 </span>
                             </div>
                             <h4 class="text-2xl font-bold mb-2">Defend Your Rights</h4>
@@ -151,7 +154,7 @@
                         <div>
                             <div class="flex justify-center mb-4">
                                 <span class="bg-brand-purple-light p-4 rounded-full">
-                                    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-brand-purple" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">            <path stroke-linecap="round" stroke-linejoin="round" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" />
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-brand-purple" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">            <path stroke-linecap="round" stroke-linejoin="round" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" />
                                     </svg>
                                 </span>
                             </div>
@@ -161,7 +164,7 @@
                         <div>
                             <div class="flex justify-center mb-4">
                                 <span class="bg-brand-purple-light p-4 rounded-full">
-                                    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-brand-purple" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-brand-purple" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
                                 </span>
                             </div>
                             <h4 class="text-2xl font-bold mb-2">Build Worker Power</h4>
@@ -204,7 +207,7 @@
                     <details class="bg-white rounded-xl border border-border-color group overflow-hidden transition-all duration-300 open:shadow-lg open:border-brand-purple">
                         <summary class="font-semibold text-lg cursor-pointer flex justify-between items-center p-6 transition-colors group-hover:bg-gray-50 group-open:bg-brand-purple-light">
                             <span>How are my union dues used?</span>
-                            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-brand-purple transform group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-brand-purple transform group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
                             </svg>
                         </summary>
@@ -215,7 +218,7 @@
                     <details class="bg-white rounded-xl border border-border-color group overflow-hidden transition-all duration-300 open:shadow-lg open:border-brand-purple">
                         <summary class="font-semibold text-lg cursor-pointer flex justify-between items-center p-6 transition-colors group-hover:bg-gray-50 group-open:bg-brand-purple-light">
                             <span>What is the difference between a member and a non-member?</span>
-                            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-brand-purple transform group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-brand-purple transform group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
                             </svg>
                         </summary>
@@ -226,7 +229,7 @@
                     <details class="bg-white rounded-xl border border-border-color group overflow-hidden transition-all duration-300 open:shadow-lg open:border-brand-purple">
                         <summary class="font-semibold text-lg cursor-pointer flex justify-between items-center p-6 transition-colors group-hover:bg-gray-50 group-open:bg-brand-purple-light">
                             <span>How do I contact my union steward?</span>
-                            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-brand-purple transform group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-brand-purple transform group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
                             </svg>
                         </summary>
@@ -241,19 +244,18 @@
         <section id="resources" class="my-24">
             <h2 class="text-4xl font-bold text-center mb-12">Resources Hub</h2>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- UPDATED: Relative paths -->
-                <a href="./resources/seiu_cba_2022-2026.pdf" class="block bg-white p-8 rounded-xl border border-border-color hover:shadow-xl hover:border-brand-purple transition-all duration-300 hover:-translate-y-1">
-                    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mb-4 text-brand-purple" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+                <a href="/resources/seiu_cba_2022-2026.pdf" class="block bg-white p-8 rounded-xl border border-border-color hover:shadow-xl hover:border-brand-purple transition-all duration-300 hover:-translate-y-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mb-4 text-brand-purple" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
                     <h3 class="font-bold text-xl">Download Contract</h3>
                     <p class="text-text-secondary mt-1">Access the full Collective Bargaining Agreement.</p>
                 </a>
-                <a href="./resources/stewards.html" class="block bg-white p-8 rounded-xl border border-border-color hover:shadow-xl hover:border-brand-purple transition-all duration-300 hover:-translate-y-1">
-                    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mb-4 text-brand-purple" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
+                <a href="/resources/stewards.html" class="block bg-white p-8 rounded-xl border border-border-color hover:shadow-xl hover:border-brand-purple transition-all duration-300 hover:-translate-y-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mb-4 text-brand-purple" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
                     <h3 class="font-bold text-xl">Find Your Steward</h3>
                     <p class="text-text-secondary mt-1">Get a current list of all union stewards by department.</p>
                 </a>
-                <a href="./resources/bylaws.html" class="block bg-white p-8 rounded-xl border border-border-color hover:shadow-xl hover:border-brand-purple transition-all duration-300 hover:-translate-y-1">
-                    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mb-4 text-brand-purple" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+                <a href="/resources/bylaws.html" class="block bg-white p-8 rounded-xl border border-border-color hover:shadow-xl hover:border-brand-purple transition-all duration-300 hover:-translate-y-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mb-4 text-brand-purple" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
                     <h3 class="font-bold text-xl">Union Bylaws</h3>
                     <p class="text-text-secondary mt-1">Read the governing rules of our local.</p>
                 </a>
@@ -265,8 +267,8 @@
                 <h2 class="text-4xl font-bold text-center mb-6">Contact Us</h2>
                 <p class="text-text-secondary text-lg max-w-2xl mx-auto mb-8">Have a question? We're here to help. Reach out to our union office anytime.</p>
                 <div class="text-lg text-text-primary space-y-2">
-                    <p><strong>Address:</strong> <a href="https://www.google.com/maps/search/?api=1&query=Oregon+State+University+Adams+Hall+Corvallis+OR" class="text-brand-purple hover:underline" target="_blank" rel="noopener noreferrer">Oregon State University, Adams Hall, 606 SW 15th St Room 109, Corvallis, OR 97331</a></p>
-                    <p><strong>Stewards Email:</strong> <a href="mailto:083stewards@seiu503.org" class="text-brand-purple hover:underline">083stewards@seiu503.org</a></p>
+                    <p><strong>Address:</strong> <a href="https://maps.app.goo.gl/9TWRZ9F4wjVjacsZ7" class="text-brand-purple hover:underline" target="_blank" rel="noopener noreferrer">Oregon State University, Adams Hall, 606 SW 15th St Room 109, Corvallis, OR 97331</a></p>
+                    <p><strong>Stewards Email:</strong> <a href="mailto:083stewards@seiu503.org" class="text-brand-purple hover:underline">083stewards@seiu503.org</a>
                     <p><strong>Leadership Email:</strong> <a href="mailto:083execteam@seiu503.org" class="text-brand-purple hover:underline">083execteam@seiu503.org</a></p>
                 </div>
             </div>
@@ -280,73 +282,71 @@
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div class="md:col-span-2 lg:col-span-1">
                     <div class="flex items-center mb-4">
-                        <!-- UPDATED: Relative path -->
-                        <img src="./images/logo.png" onerror="this.src='https://placehold.co/48x48/7C3AED/white?text=SEIU'" alt="SEIU 503 Logo" class="h-12 w-12 mr-3 bg-white p-1 rounded">
+                        <img src="/images/logo.png" alt="SEIU 503 Logo" class="h-12 w-12 mr-3 bg-white p-1 rounded">
                         <div>
                             <h3 class="text-xl font-bold">SEIU Local 503</h3>
-                            <p class="text-gray-300 text-sm">Oregon State University</p>
+                            <p class="text-gray-400 text-sm">Oregon State University</p>
                         </div>
                     </div>
-                    <p class="text-black leading-relaxed" style="color:#d1d5db;">Representing the classified employees of Oregon State University. We fight for fair contracts, defend workplace rights, and build a united community.</p>
+                    <p class="text-black leading-relaxed">Representing the classified employees of Oregon State University. We fight for fair contracts, defend workplace rights, and build a united community.</p>
                 </div>
     
                 <div>
                     <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase">Quick Links</h4>
                     <ul class="space-y-3">
-                        <!-- UPDATED: Relative paths -->
-                        <li><a href="about.html" class="text-gray-300 hover:text-white transition-colors">About Us</a></li>
-                        <li><a href="events.html" class="text-gray-300 hover:text-white transition-colors">Events</a></li>
-                        <li><a href="news.html" class="text-gray-300 hover:text-white transition-colors">News</a></li>
-                        <li><a href="leadership.html" class="text-gray-300 hover:text-white transition-colors">Leadership</a></li>
+                        <li><a href="/about.html" class="text-black hover:text-gray-500 transition-colors">About Us</a></li>
+                        <li><a href="/events.html" class="text-black hover:text-gray-500 transition-colors">Events</a></li>
+                        <li><a href="/news.html" class="text-black hover:text-gray-500 transition-colors">News</a></li>
+                        <li><a href="/leadership.html" class="text-black hover:text-gray-500 transition-colors">Leadership</a></li>
                     </ul>
                 </div>
     
                 <div>
-                    <!-- UPDATED: Relative paths -->
-                    <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase"><a href="resources.html" class="hover:text-white transition-colors">Resources</a></h4>
+                    <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase"><a href="/resources.html" class="hover:text-gray-500 transition-colors">Resources</a></h4>
                     <ul class="space-y-3">
-                        <li><a href="resources.html" class="text-gray-300 hover:text-white transition-colors">Resources & Rights</a></li>
-                        <li><a href="./resources/seiu_cba_2022-2026.pdf" class="text-gray-300 hover:text-white transition-colors">Our Contract (PDF)</a></li>
-                        <li><a href="./resources/stewards.html" class="text-gray-300 hover:text-white transition-colors">Find a Steward</a></li>
-                        <li><a href="./resources/weingarten-rights.html" class="text-gray-300 hover:text-white transition-colors">Weingarten Rights</a></li>
+                        <li><a href="/resources.html" class="text-black hover:text-gray-500 transition-colors">Resources & Rights</a></li>
+                        <li><a href="/resources/seiu_cba_2022-2026.pdf" class="text-black hover:text-gray-500 transition-colors">Our Contract (PDF)</a></li>
+                        <li><a href="/resources/stewards.html" class="text-black hover:text-gray-500 transition-colors">Find a Steward</a></li>
+                        <li><a href="/resources/weingarten-rights.html" class="text-black hover:text-gray-500 transition-colors">Weingarten Rights</a></li>
                     </ul>
                 </div>
     
                 <div>
-                    <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase"><a href="contact.html" class="hover:text-white transition-colors">Contact Us</a></h4>
+                    <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase"><a href="/contact.html" class="hover:text-gray-500 transition-colors">Contact Us</a></h4>
                      <ul class="space-y-3 text-black">
                         <li class="flex items-start">
-                            <span class="mr-2 mt-1">✉️</span> <a href="mailto:083execteam@seiu503.org" class="text-gray-300 hover:text-white transition-colors">083execteam@seiu503.org</a>
+                            <span class="mr-2 mt-1">✉️</span> <a href="mailto:083execteam@seiu503.org" class="hover:text-gray-500 transition-colors">083execteam@seiu503.org</a>
                         </li>
                         <li class="flex items-start">
-                            <span class="mr-2 mt-1">✉️</span> <a href="mailto:083stewards@seiu503.org" class="text-gray-300 hover:text-white transition-colors">083stewards@seiu503.org</a>
+                            <span class="mr-2 mt-1">✉️</span> <a href="mailto:083stewards@seiu503.org" class="hover:text-gray-500 transition-colors">083stewards@seiu503.org</a>
                         </li>
                         <li class="flex items-start">
-                            <span class="mr-2 mt-1">📍</span> <a href="https://www.google.com/maps/search/?api=1&query=Oregon+State+University+Adams+Hall+Corvallis+OR" class="text-gray-300 hover:text-white transition-colors">Adams Hall, Room 109<br>Corvallis, OR 97331</a>
+                            <span class="mr-2 mt-1">📍</span> <a href="https://maps.app.goo.gl/9TWRZ9F4wjVjacsZ7" class="hover:text-gray-500 transition-colors">Adams Hall, Room 109<br>Corvallis, OR 97331</a>
                         </li>
                     </ul>
                 </div>
             </div>
     
             <div class="mt-10 pt-8 border-t border-gray-700 text-center">
-                <p class="text-gray-300 text-sm">© 2025 SEIU Local 503, Oregon State University. All rights reserved.</p>
+                <p class="text-gray-400 text-sm">© 2025 SEIU Local 503, Oregon State University. All rights reserved.</p>
             </div>
         </div>
     </footer>
     
-    <div id="bargaining-survey-modal" class="fixed inset-0 bg-black bg-opacity-60 backdrop-blur-sm flex items-center justify-center p-4 z-[100] hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div id="bargaining-survey-modal" class="fixed inset-0 bg-black bg-opacity-60 backdrop-blur-sm flex items-center justify-center p-4 z-[100] hidden">
         <div id="modal-content" class="bg-white rounded-xl shadow-2xl max-w-lg w-full p-8 text-center relative transform transition-all duration-300 scale-95 opacity-0">
             <button id="modal-close-button" class="absolute top-4 right-4 text-gray-400 hover:text-gray-800 transition-colors" aria-label="Close survey popup">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
             </button>
     
-        <h2 id="modal-title" class="text-3xl font-bold text-brand-purple-dark mb-4">Fighting for Higher Education</h2>
+            <h2 class="text-3xl font-bold text-brand-purple-dark mb-4">The Bargaining Survey is Out!</h2>
             <p class="text-text-secondary mb-6">
-            Classified workers at Oregon’s Public Universities are the foundation of higher education! We unite in support of bargaining priorities.
+                Please check your inbox for an email with the title <strong class="text-brand-dark">"It's time for your 2025 Higher Ed Bargaining Survey"</strong> from <strong class="text-brand-dark">alert@seiu503.org</strong>.
             </p>
             <div class="space-y-3 flex flex-col items-center">
-            <!-- UPDATED: Relative path -->
-            <a href="./news/2025-12-15-fighting-for-higher-education.html" id="modal-btn-done" class="btn btn-primary w-full block text-center">Read the Article & Sign Petition</a>
+                <button id="modal-btn-done" class="btn btn-primary w-full">Yes, I've got it!</button>
+                <a href="mailto:prentisss@seiu503.org?subject=Missing%202025%20Bargaining%20Survey&body=Hi%20Stephanie,%0A%0AI'm%20an%20SEIU%20503%20member%20at%20OSU,%20but%20I%20can't%20find%20the%20bargaining%20survey%20email.%20Can%20you%20please%20help?%0A%0AThank%20you,%0A%0A[Your%20Name]%0A[Department/Work%20Location]" class="btn btn-outline w-full block text-center">Member, but can't find the email?</a>
+                <a href="https://seiu503signup.org" target="_blank" rel="noopener noreferrer" class="btn btn-secondary w-full">Not a member yet? Join Us!</a>
             </div>
         </div>
     </div>
@@ -359,35 +359,30 @@
             const mobileMenu = document.getElementById('mobile-menu');
             const navLinks = document.querySelectorAll('#mobile-menu a');
 
-            if (mobileMenuButton && mobileMenu) {
-                mobileMenuButton.addEventListener('click', () => {
-                    const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
-                    mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
-                    mobileMenu.classList.toggle('hidden');
-                });
+            mobileMenuButton.addEventListener('click', () => {
+                const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+                mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
+                mobileMenu.classList.toggle('hidden');
+            });
 
-                navLinks.forEach(link => {
-                    link.addEventListener('click', () => {
-                        mobileMenu.classList.add('hidden');
-                        mobileMenuButton.setAttribute('aria-expanded', 'false');
-                    });
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenuButton.setAttribute('aria-expanded', 'false');
                 });
-            }
+            });
 
             // --- Bargaining Survey Modal Logic ---
             const surveyModal = document.getElementById('bargaining-survey-modal');
             const modalContent = document.getElementById('modal-content');
             const closeButton = document.getElementById('modal-close-button');
             const doneButton = document.getElementById('modal-btn-done');
-            let lastFocusedElement;
             
             // Function to open the modal with a smooth animation
             const openModal = () => {
-                lastFocusedElement = document.activeElement;
                 surveyModal.classList.remove('hidden');
                 setTimeout(() => {
                     modalContent.classList.remove('opacity-0', 'scale-95');
-                    if(doneButton) doneButton.focus(); // Set initial focus
                 }, 10);
             };
 
@@ -396,14 +391,11 @@
                 modalContent.classList.add('opacity-0', 'scale-95');
                 setTimeout(() => {
                     surveyModal.classList.add('hidden');
-                    if (lastFocusedElement) {
-                        lastFocusedElement.focus();
-                    }
                 }, 300); // Should match transition duration
             };
 
             // Check sessionStorage to show the modal only once per session
-            if (surveyModal && !sessionStorage.getItem('bargainingSurveyModalShown')) {
+            if (!sessionStorage.getItem('bargainingSurveyModalShown')) {
                 setTimeout(openModal, 1500); // Show modal after 1.5 seconds
                 sessionStorage.setItem('bargainingSurveyModalShown', 'true');
             }
@@ -411,64 +403,29 @@
             // --- Event listeners to close the modal ---
             // Close with the 'X' button or the "Done" button.
             // The other buttons are links and will navigate away.
-            if(closeButton) {
-                closeButton.addEventListener('click', closeModal);
-            }
-            if(doneButton) {
-                doneButton.addEventListener('click', closeModal);
-            }
+            [closeButton, doneButton].forEach(btn => {
+                btn.addEventListener('click', closeModal);
+            });
 
             // Close by clicking the dark background overlay
-            if(surveyModal) {
-                surveyModal.addEventListener('click', (event) => {
-                    if (event.target === surveyModal) {
-                        closeModal();
-                    }
-                });
-
-                // Focus Trap and Escape Key
-                surveyModal.addEventListener('keydown', (e) => {
-                    if (e.key === 'Escape') {
-                        closeModal();
-                    }
-
-                    if (e.key === 'Tab') {
-                        const focusableElements = modalContent.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
-                        const firstElement = focusableElements[0];
-                        const lastElement = focusableElements[focusableElements.length - 1];
-
-                        if (e.shiftKey) { // Shift + Tab
-                            if (document.activeElement === firstElement) {
-                                e.preventDefault();
-                                lastElement.focus();
-                            }
-                        } else { // Tab
-                            if (document.activeElement === lastElement) {
-                                e.preventDefault();
-                                firstElement.focus();
-                            }
-                        }
-                    }
-                });
-            }
+            surveyModal.addEventListener('click', (event) => {
+                if (event.target === surveyModal) {
+                    closeModal();
+                }
+            });
 
             // --- Load Upcoming Events ---
             const loadUpcomingEvents = async () => {
                 const eventsContainer = document.getElementById('upcoming-events-container');
-                if(!eventsContainer) return;
-                
                 try {
-                    // UPDATED: Relative path for fetch
-                    const response = await fetch('events/events.json');
-                    if (!response.ok) throw new Error('Events file not found');
-                    
+                    const response = await fetch('/events/events.json');
                     const events = await response.json();
                     const today = new Date();
                     today.setHours(0, 0, 0, 0);
 
                     const upcomingEvents = events
                         .filter(event => new Date(event.date.replace(/-/g, '\/')) >= today)
-                        .sort((a, b) => new Date(a.date.replace(/-/g, '\/')) - new Date(b.date.replace(/-/g, '\/')))
+                        .sort((a, b) => new Date(a.date) - new Date(b.date))
                         .slice(0, 3);
 
                     if (upcomingEvents.length > 0) {
@@ -511,25 +468,20 @@
                         eventsContainer.innerHTML = '<p class="text-center text-text-secondary col-span-full">No upcoming events at this time. Please check back soon!</p>';
                     }
                 } catch (error) {
-                    // console.error('Error fetching events:', error); // Silent fail or log
-                    eventsContainer.innerHTML = '<p class="text-center text-text-secondary col-span-full">No upcoming events scheduled right now.</p>';
+                    console.error('Error fetching events:', error);
+                    eventsContainer.innerHTML = '<p class="text-center text-red-500 col-span-full">Could not load events. Please try again later.</p>';
                 }
             };
 
             // --- Load News ---
             const loadNews = async () => {
                 const newsGridContainer = document.getElementById('news-grid-container');
-                if(!newsGridContainer) return;
-
                  try {
-                    // UPDATED: Relative path for fetch
-                    const response = await fetch('news/news.json');
-                    if (!response.ok) throw new Error('News file not found');
-
+                    const response = await fetch('/news/news.json');
                     const newsItems = await response.json();
 
                     const sortedNews = newsItems
-                        .sort((a, b) => new Date(b.date.replace(/-/g, '\/')) - new Date(a.date.replace(/-/g, '\/')))
+                        .sort((a, b) => new Date(b.date) - new Date(a.date))
                         .slice(0, 3);
                     
                     if (sortedNews.length > 0) {
@@ -564,8 +516,8 @@
                     }
 
                 } catch(error) {
-                    // console.error('Error fetching news:', error); // Silent fail or log
-                    newsGridContainer.innerHTML = '<p class="text-center text-text-secondary col-span-full">News updates coming soon.</p>';
+                    console.error('Error fetching news:', error);
+                    newsGridContainer.innerHTML = '<p class="text-center text-red-500 col-span-full">Could not load news. Please try again later.</p>';
                 }
             };
 
