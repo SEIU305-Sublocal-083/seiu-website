@@ -1,54 +1,29 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-    <!-- Anti-FOUC (Flash of Unstyled Content) Fix -->
-    <style id="anti-fouc">html{visibility:hidden;opacity:0;}</style>
-    <script>
-    (function(){
-      var s = document.getElementById('anti-fouc');
-      var r = function(){
-        if(s){
-          s.remove();
-          document.documentElement.style.visibility='visible';
-          document.documentElement.style.opacity='1';
-        }
-      };
-      // Safety timeout in case of script error or slow load
-      setTimeout(r, 1500);
-
-      // Wait for DOMContentLoaded, then give a small buffer for Tailwind to parse
-      document.addEventListener('DOMContentLoaded', function(){
-        setTimeout(r, 100);
-      });
-    })();
-    </script>
-    <noscript>
-      <style>html{visibility:visible!important;opacity:1!important;}</style>
-    </noscript>
-    <!-- End Anti-FOUC Fix -->
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="The official website for SEIU Local 503 at Oregon State University, providing news, events, resources, and contact information for members.">
     <meta name="author" content="SEIU Local 503 at OSU">
     <title>SEIU Local 503 - Oregon State University</title>
-    <link rel="icon" href="/images/logo.png" type="image/png">
-    <link rel="apple-touch-icon" href="/images/logo.png">
+    <!-- UPDATED: Relative path for favicon -->
+    <link rel="icon" href="./images/logo.png" type="image/png">
+    <link rel="apple-touch-icon" href="./images/logo.png">
 
     <!-- 1. LOAD TAILWIND LIBRARY FIRST -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- 2. DEFINE CONFIG NEXT (Must happen before styles attempt to use these colors) -->
+    <!-- 2. DEFINE CONFIG NEXT -->
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        'brand-purple-dark': '#4C1D95', /* Deep Purple */
-                        'brand-purple': '#7C3AED',      /* Vibrant Purple */
-                        'brand-purple-light': '#EDE9FE', /* Lighter Lavender */
-                        'brand-dark': '#111827',         /* Near-black */
-                        'brand-light': '#F9FAFB',        /* Off-white Background */
+                        'brand-purple-dark': '#4C1D95',
+                        'brand-purple': '#7C3AED',
+                        'brand-purple-light': '#EDE9FE',
+                        'brand-dark': '#111827',
+                        'brand-light': '#F9FAFB',
                         'text-primary': '#1F2937',
                         'text-secondary': '#374151',
                         'border-color': '#D1D5DB',
@@ -67,10 +42,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Lora:wght@400;500;700&display=swap" rel="stylesheet">
 
-    <!-- 4. DEFINE CUSTOM STYLES (Now able to access the config above) -->
+    <!-- 4. DEFINE CUSTOM STYLES -->
     <style type="text/tailwindcss">
         html {
-            scroll-padding-top: 80px; /* Offset for sticky header */
+            scroll-padding-top: 80px;
         }
 
         body {
@@ -108,11 +83,13 @@
 
     <header class="bg-white/80 backdrop-blur-lg border-b border-border-color sticky top-0 z-50">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- UPDATED: Relative path -->
             <a href="index.html" class="flex items-center space-x-2">
                 <span class="text-2xl font-bold text-brand-purple-dark">SEIU 503</span>
                 <span class="text-lg text-text-secondary hidden md:block">| Oregon State University</span>
             </a>
             <div class="hidden lg:flex space-x-8">
+                <!-- UPDATED: Relative paths for navigation -->
                 <a href="about.html" class="text-text-secondary hover:text-brand-purple transition-colors">About</a>
                 <a href="events.html" class="text-text-secondary hover:text-brand-purple transition-colors">Events</a>
                 <a href="news.html" class="text-text-secondary hover:text-brand-purple transition-colors">News</a>
@@ -127,6 +104,7 @@
             </div>
         </nav>
         <div id="mobile-menu" class="hidden lg:hidden absolute top-full left-0 w-full bg-white border-t border-border-color shadow-lg">
+            <!-- UPDATED: Relative paths for mobile menu -->
             <a href="about.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">About</a>
             <a href="events.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Events</a>
             <a href="news.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">News</a>
@@ -146,8 +124,8 @@
                     <a href="#involved" class="mt-8 inline-block btn btn-primary">Join Us Today</a>
                 </div>
                 <div class="md:w-2/5 mt-12 md:mt-0 flex justify-center">
-                     <!-- Added onerror fallback for safety -->
-                     <img src="/images/8672a150-f638-4ad4-ba19-72ab754f74b8-homepage.webp" onerror="this.src='https://placehold.co/400x400/7C3AED/white?text=SEIU+503'" alt="SEIU 503 Union Logo" class="rounded-full shadow-2xl">
+                     <!-- UPDATED: Relative path for image -->
+                     <img src="./images/8672a150-f638-4ad4-ba19-72ab754f74b8-homepage.webp" onerror="this.src='https://placehold.co/400x400/7C3AED/white?text=SEIU+503'" alt="SEIU 503 Union Logo" class="rounded-full shadow-2xl">
                 </div>
             </div>
         </section>
@@ -263,17 +241,18 @@
         <section id="resources" class="my-24">
             <h2 class="text-4xl font-bold text-center mb-12">Resources Hub</h2>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <a href="/resources/seiu_cba_2022-2026.pdf" class="block bg-white p-8 rounded-xl border border-border-color hover:shadow-xl hover:border-brand-purple transition-all duration-300 hover:-translate-y-1">
+                <!-- UPDATED: Relative paths -->
+                <a href="./resources/seiu_cba_2022-2026.pdf" class="block bg-white p-8 rounded-xl border border-border-color hover:shadow-xl hover:border-brand-purple transition-all duration-300 hover:-translate-y-1">
                     <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mb-4 text-brand-purple" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
                     <h3 class="font-bold text-xl">Download Contract</h3>
                     <p class="text-text-secondary mt-1">Access the full Collective Bargaining Agreement.</p>
                 </a>
-                <a href="/resources/stewards.html" class="block bg-white p-8 rounded-xl border border-border-color hover:shadow-xl hover:border-brand-purple transition-all duration-300 hover:-translate-y-1">
+                <a href="./resources/stewards.html" class="block bg-white p-8 rounded-xl border border-border-color hover:shadow-xl hover:border-brand-purple transition-all duration-300 hover:-translate-y-1">
                     <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mb-4 text-brand-purple" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
                     <h3 class="font-bold text-xl">Find Your Steward</h3>
                     <p class="text-text-secondary mt-1">Get a current list of all union stewards by department.</p>
                 </a>
-                <a href="/resources/bylaws.html" class="block bg-white p-8 rounded-xl border border-border-color hover:shadow-xl hover:border-brand-purple transition-all duration-300 hover:-translate-y-1">
+                <a href="./resources/bylaws.html" class="block bg-white p-8 rounded-xl border border-border-color hover:shadow-xl hover:border-brand-purple transition-all duration-300 hover:-translate-y-1">
                     <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mb-4 text-brand-purple" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
                     <h3 class="font-bold text-xl">Union Bylaws</h3>
                     <p class="text-text-secondary mt-1">Read the governing rules of our local.</p>
@@ -301,7 +280,8 @@
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div class="md:col-span-2 lg:col-span-1">
                     <div class="flex items-center mb-4">
-                        <img src="/images/logo.png" onerror="this.src='https://placehold.co/48x48/7C3AED/white?text=SEIU'" alt="SEIU 503 Logo" class="h-12 w-12 mr-3 bg-white p-1 rounded">
+                        <!-- UPDATED: Relative path -->
+                        <img src="./images/logo.png" onerror="this.src='https://placehold.co/48x48/7C3AED/white?text=SEIU'" alt="SEIU 503 Logo" class="h-12 w-12 mr-3 bg-white p-1 rounded">
                         <div>
                             <h3 class="text-xl font-bold">SEIU Local 503</h3>
                             <p class="text-gray-300 text-sm">Oregon State University</p>
@@ -313,25 +293,27 @@
                 <div>
                     <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase">Quick Links</h4>
                     <ul class="space-y-3">
-                        <li><a href="/about.html" class="text-gray-300 hover:text-white transition-colors">About Us</a></li>
-                        <li><a href="/events.html" class="text-gray-300 hover:text-white transition-colors">Events</a></li>
-                        <li><a href="/news.html" class="text-gray-300 hover:text-white transition-colors">News</a></li>
-                        <li><a href="/leadership.html" class="text-gray-300 hover:text-white transition-colors">Leadership</a></li>
+                        <!-- UPDATED: Relative paths -->
+                        <li><a href="about.html" class="text-gray-300 hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="events.html" class="text-gray-300 hover:text-white transition-colors">Events</a></li>
+                        <li><a href="news.html" class="text-gray-300 hover:text-white transition-colors">News</a></li>
+                        <li><a href="leadership.html" class="text-gray-300 hover:text-white transition-colors">Leadership</a></li>
                     </ul>
                 </div>
     
                 <div>
-                    <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase"><a href="/resources.html" class="hover:text-white transition-colors">Resources</a></h4>
+                    <!-- UPDATED: Relative paths -->
+                    <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase"><a href="resources.html" class="hover:text-white transition-colors">Resources</a></h4>
                     <ul class="space-y-3">
-                        <li><a href="/resources.html" class="text-gray-300 hover:text-white transition-colors">Resources & Rights</a></li>
-                        <li><a href="/resources/seiu_cba_2022-2026.pdf" class="text-gray-300 hover:text-white transition-colors">Our Contract (PDF)</a></li>
-                        <li><a href="/resources/stewards.html" class="text-gray-300 hover:text-white transition-colors">Find a Steward</a></li>
-                        <li><a href="/resources/weingarten-rights.html" class="text-gray-300 hover:text-white transition-colors">Weingarten Rights</a></li>
+                        <li><a href="resources.html" class="text-gray-300 hover:text-white transition-colors">Resources & Rights</a></li>
+                        <li><a href="./resources/seiu_cba_2022-2026.pdf" class="text-gray-300 hover:text-white transition-colors">Our Contract (PDF)</a></li>
+                        <li><a href="./resources/stewards.html" class="text-gray-300 hover:text-white transition-colors">Find a Steward</a></li>
+                        <li><a href="./resources/weingarten-rights.html" class="text-gray-300 hover:text-white transition-colors">Weingarten Rights</a></li>
                     </ul>
                 </div>
     
                 <div>
-                    <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase"><a href="/contact.html" class="hover:text-white transition-colors">Contact Us</a></h4>
+                    <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase"><a href="contact.html" class="hover:text-white transition-colors">Contact Us</a></h4>
                      <ul class="space-y-3 text-black">
                         <li class="flex items-start">
                             <span class="mr-2 mt-1">✉️</span> <a href="mailto:083execteam@seiu503.org" class="text-gray-300 hover:text-white transition-colors">083execteam@seiu503.org</a>
@@ -363,7 +345,8 @@
             Classified workers at Oregon’s Public Universities are the foundation of higher education! We unite in support of bargaining priorities.
             </p>
             <div class="space-y-3 flex flex-col items-center">
-            <a href="/news/2025-12-15-fighting-for-higher-education.html" id="modal-btn-done" class="btn btn-primary w-full block text-center">Read the Article & Sign Petition</a>
+            <!-- UPDATED: Relative path -->
+            <a href="./news/2025-12-15-fighting-for-higher-education.html" id="modal-btn-done" class="btn btn-primary w-full block text-center">Read the Article & Sign Petition</a>
             </div>
         </div>
     </div>
@@ -475,7 +458,8 @@
                 if(!eventsContainer) return;
                 
                 try {
-                    const response = await fetch('/events/events.json');
+                    // UPDATED: Relative path for fetch
+                    const response = await fetch('events/events.json');
                     if (!response.ok) throw new Error('Events file not found');
                     
                     const events = await response.json();
@@ -538,7 +522,8 @@
                 if(!newsGridContainer) return;
 
                  try {
-                    const response = await fetch('/news/news.json');
+                    // UPDATED: Relative path for fetch
+                    const response = await fetch('news/news.json');
                     if (!response.ok) throw new Error('News file not found');
 
                     const newsItems = await response.json();
