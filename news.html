@@ -35,40 +35,48 @@
     <link rel="icon" href="/images/logo.png" type="image/png">
     <link rel="apple-touch-icon" href="/images/logo.png">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-purple-dark': '#4C1D95',
+                        'brand-purple': '#7C3AED',
+                        'brand-purple-light': '#EDE9FE',
+                        'brand-dark': '#111827',
+                        'brand-light': '#F9FAFB',
+                        'text-primary': '#1F2937',
+                        'text-secondary': '#374151',
+                        'border-color': '#D1D5DB',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Lora', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Lora:wght@400;500;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --brand-purple-dark: #4C1D95; /* Deep Purple */
-            --brand-purple: #7C3AED;      /* Vibrant Purple */
-            --brand-purple-light: #EDE9FE; /* Lighter Lavender for high contrast */
-            --brand-dark: #111827;         /* Near-black for high contrast text/bg */
-            --brand-light: #F9FAFB;        /* Off-white Background */
-            --text-primary: #1F2937;
-            --text-secondary: #374151;     /* Darker secondary text for better contrast */
-            --border-color: #D1D5DB;
-        }
-
+    <style type="text/tailwindcss">
         html {
             scroll-padding-top: 80px; /* Offset for sticky header */
         }
 
         body {
             font-family: 'Inter', sans-serif;
-            background-color: var(--brand-light);
-            color: var(--text-primary);
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
+            @apply bg-brand-light text-text-primary antialiased;
         }
 
         h1, h2, h3, h4, h5, h6 {
             font-family: 'Lora', serif;
-            color: var(--brand-purple-dark);
+            @apply text-brand-purple-dark;
         }
 
         /* Accessibility: Clear focus indicators for all interactive elements */
-        a:focus-visible, button:focus-visible, details:focus-visible, input:focus-visible, textarea:focus-visible {
+        a:focus-visible, button:focus-visible, details:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible {
             outline: 3px solid var(--brand-purple);
             outline-offset: 2px;
             border-radius: 4px;
@@ -88,170 +96,177 @@
         }
 
         .tag-button {
-            background-color: #E5E7EB; /* light grey */
-            color: #374151; /* dark grey */
-        }
-
-        .tag-button:hover:not(.active) {
-            background-color: #D1D5DB; /* gray-300 */
-            color: #374151;
+            @apply bg-gray-200 text-gray-700 hover:bg-gray-300 hover:text-gray-900 transition-colors;
         }
 
         .tag-button.active {
-            background-color: var(--brand-purple);
-            color: white;
+            @apply bg-brand-purple text-white shadow-md;
         }
 
         details[open] > summary {
-            background-color: var(--brand-purple);
-            color: white;
+            @apply text-brand-purple-dark;
         }
 
-        /* Custom Tailwind config for our CSS variables */
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'brand-purple-dark': 'var(--brand-purple-dark)',
-                        'brand-purple': 'var(--brand-purple)',
-                        'brand-purple-light': 'var(--brand-purple-light)',
-                        'brand-dark': 'var(--brand-dark)',
-                        'brand-light': 'var(--brand-light)',
-                        'text-primary': 'var(--text-primary)',
-                        'text-secondary': 'var(--text-secondary)',
-                        'border-color': 'var(--border-color)',
-                    }
-                }
-            }
+        /* Custom Scrollbar for nicer UI */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            @apply bg-gray-100;
+        }
+        ::-webkit-scrollbar-thumb {
+            @apply bg-gray-300 rounded hover:bg-gray-400;
         }
     </style>
 </head>
 <body class="bg-brand-light">
 
-    <header class="bg-white/80 backdrop-blur-lg border-b border-border-color sticky top-0 z-50">
+    <header class="bg-white/90 backdrop-blur-lg border-b border-border-color sticky top-0 z-50 transition-all duration-300">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="index.html" class="flex items-center space-x-2">
-                <span class="text-2xl font-bold text-brand-purple-dark">SEIU 503</span>
+            <a href="index.html" class="flex items-center space-x-2 group">
+                <span class="text-2xl font-bold text-brand-purple-dark group-hover:text-brand-purple transition-colors">SEIU 503</span>
                 <span class="text-lg text-text-secondary hidden md:block">| Oregon State University</span>
             </a>
-            <div class="hidden lg:flex space-x-8">
-                <a href="about.html" class="text-text-secondary hover:text-brand-purple transition-colors">About</a>
-                <a href="events.html" class="text-text-secondary hover:text-brand-purple transition-colors">Events</a>
+            <div class="hidden lg:flex space-x-8 font-medium">
+                <a href="about.html" class="text-text-secondary hover:text-brand-purple transition-colors relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-brand-purple after:transition-all hover:after:w-full">About</a>
+                <a href="events.html" class="text-text-secondary hover:text-brand-purple transition-colors relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-brand-purple after:transition-all hover:after:w-full">Events</a>
                 <a href="news.html" class="text-brand-purple font-bold">News</a>
-                <a href="resources.html" class="text-text-secondary hover:text-brand-purple transition-colors">Resources & Rights</a>
-                <a href="leadership.html" class="text-text-secondary hover:text-brand-purple transition-colors">Leadership</a>
-                <a href="contact.html" class="text-text-secondary hover:text-brand-purple transition-colors">Contact</a>
+                <a href="resources.html" class="text-text-secondary hover:text-brand-purple transition-colors relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-brand-purple after:transition-all hover:after:w-full">Resources & Rights</a>
+                <a href="leadership.html" class="text-text-secondary hover:text-brand-purple transition-colors relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-brand-purple after:transition-all hover:after:w-full">Leadership</a>
+                <a href="contact.html" class="text-text-secondary hover:text-brand-purple transition-colors relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-brand-purple after:transition-all hover:after:w-full">Contact</a>
             </div>
             <div class="lg:hidden">
-                <button id="mobile-menu-button" class="text-text-secondary hover:text-brand-purple focus:outline-none" aria-label="Open menu">
+                <button id="mobile-menu-button" class="text-text-secondary hover:text-brand-purple focus:outline-none p-2 rounded-md hover:bg-gray-100" aria-label="Open menu">
                     <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
                 </button>
             </div>
         </nav>
         <div id="mobile-menu" class="hidden lg:hidden absolute top-full left-0 w-full bg-white border-t border-border-color shadow-lg">
-            <a href="about.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">About</a>
-            <a href="events.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Events</a>
-            <a href="news.html" class="block text-center py-3 px-6 text-lg text-brand-purple bg-brand-purple-light font-semibold">News</a>
-            <a href="resources.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Resources & Rights</a>
-            <a href="leadership.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Leadership</a>
-            <a href="contact.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Contact</a>
+            <a href="about.html" class="block text-center py-4 px-6 text-lg text-text-secondary hover:bg-gray-50 hover:text-brand-purple border-b border-gray-100">About</a>
+            <a href="events.html" class="block text-center py-4 px-6 text-lg text-text-secondary hover:bg-gray-50 hover:text-brand-purple border-b border-gray-100">Events</a>
+            <a href="news.html" class="block text-center py-4 px-6 text-lg text-brand-purple bg-brand-purple-light/30 font-semibold border-b border-gray-100">News</a>
+            <a href="resources.html" class="block text-center py-4 px-6 text-lg text-text-secondary hover:bg-gray-50 hover:text-brand-purple border-b border-gray-100">Resources & Rights</a>
+            <a href="leadership.html" class="block text-center py-4 px-6 text-lg text-text-secondary hover:bg-gray-50 hover:text-brand-purple border-b border-gray-100">Leadership</a>
+            <a href="contact.html" class="block text-center py-4 px-6 text-lg text-text-secondary hover:bg-gray-50 hover:text-brand-purple">Contact</a>
         </div>
     </header>
 
-    <section class="bg-brand-purple-light border-b border-border-color">
-        <div class="container mx-auto px-6 py-16 text-center">
-            <h1 class="text-5xl font-bold">News & Updates</h1>
-            <p class="mt-4 text-lg text-text-secondary max-w-3xl mx-auto">The latest news on bargaining, workplace rights, and member actions from across the OSU campus.</p>
+    <!-- Improved Hero Section -->
+    <section class="relative bg-gradient-to-br from-brand-purple-dark to-violet-800 text-white overflow-hidden">
+        <div class="absolute inset-0 opacity-10" style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+        <div class="container mx-auto px-6 py-20 lg:py-24 text-center relative z-10">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6 text-white tracking-tight drop-shadow-sm">News & Updates</h1>
+            <p class="mt-4 text-xl text-purple-100 max-w-3xl mx-auto leading-relaxed">The latest news on bargaining, workplace rights, and member actions from across the OSU campus.</p>
         </div>
+        <div class="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-brand-light to-transparent"></div>
     </section>
 
-    <main class="container mx-auto px-6 py-16">
+    <main class="container mx-auto px-6 py-12 -mt-10 relative z-20">
+
         <section id="featured-article-section" class="mb-16">
-            <!-- Featured article will be injected here -->
+            <!-- Featured article will be injected here via js/news.js -->
+            <!-- Loading state -->
+            <div class="bg-white rounded-xl border border-gray-200 shadow-sm p-12 text-center animate-pulse">
+                <div class="h-8 bg-gray-200 rounded w-1/3 mx-auto mb-4"></div>
+                <div class="h-4 bg-gray-200 rounded w-1/2 mx-auto"></div>
+            </div>
         </section>
 
-        <section id="news-controls" class="mb-12">
-            <div class="max-w-4xl mx-auto">
+        <section id="news-controls" class="mb-12 bg-white p-6 rounded-xl border border-border-color shadow-sm">
+            <div class="max-w-5xl mx-auto">
                 <div class="flex flex-col md:flex-row gap-6 items-end">
                     <div class="flex-grow w-full">
-                        <label for="search-input" class="block text-sm font-medium text-text-secondary mb-2">Search News</label>
-                        <input type="text" id="search-input" placeholder="Enter keywords..." class="w-full px-4 py-2 border border-border-color rounded-lg focus:ring-2 focus:ring-brand-purple focus:border-transparent transition">
+                        <label for="search-input" class="block text-sm font-semibold text-text-secondary mb-2 uppercase tracking-wide">Search News</label>
+                        <div class="relative">
+                            <input type="text" id="search-input" placeholder="Search by title, content, or keyword..." class="w-full pl-10 pr-4 py-3 bg-gray-50 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-purple focus:border-brand-purple transition-shadow outline-none text-text-primary placeholder-gray-400">
+                            <svg class="w-5 h-5 text-gray-400 absolute left-3 top-1/2 transform -translate-y-1/2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                        </div>
                     </div>
-                    <div class="flex-shrink-0">
-                        <label for="sort-select" class="block text-sm font-medium text-text-secondary mb-2">Sort By</label>
-                        <select id="sort-select" class="w-full md:w-auto px-4 py-2 border border-border-color rounded-lg focus:ring-2 focus:ring-brand-purple focus:border-transparent transition">
-                            <option value="newest">Newest First</option>
-                            <option value="oldest">Oldest First</option>
-                        </select>
+                    <div class="flex-shrink-0 w-full md:w-48">
+                        <label for="sort-select" class="block text-sm font-semibold text-text-secondary mb-2 uppercase tracking-wide">Sort By</label>
+                        <div class="relative">
+                            <select id="sort-select" class="w-full appearance-none pl-4 pr-10 py-3 bg-gray-50 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-purple focus:border-brand-purple transition-shadow outline-none cursor-pointer">
+                                <option value="newest">Newest First</option>
+                                <option value="oldest">Oldest First</option>
+                            </select>
+                            <svg class="w-5 h-5 text-gray-400 absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </div>
                     </div>
                 </div>
-                <div id="tag-filters" class="mt-6">
-                    <h3 class="text-lg font-semibold mb-3 text-text-secondary">Filter by Category</h3>
-                    <div id="tags-container" class="flex flex-wrap gap-3 items-center">
-                        </div>
+
+                <div id="tag-filters" class="mt-8 pt-6 border-t border-gray-100">
+                    <div class="flex items-center gap-2 mb-4">
+                        <svg class="w-5 h-5 text-brand-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"></path></svg>
+                        <h3 class="text-sm font-semibold text-text-secondary uppercase tracking-wide">Filter by Topic</h3>
+                    </div>
+                    <div id="tags-container" class="flex flex-wrap gap-2 items-center">
+                        <!-- Tags injected by JS -->
+                    </div>
                 </div>
             </div>
         </section>
 
         <section id="articles-section">
             <div id="articles-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                </div>
+                <!-- Articles injected by JS -->
+            </div>
         </section>
     </main>
 
-    <footer class="bg-brand-dark text-white pt-12 pb-8">
+    <footer class="bg-brand-dark text-white pt-16 pb-8">
         <div class="container mx-auto px-6">
-            <div class="mt-10 pt-8 border-t border-gray-700 text-center">
-            </div>
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
                 <div class="md:col-span-2 lg:col-span-1">
-                    <div class="flex items-center mb-4">
+                    <div class="flex items-center mb-6">
                         <img src="/images/logo.png" alt="SEIU 503 Logo" class="h-12 w-12 mr-3 bg-white p-1 rounded">
                         <div>
-                            <h3 class="text-xl font-bold">SEIU Local 503</h3>
+                            <h3 class="text-xl font-bold font-serif">SEIU Local 503</h3>
                             <p class="text-gray-400 text-sm">Oregon State University</p>
                         </div>
                     </div>
-                    <p class="text-black leading-relaxed">Representing the classified employees of Oregon State University. We fight for fair contracts, defend workplace rights, and build a united community.</p>
+                    <p class="text-gray-300 leading-relaxed mb-6">Representing the classified employees of Oregon State University. We fight for fair contracts, defend workplace rights, and build a united community.</p>
                 </div>
     
                 <div>
-                    <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase">Quick Links</h4>
+                    <h4 class="text-lg font-bold mb-6 tracking-wider uppercase text-brand-purple-light">Quick Links</h4>
                     <ul class="space-y-3">
-                        <li><a href="/about.html" class="text-black hover:text-gray-500 transition-colors">About Us</a></li>
-                        <li><a href="/events.html" class="text-black hover:text-gray-500 transition-colors">Events</a></li>
-                        <li><a href="/news.html" class="text-black hover:text-gray-500 transition-colors">News</a></li>
-                        <li><a href="/leadership.html" class="text-black hover:text-gray-500 transition-colors">Leadership</a></li>
+                        <li><a href="/about.html" class="text-gray-300 hover:text-white hover:translate-x-1 transition-all inline-block">About Us</a></li>
+                        <li><a href="/events.html" class="text-gray-300 hover:text-white hover:translate-x-1 transition-all inline-block">Events</a></li>
+                        <li><a href="/news.html" class="text-gray-300 hover:text-white hover:translate-x-1 transition-all inline-block">News</a></li>
+                        <li><a href="/leadership.html" class="text-gray-300 hover:text-white hover:translate-x-1 transition-all inline-block">Leadership</a></li>
                     </ul>
                 </div>
     
                 <div>
-                    <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase"><a href="/resources.html" class="hover:text-gray-500 transition-colors">Resources</a></h4>
+                    <h4 class="text-lg font-bold mb-6 tracking-wider uppercase text-brand-purple-light"><a href="/resources.html" class="hover:text-white transition-colors">Resources</a></h4>
                     <ul class="space-y-3">
-                        <li><a href="/resources.html" class="text-black hover:text-gray-500 transition-colors">Resources & Rights</a></li>
-                        <li><a href="/resources/seiu_cba_2022-2026.pdf" class="text-black hover:text-gray-500 transition-colors">Our Contract (PDF)</a></li>
-                        <li><a href="/resources/stewards.html" class="text-black hover:text-gray-500 transition-colors">Find a Steward</a></li>
-                        <li><a href="/resources/weingarten-rights.html" class="text-black hover:text-gray-500 transition-colors">Weingarten Rights</a></li>
+                        <li><a href="/resources.html" class="text-gray-300 hover:text-white hover:translate-x-1 transition-all inline-block">Resources & Rights</a></li>
+                        <li><a href="/resources/seiu_cba_2022-2026.pdf" class="text-gray-300 hover:text-white hover:translate-x-1 transition-all inline-block">Our Contract (PDF)</a></li>
+                        <li><a href="/resources/stewards.html" class="text-gray-300 hover:text-white hover:translate-x-1 transition-all inline-block">Find a Steward</a></li>
+                        <li><a href="/resources/weingarten-rights.html" class="text-gray-300 hover:text-white hover:translate-x-1 transition-all inline-block">Weingarten Rights</a></li>
                     </ul>
                 </div>
     
                 <div>
-                    <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase"><a href="/contact.html" class="hover:text-gray-500 transition-colors">Contact Us</a></h4>
-                     <ul class="space-y-3 text-black">
-                        <li class="flex items-start">
-                            <span class="mr-2 mt-1">✉️</span> <a href="mailto:083execteam@seiu503.org" class="hover:text-gray-500 transition-colors">083execteam@seiu503.org</a>
+                    <h4 class="text-lg font-bold mb-6 tracking-wider uppercase text-brand-purple-light"><a href="/contact.html" class="hover:text-white transition-colors">Contact Us</a></h4>
+                     <ul class="space-y-4 text-gray-300">
+                        <li class="flex items-start group">
+                            <span class="mr-3 mt-1 text-xl group-hover:scale-110 transition-transform">✉️</span>
+                            <a href="mailto:083execteam@seiu503.org" class="hover:text-white transition-colors">083execteam@seiu503.org</a>
                         </li>
-                        <li class="flex items-start">
-                            <span class="mr-2 mt-1">✉️</span> <a href="mailto:083stewards@seiu503.org" class="hover:text-gray-500 transition-colors">083stewards@seiu503.org</a>
+                        <li class="flex items-start group">
+                            <span class="mr-3 mt-1 text-xl group-hover:scale-110 transition-transform">✉️</span>
+                            <a href="mailto:083stewards@seiu503.org" class="hover:text-white transition-colors">083stewards@seiu503.org</a>
                         </li>
-                        <li class="flex items-start">
-                            <span class="mr-2 mt-1">📍</span> <a href="https://maps.app.goo.gl/9TWRZ9F4wjVjacsZ7" class="hover:text-gray-500 transition-colors">Adams Hall, Room 109<br>Corvallis, OR 97331</a>
+                        <li class="flex items-start group">
+                            <span class="mr-3 mt-1 text-xl group-hover:scale-110 transition-transform">📍</span>
+                            <a href="https://maps.app.goo.gl/9TWRZ9F4wjVjacsZ7" class="hover:text-white transition-colors">Adams Hall, Room 109<br>Corvallis, OR 97331</a>
                         </li>
                     </ul>
                 </div>
             </div>
     
-            <div class="mt-10 pt-8 border-t border-gray-700 text-center">
+            <div class="mt-12 pt-8 border-t border-gray-700 text-center">
                 <p class="text-gray-400 text-sm">© 2025 SEIU Local 503, Oregon State University. All rights reserved.</p>
             </div>
         </div>
@@ -277,96 +292,7 @@
             });
         });
     </script>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            
-            /**
-             * Formats a YYYY-MM-DD date string into 'Month Day, Year'.
-             * @param {string} dateString - The date string in YYYY-MM-DD format.
-             * @returns {string} Formatted date.
-             */
-            function formatDate(dateString) {
-                // Using 'T00:00:00' to treat the date as local, avoiding timezone shifts.
-                const date = new Date(dateString + 'T00:00:00'); 
-                return date.toLocaleDateString('en-US', {
-                    year: 'numeric',
-                    month: 'long',
-                    day: 'numeric'
-                });
-            }
-
-            /**
-             * Populates the news grid with articles from the JSON data.
-             * @param {Array<Object>} articles - An array of article objects.
-             */
-            function populateNewsGrid(articles) {
-                const grid = document.getElementById('articles-grid');
-                if (!grid) {
-                    console.error("articles-grid element not found.");
-                    return;
-                }
-
-                // Clear static/placeholder content
-                grid.innerHTML = ''; 
-
-                if (!articles || articles.length === 0) {
-                    grid.innerHTML = '<p class="text-text-secondary col-span-full text-center">No recent news available.</p>';
-                    return;
-                }
-
-                // Loop through articles and create HTML
-                articles.forEach(article => {
-                    const formattedDate = formatDate(article.date);
-                    // Use the title as alt text if no alt text is provided in JSON
-                    const altText = article.alt || article.title; 
-
-                    const articleCard = document.createElement('div');
-                    articleCard.className = 'bg-white rounded-xl border border-border-color overflow-hidden flex flex-col';
-                    
-                    articleCard.innerHTML = `
-                        <a href="${article.url}" class="block group">
-                            <img src="${article.image}" alt="${altText}" class="w-full h-48 object-cover">
-                            <div class="p-6 flex-grow">
-                                <p class="text-text-secondary text-sm mb-2">${formattedDate}</p>
-                                <h3 class="font-bold text-xl mb-3 group-hover:text-brand-purple transition-colors">${article.title}</h3>
-                                <p class="text-text-secondary">${article.description}</p>
-                            </div>
-                        </a>
-                        <div class="bg-gray-50 border-t border-border-color p-4">
-                            <a href="${article.url}" class="font-semibold text-brand-purple hover:underline">Read More →</a>
-                        </div>
-                    `;
-                    
-                    grid.appendChild(articleCard);
-                });
-            }
-
-            /**
-             * Fetches news articles from news.json and calls populateNewsGrid.
-             */
-            async function loadNews() {
-                try {
-                    // Assumes news.json is in the same directory as news.html
-                    const response = await fetch('news/news.json'); 
-                    if (!response.ok) {
-                        throw new Error(`HTTP error! status: ${response.status}`);
-                    }
-                    const articles = await response.json();
-                    populateNewsGrid(articles);
-                } catch (error) {
-                    console.error("Could not fetch news:", error);
-                    const grid = document.getElementById('articles-grid');
-                    if (grid) {
-                        grid.innerHTML = '<p class="text-text-secondary col-span-full text-center">Could not load news articles at this time.</p>';
-                    }
-                }
-            }
-
-            // Load the news
-            loadNews();
-        });
-    </script>
+    <!-- Removed duplicate inline script. js/news.js handles logic. -->
     <script src="js/news.js"></script>
 </body>
 </html>

@@ -35,36 +35,44 @@
     <link rel="icon" href="/images/logo.png" type="image/png">
     <link rel="apple-touch-icon" href="/images/logo.png">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-purple-dark': '#4C1D95',
+                        'brand-purple': '#7C3AED',
+                        'brand-purple-light': '#EDE9FE',
+                        'brand-dark': '#111827',
+                        'brand-light': '#F9FAFB',
+                        'text-primary': '#1F2937',
+                        'text-secondary': '#374151',
+                        'border-color': '#D1D5DB',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Lora', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Lora:wght@400;500;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --brand-purple-dark: #4C1D95; /* Deep Purple */
-            --brand-purple: #7C3AED;      /* Vibrant Purple */
-            --brand-purple-light: #EDE9FE; /* Lighter Lavender for high contrast */
-            --brand-dark: #111827;         /* Near-black for high contrast text/bg */
-            --brand-light: #F9FAFB;        /* Off-white Background */
-            --text-primary: #1F2937;
-            --text-secondary: #374151;     /* Darker secondary text for better contrast */
-            --border-color: #D1D5DB;
-        }
-
+    <style type="text/tailwindcss">
         html {
             scroll-padding-top: 80px; /* Offset for sticky header */
         }
 
         body {
             font-family: 'Inter', sans-serif;
-            background-color: var(--brand-light);
-            color: var(--text-primary);
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
+            @apply bg-brand-light text-text-primary antialiased;
         }
 
         h1, h2, h3, h4, h5, h6 {
             font-family: 'Lora', serif;
-            color: var(--brand-purple-dark);
+            @apply text-brand-purple-dark;
         }
 
         /* Accessibility: Clear focus indicators for all interactive elements */
@@ -75,10 +83,10 @@
         }
         
         .btn {
-            @apply font-bold py-3 px-6 rounded-lg transition-all duration-300 ease-in-out transform hover:scale-105;
+            @apply font-bold py-3 px-6 rounded-lg transition-all duration-300 ease-in-out transform hover:scale-105 inline-flex items-center justify-center;
         }
         .btn-primary {
-            @apply bg-gradient-to-r from-brand-purple to-violet-600 text-white shadow-md hover:shadow-lg;
+            @apply bg-gradient-to-r from-brand-purple to-violet-600 text-white shadow-md hover:shadow-lg hover:to-brand-purple;
         }
         .btn-secondary {
             @apply bg-brand-dark text-white hover:bg-black;
@@ -89,110 +97,131 @@
         
         /* Calendar Styles */
         .calendar-day.has-event {
-            background-color: var(--brand-purple-light);
-            color: var(--brand-purple-dark);
-            font-weight: bold;
-            border-radius: 50%;
+            @apply bg-purple-100 text-brand-purple font-bold relative;
         }
+        .calendar-day.has-event::after {
+            content: '';
+            @apply absolute bottom-1 left-1/2 transform -translate-x-1/2 w-1.5 h-1.5 bg-brand-purple rounded-full;
+        }
+
         .calendar-day.is-today {
-            background-color: var(--brand-purple);
-            color: white;
-            border-radius: 50%;
+            @apply bg-brand-purple text-white shadow-md;
+        }
+        .calendar-day.is-today::after {
+            @apply bg-white;
+        }
+
+        /* Hover effect for calendar days with events */
+        .calendar-day.has-event:hover {
+            @apply bg-purple-200 cursor-pointer;
         }
         
         /* Style for highlighting event card */
         .highlight-event {
-            transition: all 0.3s ease-in-out;
-            box-shadow: 0 0 0 3px var(--brand-purple);
-            transform: scale(1.01);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            @apply ring-4 ring-brand-purple/50 scale-[1.02] shadow-xl bg-purple-50;
         }
 
-        /* Custom Tailwind config for our CSS variables */
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'brand-purple-dark': 'var(--brand-purple-dark)',
-                        'brand-purple': 'var(--brand-purple)',
-                        'brand-purple-light': 'var(--brand-purple-light)',
-                        'brand-dark': 'var(--brand-dark)',
-                        'brand-light': 'var(--brand-light)',
-                        'text-primary': 'var(--text-primary)',
-                        'text-secondary': 'var(--text-secondary)',
-                        'border-color': 'var(--border-color)',
-                    }
-                }
-            }
+        /* Custom Scrollbar for nicer UI */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            @apply bg-gray-100;
+        }
+        ::-webkit-scrollbar-thumb {
+            @apply bg-gray-300 rounded hover:bg-gray-400;
         }
     </style>
 </head>
 <body class="bg-brand-light">
 
     <!-- Header -->
-    <header class="bg-white/80 backdrop-blur-lg border-b border-border-color sticky top-0 z-50">
+    <header class="bg-white/90 backdrop-blur-lg border-b border-border-color sticky top-0 z-50 transition-all duration-300">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="/index.html" class="flex items-center space-x-2">
-                <span class="text-2xl font-bold text-brand-purple-dark">SEIU 503</span>
+            <a href="/index.html" class="flex items-center space-x-2 group">
+                <span class="text-2xl font-bold text-brand-purple-dark group-hover:text-brand-purple transition-colors">SEIU 503</span>
                 <span class="text-lg text-text-secondary hidden md:block">| Oregon State University</span>
             </a>
-            <div class="hidden lg:flex space-x-8">
-                <a href="/about.html" class="text-text-secondary hover:text-brand-purple transition-colors">About</a>
+            <div class="hidden lg:flex space-x-8 font-medium">
+                <a href="/about.html" class="text-text-secondary hover:text-brand-purple transition-colors relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-brand-purple after:transition-all hover:after:w-full">About</a>
                 <a href="/events.html" class="text-brand-purple font-bold">Events</a>
-                <a href="/news.html" class="text-text-secondary hover:text-brand-purple transition-colors">News</a>
-                <a href="/resources.html" class="text-text-secondary hover:text-brand-purple transition-colors">Resources & Rights</a>
-                <a href="/leadership.html" class="text-text-secondary hover:text-brand-purple transition-colors">Leadership</a>
-                <a href="/contact.html" class="text-text-secondary hover:text-brand-purple transition-colors">Contact</a>
+                <a href="/news.html" class="text-text-secondary hover:text-brand-purple transition-colors relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-brand-purple after:transition-all hover:after:w-full">News</a>
+                <a href="/resources.html" class="text-text-secondary hover:text-brand-purple transition-colors relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-brand-purple after:transition-all hover:after:w-full">Resources & Rights</a>
+                <a href="/leadership.html" class="text-text-secondary hover:text-brand-purple transition-colors relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-brand-purple after:transition-all hover:after:w-full">Leadership</a>
+                <a href="/contact.html" class="text-text-secondary hover:text-brand-purple transition-colors relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-brand-purple after:transition-all hover:after:w-full">Contact</a>
             </div>
             <div class="lg:hidden">
-                <button id="mobile-menu-button" class="text-text-secondary hover:text-brand-purple focus:outline-none" aria-label="Open menu">
+                <button id="mobile-menu-button" class="text-text-secondary hover:text-brand-purple focus:outline-none p-2 rounded-md hover:bg-gray-100" aria-label="Open menu">
                     <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
                 </button>
             </div>
         </nav>
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden lg:hidden absolute top-full left-0 w-full bg-white border-t border-border-color shadow-lg">
-            <a href="/about.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">About</a>
-            <a href="/events.html" class="block text-center py-3 px-6 text-lg text-brand-purple bg-brand-purple-light font-semibold">Events</a>
-            <a href="/news.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">News</a>
-            <a href="/resources.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Resources & Rights</a>
-            <a href="/leadership.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Leadership</a>
-            <a href="/contact.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Contact</a>
+            <a href="/about.html" class="block text-center py-4 px-6 text-lg text-text-secondary hover:bg-gray-50 hover:text-brand-purple border-b border-gray-100">About</a>
+            <a href="/events.html" class="block text-center py-4 px-6 text-lg text-brand-purple bg-brand-purple-light/30 font-semibold border-b border-gray-100">Events</a>
+            <a href="/news.html" class="block text-center py-4 px-6 text-lg text-text-secondary hover:bg-gray-50 hover:text-brand-purple border-b border-gray-100">News</a>
+            <a href="/resources.html" class="block text-center py-4 px-6 text-lg text-text-secondary hover:bg-gray-50 hover:text-brand-purple border-b border-gray-100">Resources & Rights</a>
+            <a href="/leadership.html" class="block text-center py-4 px-6 text-lg text-text-secondary hover:bg-gray-50 hover:text-brand-purple border-b border-gray-100">Leadership</a>
+            <a href="/contact.html" class="block text-center py-4 px-6 text-lg text-text-secondary hover:bg-gray-50 hover:text-brand-purple">Contact</a>
         </div>
     </header>
 
-    <!-- Page Header -->
-    <section class="bg-brand-purple-light border-b border-border-color">
-        <div class="container mx-auto px-6 py-16 text-center">
-            <h1 class="text-5xl font-bold">Union Events</h1>
-            <p class="mt-4 text-lg text-text-secondary max-w-3xl mx-auto">Stay informed about upcoming meetings, trainings, and solidarity actions. Get involved and make your voice heard!</p>
+    <!-- Page Header with Gradient -->
+    <section class="relative bg-gradient-to-br from-brand-purple-dark to-violet-800 text-white overflow-hidden">
+        <div class="absolute inset-0 opacity-10" style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+        <div class="container mx-auto px-6 py-20 text-center relative z-10">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6 tracking-tight">Union Events</h1>
+            <p class="mt-4 text-xl text-purple-100 max-w-3xl mx-auto leading-relaxed">Stay informed about upcoming meetings, trainings, and solidarity actions. Get involved and make your voice heard!</p>
         </div>
+        <div class="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-brand-light to-transparent"></div>
     </section>
 
-    <main class="container mx-auto px-6 py-16">
+    <main class="container mx-auto px-6 py-12 -mt-10 relative z-20">
 
         <!-- Calendar and Upcoming Events Section -->
-        <div class="grid lg:grid-cols-3 lg:items-start gap-12 mb-24">
+        <div class="grid lg:grid-cols-3 lg:items-start gap-8 mb-24">
             <!-- Calendar -->
-            <div class="lg:col-span-1 bg-white p-6 rounded-xl border border-border-color lg:sticky top-28">
-                <div id="calendar-container">
-                    <!-- Calendar will be generated here by JavaScript -->
+            <div class="lg:col-span-1">
+                <div class="bg-white p-6 rounded-2xl border border-border-color shadow-lg lg:sticky top-32">
+                    <div id="calendar-container">
+                        <!-- Calendar will be generated here by JavaScript -->
+                        <div class="animate-pulse space-y-4">
+                            <div class="h-8 bg-gray-200 rounded w-1/2 mx-auto"></div>
+                            <div class="grid grid-cols-7 gap-2">
+                                <div class="h-8 bg-gray-200 rounded-full"></div>
+                                <div class="h-8 bg-gray-200 rounded-full"></div>
+                                <div class="h-8 bg-gray-200 rounded-full"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <!-- Main Events Column -->
-            <div class="lg:col-span-2">
+            <div class="lg:col-span-2 space-y-12">
                 <div id="events-list">
-                    <h2 class="text-4xl font-bold mb-8">Coming Up Soon</h2>
+                    <h2 class="text-3xl font-bold mb-8 text-brand-dark flex items-center">
+                        <span class="bg-brand-purple text-white rounded-full p-2 mr-3 shadow-md">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </span>
+                        Coming Up Soon
+                    </h2>
                     <div id="upcoming-events-container" class="space-y-6">
                          <!-- Events will be dynamically injected here -->
-                         <p class="text-center text-text-secondary">Loading events...</p>
                     </div>
                 </div>
                 
                 <!-- Later This Year Events Section -->
-                <section id="more-events" class="mt-24">
-                    <h2 class="text-4xl font-bold mb-8 pt-12 border-t border-border-color">Later This Year</h2>
-                    <div id="stacked-events-container" class="space-y-6">
+                <section id="more-events" class="pt-8 border-t border-dashed border-gray-300">
+                    <h2 class="text-3xl font-bold mb-8 text-brand-dark flex items-center">
+                        <span class="bg-brand-purple-light text-brand-purple rounded-full p-2 mr-3">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                        </span>
+                        Later This Year
+                    </h2>
+                    <div id="stacked-events-container" class="space-y-4">
                         <!-- Event cards will be injected here -->
                     </div>
                 </section>
@@ -200,8 +229,8 @@
         </div>
         
         <!-- Past Events Section -->
-        <section id="past-events">
-            <h2 class="text-4xl font-bold text-center mb-12">Archived Events</h2>
+        <section id="past-events" class="bg-white rounded-2xl p-8 border border-border-color shadow-sm">
+            <h2 class="text-3xl font-bold text-center mb-10">Archived Events</h2>
             <div id="past-events-container" class="max-w-4xl mx-auto space-y-4">
                 <!-- Past events will be dynamically injected here -->
             </div>
@@ -209,68 +238,66 @@
 
     </main>
 
-        <footer class="bg-brand-dark text-white pt-12 pb-8">
+        <footer class="bg-brand-dark text-white pt-16 pb-8">
         <div class="container mx-auto px-6">
-            <div class="mt-10 pt-8 border-t border-gray-700 text-center">
-            </div>
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
                 <!-- Column 1: About the Union -->
                 <div class="md:col-span-2 lg:col-span-1">
-                    <div class="flex items-center mb-4">
+                    <div class="flex items-center mb-6">
                         <img src="/images/logo.png" alt="SEIU 503 Logo" class="h-12 w-12 mr-3 bg-white p-1 rounded">
                         <div>
-                            <h3 class="text-xl font-bold">SEIU Local 503</h3>
+                            <h3 class="text-xl font-bold font-serif">SEIU Local 503</h3>
                             <p class="text-gray-400 text-sm">Oregon State University</p>
                         </div>
                     </div>
-                    <p class="text-black leading-relaxed">Representing the classified employees of Oregon State University. We fight for fair contracts, defend workplace rights, and build a united community.</p>
+                    <p class="text-gray-300 leading-relaxed mb-6">Representing the classified employees of Oregon State University. We fight for fair contracts, defend workplace rights, and build a united community.</p>
                 </div>
     
                 <!-- Column 2: Quick Links -->
                 <div>
-                    <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase">Quick Links</h4>
+                    <h4 class="text-lg font-bold mb-6 tracking-wider uppercase text-brand-purple-light">Quick Links</h4>
                     <ul class="space-y-3">
-                        <li><a href="/about.html" class="text-black hover:text-gray-500 transition-colors">About Us</a></li>
-                        <li><a href="/events.html" class="text-black hover:text-gray-500 transition-colors">Events</a></li>
-                        <li><a href="/news.html" class="text-black hover:text-gray-500 transition-colors">News</a></li>
-                        <li><a href="/leadership.html" class="text-black hover:text-gray-500 transition-colors">Leadership</a></li>
+                        <li><a href="/about.html" class="text-gray-300 hover:text-white hover:translate-x-1 transition-all inline-block">About Us</a></li>
+                        <li><a href="/events.html" class="text-gray-300 hover:text-white hover:translate-x-1 transition-all inline-block">Events</a></li>
+                        <li><a href="/news.html" class="text-gray-300 hover:text-white hover:translate-x-1 transition-all inline-block">News</a></li>
+                        <li><a href="/leadership.html" class="text-gray-300 hover:text-white hover:translate-x-1 transition-all inline-block">Leadership</a></li>
                     </ul>
                 </div>
     
                 <!-- Column 3: Resources -->
                 <div>
-                    <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase"><a href="/resources.html" class="hover:text-gray-500 transition-colors">Resources</a></h4>
+                    <h4 class="text-lg font-bold mb-6 tracking-wider uppercase text-brand-purple-light"><a href="/resources.html" class="hover:text-white transition-colors">Resources</a></h4>
                     <ul class="space-y-3">
-                        <li><a href="/resources.html" class="text-black hover:text-gray-500 transition-colors">Resources & Rights</a></li>
-                        <li><a href="/resources/seiu_cba_2022-2026.pdf" class="text-black hover:text-gray-500 transition-colors">Our Contract (PDF)</a></li>
-                        <li><a href="/resources/stewards.html" class="text-black hover:text-gray-500 transition-colors">Find a Steward</a></li>
-                        <li><a href="/resources/weingarten-rights.html" class="text-black hover:text-gray-500 transition-colors">Weingarten Rights</a></li>
+                        <li><a href="/resources.html" class="text-gray-300 hover:text-white hover:translate-x-1 transition-all inline-block">Resources & Rights</a></li>
+                        <li><a href="/resources/seiu_cba_2022-2026.pdf" class="text-gray-300 hover:text-white hover:translate-x-1 transition-all inline-block">Our Contract (PDF)</a></li>
+                        <li><a href="/resources/stewards.html" class="text-gray-300 hover:text-white hover:translate-x-1 transition-all inline-block">Find a Steward</a></li>
+                        <li><a href="/resources/weingarten-rights.html" class="text-gray-300 hover:text-white hover:translate-x-1 transition-all inline-block">Weingarten Rights</a></li>
                     </ul>
                 </div>
     
                 <!-- Column 4: Contact -->
                 <div>
-                    <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase"><a href="/contact.html" class="hover:text-gray-500 transition-colors">Contact Us</a></h4>
-                     <ul class="space-y-3 text-black">
-                        <li class="flex items-start">
-                            <span class="mr-2 mt-1">✉️</span> <!-- Mail icon -->
-                            <a href="mailto:083execteam@seiu503.org" class="hover:text-gray-500 transition-colors">083execteam@seiu503.org</a>
+                    <h4 class="text-lg font-bold mb-6 tracking-wider uppercase text-brand-purple-light"><a href="/contact.html" class="hover:text-white transition-colors">Contact Us</a></h4>
+                     <ul class="space-y-4 text-gray-300">
+                        <li class="flex items-start group">
+                            <span class="mr-3 mt-1 text-xl group-hover:scale-110 transition-transform">✉️</span>
+                            <a href="mailto:083execteam@seiu503.org" class="hover:text-white transition-colors">083execteam@seiu503.org</a>
                         </li>
-                        <li class="flex items-start">
-                            <span class="mr-2 mt-1">✉️</span> <!-- Mail icon -->
-                            <a href="mailto:083stewards@seiu503.org" class="hover:text-gray-500 transition-colors">083stewards@seiu503.org</a>
+                        <li class="flex items-start group">
+                            <span class="mr-3 mt-1 text-xl group-hover:scale-110 transition-transform">✉️</span>
+                            <a href="mailto:083stewards@seiu503.org" class="hover:text-white transition-colors">083stewards@seiu503.org</a>
                         </li>
-                        <li class="flex items-start">
-                            <span class="mr-2 mt-1">&#128205;</span> <!-- Pin icon -->
-                            <a href="https://maps.app.goo.gl/9TWRZ9F4wjVjacsZ7" class="hover:text-gray-500 transition-colors">Adams Hall, Room 109<br>Corvallis, OR 97331</a>
+                        <li class="flex items-start group">
+                            <span class="mr-3 mt-1 text-xl group-hover:scale-110 transition-transform">📍</span>
+                            <a href="https://maps.app.goo.gl/9TWRZ9F4wjVjacsZ7" class="hover:text-white transition-colors">Adams Hall, Room 109<br>Corvallis, OR 97331</a>
                         </li>
                     </ul>
                 </div>
             </div>
     
             <!-- Bottom Bar -->
-            <div class="mt-10 pt-8 border-t border-gray-700 text-center">
-                <p class="text-gray-400 text-sm">&copy; 2025 SEIU Local 503, Oregon State University. All rights reserved.</p>
+            <div class="mt-12 pt-8 border-t border-gray-700 text-center">
+                <p class="text-gray-400 text-sm">© 2025 SEIU Local 503, Oregon State University. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -294,7 +321,11 @@
                     processAndRenderEvents(allEvents);
                 } catch (error) {
                     console.error('Error fetching or processing events:', error);
-                    if(upcomingEventsContainer) upcomingEventsContainer.innerHTML = '<p class="text-center text-red-500 col-span-full">Could not load events. Please try again later.</p>';
+                    if(upcomingEventsContainer) upcomingEventsContainer.innerHTML = `
+                        <div class="text-center py-8 bg-white rounded-xl border border-red-200">
+                            <p class="text-red-500 font-semibold mb-2">Could not load events.</p>
+                            <p class="text-text-secondary text-sm">Please try again later.</p>
+                        </div>`;
                 }
             }
             
@@ -305,23 +336,26 @@
                 const thirtyDaysFromNow = new Date(today);
                 thirtyDaysFromNow.setDate(today.getDate() + 30);
 
+                // Helper to normalize date strings
+                const getEventDate = (event) => new Date(event.date.replace(/-/g, '\/'));
+
                 const allUpcomingEvents = allEvents
-                    .filter(event => new Date(event.date.replace(/-/g, '\/')) >= today)
-                    .sort((a, b) => new Date(a.date) - new Date(b.date));
+                    .filter(event => getEventDate(event) >= today)
+                    .sort((a, b) => getEventDate(a) - getEventDate(b));
 
                 const displayNowEvents = allUpcomingEvents.filter(event => {
-                    const eventDate = new Date(event.date.replace(/-/g, '\/'));
+                    const eventDate = getEventDate(event);
                     return event.featured || eventDate <= thirtyDaysFromNow;
                 });
 
                 const stackedFutureEvents = allUpcomingEvents.filter(event => {
-                    const eventDate = new Date(event.date.replace(/-/g, '\/'));
+                    const eventDate = getEventDate(event);
                     return !event.featured && eventDate > thirtyDaysFromNow;
                 });
 
                 const pastEvents = allEvents
-                    .filter(event => new Date(event.date.replace(/-/g, '\/')) < today)
-                    .sort((a, b) => new Date(b.date) - new Date(a.date));
+                    .filter(event => getEventDate(event) < today)
+                    .sort((a, b) => getEventDate(b) - getEventDate(a));
 
                 renderUpcomingEvents(displayNowEvents);
                 renderStackedEvents(stackedFutureEvents);
@@ -335,7 +369,11 @@
             function renderUpcomingEvents(events) {
                 if (!upcomingEventsContainer) return;
                 if (events.length === 0) {
-                    upcomingEventsContainer.innerHTML = '<p class="text-text-secondary">No events scheduled in the next 30 days. Please check back soon!</p>';
+                    upcomingEventsContainer.innerHTML = `
+                        <div class="text-center py-12 bg-white rounded-xl border border-dashed border-gray-300">
+                             <p class="text-text-secondary font-medium">No events scheduled in the next 30 days.</p>
+                             <p class="text-sm text-gray-500 mt-2">Check the "Later This Year" section or the calendar.</p>
+                        </div>`;
                     return;
                 }
 
@@ -343,32 +381,44 @@
                     const eventDate = new Date(event.date.replace(/-/g, '\/'));
                     const month = eventDate.toLocaleString('en-US', { month: 'short' }).toUpperCase();
                     const day = eventDate.getDate().toString().padStart(2, '0');
-                    const featuredClass = event.featured ? 'border-2 border-brand-purple shadow-lg' : 'border border-border-color';
+                    const featuredClass = event.featured ? 'ring-2 ring-brand-purple shadow-xl transform scale-[1.01]' : 'border border-border-color shadow-sm';
+                    const featuredBadge = event.featured ? '<div class="absolute top-0 right-0 bg-brand-purple text-white text-xs font-bold px-3 py-1 rounded-bl-lg rounded-tr-lg z-10">FEATURED</div>' : '';
+
+                    let detailsHtml = `<div class="mt-6 flex flex-wrap items-center gap-3">
+                        <a href="${event.url}" class="btn btn-primary !py-2 !px-5 text-sm">View Details</a>`;
                     
-                    let detailsHtml = `<div class="mt-4 flex items-center gap-4"><a href="${event.url}" class="font-semibold text-brand-purple hover:underline">View Details &rarr;</a>`;
                     if (event.calendar_link) {
-                        detailsHtml += `<a href="${event.calendar_link}" download class="btn btn-outline !py-2 !px-4 text-sm">Add to Calendar</a>`;
+                        detailsHtml += `<a href="${event.calendar_link}" download class="btn btn-outline !py-2 !px-5 text-sm flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                            Add to Calendar
+                        </a>`;
                     }
                     detailsHtml += '</div>';
 
-                    if (event.location_detail && event.time) {
-                        detailsHtml = `<p class="text-text-secondary mt-2">${event.time} | ${event.location_detail}</p>${detailsHtml}`;
-                    } else if (event.time) {
-                         detailsHtml = `<p class="text-text-secondary mt-2">${event.time}</p>${detailsHtml}`;
+                    let metaHtml = '';
+                    if (event.time) {
+                        metaHtml += `<div class="flex items-center text-text-secondary text-sm mb-1"><svg class="w-4 h-4 mr-2 opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>${event.time}</div>`;
+                    }
+                    if (event.location_detail) {
+                        metaHtml += `<div class="flex items-center text-text-secondary text-sm"><svg class="w-4 h-4 mr-2 opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>${event.location_detail}</div>`;
                     }
 
                     return `
-                        <div id="event-${event.date}" class="bg-white p-6 rounded-xl ${featuredClass} flex flex-col md:flex-row gap-6 items-start">
-                            <div class="flex-shrink-0 text-center w-full md:w-20">
-                                <p class="text-brand-purple font-bold text-lg">${month}</p>
-                                <p class="text-4xl font-bold text-brand-purple-dark">${day}</p>
+                        <div id="event-${event.date}" class="bg-white p-6 md:p-8 rounded-2xl ${featuredClass} flex flex-col md:flex-row gap-8 items-start relative overflow-hidden group hover:shadow-lg transition-all duration-300">
+                            ${featuredBadge}
+                            <div class="flex-shrink-0 text-center w-full md:w-24 bg-gray-50 rounded-xl p-4 border border-gray-100 group-hover:border-brand-purple-light transition-colors">
+                                <p class="text-brand-purple font-bold text-sm tracking-widest uppercase mb-1">${month}</p>
+                                <p class="text-4xl md:text-5xl font-bold text-brand-dark leading-none">${day}</p>
                             </div>
                             <div class="flex-grow w-full">
-                                <div class="flex flex-col sm:flex-row justify-between items-start mb-2">
-                                    <h3 class="text-2xl font-bold mb-2 sm:mb-0">${event.title}</h3>
-                                    <div class="bg-brand-purple-light text-brand-purple-dark font-bold rounded-full px-3 py-1 text-sm whitespace-nowrap self-start">${event.type}</div>
+                                <div class="flex flex-col sm:flex-row justify-between items-start mb-3 gap-2">
+                                    <h3 class="text-2xl font-bold text-brand-dark group-hover:text-brand-purple transition-colors font-serif"><a href="${event.url}">${event.title}</a></h3>
+                                    <div class="bg-purple-100 text-brand-purple-dark font-bold rounded-full px-3 py-1 text-xs uppercase tracking-wider whitespace-nowrap self-start sm:self-center">${event.type}</div>
                                 </div>
-                                <p class="text-text-secondary">${event.description}</p>
+                                <div class="mb-4 space-y-1">
+                                    ${metaHtml}
+                                </div>
+                                <p class="text-text-secondary leading-relaxed">${event.description}</p>
                                 ${detailsHtml}
                             </div>
                         </div>
@@ -389,23 +439,23 @@
 
                 stackedEventsContainer.innerHTML = events.map(event => {
                     const eventDate = new Date(event.date.replace(/-/g, '\/'));
-                    const formattedDate = eventDate.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
-
-                    let calendarButton = '';
-                    if (event.calendar_link) {
-                        calendarButton = `<a href="${event.calendar_link}" download class="btn btn-outline !py-2 !px-4 text-sm">Add to Calendar</a>`;
-                    }
+                    const formattedDate = eventDate.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
 
                     return `
-                        <div id="event-${event.date}" class="bg-white p-6 rounded-xl border border-border-color shadow-md transition-shadow duration-300 hover:shadow-xl focus-within:shadow-xl">
+                        <div id="event-${event.date}" class="bg-white p-5 rounded-xl border border-border-color shadow-sm transition-all duration-200 hover:shadow-md hover:border-brand-purple-light hover:bg-gray-50">
                             <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
-                                <div class="text-center sm:text-left">
-                                     <h3 class="text-2xl font-bold text-brand-purple-dark">${event.title}</h3>
-                                     <p class="font-semibold text-text-secondary">${formattedDate}</p>
+                                <div class="flex items-center gap-4 w-full sm:w-auto">
+                                    <div class="bg-white border border-gray-200 rounded-lg p-2 text-center w-16 h-16 flex flex-col justify-center flex-shrink-0">
+                                        <span class="text-xs font-bold text-brand-purple uppercase">${eventDate.toLocaleString('en-US', { month: 'short' })}</span>
+                                        <span class="text-xl font-bold text-brand-dark">${eventDate.getDate()}</span>
+                                    </div>
+                                    <div>
+                                         <h3 class="text-lg font-bold text-brand-dark hover:text-brand-purple transition-colors"><a href="${event.url}">${event.title}</a></h3>
+                                         <p class="text-sm text-text-secondary">${event.type} • ${event.time || 'Time TBD'}</p>
+                                    </div>
                                 </div>
-                                <div class="flex items-center gap-4">
-                                    <a href="${event.url}" class="btn btn-outline">View Details &rarr;</a>
-                                    ${calendarButton}
+                                <div class="flex items-center gap-3 w-full sm:w-auto justify-end">
+                                    <a href="${event.url}" class="text-brand-purple font-semibold text-sm hover:underline whitespace-nowrap">Details &rarr;</a>
                                 </div>
                             </div>
                         </div>
@@ -431,22 +481,26 @@
 
                 pastEventsContainer.innerHTML = Object.entries(groupedByMonth).map(([monthYear, monthEvents]) => {
                     const eventListItems = monthEvents.map(event => `
-                        <li class="py-2">
-                            <strong>${new Date(event.date.replace(/-/g, '\/')).getDate()}:</strong> ${event.title}
-                            ${event.url !== '#' ? `<a href="${event.url}" class="font-semibold text-brand-purple hover:underline ml-2">View Details</a>` : ''}
+                        <li class="py-3 flex items-start gap-3">
+                            <span class="font-mono text-gray-400 text-sm whitespace-nowrap w-8 text-right pt-0.5">${new Date(event.date.replace(/-/g, '\/')).getDate()}</span>
+                            <div>
+                                <span class="font-medium text-brand-dark">${event.title}</span>
+                                ${event.url !== '#' ? `<a href="${event.url}" class="text-xs text-brand-purple hover:underline ml-2">View</a>` : ''}
+                            </div>
                         </li>
                     `).join('');
 
                     return `
-                        <details class="bg-white rounded-xl border border-border-color group transition-shadow duration-300 open:shadow-md">
-                            <summary class="font-semibold text-lg cursor-pointer flex justify-between items-center p-6 transition-colors group-hover:bg-gray-50">
-                                <span>${monthYear}</span>
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-brand-purple transform group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-                                </svg>
+                        <details class="bg-white rounded-xl border border-border-color group transition-all duration-300 open:shadow-md mb-2">
+                            <summary class="font-semibold text-lg cursor-pointer flex justify-between items-center p-5 transition-colors group-hover:bg-gray-50 list-none select-none">
+                                <span class="flex items-center gap-2">
+                                    <svg class="w-5 h-5 text-gray-400 group-open:rotate-90 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                                    ${monthYear}
+                                </span>
+                                <span class="text-xs font-normal text-gray-500 bg-gray-100 px-2 py-1 rounded-full">${monthEvents.length} events</span>
                             </summary>
-                            <div class="p-6 pt-0 text-text-secondary border-t border-border-color">
-                                <ul class="divide-y divide-border-color">
+                            <div class="p-5 pt-0 pl-12 text-text-secondary border-t border-transparent group-open:border-gray-100">
+                                <ul class="divide-y divide-gray-100">
                                     ${eventListItems}
                                 </ul>
                             </div>
@@ -480,33 +534,40 @@
 
                 let html = `
                     <div class="text-center">
-                        <div class="flex justify-between items-center mb-4">
-                            <button id="prev-month" aria-label="Previous month" class="p-2 rounded-full hover:bg-gray-100">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                        <div class="flex justify-between items-center mb-6">
+                            <button id="prev-month" aria-label="Previous month" class="p-2 rounded-full hover:bg-gray-100 text-brand-purple transition-colors">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
                             </button>
-                            <h3 class="text-2xl font-bold">${monthName} ${year}</h3>
-                            <button id="next-month" aria-label="Next month" class="p-2 rounded-full hover:bg-gray-100">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                            <h3 class="text-xl font-bold font-serif text-brand-dark">${monthName} ${year}</h3>
+                            <button id="next-month" aria-label="Next month" class="p-2 rounded-full hover:bg-gray-100 text-brand-purple transition-colors">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
                             </button>
                         </div>
-                        <div class="grid grid-cols-7 gap-2 text-center text-sm text-text-secondary font-semibold">
+                        <div class="grid grid-cols-7 gap-1 text-center text-xs text-text-secondary font-bold uppercase tracking-wider mb-2">
                             <div>S</div><div>M</div><div>T</div><div>W</div><div>T</div><div>F</div><div>S</div>
                         </div>
-                        <div class="grid grid-cols-7 gap-2 mt-2">`;
+                        <div class="grid grid-cols-7 gap-1">`;
                 
                 for (let i = 0; i < startingDay; i++) html += `<div></div>`;
 
                 for (let i = 1; i <= daysInMonth; i++) {
-                    let dayClasses = 'calendar-day w-9 h-9 flex items-center justify-center rounded-full';
+                    let dayClasses = 'calendar-day w-full aspect-square flex items-center justify-center rounded-lg text-sm transition-all duration-200 border border-transparent';
                     let dayAttributes = '';
-                    if (i === today.getDate() && month === today.getMonth() && year === today.getFullYear()) {
-                        dayClasses += ' is-today';
-                    } 
-                    if (eventsForCalendar[month] && eventsForCalendar[month].includes(i)) {
-                         dayClasses += ' has-event cursor-pointer hover:bg-violet-200 transition-colors';
+
+                    const isToday = (i === today.getDate() && month === today.getMonth() && year === today.getFullYear());
+                    const hasEvent = (eventsForCalendar[month] && eventsForCalendar[month].includes(i));
+
+                    if (isToday) {
+                        dayClasses += ' is-today font-bold';
+                        dayAttributes += ' title="Today"';
+                    } else if (hasEvent) {
+                         dayClasses += ' has-event cursor-pointer hover:scale-110 hover:shadow-sm';
                          const dateStr = `${year}-${String(month + 1).padStart(2, '0')}-${String(i).padStart(2, '0')}`;
                          dayAttributes = `data-date="${dateStr}" role="button" tabindex="0" aria-label="View events for ${monthName} ${i}"`;
+                    } else {
+                        dayClasses += ' hover:bg-gray-50 text-gray-500';
                     }
+
                     html += `<div class="${dayClasses}" ${dayAttributes}>${i}</div>`;
                 }
 
@@ -537,7 +598,10 @@
                     targetEvent.classList.add('highlight-event');
                     setTimeout(() => {
                         targetEvent.classList.remove('highlight-event');
-                    }, 2500);
+                    }, 3000); // Highlight longer
+                } else {
+                    // Feedback if event is not in the list (e.g. might be past event not shown in main list)
+                     // You could add a toast notification here
                 }
             }
 
