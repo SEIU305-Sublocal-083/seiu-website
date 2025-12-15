@@ -34,48 +34,58 @@
     <title>SEIU Local 503 - Oregon State University</title>
     <link rel="icon" href="/images/logo.png" type="image/png">
     <link rel="apple-touch-icon" href="/images/logo.png">
+
+    <!-- 1. LOAD TAILWIND LIBRARY FIRST -->
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- 2. DEFINE CONFIG NEXT (Must happen before styles attempt to use these colors) -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-purple-dark': '#4C1D95', /* Deep Purple */
+                        'brand-purple': '#7C3AED',      /* Vibrant Purple */
+                        'brand-purple-light': '#EDE9FE', /* Lighter Lavender */
+                        'brand-dark': '#111827',         /* Near-black */
+                        'brand-light': '#F9FAFB',        /* Off-white Background */
+                        'text-primary': '#1F2937',
+                        'text-secondary': '#374151',
+                        'border-color': '#D1D5DB',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Lora', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- 3. LOAD FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Lora:wght@400;500;700&display=swap" rel="stylesheet">
-    <style type="text/tailwindcss">
-        /*
-         * V9 Style Revision:
-         * - Redesigned "About Us" with a dynamic "What We Do" section.
-         * - Reverted "News & Updates" to a more traditional grid layout.
-         * - Placed "Get Involved" and "FAQ" side-by-side on desktop.
-         */
-        :root {
-            --brand-purple-dark: #4C1D95; /* Deep Purple */
-            --brand-purple: #7C3AED;      /* Vibrant Purple */
-            --brand-purple-light: #EDE9FE; /* Lighter Lavender for high contrast */
-            --brand-dark: #111827;         /* Near-black for high contrast text/bg */
-            --brand-light: #F9FAFB;        /* Off-white Background */
-            --text-primary: #1F2937;
-            --text-secondary: #374151;     /* Darker secondary text for better contrast */
-            --border-color: #D1D5DB;
-        }
 
+    <!-- 4. DEFINE CUSTOM STYLES (Now able to access the config above) -->
+    <style type="text/tailwindcss">
         html {
             scroll-padding-top: 80px; /* Offset for sticky header */
         }
 
         body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--brand-light);
-            color: var(--text-primary);
+            @apply font-sans bg-brand-light text-text-primary;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
         }
 
         h1, h2, h3, h4, h5, h6 {
-            font-family: 'Lora', serif;
-            color: var(--brand-purple-dark);
+            @apply font-serif text-brand-purple-dark;
         }
 
-        /* Accessibility: Clear focus indicators for all interactive elements */
+        /* Accessibility: Clear focus indicators */
         a:focus-visible, button:focus-visible, details:focus-visible, input:focus-visible, textarea:focus-visible {
-            outline: 3px solid var(--brand-purple);
+            outline: 3px solid #7C3AED;
             outline-offset: 2px;
             border-radius: 4px;
         }
@@ -93,25 +103,6 @@
              @apply bg-white text-brand-purple border-2 border-brand-purple hover:bg-brand-purple hover:text-white;
         }
     </style>
-    <script>
-        /* Custom Tailwind config for our CSS variables */
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'brand-purple-dark': 'var(--brand-purple-dark)',
-                        'brand-purple': 'var(--brand-purple)',
-                        'brand-purple-light': 'var(--brand-purple-light)',
-                        'brand-dark': 'var(--brand-dark)',
-                        'brand-light': 'var(--brand-light)',
-                        'text-primary': 'var(--text-primary)',
-                        'text-secondary': 'var(--text-secondary)',
-                        'border-color': 'var(--border-color)',
-                    }
-                }
-            }
-        }
-    </script>
 </head>
 <body class="bg-brand-light">
 
@@ -146,7 +137,7 @@
     </header>
 
     <main class="container mx-auto px-6 py-16">
-        <!-- Moved Hero Section Inside Main for better landmarks structure -->
+        <!-- Hero Section -->
         <section class="bg-white mb-24 rounded-xl p-8 md:p-12 border border-border-color shadow-sm">
             <div class="flex flex-col md:flex-row items-center">
                 <div class="md:w-3/5 text-center md:text-left">
@@ -155,7 +146,8 @@
                     <a href="#involved" class="mt-8 inline-block btn btn-primary">Join Us Today</a>
                 </div>
                 <div class="md:w-2/5 mt-12 md:mt-0 flex justify-center">
-                     <img src="/images/8672a150-f638-4ad4-ba19-72ab754f74b8-homepage.webp" alt="SEIU 503 Union Logo" class="rounded-full shadow-2xl">
+                     <!-- Added onerror fallback for safety -->
+                     <img src="/images/8672a150-f638-4ad4-ba19-72ab754f74b8-homepage.webp" onerror="this.src='https://placehold.co/400x400/7C3AED/white?text=SEIU+503'" alt="SEIU 503 Union Logo" class="rounded-full shadow-2xl">
                 </div>
             </div>
         </section>
@@ -309,46 +301,46 @@
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div class="md:col-span-2 lg:col-span-1">
                     <div class="flex items-center mb-4">
-                        <img src="/images/logo.png" alt="SEIU 503 Logo" class="h-12 w-12 mr-3 bg-white p-1 rounded">
+                        <img src="/images/logo.png" onerror="this.src='https://placehold.co/48x48/7C3AED/white?text=SEIU'" alt="SEIU 503 Logo" class="h-12 w-12 mr-3 bg-white p-1 rounded">
                         <div>
                             <h3 class="text-xl font-bold">SEIU Local 503</h3>
                             <p class="text-gray-300 text-sm">Oregon State University</p>
                         </div>
                     </div>
-                    <p class="text-black leading-relaxed">Representing the classified employees of Oregon State University. We fight for fair contracts, defend workplace rights, and build a united community.</p>
+                    <p class="text-black leading-relaxed" style="color:#d1d5db;">Representing the classified employees of Oregon State University. We fight for fair contracts, defend workplace rights, and build a united community.</p>
                 </div>
     
                 <div>
                     <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase">Quick Links</h4>
                     <ul class="space-y-3">
-                        <li><a href="/about.html" class="text-black hover:text-gray-500 transition-colors">About Us</a></li>
-                        <li><a href="/events.html" class="text-black hover:text-gray-500 transition-colors">Events</a></li>
-                        <li><a href="/news.html" class="text-black hover:text-gray-500 transition-colors">News</a></li>
-                        <li><a href="/leadership.html" class="text-black hover:text-gray-500 transition-colors">Leadership</a></li>
+                        <li><a href="/about.html" class="text-gray-300 hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="/events.html" class="text-gray-300 hover:text-white transition-colors">Events</a></li>
+                        <li><a href="/news.html" class="text-gray-300 hover:text-white transition-colors">News</a></li>
+                        <li><a href="/leadership.html" class="text-gray-300 hover:text-white transition-colors">Leadership</a></li>
                     </ul>
                 </div>
     
                 <div>
-                    <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase"><a href="/resources.html" class="hover:text-gray-500 transition-colors">Resources</a></h4>
+                    <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase"><a href="/resources.html" class="hover:text-white transition-colors">Resources</a></h4>
                     <ul class="space-y-3">
-                        <li><a href="/resources.html" class="text-black hover:text-gray-500 transition-colors">Resources & Rights</a></li>
-                        <li><a href="/resources/seiu_cba_2022-2026.pdf" class="text-black hover:text-gray-500 transition-colors">Our Contract (PDF)</a></li>
-                        <li><a href="/resources/stewards.html" class="text-black hover:text-gray-500 transition-colors">Find a Steward</a></li>
-                        <li><a href="/resources/weingarten-rights.html" class="text-black hover:text-gray-500 transition-colors">Weingarten Rights</a></li>
+                        <li><a href="/resources.html" class="text-gray-300 hover:text-white transition-colors">Resources & Rights</a></li>
+                        <li><a href="/resources/seiu_cba_2022-2026.pdf" class="text-gray-300 hover:text-white transition-colors">Our Contract (PDF)</a></li>
+                        <li><a href="/resources/stewards.html" class="text-gray-300 hover:text-white transition-colors">Find a Steward</a></li>
+                        <li><a href="/resources/weingarten-rights.html" class="text-gray-300 hover:text-white transition-colors">Weingarten Rights</a></li>
                     </ul>
                 </div>
     
                 <div>
-                    <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase"><a href="/contact.html" class="hover:text-gray-500 transition-colors">Contact Us</a></h4>
+                    <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase"><a href="/contact.html" class="hover:text-white transition-colors">Contact Us</a></h4>
                      <ul class="space-y-3 text-black">
                         <li class="flex items-start">
-                            <span class="mr-2 mt-1">✉️</span> <a href="mailto:083execteam@seiu503.org" class="hover:text-gray-500 transition-colors">083execteam@seiu503.org</a>
+                            <span class="mr-2 mt-1">✉️</span> <a href="mailto:083execteam@seiu503.org" class="text-gray-300 hover:text-white transition-colors">083execteam@seiu503.org</a>
                         </li>
                         <li class="flex items-start">
-                            <span class="mr-2 mt-1">✉️</span> <a href="mailto:083stewards@seiu503.org" class="hover:text-gray-500 transition-colors">083stewards@seiu503.org</a>
+                            <span class="mr-2 mt-1">✉️</span> <a href="mailto:083stewards@seiu503.org" class="text-gray-300 hover:text-white transition-colors">083stewards@seiu503.org</a>
                         </li>
                         <li class="flex items-start">
-                            <span class="mr-2 mt-1">📍</span> <a href="https://www.google.com/maps/search/?api=1&query=Oregon+State+University+Adams+Hall+Corvallis+OR" class="hover:text-gray-500 transition-colors">Adams Hall, Room 109<br>Corvallis, OR 97331</a>
+                            <span class="mr-2 mt-1">📍</span> <a href="https://www.google.com/maps/search/?api=1&query=Oregon+State+University+Adams+Hall+Corvallis+OR" class="text-gray-300 hover:text-white transition-colors">Adams Hall, Room 109<br>Corvallis, OR 97331</a>
                         </li>
                     </ul>
                 </div>
@@ -384,18 +376,20 @@
             const mobileMenu = document.getElementById('mobile-menu');
             const navLinks = document.querySelectorAll('#mobile-menu a');
 
-            mobileMenuButton.addEventListener('click', () => {
-                const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
-                mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
-                mobileMenu.classList.toggle('hidden');
-            });
-
-            navLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    mobileMenu.classList.add('hidden');
-                    mobileMenuButton.setAttribute('aria-expanded', 'false');
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', () => {
+                    const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+                    mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
+                    mobileMenu.classList.toggle('hidden');
                 });
-            });
+
+                navLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                        mobileMenuButton.setAttribute('aria-expanded', 'false');
+                    });
+                });
+            }
 
             // --- Bargaining Survey Modal Logic ---
             const surveyModal = document.getElementById('bargaining-survey-modal');
@@ -410,7 +404,7 @@
                 surveyModal.classList.remove('hidden');
                 setTimeout(() => {
                     modalContent.classList.remove('opacity-0', 'scale-95');
-                    doneButton.focus(); // Set initial focus
+                    if(doneButton) doneButton.focus(); // Set initial focus
                 }, 10);
             };
 
@@ -426,7 +420,7 @@
             };
 
             // Check sessionStorage to show the modal only once per session
-            if (!sessionStorage.getItem('bargainingSurveyModalShown')) {
+            if (surveyModal && !sessionStorage.getItem('bargainingSurveyModalShown')) {
                 setTimeout(openModal, 1500); // Show modal after 1.5 seconds
                 sessionStorage.setItem('bargainingSurveyModalShown', 'true');
             }
@@ -434,47 +428,56 @@
             // --- Event listeners to close the modal ---
             // Close with the 'X' button or the "Done" button.
             // The other buttons are links and will navigate away.
-            [closeButton, doneButton].forEach(btn => {
-                btn.addEventListener('click', closeModal);
-            });
+            if(closeButton) {
+                closeButton.addEventListener('click', closeModal);
+            }
+            if(doneButton) {
+                doneButton.addEventListener('click', closeModal);
+            }
 
             // Close by clicking the dark background overlay
-            surveyModal.addEventListener('click', (event) => {
-                if (event.target === surveyModal) {
-                    closeModal();
-                }
-            });
+            if(surveyModal) {
+                surveyModal.addEventListener('click', (event) => {
+                    if (event.target === surveyModal) {
+                        closeModal();
+                    }
+                });
 
-            // Focus Trap and Escape Key
-            surveyModal.addEventListener('keydown', (e) => {
-                if (e.key === 'Escape') {
-                    closeModal();
-                }
+                // Focus Trap and Escape Key
+                surveyModal.addEventListener('keydown', (e) => {
+                    if (e.key === 'Escape') {
+                        closeModal();
+                    }
 
-                if (e.key === 'Tab') {
-                    const focusableElements = modalContent.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
-                    const firstElement = focusableElements[0];
-                    const lastElement = focusableElements[focusableElements.length - 1];
+                    if (e.key === 'Tab') {
+                        const focusableElements = modalContent.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+                        const firstElement = focusableElements[0];
+                        const lastElement = focusableElements[focusableElements.length - 1];
 
-                    if (e.shiftKey) { // Shift + Tab
-                        if (document.activeElement === firstElement) {
-                            e.preventDefault();
-                            lastElement.focus();
-                        }
-                    } else { // Tab
-                        if (document.activeElement === lastElement) {
-                            e.preventDefault();
-                            firstElement.focus();
+                        if (e.shiftKey) { // Shift + Tab
+                            if (document.activeElement === firstElement) {
+                                e.preventDefault();
+                                lastElement.focus();
+                            }
+                        } else { // Tab
+                            if (document.activeElement === lastElement) {
+                                e.preventDefault();
+                                firstElement.focus();
+                            }
                         }
                     }
-                }
-            });
+                });
+            }
 
             // --- Load Upcoming Events ---
             const loadUpcomingEvents = async () => {
                 const eventsContainer = document.getElementById('upcoming-events-container');
+                if(!eventsContainer) return;
+                
                 try {
                     const response = await fetch('/events/events.json');
+                    if (!response.ok) throw new Error('Events file not found');
+                    
                     const events = await response.json();
                     const today = new Date();
                     today.setHours(0, 0, 0, 0);
@@ -524,16 +527,20 @@
                         eventsContainer.innerHTML = '<p class="text-center text-text-secondary col-span-full">No upcoming events at this time. Please check back soon!</p>';
                     }
                 } catch (error) {
-                    console.error('Error fetching events:', error);
-                    eventsContainer.innerHTML = '<p class="text-center text-red-500 col-span-full">Could not load events. Please try again later.</p>';
+                    // console.error('Error fetching events:', error); // Silent fail or log
+                    eventsContainer.innerHTML = '<p class="text-center text-text-secondary col-span-full">No upcoming events scheduled right now.</p>';
                 }
             };
 
             // --- Load News ---
             const loadNews = async () => {
                 const newsGridContainer = document.getElementById('news-grid-container');
+                if(!newsGridContainer) return;
+
                  try {
                     const response = await fetch('/news/news.json');
+                    if (!response.ok) throw new Error('News file not found');
+
                     const newsItems = await response.json();
 
                     const sortedNews = newsItems
@@ -572,8 +579,8 @@
                     }
 
                 } catch(error) {
-                    console.error('Error fetching news:', error);
-                    newsGridContainer.innerHTML = '<p class="text-center text-red-500 col-span-full">Could not load news. Please try again later.</p>';
+                    // console.error('Error fetching news:', error); // Silent fail or log
+                    newsGridContainer.innerHTML = '<p class="text-center text-text-secondary col-span-full">News updates coming soon.</p>';
                 }
             };
 
