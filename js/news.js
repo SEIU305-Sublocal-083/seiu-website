@@ -112,6 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function renderFeaturedArticle(article) {
+        const altText = article.alt || article.title;
         featuredArticleSection.innerHTML = `
             <div class="bg-white rounded-xl border border-border-color overflow-hidden">
                 <a href="${article.url}" class="block group">
@@ -123,7 +124,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             <span class="font-semibold text-brand-purple">Read More →</span>
                         </div>
                         <div class="hidden lg:block">
-                            <img src="${article.image}" alt="${article.title}" class="w-full h-full object-cover">
+                            <img src="${article.image}" alt="${altText}" class="w-full h-full object-cover">
                         </div>
                     </div>
                 </a>
@@ -172,10 +173,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const formattedDate = new Date(article.updatedAt + 'T00:00:00').toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
             const dateTooltip = `Created: ${article.createdAt}\nPublished: ${article.publishedAt}\nUpdated: ${article.updatedAt}`;
+            const altText = article.alt || article.title;
 
             articleCard.innerHTML = `
                 <a href="${article.url}" class="block group">
-                    <img src="${article.image}" alt="${article.title}" class="w-full h-48 object-cover">
+                    <img src="${article.image}" alt="${altText}" class="w-full h-48 object-cover">
                     <div class="p-6 flex-grow">
                         <div class="flex items-center justify-between mb-2">
                             <p class="text-text-secondary text-sm" title="${dateTooltip}">Last updated: ${formattedDate}</p>
