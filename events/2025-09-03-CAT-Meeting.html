@@ -61,34 +61,83 @@
 <body class="bg-brand-light">
 
     <!-- Header -->
-    <header class="bg-white/80 backdrop-blur-lg border-b border-border-color sticky top-0 z-50">
+            <header class="bg-white/90 backdrop-blur-lg border-b border-border-color sticky top-0 z-50 transition-all duration-300">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="/index.html" class="flex items-center space-x-2">
-                <span class="text-2xl font-bold text-brand-purple-dark">SEIU 503</span>
+            <a href="/index.html" class="flex items-center space-x-2 group">
+                <span class="text-2xl font-bold text-brand-purple-dark group-hover:text-brand-purple transition-colors">SEIU 503</span>
                 <span class="text-lg text-text-secondary hidden md:block">| Oregon State University</span>
             </a>
-            <div class="hidden lg:flex space-x-8">
-                <a href="/about.html" class="text-text-secondary hover:text-brand-purple transition-colors">About</a>
-                <a href="/events.html" class="text-brand-purple font-bold">Events</a>
-                <a href="/news.html" class="text-text-secondary hover:text-brand-purple transition-colors">News</a>
-                <a href="/resources.html" class="text-text-secondary hover:text-brand-purple transition-colors">Resources & Rights</a>
-                <a href="/leadership.html" class="text-text-secondary hover:text-brand-purple transition-colors">Leadership</a>
-                <a href="/contact.html" class="text-text-secondary hover:text-brand-purple transition-colors">Contact</a>
+            <div class="hidden lg:flex space-x-8 font-medium" id="desktop-nav">
+                <a href="/about.html" class="text-text-secondary hover:text-brand-purple transition-colors relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-brand-purple after:transition-all hover:after:w-full">About</a>
+                <a href="/events.html" class="text-text-secondary hover:text-brand-purple transition-colors relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-brand-purple after:transition-all hover:after:w-full">Events</a>
+                <a href="/news.html" class="text-text-secondary hover:text-brand-purple transition-colors relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-brand-purple after:transition-all hover:after:w-full">News</a>
+                <a href="/resources.html" class="text-text-secondary hover:text-brand-purple transition-colors relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-brand-purple after:transition-all hover:after:w-full">Resources & Rights</a>
+                <a href="/leadership.html" class="text-text-secondary hover:text-brand-purple transition-colors relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-brand-purple after:transition-all hover:after:w-full">Leadership</a>
+                <a href="/contact.html" class="text-text-secondary hover:text-brand-purple transition-colors relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-brand-purple after:transition-all hover:after:w-full">Contact</a>
             </div>
             <div class="lg:hidden">
-                <button id="mobile-menu-button" class="text-text-secondary hover:text-brand-purple focus:outline-none" aria-label="Open menu">
+                <button id="mobile-menu-button" class="text-text-secondary hover:text-brand-purple focus:outline-none p-2 rounded-md hover:bg-gray-100" aria-label="Open menu">
                     <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
                 </button>
             </div>
         </nav>
         <div id="mobile-menu" class="hidden lg:hidden absolute top-full left-0 w-full bg-white border-t border-border-color shadow-lg">
-            <a href="/about.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">About</a>
-            <a href="/events.html" class="block text-center py-3 px-6 text-lg text-brand-purple bg-brand-purple-light font-semibold">Events</a>
-            <a href="/news.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">News</a>
-            <a href="/resources.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Resources & Rights</a>
-            <a href="/leadership.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Leadership</a>
-            <a href="/contact.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Contact</a>
+            <a href="/about.html" class="block text-center py-4 px-6 text-lg text-text-secondary hover:bg-gray-50 hover:text-brand-purple border-b border-gray-100">About</a>
+            <a href="/events.html" class="block text-center py-4 px-6 text-lg text-text-secondary hover:bg-gray-50 hover:text-brand-purple border-b border-gray-100">Events</a>
+            <a href="/news.html" class="block text-center py-4 px-6 text-lg text-text-secondary hover:bg-gray-50 hover:text-brand-purple border-b border-gray-100">News</a>
+            <a href="/resources.html" class="block text-center py-4 px-6 text-lg text-text-secondary hover:bg-gray-50 hover:text-brand-purple border-b border-gray-100">Resources & Rights</a>
+            <a href="/leadership.html" class="block text-center py-4 px-6 text-lg text-text-secondary hover:bg-gray-50 hover:text-brand-purple border-b border-gray-100">Leadership</a>
+            <a href="/contact.html" class="block text-center py-4 px-6 text-lg text-text-secondary hover:bg-gray-50 hover:text-brand-purple">Contact</a>
         </div>
+
+        <script>
+            // --- Header Logic: Mobile Menu & Active State ---
+            document.addEventListener('DOMContentLoaded', () => {
+                const mobileMenuButton = document.getElementById('mobile-menu-button');
+                const mobileMenu = document.getElementById('mobile-menu');
+                const navLinks = document.querySelectorAll('#mobile-menu a');
+
+                // Mobile Menu Toggle
+                if (mobileMenuButton && mobileMenu) {
+                    mobileMenuButton.addEventListener('click', () => {
+                        const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+                        mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
+                        mobileMenu.classList.toggle('hidden');
+                    });
+
+                    navLinks.forEach(link => {
+                        link.addEventListener('click', () => {
+                            mobileMenu.classList.add('hidden');
+                            mobileMenuButton.setAttribute('aria-expanded', 'false');
+                        });
+                    });
+                }
+
+                // Active State Highlighting
+                const currentPath = window.location.pathname;
+                const filename = currentPath.split('/').pop() || 'index.html';
+
+                // Selector for both desktop and mobile links
+                const allNavLinks = document.querySelectorAll('#desktop-nav a, #mobile-menu a');
+
+                allNavLinks.forEach(link => {
+                    const href = link.getAttribute('href');
+                    // Simple check: if href matches filename (e.g. 'news.html')
+                    // Logic handles root '/' mapping to 'index.html' implicitly via filename check above
+                    if (href && (href === filename || href === '/' + filename || (filename === 'index.html' && (href === './' || href === '/')))) {
+
+                        // Apply Active Styles
+                        link.classList.add('text-brand-purple', 'font-bold');
+                        link.classList.remove('text-text-secondary');
+
+                        // Specific styling adjustments for Mobile vs Desktop if needed
+                        if (link.closest('#mobile-menu')) {
+                             link.classList.add('bg-brand-purple-light/30');
+                        }
+                    }
+                });
+            });
+        </script>
     </header>
 
     <!-- Event Header Section -->
@@ -156,7 +205,7 @@
     </main>
 
     <!-- Footer -->
-        <footer class="bg-brand-dark text-white pt-12 pb-8">
+                <footer class="bg-brand-dark text-white pt-12 pb-8">
         <div class="container mx-auto px-6">
             <div class="mt-10 pt-8 border-t border-gray-700 text-center">
             </div>
@@ -222,51 +271,6 @@
         </div>
     </footer>
 
-    <script>
-        // --- Mobile Menu Toggle ---
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const navLinks = document.querySelectorAll('#mobile-menu a');
 
-        mobileMenuButton.addEventListener('click', () => {
-            const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
-            mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-                mobileMenuButton.setAttribute('aria-expanded', 'false');
-            });
-        });
-
-        // --- Passcode Copy Functionality ---
-        const passcodeContainer = document.getElementById('passcode-container');
-        if (passcodeContainer) {
-            const passcodeTextElement = document.getElementById('passcode-text');
-            const originalPasscodeText = passcodeTextElement.innerHTML;
-            const passcode = '552512';
-
-            passcodeContainer.addEventListener('click', () => {
-                const tempTextArea = document.createElement('textarea');
-                tempTextArea.value = passcode;
-                document.body.appendChild(tempTextArea);
-                tempTextArea.select();
-                try {
-                    document.execCommand('copy');
-                    passcodeTextElement.textContent = 'Copied!';
-                } catch (err) {
-                    console.error('Fallback: Oops, unable to copy', err);
-                    passcodeTextElement.textContent = 'Copy failed';
-                }
-                document.body.removeChild(tempTextArea);
-
-                setTimeout(() => {
-                    passcodeTextElement.innerHTML = originalPasscodeText;
-                }, 2000);
-            });
-        }
-    </script>
 </body>
 </html>

@@ -137,15 +137,15 @@
 <body class="bg-brand-light">
 
     <!-- Header -->
-    <header class="bg-white/90 backdrop-blur-lg border-b border-border-color sticky top-0 z-50 transition-all duration-300">
+        <header class="bg-white/90 backdrop-blur-lg border-b border-border-color sticky top-0 z-50 transition-all duration-300">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="/index.html" class="flex items-center space-x-2 group">
                 <span class="text-2xl font-bold text-brand-purple-dark group-hover:text-brand-purple transition-colors">SEIU 503</span>
                 <span class="text-lg text-text-secondary hidden md:block">| Oregon State University</span>
             </a>
-            <div class="hidden lg:flex space-x-8 font-medium">
+            <div class="hidden lg:flex space-x-8 font-medium" id="desktop-nav">
                 <a href="/about.html" class="text-text-secondary hover:text-brand-purple transition-colors relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-brand-purple after:transition-all hover:after:w-full">About</a>
-                <a href="/events.html" class="text-brand-purple font-bold">Events</a>
+                <a href="/events.html" class="text-text-secondary hover:text-brand-purple transition-colors relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-brand-purple after:transition-all hover:after:w-full">Events</a>
                 <a href="/news.html" class="text-text-secondary hover:text-brand-purple transition-colors relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-brand-purple after:transition-all hover:after:w-full">News</a>
                 <a href="/resources.html" class="text-text-secondary hover:text-brand-purple transition-colors relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-brand-purple after:transition-all hover:after:w-full">Resources & Rights</a>
                 <a href="/leadership.html" class="text-text-secondary hover:text-brand-purple transition-colors relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-brand-purple after:transition-all hover:after:w-full">Leadership</a>
@@ -159,12 +159,61 @@
         </nav>
         <div id="mobile-menu" class="hidden lg:hidden absolute top-full left-0 w-full bg-white border-t border-border-color shadow-lg">
             <a href="/about.html" class="block text-center py-4 px-6 text-lg text-text-secondary hover:bg-gray-50 hover:text-brand-purple border-b border-gray-100">About</a>
-            <a href="/events.html" class="block text-center py-4 px-6 text-lg text-brand-purple bg-brand-purple-light/30 font-semibold border-b border-gray-100">Events</a>
+            <a href="/events.html" class="block text-center py-4 px-6 text-lg text-text-secondary hover:bg-gray-50 hover:text-brand-purple border-b border-gray-100">Events</a>
             <a href="/news.html" class="block text-center py-4 px-6 text-lg text-text-secondary hover:bg-gray-50 hover:text-brand-purple border-b border-gray-100">News</a>
             <a href="/resources.html" class="block text-center py-4 px-6 text-lg text-text-secondary hover:bg-gray-50 hover:text-brand-purple border-b border-gray-100">Resources & Rights</a>
             <a href="/leadership.html" class="block text-center py-4 px-6 text-lg text-text-secondary hover:bg-gray-50 hover:text-brand-purple border-b border-gray-100">Leadership</a>
             <a href="/contact.html" class="block text-center py-4 px-6 text-lg text-text-secondary hover:bg-gray-50 hover:text-brand-purple">Contact</a>
         </div>
+
+        <script>
+            // --- Header Logic: Mobile Menu & Active State ---
+            document.addEventListener('DOMContentLoaded', () => {
+                const mobileMenuButton = document.getElementById('mobile-menu-button');
+                const mobileMenu = document.getElementById('mobile-menu');
+                const navLinks = document.querySelectorAll('#mobile-menu a');
+
+                // Mobile Menu Toggle
+                if (mobileMenuButton && mobileMenu) {
+                    mobileMenuButton.addEventListener('click', () => {
+                        const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+                        mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
+                        mobileMenu.classList.toggle('hidden');
+                    });
+
+                    navLinks.forEach(link => {
+                        link.addEventListener('click', () => {
+                            mobileMenu.classList.add('hidden');
+                            mobileMenuButton.setAttribute('aria-expanded', 'false');
+                        });
+                    });
+                }
+
+                // Active State Highlighting
+                const currentPath = window.location.pathname;
+                const filename = currentPath.split('/').pop() || 'index.html';
+
+                // Selector for both desktop and mobile links
+                const allNavLinks = document.querySelectorAll('#desktop-nav a, #mobile-menu a');
+
+                allNavLinks.forEach(link => {
+                    const href = link.getAttribute('href');
+                    // Simple check: if href matches filename (e.g. 'news.html')
+                    // Logic handles root '/' mapping to 'index.html' implicitly via filename check above
+                    if (href && (href === filename || href === '/' + filename || (filename === 'index.html' && (href === './' || href === '/')))) {
+
+                        // Apply Active Styles
+                        link.classList.add('text-brand-purple', 'font-bold');
+                        link.classList.remove('text-text-secondary');
+
+                        // Specific styling adjustments for Mobile vs Desktop if needed
+                        if (link.closest('#mobile-menu')) {
+                             link.classList.add('bg-brand-purple-light/30');
+                        }
+                    }
+                });
+            });
+        </script>
     </header>
 
     <!-- Distinct Hero: Simpler, Pattern-based -->
@@ -220,7 +269,7 @@
             <section class="lg:col-span-8 xl:col-span-9 relative timeline-container-single">
                 <div class="timeline-line"></div>
 
-                <div id="timeline-events" class="space-y-8">
+                <div id="timeline-events" class="space-y-4">
                     <!-- Timeline items injected by JS -->
                 </div>
 
@@ -243,61 +292,68 @@
         </div>
     </main>
 
-    <footer class="bg-brand-dark text-white pt-16 pb-8 mt-12">
+        <footer class="bg-brand-dark text-white pt-12 pb-8">
         <div class="container mx-auto px-6">
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+            <div class="mt-10 pt-8 border-t border-gray-700 text-center">
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Column 1: About the Union -->
                 <div class="md:col-span-2 lg:col-span-1">
-                    <div class="flex items-center mb-6">
+                    <div class="flex items-center mb-4">
                         <img src="/images/logo.png" alt="SEIU 503 Logo" class="h-12 w-12 mr-3 bg-white p-1 rounded">
                         <div>
-                            <h3 class="text-xl font-bold font-serif">SEIU Local 503</h3>
+                            <h3 class="text-xl font-bold">SEIU Local 503</h3>
                             <p class="text-gray-400 text-sm">Oregon State University</p>
                         </div>
                     </div>
-                    <p class="text-gray-300 leading-relaxed mb-6">Representing the classified employees of Oregon State University. We fight for fair contracts, defend workplace rights, and build a united community.</p>
+                    <p class="text-black leading-relaxed">Representing the classified employees of Oregon State University. We fight for fair contracts, defend workplace rights, and build a united community.</p>
                 </div>
     
+                <!-- Column 2: Quick Links -->
                 <div>
-                    <h4 class="text-lg font-bold mb-6 tracking-wider uppercase text-brand-purple-light">Quick Links</h4>
+                    <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase">Quick Links</h4>
                     <ul class="space-y-3">
-                        <li><a href="/about.html" class="text-gray-300 hover:text-white hover:translate-x-1 transition-all inline-block">About Us</a></li>
-                        <li><a href="/events.html" class="text-gray-300 hover:text-white hover:translate-x-1 transition-all inline-block">Events</a></li>
-                        <li><a href="/news.html" class="text-gray-300 hover:text-white hover:translate-x-1 transition-all inline-block">News</a></li>
-                        <li><a href="/leadership.html" class="text-gray-300 hover:text-white hover:translate-x-1 transition-all inline-block">Leadership</a></li>
+                        <li><a href="/about.html" class="text-black hover:text-gray-500 transition-colors">About Us</a></li>
+                        <li><a href="/events.html" class="text-black hover:text-gray-500 transition-colors">Events</a></li>
+                        <li><a href="/news.html" class="text-black hover:text-gray-500 transition-colors">News</a></li>
+                        <li><a href="/leadership.html" class="text-black hover:text-gray-500 transition-colors">Leadership</a></li>
                     </ul>
                 </div>
     
+                <!-- Column 3: Resources -->
                 <div>
-                    <h4 class="text-lg font-bold mb-6 tracking-wider uppercase text-brand-purple-light"><a href="/resources.html" class="hover:text-white transition-colors">Resources</a></h4>
+                    <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase"><a href="/resources.html" class="hover:text-gray-500 transition-colors">Resources</a></h4>
                     <ul class="space-y-3">
-                        <li><a href="/resources.html" class="text-gray-300 hover:text-white hover:translate-x-1 transition-all inline-block">Resources & Rights</a></li>
-                        <li><a href="/resources/seiu_cba_2022-2026.pdf" class="text-gray-300 hover:text-white hover:translate-x-1 transition-all inline-block">Our Contract (PDF)</a></li>
-                        <li><a href="/resources/stewards.html" class="text-gray-300 hover:text-white hover:translate-x-1 transition-all inline-block">Find a Steward</a></li>
-                        <li><a href="/resources/weingarten-rights.html" class="text-gray-300 hover:text-white hover:translate-x-1 transition-all inline-block">Weingarten Rights</a></li>
+                        <li><a href="/resources.html" class="text-black hover:text-gray-500 transition-colors">Resources & Rights</a></li>
+                        <li><a href="/resources/seiu_cba_2022-2026.pdf" class="text-black hover:text-gray-500 transition-colors">Our Contract (PDF)</a></li>
+                        <li><a href="/resources/stewards.html" class="text-black hover:text-gray-500 transition-colors">Find a Steward</a></li>
+                        <li><a href="/resources/weingarten-rights.html" class="text-black hover:text-gray-500 transition-colors">Weingarten Rights</a></li>
                     </ul>
                 </div>
     
+                <!-- Column 4: Contact -->
                 <div>
-                    <h4 class="text-lg font-bold mb-6 tracking-wider uppercase text-brand-purple-light"><a href="/contact.html" class="hover:text-white transition-colors">Contact Us</a></h4>
-                     <ul class="space-y-4 text-gray-300">
-                        <li class="flex items-start group">
-                            <span class="mr-3 mt-1 text-xl group-hover:scale-110 transition-transform">✉️</span>
-                            <a href="mailto:083execteam@seiu503.org" class="hover:text-white transition-colors">083execteam@seiu503.org</a>
+                    <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase"><a href="/contact.html" class="hover:text-gray-500 transition-colors">Contact Us</a></h4>
+                     <ul class="space-y-3 text-black">
+                        <li class="flex items-start">
+                            <span class="mr-2 mt-1">✉️</span> <!-- Mail icon -->
+                            <a href="mailto:083execteam@seiu503.org" class="hover:text-gray-500 transition-colors">083execteam@seiu503.org</a>
                         </li>
-                        <li class="flex items-start group">
-                            <span class="mr-3 mt-1 text-xl group-hover:scale-110 transition-transform">✉️</span>
-                            <a href="mailto:083stewards@seiu503.org" class="hover:text-white transition-colors">083stewards@seiu503.org</a>
+                        <li class="flex items-start">
+                            <span class="mr-2 mt-1">✉️</span> <!-- Mail icon -->
+                            <a href="mailto:083stewards@seiu503.org" class="hover:text-gray-500 transition-colors">083stewards@seiu503.org</a>
                         </li>
-                        <li class="flex items-start group">
-                            <span class="mr-3 mt-1 text-xl group-hover:scale-110 transition-transform">📍</span>
-                            <a href="https://maps.app.goo.gl/9TWRZ9F4wjVjacsZ7" class="hover:text-white transition-colors">Adams Hall, Room 109<br>Corvallis, OR 97331</a>
+                        <li class="flex items-start">
+                            <span class="mr-2 mt-1">&#128205;</span> <!-- Pin icon -->
+                            <a href="https://maps.app.goo.gl/9TWRZ9F4wjVjacsZ7" class="hover:text-gray-500 transition-colors">Adams Hall, Room 109<br>Corvallis, OR 97331</a>
                         </li>
                     </ul>
                 </div>
             </div>
     
-            <div class="mt-12 pt-8 border-t border-gray-700 text-center">
-                <p class="text-gray-400 text-sm">© 2025 SEIU Local 503, Oregon State University. All rights reserved.</p>
+            <!-- Bottom Bar -->
+            <div class="mt-10 pt-8 border-t border-gray-700 text-center">
+                <p class="text-gray-400 text-sm">&copy; 2025 SEIU Local 503, Oregon State University. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -360,7 +416,6 @@
                 if (activeFilter !== 'all') {
                     filtered = allEventsData.filter(e => {
                         const cat = getCategory(e);
-                        // Simple mapping: 'other' shows in all for now, or just stick to strict types
                         return cat === activeFilter;
                     });
                 }
@@ -396,6 +451,7 @@
                 });
             }
 
+            // --- ACCORDION ITEM CREATION ---
             function createTimelineItem(event) {
                 const date = new Date(event.date.replace(/-/g, '\/'));
                 const month = date.toLocaleString('en-US', { month: 'short' }).toUpperCase();
@@ -406,38 +462,46 @@
                 item.className = 'relative pl-12 md:pl-20 py-2 group';
                 item.id = `event-${event.date}`; // Anchor for linking
 
-                // HTML Structure
+                // HTML Structure for Accordion
                 item.innerHTML = `
                     <!-- Timeline Dot/Date Bubble -->
-                    <div class="absolute left-0 top-2 w-[70px] flex flex-col items-center justify-center bg-white border-2 border-brand-purple rounded-xl py-2 z-10 shadow-sm transition-transform group-hover:scale-110 group-hover:bg-brand-purple group-hover:text-white group-hover:border-transparent">
+                    <div class="absolute left-0 top-2 w-[70px] flex flex-col items-center justify-center bg-white border-2 border-brand-purple rounded-xl py-2 z-10 shadow-sm transition-transform group-hover:scale-105 group-hover:bg-brand-purple group-hover:text-white group-hover:border-transparent">
                         <span class="text-xs font-bold uppercase tracking-wider text-brand-purple-dark group-hover:text-purple-100">${month}</span>
                         <span class="text-2xl font-bold leading-none text-brand-dark group-hover:text-white">${day}</span>
                     </div>
 
-                    <!-- Event Card -->
-                    <div class="bg-white border border-border-color rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow relative">
-                         <!-- Arrow pointing left -->
-                        <div class="absolute top-6 -left-2 w-4 h-4 bg-white border-l border-b border-border-color transform rotate-45"></div>
+                    <!-- Event Card (Clickable Accordion) -->
+                    <details class="bg-white border border-border-color rounded-xl shadow-sm hover:shadow-md transition-shadow relative open:ring-2 open:ring-brand-purple/20">
+                         <!-- Arrow pointing left (Timeline connection) -->
+                        <div class="absolute top-6 -left-2 w-4 h-4 bg-white border-l border-b border-border-color transform rotate-45 z-0"></div>
 
-                        <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-4">
-                            <div>
-                                <h3 class="text-xl font-bold text-brand-dark font-serif mb-1">
-                                    <a href="${event.url}" class="hover:text-brand-purple transition-colors">${event.title}</a>
+                        <summary class="list-none cursor-pointer p-5 flex items-center justify-between group/summary select-none relative z-10 bg-white rounded-xl">
+                            <div class="flex-grow pr-4">
+                                <h3 class="text-lg md:text-xl font-bold text-brand-dark font-serif group-hover/summary:text-brand-purple transition-colors">
+                                    ${event.title}
                                 </h3>
-                                <div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-text-secondary mb-3">
+                                <div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-text-secondary mt-1">
                                     <span class="flex items-center"><svg class="w-4 h-4 mr-1 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg> ${weekday}</span>
                                     ${event.time ? `<span class="flex items-center"><svg class="w-4 h-4 mr-1 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg> ${event.time}</span>` : ''}
                                     ${event.type ? `<span class="bg-gray-100 text-gray-600 px-2 py-0.5 rounded text-xs uppercase font-bold tracking-wide">${event.type}</span>` : ''}
                                 </div>
-                                <p class="text-gray-600 mb-4 line-clamp-2">${event.description}</p>
+                            </div>
+                            <div class="flex-shrink-0 text-gray-400 transform transition-transform duration-200 group-open/summary:rotate-180">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </div>
+                        </summary>
 
-                                <div class="flex items-center gap-3">
-                                    <a href="${event.url}" class="btn btn-outline !py-2 !px-4 text-sm">Details</a>
-                                    ${event.calendar_link ? `<a href="${event.calendar_link}" class="text-sm font-semibold text-brand-purple hover:underline">Add to Calendar</a>` : ''}
-                                </div>
+                        <div class="px-5 pb-5 pt-0 border-t border-gray-100 mt-2 bg-white rounded-b-xl">
+                            <p class="text-gray-600 mt-4 leading-relaxed">${event.description}</p>
+
+                            ${event.location_detail ? `<div class="mt-3 flex items-start text-sm text-text-secondary"><svg class="w-4 h-4 mr-2 mt-0.5 text-brand-purple flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>${event.location_detail}</div>` : ''}
+
+                            <div class="flex items-center gap-3 mt-6">
+                                <a href="${event.url}" class="btn btn-primary !py-2 !px-4 text-sm shadow-sm">View Details</a>
+                                ${event.calendar_link ? `<a href="${event.calendar_link}" class="btn btn-outline !py-2 !px-4 text-sm flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg> Add to Calendar</a>` : ''}
                             </div>
                         </div>
-                    </div>
+                    </details>
                 `;
                 return item;
             }
@@ -517,6 +581,11 @@
                         const target = document.getElementById(`event-${dateStr}`);
                         if (target) {
                             target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+                            // Open details if using accordion
+                            const details = target.querySelector('details');
+                            if(details) details.open = true;
+
                             target.classList.add('ring-2', 'ring-brand-purple', 'ring-offset-2');
                             setTimeout(() => target.classList.remove('ring-2', 'ring-brand-purple', 'ring-offset-2'), 2000);
                         }

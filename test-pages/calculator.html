@@ -77,35 +77,83 @@
 <body class="bg-brand-light">
 
     <!-- Header -->
-    <header class="bg-white/80 backdrop-blur-lg border-b border-border-color sticky top-0 z-50">
+            <header class="bg-white/90 backdrop-blur-lg border-b border-border-color sticky top-0 z-50 transition-all duration-300">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="flex items-center space-x-2">
-                <span class="text-2xl font-bold text-brand-purple-dark">SEIU 503</span>
+            <a href="/index.html" class="flex items-center space-x-2 group">
+                <span class="text-2xl font-bold text-brand-purple-dark group-hover:text-brand-purple transition-colors">SEIU 503</span>
                 <span class="text-lg text-text-secondary hidden md:block">| Oregon State University</span>
             </a>
-            <div class="hidden lg:flex space-x-8">
-                <a href="/about.html" class="text-text-secondary hover:text-brand-purple transition-colors">About</a>
-                <a href="/events.html" class="text-text-secondary hover:text-brand-purple transition-colors">Events</a>
-                <a href="/news.html" class="text-text-secondary hover:text-brand-purple transition-colors">News</a>
-                <a href="/resources.html" class="text-brand-purple font-bold">Resources & Rights</a>
-                <a href="/leadership.html" class="text-text-secondary hover:text-brand-purple transition-colors">Leadership</a>
-                <a href="/contact.html" class="text-text-secondary hover:text-brand-purple transition-colors">Contact</a>
+            <div class="hidden lg:flex space-x-8 font-medium" id="desktop-nav">
+                <a href="/about.html" class="text-text-secondary hover:text-brand-purple transition-colors relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-brand-purple after:transition-all hover:after:w-full">About</a>
+                <a href="/events.html" class="text-text-secondary hover:text-brand-purple transition-colors relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-brand-purple after:transition-all hover:after:w-full">Events</a>
+                <a href="/news.html" class="text-text-secondary hover:text-brand-purple transition-colors relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-brand-purple after:transition-all hover:after:w-full">News</a>
+                <a href="/resources.html" class="text-text-secondary hover:text-brand-purple transition-colors relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-brand-purple after:transition-all hover:after:w-full">Resources & Rights</a>
+                <a href="/leadership.html" class="text-text-secondary hover:text-brand-purple transition-colors relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-brand-purple after:transition-all hover:after:w-full">Leadership</a>
+                <a href="/contact.html" class="text-text-secondary hover:text-brand-purple transition-colors relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-brand-purple after:transition-all hover:after:w-full">Contact</a>
             </div>
             <div class="lg:hidden">
-                <button id="mobile-menu-button" class="text-text-secondary hover:text-brand-purple focus:outline-none" aria-label="Open menu">
+                <button id="mobile-menu-button" class="text-text-secondary hover:text-brand-purple focus:outline-none p-2 rounded-md hover:bg-gray-100" aria-label="Open menu">
                     <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
                 </button>
             </div>
         </nav>
-        <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden lg:hidden absolute top-full left-0 w-full bg-white border-t border-border-color shadow-lg">
-            <a href="/about.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">About</a>
-            <a href="/events.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Events</a>
-            <a href="/news.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">News</a>
-            <a href="/resources.html" class="block text-center py-3 px-6 text-lg text-brand-purple bg-brand-purple-light font-semibold">Resources & Rights</a>
-            <a href="/leadership.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Leadership</a>
-            <a href="/contact.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Contact</a>
+            <a href="/about.html" class="block text-center py-4 px-6 text-lg text-text-secondary hover:bg-gray-50 hover:text-brand-purple border-b border-gray-100">About</a>
+            <a href="/events.html" class="block text-center py-4 px-6 text-lg text-text-secondary hover:bg-gray-50 hover:text-brand-purple border-b border-gray-100">Events</a>
+            <a href="/news.html" class="block text-center py-4 px-6 text-lg text-text-secondary hover:bg-gray-50 hover:text-brand-purple border-b border-gray-100">News</a>
+            <a href="/resources.html" class="block text-center py-4 px-6 text-lg text-text-secondary hover:bg-gray-50 hover:text-brand-purple border-b border-gray-100">Resources & Rights</a>
+            <a href="/leadership.html" class="block text-center py-4 px-6 text-lg text-text-secondary hover:bg-gray-50 hover:text-brand-purple border-b border-gray-100">Leadership</a>
+            <a href="/contact.html" class="block text-center py-4 px-6 text-lg text-text-secondary hover:bg-gray-50 hover:text-brand-purple">Contact</a>
         </div>
+
+        <script>
+            // --- Header Logic: Mobile Menu & Active State ---
+            document.addEventListener('DOMContentLoaded', () => {
+                const mobileMenuButton = document.getElementById('mobile-menu-button');
+                const mobileMenu = document.getElementById('mobile-menu');
+                const navLinks = document.querySelectorAll('#mobile-menu a');
+
+                // Mobile Menu Toggle
+                if (mobileMenuButton && mobileMenu) {
+                    mobileMenuButton.addEventListener('click', () => {
+                        const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+                        mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
+                        mobileMenu.classList.toggle('hidden');
+                    });
+
+                    navLinks.forEach(link => {
+                        link.addEventListener('click', () => {
+                            mobileMenu.classList.add('hidden');
+                            mobileMenuButton.setAttribute('aria-expanded', 'false');
+                        });
+                    });
+                }
+
+                // Active State Highlighting
+                const currentPath = window.location.pathname;
+                const filename = currentPath.split('/').pop() || 'index.html';
+
+                // Selector for both desktop and mobile links
+                const allNavLinks = document.querySelectorAll('#desktop-nav a, #mobile-menu a');
+
+                allNavLinks.forEach(link => {
+                    const href = link.getAttribute('href');
+                    // Simple check: if href matches filename (e.g. 'news.html')
+                    // Logic handles root '/' mapping to 'index.html' implicitly via filename check above
+                    if (href && (href === filename || href === '/' + filename || (filename === 'index.html' && (href === './' || href === '/')))) {
+
+                        // Apply Active Styles
+                        link.classList.add('text-brand-purple', 'font-bold');
+                        link.classList.remove('text-text-secondary');
+
+                        // Specific styling adjustments for Mobile vs Desktop if needed
+                        if (link.closest('#mobile-menu')) {
+                             link.classList.add('bg-brand-purple-light/30');
+                        }
+                    }
+                });
+            });
+        </script>
     </header>
 
     <!-- Page Header -->
@@ -200,7 +248,7 @@
     </main>
 
     <!-- Footer -->
-        <footer class="bg-brand-dark text-white pt-12 pb-8">
+                <footer class="bg-brand-dark text-white pt-12 pb-8">
         <div class="container mx-auto px-6">
             <div class="mt-10 pt-8 border-t border-gray-700 text-center">
             </div>
@@ -266,91 +314,6 @@
         </div>
     </footer>
 
-    <script>
-        // --- Mobile Menu Toggle ---
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const navLinks = document.querySelectorAll('#mobile-menu a');
 
-        mobileMenuButton.addEventListener('click', () => {
-            const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
-            mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-                mobileMenuButton.setAttribute('aria-expanded', 'false');
-            });
-        });
-
-        // --- Dues Calculator Logic ---
-        const hourlyWageInput = document.getElementById('hourly-wage');
-        const hoursWeekInput = document.getElementById('hours-week');
-        const duesResult = document.getElementById('dues-result');
-        
-        const localBar = document.getElementById('local-bar');
-        const stateBar = document.getElementById('state-bar');
-        const unityBar = document.getElementById('unity-bar');
-        const localPercent = document.getElementById('local-percent');
-        const statePercent = document.getElementById('state-percent');
-        const unityPercent = document.getElementById('unity-percent');
-
-        const DUES_RATE = 0.017;
-        const DUES_FLAT = 2.75;
-
-        // Allocation percentages
-        const STATE_ALLOCATION = 0.50; // 50%
-        const LOCAL_ALLOCATION = 0.40; // 40%
-        const UNITY_ALLOCATION = 0.10; // 10%
-
-        function calculateDues() {
-            const hourlyWage = parseFloat(hourlyWageInput.value) || 0;
-            let hoursWeek = parseFloat(hoursWeekInput.value) || 0;
-
-            // UPDATED: Cap hours at 40 to exclude overtime from the calculation
-            if (hoursWeek > 40) {
-                hoursWeek = 40;
-            }
-
-            if (hourlyWage > 0 && hoursWeek > 0) {
-                const weeklyGross = hourlyWage * hoursWeek;
-                const monthlyGross = weeklyGross * 4.333; // Average weeks in a month
-                
-                let calculatedDues = (monthlyGross * DUES_RATE) + DUES_FLAT;
-                
-                duesResult.textContent = `$${calculatedDues.toFixed(2)}`;
-                updateChart(calculatedDues);
-            } else {
-                duesResult.textContent = '$0.00';
-                updateChart(0);
-            }
-        }
-        
-        function updateChart(totalDues) {
-            if (totalDues > 0) {
-                stateBar.style.width = `${STATE_ALLOCATION * 100}%`;
-                localBar.style.width = `${LOCAL_ALLOCATION * 100}%`;
-                unityBar.style.width = `${UNITY_ALLOCATION * 100}%`;
-                statePercent.textContent = `${(STATE_ALLOCATION * 100).toFixed(0)}%`;
-                localPercent.textContent = `${(LOCAL_ALLOCATION * 100).toFixed(0)}%`;
-                unityPercent.textContent = `${(UNITY_ALLOCATION * 100).toFixed(0)}%`;
-            } else {
-                stateBar.style.width = '0%';
-                localBar.style.width = '0%';
-                unityBar.style.width = '0%';
-                statePercent.textContent = '';
-                localPercent.textContent = '';
-                unityPercent.textContent = '';
-            }
-        }
-
-        hourlyWageInput.addEventListener('input', calculateDues);
-        hoursWeekInput.addEventListener('input', calculateDues);
-        
-        // Initial calculation on page load
-        calculateDues();
-    </script>
 </body>
 </html>
