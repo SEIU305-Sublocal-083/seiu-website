@@ -137,7 +137,7 @@
 <body class="bg-brand-light">
 
     <!-- Header -->
-        <header class="bg-white/90 backdrop-blur-lg border-b border-border-color sticky top-0 z-50 transition-all duration-300">
+    <header class="bg-white/90 backdrop-blur-lg border-b border-border-color sticky top-0 z-50 transition-all duration-300">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="/index.html" class="flex items-center space-x-2 group">
                 <span class="text-2xl font-bold text-brand-purple-dark group-hover:text-brand-purple transition-colors">SEIU 503</span>
@@ -416,6 +416,7 @@
                 if (activeFilter !== 'all') {
                     filtered = allEventsData.filter(e => {
                         const cat = getCategory(e);
+                        // Simple mapping: 'other' shows in all for now, or just stick to strict types
                         return cat === activeFilter;
                     });
                 }
@@ -446,7 +447,7 @@
                     const el = document.createElement('div');
                     const d = new Date(event.date.replace(/-/g, '\/'));
                     el.className = 'text-sm text-gray-500';
-                    el.innerHTML = `<span class="font-bold mr-2">${d.toLocaleDateString()}</span> ${event.title}`;
+                    el.innerHTML = `<span class="font-bold mr-2">${d.toLocaleDateString()}</span> <a href="${event.url}" class="hover:text-brand-purple hover:underline transition-colors">${event.title}</a>`;
                     pastEventsWrapper.appendChild(el);
                 });
             }
