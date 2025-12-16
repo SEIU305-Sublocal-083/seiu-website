@@ -103,26 +103,26 @@
             content: '';
             @apply absolute bottom-1 left-1/2 transform -translate-x-1/2 w-1.5 h-1.5 bg-brand-purple rounded-full;
         }
-
         .calendar-day.is-today {
             @apply bg-brand-purple text-white shadow-md;
         }
         .calendar-day.is-today::after {
             @apply bg-white;
         }
-
-        /* Hover effect for calendar days with events */
         .calendar-day.has-event:hover {
             @apply bg-purple-200 cursor-pointer;
         }
-        
-        /* Style for highlighting event card */
-        .highlight-event {
-            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-            @apply ring-4 ring-brand-purple/50 scale-[1.02] shadow-xl bg-purple-50;
+
+        /* Timeline Styles */
+        .timeline-line {
+            @apply absolute left-8 top-0 bottom-0 w-0.5 bg-gray-200 md:left-1/2 md:-ml-px;
+        }
+        /* Adjusted for single column timeline on right */
+        .timeline-container-single .timeline-line {
+            @apply left-9 top-6 bottom-0 w-0.5 bg-gray-200 md:left-9;
         }
 
-        /* Custom Scrollbar for nicer UI */
+        /* Custom Scrollbar */
         ::-webkit-scrollbar {
             width: 10px;
         }
@@ -157,7 +157,6 @@
                 </button>
             </div>
         </nav>
-        <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden lg:hidden absolute top-full left-0 w-full bg-white border-t border-border-color shadow-lg">
             <a href="/about.html" class="block text-center py-4 px-6 text-lg text-text-secondary hover:bg-gray-50 hover:text-brand-purple border-b border-gray-100">About</a>
             <a href="/events.html" class="block text-center py-4 px-6 text-lg text-brand-purple bg-brand-purple-light/30 font-semibold border-b border-gray-100">Events</a>
@@ -168,25 +167,32 @@
         </div>
     </header>
 
-    <!-- Page Header with Gradient -->
-    <section class="relative bg-gradient-to-br from-brand-purple-dark to-violet-800 text-white overflow-hidden">
-        <div class="absolute inset-0 opacity-10" style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
-        <div class="container mx-auto px-6 py-20 text-center relative z-10">
-            <h1 class="text-5xl md:text-6xl font-bold mb-6 tracking-tight">Union Events</h1>
-            <p class="mt-4 text-xl text-purple-100 max-w-3xl mx-auto leading-relaxed">Stay informed about upcoming meetings, trainings, and solidarity actions. Get involved and make your voice heard!</p>
+    <!-- Distinct Hero: Simpler, Pattern-based -->
+    <section class="relative bg-brand-dark text-white overflow-hidden">
+        <div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(#4C1D95 1px, transparent 1px); background-size: 20px 20px;"></div>
+        <div class="container mx-auto px-6 py-16 flex flex-col md:flex-row items-center justify-between relative z-10">
+            <div>
+                <h1 class="text-4xl md:text-5xl font-bold mb-4 tracking-tight">Calendar</h1>
+                <p class="text-lg text-gray-300 max-w-xl">Stay connected with your union. Filter events by type to find exactly what you're looking for.</p>
+            </div>
+            <!-- Category Filters in Hero -->
+            <div class="mt-8 md:mt-0 flex flex-wrap gap-3">
+                <button class="filter-btn active px-4 py-2 rounded-full border border-gray-600 bg-white text-brand-dark font-semibold text-sm transition-all hover:bg-gray-100" data-filter="all">All Events</button>
+                <button class="filter-btn px-4 py-2 rounded-full border border-gray-600 bg-transparent text-gray-300 font-semibold text-sm transition-all hover:bg-gray-800 hover:text-white" data-filter="meeting">Meetings</button>
+                <button class="filter-btn px-4 py-2 rounded-full border border-gray-600 bg-transparent text-gray-300 font-semibold text-sm transition-all hover:bg-gray-800 hover:text-white" data-filter="social">Social</button>
+                <button class="filter-btn px-4 py-2 rounded-full border border-gray-600 bg-transparent text-gray-300 font-semibold text-sm transition-all hover:bg-gray-800 hover:text-white" data-filter="action">Action</button>
+            </div>
         </div>
-        <div class="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-brand-light to-transparent"></div>
     </section>
 
-    <main class="container mx-auto px-6 py-12 -mt-10 relative z-20">
+    <main class="container mx-auto px-6 py-12">
+        <div class="grid lg:grid-cols-12 gap-12">
 
-        <!-- Calendar and Upcoming Events Section -->
-        <div class="grid lg:grid-cols-3 lg:items-start gap-8 mb-24">
-            <!-- Calendar -->
-            <div class="lg:col-span-1">
-                <div class="bg-white p-6 rounded-2xl border border-border-color shadow-lg lg:sticky top-32">
+            <!-- Sidebar: Calendar (Sticky) -->
+            <aside class="lg:col-span-4 xl:col-span-3">
+                <div class="bg-white p-6 rounded-2xl border border-border-color shadow-lg sticky top-28">
                     <div id="calendar-container">
-                        <!-- Calendar will be generated here by JavaScript -->
+                        <!-- Calendar injected by JS -->
                         <div class="animate-pulse space-y-4">
                             <div class="h-8 bg-gray-200 rounded w-1/2 mx-auto"></div>
                             <div class="grid grid-cols-7 gap-2">
@@ -196,52 +202,50 @@
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-
-            <!-- Main Events Column -->
-            <div class="lg:col-span-2 space-y-12">
-                <div id="events-list">
-                    <h2 class="text-3xl font-bold mb-8 text-brand-dark flex items-center">
-                        <span class="bg-brand-purple text-white rounded-full p-2 mr-3 shadow-md">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                        </span>
-                        Coming Up Soon
-                    </h2>
-                    <div id="upcoming-events-container" class="space-y-6">
-                         <!-- Events will be dynamically injected here -->
+                    <div class="mt-6 pt-6 border-t border-gray-100">
+                        <h4 class="text-sm font-bold text-gray-400 uppercase tracking-wider mb-3">Key</h4>
+                        <div class="flex items-center gap-4 text-sm">
+                            <div class="flex items-center gap-2">
+                                <span class="w-3 h-3 bg-brand-purple rounded-full"></span> Today
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span class="w-3 h-3 bg-purple-100 rounded-full border border-purple-200 relative"><span class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-1.5 h-1.5 bg-brand-purple rounded-full"></span></span> Event
+                            </div>
+                        </div>
                     </div>
+                </div>
+            </aside>
+
+            <!-- Main Content: Vertical Timeline -->
+            <section class="lg:col-span-8 xl:col-span-9 relative timeline-container-single">
+                <div class="timeline-line"></div>
+
+                <div id="timeline-events" class="space-y-8">
+                    <!-- Timeline items injected by JS -->
+                </div>
+
+                <div id="no-events-message" class="hidden text-center py-12 bg-white rounded-xl border border-dashed border-gray-300 ml-12">
+                    <p class="text-text-secondary font-medium">No events found for this category.</p>
+                    <button id="reset-filters" class="mt-2 text-brand-purple font-bold hover:underline">Show All Events</button>
                 </div>
                 
-                <!-- Later This Year Events Section -->
-                <section id="more-events" class="pt-8 border-t border-dashed border-gray-300">
-                    <h2 class="text-3xl font-bold mb-8 text-brand-dark flex items-center">
-                        <span class="bg-brand-purple-light text-brand-purple rounded-full p-2 mr-3">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
-                        </span>
-                        Later This Year
-                    </h2>
-                    <div id="stacked-events-container" class="space-y-4">
-                        <!-- Event cards will be injected here -->
+                <!-- Past Events Toggle -->
+                <div class="mt-16 ml-12">
+                    <button id="toggle-past-events" class="flex items-center gap-2 text-gray-500 font-semibold hover:text-brand-purple transition-colors">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        View Past Events
+                    </button>
+                    <div id="past-events-wrapper" class="hidden mt-8 space-y-6 border-l-2 border-gray-200 pl-6 border-dashed">
+                        <!-- Past events injected here -->
                     </div>
-                </section>
-            </div>
+                </div>
+            </section>
         </div>
-        
-        <!-- Past Events Section -->
-        <section id="past-events" class="bg-white rounded-2xl p-8 border border-border-color shadow-sm">
-            <h2 class="text-3xl font-bold text-center mb-10">Archived Events</h2>
-            <div id="past-events-container" class="max-w-4xl mx-auto space-y-4">
-                <!-- Past events will be dynamically injected here -->
-            </div>
-        </section>
-
     </main>
 
-        <footer class="bg-brand-dark text-white pt-16 pb-8">
+    <footer class="bg-brand-dark text-white pt-16 pb-8 mt-12">
         <div class="container mx-auto px-6">
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
-                <!-- Column 1: About the Union -->
                 <div class="md:col-span-2 lg:col-span-1">
                     <div class="flex items-center mb-6">
                         <img src="/images/logo.png" alt="SEIU 503 Logo" class="h-12 w-12 mr-3 bg-white p-1 rounded">
@@ -253,7 +257,6 @@
                     <p class="text-gray-300 leading-relaxed mb-6">Representing the classified employees of Oregon State University. We fight for fair contracts, defend workplace rights, and build a united community.</p>
                 </div>
     
-                <!-- Column 2: Quick Links -->
                 <div>
                     <h4 class="text-lg font-bold mb-6 tracking-wider uppercase text-brand-purple-light">Quick Links</h4>
                     <ul class="space-y-3">
@@ -264,7 +267,6 @@
                     </ul>
                 </div>
     
-                <!-- Column 3: Resources -->
                 <div>
                     <h4 class="text-lg font-bold mb-6 tracking-wider uppercase text-brand-purple-light"><a href="/resources.html" class="hover:text-white transition-colors">Resources</a></h4>
                     <ul class="space-y-3">
@@ -275,7 +277,6 @@
                     </ul>
                 </div>
     
-                <!-- Column 4: Contact -->
                 <div>
                     <h4 class="text-lg font-bold mb-6 tracking-wider uppercase text-brand-purple-light"><a href="/contact.html" class="hover:text-white transition-colors">Contact Us</a></h4>
                      <ul class="space-y-4 text-gray-300">
@@ -295,7 +296,6 @@
                 </div>
             </div>
     
-            <!-- Bottom Bar -->
             <div class="mt-12 pt-8 border-t border-gray-700 text-center">
                 <p class="text-gray-400 text-sm">© 2025 SEIU Local 503, Oregon State University. All rights reserved.</p>
             </div>
@@ -306,211 +306,145 @@
         document.addEventListener('DOMContentLoaded', () => {
             // --- Global Variables ---
             const calendarContainer = document.getElementById('calendar-container');
-            const upcomingEventsContainer = document.getElementById('upcoming-events-container');
-            const stackedEventsContainer = document.getElementById('stacked-events-container');
-            const pastEventsContainer = document.getElementById('past-events-container');
+            const timelineContainer = document.getElementById('timeline-events');
+            const pastEventsWrapper = document.getElementById('past-events-wrapper');
+            const togglePastBtn = document.getElementById('toggle-past-events');
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const noEventsMsg = document.getElementById('no-events-message');
+
             let currentDate = new Date();
             let eventsForCalendar = {};
+            let allEventsData = [];
+            let activeFilter = 'all';
 
-            // --- Main Function to Load and Render All Event Data ---
+            // --- Main Function to Load Event Data ---
             async function loadEvents() {
                 try {
                     const response = await fetch('events/events.json');
                     if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-                    const allEvents = await response.json();
-                    processAndRenderEvents(allEvents);
+                    allEventsData = await response.json();
+
+                    // Initial Render
+                    renderEvents();
+
+                    // Generate Calendar
+                    eventsForCalendar = createCalendarEventObject(allEventsData);
+                    generateCalendar(currentDate.getMonth(), currentDate.getFullYear());
                 } catch (error) {
-                    console.error('Error fetching or processing events:', error);
-                    if(upcomingEventsContainer) upcomingEventsContainer.innerHTML = `
-                        <div class="text-center py-8 bg-white rounded-xl border border-red-200">
-                            <p class="text-red-500 font-semibold mb-2">Could not load events.</p>
-                            <p class="text-text-secondary text-sm">Please try again later.</p>
+                    console.error('Error fetching events:', error);
+                    timelineContainer.innerHTML = `
+                        <div class="ml-12 p-6 bg-red-50 text-red-600 rounded-lg border border-red-200">
+                            Failed to load events. Please refresh the page.
                         </div>`;
                 }
             }
-            
-            function processAndRenderEvents(allEvents) {
+
+            // --- Categorization Helper ---
+            function getCategory(event) {
+                const type = (event.type || "").toLowerCase();
+                const title = (event.title || "").toLowerCase();
+
+                if (type.includes('zoom') || type.includes('meeting') || title.includes('meeting')) return 'meeting';
+                if (type.includes('social') || type.includes('bowling') || type.includes('picnic')) return 'social';
+                if (type.includes('action') || type.includes('rally') || type.includes('volunteer')) return 'action';
+                return 'other';
+            }
+
+            // --- Rendering Logic ---
+            function renderEvents() {
                 const today = new Date();
                 today.setHours(0, 0, 0, 0);
 
-                const thirtyDaysFromNow = new Date(today);
-                thirtyDaysFromNow.setDate(today.getDate() + 30);
+                // Filter by category
+                let filtered = allEventsData;
+                if (activeFilter !== 'all') {
+                    filtered = allEventsData.filter(e => {
+                        const cat = getCategory(e);
+                        // Simple mapping: 'other' shows in all for now, or just stick to strict types
+                        return cat === activeFilter;
+                    });
+                }
 
-                // Helper to normalize date strings
-                const getEventDate = (event) => new Date(event.date.replace(/-/g, '\/'));
+                // Split Upcoming / Past
+                const upcoming = filtered
+                    .filter(event => new Date(event.date.replace(/-/g, '\/')) >= today)
+                    .sort((a, b) => new Date(a.date.replace(/-/g, '\/')) - new Date(b.date.replace(/-/g, '\/')));
 
-                const allUpcomingEvents = allEvents
-                    .filter(event => getEventDate(event) >= today)
-                    .sort((a, b) => getEventDate(a) - getEventDate(b));
+                const past = filtered
+                    .filter(event => new Date(event.date.replace(/-/g, '\/')) < today)
+                    .sort((a, b) => new Date(b.date.replace(/-/g, '\/')) - new Date(a.date.replace(/-/g, '\/')));
 
-                const displayNowEvents = allUpcomingEvents.filter(event => {
-                    const eventDate = getEventDate(event);
-                    return event.featured || eventDate <= thirtyDaysFromNow;
+                // Render Timeline
+                timelineContainer.innerHTML = '';
+                if (upcoming.length === 0) {
+                    noEventsMsg.classList.remove('hidden');
+                } else {
+                    noEventsMsg.classList.add('hidden');
+                    upcoming.forEach(event => {
+                        timelineContainer.appendChild(createTimelineItem(event));
+                    });
+                }
+
+                // Render Past (Simple List)
+                pastEventsWrapper.innerHTML = '';
+                past.forEach(event => {
+                    const el = document.createElement('div');
+                    const d = new Date(event.date.replace(/-/g, '\/'));
+                    el.className = 'text-sm text-gray-500';
+                    el.innerHTML = `<span class="font-bold mr-2">${d.toLocaleDateString()}</span> ${event.title}`;
+                    pastEventsWrapper.appendChild(el);
                 });
-
-                const stackedFutureEvents = allUpcomingEvents.filter(event => {
-                    const eventDate = getEventDate(event);
-                    return !event.featured && eventDate > thirtyDaysFromNow;
-                });
-
-                const pastEvents = allEvents
-                    .filter(event => getEventDate(event) < today)
-                    .sort((a, b) => getEventDate(b) - getEventDate(a));
-
-                renderUpcomingEvents(displayNowEvents);
-                renderStackedEvents(stackedFutureEvents);
-                renderPastEvents(pastEvents);
-                
-                eventsForCalendar = createCalendarEventObject(allEvents);
-                generateCalendar(currentDate.getMonth(), currentDate.getFullYear());
             }
 
-            // --- Rendering Functions ---
-            function renderUpcomingEvents(events) {
-                if (!upcomingEventsContainer) return;
-                if (events.length === 0) {
-                    upcomingEventsContainer.innerHTML = `
-                        <div class="text-center py-12 bg-white rounded-xl border border-dashed border-gray-300">
-                             <p class="text-text-secondary font-medium">No events scheduled in the next 30 days.</p>
-                             <p class="text-sm text-gray-500 mt-2">Check the "Later This Year" section or the calendar.</p>
-                        </div>`;
-                    return;
-                }
+            function createTimelineItem(event) {
+                const date = new Date(event.date.replace(/-/g, '\/'));
+                const month = date.toLocaleString('en-US', { month: 'short' }).toUpperCase();
+                const day = date.getDate();
+                const weekday = date.toLocaleString('en-US', { weekday: 'long' });
 
-                upcomingEventsContainer.innerHTML = events.map(event => {
-                    const eventDate = new Date(event.date.replace(/-/g, '\/'));
-                    const month = eventDate.toLocaleString('en-US', { month: 'short' }).toUpperCase();
-                    const day = eventDate.getDate().toString().padStart(2, '0');
-                    const featuredClass = event.featured ? 'ring-2 ring-brand-purple shadow-xl transform scale-[1.01]' : 'border border-border-color shadow-sm';
-                    const featuredBadge = event.featured ? '<div class="absolute top-0 right-0 bg-brand-purple text-white text-xs font-bold px-3 py-1 rounded-bl-lg rounded-tr-lg z-10">FEATURED</div>' : '';
+                const item = document.createElement('div');
+                item.className = 'relative pl-12 md:pl-20 py-2 group';
+                item.id = `event-${event.date}`; // Anchor for linking
 
-                    let detailsHtml = `<div class="mt-6 flex flex-wrap items-center gap-3">
-                        <a href="${event.url}" class="btn btn-primary !py-2 !px-5 text-sm">View Details</a>`;
-                    
-                    if (event.calendar_link) {
-                        detailsHtml += `<a href="${event.calendar_link}" download class="btn btn-outline !py-2 !px-5 text-sm flex items-center gap-2">
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
-                            Add to Calendar
-                        </a>`;
-                    }
-                    detailsHtml += '</div>';
+                // HTML Structure
+                item.innerHTML = `
+                    <!-- Timeline Dot/Date Bubble -->
+                    <div class="absolute left-0 top-2 w-[70px] flex flex-col items-center justify-center bg-white border-2 border-brand-purple rounded-xl py-2 z-10 shadow-sm transition-transform group-hover:scale-110 group-hover:bg-brand-purple group-hover:text-white group-hover:border-transparent">
+                        <span class="text-xs font-bold uppercase tracking-wider text-brand-purple-dark group-hover:text-purple-100">${month}</span>
+                        <span class="text-2xl font-bold leading-none text-brand-dark group-hover:text-white">${day}</span>
+                    </div>
 
-                    let metaHtml = '';
-                    if (event.time) {
-                        metaHtml += `<div class="flex items-center text-text-secondary text-sm mb-1"><svg class="w-4 h-4 mr-2 opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>${event.time}</div>`;
-                    }
-                    if (event.location_detail) {
-                        metaHtml += `<div class="flex items-center text-text-secondary text-sm"><svg class="w-4 h-4 mr-2 opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>${event.location_detail}</div>`;
-                    }
+                    <!-- Event Card -->
+                    <div class="bg-white border border-border-color rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow relative">
+                         <!-- Arrow pointing left -->
+                        <div class="absolute top-6 -left-2 w-4 h-4 bg-white border-l border-b border-border-color transform rotate-45"></div>
 
-                    return `
-                        <div id="event-${event.date}" class="bg-white p-6 md:p-8 rounded-2xl ${featuredClass} flex flex-col md:flex-row gap-8 items-start relative overflow-hidden group hover:shadow-lg transition-all duration-300">
-                            ${featuredBadge}
-                            <div class="flex-shrink-0 text-center w-full md:w-24 bg-gray-50 rounded-xl p-4 border border-gray-100 group-hover:border-brand-purple-light transition-colors">
-                                <p class="text-brand-purple font-bold text-sm tracking-widest uppercase mb-1">${month}</p>
-                                <p class="text-4xl md:text-5xl font-bold text-brand-dark leading-none">${day}</p>
-                            </div>
-                            <div class="flex-grow w-full">
-                                <div class="flex flex-col sm:flex-row justify-between items-start mb-3 gap-2">
-                                    <h3 class="text-2xl font-bold text-brand-dark group-hover:text-brand-purple transition-colors font-serif"><a href="${event.url}">${event.title}</a></h3>
-                                    <div class="bg-purple-100 text-brand-purple-dark font-bold rounded-full px-3 py-1 text-xs uppercase tracking-wider whitespace-nowrap self-start sm:self-center">${event.type}</div>
-                                </div>
-                                <div class="mb-4 space-y-1">
-                                    ${metaHtml}
-                                </div>
-                                <p class="text-text-secondary leading-relaxed">${event.description}</p>
-                                ${detailsHtml}
-                            </div>
-                        </div>
-                    `;
-                }).join('');
-            }
-
-            function renderStackedEvents(events) {
-                if (!stackedEventsContainer) return;
-                const moreEventsSection = document.getElementById('more-events');
-
-                if (events.length === 0) {
-                    if (moreEventsSection) moreEventsSection.classList.add('hidden');
-                    return;
-                }
-                
-                if (moreEventsSection) moreEventsSection.classList.remove('hidden');
-
-                stackedEventsContainer.innerHTML = events.map(event => {
-                    const eventDate = new Date(event.date.replace(/-/g, '\/'));
-                    const formattedDate = eventDate.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
-
-                    return `
-                        <div id="event-${event.date}" class="bg-white p-5 rounded-xl border border-border-color shadow-sm transition-all duration-200 hover:shadow-md hover:border-brand-purple-light hover:bg-gray-50">
-                            <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
-                                <div class="flex items-center gap-4 w-full sm:w-auto">
-                                    <div class="bg-white border border-gray-200 rounded-lg p-2 text-center w-16 h-16 flex flex-col justify-center flex-shrink-0">
-                                        <span class="text-xs font-bold text-brand-purple uppercase">${eventDate.toLocaleString('en-US', { month: 'short' })}</span>
-                                        <span class="text-xl font-bold text-brand-dark">${eventDate.getDate()}</span>
-                                    </div>
-                                    <div>
-                                         <h3 class="text-lg font-bold text-brand-dark hover:text-brand-purple transition-colors"><a href="${event.url}">${event.title}</a></h3>
-                                         <p class="text-sm text-text-secondary">${event.type} • ${event.time || 'Time TBD'}</p>
-                                    </div>
-                                </div>
-                                <div class="flex items-center gap-3 w-full sm:w-auto justify-end">
-                                    <a href="${event.url}" class="text-brand-purple font-semibold text-sm hover:underline whitespace-nowrap">Details &rarr;</a>
-                                </div>
-                            </div>
-                        </div>
-                    `;
-                }).join('');
-            }
-
-
-            function renderPastEvents(events) {
-                if (!pastEventsContainer) return;
-                if (events.length === 0) {
-                    pastEventsContainer.innerHTML = '<p class="text-text-secondary text-center">No past events to show.</p>';
-                    return;
-                }
-
-                const groupedByMonth = events.reduce((acc, event) => {
-                    const eventDate = new Date(event.date.replace(/-/g, '\/'));
-                    const monthYear = eventDate.toLocaleString('default', { month: 'long', year: 'numeric' });
-                    if (!acc[monthYear]) acc[monthYear] = [];
-                    acc[monthYear].push(event);
-                    return acc;
-                }, {});
-
-                pastEventsContainer.innerHTML = Object.entries(groupedByMonth).map(([monthYear, monthEvents]) => {
-                    const eventListItems = monthEvents.map(event => `
-                        <li class="py-3 flex items-start gap-3">
-                            <span class="font-mono text-gray-400 text-sm whitespace-nowrap w-8 text-right pt-0.5">${new Date(event.date.replace(/-/g, '\/')).getDate()}</span>
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-4">
                             <div>
-                                <span class="font-medium text-brand-dark">${event.title}</span>
-                                ${event.url !== '#' ? `<a href="${event.url}" class="text-xs text-brand-purple hover:underline ml-2">View</a>` : ''}
-                            </div>
-                        </li>
-                    `).join('');
+                                <h3 class="text-xl font-bold text-brand-dark font-serif mb-1">
+                                    <a href="${event.url}" class="hover:text-brand-purple transition-colors">${event.title}</a>
+                                </h3>
+                                <div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-text-secondary mb-3">
+                                    <span class="flex items-center"><svg class="w-4 h-4 mr-1 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg> ${weekday}</span>
+                                    ${event.time ? `<span class="flex items-center"><svg class="w-4 h-4 mr-1 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg> ${event.time}</span>` : ''}
+                                    ${event.type ? `<span class="bg-gray-100 text-gray-600 px-2 py-0.5 rounded text-xs uppercase font-bold tracking-wide">${event.type}</span>` : ''}
+                                </div>
+                                <p class="text-gray-600 mb-4 line-clamp-2">${event.description}</p>
 
-                    return `
-                        <details class="bg-white rounded-xl border border-border-color group transition-all duration-300 open:shadow-md mb-2">
-                            <summary class="font-semibold text-lg cursor-pointer flex justify-between items-center p-5 transition-colors group-hover:bg-gray-50 list-none select-none">
-                                <span class="flex items-center gap-2">
-                                    <svg class="w-5 h-5 text-gray-400 group-open:rotate-90 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-                                    ${monthYear}
-                                </span>
-                                <span class="text-xs font-normal text-gray-500 bg-gray-100 px-2 py-1 rounded-full">${monthEvents.length} events</span>
-                            </summary>
-                            <div class="p-5 pt-0 pl-12 text-text-secondary border-t border-transparent group-open:border-gray-100">
-                                <ul class="divide-y divide-gray-100">
-                                    ${eventListItems}
-                                </ul>
+                                <div class="flex items-center gap-3">
+                                    <a href="${event.url}" class="btn btn-outline !py-2 !px-4 text-sm">Details</a>
+                                    ${event.calendar_link ? `<a href="${event.calendar_link}" class="text-sm font-semibold text-brand-purple hover:underline">Add to Calendar</a>` : ''}
+                                </div>
                             </div>
-                        </details>
-                    `;
-                }).join('');
+                        </div>
+                    </div>
+                `;
+                return item;
             }
 
-            function createCalendarEventObject(allEvents) {
-                return allEvents.reduce((acc, event) => {
+            // --- Calendar Logic ---
+            function createCalendarEventObject(events) {
+                return events.reduce((acc, event) => {
                     const date = new Date(event.date.replace(/-/g, '\/'));
                     const month = date.getMonth();
                     const day = date.getDate();
@@ -520,7 +454,6 @@
                 }, {});
             }
 
-            // --- Calendar Generation ---
             function generateCalendar(month, year) {
                 if (!calendarContainer) return;
                 calendarContainer.innerHTML = '';
@@ -533,17 +466,13 @@
                 const monthName = firstDay.toLocaleString('default', { month: 'long' });
 
                 let html = `
-                    <div class="text-center">
-                        <div class="flex justify-between items-center mb-6">
-                            <button id="prev-month" aria-label="Previous month" class="p-2 rounded-full hover:bg-gray-100 text-brand-purple transition-colors">
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
-                            </button>
-                            <h3 class="text-xl font-bold font-serif text-brand-dark">${monthName} ${year}</h3>
-                            <button id="next-month" aria-label="Next month" class="p-2 rounded-full hover:bg-gray-100 text-brand-purple transition-colors">
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-                            </button>
+                    <div class="text-center select-none">
+                        <div class="flex justify-between items-center mb-4">
+                            <button id="prev-month" class="p-1 rounded-full hover:bg-gray-100 text-brand-purple"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg></button>
+                            <h3 class="text-lg font-bold text-brand-dark">${monthName} ${year}</h3>
+                            <button id="next-month" class="p-1 rounded-full hover:bg-gray-100 text-brand-purple"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg></button>
                         </div>
-                        <div class="grid grid-cols-7 gap-1 text-center text-xs text-text-secondary font-bold uppercase tracking-wider mb-2">
+                        <div class="grid grid-cols-7 gap-1 text-center text-xs text-gray-400 font-bold mb-2">
                             <div>S</div><div>M</div><div>T</div><div>W</div><div>T</div><div>F</div><div>S</div>
                         </div>
                         <div class="grid grid-cols-7 gap-1">`;
@@ -551,29 +480,27 @@
                 for (let i = 0; i < startingDay; i++) html += `<div></div>`;
 
                 for (let i = 1; i <= daysInMonth; i++) {
-                    let dayClasses = 'calendar-day w-full aspect-square flex items-center justify-center rounded-lg text-sm transition-all duration-200 border border-transparent';
+                    let dayClasses = 'calendar-day w-8 h-8 mx-auto flex items-center justify-center rounded-full text-sm transition-all duration-200 relative';
                     let dayAttributes = '';
-
                     const isToday = (i === today.getDate() && month === today.getMonth() && year === today.getFullYear());
                     const hasEvent = (eventsForCalendar[month] && eventsForCalendar[month].includes(i));
 
                     if (isToday) {
                         dayClasses += ' is-today font-bold';
-                        dayAttributes += ' title="Today"';
                     } else if (hasEvent) {
-                         dayClasses += ' has-event cursor-pointer hover:scale-110 hover:shadow-sm';
+                         dayClasses += ' has-event';
                          const dateStr = `${year}-${String(month + 1).padStart(2, '0')}-${String(i).padStart(2, '0')}`;
-                         dayAttributes = `data-date="${dateStr}" role="button" tabindex="0" aria-label="View events for ${monthName} ${i}"`;
+                         dayAttributes = `data-date="${dateStr}" role="button"`;
                     } else {
-                        dayClasses += ' hover:bg-gray-50 text-gray-500';
+                        dayClasses += ' text-gray-600 hover:bg-gray-100';
                     }
-
                     html += `<div class="${dayClasses}" ${dayAttributes}>${i}</div>`;
                 }
 
                 html += `</div></div>`;
                 calendarContainer.innerHTML = html;
 
+                // Re-bind listeners
                 document.getElementById('prev-month').addEventListener('click', () => {
                     currentDate.setMonth(currentDate.getMonth() - 1);
                     generateCalendar(currentDate.getMonth(), currentDate.getFullYear());
@@ -582,65 +509,55 @@
                     currentDate.setMonth(currentDate.getMonth() + 1);
                     generateCalendar(currentDate.getMonth(), currentDate.getFullYear());
                 });
+
+                // Calendar click to scroll
+                calendarContainer.querySelectorAll('.has-event').forEach(el => {
+                    el.addEventListener('click', () => {
+                        const dateStr = el.dataset.date;
+                        const target = document.getElementById(`event-${dateStr}`);
+                        if (target) {
+                            target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                            target.classList.add('ring-2', 'ring-brand-purple', 'ring-offset-2');
+                            setTimeout(() => target.classList.remove('ring-2', 'ring-brand-purple', 'ring-offset-2'), 2000);
+                        }
+                    });
+                });
             }
 
-            // --- Interactive Calendar Logic ---
-            function highlightEvent(dateStr) {
-                document.querySelectorAll('.highlight-event').forEach(el => el.classList.remove('highlight-event'));
+            // --- Event Listeners ---
+            // Filter Buttons
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // UI Update
+                    filterBtns.forEach(b => {
+                        b.classList.remove('active', 'bg-white', 'text-brand-dark', 'border-white');
+                        b.classList.add('bg-transparent', 'text-gray-300', 'border-gray-600');
+                    });
+                    btn.classList.remove('bg-transparent', 'text-gray-300', 'border-gray-600');
+                    btn.classList.add('active', 'bg-white', 'text-brand-dark', 'border-white');
 
-                let targetEvent = document.querySelector(`#upcoming-events-container #event-${dateStr}`);
-                if (!targetEvent) {
-                    targetEvent = document.querySelector(`#stacked-events-container #event-${dateStr}`);
-                }
-
-                if (targetEvent) {
-                    targetEvent.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                    targetEvent.classList.add('highlight-event');
-                    setTimeout(() => {
-                        targetEvent.classList.remove('highlight-event');
-                    }, 3000); // Highlight longer
-                } else {
-                    // Feedback if event is not in the list (e.g. might be past event not shown in main list)
-                     // You could add a toast notification here
-                }
-            }
-
-            calendarContainer.addEventListener('click', (e) => {
-                const dayEl = e.target.closest('.calendar-day');
-                if (dayEl && dayEl.dataset.date) {
-                    highlightEvent(dayEl.dataset.date);
-                }
-            });
-
-            calendarContainer.addEventListener('keydown', (e) => {
-                if (e.key === 'Enter' || e.key === ' ') {
-                    const dayEl = e.target.closest('.calendar-day');
-                    if (dayEl && dayEl.dataset.date) {
-                        e.preventDefault();
-                        highlightEvent(dayEl.dataset.date);
-                    }
-                }
-            });
-
-            // --- Mobile Menu Toggle ---
-            const mobileMenuButton = document.getElementById('mobile-menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
-            const navLinks = document.querySelectorAll('#mobile-menu a');
-
-            mobileMenuButton.addEventListener('click', () => {
-                const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
-                mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
-                mobileMenu.classList.toggle('hidden');
-            });
-
-            navLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    mobileMenu.classList.add('hidden');
-                    mobileMenuButton.setAttribute('aria-expanded', 'false');
+                    // Filter Logic
+                    activeFilter = btn.dataset.filter;
+                    renderEvents();
                 });
             });
 
-            // --- Initial Load ---
+            // Toggle Past Events
+            togglePastBtn.addEventListener('click', () => {
+                pastEventsWrapper.classList.toggle('hidden');
+                const isHidden = pastEventsWrapper.classList.contains('hidden');
+                togglePastBtn.innerHTML = isHidden
+                    ? '<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg> View Past Events'
+                    : '<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path></svg> Hide Past Events';
+            });
+
+            // Reset Filter from No Events Message
+            document.getElementById('reset-filters').addEventListener('click', () => {
+                const allBtn = document.querySelector('[data-filter="all"]');
+                if(allBtn) allBtn.click();
+            });
+
+            // Init
             loadEvents();
         });
     </script>
