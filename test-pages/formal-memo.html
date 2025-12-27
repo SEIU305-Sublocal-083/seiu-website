@@ -1,6 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!--
+@meta: {
+  "type": "template",
+  "subtype": "Formal Memo",
+  "context": "Use this template for official internal or external memorandums.",
+  "placeholders": [
+    "{{ RECIPIENT_NAME }}",
+    "{{ SENDER_NAME }}",
+    "{{ SENDER_TITLE }}",
+    "{{ DATE }}",
+    "{{ SUBJECT_LINE }}",
+    "{{ GREETING }}",
+    "{{ OPENING_PARAGRAPH }}",
+    "{{ SECTION_HEADER }}",
+    "{{ SECTION_CONTENT }}",
+    "{{ BULLET_ITEM_1 }}",
+    "{{ BULLET_ITEM_2 }}",
+    "{{ BULLET_ITEM_3 }}",
+    "{{ NUMBERED_ITEM_1 }}",
+    "{{ NUMBERED_ITEM_2 }}",
+    "{{ NUMBERED_ITEM_3 }}",
+    "{{ BLOCKQUOTE_TEXT }}",
+    "{{ CLOSING }}",
+    "{{ SIGNATURE_NAME }}"
+  ]
+}
+@instructions: [
+  "Replace all {{ PLACEHOLDERS }} with relevant content.",
+  "The DATE should be formatted formally (e.g., October 27, 2025).",
+  "Use the blockquote for key policy changes or important statements."
+]
+-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Memo Template</title>
@@ -50,19 +82,19 @@
                                         <table border="0" cellpadding="0" cellspacing="0" width="100%" style="font-size: 16px; color: #1F2937;">
                                             <tr>
                                                 <td width="90" valign="top" style="font-weight: bold; padding-right: 10px; padding-bottom: 10px; text-align: right;">TO:</td>
-                                                <td style="padding-bottom: 10px;">[Recipient Name(s)]</td>
+                                                <td style="padding-bottom: 10px;">{{ RECIPIENT_NAME }}</td>
                                             </tr>
                                             <tr>
                                                 <td width="90" valign="top" style="font-weight: bold; padding-right: 10px; padding-bottom: 10px; text-align: right;">FROM:</td>
-                                                <td style="padding-bottom: 10px;">[Your Name, Your Title]</td>
+                                                <td style="padding-bottom: 10px;">{{ SENDER_NAME }}, {{ SENDER_TITLE }}</td>
                                             </tr>
                                             <tr>
                                                 <td width="90" valign="top" style="font-weight: bold; padding-right: 10px; padding-bottom: 10px; text-align: right;">DATE:</td>
-                                                <td style="padding-bottom: 10px;">[Date]</td>
+                                                <td style="padding-bottom: 10px;">{{ DATE }}</td>
                                             </tr>
                                              <tr>
                                                 <td width="90" valign="top" style="font-weight: bold; padding-right: 10px; text-align: right;">SUBJECT:</td>
-                                                <td>[Subject of Memo]</td>
+                                                <td>{{ SUBJECT_LINE }}</td>
                                             </tr>
                                         </table>
                                     </td>
@@ -70,32 +102,32 @@
                                 <!-- Body Text -->
                                 <tr>
                                     <td align="left" style="padding-top: 20px; font-family: 'Inter', sans-serif; font-size: 16px; color: #1F2937; line-height: 1.6;">
-                                        <p>[Greeting],</p>
-                                        <p>[This is a standard paragraph. Use it for your main content. You can make text <strong>bold</strong> or <em>italic</em> as needed. You can also include <a href="[URL]" target="_blank" style="color: #7C3AED;">inline links</a>.]</p>
+                                        <p>{{ GREETING }},</p>
+                                        <p>{{ OPENING_PARAGRAPH }}</p>
                                         
-                                        <h3>This is a Subheading</h3>
-                                        <p>[Use subheadings to break your content into logical sections, making it easier to read.]</p>
+                                        <h3>{{ SECTION_HEADER }}</h3>
+                                        <p>{{ SECTION_CONTENT }}</p>
 
                                         <p>Here is an example of a bulleted list:</p>
                                         <ul>
-                                            <li>List item one.</li>
-                                            <li>List item two, which can be a bit longer.</li>
-                                            <li>List item three.</li>
+                                            <li>{{ BULLET_ITEM_1 }}</li>
+                                            <li>{{ BULLET_ITEM_2 }}</li>
+                                            <li>{{ BULLET_ITEM_3 }}</li>
                                         </ul>
 
                                         <p>And here is an example of a numbered list:</p>
                                         <ol>
-                                            <li>First step or point.</li>
-                                            <li>Second step or point.</li>
-                                            <li>Third step or point.</li>
+                                            <li>{{ NUMBERED_ITEM_1 }}</li>
+                                            <li>{{ NUMBERED_ITEM_2 }}</li>
+                                            <li>{{ NUMBERED_ITEM_3 }}</li>
                                         </ol>
 
                                         <blockquote style="margin: 20px 0; padding: 15px; border-left: 4px solid #7C3AED; background-color: #F9FAFB; color: #374151; font-style: italic;">
-                                            "Use a blockquote to highlight a key quote or an important piece of information. It really makes the text stand out."
+                                            "{{ BLOCKQUOTE_TEXT }}"
                                         </blockquote>
                                         
-                                        <p style="margin: 25px 0 15px;">[Closing],</p>
-                                        <p style="margin: 0; font-family: 'Lora', serif; font-weight: bold; font-size: 18px; color: #4C1D95;">- [Your Name]</p>
+                                        <p style="margin: 25px 0 15px;">{{ CLOSING }},</p>
+                                        <p style="margin: 0; font-family: 'Lora', serif; font-weight: bold; font-size: 18px; color: #4C1D95;">- {{ SIGNATURE_NAME }}</p>
                                     </td>
                                 </tr>
                             </table>

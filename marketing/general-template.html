@@ -1,9 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!--
+@meta: {
+  "type": "template",
+  "subtype": "Marketing Email - General",
+  "context": "Use this template for general email marketing campaigns (e.g., Purple Wednesday).",
+  "placeholders": [
+    "{{ HEADLINE }}",
+    "{{ SUB_HEADLINE }}",
+    "{{ GREETING }}",
+    "{{ BODY_PARAGRAPH_1 }}",
+    "{{ BODY_PARAGRAPH_2 }}",
+    "{{ CTA_BUTTON_LINK }}",
+    "{{ CTA_BUTTON_TEXT }}"
+  ]
+}
+@instructions: [
+  "Replace all {{ PLACEHOLDERS }} with relevant content.",
+  "Ensure the call-to-action (CTA) link is valid."
+]
+-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wear Purple Wednesday!</title>
+    <title>General Campaign Template</title>
     <link rel="icon" href="/images/logo.png" type="image/png">
     <link rel="apple-touch-icon" href="/images/logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -47,21 +67,21 @@
                                 <!-- Headline -->
                                 <tr>
                                     <td align="center" style="font-family: 'Lora', serif; font-size: 36px; font-weight: bold; color: #4C1D95; padding-bottom: 15px;">
-                                        Wear Purple on Wednesdays!
+                                        {{ HEADLINE }}
                                     </td>
                                 </tr>
                                 <!-- Sub-headline -->
                                 <tr>
                                     <td align="center" style="font-family: 'Inter', sans-serif; font-size: 18px; color: #374151; line-height: 1.5; padding-bottom: 30px;">
-                                        Show management we are united and ready to win a fair contract.
+                                        {{ SUB_HEADLINE }}
                                     </td>
                                 </tr>
                                 <!-- Body Text -->
                                 <tr>
                                     <td align="left" style="font-family: 'Inter', sans-serif; font-size: 16px; color: #1F2937; line-height: 1.6;">
-                                        <p style="margin: 0 0 15px;">Hi everyone,</p>
-                                        <p style="margin: 0 0 15px;">As we continue to bargain for the fair wages, benefits, and respect we deserve, it's crucial that we show our collective strength. An easy but powerful way to do this is by wearing purple every Wednesday.</p>
-                                        <p style="margin: 0 0 25px;">When administrators see a sea of purple across campus, it sends a clear and visible message: <strong>we are united, we are organized, and we are serious.</strong> Your participation matters. It shows your coworkers they are not alone and reminds management that they aren't negotiating with a few people, but with all of us.</p>
+                                        <p style="margin: 0 0 15px;">{{ GREETING }},</p>
+                                        <p style="margin: 0 0 15px;">{{ BODY_PARAGRAPH_1 }}</p>
+                                        <p style="margin: 0 0 25px;">{{ BODY_PARAGRAPH_2 }}</p>
                                     </td>
                                 </tr>
                                 <!-- Call to Action Button -->
@@ -70,7 +90,7 @@
                                         <table border="0" cellspacing="0" cellpadding="0">
                                             <tr>
                                                 <td align="center" style="border-radius: 8px; background: linear-gradient(to right, #7C3AED, #6D28D9);">
-                                                    <a href="[LINK-TO-YOUR-INFO-PAGE-OR-SOCIAL-MEDIA]" target="_blank" style="font-size: 16px; font-family: 'Inter', sans-serif; font-weight: bold; color: #ffffff; text-decoration: none; border-radius: 8px; padding: 14px 28px; border: 1px solid #7C3AED; display: inline-block;">Learn More & Share Photos</a>
+                                                    <a href="{{ CTA_BUTTON_LINK }}" target="_blank" style="font-size: 16px; font-family: 'Inter', sans-serif; font-weight: bold; color: #ffffff; text-decoration: none; border-radius: 8px; padding: 14px 28px; border: 1px solid #7C3AED; display: inline-block;">{{ CTA_BUTTON_TEXT }}</a>
                                                 </td>
                                             </tr>
                                         </table>
