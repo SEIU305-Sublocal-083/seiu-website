@@ -1,3 +1,12 @@
+<!--
+@meta {
+  "context": "Redirect page for rescheduled events",
+  "placeholders": {
+    "NEW_PAGE_PATH": "The relative path to the new event page (e.g., /events/new-date.html)"
+  }
+}
+@instructions: Replace {{ NEW_PAGE_PATH }} with the actual path to the new event page.
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,16 +41,16 @@
       SEARCH ENGINE REDIRECT: 
       This is the most important line. 
       - "content="0;..." means the redirect happens immediately (0 seconds).
-      - "url=..." is the destination. CHANGE THIS to the path of your new page.
+      - "url=..." is the destination.
     -->
-    <meta http-equiv="refresh" content="0; url=/events/NEW-EVENT-FILENAME.html">
+    <meta http-equiv="refresh" content="0; url={{ NEW_PAGE_PATH }}">
 
     <!-- 
       CANONICAL LINK: 
       This tells search engines like Google that the new page is the "official" version. 
-      This is very important for SEO. CHANGE THIS to the full URL of your new page.
+      This is very important for SEO.
     -->
-    <link rel="canonical" href="https://seiu.jaxsnjohnson.com/events/NEW-EVENT-FILENAME.html" />
+    <link rel="canonical" href="https://www.local083.org{{ NEW_PAGE_PATH }}" />
 
     <title>Page Has Moved</title>
     <script src="https://cdn.tailwindcss.com"></script>
@@ -56,7 +65,7 @@
         <h1 class="text-3xl font-bold text-gray-800 mb-4">This event has been rescheduled.</h1>
         <p class="text-gray-600">You are being automatically redirected to the new page.</p>
         <p class="mt-4 text-sm text-gray-500">
-            If you are not redirected, <a href="/events/NEW-EVENT-FILENAME.html" class="text-purple-600 hover:underline">please click here</a>.
+            If you are not redirected, <a href="{{ NEW_PAGE_PATH }}" class="text-purple-600 hover:underline">please click here</a>.
         </p>
     </div>
 </body>
