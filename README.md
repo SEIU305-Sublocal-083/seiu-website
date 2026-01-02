@@ -98,7 +98,6 @@ Each news item in `news.json` is an object with the following properties:
 
 ```json
 {
-  "date": "YYYY-MM-DD",
   "title": "News Story Title",
   "description": "A brief summary of the news.",
   "url": "/news/YYYY-MM-DD-short-title.html",
@@ -115,7 +114,6 @@ Each news item in `news.json` is an object with the following properties:
 }
 ```
 
-*   `date`: The publication date in `YYYY-MM-DD` format. This field is deprecated and will be removed in a future update. Please use `publishedAt` instead.
 *   `title`: The headline of the news story.
 *   `description`: A short summary.
 *   `url`: The path to the news story's HTML file.
