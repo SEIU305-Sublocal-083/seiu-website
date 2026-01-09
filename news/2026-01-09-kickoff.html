@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <!-- Anti-FOUC (Flash of Unstyled Content) Fix -->
+    <style id="anti-fouc">html{visibility:hidden;opacity:0;}</style>
+    <script>
+    (function(){
+      var s = document.getElementById('anti-fouc');
+      var r = function(){
+        if(s){
+          s.remove();
+          document.documentElement.style.visibility='visible';
+          document.documentElement.style.opacity='1';
+        }
+      };
+      // Safety timeout in case of script error or slow load
+      setTimeout(r, 1500);
+
+      // Wait for DOMContentLoaded, then give a small buffer for Tailwind to parse
+      document.addEventListener('DOMContentLoaded', function(){
+        setTimeout(r, 100);
+      });
+    })();
+    </script>
+    <noscript>
+      <style>html{visibility:visible!important;opacity:1!important;}</style>
+    </noscript>
+    <!-- End Anti-FOUC Fix -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Join the fight for a fair contract. Recap of the Fighting for Higher Ed survey and the path to COLA and benefits. Attend the Jan 15 meeting.">
+    <meta name="author" content="SEIU Local 503 at OSU">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.local083.org/news/2026-01-09-kickoff.html">
+    <meta property="og:title" content="2026 Kickoff: Why This Year Matters">
+    <meta property="og:description" content="Join the fight for a fair contract. Recap of the Fighting for Higher Ed survey and the path to COLA and benefits. Attend the Jan 15 meeting.">
+    <meta property="og:image" content="https://www.local083.org/images/01d4b1b3-b65e-4614-9618-4eeba50f6407-Barg-Update.webp">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.local083.org/news/2026-01-09-kickoff.html">
+    <meta property="twitter:title" content="2026 Kickoff: Why This Year Matters">
+    <meta property="twitter:description" content="Join the fight for a fair contract. Recap of the Fighting for Higher Ed survey and the path to COLA and benefits. Attend the Jan 15 meeting.">
+    <meta property="twitter:image" content="https://www.local083.org/images/01d4b1b3-b65e-4614-9618-4eeba50f6407-Barg-Update.webp">
+
+    <title>2026 Kickoff: Why This Year Matters - SEIU Local 503, OSU</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="/images/logo.png" type="image/png">
+    <link rel="apple-touch-icon" href="/images/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Lora:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --brand-purple-dark: #4C1D95; /* Deep Purple */
+            --brand-purple: #7C3AED;      /* Vibrant Purple */
+            --brand-purple-light: #EDE9FE; /* Lighter Lavender for high contrast */
+            --brand-dark: #111827;         /* Near-black for high contrast text/bg */
+            --brand-light: #F9FAFB;        /* Off-white Background */
+            --text-primary: #1F2937;
+            --text-secondary: #374151;     /* Darker secondary text for better contrast */
+            --border-color: #D1D5DB;
+        }
+
+        html {
+            scroll-padding-top: 80px; /* Offset for sticky header */
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--brand-light);
+            color: var(--text-primary);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Lora', serif;
+            color: var(--brand-purple-dark);
+        }
+
+        /* Accessibility: Clear focus indicators for all interactive elements */
+        a:focus-visible, button:focus-visible, details:focus-visible, input:focus-visible, textarea:focus-visible {
+            outline: 3px solid var(--brand-purple);
+            outline-offset: 2px;
+            border-radius: 4px;
+        }
+        
+        .btn {
+            @apply font-bold py-3 px-6 rounded-lg transition-all duration-300 ease-in-out transform hover:scale-105;
+        }
+        .btn-primary {
+            @apply bg-gradient-to-r from-brand-purple to-violet-600 text-white shadow-md hover:shadow-lg;
+        }
+        .btn-secondary {
+            @apply bg-brand-dark text-white hover:bg-black;
+        }
+        .btn-outline {
+             @apply bg-white text-brand-purple border-2 border-brand-purple hover:bg-brand-purple hover:text-white;
+        }
+
+        /* Carousel Styles */
+        .carousel-slide {
+            display: none;
+        }
+        .carousel-slide.active {
+            display: block;
+        }
+
+        /* Custom Tailwind config for our CSS variables */
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-purple-dark': 'var(--brand-purple-dark)',
+                        'brand-purple': 'var(--brand-purple)',
+                        'brand-purple-light': 'var(--brand-purple-light)',
+                        'brand-dark': 'var(--brand-dark)',
+                        'brand-light': 'var(--brand-light)',
+                        'text-primary': 'var(--text-primary)',
+                        'text-secondary': 'var(--text-secondary)',
+                        'border-color': 'var(--border-color)',
+                    }
+                }
+            }
+        }
+    </style>
+</head>
+<body class="bg-brand-light">
+
+    <!-- Header -->
+    <header class="bg-white/80 backdrop-blur-lg border-b border-border-color sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="/index.html" class="flex items-center space-x-2">
+                <span class="text-2xl font-bold text-brand-purple-dark">SEIU 503</span>
+                <span class="text-lg text-text-secondary hidden md:block">| Oregon State University</span>
+            </a>
+            <div class="hidden lg:flex space-x-8">
+                <a href="/about.html" class="text-text-secondary hover:text-brand-purple transition-colors">About</a>
+                <a href="/events.html" class="text-text-secondary hover:text-brand-purple transition-colors">Events</a>
+                <a href="/news.html" class="text-brand-purple font-bold">News</a>
+                <a href="/resources.html" class="text-text-secondary hover:text-brand-purple transition-colors">Resources & Rights</a>
+                <a href="/leadership.html" class="text-text-secondary hover:text-brand-purple transition-colors">Leadership</a>
+                <a href="/contact.html" class="text-text-secondary hover:text-brand-purple transition-colors">Contact</a>
+            </div>
+            <div class="lg:hidden">
+                <button id="mobile-menu-button" class="text-text-secondary hover:text-brand-purple focus:outline-none" aria-label="Open menu">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden absolute top-full left-0 w-full bg-white border-t border-border-color shadow-lg">
+            <a href="/about.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">About</a>
+            <a href="/events.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Events</a>
+            <a href="/news.html" class="block text-center py-3 px-6 text-lg text-brand-purple bg-brand-purple-light font-semibold">News</a>
+            <a href="/resources.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Resources & Rights</a>
+            <a href="/leadership.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Leadership</a>
+            <a href="/contact.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Contact</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-16">
+        <article class="max-w-4xl mx-auto bg-white p-8 md:p-12 rounded-xl border border-border-color">
+
+            <!-- Article Header -->
+            <header class="text-center border-b border-border-color pb-8 mb-8">
+                <p class="text-brand-purple font-bold mb-2">KICKOFF</p>
+                <h1 class="text-4xl md:text-5xl font-bold">2026 Kickoff: Why This Year Matters</h1>
+                <div class="mt-6 text-center">
+                    <p class="text-text-secondary text-base">
+                        By <span class="font-semibold">Jax SN Johnson, Communications Chair</span>
+                    </p>
+                    <div class="mt-2 text-sm text-text-secondary">
+                        <details>
+                            <summary class="cursor-pointer">Last updated: <time datetime="2026-01-09">January 9, 2026</time></summary>
+                            <div class="mt-2 text-xs text-gray-500">
+                                <p>Created: 2026-01-08</p>
+                                <p>Published: 2026-01-09</p>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Article Body -->
+            <img src="/images/b568a7b5-d177-4336-af4c-beb1f8e16315-winter-mu-2026-kickoff.webp" alt="A vibrant sunrise over the Memorial Union building, featuring a gradient orange sky, distant mountains, and silhouette trees on a clear and cold winter morning." class="w-full h-auto object-cover rounded-lg mb-8">
+             <div class="p-6 md:p-10 text-lg leading-relaxed text-gray-700">
+                <p class="mb-6">
+                    The results of our <strong>2026 Survey</strong> are in, and the mandate from the membership is undeniable: <strong>it is time to stop asking and start demanding.</strong> 
+                </p>
+                <p class="mb-6">
+                    Inflation hasn't waited. Rent in Corvallis hasn't waited. Yet our wages have lagged behind the cost of simply living where we work. This university runs on our labor, from the research labs to the dining halls, yet we are constantly asked to do more with less. That ends with this contract. 
+                </p>
+
+                <h2 class="text-2xl font-header font-bold text-seiu-purple">
+                    Your Mandate: The Top 3 Priorities
+                </h2>
+                <p class="mb-4">
+                    So many of you shared your stories. We are not building a wish list; this is our roadmap for what we want:
+                </p>
+                <ul class="list-none space-y-3 mb-8">
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-green-600 mt-1 mr-3 text-xl"></i>
+                        <span><strong>Real COLA:</strong> Cost of Living Adjustments that reflect the <em>actual</em> price of groceries and housing in Oregon—not just what the university says they can spare.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-green-600 mt-1 mr-3 text-xl"></i>
+                        <span><strong>Healthcare Security:</strong> Defending our premiums. In a high-stress environment, our health benefits are the line in the sand we will not cross.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-green-600 mt-1 mr-3 text-xl"></i>
+                        <span><strong>Respect & Safety:</strong> Enforceable protections against unsafe workloads. No more "other duties as assigned" without fair compensation or safety protocols.</span>
+                    </li>
+                </ul>
+
+                <h2 class="text-2xl font-header font-bold text-seiu-purple">
+                    Classified Staff: The Engine of Oregon State University
+                </h2>
+                <p class="mb-6">
+                    Since 1868, classified staff have been the heartbeat of Oregon State University. Presidents change. Deans move on. But we remain. We are the ones who process the payroll, maintain the grounds, support the students, and keep the research running.
+                </p>
+                <p class="mb-6">
+                    We take pride in our work. Now, we are fighting for a contract that takes pride in <strong>us</strong>. A strong union contract isn't just good for staff—it is essential for a functioning university.
+                </p>
+
+                <!-- Call to Action Box -->
+                <div class="bg-purple-50 border-2 border-purple-100 rounded-xl p-6 md:p-8 mt-10 mb-6 text-center shadow-sm">
+                    <i class="fas fa-users text-4xl text-seiu-purple mb-4"></i>
+                    <h3 class="text-2xl font-header font-bold text-gray-900 mb-2">We Need You in the Room</h3>
+                    <p class="mb-6 text-gray-600 max-w-2xl mx-auto">
+                        We will talk about the bargaining platform and have a guest presention from our SEIU 503 President Jonny Earl at this next General Membership Meeting. <strong>Management notices how many are at these meetings.</strong> If we show up empty, they offer empty. If we show up united, they listen.
+                    </p>
+                    <a href="../events/2026-01-15-Membership-Meeting.html" class="inline-block bg-purple-800 text-white hover:bg-purple-800 text-lg font-bold py-3 px-8 rounded-full transition-all shadow-md hover:shadow-lg transform hover:-translate-y-1">
+                        <i class="fas fa-calendar-check mr-2"></i> Count Me In: Jan 15
+                    </a>
+                    <p class="mt-4 text-sm text-gray-500">
+                        Can't make it? <a href="../contact.html" class="text-seiu-purple underline hover:text-seiu-gold">Contact your steward</a> to ensure your voice is counted.
+                    </p>
+                </div>
+
+                <div class="border-t border-gray-200 mt-8 pt-6">
+                    <p class="text-sm text-gray-500 italic">
+                        Author: Jax SN Johnson | Filed under: <a href="#" class="text-seiu-purple hover:underline">Bargaining</a>, <a href="#" class="text-seiu-purple hover:underline">Updates</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark text-white pt-12 pb-8">
+        <div class="container mx-auto px-6">
+            <div class="mt-10 pt-8 border-t border-gray-700 text-center">
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Column 1: About the Union -->
+                <div class="md:col-span-2 lg:col-span-1">
+                    <div class="flex items-center mb-4">
+                        <img src="/images/logo.png" alt="SEIU 503 Logo" class="h-12 w-12 mr-3 bg-white p-1 rounded">
+                        <div>
+                            <h3 class="text-xl font-bold">SEIU Local 503</h3>
+                            <p class="text-gray-400 text-sm">Oregon State University</p>
+                        </div>
+                    </div>
+                    <p class="text-black leading-relaxed">Representing the classified employees of Oregon State University. We fight for fair contracts, defend workplace rights, and build a united community.</p>
+                </div>
+    
+                <!-- Column 2: Quick Links -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="/about.html" class="text-black hover:text-gray-500 transition-colors">About Us</a></li>
+                        <li><a href="/events.html" class="text-black hover:text-gray-500 transition-colors">Events</a></li>
+                        <li><a href="/news.html" class="text-black hover:text-gray-500 transition-colors">News</a></li>
+                        <li><a href="/leadership.html" class="text-black hover:text-gray-500 transition-colors">Leadership</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Column 3: Resources -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase"><a href="/resources.html" class="hover:text-gray-500 transition-colors">Resources</a></h4>
+                    <ul class="space-y-3">
+                        <li><a href="/resources.html" class="text-black hover:text-gray-500 transition-colors">Resources & Rights</a></li>
+                        <li><a href="/resources/seiu_cba_2022-2026.pdf" class="text-black hover:text-gray-500 transition-colors">Our Contract (PDF)</a></li>
+                        <li><a href="/resources/stewards.html" class="text-black hover:text-gray-500 transition-colors">Find a Steward</a></li>
+                        <li><a href="/resources/weingarten-rights.html" class="text-black hover:text-gray-500 transition-colors">Weingarten Rights</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Column 4: Contact -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase"><a href="/contact.html" class="hover:text-gray-500 transition-colors">Contact Us</a></h4>
+                     <ul class="space-y-3 text-black">
+                        <li class="flex items-start">
+                            <span class="mr-2 mt-1">✉️</span> <!-- Mail icon -->
+                            <a href="mailto:083execteam@seiu503.org" class="hover:text-gray-500 transition-colors">083execteam@seiu503.org</a>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-2 mt-1">✉️</span> <!-- Mail icon -->
+                            <a href="mailto:083stewards@seiu503.org" class="hover:text-gray-500 transition-colors">083stewards@seiu503.org</a>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-2 mt-1">&#128205;</span> <!-- Pin icon -->
+                            <a href="https://maps.app.goo.gl/9TWRZ9F4wjVjacsZ7" class="hover:text-gray-500 transition-colors">Adams Hall, Room 109<br>Corvallis, OR 97331</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+    
+            <!-- Bottom Bar -->
+            <div class="mt-10 pt-8 border-t border-gray-700 text-center">
+                <p class="text-gray-400 text-sm">&copy; 2025 SEIU Local 503, Oregon State University. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // --- Mobile Menu Toggle ---
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = document.querySelectorAll('#mobile-menu a');
+
+        mobileMenuButton.addEventListener('click', () => {
+            const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+            mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenuButton.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        // --- Image Carousel Logic ---
+        const slides = document.querySelectorAll('.carousel-slide');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+        let currentSlide = 0;
+
+        function showSlide(n) {
+            slides.forEach((slide, index) => {
+                slide.classList.remove('active');
+                if (index === n) {
+                    slide.classList.add('active');
+                }
+            });
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        nextBtn.addEventListener('click', nextSlide);
+        prevBtn.addEventListener('click', prevSlide);
+
+        // Auto-play functionality (optional)
+        // setInterval(nextSlide, 5000); // Change slide every 5 seconds
+
+    </script>
+</body>
+</html>

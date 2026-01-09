@@ -1,5 +1,21 @@
 [
   {
+    "title": "2026 Kickoff: Why This Year Matters",
+    "description": "Join the fight for a fair contract. Recap of the Fighting for Higher Ed survey and the path to COLA and benefits. Attend the Jan 15 meeting.",
+    "url": "/news/2026-01-09-kickoff.html",
+    "image": "/images/b568a7b5-d177-4336-af4c-beb1f8e16315-winter-mu-2026-kickoff.webp",
+    "alt": "A vibrant sunrise over the Memorial Union building, featuring a gradient orange sky, distant mountains, and silhouette trees on a clear and cold winter morning.",
+    "tags": ["Bargaining", "Contract"],
+    "author": {
+      "name": "SEIU 503 Sublocal 083",
+      "title": "Union Leadership"
+    },
+    "publishedAt": "2026-01-09",
+    "createdAt": "2026-01-08",
+    "updatedAt": "2026-01-09",
+    "featured": true
+  },
+  {
     "title": "Fighting for Higher Education",
     "description": "Join classified workers at Oregon’s Public Universities in the fight for fair wages, benefit protections, and union power. Sign the petition today!",
     "url": "/news/2025-12-15-fighting-for-higher-education.html",
@@ -13,7 +29,7 @@
     "publishedAt": "2025-12-15",
     "createdAt": "2025-12-15",
     "updatedAt": "2025-12-15",
-    "featured": true
+    "featured": false
   },
   {
     "title": "Your Voice, Our Contract: Bargaining Survey Reminder",
