@@ -317,7 +317,7 @@
 
                 // Loop through articles and create HTML
                 articles.forEach(article => {
-                    const formattedDate = formatDate(article.date);
+                    const formattedDate = formatDate(article.updatedAt);
                     // Use the title as alt text if no alt text is provided in JSON
                     const altText = article.alt || article.title; 
 
