@@ -374,7 +374,6 @@
             const surveyModal = document.getElementById('bargaining-survey-modal');
             const modalContent = document.getElementById('modal-content');
             const closeButton = document.getElementById('modal-close-button');
-            const doneButton = document.getElementById('modal-btn-done');
             
             // Function to open the modal with a smooth animation
             const openModal = () => {
@@ -399,11 +398,11 @@
             }
 
             // --- Event listeners to close the modal ---
-            // Close with the 'X' button or the "Done" button.
+            // Close with the 'X' button.
             // The other buttons are links and will navigate away.
-            [closeButton, doneButton].forEach(btn => {
-                btn.addEventListener('click', closeModal);
-            });
+            if (closeButton) {
+                closeButton.addEventListener('click', closeModal);
+            }
 
             // Close by clicking the dark background overlay
             surveyModal.addEventListener('click', (event) => {
@@ -417,13 +416,14 @@
                 const eventsContainer = document.getElementById('upcoming-events-container');
                 try {
                     const response = await fetch('/events/events.json');
+                    if (!response.ok) throw new Error('Network response was not ok');
                     const events = await response.json();
                     const today = new Date();
                     today.setHours(0, 0, 0, 0);
 
                     const upcomingEvents = events
-                        .filter(event => new Date(event.date.replace(/-/g, '\/')) >= today)
-                        .sort((a, b) => new Date(a.date) - new Date(b.date))
+                        .filter(event => new Date(event.date.replace(/-/g, '/')) >= today)
+                        .sort((a, b) => new Date(a.date.replace(/-/g, '/')) - new Date(b.date.replace(/-/g, '/')))
                         .slice(0, 3);
 
                     if (upcomingEvents.length > 0) {
@@ -476,10 +476,11 @@
                 const newsGridContainer = document.getElementById('news-grid-container');
                  try {
                     const response = await fetch('/news/news.json');
+                    if (!response.ok) throw new Error('Network response was not ok');
                     const newsItems = await response.json();
 
                     const sortedNews = newsItems
-                        .sort((a, b) => new Date(b.date) - new Date(a.date))
+                        .sort((a, b) => new Date(b.publishedAt.replace(/-/g, '/')) - new Date(a.publishedAt.replace(/-/g, '/')))
                         .slice(0, 3);
                     
                     if (sortedNews.length > 0) {
@@ -488,7 +489,7 @@
 
                         const mainStoryHtml = `
                             <div class="lg:col-span-1 bg-white rounded-xl border border-border-color p-6 group">
-                                <p class="text-text-secondary text-sm mb-2">${new Date(mainStory.date.replace(/-/g, '\/')).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</p>
+                                <p class="text-text-secondary text-sm mb-2">${new Date(mainStory.publishedAt.replace(/-/g, '/')).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</p>
                                 <h3 class="font-bold text-2xl md:text-3xl mb-3">${mainStory.title}</h3>
                                 <p class="text-text-secondary">${mainStory.description}</p>
                                 <a href="${mainStory.url}" class="text-brand-purple font-semibold mt-4 inline-block group-hover:underline">Read More →</a>
@@ -496,7 +497,7 @@
                         
                         const sideStoriesHtml = sideStories.map(story => `
                             <div class="bg-white rounded-xl border border-border-color p-6 group">
-                                <p class="text-text-secondary text-sm mb-2">${new Date(story.date.replace(/-/g, '\/')).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</p>
+                                <p class="text-text-secondary text-sm mb-2">${new Date(story.publishedAt.replace(/-/g, '/')).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</p>
                                 <h3 class="font-bold text-xl mb-3">${story.title}</h3>
                                 <p class="text-text-secondary">${story.description}</p>
                                 <a href="${story.url}" class="text-brand-purple font-semibold mt-4 inline-block group-hover:underline">Learn More →</a>
