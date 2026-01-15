@@ -1,6 +1,46 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
+<!--
+@meta: {
+  "type": "template",
+  "subtype": "Bargaining Update",
+  "context": "Use this template for creating bargaining update pages.",
+  "placeholders": [
+    "{{ META_DESCRIPTION }}",
+    "{{ PAGE_TITLE }}",
+    "{{ UPDATE_TYPE }}",
+    "{{ HEADLINE }}",
+    "{{ DATE }}",
+    "{{ IMAGE_URL }}",
+    "{{ IMAGE_ALT }}",
+    "{{ LOCATION }}",
+    "{{ INTRO_TEXT }}",
+    "{{ BODY_PARAGRAPH }}",
+    "{{ HIGHLIGHTS_INTRO }}",
+    "{{ HIGHLIGHT_ITEM_1_BOLD }}",
+    "{{ HIGHLIGHT_ITEM_1_TEXT }}",
+    "{{ HIGHLIGHT_ITEM_2_BOLD }}",
+    "{{ HIGHLIGHT_ITEM_2_TEXT }}",
+    "{{ HIGHLIGHT_ITEM_3_BOLD }}",
+    "{{ HIGHLIGHT_ITEM_3_TEXT }}",
+    "{{ QUOTE_TEXT }}",
+    "{{ QUOTE_AUTHOR }}",
+    "{{ SECTION_TITLE }}",
+    "{{ SECTION_BODY }}",
+    "{{ CTA_TITLE }}",
+    "{{ CTA_TEXT }}",
+    "{{ CTA_BUTTON_TEXT }}",
+    "{{ CTA_LINK }}"
+  ]
+}
+@instructions: [
+  "Replace all {{ PLACEHOLDERS }} with relevant content.",
+  "Duplicate list items or sections as needed to fit the content length.",
+  "Ensure the DATE follows the format 'Month Day, Year'.",
+  "Update the meta description and title tag to match the specific update."
+]
+-->
     <!-- Anti-FOUC (Flash of Unstyled Content) Fix -->
     <style id="anti-fouc">html{visibility:hidden;opacity:0;}</style>
     <script>
@@ -29,9 +69,9 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Bargaining Update: Progress on key issues as negotiations with OSU management continue.">
+    <meta name="description" content="{{ META_DESCRIPTION }}">
     <meta name="author" content="SEIU Local 503 at OSU">
-    <title>Bargaining Update: Tentative Agreement Reached! - SEIU Local 503, OSU</title>
+    <title>{{ PAGE_TITLE }} - SEIU Local 503, OSU</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="icon" href="/images/logo.png" type="image/png">
     <link rel="apple-touch-icon" href="/images/logo.png">
@@ -145,43 +185,41 @@
             
             <!-- Article Header -->
             <header class="text-center border-b border-border-color pb-8 mb-8">
-                <p class="text-brand-purple font-bold mb-2">BARGAINING UPDATE</p>
-                <h1 class="text-4xl md:text-5xl font-bold">Tentative Agreement Reached!</h1>
-                <p class="mt-4 text-lg text-text-secondary">Published on August 1, 2025</p>
+                <p class="text-brand-purple font-bold mb-2">{{ UPDATE_TYPE }}</p>
+                <h1 class="text-4xl md:text-5xl font-bold">{{ HEADLINE }}</h1>
+                <p class="mt-4 text-lg text-text-secondary">Published on {{ DATE }}</p>
             </header>
 
             <!-- Article Body -->
             <div class="prose max-w-none text-text-secondary text-lg leading-relaxed">
-                <img src="https://placehold.co/900x500/EDE9FE/4C1D95?text=Solidarity+Works" alt="Members celebrating the tentative agreement" class="w-full h-auto object-cover rounded-lg mb-8">
+                <img src="{{ IMAGE_URL }}" alt="{{ IMAGE_ALT }}" class="w-full h-auto object-cover rounded-lg mb-8">
                 
-                <p><strong>Corvallis, OR</strong> — After months of intense negotiations, your SEIU 503 bargaining team is thrilled to announce that we have reached a Tentative Agreement (TA) with Oregon State University management on a new two-year contract. This agreement represents a significant victory and is a direct result of the incredible solidarity shown by members like you across campus.</p>
+                <p><strong>{{ LOCATION }}</strong> — {{ INTRO_TEXT }}</p>
 
-                <p>From wearing purple on Wednesdays to attending rallies and talking with your coworkers, your actions sent a powerful message to management that we were united in our fight for a fair contract. This TA would not have been possible without you.</p>
+                <p>{{ BODY_PARAGRAPH }}</p>
 
-                <h3 class="text-2xl font-bold mt-8 mb-4 text-brand-purple-dark">Highlights of the Agreement</h3>
-                <p>While the full text will be available soon, here are some of the key wins we secured in this Tentative Agreement:</p>
+                <h3 class="text-2xl font-bold mt-8 mb-4 text-brand-purple-dark">Highlights</h3>
+                <p>{{ HIGHLIGHTS_INTRO }}</p>
                 <ul class="list-disc pl-5 space-y-2">
-                    <li><strong>Significant Wage Increases:</strong> A guaranteed cost-of-living adjustment (COLA) for all members in both years of the contract, plus additional step increases.</li>
-                    <li><strong>Healthcare Protections:</strong> We successfully fought back against proposals that would have increased healthcare costs for members and their families.</li>
-                    <li><strong>Improved Safety Language:</strong> New contract language that strengthens workplace safety protocols and gives members a stronger voice in safety committees.</li>
-                    <li><strong>Fair Workload Protections:</strong> Clearer processes for addressing and resolving workload issues to prevent burnout.</li>
+                    <li><strong>{{ HIGHLIGHT_ITEM_1_BOLD }}:</strong> {{ HIGHLIGHT_ITEM_1_TEXT }}</li>
+                    <li><strong>{{ HIGHLIGHT_ITEM_2_BOLD }}:</strong> {{ HIGHLIGHT_ITEM_2_TEXT }}</li>
+                    <li><strong>{{ HIGHLIGHT_ITEM_3_BOLD }}:</strong> {{ HIGHLIGHT_ITEM_3_TEXT }}</li>
                 </ul>
 
                 <blockquote class="border-l-4 border-brand-purple pl-6 py-2 my-8 italic text-xl">
-                    "This agreement is a testament to what we can achieve when we stand together. It's a win for every classified employee at OSU and a major step toward a more just and equitable campus."
-                    <cite class="block not-italic mt-2 text-base">— Russ Born, President</cite>
+                    "{{ QUOTE_TEXT }}"
+                    <cite class="block not-italic mt-2 text-base">— {{ QUOTE_AUTHOR }}</cite>
                 </blockquote>
 
-                <h3 class="text-2xl font-bold mt-8 mb-4 text-brand-purple-dark">What Happens Next? Ratification Vote!</h3>
-                <p>A Tentative Agreement means our bargaining team is recommending this contract for approval, but it is not final until members vote to accept it. All SEIU 503 members will have the opportunity to vote on whether to ratify this new contract.</p>
-                <p>Information sessions will be held next week to review the TA in detail and answer any questions you may have. Details on the sessions and the electronic voting process will be sent out via email shortly. Please make sure your contact information is up to date to ensure you receive your ballot.</p>
+                <h3 class="text-2xl font-bold mt-8 mb-4 text-brand-purple-dark">{{ SECTION_TITLE }}</h3>
+                <p>{{ SECTION_BODY }}</p>
             </div>
 
             <!-- Action CTA -->
             <div class="mt-12 text-center border-t border-border-color pt-8">
-                <h3 class="text-2xl font-bold">Your Voice Matters!</h3>
-                <p class="text-text-secondary my-4">Review the full details and prepare to cast your vote.</p>
-                <a href="#" class="btn btn-primary">View Full TA Summary (PDF)</a>
+                <h3 class="text-2xl font-bold">{{ CTA_TITLE }}</h3>
+                <p class="text-text-secondary my-4">{{ CTA_TEXT }}</p>
+                <a href="{{ CTA_LINK }}" class="btn btn-primary">{{ CTA_BUTTON_TEXT }}</a>
             </div>
 
         </article>

@@ -1,6 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!--
+@meta: {
+  "type": "template",
+  "subtype": "Marketing Email - Bargaining Update",
+  "context": "Use this template for email marketing campaigns about bargaining.",
+  "placeholders": [
+    "{{ HEADLINE }}",
+    "{{ SUB_HEADLINE }}",
+    "{{ GREETING }}",
+    "{{ INTRO_TEXT }}",
+    "{{ KEY_ISSUES_TITLE }}",
+    "{{ KEY_ISSUE_1 }}",
+    "{{ KEY_ISSUE_2 }}",
+    "{{ KEY_ISSUE_3 }}",
+    "{{ CLOSING_TEXT }}",
+    "{{ CTA_BUTTON_LINK }}",
+    "{{ CTA_BUTTON_TEXT }}"
+  ]
+}
+@instructions: [
+  "Replace all {{ PLACEHOLDERS }} with relevant content.",
+  "Ensure the call-to-action (CTA) link is valid."
+]
+-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bargaining Update</title>
@@ -47,28 +71,28 @@
                                 <!-- Headline -->
                                 <tr>
                                     <td align="center" style="font-family: 'Lora', serif; font-size: 36px; font-weight: bold; color: #4C1D95; padding-bottom: 15px;">
-                                        Bargaining Update
+                                        {{ HEADLINE }}
                                     </td>
                                 </tr>
                                 <!-- Sub-headline -->
                                 <tr>
                                     <td align="center" style="font-family: 'Inter', sans-serif; font-size: 18px; color: #374151; line-height: 1.5; padding-bottom: 30px;">
-                                        The latest news from the negotiating table.
+                                        {{ SUB_HEADLINE }}
                                     </td>
                                 </tr>
                                 <!-- Body Text -->
                                 <tr>
                                     <td align="left" style="font-family: 'Inter', sans-serif; font-size: 16px; color: #1F2937; line-height: 1.6;">
-                                        <p style="margin: 0 0 15px;">Hi members,</p>
-                                        <p style="margin: 0 0 15px;">Your bargaining team met with OSU management this week to continue negotiations for our next contract. We presented our proposal on wages, emphasizing the need for a significant cost-of-living adjustment to keep up with inflation. Management has yet to provide a counter-proposal on this key issue.</p>
-                                        <p style="margin: 0 0 15px;"><strong>Key Issues Discussed:</strong>
+                                        <p style="margin: 0 0 15px;">{{ GREETING }},</p>
+                                        <p style="margin: 0 0 15px;">{{ INTRO_TEXT }}</p>
+                                        <p style="margin: 0 0 15px;"><strong>{{ KEY_ISSUES_TITLE }}:</strong>
                                             <ul style="margin: 10px 0; padding-left: 25px;">
-                                                <li style="margin-bottom: 10px;">Fair Wages and COLA</li>
-                                                <li style="margin-bottom: 10px;">Protecting Healthcare Benefits</li>
-                                                <li style="margin-bottom: 10px;">Improved Workplace Safety Language</li>
+                                                <li style="margin-bottom: 10px;">{{ KEY_ISSUE_1 }}</li>
+                                                <li style="margin-bottom: 10px;">{{ KEY_ISSUE_2 }}</li>
+                                                <li style="margin-bottom: 10px;">{{ KEY_ISSUE_3 }}</li>
                                             </ul>
                                         </p>
-                                        <p style="margin: 0 0 25px;">Our power at the table comes from you. The more united we are, the stronger our position. The next bargaining session is scheduled for [Date of Next Session]. Stay tuned for more updates.</p>
+                                        <p style="margin: 0 0 25px;">{{ CLOSING_TEXT }}</p>
                                     </td>
                                 </tr>
                                 <!-- Call to Action Button -->
@@ -77,7 +101,7 @@
                                         <table border="0" cellspacing="0" cellpadding="0">
                                             <tr>
                                                 <td align="center" style="border-radius: 8px; background: linear-gradient(to right, #7C3AED, #6D28D9);">
-                                                    <a href="[LINK-TO-BARGAINING-PAGE-ON-WEBSITE]" target="_blank" style="font-size: 16px; font-family: 'Inter', sans-serif; font-weight: bold; color: #ffffff; text-decoration: none; border-radius: 8px; padding: 14px 28px; border: 1px solid #7C3AED; display: inline-block;">Get Full Details & Show Support</a>
+                                                    <a href="{{ CTA_BUTTON_LINK }}" target="_blank" style="font-size: 16px; font-family: 'Inter', sans-serif; font-weight: bold; color: #ffffff; text-decoration: none; border-radius: 8px; padding: 14px 28px; border: 1px solid #7C3AED; display: inline-block;">{{ CTA_BUTTON_TEXT }}</a>
                                                 </td>
                                             </tr>
                                         </table>

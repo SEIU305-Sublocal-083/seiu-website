@@ -1,6 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!--
+@meta: {
+  "type": "template",
+  "subtype": "Event Notice",
+  "context": "Use this HTML email template for announcing events.",
+  "placeholders": [
+    "{{ EVENT_TITLE }}",
+    "{{ EVENT_DATE_TIME }}",
+    "{{ EVENT_LOCATION }}",
+    "{{ EVENT_AUDIENCE }}",
+    "{{ BODY_PARAGRAPH_1 }}",
+    "{{ AGENDA_SECTION_TITLE }}",
+    "{{ AGENDA_INTRO_TEXT }}",
+    "{{ LIST_ITEM_1 }}",
+    "{{ LIST_ITEM_2 }}",
+    "{{ BUTTON_LINK }}",
+    "{{ BUTTON_TEXT }}",
+    "{{ SENDER_NAME }}"
+  ]
+}
+@instructions: [
+  "Replace all {{ PLACEHOLDERS }} with relevant content.",
+  "Ensure links are valid and absolute URLs.",
+  "Duplicate list items as needed."
+]
+-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Event Notice Template</title>
@@ -50,19 +76,19 @@
                                         <table border="0" cellpadding="0" cellspacing="0" width="100%" style="font-size: 16px; color: #1F2937;">
                                             <tr>
                                                 <td width="90" valign="top" style="font-weight: bold; padding-right: 10px; padding-bottom: 10px; text-align: right;">WHAT:</td>
-                                                <td style="padding-bottom: 10px;">[Event Title]</td>
+                                                <td style="padding-bottom: 10px;">{{ EVENT_TITLE }}</td>
                                             </tr>
                                             <tr>
                                                 <td width="90" valign="top" style="font-weight: bold; padding-right: 10px; padding-bottom: 10px; text-align: right;">WHEN:</td>
-                                                <td style="padding-bottom: 10px;">[Day, Date, Time]</td>
+                                                <td style="padding-bottom: 10px;">{{ EVENT_DATE_TIME }}</td>
                                             </tr>
                                             <tr>
                                                 <td width="90" valign="top" style="font-weight: bold; padding-right: 10px; padding-bottom: 10px; text-align: right;">WHERE:</td>
-                                                <td style="padding-bottom: 10px;">[Location, Room Number, and/or Zoom Link]</td>
+                                                <td style="padding-bottom: 10px;">{{ EVENT_LOCATION }}</td>
                                             </tr>
                                              <tr>
                                                 <td width="90" valign="top" style="font-weight: bold; padding-right: 10px; text-align: right;">WHO:</td>
-                                                <td>[Audience, e.g., All Members, Stewards Only]</td>
+                                                <td>{{ EVENT_AUDIENCE }}</td>
                                             </tr>
                                         </table>
                                     </td>
@@ -71,14 +97,14 @@
                                 <tr>
                                     <td align="left" style="padding-top: 20px; font-family: 'Inter', sans-serif; font-size: 16px; color: #1F2937; line-height: 1.6;">
                                         <p>Hello everyone,</p>
-                                        <p>[This is a standard paragraph. Use it for your main event description. You can make text <strong>bold</strong> or <em>italic</em> as needed. You can also include <a href="[URL]" target="_blank" style="color: #7C3AED;">inline links</a>.]</p>
+                                        <p>{{ BODY_PARAGRAPH_1 }}</p>
                                         
-                                        <h3>Agenda / What to Expect</h3>
-                                        <p>[Use subheadings to break your content into logical sections, making it easier to read.]</p>
+                                        <h3>{{ AGENDA_SECTION_TITLE }}</h3>
+                                        <p>{{ AGENDA_INTRO_TEXT }}</p>
 
                                         <ul>
-                                            <li>List item one.</li>
-                                            <li>List item two.</li>
+                                            <li>{{ LIST_ITEM_1 }}</li>
+                                            <li>{{ LIST_ITEM_2 }}</li>
                                         </ul>
 
                                         <p>Please use the link below to RSVP or join the meeting.</p>
@@ -89,7 +115,7 @@
                                                     <table border="0" cellspacing="0" cellpadding="0">
                                                         <tr>
                                                             <td align="center" style="border-radius: 8px; background: linear-gradient(to right, #7C3AED, #6D28D9);">
-                                                                <a href="[Link for Button]" target="_blank" style="font-size: 16px; font-family: 'Inter', sans-serif; font-weight: bold; color: #ffffff; text-decoration: none; border-radius: 8px; padding: 14px 28px; border: 1px solid #7C3AED; display: inline-block;">[Button Text: RSVP Here]</a>
+                                                                <a href="{{ BUTTON_LINK }}" target="_blank" style="font-size: 16px; font-family: 'Inter', sans-serif; font-weight: bold; color: #ffffff; text-decoration: none; border-radius: 8px; padding: 14px 28px; border: 1px solid #7C3AED; display: inline-block;">{{ BUTTON_TEXT }}</a>
                                                             </td>
                                                         </tr>
                                                     </table>
@@ -98,7 +124,7 @@
                                         </table>
                                         
                                         <p style="margin: 25px 0 15px;">In solidarity,</p>
-                                        <p style="margin: 0; font-family: 'Lora', serif; font-weight: bold; font-size: 18px; color: #4C1D95;">- [Your Name]</p>
+                                        <p style="margin: 0; font-family: 'Lora', serif; font-weight: bold; font-size: 18px; color: #4C1D95;">- {{ SENDER_NAME }}</p>
                                     </td>
                                 </tr>
                             </table>

@@ -1,6 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!--
+@meta: {
+  "type": "template",
+  "subtype": "Presentation Slides",
+  "context": "Use this template for creating HTML-based presentation slides.",
+  "placeholders": [
+    "{{ PRESENTER_NAME }}",
+    "{{ PRESENTER_TITLE }}",
+    "{{ SLIDE_TITLE }}",
+    "{{ SLIDE_SUBTITLE }}",
+    "{{ BULLET_POINT_1 }}",
+    "{{ BULLET_POINT_2 }}",
+    "{{ BULLET_POINT_3 }}",
+    "{{ COLUMN_1_TITLE }}",
+    "{{ COLUMN_1_POINT_1 }}",
+    "{{ COLUMN_1_POINT_2 }}",
+    "{{ COLUMN_1_POINT_3 }}",
+    "{{ COLUMN_2_TITLE }}",
+    "{{ COLUMN_2_POINT_1 }}",
+    "{{ COLUMN_2_POINT_2 }}",
+    "{{ COLUMN_2_POINT_3 }}",
+    "{{ IMAGE_PLACEHOLDER_TEXT }}",
+    "{{ IMAGE_CAPTION_TITLE }}",
+    "{{ IMAGE_CAPTION_TEXT }}",
+    "{{ QUOTE_TEXT }}",
+    "{{ QUOTE_AUTHOR }}",
+    "{{ FINAL_SLIDE_TITLE }}",
+    "{{ FINAL_SLIDE_TEXT }}"
+  ]
+}
+@instructions: [
+  "Replace all {{ PLACEHOLDERS }} with relevant content.",
+  "Duplicate slide containers to add more slides.",
+  "Ensure the Total Slides count in the JavaScript matches the actual number of slides."
+]
+-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SEIU 083 Presentation Template</title>
@@ -260,23 +296,23 @@
         <!-- Slide 1: Title Slide -->
         <div class="slide-container title-slide">
             <div>
-                <h1>Presentation Title Goes Here</h1>
-                <p>Your Name or Department</p>
-                <p style="font-size: 18px; margin-top: 5px;">SEIU Local 083, Oregon State University</p>
+                <h1>{{ SLIDE_TITLE }}</h1>
+                <p>{{ PRESENTER_NAME }}</p>
+                <p style="font-size: 18px; margin-top: 5px;">{{ PRESENTER_TITLE }}</p>
             </div>
         </div>
 
         <!-- Slide 2: Standard Content Slide -->
         <div class="slide-container">
             <div class="slide-header">
-                <h1>Slide Title or Section Header</h1>
+                <h1>{{ SLIDE_TITLE }}</h1>
             </div>
             <div class="slide-content">
-                <h2>Key Topic of the Slide</h2>
+                <h2>{{ SLIDE_SUBTITLE }}</h2>
                 <ul>
-                    <li>This is a placeholder for your first main point. Explain the key idea clearly and concisely.</li>
-                    <li>Here is another point. You can elaborate with supporting details or data.</li>
-                    <li>Keep bullet points brief to ensure the audience can easily read and digest the information.</li>
+                    <li>{{ BULLET_POINT_1 }}</li>
+                    <li>{{ BULLET_POINT_2 }}</li>
+                    <li>{{ BULLET_POINT_3 }}</li>
                 </ul>
             </div>
             <div class="slide-footer">
@@ -288,30 +324,30 @@
         <!-- Slide 3: Section Header Slide -->
         <div class="slide-container section-header-slide">
             <div>
-                <h1>Next Section Title</h1>
+                <h1>{{ SLIDE_TITLE }}</h1>
             </div>
         </div>
 
         <!-- Slide 4: Two-Column Content Slide -->
         <div class="slide-container two-column">
             <div class="slide-header">
-                <h1>Comparing Two Ideas</h1>
+                <h1>{{ SLIDE_TITLE }}</h1>
             </div>
             <div class="slide-content">
                 <div class="column">
-                    <h3>Topic A</h3>
+                    <h3>{{ COLUMN_1_TITLE }}</h3>
                     <ul>
-                        <li>Point 1 about Topic A.</li>
-                        <li>Point 2 about Topic A.</li>
-                        <li>Point 3 about Topic A.</li>
+                        <li>{{ COLUMN_1_POINT_1 }}</li>
+                        <li>{{ COLUMN_1_POINT_2 }}</li>
+                        <li>{{ COLUMN_1_POINT_3 }}</li>
                     </ul>
                 </div>
                 <div class="column">
-                    <h3>Topic B</h3>
+                    <h3>{{ COLUMN_2_TITLE }}</h3>
                     <ul>
-                        <li>Point 1 about Topic B.</li>
-                        <li>Point 2 about Topic B.</li>
-                        <li>Point 3 about Topic B.</li>
+                        <li>{{ COLUMN_2_POINT_1 }}</li>
+                        <li>{{ COLUMN_2_POINT_2 }}</li>
+                        <li>{{ COLUMN_2_POINT_3 }}</li>
                     </ul>
                 </div>
             </div>
@@ -324,15 +360,15 @@
         <!-- Slide 5: Image with Caption Slide -->
         <div class="slide-container image-slide">
             <div class="slide-header">
-                <h1>Visual Evidence</h1>
+                <h1>{{ SLIDE_TITLE }}</h1>
             </div>
             <div class="slide-content">
                 <div class="image-placeholder">
-                    <span>[Your Image, Chart, or Graph Here]</span>
+                    <span>{{ IMAGE_PLACEHOLDER_TEXT }}</span>
                 </div>
                 <div class="caption">
-                    <h2>Brief Title for the Visual</h2>
-                    <p>A short sentence explaining what the audience is looking at.</p>
+                    <h2>{{ IMAGE_CAPTION_TITLE }}</h2>
+                    <p>{{ IMAGE_CAPTION_TEXT }}</p>
                 </div>
             </div>
             <div class="slide-footer">
@@ -344,16 +380,16 @@
         <!-- Slide 6: Quote Slide -->
         <div class="slide-container quote-slide">
             <div>
-                <blockquote>“This is the space for a powerful and relevant quote that reinforces your message.”</blockquote>
-                <cite>– Author or Speaker Name</cite>
+                <blockquote>“{{ QUOTE_TEXT }}”</blockquote>
+                <cite>– {{ QUOTE_AUTHOR }}</cite>
             </div>
         </div>
 
         <!-- Slide 7: Final / Q&A Slide -->
         <div class="slide-container final-slide">
             <div>
-                <h1>Questions?</h1>
-                <p>Thank you!</p>
+                <h1>{{ FINAL_SLIDE_TITLE }}</h1>
+                <p>{{ FINAL_SLIDE_TEXT }}</p>
                 <p style="font-size: 18px;">SEIU Local 083, Oregon State University</p>
             </div>
         </div>
