@@ -112,19 +112,20 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function renderFeaturedArticle(article) {
-        const altText = article.alt || article.title;
+        const escapeHTML = window.Sentinel && window.Sentinel.escapeHTML ? window.Sentinel.escapeHTML : (s) => s;
+        const altText = escapeHTML(article.alt || article.title);
         featuredArticleSection.innerHTML = `
             <div class="bg-white rounded-xl border border-border-color overflow-hidden">
-                <a href="${article.url}" class="block group">
+                <a href="${escapeHTML(article.url)}" class="block group">
                     <div class="grid lg:grid-cols-2">
                         <div class="p-8 lg:p-12">
                             <p class="text-text-secondary text-sm mb-2 font-semibold">FEATURED STORY</p>
-                            <h2 class="text-4xl font-bold mb-4 group-hover:text-brand-purple transition-colors">${article.title}</h2>
-                            <p class="text-text-secondary text-lg mb-6">${article.description}</p>
+                            <h2 class="text-4xl font-bold mb-4 group-hover:text-brand-purple transition-colors">${escapeHTML(article.title)}</h2>
+                            <p class="text-text-secondary text-lg mb-6">${escapeHTML(article.description)}</p>
                             <span class="font-semibold text-brand-purple">Read More →</span>
                         </div>
                         <div class="hidden lg:block">
-                            <img src="${article.image}" alt="${altText}" class="w-full h-full object-cover">
+                            <img src="${escapeHTML(article.image)}" alt="${altText}" class="w-full h-full object-cover">
                         </div>
                     </div>
                 </a>
@@ -160,6 +161,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function displayArticles(articles) {
+        const escapeHTML = window.Sentinel && window.Sentinel.escapeHTML ? window.Sentinel.escapeHTML : (s) => s;
         articlesGrid.innerHTML = '';
 
         if (articles.length === 0) {
@@ -172,25 +174,25 @@ document.addEventListener('DOMContentLoaded', () => {
             articleCard.className = 'bg-white rounded-xl border border-border-color overflow-hidden flex flex-col';
 
             const formattedDate = new Date(article.updatedAt + 'T00:00:00').toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
-            const dateTooltip = `Created: ${article.createdAt}\nPublished: ${article.publishedAt}\nUpdated: ${article.updatedAt}`;
-            const altText = article.alt || article.title;
+            const dateTooltip = `Created: ${escapeHTML(article.createdAt)}\nPublished: ${escapeHTML(article.publishedAt)}\nUpdated: ${escapeHTML(article.updatedAt)}`;
+            const altText = escapeHTML(article.alt || article.title);
 
             articleCard.innerHTML = `
-                <a href="${article.url}" class="block group">
-                    <img src="${article.image}" alt="${altText}" class="w-full h-48 object-cover">
+                <a href="${escapeHTML(article.url)}" class="block group">
+                    <img src="${escapeHTML(article.image)}" alt="${altText}" class="w-full h-48 object-cover">
                     <div class="p-6 flex-grow">
                         <div class="flex items-center justify-between mb-2">
                             <p class="text-text-secondary text-sm" title="${dateTooltip}">Last updated: ${formattedDate}</p>
                         </div>
-                        <h3 class="font-bold text-xl mb-3 group-hover:text-brand-purple transition-colors">${article.title}</h3>
-                        <p class="text-text-secondary">${article.description}</p>
+                        <h3 class="font-bold text-xl mb-3 group-hover:text-brand-purple transition-colors">${escapeHTML(article.title)}</h3>
+                        <p class="text-text-secondary">${escapeHTML(article.description)}</p>
                         <div class="mt-4 flex flex-wrap gap-2">
-                            ${article.tags.map(tag => `<span class="bg-gray-200 text-gray-800 px-2 py-1 rounded-full text-xs">${tag}</span>`).join('')}
+                            ${article.tags.map(tag => `<span class="bg-gray-200 text-gray-800 px-2 py-1 rounded-full text-xs">${escapeHTML(tag)}</span>`).join('')}
                         </div>
                     </div>
                 </a>
                 <div class="bg-gray-50 border-t border-border-color p-4">
-                     <p class="text-sm text-text-secondary">${article.author.name} - ${article.author.title}</p>
+                     <p class="text-sm text-text-secondary">${escapeHTML(article.author.name)} - ${escapeHTML(article.author.title)}</p>
                 </div>
             `;
             articlesGrid.appendChild(articleCard);
