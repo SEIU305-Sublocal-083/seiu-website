@@ -334,13 +334,13 @@
     </footer>
     
     <div id="bargaining-survey-modal" class="fixed inset-0 bg-black bg-opacity-60 backdrop-blur-sm flex items-center justify-center p-4 z-[100] hidden">
-        <div id="modal-content" class="bg-white rounded-xl shadow-2xl max-w-lg w-full p-8 text-center relative transform transition-all duration-300 scale-95 opacity-0">
+        <div id="modal-content" role="dialog" aria-modal="true" aria-labelledby="bargaining-survey-modal-title" aria-describedby="bargaining-survey-modal-description" tabindex="-1" class="bg-white rounded-xl shadow-2xl max-w-lg w-full p-8 text-center relative transform transition-all duration-300 scale-95 opacity-0">
             <button id="modal-close-button" class="absolute top-4 right-4 text-gray-400 hover:text-gray-800 transition-colors" aria-label="Close survey popup">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
             </button>
     
-            <h2 class="text-3xl font-bold text-brand-purple-dark mb-4">Fighting for Higher Education!</h2>
-            <p class="text-text-secondary mb-6">
+            <h2 id="bargaining-survey-modal-title" class="text-3xl font-bold text-brand-purple-dark mb-4">Fighting for Higher Education!</h2>
+            <p id="bargaining-survey-modal-description" class="text-text-secondary mb-6">
                 Classified workers at Oregon’s Public Universities are the foundation of higher education! We unite in support of bargaining priorities.
             </p>
             <div class="space-y-3 flex flex-col items-center">
@@ -374,12 +374,15 @@
             const surveyModal = document.getElementById('bargaining-survey-modal');
             const modalContent = document.getElementById('modal-content');
             const closeButton = document.getElementById('modal-close-button');
+            let lastFocusedElement = null;
             
             // Function to open the modal with a smooth animation
             const openModal = () => {
+                lastFocusedElement = document.activeElement instanceof HTMLElement ? document.activeElement : null;
                 surveyModal.classList.remove('hidden');
                 setTimeout(() => {
                     modalContent.classList.remove('opacity-0', 'scale-95');
+                    closeButton?.focus();
                 }, 10);
             };
 
@@ -388,6 +391,7 @@
                 modalContent.classList.add('opacity-0', 'scale-95');
                 setTimeout(() => {
                     surveyModal.classList.add('hidden');
+                    lastFocusedElement?.focus();
                 }, 300); // Should match transition duration
             };
 
@@ -407,6 +411,14 @@
             // Close by clicking the dark background overlay
             surveyModal.addEventListener('click', (event) => {
                 if (event.target === surveyModal) {
+                    closeModal();
+                }
+            });
+
+            // Close on Escape for keyboard users
+            document.addEventListener('keydown', (event) => {
+                if (event.key === 'Escape' && !surveyModal.classList.contains('hidden')) {
+                    event.preventDefault();
                     closeModal();
                 }
             });
