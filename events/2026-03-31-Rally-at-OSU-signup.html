@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <!-- Anti-FOUC (Flash of Unstyled Content) Fix -->
+    <style id="anti-fouc">html{visibility:hidden;opacity:0;}</style>
+    <script>
+    (function(){
+      var s = document.getElementById('anti-fouc');
+      var r = function(){
+        if(s){
+          s.remove();
+          document.documentElement.style.visibility='visible';
+          document.documentElement.style.opacity='1';
+        }
+      };
+      // Safety timeout in case of script error or slow load
+      setTimeout(r, 1500);
+
+      // Wait for DOMContentLoaded, then give a small buffer for Tailwind to parse
+      document.addEventListener('DOMContentLoaded', function(){
+        setTimeout(r, 100);
+      });
+    })();
+    </script>
+    <noscript>
+      <style>html{visibility:visible!important;opacity:1!important;}</style>
+    </noscript>
+    <!-- End Anti-FOUC Fix -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sign up for the OSU Bargaining Rally on March 31, 2026. Let us know you're coming and help us plan for a strong turnout.">
+    <meta name="author" content="SEIU Local 503 at OSU">
+    <title>OSU Bargaining Rally Signup - SEIU Local 503, OSU</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="/images/logo.png" type="image/png">
+    <link rel="apple-touch-icon" href="/images/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Lora:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --brand-purple-dark: #4C1D95; /* Deep Purple */
+            --brand-purple: #7C3AED;      /* Vibrant Purple */
+            --brand-purple-light: #EDE9FE; /* Lighter Lavender for high contrast */
+            --brand-dark: #111827;         /* Near-black for high contrast text/bg */
+            --brand-light: #F9FAFB;        /* Off-white Background */
+            --text-primary: #1F2937;
+            --text-secondary: #374151;     /* Darker secondary text for better contrast */
+            --border-color: #D1D5DB;
+        }
+
+        html {
+            scroll-padding-top: 80px; /* Offset for sticky header */
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--brand-light);
+            color: var(--text-primary);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Lora', serif;
+            color: var(--brand-purple-dark);
+        }
+
+        /* Accessibility: Clear focus indicators for all interactive elements */
+        a:focus-visible, button:focus-visible, details:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible {
+            outline: 3px solid var(--brand-purple);
+            outline-offset: 2px;
+            border-radius: 4px;
+        }
+
+        .btn {
+            @apply font-bold py-3 px-6 rounded-lg transition-all duration-300 ease-in-out transform hover:scale-105;
+        }
+        .btn-primary {
+            @apply bg-gradient-to-r from-brand-purple to-violet-600 text-white shadow-md hover:shadow-lg;
+        }
+        .btn-outline {
+             @apply bg-white text-brand-purple border-2 border-brand-purple hover:bg-brand-purple hover:text-white;
+        }
+
+        /* Custom Tailwind config for our CSS variables */
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-purple-dark': 'var(--brand-purple-dark)',
+                        'brand-purple': 'var(--brand-purple)',
+                        'brand-purple-light': 'var(--brand-purple-light)',
+                        'brand-dark': 'var(--brand-dark)',
+                        'brand-light': 'var(--brand-light)',
+                        'text-primary': 'var(--text-primary)',
+                        'text-secondary': 'var(--text-secondary)',
+                        'border-color': 'var(--border-color)',
+                    }
+                }
+            }
+        }
+    </style>
+</head>
+<body class="bg-brand-light">
+
+    <!-- Header -->
+    <header class="bg-white/80 backdrop-blur-lg border-b border-border-color sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="/index.html" class="flex items-center space-x-2">
+                <span class="text-2xl font-bold text-brand-purple-dark">SEIU 503</span>
+                <span class="text-lg text-text-secondary hidden md:block">| Oregon State University</span>
+            </a>
+            <div class="hidden lg:flex space-x-8">
+                <a href="/about.html" class="text-text-secondary hover:text-brand-purple transition-colors">About</a>
+                <a href="/events.html" class="text-brand-purple font-bold">Events</a>
+                <a href="/news.html" class="text-text-secondary hover:text-brand-purple transition-colors">News</a>
+                <a href="/resources.html" class="text-text-secondary hover:text-brand-purple transition-colors">Resources & Rights</a>
+                <a href="/leadership.html" class="text-text-secondary hover:text-brand-purple transition-colors">Leadership</a>
+                <a href="/contact.html" class="text-text-secondary hover:text-brand-purple transition-colors">Contact</a>
+            </div>
+            <div class="lg:hidden">
+                <button id="mobile-menu-button" class="text-text-secondary hover:text-brand-purple focus:outline-none" aria-label="Open menu">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden absolute top-full left-0 w-full bg-white border-t border-border-color shadow-lg">
+            <a href="/about.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">About</a>
+            <a href="/events.html" class="block text-center py-3 px-6 text-lg text-brand-purple bg-brand-purple-light font-semibold">Events</a>
+            <a href="/news.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">News</a>
+            <a href="/resources.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Resources & Rights</a>
+            <a href="/leadership.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Leadership</a>
+            <a href="/contact.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Contact</a>
+        </div>
+    </header>
+
+    <!-- Signup Header Section -->
+    <section class="bg-brand-purple-light border-b border-border-color">
+        <div class="container mx-auto px-6 py-16 text-center">
+            <p class="text-brand-purple font-bold mb-2">Tuesday, March 31, 2026</p>
+            <h1 class="text-5xl font-bold">OSU Bargaining Rally</h1>
+            <p class="mt-4 text-lg text-text-secondary max-w-3xl mx-auto">Join us at the MU Quad from 12:00-1:00 PM to show our support for the bargaining team and a fair contract.</p>
+        </div>
+    </section>
+
+    <main class="container mx-auto px-6 py-16">
+        <div class="grid lg:grid-cols-3 gap-12">
+            <div class="lg:col-span-2 bg-white p-8 md:p-12 rounded-xl border border-border-color">
+                <h2 class="text-3xl font-bold mb-4">Overview</h2>
+                <p class="text-text-secondary text-lg leading-relaxed">
+                    Our initial OSU bargaining sessions are scheduled for March 30-31, with representatives seated at the bargaining table on campus.
+                </p>
+                <p class="text-text-secondary text-lg leading-relaxed mt-4">
+                    Save the date and join us for a rally from 12:00-1:00 PM at the MU Quad on Tuesday, March 31. We will show our support for the bargaining team and demonstrate that we are ready to stand up for a fair contract.
+                </p>
+
+                <h3 class="text-2xl font-bold mt-10 mb-4">Registration</h3>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="border border-border-color rounded-xl p-5 bg-brand-purple-light">
+                        <h4 class="text-xl font-bold">Regular Registration</h4>
+                        <p class="text-text-secondary mt-2">Free</p>
+                        <p class="text-text-secondary mt-3">Register by 3/27 to attend the OSU Bargaining Rally at the MU Quad on 3/31.</p>
+                        <p class="text-text-secondary mt-3">Those registering late are not guaranteed access to interpretation or accessibility resources.</p>
+                    </div>
+                    <div class="border border-border-color rounded-xl p-5 bg-white">
+                        <h4 class="text-xl font-bold">Late Registration</h4>
+                        <p class="text-text-secondary mt-2">Free</p>
+                        <p class="text-text-secondary mt-3">Late registration starts 3/28 and is open through the start of the event on 3/31.</p>
+                        <p class="text-text-secondary mt-3">Those registering late are not guaranteed access to interpretation or accessibility resources.</p>
+                    </div>
+                </div>
+
+                <h3 class="text-2xl font-bold mt-12 mb-4">Signup Form</h3>
+                <p class="text-text-secondary mb-6">We'll only use this to coordinate the rally and share logistics.</p>
+
+                <div id="form-result" class="hidden mb-6 rounded-xl border border-border-color bg-brand-purple-light px-6 py-8 text-center" role="status" aria-live="polite">
+                    <div id="form-result-icon" class="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-white text-3xl text-brand-purple"></div>
+                    <p id="form-result-message" class="text-lg text-text-secondary"></p>
+                </div>
+
+                <form id="rally-signup-form" action="#" method="post" class="space-y-6">
+                    <div style="position:absolute; left:-10000px; top:auto; width:1px; height:1px; overflow:hidden;" aria-hidden="true">
+                        <label for="company">Company</label>
+                        <input type="text" id="company" name="company" tabindex="-1" autocomplete="off">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-text-secondary" for="registration-type">Registration type</label>
+                        <select class="mt-2 w-full rounded-lg border border-border-color p-3 bg-white" id="registration-type" name="registrationType" required>
+                            <option value="">Select one</option>
+                            <option>Regular Registration</option>
+                            <option>Late Registration</option>
+                        </select>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-semibold text-text-secondary" for="first-name">First name</label>
+                            <input class="mt-2 w-full rounded-lg border border-border-color p-3" type="text" id="first-name" name="firstName" required>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-text-secondary" for="last-name">Last name</label>
+                            <input class="mt-2 w-full rounded-lg border border-border-color p-3" type="text" id="last-name" name="lastName" required>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-text-secondary" for="email">Home email</label>
+                        <input class="mt-2 w-full rounded-lg border border-border-color p-3" type="email" id="email" name="email" required>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-text-secondary" for="phone">Cell phone</label>
+                        <input class="mt-2 w-full rounded-lg border border-border-color p-3" type="tel" id="phone" name="phone">
+                    </div>
+                    <fieldset class="space-y-2">
+                        <legend class="block text-sm font-semibold text-text-secondary">Do you have any medical-related food allergies? (check all that apply)</legend>
+                        <p class="text-sm text-text-secondary">Select food types that cause allergic reactions. If you choose "Other," add details in the next question.</p>
+                        <div class="grid sm:grid-cols-2 gap-2 text-text-secondary">
+                            <label class="inline-flex items-center gap-2"><input type="checkbox" name="foodAllergies" value="Dairy">Dairy</label>
+                            <label class="inline-flex items-center gap-2"><input type="checkbox" name="foodAllergies" value="Eggs">Eggs</label>
+                            <label class="inline-flex items-center gap-2"><input type="checkbox" name="foodAllergies" value="Fish">Fish</label>
+                            <label class="inline-flex items-center gap-2"><input type="checkbox" name="foodAllergies" value="Shellfish">Shellfish</label>
+                            <label class="inline-flex items-center gap-2"><input type="checkbox" name="foodAllergies" value="Peanuts">Peanuts</label>
+                            <label class="inline-flex items-center gap-2"><input type="checkbox" name="foodAllergies" value="Tree Nuts">Tree nuts</label>
+                            <label class="inline-flex items-center gap-2"><input type="checkbox" name="foodAllergies" value="Wheat/Gluten">Wheat/Gluten</label>
+                            <label class="inline-flex items-center gap-2"><input type="checkbox" name="foodAllergies" value="Soy">Soy</label>
+                            <label class="inline-flex items-center gap-2"><input type="checkbox" name="foodAllergies" value="Other">Other</label>
+                        </div>
+                    </fieldset>
+                    <div>
+                        <label class="block text-sm font-semibold text-text-secondary" for="allergy-details">Allergy details (if other or multiple)</label>
+                        <textarea class="mt-2 w-full rounded-lg border border-border-color p-3 min-h-[90px]" id="allergy-details" name="allergyDetails"></textarea>
+                    </div>
+                    <fieldset class="space-y-2">
+                        <legend class="block text-sm font-semibold text-text-secondary">Do you have other dietary restrictions due to lifestyle, health, or religion? (check all that apply)</legend>
+                        <p class="text-sm text-text-secondary">Share dietary restrictions that do not cause allergic reactions.</p>
+                        <div class="grid sm:grid-cols-2 gap-2 text-text-secondary">
+                            <label class="inline-flex items-center gap-2"><input type="checkbox" name="dietaryRestrictions" value="Vegetarian">Vegetarian</label>
+                            <label class="inline-flex items-center gap-2"><input type="checkbox" name="dietaryRestrictions" value="Vegan">Vegan</label>
+                            <label class="inline-flex items-center gap-2"><input type="checkbox" name="dietaryRestrictions" value="Halal">Halal</label>
+                            <label class="inline-flex items-center gap-2"><input type="checkbox" name="dietaryRestrictions" value="Kosher">Kosher</label>
+                            <label class="inline-flex items-center gap-2"><input type="checkbox" name="dietaryRestrictions" value="No Pork">No pork</label>
+                            <label class="inline-flex items-center gap-2"><input type="checkbox" name="dietaryRestrictions" value="Gluten-Free">Gluten-free</label>
+                            <label class="inline-flex items-center gap-2"><input type="checkbox" name="dietaryRestrictions" value="Dairy-Free">Dairy-free</label>
+                            <label class="inline-flex items-center gap-2"><input type="checkbox" name="dietaryRestrictions" value="Other">Other</label>
+                        </div>
+                    </fieldset>
+                    <div>
+                        <label class="block text-sm font-semibold text-text-secondary" for="dietary-details">Dietary restriction details (if other or multiple)</label>
+                        <textarea class="mt-2 w-full rounded-lg border border-border-color p-3 min-h-[90px]" id="dietary-details" name="dietaryDetails"></textarea>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-text-secondary" for="language-preference">Which spoken or sign language do you prefer for communication?</label>
+                        <select class="mt-2 w-full rounded-lg border border-border-color p-3 bg-white" id="language-preference" name="languagePreference" required>
+                            <option value="">Select one</option>
+                            <option>American Sign Language (ASL)</option>
+                            <option>Arabic</option>
+                            <option>English</option>
+                            <option>Korean</option>
+                            <option>Mandarin Chinese</option>
+                            <option>Russian</option>
+                            <option>Spanish</option>
+                            <option>Vietnamese</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-text-secondary" for="language-other">If other, please specify</label>
+                        <input class="mt-2 w-full rounded-lg border border-border-color p-3" type="text" id="language-other" name="languageOther">
+                    </div>
+                    <fieldset class="space-y-2">
+                        <legend class="block text-sm font-semibold text-text-secondary">Would simultaneous interpretation into your native language help you better understand and participate?</legend>
+                        <div class="flex flex-col gap-2 text-text-secondary">
+                            <label class="inline-flex items-center gap-2">
+                                <input type="radio" name="interpretationNeeded" value="Yes" required>
+                                <span>Yes</span>
+                            </label>
+                            <label class="inline-flex items-center gap-2">
+                                <input type="radio" name="interpretationNeeded" value="No">
+                                <span>No</span>
+                            </label>
+                        </div>
+                    </fieldset>
+                    <div>
+                        <label class="block text-sm font-semibold text-text-secondary" for="pronouns">What are your pronouns?</label>
+                        <input class="mt-2 w-full rounded-lg border border-border-color p-3" type="text" id="pronouns" name="pronouns" required>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <input class="mt-1" type="checkbox" id="conduct" name="codeOfConductAgreed" value="Yes" required>
+                        <label class="text-text-secondary" for="conduct">By registering you agree to the SEIU 503 Code of Conduct: <a href="https://seiu503.org/code-of-conduct-for-seiu-503-events-meetings-communications/" class="text-brand-purple hover:underline">Code of Conduct</a></label>
+                    </div>
+                    <div class="pt-2">
+                        <button type="submit" class="btn btn-primary w-full">Submit Registration</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="lg:col-span-1">
+                <div class="bg-white p-8 rounded-xl border border-border-color sticky top-28">
+                    <h3 class="text-2xl font-bold mb-6 text-center">Event Information</h3>
+                    <div class="space-y-5 text-lg">
+                        <div class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 mr-4 text-brand-purple flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+                            <div>
+                                <h4 class="font-bold">Date & Time</h4>
+                                <p class="text-text-secondary">Tuesday, March 31, 2026<br>12:00 PM - 1:00 PM</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 mr-4 text-brand-purple flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                            <div>
+                                <h4 class="font-bold">Location</h4>
+                                <p class="text-text-secondary">MU Quad (OSU Memorial Union)<br>Corvallis, OR 97331</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 mr-4 text-brand-purple flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3-1.343-3-3V4h6v1c0 1.657-1.343 3-3 3z" /><path stroke-linecap="round" stroke-linejoin="round" d="M6 10h12l-1 10H7L6 10z" /><path stroke-linecap="round" stroke-linejoin="round" d="M9 10V9a3 3 0 016 0v1" /></svg>
+                            <div>
+                                <h4 class="font-bold">Pricing</h4>
+                                <p class="text-text-secondary">Free</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-8 space-y-3">
+                        <a href="/events/ical/2026-03-31-Rally-at-OSU.ics" download class="btn btn-outline w-full">Add to Calendar</a>
+                        <a href="/events/2026-03-31-Rally-at-OSU.html" class="btn btn-outline w-full">View Rally Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark text-white pt-12 pb-8">
+        <div class="container mx-auto px-6">
+            <div class="mt-10 pt-8 border-t border-gray-700 text-center">
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Column 1: About the Union -->
+                <div class="md:col-span-2 lg:col-span-1">
+                    <div class="flex items-center mb-4">
+                        <img src="/images/logo.png" alt="SEIU 503 Logo" class="h-12 w-12 mr-3 bg-white p-1 rounded">
+                        <div>
+                            <h3 class="text-xl font-bold">SEIU Local 503</h3>
+                            <p class="text-gray-400 text-sm">Oregon State University</p>
+                        </div>
+                    </div>
+                    <p class="text-black leading-relaxed">Representing the classified employees of Oregon State University. We fight for fair contracts, defend workplace rights, and build a united community.</p>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="/about.html" class="text-black hover:text-gray-500 transition-colors">About Us</a></li>
+                        <li><a href="/events.html" class="text-black hover:text-gray-500 transition-colors">Events</a></li>
+                        <li><a href="/news.html" class="text-black hover:text-gray-500 transition-colors">News</a></li>
+                        <li><a href="/leadership.html" class="text-black hover:text-gray-500 transition-colors">Leadership</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Resources -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase"><a href="/resources.html" class="hover:text-gray-500 transition-colors">Resources</a></h4>
+                    <ul class="space-y-3">
+                        <li><a href="/resources.html" class="text-black hover:text-gray-500 transition-colors">Resources & Rights</a></li>
+                        <li><a href="/resources/seiu_cba_2022-2026.pdf" class="text-black hover:text-gray-500 transition-colors">Our Contract (PDF)</a></li>
+                        <li><a href="/resources/stewards.html" class="text-black hover:text-gray-500 transition-colors">Find a Steward</a></li>
+                        <li><a href="/resources/weingarten-rights.html" class="text-black hover:text-gray-500 transition-colors">Weingarten Rights</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Contact -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase"><a href="/contact.html" class="hover:text-gray-500 transition-colors">Contact Us</a></h4>
+                     <ul class="space-y-3 text-black">
+                        <li class="flex items-start">
+                            <span class="mr-2 mt-1">&#9993;</span>
+                            <a href="mailto:083execteam@seiu503.org" class="hover:text-gray-500 transition-colors">083execteam@seiu503.org</a>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-2 mt-1">&#9993;</span>
+                            <a href="mailto:083stewards@seiu503.org" class="hover:text-gray-500 transition-colors">083stewards@seiu503.org</a>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-2 mt-1">&#128205;</span>
+                            <a href="https://maps.app.goo.gl/9TWRZ9F4wjVjacsZ7" class="hover:text-gray-500 transition-colors">Adams Hall, Room 109<br>Corvallis, OR 97331</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="mt-10 pt-8 border-t border-gray-700 text-center">
+                <p class="text-gray-400 text-sm">&copy; 2025 SEIU Local 503, Oregon State University. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const formLoadedAt = Date.now();
+        const form = document.getElementById('rally-signup-form');
+        const resultEl = document.getElementById('form-result');
+        const resultIcon = document.getElementById('form-result-icon');
+        const resultMessage = document.getElementById('form-result-message');
+        const submitButton = form ? form.querySelector('button[type="submit"]') : null;
+
+        const GOOGLE_SHEET_URL = 'https://script.google.com/macros/s/AKfycbyJIsm0a77hArZOuzOWGnEY6CnAHEFcMNFcnD7RkBoBy1wQFyGAZzSbkQ0E20JTwPQ/exec';
+
+        function showResult(message, isError) {
+            if (!resultEl || !resultIcon || !resultMessage) return;
+            resultMessage.textContent = message;
+            resultIcon.innerHTML = isError ? '&#10007;' : '&#10003;';
+            resultIcon.classList.toggle('text-red-600', !!isError);
+            resultIcon.classList.toggle('text-brand-purple', !isError);
+            resultEl.classList.remove('hidden');
+            if (form) form.classList.add('hidden');
+        }
+
+        if (form) {
+            form.addEventListener('submit', async (event) => {
+                event.preventDefault();
+
+                const honeypot = form.querySelector('input[name="company"]');
+                if (honeypot && honeypot.value) {
+                    showResult('Thanks! Your registration has been received.', false);
+                    return;
+                }
+
+                const elapsed = Date.now() - formLoadedAt;
+                if (elapsed < 3000) {
+                    await new Promise(resolve => setTimeout(resolve, 3000 - elapsed));
+                } else {
+                    await new Promise(resolve => setTimeout(resolve, 3000));
+                }
+
+                if (submitButton) {
+                    submitButton.disabled = true;
+                    submitButton.textContent = 'Submitting...';
+                }
+
+                const formData = new FormData(form);
+                const payload = {
+                    registrationType: formData.get('registrationType') || '',
+                    firstName: formData.get('firstName') || '',
+                    lastName: formData.get('lastName') || '',
+                    email: formData.get('email') || '',
+                    phone: formData.get('phone') || '',
+                    foodAllergies: (formData.getAll('foodAllergies') || []).join(', '),
+                    allergyDetails: formData.get('allergyDetails') || '',
+                    dietaryRestrictions: (formData.getAll('dietaryRestrictions') || []).join(', '),
+                    dietaryDetails: formData.get('dietaryDetails') || '',
+                    languagePreference: formData.get('languagePreference') || '',
+                    languageOther: formData.get('languageOther') || '',
+                    interpretationNeeded: formData.get('interpretationNeeded') || '',
+                    pronouns: formData.get('pronouns') || ''
+                };
+
+                try {
+                    await fetch(GOOGLE_SHEET_URL, {
+                        method: 'POST',
+                        mode: 'no-cors',
+                        headers: {
+                            'Content-Type': 'text/plain;charset=UTF-8'
+                        },
+                        body: JSON.stringify(payload)
+                    });
+
+                    showResult('Success! Your registration has been received.', false);
+                } catch (error) {
+                    showResult('Sorry, something went wrong. Please refresh the page and try again, or email 083execteam@seiu503.org.', true);
+                } finally {
+                    if (submitButton) {
+                        submitButton.disabled = false;
+                        submitButton.textContent = 'Submit Registration';
+                    }
+                }
+            });
+        }
+
+        // --- Mobile Menu Toggle ---
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = document.querySelectorAll('#mobile-menu a');
+
+        mobileMenuButton.addEventListener('click', () => {
+            const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+            mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenuButton.setAttribute('aria-expanded', 'false');
+            });
+        });
+    </script>
+</body>
+</html>
