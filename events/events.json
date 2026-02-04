@@ -23,9 +23,9 @@
   {
     "date": "2026-02-12",
     "time": "All Day",
-    "title": "UO Bargaining Sessions",
-    "description": "In-person bargaining sessions at the University of Oregon. Dates: February 12–13.",
-    "type": "Bargaining Session",
+    "title": "Purple Up Day (UO)",
+    "description": "Wear purple to show solidarity while bargaining happens at University of Oregon. Dates: February 12–13.",
+    "type": "Purple Up Day",
     "url": "/news/2026-02-04-upcoming-bargaining-events.html",
     "featured": false,
     "location_detail": "University of Oregon"
@@ -33,9 +33,9 @@
   {
     "date": "2026-03-05",
     "time": "All Day",
-    "title": "WOU Bargaining Sessions",
-    "description": "In-person bargaining sessions at Western Oregon University. Dates: March 5–6.",
-    "type": "Bargaining Session",
+    "title": "Purple Up Day (WOU)",
+    "description": "Wear purple to show solidarity while bargaining happens at Western Oregon University. Dates: March 5–6.",
+    "type": "Purple Up Day",
     "url": "/news/2026-02-04-upcoming-bargaining-events.html",
     "featured": false,
     "location_detail": "Western Oregon University"
@@ -43,9 +43,9 @@
   {
     "date": "2026-03-19",
     "time": "All Day",
-    "title": "PSU Bargaining Sessions",
-    "description": "In-person bargaining sessions at Portland State University. Dates: March 19–20.",
-    "type": "Bargaining Session",
+    "title": "Purple Up Day (PSU)",
+    "description": "Wear purple to show solidarity while bargaining happens at Portland State University. Dates: March 19–20.",
+    "type": "Purple Up Day",
     "url": "/news/2026-02-04-upcoming-bargaining-events.html",
     "featured": false,
     "location_detail": "Portland State University"
@@ -53,8 +53,18 @@
   {
     "date": "2026-03-30",
     "time": "All Day",
-    "title": "OSU Bargaining Sessions (Corvallis)",
-    "description": "In-person bargaining sessions at OSU Corvallis. Dates: March 30–31.",
+    "title": "OSU Bargaining Sessions (Corvallis) - Day 1",
+    "description": "In-person bargaining sessions at OSU Corvallis. Day 1 of 2.",
+    "type": "Bargaining Session",
+    "url": "/news/2026-02-04-upcoming-bargaining-events.html",
+    "featured": false,
+    "location_detail": "OSU Corvallis"
+  },
+  {
+    "date": "2026-03-31",
+    "time": "All Day",
+    "title": "OSU Bargaining Sessions (Corvallis) - Day 2",
+    "description": "In-person bargaining sessions at OSU Corvallis. Day 2 of 2.",
     "type": "Bargaining Session",
     "url": "/news/2026-02-04-upcoming-bargaining-events.html",
     "featured": false,
@@ -73,9 +83,9 @@
   {
     "date": "2026-05-14",
     "time": "All Day",
-    "title": "UO Bargaining Sessions",
-    "description": "In-person bargaining sessions at the University of Oregon. Dates: May 14–15.",
-    "type": "Bargaining Session",
+    "title": "Purple Up Day (UO)",
+    "description": "Wear purple to show solidarity while bargaining happens at University of Oregon. Dates: May 14–15.",
+    "type": "Purple Up Day",
     "url": "/news/2026-02-04-upcoming-bargaining-events.html",
     "featured": false,
     "location_detail": "University of Oregon"
@@ -83,9 +93,9 @@
   {
     "date": "2026-05-28",
     "time": "All Day",
-    "title": "SOU Bargaining Sessions",
-    "description": "In-person bargaining sessions at Southern Oregon University. Dates: May 28–29.",
-    "type": "Bargaining Session",
+    "title": "Purple Up Day (SOU)",
+    "description": "Wear purple to show solidarity while bargaining happens at Southern Oregon University. Dates: May 28–29.",
+    "type": "Purple Up Day",
     "url": "/news/2026-02-04-upcoming-bargaining-events.html",
     "featured": false,
     "location_detail": "Southern Oregon University"
@@ -137,46 +147,6 @@
     "description": "Come to our Contact Action Team Meeting to get information to spread in your area!",
     "type": "Zoom Meeting",
     "url": "/events/2026-02-05-CAT-Meeting.html",
-    "featured": false,
-    "location_detail": "Online via Zoom"
-  },
-  {
-    "date": "2025-10-02",
-    "time": "6:00 PM",
-    "title": "Bargaining Committee Meeting",
-    "description": "The regular monthly strategy meeting for the elected Bargaining Committee.",
-    "type": "Zoom Meeting",
-    "url": "/events/2025-10-02-Bargaining-Committee-Meeting.html",
-    "featured": false,
-    "location_detail": "Online via Zoom"
-  },
-  {
-    "date": "2025-11-06",
-    "time": "6:00 PM",
-    "title": "Bargaining Committee Meeting",
-    "description": "The regular monthly strategy meeting for the elected Bargaining Committee.",
-    "type": "Zoom Meeting",
-    "url": "/events/2025-11-06-Bargaining-Committee-Meeting.html",
-    "featured": false,
-    "location_detail": "Online via Zoom"
-  },
-  {
-    "date": "2025-12-04",
-    "time": "6:00 PM",
-    "title": "Bargaining Committee Meeting",
-    "description": "The regular monthly strategy meeting for the elected Bargaining Committee.",
-    "type": "Zoom Meeting",
-    "url": "/events/2025-12-04-Bargaining-Committee-Meeting.html",
-    "featured": false,
-    "location_detail": "Online via Zoom"
-  },
-  {
-    "date": "2026-02-05",
-    "time": "6:00 PM",
-    "title": "Bargaining Committee Meeting",
-    "description": "The regular monthly strategy meeting for the elected Bargaining Committee.",
-    "type": "Zoom Meeting",
-    "url": "/events/2026-02-05-Bargaining-Committee-Meeting.html",
     "featured": false,
     "location_detail": "Online via Zoom"
   },
@@ -327,7 +297,7 @@
     "description": "Volunteer with us at our union booth! We'll be connecting with colleagues and building community at this campus-wide event.",
     "type": "Volunteer",
     "url": "/events/2025-09-16-University-Day.html",
-    "featured":false,
+    "featured": false,
     "location_detail": "Patricia Reser Center (PRAx)"
   },
   {
@@ -337,7 +307,7 @@
     "description": "Welcome to the first-ever SEIU Local 083 Communications Team! This initial meeting will kick off our strategic focus on social media, physical media like zines, and narrative storytelling to build member power as we enter bargaining.",
     "type": "Volunteer",
     "url": "/events/2025-09-17-Comms-Meeting.html",
-    "featured":false,
+    "featured": false,
     "location_detail": "Online via Zoom"
   },
   {
@@ -357,7 +327,7 @@
     "description": "Volunteer with us at our union booth! We'll be connecting with colleagues and building community at this campus-wide event.",
     "type": "Confrence",
     "url": "/events/2025-09-13-Bargaining-Conference.html",
-    "featured":false,
+    "featured": false,
     "location_detail": "Roth's Event Center"
   },
   {
@@ -378,15 +348,6 @@
     "description": "Regularly scheduled meeting for the Local 083 Executive Team.",
     "type": "Zoom Meeting",
     "url": "/events/2025-09-09-Executive-Team-Meeting.html",
-    "featured": false
-  },
-  {
-    "date": "2025-09-04",
-    "time": "5:30 PM",
-    "title": "Bargaining Committee Meeting",
-    "description": "The regular monthly strategy meeting for the elected Bargaining Committee.",
-    "type": "Zoom Meeting",
-    "url": "/events/2025-09-04-Bargaining-Committee-Meeting.html",
     "featured": false
   },
   {
@@ -433,7 +394,7 @@
     "url": "#",
     "featured": false
   },
-    {
+  {
     "date": "2025-08-06",
     "title": "CAT Meeting",
     "description": "A C.A.T. meeting focusing on upcoming events.",
