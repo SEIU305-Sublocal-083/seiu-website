@@ -4,9 +4,6 @@
     <loc>https://www.local083.org/2026-bargaining/bargaining-survey-landing-page.html</loc>
   </url>
   <url>
-    <loc>https://www.local083.org/2026-bargaining/bargaining-survey-coming-soon.html</loc>
-  </url>
-  <url>
     <loc>https://www.local083.org/2026-bargaining/survey-tracker.html</loc>
   </url>
   <url>
@@ -28,6 +25,12 @@
     <loc>https://www.local083.org/resources/stewards.html</loc>
   </url>
   <url>
+    <loc>https://www.local083.org/resources/costco.html</loc>
+  </url>
+  <url>
+    <loc>https://www.local083.org/resources/zoom-backgrounds.html</loc>
+  </url>
+  <url>
     <loc>https://www.local083.org/minutes/2025-08-14-exec-meeting.html</loc>
   </url>
   <url>
@@ -38,6 +41,9 @@
   </url>
   <url>
     <loc>https://www.local083.org/test-pages/event-notice.html</loc>
+  </url>
+  <url>
+    <loc>https://www.local083.org/test-pages/oct-newsletter.html</loc>
   </url>
   <url>
     <loc>https://www.local083.org/test-pages/formal-memo.html</loc>
@@ -58,16 +64,40 @@
     <loc>https://www.local083.org/test-pages/search.html</loc>
   </url>
   <url>
+    <loc>https://www.local083.org/news/2025-10-27-bowling-striking-success.html</loc>
+  </url>
+  <url>
+    <loc>https://www.local083.org/news/2025-11-03-bargaining-survey-update.html</loc>
+  </url>
+  <url>
     <loc>https://www.local083.org/news/2025-08-22-Icecream.html</loc>
   </url>
   <url>
-    <loc>https://www.local083.org/news/2025-06-15-COLA.html</loc>
+    <loc>https://www.local083.org/news/2025-11-01-COLA.html</loc>
   </url>
   <url>
-    <loc>https://www.local083.org/news/UNPUB-2025-09.html</loc>
+    <loc>https://www.local083.org/news/2026-02-04-zoom-backgrounds.html</loc>
+  </url>
+  <url>
+    <loc>https://www.local083.org/news/2025-10-01-bargaining-survey-live.html</loc>
+  </url>
+  <url>
+    <loc>https://www.local083.org/news/2025-12-15-fighting-for-higher-education.html</loc>
+  </url>
+  <url>
+    <loc>https://www.local083.org/news/2026-01-09-kickoff.html</loc>
   </url>
   <url>
     <loc>https://www.local083.org/marketing/2025-08-20-media-start-c6923fd5-65f9-4de4-876a-561590981b17.html</loc>
+  </url>
+  <url>
+    <loc>https://www.local083.org/marketing/2025-10-23-Bowling-Poster.html</loc>
+  </url>
+  <url>
+    <loc>https://www.local083.org/marketing/2025-10-23-Bowling-Slide.html</loc>
+  </url>
+  <url>
+    <loc>https://www.local083.org/marketing/2025-10-23-Bowling.html</loc>
   </url>
   <url>
     <loc>https://www.local083.org/leadership.html</loc>
@@ -79,7 +109,16 @@
     <loc>https://www.local083.org/events/2025-09-11-Executive-Team-Meeting.html</loc>
   </url>
   <url>
+    <loc>https://www.local083.org/events/2026-01-15-Membership-Meeting.html</loc>
+  </url>
+  <url>
+    <loc>https://www.local083.org/events/2025-10-22-CAT-Meeting.html</loc>
+  </url>
+  <url>
     <loc>https://www.local083.org/events/2025-09-03-CAT-Meeting.html</loc>
+  </url>
+  <url>
+    <loc>https://www.local083.org/events/2025-12-03-CAT-Meeting.html</loc>
   </url>
   <url>
     <loc>https://www.local083.org/events/2025-09-13-Bargaining-Conference.html</loc>
@@ -91,7 +130,58 @@
     <loc>https://www.local083.org/events/2025-09-09-Executive-Team-Meeting.html</loc>
   </url>
   <url>
+    <loc>https://www.local083.org/events/2025-10-30-Stewards-Meeting.html</loc>
+  </url>
+  <url>
+    <loc>https://www.local083.org/events/2026-01-07-CAT-Meeting.html</loc>
+  </url>
+  <url>
+    <loc>https://www.local083.org/events/2025-11-06-Bargaining-Committee-Meeting.html</loc>
+  </url>
+  <url>
+    <loc>https://www.local083.org/events/2025-10-09-Executive-Team-Meeting.html</loc>
+  </url>
+  <url>
+    <loc>https://www.local083.org/events/2025-11-05-CAT-Meeting.html</loc>
+  </url>
+  <url>
+    <loc>https://www.local083.org/events/2025-12-11-Executive-Team-Meeting.html</loc>
+  </url>
+  <url>
+    <loc>https://www.local083.org/events/2025-11-20-Membership-Meeting.html</loc>
+  </url>
+  <url>
+    <loc>https://www.local083.org/events/2025-12-04-Bargaining-Committee-Meeting.html</loc>
+  </url>
+  <url>
     <loc>https://www.local083.org/events/2025-08-21-Membership-Meeting.html</loc>
+  </url>
+  <url>
+    <loc>https://www.local083.org/events/2025-11-27-Stewards-Meeting.html</loc>
+  </url>
+  <url>
+    <loc>https://www.local083.org/events/2025-10-02-Bargaining-Committee-Meeting.html</loc>
+  </url>
+  <url>
+    <loc>https://www.local083.org/events/2026-02-04-CAT-Meeting.html</loc>
+  </url>
+  <url>
+    <loc>https://www.local083.org/events/2026-02-26-Stewards-Meeting.html</loc>
+  </url>
+  <url>
+    <loc>https://www.local083.org/events/2025-10-01-CAT-Meeting.html</loc>
+  </url>
+  <url>
+    <loc>https://www.local083.org/events/2025-10-16-Membership-Meeting.html</loc>
+  </url>
+  <url>
+    <loc>https://www.local083.org/events/2026-01-08-Executive-Team-Meeting.html</loc>
+  </url>
+  <url>
+    <loc>https://www.local083.org/events/2025-12-18-Membership-Meeting.html</loc>
+  </url>
+  <url>
+    <loc>https://www.local083.org/events/2026-02-19-Membership-Meeting.html</loc>
   </url>
   <url>
     <loc>https://www.local083.org/events/2025-09-16-University-Day.html</loc>
@@ -103,6 +193,9 @@
     <loc>https://www.local083.org/events/2025-10-22-Bowling.html</loc>
   </url>
   <url>
+    <loc>https://www.local083.org/events/2026-02-12-Executive-Team-Meeting.html</loc>
+  </url>
+  <url>
     <loc>https://www.local083.org/events/2025-09-17-Comms-Meeting.html</loc>
   </url>
   <url>
@@ -112,6 +205,15 @@
     <loc>https://www.local083.org/events/2025-08-28-Steward-Meeting.html</loc>
   </url>
   <url>
+    <loc>https://www.local083.org/events/2026-02-05-Bargaining-Committee-Meeting.html</loc>
+  </url>
+  <url>
+    <loc>https://www.local083.org/events/2025-11-13-Executive-Team-Meeting.html</loc>
+  </url>
+  <url>
     <loc>https://www.local083.org/events/2025-10-23-Bowling.html</loc>
+  </url>
+  <url>
+    <loc>https://www.local083.org/events/2026-01-29-Stewards-Meeting.html</loc>
   </url>
 </urlset>
