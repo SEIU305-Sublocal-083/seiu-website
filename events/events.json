@@ -10,6 +10,87 @@
     "location_detail": "Online via Zoom"
   },
   {
+    "date": "2026-03-31",
+    "time": "12:00 PM - 1:00 PM",
+    "title": "Rally at OSU",
+    "description": "Join us at the MU Quad to show OSU that classified staff are united for a fair contract while bargaining is happening on campus that day. Wear purple and bring your coworkers.",
+    "type": "Rally",
+    "url": "/events/2026-03-31-Rally-at-OSU.html",
+    "featured": true,
+    "location_detail": "MU Quad (OSU Memorial Union)",
+    "calendar_link": "/events/ical/2026-03-31-Rally-at-OSU.ics"
+  },
+  {
+    "date": "2026-02-12",
+    "time": "All Day",
+    "title": "UO Bargaining Sessions",
+    "description": "In-person bargaining sessions at the University of Oregon. Dates: February 12–13.",
+    "type": "Bargaining Session",
+    "url": "/news/2026-02-04-upcoming-bargaining-events.html",
+    "featured": false,
+    "location_detail": "University of Oregon"
+  },
+  {
+    "date": "2026-03-05",
+    "time": "All Day",
+    "title": "WOU Bargaining Sessions",
+    "description": "In-person bargaining sessions at Western Oregon University. Dates: March 5–6.",
+    "type": "Bargaining Session",
+    "url": "/news/2026-02-04-upcoming-bargaining-events.html",
+    "featured": false,
+    "location_detail": "Western Oregon University"
+  },
+  {
+    "date": "2026-03-19",
+    "time": "All Day",
+    "title": "PSU Bargaining Sessions",
+    "description": "In-person bargaining sessions at Portland State University. Dates: March 19–20.",
+    "type": "Bargaining Session",
+    "url": "/news/2026-02-04-upcoming-bargaining-events.html",
+    "featured": false,
+    "location_detail": "Portland State University"
+  },
+  {
+    "date": "2026-03-30",
+    "time": "All Day",
+    "title": "OSU Bargaining Sessions (Corvallis)",
+    "description": "In-person bargaining sessions at OSU Corvallis. Dates: March 30–31.",
+    "type": "Bargaining Session",
+    "url": "/news/2026-02-04-upcoming-bargaining-events.html",
+    "featured": false,
+    "location_detail": "OSU Corvallis"
+  },
+  {
+    "date": "2026-04-23",
+    "time": "All Day",
+    "title": "OSU Bargaining Sessions (Cascades)",
+    "description": "In-person bargaining sessions at OSU–Cascades. Dates: April 23–24.",
+    "type": "Bargaining Session",
+    "url": "/news/2026-02-04-upcoming-bargaining-events.html",
+    "featured": false,
+    "location_detail": "OSU–Cascades (Bend)"
+  },
+  {
+    "date": "2026-05-14",
+    "time": "All Day",
+    "title": "UO Bargaining Sessions",
+    "description": "In-person bargaining sessions at the University of Oregon. Dates: May 14–15.",
+    "type": "Bargaining Session",
+    "url": "/news/2026-02-04-upcoming-bargaining-events.html",
+    "featured": false,
+    "location_detail": "University of Oregon"
+  },
+  {
+    "date": "2026-05-28",
+    "time": "All Day",
+    "title": "SOU Bargaining Sessions",
+    "description": "In-person bargaining sessions at Southern Oregon University. Dates: May 28–29.",
+    "type": "Bargaining Session",
+    "url": "/news/2026-02-04-upcoming-bargaining-events.html",
+    "featured": false,
+    "location_detail": "Southern Oregon University"
+  },
+  {
     "date": "2025-10-01",
     "time": "6:30 PM",
     "title": "CAT Meeting",

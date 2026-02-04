@@ -169,14 +169,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
         articles.forEach(article => {
             const articleCard = document.createElement('div');
-            articleCard.className = 'bg-white rounded-xl border border-border-color overflow-hidden flex flex-col';
+            articleCard.className = 'bg-white rounded-xl border border-border-color overflow-hidden flex flex-col h-full';
 
             const formattedDate = new Date(article.updatedAt + 'T00:00:00').toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
             const dateTooltip = `Created: ${article.createdAt}\nPublished: ${article.publishedAt}\nUpdated: ${article.updatedAt}`;
             const altText = article.alt || article.title;
 
             articleCard.innerHTML = `
-                <a href="${article.url}" class="block group">
+                <a href="${article.url}" class="group flex flex-col h-full flex-grow">
                     <img src="${article.image}" alt="${altText}" class="w-full h-48 object-cover">
                     <div class="p-6 flex-grow">
                         <div class="flex items-center justify-between mb-2">
