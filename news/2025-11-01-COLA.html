@@ -32,7 +32,8 @@
 <!-- Favicons --><link rel="icon" href="/images/logo.png" type="image/png">
     <link rel="apple-touch-icon" href="/images/logo.png">
 
-    <!-- Fonts and Styles --><script src="https://cdn.tailwindcss.com"></script>
+    <!-- Fonts and Styles --><style>html{visibility:hidden;}html.tw-ready{visibility:visible;}</style>
+    <script src="https://cdn.tailwindcss.com" onload="document.documentElement.classList.add('tw-ready')"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Lora:wght@400;500;700&display=swap" rel="stylesheet">
