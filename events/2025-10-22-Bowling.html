@@ -1,33 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Anti-FOUC (Flash of Unstyled Content) Fix -->
-    <style id="anti-fouc">html{visibility:hidden;opacity:0;}</style>
-    <script>
-    (function(){
-      var s = document.getElementById('anti-fouc');
-      var r = function(){
-        if(s){
-          s.remove();
-          document.documentElement.style.visibility='visible';
-          document.documentElement.style.opacity='1';
-        }
-      };
-      // Safety timeout in case of script error or slow load
-      setTimeout(r, 1500);
-
-      // Wait for DOMContentLoaded, then give a small buffer for Tailwind to parse
-      document.addEventListener('DOMContentLoaded', function(){
-        setTimeout(r, 100);
-      });
-    })();
-    </script>
-    <noscript>
-      <style>html{visibility:visible!important;opacity:1!important;}</style>
-    </noscript>
-    <!-- End Anti-FOUC Fix -->
-
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
     <!-- 
       SEARCH ENGINE REDIRECT: 
       This is the most important line. 
@@ -41,18 +15,67 @@
       This tells search engines like Google that the new page is the "official" version. 
       This is very important for SEO. CHANGE THIS to the full URL of your new page.
     -->
-    <link rel="canonical" href="/events/2025-10-23-Bowling.html" />
-
-    <title>Page Has Moved</title>
+<title>Page Has Moved</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Lora:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Inter', sans-serif; }
         h1 { font-family: 'Lora', serif; }
     </style>
+    <!-- SEO META START -->
+    <link rel="canonical" href="https://www.local083.org//events/2025-10-23-Bowling.html">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.local083.org//events/2025-10-23-Bowling.html">
+    <meta property="og:title" content="Page Has Moved">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="https://www.local083.org/images/card.webp">
+    <meta property="og:site_name" content="SEIU Local 503 at Oregon State University">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://www.local083.org//events/2025-10-23-Bowling.html">
+    <meta name="twitter:title" content="Page Has Moved">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="https://www.local083.org/images/card.webp">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.local083.org#organization",
+      "name": "SEIU Local 503 at Oregon State University",
+      "url": "https://www.local083.org",
+      "logo": "https://www.local083.org/images/logo.png"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.local083.org#website",
+      "name": "SEIU Local 503 at Oregon State University",
+      "url": "https://www.local083.org",
+      "publisher": {
+        "@id": "https://www.local083.org#organization"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://www.local083.org//events/2025-10-23-Bowling.html#webpage",
+      "url": "https://www.local083.org//events/2025-10-23-Bowling.html",
+      "name": "Page Has Moved",
+      "description": "",
+      "isPartOf": {
+        "@id": "https://www.local083.org#website"
+      },
+      "about": {
+        "@id": "https://www.local083.org#organization"
+      }
+    }
+  ]
+}
+    </script>
+    <!-- SEO META END -->
 </head>
 <body class="bg-gray-100 flex items-center justify-center h-screen">
-    <div class="text-center p-8 bg-white shadow-lg rounded-lg">
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:bg-white focus:text-brand-purple-dark focus:px-4 focus:py-2 focus:rounded focus:shadow-lg">Skip to content</a>
+<div class="text-center p-8 bg-white shadow-lg rounded-lg" id="main-content">
         <h1 class="text-3xl font-bold text-gray-800 mb-4">This event has been rescheduled.</h1>
         <p class="text-gray-600">You are being automatically redirected to the new page.</p>
         <p class="mt-4 text-sm text-gray-500">

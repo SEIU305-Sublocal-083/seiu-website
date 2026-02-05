@@ -1,33 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-    <!-- Anti-FOUC (Flash of Unstyled Content) Fix -->
-    <style id="anti-fouc">html{visibility:hidden;opacity:0;}</style>
-    <script>
-    (function(){
-      var s = document.getElementById('anti-fouc');
-      var r = function(){
-        if(s){
-          s.remove();
-          document.documentElement.style.visibility='visible';
-          document.documentElement.style.opacity='1';
-        }
-      };
-      // Safety timeout in case of script error or slow load
-      setTimeout(r, 1500);
-
-      // Wait for DOMContentLoaded, then give a small buffer for Tailwind to parse
-      document.addEventListener('DOMContentLoaded', function(){
-        setTimeout(r, 100);
-      });
-    })();
-    </script>
-    <noscript>
-      <style>html{visibility:visible!important;opacity:1!important;}</style>
-    </noscript>
-    <!-- End Anti-FOUC Fix -->
-
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Track the 2026 bargaining survey participation rates across departments at Oregon State University.">
     <meta name="author" content="SEIU Local 503 at OSU">
@@ -71,8 +45,59 @@
             }
         }
     </style>
+    <!-- SEO META START -->
+    <link rel="canonical" href="https://www.local083.org/2026-bargaining/survey-tracker.html">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.local083.org/2026-bargaining/survey-tracker.html">
+    <meta property="og:title" content="Bargaining Survey Tracker - SEIU Local 503, OSU">
+    <meta property="og:description" content="Track the 2026 bargaining survey participation rates across departments at Oregon State University.">
+    <meta property="og:image" content="https://www.local083.org/images/card.webp">
+    <meta property="og:site_name" content="SEIU Local 503 at Oregon State University">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://www.local083.org/2026-bargaining/survey-tracker.html">
+    <meta name="twitter:title" content="Bargaining Survey Tracker - SEIU Local 503, OSU">
+    <meta name="twitter:description" content="Track the 2026 bargaining survey participation rates across departments at Oregon State University.">
+    <meta name="twitter:image" content="https://www.local083.org/images/card.webp">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.local083.org#organization",
+      "name": "SEIU Local 503 at Oregon State University",
+      "url": "https://www.local083.org",
+      "logo": "https://www.local083.org/images/logo.png"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.local083.org#website",
+      "name": "SEIU Local 503 at Oregon State University",
+      "url": "https://www.local083.org",
+      "publisher": {
+        "@id": "https://www.local083.org#organization"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://www.local083.org/2026-bargaining/survey-tracker.html#webpage",
+      "url": "https://www.local083.org/2026-bargaining/survey-tracker.html",
+      "name": "Bargaining Survey Tracker - SEIU Local 503, OSU",
+      "description": "Track the 2026 bargaining survey participation rates across departments at Oregon State University.",
+      "isPartOf": {
+        "@id": "https://www.local083.org#website"
+      },
+      "about": {
+        "@id": "https://www.local083.org#organization"
+      }
+    }
+  ]
+}
+    </script>
+    <!-- SEO META END -->
 </head>
 <body class="bg-brand-light">
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:bg-white focus:text-brand-purple-dark focus:px-4 focus:py-2 focus:rounded focus:shadow-lg">Skip to content</a>
 
     <!-- Header -->
     <header class="bg-white/80 backdrop-blur-lg border-b border-border-color sticky top-0 z-50">
@@ -92,7 +117,7 @@
                 <a href="/contact.html" class="text-text-secondary hover:text-brand-purple transition-colors">Contact</a>
             </div>
             <div class="lg:hidden">
-                <button id="mobile-menu-button" class="text-text-secondary hover:text-brand-purple focus:outline-none" aria-label="Open menu">
+                <button id="mobile-menu-button" class="text-text-secondary hover:text-brand-purple focus:outline-none" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false">
                     <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
                 </button>
             </div>
@@ -118,14 +143,14 @@
         </div>
     </section>
 
-    <main class="container mx-auto px-6 py-16">
+    <main id="main-content" class="container mx-auto px-6 py-16">
         <div id="tracker-container" class="max-w-4xl mx-auto space-y-12">
             <!-- Department trackers will be injected here by JavaScript -->
         </div>
     </main>
 
     <!-- Footer -->
-        <footer class="bg-brand-dark text-white pt-12 pb-8">
+        <footer class="bg-gray-100 pt-12 pb-8 text-text-primary">
         <div class="container mx-auto px-6">
             <div class="mt-10 pt-8 border-t border-gray-700 text-center">
             </div>
@@ -133,52 +158,52 @@
                 <!-- Column 1: About the Union -->
                 <div class="md:col-span-2 lg:col-span-1">
                     <div class="flex items-center mb-4">
-                        <img src="/images/logo.png" alt="SEIU 503 Logo" class="h-12 w-12 mr-3 bg-white p-1 rounded">
+                        <img src="/images/logo.png" alt="SEIU 503 Logo" class="h-12 w-12 mr-3 bg-white p-1 rounded" decoding="async" width="800" height="827">
                         <div>
                             <h3 class="text-xl font-bold">SEIU Local 503</h3>
-                            <p class="text-gray-400 text-sm">Oregon State University</p>
+                            <p class="text-text-secondary text-sm">Oregon State University</p>
                         </div>
                     </div>
-                    <p class="text-black leading-relaxed">Representing the classified employees of Oregon State University. We fight for fair contracts, defend workplace rights, and build a united community.</p>
+                    <p class="text-text-secondary leading-relaxed">Representing the classified employees of Oregon State University. We fight for fair contracts, defend workplace rights, and build a united community.</p>
                 </div>
     
                 <!-- Column 2: Quick Links -->
                 <div>
                     <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase">Quick Links</h4>
                     <ul class="space-y-3">
-                        <li><a href="/about.html" class="text-black hover:text-gray-500 transition-colors">About Us</a></li>
-                        <li><a href="/events.html" class="text-black hover:text-gray-500 transition-colors">Events</a></li>
-                        <li><a href="/news.html" class="text-black hover:text-gray-500 transition-colors">News</a></li>
-                        <li><a href="/leadership.html" class="text-black hover:text-gray-500 transition-colors">Leadership</a></li>
+                        <li><a href="/about.html" class="text-text-secondary hover:text-brand-purple transition-colors">About Us</a></li>
+                        <li><a href="/events.html" class="text-text-secondary hover:text-brand-purple transition-colors">Events</a></li>
+                        <li><a href="/news.html" class="text-text-secondary hover:text-brand-purple transition-colors">News</a></li>
+                        <li><a href="/leadership.html" class="text-text-secondary hover:text-brand-purple transition-colors">Leadership</a></li>
                     </ul>
                 </div>
     
                 <!-- Column 3: Resources -->
                 <div>
-                    <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase"><a href="/resources.html" class="hover:text-gray-500 transition-colors">Resources</a></h4>
+                    <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase"><a href="/resources.html" class="hover:text-brand-purple transition-colors">Resources</a></h4>
                     <ul class="space-y-3">
-                        <li><a href="/resources.html" class="text-black hover:text-gray-500 transition-colors">Resources & Rights</a></li>
-                        <li><a href="/resources/seiu_cba_2022-2026.pdf" class="text-black hover:text-gray-500 transition-colors">Our Contract (PDF)</a></li>
-                        <li><a href="/resources/stewards.html" class="text-black hover:text-gray-500 transition-colors">Find a Steward</a></li>
-                        <li><a href="/resources/weingarten-rights.html" class="text-black hover:text-gray-500 transition-colors">Weingarten Rights</a></li>
+                        <li><a href="/resources.html" class="text-text-secondary hover:text-brand-purple transition-colors">Resources & Rights</a></li>
+                        <li><a href="/resources/seiu_cba_2022-2026.pdf" class="text-text-secondary hover:text-brand-purple transition-colors">Our Contract (PDF)</a></li>
+                        <li><a href="/resources/stewards.html" class="text-text-secondary hover:text-brand-purple transition-colors">Find a Steward</a></li>
+                        <li><a href="/resources/weingarten-rights.html" class="text-text-secondary hover:text-brand-purple transition-colors">Weingarten Rights</a></li>
                     </ul>
                 </div>
     
                 <!-- Column 4: Contact -->
                 <div>
-                    <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase"><a href="/contact.html" class="hover:text-gray-500 transition-colors">Contact Us</a></h4>
-                     <ul class="space-y-3 text-black">
+                    <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase"><a href="/contact.html" class="hover:text-brand-purple transition-colors">Contact Us</a></h4>
+                     <ul class="space-y-3 text-text-secondary">
                         <li class="flex items-start">
                             <span class="mr-2 mt-1">✉️</span> <!-- Mail icon -->
-                            <a href="mailto:083execteam@seiu503.org" class="hover:text-gray-500 transition-colors">083execteam@seiu503.org</a>
+                            <a href="mailto:083execteam@seiu503.org" class="hover:text-brand-purple transition-colors">083execteam@seiu503.org</a>
                         </li>
                         <li class="flex items-start">
                             <span class="mr-2 mt-1">✉️</span> <!-- Mail icon -->
-                            <a href="mailto:083stewards@seiu503.org" class="hover:text-gray-500 transition-colors">083stewards@seiu503.org</a>
+                            <a href="mailto:083stewards@seiu503.org" class="hover:text-brand-purple transition-colors">083stewards@seiu503.org</a>
                         </li>
                         <li class="flex items-start">
                             <span class="mr-2 mt-1">&#128205;</span> <!-- Pin icon -->
-                            <a href="https://maps.app.goo.gl/9TWRZ9F4wjVjacsZ7" class="hover:text-gray-500 transition-colors">Adams Hall, Room 109<br>Corvallis, OR 97331</a>
+                            <a href="https://maps.app.goo.gl/9TWRZ9F4wjVjacsZ7" class="hover:text-brand-purple transition-colors">Adams Hall, Room 109<br>Corvallis, OR 97331</a>
                         </li>
                     </ul>
                 </div>
@@ -186,7 +211,7 @@
     
             <!-- Bottom Bar -->
             <div class="mt-10 pt-8 border-t border-gray-700 text-center">
-                <p class="text-gray-400 text-sm">&copy; 2025 SEIU Local 503, Oregon State University. All rights reserved.</p>
+                <p class="text-text-secondary text-sm">&copy; 2025 SEIU Local 503, Oregon State University. All rights reserved.</p>
             </div>
         </div>
     </footer>

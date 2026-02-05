@@ -17,7 +17,7 @@ echo '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' >> $OUTPUT_F
 
 # Find all .html files, excluding templates and the 404 page.
 # Use grep -v to filter out unwanted paths.
-find . -name "*.html" | grep -vE "template|404" | while read -r line; do
+find . -name "*.html" | grep -vE "template|404|test-pages" | while read -r line; do
     # Remove the leading './' from the file path.
     url_path=$(echo "$line" | sed 's|^\./||')
 

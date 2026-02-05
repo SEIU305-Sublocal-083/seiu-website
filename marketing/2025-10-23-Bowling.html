@@ -1,33 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Anti-FOUC (Flash of Unstyled Content) Fix -->
-    <style id="anti-fouc">html{visibility:hidden;opacity:0;}</style>
-    <script>
-    (function(){
-      var s = document.getElementById('anti-fouc');
-      var r = function(){
-        if(s){
-          s.remove();
-          document.documentElement.style.visibility='visible';
-          document.documentElement.style.opacity='1';
-        }
-      };
-      // Safety timeout in case of script error or slow load
-      setTimeout(r, 1500);
-
-      // Wait for DOMContentLoaded, then give a small buffer for Tailwind to parse
-      document.addEventListener('DOMContentLoaded', function(){
-        setTimeout(r, 100);
-      });
-    })();
-    </script>
-    <noscript>
-      <style>html{visibility:visible!important;opacity:1!important;}</style>
-    </noscript>
-    <!-- End Anti-FOUC Fix -->
-
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SEIU 503 - Member & Family Bowling Night</title>
     <script src="https://cdn.tailwindcss.com"></script>
@@ -74,8 +48,59 @@
             text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
         }
     </style>
+    <!-- SEO META START -->
+    <link rel="canonical" href="https://www.local083.org/marketing/2025-10-23-Bowling.html">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.local083.org/marketing/2025-10-23-Bowling.html">
+    <meta property="og:title" content="SEIU 503 - Member &amp; Family Bowling Night">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="https://www.local083.org/images/card.webp">
+    <meta property="og:site_name" content="SEIU Local 503 at Oregon State University">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://www.local083.org/marketing/2025-10-23-Bowling.html">
+    <meta name="twitter:title" content="SEIU 503 - Member &amp; Family Bowling Night">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="https://www.local083.org/images/card.webp">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.local083.org#organization",
+      "name": "SEIU Local 503 at Oregon State University",
+      "url": "https://www.local083.org",
+      "logo": "https://www.local083.org/images/logo.png"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.local083.org#website",
+      "name": "SEIU Local 503 at Oregon State University",
+      "url": "https://www.local083.org",
+      "publisher": {
+        "@id": "https://www.local083.org#organization"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://www.local083.org/marketing/2025-10-23-Bowling.html#webpage",
+      "url": "https://www.local083.org/marketing/2025-10-23-Bowling.html",
+      "name": "SEIU 503 - Member & Family Bowling Night",
+      "description": "",
+      "isPartOf": {
+        "@id": "https://www.local083.org#website"
+      },
+      "about": {
+        "@id": "https://www.local083.org#organization"
+      }
+    }
+  ]
+}
+    </script>
+    <!-- SEO META END -->
 </head>
 <body class="flex items-center justify-center min-h-screen">
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:bg-white focus:text-brand-purple-dark focus:px-4 focus:py-2 focus:rounded focus:shadow-lg">Skip to content</a>
 
     <div class="aspect-ratio-16-9 shadow-2xl">
         <div class="slide-content">
@@ -91,7 +116,7 @@
                 </header>
 
                 <!-- Main Section: Event Title and Details -->
-                <main class="flex-grow flex flex-col justify-center items-center text-center">
+                <main id="main-content" class="flex-grow flex flex-col justify-center items-center text-center">
                     <h1 class="text-[10vw] md:text-[8vw] lg:text-[7vw] font-black leading-none text-shadow tracking-tight">
                         Member & Family<br>Bowling Night
                     </h1>
@@ -106,7 +131,7 @@
                 </main>
 
                 <!-- Footer: Event Info, QR Code, and OSU Logo -->
-                <footer class="w-full flex justify-between items-end">
+                <footer class="w-full flex justify-between items-end text-text-primary bg-gray-100">
                     <!-- Date, Time, Location -->
                     <div>
                         <div class="text-left space-y-3">
@@ -128,7 +153,7 @@
                     <!-- QR Code -->
                     <div class="text-center">
                         <div class="bg-white p-2 rounded-lg shadow-lg w-[12vw] max-w-[150px] aspect-square mx-auto mb-4 flex items-center justify-center">
-                            <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.local083.org/events/2025-10-23-Bowling.html" alt="QR Code for Registration" class="max-w-full max-h-full block">
+                            <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.local083.org/events/2025-10-23-Bowling.html" alt="QR Code for Registration" class="max-w-full max-h-full block" decoding="async">
                         </div>
                         <p class="font-bold text-[2.2vw] md:text-[1.5vw] lg:text-[1.2vw] text-shadow">SCAN TO REGISTER</p>
                         <p class="mt-1 text-[1.5vw] md:text-[1vw] lg:text-[0.8vw] text-shadow opacity-90 break-all">https://www.local083.org/events/</p>

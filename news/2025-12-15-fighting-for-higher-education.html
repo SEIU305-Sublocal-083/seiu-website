@@ -1,52 +1,22 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-    <!-- Anti-FOUC (Flash of Unstyled Content) Fix -->
-    <style id="anti-fouc">html{visibility:hidden;opacity:0;}</style>
-    <script>
-    (function(){
-      var s = document.getElementById('anti-fouc');
-      var r = function(){
-        if(s){
-          s.remove();
-          document.documentElement.style.visibility='visible';
-          document.documentElement.style.opacity='1';
-        }
-      };
-      // Safety timeout in case of script error or slow load
-      setTimeout(r, 1500);
-
-      // Wait for DOMContentLoaded, then give a small buffer for Tailwind to parse
-      document.addEventListener('DOMContentLoaded', function(){
-        setTimeout(r, 100);
-      });
-    })();
-    </script>
-    <noscript>
-      <style>html{visibility:visible!important;opacity:1!important;}</style>
-    </noscript>
-    <!-- End Anti-FOUC Fix -->
-
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="A collection of all the university logos">
     <meta name="author" content="SEIU Local 503 at OSU">
 
     <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="article">
-    <meta property="og:url" content="https://www.local083.org/news/2025-12-15-fighting-for-higher-education.html">
-    <meta property="og:title" content="Fighting for Higher Ed Survey">
-    <meta property="og:description" content="">
-    <meta property="og:image" content="https://www.local083.org/images/452eb3b6-e72b-43ec-9698-bde681a4df9f-Fighting-for-Higher-Education-Banner.webp">
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://www.local083.org/news/2025-12-15-fighting-for-higher-education.html">
-    <meta property="twitter:title" content="Fighting for Higher Ed Survey">
-    <meta property="twitter:description" content="">
-    <meta property="twitter:image" content="https://www.local083.org/images/452eb3b6-e72b-43ec-9698-bde681a4df9f-Fighting-for-Higher-Education-Banner.webp">
 
-    <title>Fighting for Higher Education</title>
+
+
+<!-- Twitter -->
+
+
+
+
+<title>Fighting for Higher Education</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="icon" href="/images/logo.png" type="image/png">
     <link rel="apple-touch-icon" href="/images/logo.png">
@@ -128,8 +98,78 @@
             }
         }
     </style>
+    <!-- SEO META START -->
+    <link rel="canonical" href="https://www.local083.org/news/2025-12-15-fighting-for-higher-education.html">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.local083.org/news/2025-12-15-fighting-for-higher-education.html">
+    <meta property="og:title" content="Fighting for Higher Education">
+    <meta property="og:description" content="A collection of all the university logos">
+    <meta property="og:image" content="https://www.local083.org/images/452eb3b6-e72b-43ec-9698-bde681a4df9f-Fighting-for-Higher-Education-Banner.webp">
+    <meta property="og:site_name" content="SEIU Local 503 at Oregon State University">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://www.local083.org/news/2025-12-15-fighting-for-higher-education.html">
+    <meta name="twitter:title" content="Fighting for Higher Education">
+    <meta name="twitter:description" content="A collection of all the university logos">
+    <meta name="twitter:image" content="https://www.local083.org/images/452eb3b6-e72b-43ec-9698-bde681a4df9f-Fighting-for-Higher-Education-Banner.webp">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.local083.org#organization",
+      "name": "SEIU Local 503 at Oregon State University",
+      "url": "https://www.local083.org",
+      "logo": "https://www.local083.org/images/logo.png"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.local083.org#website",
+      "name": "SEIU Local 503 at Oregon State University",
+      "url": "https://www.local083.org",
+      "publisher": {
+        "@id": "https://www.local083.org#organization"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://www.local083.org/news/2025-12-15-fighting-for-higher-education.html#webpage",
+      "url": "https://www.local083.org/news/2025-12-15-fighting-for-higher-education.html",
+      "name": "Fighting for Higher Education",
+      "description": "A collection of all the university logos",
+      "isPartOf": {
+        "@id": "https://www.local083.org#website"
+      },
+      "about": {
+        "@id": "https://www.local083.org#organization"
+      }
+    },
+    {
+      "@type": "NewsArticle",
+      "@id": "https://www.local083.org/news/2025-12-15-fighting-for-higher-education.html#article",
+      "headline": "Fighting for Higher Education",
+      "description": "Join classified workers at Oregon’s Public Universities in the fight for fair wages, benefit protections, and union power. Sign the petition today!",
+      "image": "https://www.local083.org/images/452eb3b6-e72b-43ec-9698-bde681a4df9f-Fighting-for-Higher-Education-Banner.webp",
+      "datePublished": "2025-12-15",
+      "dateModified": "2025-12-15",
+      "author": {
+        "@type": "Organization",
+        "name": "SEIU 503 Sublocal 083"
+      },
+      "publisher": {
+        "@id": "https://www.local083.org#organization"
+      },
+      "mainEntityOfPage": {
+        "@id": "https://www.local083.org/news/2025-12-15-fighting-for-higher-education.html#webpage"
+      }
+    }
+  ]
+}
+    </script>
+    <!-- SEO META END -->
 </head>
 <body class="bg-brand-light">
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:bg-white focus:text-brand-purple-dark focus:px-4 focus:py-2 focus:rounded focus:shadow-lg">Skip to content</a>
 
     <!-- Header -->
     <header class="bg-white/80 backdrop-blur-lg border-b border-border-color sticky top-0 z-50">
@@ -147,7 +187,7 @@
                 <a href="/contact.html" class="text-text-secondary hover:text-brand-purple transition-colors">Contact</a>
             </div>
             <div class="lg:hidden">
-                <button id="mobile-menu-button" class="text-text-secondary hover:text-brand-purple focus:outline-none" aria-label="Open menu">
+                <button id="mobile-menu-button" class="text-text-secondary hover:text-brand-purple focus:outline-none" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false">
                     <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
                 </button>
             </div>
@@ -163,7 +203,7 @@
         </div>
     </header>
 
-    <main class="container mx-auto px-6 py-16">
+    <main id="main-content" class="container mx-auto px-6 py-16">
         <article class="max-w-4xl mx-auto bg-white p-8 md:p-12 rounded-xl border border-border-color">
 
             <!-- Article Header -->
@@ -188,7 +228,7 @@
 
             <!-- Article Body -->
             <div class="prose max-w-none text-text-secondary text-lg leading-relaxed">
-                <img src="/images/452eb3b6-e72b-43ec-9698-bde681a4df9f-Fighting-for-Higher-Education-Banner.webp" alt="Graphic with all public higher ed schools" class="w-full h-auto object-cover rounded-lg mb-8">
+                <img src="/images/452eb3b6-e72b-43ec-9698-bde681a4df9f-Fighting-for-Higher-Education-Banner.webp" alt="Graphic with all public higher ed schools" class="w-full h-auto object-cover rounded-lg mb-8" decoding="async" width="546" height="298">
 
                 <h2 class="text-3xl font-bold mb-4">Add your Name TODAY!</h2>
 
@@ -294,7 +334,7 @@
 
 
     <!-- Footer -->
-    <footer class="bg-brand-dark text-white pt-12 pb-8">
+    <footer class="bg-gray-100 pt-12 pb-8 text-text-primary">
         <div class="container mx-auto px-6">
             <div class="mt-10 pt-8 border-t border-gray-700 text-center">
             </div>
@@ -302,52 +342,52 @@
                 <!-- Column 1: About the Union -->
                 <div class="md:col-span-2 lg:col-span-1">
                     <div class="flex items-center mb-4">
-                        <img src="/images/logo.png" alt="SEIU 503 Logo" class="h-12 w-12 mr-3 bg-white p-1 rounded">
+                        <img src="/images/logo.png" alt="SEIU 503 Logo" class="h-12 w-12 mr-3 bg-white p-1 rounded" decoding="async" loading="lazy" width="800" height="827">
                         <div>
                             <h3 class="text-xl font-bold">SEIU Local 503</h3>
-                            <p class="text-gray-400 text-sm">Oregon State University</p>
+                            <p class="text-text-secondary text-sm">Oregon State University</p>
                         </div>
                     </div>
-                    <p class="text-black leading-relaxed">Representing the classified employees of Oregon State University. We fight for fair contracts, defend workplace rights, and build a united community.</p>
+                    <p class="text-text-secondary leading-relaxed">Representing the classified employees of Oregon State University. We fight for fair contracts, defend workplace rights, and build a united community.</p>
                 </div>
     
                 <!-- Column 2: Quick Links -->
                 <div>
                     <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase">Quick Links</h4>
                     <ul class="space-y-3">
-                        <li><a href="/about.html" class="text-black hover:text-gray-500 transition-colors">About Us</a></li>
-                        <li><a href="/events.html" class="text-black hover:text-gray-500 transition-colors">Events</a></li>
-                        <li><a href="/news.html" class="text-black hover:text-gray-500 transition-colors">News</a></li>
-                        <li><a href="/leadership.html" class="text-black hover:text-gray-500 transition-colors">Leadership</a></li>
+                        <li><a href="/about.html" class="text-text-secondary hover:text-brand-purple transition-colors">About Us</a></li>
+                        <li><a href="/events.html" class="text-text-secondary hover:text-brand-purple transition-colors">Events</a></li>
+                        <li><a href="/news.html" class="text-text-secondary hover:text-brand-purple transition-colors">News</a></li>
+                        <li><a href="/leadership.html" class="text-text-secondary hover:text-brand-purple transition-colors">Leadership</a></li>
                     </ul>
                 </div>
     
                 <!-- Column 3: Resources -->
                 <div>
-                    <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase"><a href="/resources.html" class="hover:text-gray-500 transition-colors">Resources</a></h4>
+                    <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase"><a href="/resources.html" class="hover:text-brand-purple transition-colors">Resources</a></h4>
                     <ul class="space-y-3">
-                        <li><a href="/resources.html" class="text-black hover:text-gray-500 transition-colors">Resources & Rights</a></li>
-                        <li><a href="/resources/seiu_cba_2022-2026.pdf" class="text-black hover:text-gray-500 transition-colors">Our Contract (PDF)</a></li>
-                        <li><a href="/resources/stewards.html" class="text-black hover:text-gray-500 transition-colors">Find a Steward</a></li>
-                        <li><a href="/resources/weingarten-rights.html" class="text-black hover:text-gray-500 transition-colors">Weingarten Rights</a></li>
+                        <li><a href="/resources.html" class="text-text-secondary hover:text-brand-purple transition-colors">Resources & Rights</a></li>
+                        <li><a href="/resources/seiu_cba_2022-2026.pdf" class="text-text-secondary hover:text-brand-purple transition-colors">Our Contract (PDF)</a></li>
+                        <li><a href="/resources/stewards.html" class="text-text-secondary hover:text-brand-purple transition-colors">Find a Steward</a></li>
+                        <li><a href="/resources/weingarten-rights.html" class="text-text-secondary hover:text-brand-purple transition-colors">Weingarten Rights</a></li>
                     </ul>
                 </div>
     
                 <!-- Column 4: Contact -->
                 <div>
-                    <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase"><a href="/contact.html" class="hover:text-gray-500 transition-colors">Contact Us</a></h4>
-                     <ul class="space-y-3 text-black">
+                    <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase"><a href="/contact.html" class="hover:text-brand-purple transition-colors">Contact Us</a></h4>
+                     <ul class="space-y-3 text-text-secondary">
                         <li class="flex items-start">
                             <span class="mr-2 mt-1">✉️</span> <!-- Mail icon -->
-                            <a href="mailto:083execteam@seiu503.org" class="hover:text-gray-500 transition-colors">083execteam@seiu503.org</a>
+                            <a href="mailto:083execteam@seiu503.org" class="hover:text-brand-purple transition-colors">083execteam@seiu503.org</a>
                         </li>
                         <li class="flex items-start">
                             <span class="mr-2 mt-1">✉️</span> <!-- Mail icon -->
-                            <a href="mailto:083stewards@seiu503.org" class="hover:text-gray-500 transition-colors">083stewards@seiu503.org</a>
+                            <a href="mailto:083stewards@seiu503.org" class="hover:text-brand-purple transition-colors">083stewards@seiu503.org</a>
                         </li>
                         <li class="flex items-start">
                             <span class="mr-2 mt-1">&#128205;</span> <!-- Pin icon -->
-                            <a href="https://maps.app.goo.gl/9TWRZ9F4wjVjacsZ7" class="hover:text-gray-500 transition-colors">Adams Hall, Room 109<br>Corvallis, OR 97331</a>
+                            <a href="https://maps.app.goo.gl/9TWRZ9F4wjVjacsZ7" class="hover:text-brand-purple transition-colors">Adams Hall, Room 109<br>Corvallis, OR 97331</a>
                         </li>
                     </ul>
                 </div>
@@ -355,7 +395,7 @@
     
             <!-- Bottom Bar -->
             <div class="mt-10 pt-8 border-t border-gray-700 text-center">
-                <p class="text-gray-400 text-sm">&copy; 2025 SEIU Local 503, Oregon State University. All rights reserved.</p>
+                <p class="text-text-secondary text-sm">&copy; 2025 SEIU Local 503, Oregon State University. All rights reserved.</p>
             </div>
         </div>
     </footer>
