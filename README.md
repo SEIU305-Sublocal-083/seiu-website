@@ -124,3 +124,52 @@ Each news item in `news.json` is an object with the following properties:
 *   `createdAt`: The date the story was created in `YYYY-MM-DD` format.
 *   `updatedAt`: The date the story was last updated in `YYYY-MM-DD` format.
 *   `featured`: Set to `true` to highlight the news story.
+
+## RSS Feeds (Automated)
+
+This site publishes RSS feeds for news and events:
+
+*   `https://www.local083.org/news/rss.xml`
+*   `https://www.local083.org/events/rss.xml`
+*   `https://www.local083.org/feed.xml` (combined)
+
+### How it is generated
+
+1.  The script `scripts/generate_rss.py` reads:
+    *   `news/news.json`
+    *   `events/events.json`
+2.  It writes:
+    *   `news/rss.xml`
+    *   `events/rss.xml`
+    *   `feed.xml`
+
+### GitHub Action automation
+
+The workflow `.github/workflows/rss-feeds.yml` runs on pushes that change:
+
+*   `news/news.json`
+*   `events/events.json`
+*   `scripts/generate_rss.py`
+*   `.github/workflows/rss-feeds.yml`
+
+When feed output changes, the action commits updated feed files back to the branch automatically.
+
+## Wayback Machine Archiving (Automated)
+
+This site can be automatically submitted to Internet Archive's Save Page Now using:
+
+*   Workflow: `.github/workflows/wayback-archive.yml`
+*   Script: `scripts/archive_wayback.py`
+
+### Trigger options
+
+*   **Scheduled**: Runs weekly on Mondays.
+*   **Manual**: Run from the Actions tab with optional inputs:
+    *   `max_urls` (default `0` = archive every URL in `sitemap.xml`)
+    *   `delay_seconds` (default `5`)
+    *   `fail_on_error` (default `false`)
+
+### Notes
+
+*   URLs are read from `sitemap.xml`.
+*   Requests are rate-limited using `delay_seconds` to reduce throttling risk.
