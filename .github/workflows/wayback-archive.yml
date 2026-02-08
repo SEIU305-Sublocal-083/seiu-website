@@ -1,0 +1,52 @@
+name: Archive Site to Wayback
+
+on:
+  workflow_dispatch:
+    inputs:
+      max_urls:
+        description: "Max URLs from sitemap (0 = all)"
+        required: false
+        default: "0"
+      delay_seconds:
+        description: "Delay between submissions (seconds)"
+        required: false
+        default: "5"
+      fail_on_error:
+        description: "Fail workflow if any URL submission fails"
+        required: false
+        default: false
+        type: boolean
+  schedule:
+    - cron: "0 8 * * 1"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: wayback-archive
+  cancel-in-progress: false
+
+jobs:
+  archive:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Submit sitemap URLs to Wayback
+        run: |
+          FAIL_FLAG=""
+          if [ "${{ github.event.inputs.fail_on_error || 'false' }}" = "true" ]; then
+            FAIL_FLAG="--fail-on-error"
+          fi
+
+          python scripts/archive_wayback.py \
+            --sitemap sitemap.xml \
+            --max-urls "${{ github.event.inputs.max_urls || '0' }}" \
+            --delay-seconds "${{ github.event.inputs.delay_seconds || '5' }}" \
+            ${FAIL_FLAG}
