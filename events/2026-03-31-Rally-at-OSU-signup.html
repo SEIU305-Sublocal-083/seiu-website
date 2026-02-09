@@ -59,6 +59,25 @@
              @apply bg-white text-brand-purple border-2 border-brand-purple hover:bg-brand-purple hover:text-white;
         }
 
+        /* Keep submit button readable even if utility classes fail to compile. */
+        #submit-button {
+            background-color: var(--brand-purple);
+            color: #ffffff;
+            border: 1px solid transparent;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+        }
+        #submit-button:hover:not(:disabled) {
+            background-color: var(--brand-purple-dark);
+            transform: translateY(-1px);
+            box-shadow: 0 10px 16px rgba(17, 24, 39, 0.18);
+        }
+        #submit-button:disabled {
+            opacity: 0.72;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
         /* Custom Tailwind config for our CSS variables */
         tailwind.config = {
             theme: {
@@ -197,6 +216,18 @@
                         <p class="text-text-secondary mt-3">Late registration starts 3/28 and is open through the start of the event on 3/31.</p>
                         <p class="text-text-secondary mt-3">Those registering late are not guaranteed access to interpretation or accessibility resources.</p>
                     </div>
+                    <div class="border border-border-color rounded-xl p-5 bg-white">
+                        <h4 class="text-xl font-bold">Student</h4>
+                        <p class="text-text-secondary mt-2">Free</p>
+                        <p class="text-text-secondary mt-3">For OSU students and student workers attending in support of the bargaining team.</p>
+                        <p class="text-text-secondary mt-3">Registering helps us estimate turnout and accessibility needs.</p>
+                    </div>
+                    <div class="border border-border-color rounded-xl p-5 bg-white">
+                        <h4 class="text-xl font-bold">Other (Faculty, Family, etc.)</h4>
+                        <p class="text-text-secondary mt-2">Free</p>
+                        <p class="text-text-secondary mt-3">For faculty, family members, and community supporters joining the rally.</p>
+                        <p class="text-text-secondary mt-3">Please register so we can plan space, materials, and accommodations.</p>
+                    </div>
                 </div>
 
                 <h3 class="text-2xl font-bold mt-12 mb-4">Signup Form</h3>
@@ -218,6 +249,8 @@
                             <option value="">Select one</option>
                             <option>Regular Registration</option>
                             <option>Late Registration</option>
+                            <option>Student</option>
+                            <option>Other (Faculty, Family, etc.)</option>
                         </select>
                     </div>
                     <div class="grid md:grid-cols-2 gap-6">
@@ -316,7 +349,19 @@
                         <label class="text-text-secondary" for="conduct">By registering you agree to the SEIU 503 Code of Conduct: <a href="https://seiu503.org/code-of-conduct-for-seiu-503-events-meetings-communications/" class="text-brand-purple hover:underline">Code of Conduct</a></label>
                     </div>
                     <div class="pt-2">
-                        <button type="submit" class="btn btn-primary w-full">Submit Registration</button>
+                        <button
+                            type="submit"
+                            id="submit-button"
+                            class="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-brand-purple px-6 py-3.5 text-base font-bold text-white shadow-md transition-all duration-200 hover:-translate-y-0.5 hover:bg-brand-purple-dark hover:shadow-lg disabled:cursor-not-allowed disabled:opacity-70"
+                            aria-live="polite"
+                        >
+                            <svg id="submit-spinner" class="hidden h-5 w-5 animate-spin" viewBox="0 0 24 24" aria-hidden="true">
+                                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4" fill="none"></circle>
+                                <path class="opacity-90" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"></path>
+                            </svg>
+                            <span id="submit-button-text">Submit Registration</span>
+                        </button>
+                        <p class="mt-2 text-sm text-text-secondary">Please wait after clicking submit. Processing can take a few seconds.</p>
                     </div>
                 </form>
             </div>
@@ -429,7 +474,9 @@
         const resultEl = document.getElementById('form-result');
         const resultIcon = document.getElementById('form-result-icon');
         const resultMessage = document.getElementById('form-result-message');
-        const submitButton = form ? form.querySelector('button[type="submit"]') : null;
+        const submitButton = document.getElementById('submit-button');
+        const submitButtonText = document.getElementById('submit-button-text');
+        const submitSpinner = document.getElementById('submit-spinner');
 
         const GOOGLE_SHEET_URL = 'https://script.google.com/macros/s/AKfycbyJIsm0a77hArZOuzOWGnEY6CnAHEFcMNFcnD7RkBoBy1wQFyGAZzSbkQ0E20JTwPQ/exec';
 
@@ -443,9 +490,25 @@
             if (form) form.classList.add('hidden');
         }
 
+        function setSubmitState(isSubmitting) {
+            if (!submitButton) return;
+
+            submitButton.disabled = isSubmitting;
+            submitButton.setAttribute('aria-busy', isSubmitting ? 'true' : 'false');
+            if (submitButtonText) {
+                submitButtonText.textContent = isSubmitting ? 'Submitting...' : 'Submit Registration';
+            }
+            if (submitSpinner) {
+                submitSpinner.classList.toggle('hidden', !isSubmitting);
+            }
+        }
+
         if (form) {
             form.addEventListener('submit', async (event) => {
                 event.preventDefault();
+                if (submitButton && submitButton.disabled) return;
+
+                setSubmitState(true);
 
                 const honeypot = form.querySelector('input[name="company"]');
                 if (honeypot && honeypot.value) {
@@ -458,11 +521,6 @@
                     await new Promise(resolve => setTimeout(resolve, 3000 - elapsed));
                 } else {
                     await new Promise(resolve => setTimeout(resolve, 3000));
-                }
-
-                if (submitButton) {
-                    submitButton.disabled = true;
-                    submitButton.textContent = 'Submitting...';
                 }
 
                 const formData = new FormData(form);
@@ -496,10 +554,7 @@
                 } catch (error) {
                     showResult('Sorry, something went wrong. Please refresh the page and try again, or email 083execteam@seiu503.org.', true);
                 } finally {
-                    if (submitButton) {
-                        submitButton.disabled = false;
-                        submitButton.textContent = 'Submit Registration';
-                    }
+                    setSubmitState(false);
                 }
             });
         }
