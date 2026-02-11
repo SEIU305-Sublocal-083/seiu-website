@@ -355,7 +355,7 @@
                             class="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-brand-purple px-6 py-3.5 text-base font-bold text-white shadow-md transition-all duration-200 hover:-translate-y-0.5 hover:bg-brand-purple-dark hover:shadow-lg disabled:cursor-not-allowed disabled:opacity-70"
                             aria-live="polite"
                         >
-                            <svg id="submit-spinner" class="hidden h-5 w-5 animate-spin" viewBox="0 0 24 24" aria-hidden="true">
+                            <svg id="submit-spinner" class="h-5 w-5 animate-spin" viewBox="0 0 24 24" aria-hidden="true" style="display:none;">
                                 <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4" fill="none"></circle>
                                 <path class="opacity-90" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"></path>
                             </svg>
@@ -499,7 +499,7 @@
                 submitButtonText.textContent = isSubmitting ? 'Submitting...' : 'Submit Registration';
             }
             if (submitSpinner) {
-                submitSpinner.classList.toggle('hidden', !isSubmitting);
+                submitSpinner.style.display = isSubmitting ? 'inline-block' : 'none';
             }
         }
 
@@ -509,38 +509,37 @@
                 if (submitButton && submitButton.disabled) return;
 
                 setSubmitState(true);
-
-                const honeypot = form.querySelector('input[name="company"]');
-                if (honeypot && honeypot.value) {
-                    showResult('Thanks! Your registration has been received.', false);
-                    return;
-                }
-
-                const elapsed = Date.now() - formLoadedAt;
-                if (elapsed < 3000) {
-                    await new Promise(resolve => setTimeout(resolve, 3000 - elapsed));
-                } else {
-                    await new Promise(resolve => setTimeout(resolve, 3000));
-                }
-
-                const formData = new FormData(form);
-                const payload = {
-                    registrationType: formData.get('registrationType') || '',
-                    firstName: formData.get('firstName') || '',
-                    lastName: formData.get('lastName') || '',
-                    email: formData.get('email') || '',
-                    phone: formData.get('phone') || '',
-                    foodAllergies: (formData.getAll('foodAllergies') || []).join(', '),
-                    allergyDetails: formData.get('allergyDetails') || '',
-                    dietaryRestrictions: (formData.getAll('dietaryRestrictions') || []).join(', '),
-                    dietaryDetails: formData.get('dietaryDetails') || '',
-                    languagePreference: formData.get('languagePreference') || '',
-                    languageOther: formData.get('languageOther') || '',
-                    interpretationNeeded: formData.get('interpretationNeeded') || '',
-                    pronouns: formData.get('pronouns') || ''
-                };
-
                 try {
+                    const honeypot = form.querySelector('input[name="company"]');
+                    if (honeypot && honeypot.value) {
+                        showResult('Thanks! Your registration has been received.', false);
+                        return;
+                    }
+
+                    const elapsed = Date.now() - formLoadedAt;
+                    if (elapsed < 3000) {
+                        await new Promise(resolve => setTimeout(resolve, 3000 - elapsed));
+                    } else {
+                        await new Promise(resolve => setTimeout(resolve, 3000));
+                    }
+
+                    const formData = new FormData(form);
+                    const payload = {
+                        registrationType: formData.get('registrationType') || '',
+                        firstName: formData.get('firstName') || '',
+                        lastName: formData.get('lastName') || '',
+                        email: formData.get('email') || '',
+                        phone: formData.get('phone') || '',
+                        foodAllergies: (formData.getAll('foodAllergies') || []).join(', '),
+                        allergyDetails: formData.get('allergyDetails') || '',
+                        dietaryRestrictions: (formData.getAll('dietaryRestrictions') || []).join(', '),
+                        dietaryDetails: formData.get('dietaryDetails') || '',
+                        languagePreference: formData.get('languagePreference') || '',
+                        languageOther: formData.get('languageOther') || '',
+                        interpretationNeeded: formData.get('interpretationNeeded') || '',
+                        pronouns: formData.get('pronouns') || ''
+                    };
+
                     await fetch(GOOGLE_SHEET_URL, {
                         method: 'POST',
                         mode: 'no-cors',

@@ -22,6 +22,16 @@
   },
   {
     "date": "2026-02-12",
+    "time": "10:00 AM",
+    "title": "Bargaining Zoom Observation",
+    "description": "Join the bargaining observation session on Zoom. Please stay muted for the full session to help protect bargaining privilege.",
+    "type": "Zoom Observation",
+    "url": "/events/2026-02-12-Bargaining-Zoom-Observation.html",
+    "featured": true,
+    "location_detail": "Online via Zoom"
+  },
+  {
+    "date": "2026-02-12",
     "time": "All Day",
     "title": "Purple Up Day (UO)",
     "description": "Wear purple to show solidarity while bargaining happens at University of Oregon. Dates: February 12–13.",
