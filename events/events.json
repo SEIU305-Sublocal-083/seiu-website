@@ -358,7 +358,8 @@
     "description": "Regularly scheduled meeting for the Local 083 Executive Team.",
     "type": "Zoom Meeting",
     "url": "/events/2025-09-09-Executive-Team-Meeting.html",
-    "featured": false
+    "featured": false,
+    "location_detail": "Online via Zoom"
   },
   {
     "date": "2025-09-03",
@@ -367,7 +368,8 @@
     "description": "Contract Action Team meeting to plan and coordinate actions to support bargaining.",
     "type": "Zoom Meeting",
     "url": "/events/2025-09-03-CAT-Meeting.html",
-    "featured": false
+    "featured": false,
+    "location_detail": "Online via Zoom"
   },
   {
     "date": "2025-09-03",
@@ -376,7 +378,8 @@
     "description": "Welcome new members! Learn about your union, your rights, and how to get involved.",
     "type": "In Person",
     "url": "/events/2025-09-03-New-Employee-Orientation.html",
-    "featured": false
+    "featured": false,
+    "location_detail": "OSU Campus (Room shared in orientation details)"
   },
   {
     "date": "2025-08-28",
@@ -385,7 +388,8 @@
     "description": "A monthly meeting for current stewards to connect, share information, and build skills.",
     "type": "Online Meeting",
     "url": "/events/2025-08-28-Steward-Meeting.html",
-    "featured": false
+    "featured": false,
+    "location_detail": "Online via Zoom"
   },
   {
     "date": "2025-08-21",
@@ -394,22 +398,27 @@
     "description": "Monthly meeting with updates on bargaining, events, and more. Lunch provided!",
     "type": "Hybrid",
     "url": "/events/2025-08-21-Membership-Meeting.html",
-    "featured": false
+    "featured": false,
+    "location_detail": "Hybrid (Zoom and in-person)"
   },
   {
     "date": "2025-08-14",
+    "time": "TBD",
     "title": "Sub Local Leadership Meeting",
     "description": "A meeting with the leadership of our Sub Local.",
     "type": "Meeting",
     "url": "#",
-    "featured": false
+    "featured": false,
+    "location_detail": "TBD"
   },
   {
     "date": "2025-08-06",
+    "time": "TBD",
     "title": "CAT Meeting",
     "description": "A C.A.T. meeting focusing on upcoming events.",
     "type": "Meeting",
     "url": "#",
-    "featured": false
+    "featured": false,
+    "location_detail": "TBD"
   }
 ]
