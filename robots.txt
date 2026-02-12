@@ -1,6 +1,7 @@
 User-agent: *
 Disallow: /bargaining/
 Disallow: /private/
+Disallow: /test-pages/workday-transition/
 
 User-agent: YandexBot
 Disallow: /
