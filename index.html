@@ -139,6 +139,7 @@
 }
     </script>
     <!-- SEO META END -->
+    <script src="/js/analytics.js" defer></script>
 </head>
 <body class="bg-brand-light">
     <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:bg-white focus:text-brand-purple-dark focus:px-4 focus:py-2 focus:rounded focus:shadow-lg">Skip to content</a>
@@ -180,8 +181,8 @@
                 <h1 class="text-4xl md:text-6xl font-bold leading-tight">Show Up on Zoom for 2026 Bargaining</h1>
                 <p class="mt-4 text-lg md:text-xl text-text-secondary max-w-2xl">Download official SEIU 503 Zoom backgrounds and join bargaining observation sessions ready to go. During observation, please stay muted to protect bargaining privilege.</p>
                 <div class="mt-8 flex flex-col sm:flex-row sm:items-center gap-4 justify-center md:justify-start">
-                    <a href="/resources/zoom-backgrounds.html" class="btn btn-secondary w-full sm:w-auto">Get Zoom Backgrounds</a>
-                    <a href="/events/2026-02-12-Bargaining-Zoom-Observation.html" class="btn btn-outline w-full sm:w-auto">Join Thursday 10 AM</a>
+                    <a href="/resources/zoom-backgrounds.html" class="btn btn-secondary w-full sm:w-auto" data-ph-event="cta_click" data-ph-label="Get Zoom Backgrounds">Get Zoom Backgrounds</a>
+                    <a href="/events/2026-02-12-Bargaining-Zoom-Observation.html" class="btn btn-outline w-full sm:w-auto" data-ph-event="cta_click" data-ph-label="Join Thursday 10 AM">Join Thursday 10 AM</a>
                 </div>
             </div>
             <div class="md:w-2/5 mt-12 md:mt-0 flex justify-center">
@@ -196,9 +197,9 @@
                 <h2 class="text-3xl font-bold text-brand-purple-dark">Zoom backgrounds are ready</h2>
                 <p class="mt-3 text-text-secondary">Grab the standard pack, read why a shared background matters, and join the bargaining observation on Thursday, February 12, 2026 at 10:00 AM. Please stay muted during the session.</p>
                 <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-3">
-                    <a href="/resources/zoom-backgrounds/2026-bargaining/seiu-503-2026-bargaining-zoom-backgrounds.zip" class="btn btn-primary text-center" download>Download ZIP</a>
-                    <a href="/news/2026-02-04-zoom-backgrounds.html" class="btn btn-outline text-center">Read Why It Matters</a>
-                    <a href="/events/2026-02-12-Bargaining-Zoom-Observation.html" class="btn btn-secondary text-center">Join the Event</a>
+                    <a href="/resources/zoom-backgrounds/2026-bargaining/seiu-503-2026-bargaining-zoom-backgrounds.zip" class="btn btn-primary text-center" download data-ph-event="cta_click" data-ph-label="Download Zoom Backgrounds ZIP">Download ZIP</a>
+                    <a href="/news/2026-02-04-zoom-backgrounds.html" class="btn btn-outline text-center" data-ph-event="cta_click" data-ph-label="Read Why It Matters">Read Why It Matters</a>
+                    <a href="/events/2026-02-12-Bargaining-Zoom-Observation.html" class="btn btn-secondary text-center" data-ph-event="cta_click" data-ph-label="Join the Event">Join the Event</a>
                 </div>
             </div>
         </div>
@@ -353,14 +354,15 @@
         </section>
     </main>
 
-    <footer class="bg-gray-100 pt-12 pb-8 text-text-primary">
+        <footer class="bg-gray-100 pt-12 pb-8 text-text-primary">
         <div class="container mx-auto px-6">
             <div class="mt-10 pt-8 border-t border-gray-700 text-center">
             </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Column 1: About the Union -->
                 <div class="md:col-span-2 lg:col-span-1">
                     <div class="flex items-center mb-4">
-                        <img src="/images/logo.png" alt="SEIU 503 Logo" class="h-12 w-12 mr-3 bg-white p-1 rounded" decoding="async" loading="lazy" width="800" height="827">
+                        <img src="/images/logo.png" alt="SEIU 503 Logo" class="h-12 w-12 mr-3 bg-white p-1 rounded">
                         <div>
                             <h3 class="text-xl font-bold">SEIU Local 503</h3>
                             <p class="text-text-secondary text-sm">Oregon State University</p>
@@ -369,6 +371,7 @@
                     <p class="text-text-secondary leading-relaxed">Representing the classified employees of Oregon State University. We fight for fair contracts, defend workplace rights, and build a united community.</p>
                 </div>
     
+                <!-- Column 2: Quick Links -->
                 <div>
                     <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase">Quick Links</h4>
                     <ul class="space-y-3">
@@ -379,6 +382,7 @@
                     </ul>
                 </div>
     
+                <!-- Column 3: Resources -->
                 <div>
                     <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase"><a href="/resources.html" class="hover:text-brand-purple transition-colors">Resources</a></h4>
                     <ul class="space-y-3">
@@ -389,24 +393,34 @@
                     </ul>
                 </div>
     
+                <!-- Column 4: Contact -->
                 <div>
                     <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase"><a href="/contact.html" class="hover:text-brand-purple transition-colors">Contact Us</a></h4>
                      <ul class="space-y-3 text-text-secondary">
                         <li class="flex items-start">
-                            <span class="mr-2 mt-1">✉️</span> <a href="mailto:083execteam@seiu503.org" class="hover:text-brand-purple transition-colors">083execteam@seiu503.org</a>
+                            <span class="mr-2 mt-1">✉️</span> <!-- Mail icon -->
+                            <a href="mailto:083execteam@seiu503.org" class="hover:text-brand-purple transition-colors">083execteam@seiu503.org</a>
                         </li>
                         <li class="flex items-start">
-                            <span class="mr-2 mt-1">✉️</span> <a href="mailto:083stewards@seiu503.org" class="hover:text-brand-purple transition-colors">083stewards@seiu503.org</a>
+                            <span class="mr-2 mt-1">✉️</span> <!-- Mail icon -->
+                            <a href="mailto:083stewards@seiu503.org" class="hover:text-brand-purple transition-colors">083stewards@seiu503.org</a>
                         </li>
                         <li class="flex items-start">
-                            <span class="mr-2 mt-1">📍</span> <a href="https://maps.app.goo.gl/9TWRZ9F4wjVjacsZ7" class="hover:text-brand-purple transition-colors">Adams Hall, Room 109<br>Corvallis, OR 97331</a>
+                            <span class="mr-2 mt-1">&#128205;</span> <!-- Pin icon -->
+                            <a href="https://maps.app.goo.gl/9TWRZ9F4wjVjacsZ7" class="hover:text-brand-purple transition-colors">Adams Hall, Room 109<br>Corvallis, OR 97331</a>
                         </li>
                     </ul>
                 </div>
             </div>
     
-            <div class="mt-10 pt-8 border-t border-gray-700 text-center">
-                <p class="text-text-secondary text-sm">© 2025 SEIU Local 503, Oregon State University. All rights reserved.</p>
+            <!-- Bottom Bar -->
+            <div class="mt-10 pt-8 border-t border-gray-700 text-center space-y-2">
+                <p class="text-text-secondary text-sm">&copy; 2025 SEIU Local 503, Oregon State University. All rights reserved.</p>
+                <p class="text-text-secondary text-xs">
+                    <a href="#" class="underline hover:text-brand-purple" onclick="event.preventDefault(); (localStorage.getItem('ph_opt_out') === '1' ? phOptIn() : phOptOut());">
+                        Privacy settings
+                    </a>
+                </p>
             </div>
         </div>
     </footer>
@@ -503,6 +517,10 @@
             });
 
             // --- Load Upcoming Events ---
+            const safeCapture = (name, props = {}) => {
+                if (typeof window.phCapture === 'function') window.phCapture(name, props);
+            };
+
             const loadUpcomingEvents = async () => {
                 const eventsContainer = document.getElementById('upcoming-events-container');
                 try {
@@ -556,6 +574,7 @@
                     } else {
                         eventsContainer.innerHTML = '<p class="text-center text-text-secondary col-span-full">No upcoming events at this time. Please check back soon!</p>';
                     }
+                    safeCapture('home_events_loaded', { count: upcomingEvents.length });
                 } catch (error) {
                     console.error('Error fetching events:', error);
                     eventsContainer.innerHTML = '<p class="text-center text-red-500 col-span-full">Could not load events. Please try again later.</p>';
@@ -604,6 +623,7 @@
                     } else {
                         newsGridContainer.innerHTML = '<p class="text-center text-text-secondary col-span-full">No news to display at this time.</p>';
                     }
+                    safeCapture('home_news_loaded', { count: sortedNews.length });
 
                 } catch(error) {
                     console.error('Error fetching news:', error);

@@ -63,6 +63,11 @@ fi
 find . -name "*.html" -not -path "./_includes/*" -not -path "*template.html" -print0 | while IFS= read -r -d '' file; do
     echo "Processing: $file"
 
+    # Ensure analytics.js is loaded just before closing head (idempotent)
+    if ! grep -q "js/analytics.js" "$file"; then
+        perl -i -p0e 's|</head>|    <script src="/js/analytics.js" defer></script>\n</head>|' "$file"
+    fi
+
     if [ "$UPDATE_HEADER" = true ]; then
         echo "  -> Updating header..."
         perl -i -p0e 'BEGIN { $content = $ENV{"HEADER_CONTENT"}; } s|<header.*?</header>|$content|s' "$file"

@@ -6,6 +6,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const tagsContainer = document.getElementById('tags-container');
     const featuredArticleSection = document.getElementById('featured-article-section');
 
+    const escapeAttr = (str) => String(str || '').replace(/"/g, '&quot;');
+
+    const safeCapture = (name, props = {}) => {
+        if (typeof window.phCapture === 'function') {
+            window.phCapture(name, props);
+        }
+    };
+
     let allArticles = [];
     let activeFilters = {
         searchTerm: '',
@@ -18,6 +26,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const response = await fetch('news/news.json');
             if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
             allArticles = await response.json();
+
+            safeCapture('news_feed_loaded', { count: allArticles.length });
 
             // Sort by publishedAt date descending by default
             allArticles.sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt));
@@ -60,6 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
             button.addEventListener('click', () => {
                 activeFilters.activeTag = tag;
                 setActiveTag(button);
+                safeCapture('news_filter_tag', { tag });
                 renderArticles();
             });
             tagsContainer.appendChild(button);
@@ -86,6 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     setActiveTag(null);
                     summary.textContent = tag;
                     details.removeAttribute('open');
+                    safeCapture('news_filter_tag', { tag });
                     renderArticles();
                 });
                 div.appendChild(link);
@@ -115,7 +127,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const altText = article.alt || article.title;
         featuredArticleSection.innerHTML = `
             <div class="bg-white rounded-xl border border-border-color overflow-hidden">
-                <a href="${article.url}" class="block group">
+                <a href="${article.url}" class="block group" data-ph-event="news_article_click" data-ph-label="${article.title}" data-ph-metadata='{"position":"featured"}'>
                     <div class="grid lg:grid-cols-2">
                         <div class="p-8 lg:p-12">
                             <p class="text-text-secondary text-sm mb-2 font-semibold">FEATURED STORY</p>
@@ -176,7 +188,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const altText = article.alt || article.title;
 
             articleCard.innerHTML = `
-                <a href="${article.url}" class="group flex flex-col h-full flex-grow">
+                <a href="${article.url}" class="group flex flex-col h-full flex-grow" data-ph-event="news_article_click" data-ph-label="${escapeAttr(article.title)}" data-ph-metadata='{"position":"grid"}'>
                     <img src="${article.image}" alt="${altText}" class="w-full h-48 object-cover">
                     <div class="p-6 flex-grow">
                         <div class="flex items-center justify-between mb-2">
@@ -197,13 +209,22 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    let searchDebounce;
     searchInput.addEventListener('input', (e) => {
-        activeFilters.searchTerm = e.target.value;
+        const value = e.target.value;
+        activeFilters.searchTerm = value;
+        clearTimeout(searchDebounce);
+        searchDebounce = setTimeout(() => {
+            if (value.trim().length >= 2) {
+                safeCapture('news_search', { term: value.trim() });
+            }
+        }, 250);
         renderArticles();
     });
 
     sortSelect.addEventListener('change', (e) => {
         activeFilters.sortOrder = e.target.value;
+        safeCapture('news_sort', { order: activeFilters.sortOrder });
         renderArticles();
     });
 
