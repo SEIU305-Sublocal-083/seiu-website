@@ -5,7 +5,7 @@
     <link>https://www.local083.org</link>
     <description>Combined news and event updates from SEIU Local 503 at Oregon State University.</description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 08 Feb 2026 21:15:43 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 12 Feb 2026 18:09:29 GMT</lastBuildDate>
     <atom:link href="https://www.local083.org/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>[Event] Purple Up Day (SOU)</title>
@@ -86,6 +86,23 @@
       <description>Monthly meeting with updates on bargaining, events, and more. | Date: 2026-02-19 | Time: 12:00 PM - 1:00 PM | Location: Online via Zoom</description>
       <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
       <category>Zoom Meeting</category>
+    </item>
+    <item>
+      <title>[News] Bargaining Observation Time Update: 10:00 AM Moved to 1:15 PM</title>
+      <link>https://www.local083.org/news/2026-02-12-bargaining-observation-time-change.html</link>
+      <guid isPermaLink="false">https://www.local083.org/news/2026-02-12-bargaining-observation-time-change.html#news</guid>
+      <description>The bargaining observation was originally scheduled for 10:00 AM. Around 9:00 AM, management changed it to 1:15 PM. We are sending email updates and have updated the website.</description>
+      <pubDate>Thu, 12 Feb 2026 00:00:00 GMT</pubDate>
+      <category>Bargaining</category>
+      <category>Update</category>
+    </item>
+    <item>
+      <title>[Event] Bargaining Zoom Observation</title>
+      <link>https://www.local083.org/events/2026-02-12-Bargaining-Zoom-Observation.html</link>
+      <guid isPermaLink="false">event:2026-02-12:Bargaining Zoom Observation:combined</guid>
+      <description>This bargaining observation was originally scheduled for 10:00 AM. Around 9:00 AM, management changed it to 1:15 PM. Please stay muted for the full session to protect bargaining privilege. Anyone joining after 1:20 PM will be removed. | Date: 2026-02-12 | Time: 1:15 PM | Location: Online via Zoom</description>
+      <pubDate>Thu, 12 Feb 2026 00:00:00 GMT</pubDate>
+      <category>Zoom Observation</category>
     </item>
     <item>
       <title>[Event] Purple Up Day (UO)</title>
@@ -355,7 +372,7 @@
       <title>[Event] Executive Team Meeting</title>
       <link>https://www.local083.org/events/2025-09-09-Executive-Team-Meeting.html</link>
       <guid isPermaLink="false">event:2025-09-09:Executive Team Meeting:combined</guid>
-      <description>Regularly scheduled meeting for the Local 083 Executive Team. | Date: 2025-09-09 | Time: 6:00 PM - 8:00 PM</description>
+      <description>Regularly scheduled meeting for the Local 083 Executive Team. | Date: 2025-09-09 | Time: 6:00 PM - 8:00 PM | Location: Online via Zoom</description>
       <pubDate>Tue, 09 Sep 2025 00:00:00 GMT</pubDate>
       <category>Zoom Meeting</category>
     </item>
@@ -363,7 +380,7 @@
       <title>[Event] CAT Meeting</title>
       <link>https://www.local083.org/events/2025-09-03-CAT-Meeting.html</link>
       <guid isPermaLink="false">event:2025-09-03:CAT Meeting:combined</guid>
-      <description>Contract Action Team meeting to plan and coordinate actions to support bargaining. | Date: 2025-09-03 | Time: 6:30 PM - 8:00 PM</description>
+      <description>Contract Action Team meeting to plan and coordinate actions to support bargaining. | Date: 2025-09-03 | Time: 6:30 PM - 8:00 PM | Location: Online via Zoom</description>
       <pubDate>Wed, 03 Sep 2025 00:00:00 GMT</pubDate>
       <category>Zoom Meeting</category>
     </item>
@@ -371,7 +388,7 @@
       <title>[Event] New Employee Orientation</title>
       <link>https://www.local083.org/events/2025-09-03-New-Employee-Orientation.html</link>
       <guid isPermaLink="false">event:2025-09-03:New Employee Orientation:combined</guid>
-      <description>Welcome new members! Learn about your union, your rights, and how to get involved. | Date: 2025-09-03 | Time: 11:45 AM - 12:15 PM</description>
+      <description>Welcome new members! Learn about your union, your rights, and how to get involved. | Date: 2025-09-03 | Time: 11:45 AM - 12:15 PM | Location: OSU Campus (Room shared in orientation details)</description>
       <pubDate>Wed, 03 Sep 2025 00:00:00 GMT</pubDate>
       <category>In Person</category>
     </item>
@@ -379,7 +396,7 @@
       <title>[Event] Steward Meeting</title>
       <link>https://www.local083.org/events/2025-08-28-Steward-Meeting.html</link>
       <guid isPermaLink="false">event:2025-08-28:Steward Meeting:combined</guid>
-      <description>A monthly meeting for current stewards to connect, share information, and build skills. | Date: 2025-08-28 | Time: 6:00 PM - 7:30 PM</description>
+      <description>A monthly meeting for current stewards to connect, share information, and build skills. | Date: 2025-08-28 | Time: 6:00 PM - 7:30 PM | Location: Online via Zoom</description>
       <pubDate>Thu, 28 Aug 2025 00:00:00 GMT</pubDate>
       <category>Online Meeting</category>
     </item>
@@ -396,7 +413,7 @@
       <title>[Event] Membership Meeting</title>
       <link>https://www.local083.org/events/2025-08-21-Membership-Meeting.html</link>
       <guid isPermaLink="false">event:2025-08-21:Membership Meeting:combined</guid>
-      <description>Monthly meeting with updates on bargaining, events, and more. Lunch provided! | Date: 2025-08-21 | Time: 12:00 PM - 1:00 PM</description>
+      <description>Monthly meeting with updates on bargaining, events, and more. Lunch provided! | Date: 2025-08-21 | Time: 12:00 PM - 1:00 PM | Location: Hybrid (Zoom and in-person)</description>
       <pubDate>Thu, 21 Aug 2025 00:00:00 GMT</pubDate>
       <category>Hybrid</category>
     </item>
@@ -404,7 +421,7 @@
       <title>[Event] Sub Local Leadership Meeting</title>
       <link>https://www.local083.org/#</link>
       <guid isPermaLink="false">event:2025-08-14:Sub Local Leadership Meeting:combined</guid>
-      <description>A meeting with the leadership of our Sub Local. | Date: 2025-08-14</description>
+      <description>A meeting with the leadership of our Sub Local. | Date: 2025-08-14 | Time: TBD | Location: TBD</description>
       <pubDate>Thu, 14 Aug 2025 00:00:00 GMT</pubDate>
       <category>Meeting</category>
     </item>
@@ -412,7 +429,7 @@
       <title>[Event] CAT Meeting</title>
       <link>https://www.local083.org/#</link>
       <guid isPermaLink="false">event:2025-08-06:CAT Meeting:combined</guid>
-      <description>A C.A.T. meeting focusing on upcoming events. | Date: 2025-08-06</description>
+      <description>A C.A.T. meeting focusing on upcoming events. | Date: 2025-08-06 | Time: TBD | Location: TBD</description>
       <pubDate>Wed, 06 Aug 2025 00:00:00 GMT</pubDate>
       <category>Meeting</category>
     </item>
