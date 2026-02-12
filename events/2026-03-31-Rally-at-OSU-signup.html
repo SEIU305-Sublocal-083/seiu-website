@@ -78,6 +78,18 @@
             box-shadow: none;
         }
 
+        .registration-summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .registration-chevron {
+            transition: transform 0.2s ease;
+        }
+
+        .registration-details[open] .registration-chevron {
+            transform: rotate(180deg);
+        }
+
         /* Custom Tailwind config for our CSS variables */
         tailwind.config = {
             theme: {
@@ -203,33 +215,40 @@
                     Save the date and join us for a rally from 12:00-1:00 PM at the MU Quad on Tuesday, March 31. We will show our support for the bargaining team and demonstrate that we are ready to stand up for a fair contract.
                 </p>
 
-                <h3 class="text-2xl font-bold mt-10 mb-4">Registration</h3>
-                <div class="grid md:grid-cols-2 gap-6">
-                    <div class="border border-border-color rounded-xl p-5 bg-brand-purple-light">
-                        <h4 class="text-xl font-bold">Regular Registration</h4>
-                        <p class="text-text-secondary mt-2">Free</p>
-                        <p class="text-text-secondary mt-3">Register by 3/27 to attend the OSU Bargaining Rally at the MU Quad on 3/31.</p>
-                        <p class="text-text-secondary mt-3">Those registering late are not guaranteed access to interpretation or accessibility resources.</p>
+                <details class="registration-details mt-10">
+                    <summary class="registration-summary mb-4 cursor-pointer list-none rounded-lg border border-border-color bg-brand-purple-light px-5 py-4 flex items-center justify-between">
+                        <span class="text-2xl font-bold">Registration</span>
+                        <svg class="registration-chevron h-6 w-6 text-brand-purple-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </summary>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="border border-border-color rounded-xl p-5 bg-brand-purple-light">
+                            <h4 class="text-xl font-bold">Regular Registration</h4>
+                            <p class="text-text-secondary mt-2">Free</p>
+                            <p class="text-text-secondary mt-3">Register by 3/27 to attend the OSU Bargaining Rally at the MU Quad on 3/31.</p>
+                            <p class="text-text-secondary mt-3">Those registering late are not guaranteed access to interpretation or accessibility resources.</p>
+                        </div>
+                        <div class="border border-border-color rounded-xl p-5 bg-white">
+                            <h4 class="text-xl font-bold">Late Registration</h4>
+                            <p class="text-text-secondary mt-2">Free</p>
+                            <p class="text-text-secondary mt-3">Late registration starts 3/28 and is open through the start of the event on 3/31.</p>
+                            <p class="text-text-secondary mt-3">Those registering late are not guaranteed access to interpretation or accessibility resources.</p>
+                        </div>
+                        <div class="border border-border-color rounded-xl p-5 bg-white">
+                            <h4 class="text-xl font-bold">Student</h4>
+                            <p class="text-text-secondary mt-2">Free</p>
+                            <p class="text-text-secondary mt-3">For OSU students and student workers attending in support of the bargaining team.</p>
+                            <p class="text-text-secondary mt-3">Registering helps us estimate turnout and accessibility needs.</p>
+                        </div>
+                        <div class="border border-border-color rounded-xl p-5 bg-white">
+                            <h4 class="text-xl font-bold">Other (Faculty, Family, etc.)</h4>
+                            <p class="text-text-secondary mt-2">Free</p>
+                            <p class="text-text-secondary mt-3">For faculty, family members, and community supporters joining the rally.</p>
+                            <p class="text-text-secondary mt-3">Please register so we can plan space, materials, and accommodations.</p>
+                        </div>
                     </div>
-                    <div class="border border-border-color rounded-xl p-5 bg-white">
-                        <h4 class="text-xl font-bold">Late Registration</h4>
-                        <p class="text-text-secondary mt-2">Free</p>
-                        <p class="text-text-secondary mt-3">Late registration starts 3/28 and is open through the start of the event on 3/31.</p>
-                        <p class="text-text-secondary mt-3">Those registering late are not guaranteed access to interpretation or accessibility resources.</p>
-                    </div>
-                    <div class="border border-border-color rounded-xl p-5 bg-white">
-                        <h4 class="text-xl font-bold">Student</h4>
-                        <p class="text-text-secondary mt-2">Free</p>
-                        <p class="text-text-secondary mt-3">For OSU students and student workers attending in support of the bargaining team.</p>
-                        <p class="text-text-secondary mt-3">Registering helps us estimate turnout and accessibility needs.</p>
-                    </div>
-                    <div class="border border-border-color rounded-xl p-5 bg-white">
-                        <h4 class="text-xl font-bold">Other (Faculty, Family, etc.)</h4>
-                        <p class="text-text-secondary mt-2">Free</p>
-                        <p class="text-text-secondary mt-3">For faculty, family members, and community supporters joining the rally.</p>
-                        <p class="text-text-secondary mt-3">Please register so we can plan space, materials, and accommodations.</p>
-                    </div>
-                </div>
+                </details>
 
                 <h3 class="text-2xl font-bold mt-12 mb-4">Signup Form</h3>
                 <p class="text-text-secondary mb-6">We'll only use this to coordinate the rally and share logistics.</p>
