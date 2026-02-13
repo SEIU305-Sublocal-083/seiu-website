@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 Contract Petition - Individual</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=Lora:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        /* Standardize print settings */
+        @page {
+            size: letter;
+            margin: 0; /* We handle safe zones in the .page padding */
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+
+        /* The Sheet of Paper */
+        .page {
+            width: 8.5in;
+            min-height: 11in;
+            background: white;
+            /* Reduced padding to 0.5in to ensure it fits on printers with larger hardware margins */
+            padding: 0.5in; 
+            position: relative;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+            margin: 2rem auto;
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
+        }
+
+        .serif {
+            font-family: 'Lora', serif;
+        }
+
+        /* Print Override */
+        @media print {
+            body {
+                background: none;
+                display: block;
+            }
+            .page {
+                margin: 0 auto; /* Center it */
+                box-shadow: none;
+                width: 100%;
+                height: auto; /* Allow height to be determined by content if needed, though we aim for 1 page */
+                overflow: visible;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page">
+        <!-- Header -->
+        <header class="flex items-start justify-between border-b-4 border-[#4D2D72] pb-5 mb-5">
+            <div class="flex items-center gap-5">
+                 <!-- Logo Image -->
+                 <img src="/images/logo.png" alt="SEIU 503 Logo" class="w-20 h-20 object-contain">
+                 
+                 <div>
+                     <h1 class="text-3xl font-black uppercase tracking-tight text-[#4D2D72] leading-none mb-1">Fighting for Higher Ed</h1>
+                     <p class="text-xl font-bold text-gray-600">2026 Contract Petition</p>
+                 </div>
+            </div>
+            <div class="text-right pt-2">
+                <span class="inline-block bg-gray-100 px-3 py-1 rounded text-sm font-bold text-gray-600">SEIU Local 083</span>
+            </div>
+        </header>
+    
+        <!-- Intro -->
+        <section class="mb-5">
+            <p class="text-base font-medium text-gray-800 leading-relaxed text-justify">
+                As classified workers at Oregon’s Public Universities, we are the foundation of higher education. We unite in support of our Union’s bargaining priorities:
+            </p>
+        </section>
+    
+        <!-- Goals -->
+        <section class="mb-5 bg-purple-50 p-5 rounded-lg border border-purple-100 print:bg-transparent print:border-gray-300 print:p-0 print:border-0">
+            <ul class="space-y-2 text-sm">
+                <li class="flex gap-3">
+                    <span class="font-black text-[#4D2D72] uppercase w-32 shrink-0 text-right text-xs pt-1">Economics</span>
+                    <span class="pt-0.5">Fair wages that keep up with the cost of living.</span>
+                </li>
+                <li class="flex gap-3">
+                    <span class="font-black text-[#4D2D72] uppercase w-32 shrink-0 text-right text-xs pt-1">Protections</span>
+                    <span class="pt-0.5">Affordable health insurance and strong PERS contributions.</span>
+                </li>
+                <li class="flex gap-3">
+                    <span class="font-black text-[#4D2D72] uppercase w-32 shrink-0 text-right text-xs pt-1">Workload</span>
+                    <span class="pt-0.5">Sustainable workloads, remote work equity, and employment protections.</span>
+                </li>
+                <li class="flex gap-3">
+                    <span class="font-black text-[#4D2D72] uppercase w-32 shrink-0 text-right text-xs pt-1">Union Power</span>
+                    <span class="pt-0.5">Mandatory New Employee Orientations and union communication access.</span>
+                </li>
+            </ul>
+        </section>
+    
+        <!-- The Pledge -->
+        <section class="mb-6">
+            <h2 class="text-lg font-black uppercase mb-2 text-[#4D2D72] border-b-2 border-gray-200 inline-block pb-1">The Pledge</h2>
+            <p class="serif text-lg leading-relaxed italic text-gray-800">
+                "We, the undersigned, are passionate about the mission of higher education and dedicated to maintaining an environment where students can thrive and succeed. Therefore, we urge our university administration to acknowledge the concerns raised by our elected bargaining team and to reach a fair contract that truly values our contributions."
+            </p>
+        </section>
+    
+        <!-- Form -->
+        <section class="mb-6 border-t-2 border-dashed border-gray-300 pt-5 flex-grow">
+            <p class="text-xs uppercase font-bold text-gray-400 mb-5 text-center tracking-[0.2em]">Please Print Clearly</p>
+    
+            <div class="space-y-5">
+                <!-- Row 1 -->
+                <div class="flex gap-6">
+                    <div class="flex-1">
+                        <label class="block text-xs font-bold uppercase text-gray-500 mb-1">First Name</label>
+                        <div class="border-b-2 border-gray-300 h-8"></div>
+                    </div>
+                    <div class="flex-1">
+                        <label class="block text-xs font-bold uppercase text-gray-500 mb-1">Last Name</label>
+                        <div class="border-b-2 border-gray-300 h-8"></div>
+                    </div>
+                </div>
+    
+                <!-- Row 2 -->
+                <div class="flex gap-6">
+                    <div class="w-2/3">
+                        <label class="block text-xs font-bold uppercase text-gray-500 mb-1">Work Email</label>
+                        <div class="border-b-2 border-gray-300 h-8"></div>
+                    </div>
+                     <div class="w-1/3">
+                        <label class="block text-xs font-bold uppercase text-gray-500 mb-1">Phone (Optional)</label>
+                        <div class="border-b-2 border-gray-300 h-8"></div>
+                    </div>
+                </div>
+    
+                <!-- Row 3 -->
+                <div class="flex gap-6">
+                    <div class="flex-1">
+                        <label class="block text-xs font-bold uppercase text-gray-500 mb-1">Campus/University</label>
+                        <div class="border-b-2 border-gray-300 h-8"></div>
+                    </div>
+                    <div class="flex-1">
+                        <label class="block text-xs font-bold uppercase text-gray-500 mb-1">Signature</label>
+                        <div class="border-b-2 border-gray-300 h-8"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Footer / In Unity -->
+        <footer class="text-[10px] text-gray-500 border-t border-gray-200 pt-3 text-justify leading-tight">
+            <p><strong>In Unity:</strong> Jo Hickerson (EOU), Donatellia "D" Austin (OSU), Jamie Baker (EOU), Jeff Daniels (OIT), Colleen Martin-Low (SOU), Rieley Umphress (UO), Ashley Wase (PSU), Mark Decker (WOU). <span class="ml-2 italic">Labor donated.</span></p>
+        </footer>
+    </div>
+
+</body>
+</html>
