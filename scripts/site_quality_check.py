@@ -133,7 +133,7 @@ def candidate_paths(path: Path) -> Iterable[Path]:
 
 
 def path_exists(path: Path) -> bool:
-    return any(candidate.exists() for candidate in candidate_paths(path))
+    return any(candidate.is_file() for candidate in candidate_paths(path))
 
 
 def check_html_links(pages: list[Path]) -> list[Issue]:

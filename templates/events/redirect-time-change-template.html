@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+    <!-- 
+      SEARCH ENGINE REDIRECT: 
+      This is the most important line. 
+      - "content="0;..." means the redirect happens immediately (0 seconds).
+      - "url=..." is the destination. CHANGE THIS to the path of your new page.
+    -->
+    <meta http-equiv="refresh" content="0; url=/events/NEW-EVENT-FILENAME.html">
+
+    <!-- 
+      CANONICAL LINK: 
+      This tells search engines like Google that the new page is the "official" version. 
+      This is very important for SEO. CHANGE THIS to the full URL of your new page.
+    -->
+<title>Page Has Moved</title>
+    <style>html{visibility:hidden;}html.tw-ready{visibility:visible;}</style>
+    <script src="https://cdn.tailwindcss.com" onload="document.documentElement.classList.add('tw-ready')"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Lora:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        h1 { font-family: 'Lora', serif; }
+    </style>
+    <!-- SEO META START -->
+    <!-- REQUIRED BEFORE PUBLISH:
+         1) Replace refresh URL, canonical, og/twitter URLs with the final destination event URL.
+         2) Keep JSON-LD @id/url aligned to that destination.
+         3) Do not publish with empty descriptions.
+         4) Update /events/events.json for the destination event and regenerate sitemap + run quality check:
+            - bash ./generate_sitemap.sh
+            - python3 scripts/site_quality_check.py --strict-placeholders -->
+    <link rel="canonical" href="https://www.local083.org/events/NEW-EVENT-FILENAME.html">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.local083.org/events/NEW-EVENT-FILENAME.html">
+    <meta property="og:title" content="Page Has Moved">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="https://www.local083.org/images/card.webp">
+    <meta property="og:site_name" content="SEIU Local 503 at Oregon State University">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://www.local083.org/events/NEW-EVENT-FILENAME.html">
+    <meta name="twitter:title" content="Page Has Moved">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="https://www.local083.org/images/card.webp">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.local083.org#organization",
+      "name": "SEIU Local 503 at Oregon State University",
+      "url": "https://www.local083.org",
+      "logo": "https://www.local083.org/images/logo.png"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.local083.org#website",
+      "name": "SEIU Local 503 at Oregon State University",
+      "url": "https://www.local083.org",
+      "publisher": {
+        "@id": "https://www.local083.org#organization"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://www.local083.org/events/NEW-EVENT-FILENAME.html#webpage",
+      "url": "https://www.local083.org/events/NEW-EVENT-FILENAME.html",
+      "name": "Page Has Moved",
+      "description": "",
+      "isPartOf": {
+        "@id": "https://www.local083.org#website"
+      },
+      "about": {
+        "@id": "https://www.local083.org#organization"
+      }
+    }
+  ]
+}
+    </script>
+    <!-- SEO META END -->
+    <script src="/js/analytics.js" defer></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:bg-white focus:text-brand-purple-dark focus:px-4 focus:py-2 focus:rounded focus:shadow-lg">Skip to content</a>
+<div class="text-center p-8 bg-white shadow-lg rounded-lg" id="main-content">
+        <h1 class="text-3xl font-bold text-gray-800 mb-4">This event has been rescheduled.</h1>
+        <!-- Voice reminder: speak as our union and be specific about why the time changed. -->
+        <p class="text-gray-600">You are being automatically redirected to the new page.</p>
+        <p class="mt-4 text-sm text-gray-500">
+            If you are not redirected, <a href="/events/NEW-EVENT-FILENAME.html" class="text-purple-600 hover:underline">please click here</a>.
+        </p>
+    </div>
+</body>
+</html>

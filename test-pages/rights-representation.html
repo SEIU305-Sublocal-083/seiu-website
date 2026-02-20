@@ -87,6 +87,7 @@
     <meta name="twitter:title" content="Your Rights & Representation - Local 083">
     <meta name="twitter:description" content="Your rights, representation, and steward support for SEIU Local 503 Local 083 at OSU.">
     <meta name="twitter:image" content="https://www.local083.org/images/card.webp">
+    <script src="/js/analytics.js" defer></script>
 </head>
 <body class="bg-brand-light">
     <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:bg-white focus:text-brand-purple-dark focus:px-4 focus:py-2 focus:rounded focus:shadow-lg">Skip to content</a>
@@ -189,12 +190,15 @@
         </section>
     </main>
 
-    <footer class="bg-gray-100 pt-12 pb-8 text-text-primary">
+            <footer class="bg-gray-100 pt-12 pb-8 text-text-primary">
         <div class="container mx-auto px-6">
+            <div class="mt-10 pt-8 border-t border-gray-700 text-center">
+            </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Column 1: About the Union -->
                 <div class="md:col-span-2 lg:col-span-1">
                     <div class="flex items-center mb-4">
-                        <img src="/images/logo.png" alt="SEIU 503 Logo" class="h-12 w-12 mr-3 bg-white p-1 rounded" decoding="async" width="800" height="827">
+                        <img src="/images/logo.png" alt="SEIU 503 Logo" class="h-12 w-12 mr-3 bg-white p-1 rounded">
                         <div>
                             <h3 class="text-xl font-bold">SEIU Local 503</h3>
                             <p class="text-text-secondary text-sm">Oregon State University</p>
@@ -202,6 +206,8 @@
                     </div>
                     <p class="text-text-secondary leading-relaxed">Representing the classified employees of Oregon State University. We fight for fair contracts, defend workplace rights, and build a united community.</p>
                 </div>
+    
+                <!-- Column 2: Quick Links -->
                 <div>
                     <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase">Quick Links</h4>
                     <ul class="space-y-3">
@@ -211,6 +217,8 @@
                         <li><a href="/leadership.html" class="text-text-secondary hover:text-brand-purple transition-colors">Leadership</a></li>
                     </ul>
                 </div>
+    
+                <!-- Column 3: Resources -->
                 <div>
                     <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase"><a href="/resources.html" class="hover:text-brand-purple transition-colors">Resources</a></h4>
                     <ul class="space-y-3">
@@ -220,26 +228,35 @@
                         <li><a href="/resources/weingarten-rights.html" class="text-text-secondary hover:text-brand-purple transition-colors">Weingarten Rights</a></li>
                     </ul>
                 </div>
+    
+                <!-- Column 4: Contact -->
                 <div>
                     <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase"><a href="/contact.html" class="hover:text-brand-purple transition-colors">Contact Us</a></h4>
                      <ul class="space-y-3 text-text-secondary">
                         <li class="flex items-start">
-                            <span class="mr-2 mt-1">✉️</span>
+                            <span class="mr-2 mt-1">✉️</span> <!-- Mail icon -->
                             <a href="mailto:083execteam@seiu503.org" class="hover:text-brand-purple transition-colors">083execteam@seiu503.org</a>
                         </li>
                         <li class="flex items-start">
-                            <span class="mr-2 mt-1">✉️</span>
+                            <span class="mr-2 mt-1">✉️</span> <!-- Mail icon -->
                             <a href="mailto:083stewards@seiu503.org" class="hover:text-brand-purple transition-colors">083stewards@seiu503.org</a>
                         </li>
                         <li class="flex items-start">
-                            <span class="mr-2 mt-1">&#128205;</span>
+                            <span class="mr-2 mt-1">&#128205;</span> <!-- Pin icon -->
                             <a href="https://maps.app.goo.gl/9TWRZ9F4wjVjacsZ7" class="hover:text-brand-purple transition-colors">Adams Hall, Room 109<br>Corvallis, OR 97331</a>
                         </li>
                     </ul>
                 </div>
             </div>
-            <div class="mt-10 pt-8 border-t border-gray-700 text-center">
-                <p class="text-text-secondary text-sm">&copy; 2025 SEIU Local 503, Oregon State University. All rights reserved.</p>
+    
+            <!-- Bottom Bar -->
+            <div class="mt-10 pt-8 border-t border-gray-700 text-center space-y-2">
+                <p class="text-text-secondary text-sm">&copy; 2026 SEIU Local 503, Sublocal 083. All rights reserved.</p>
+                <p class="text-text-secondary text-xs">
+                    <a href="#" class="underline hover:text-brand-purple" onclick="event.preventDefault(); (localStorage.getItem('ph_opt_out') === '1' ? phOptIn() : phOptOut());">
+                        Privacy settings
+                    </a>
+                </p>
             </div>
         </div>
     </footer>
