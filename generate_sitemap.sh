@@ -15,9 +15,12 @@ rm -f $OUTPUT_FILE
 echo '<?xml version="1.0" encoding="UTF-8"?>' > $OUTPUT_FILE
 echo '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' >> $OUTPUT_FILE
 
-# Find all .html files, excluding templates and the 404 page.
-# Use grep -v to filter out unwanted paths.
-find . -name "*.html" | grep -vE "template|404|test-pages" | while read -r line; do
+# Find all .html files, excluding template sources, test pages, and 404.
+find . -name "*.html" \
+  | grep -vE "^\\./templates/" \
+  | grep -vE "^\\./test-pages/" \
+  | grep -v "/404.html$" \
+  | while read -r line; do
     # Remove the leading './' from the file path.
     url_path=$(echo "$line" | sed 's|^\./||')
 

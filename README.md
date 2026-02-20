@@ -19,7 +19,7 @@ The website uses a simple, flat-file structure. There is no complex build proces
 
 To add a new event, you need to do three things:
 
-1.  **Create an HTML file for the event** in the `/events` directory. Use the `template.html` as a starting point.
+1.  **Create an HTML file for the event** in the `/events` directory. Use `/templates/events/template.html` as a starting point (copy it into `test-pages/` first).
 2.  **Create an iCalendar (`.ics`) file** in the `/events/ical` directory. This allows users to add the event to their calendar.
 3.  **Add an entry to `events/events.json`**.
 
@@ -81,7 +81,7 @@ Each event in `events.json` is an object with the following properties:
 
 Adding a news story follows the same pattern as adding an event.
 
-1.  **Create an HTML file for the news story** in the `/news` directory.
+1.  **Create an HTML file for the news story** in the `/news` directory. Start from `/templates/news/ba-template.html` or `/templates/news/spotlight-template.html` (copy into `test-pages/` first).
 2.  **Add an entry to `news/news.json`**.
 
 #### News Naming Convention
@@ -124,6 +124,50 @@ Each news item in `news.json` is an object with the following properties:
 *   `createdAt`: The date the story was created in `YYYY-MM-DD` format.
 *   `updatedAt`: The date the story was last updated in `YYYY-MM-DD` format.
 *   `featured`: Set to `true` to highlight the news story.
+
+## Drafting and Publishing Workflow
+
+Use the draft-first workflow documented in `/DRAFTING_WORKFLOW.md`.
+
+Templates now live in `/templates/` (subfolders for events, news, minutes, marketing, misc). Copy from there into `test-pages/` to start drafts.
+
+### Required flow
+
+1. Create and review new pages in `/test-pages` first.
+2. Promote to production path only after content and metadata are complete.
+3. Update index/data files when applicable:
+   *   Events: `events/events.json`
+   *   News: `news/news.json`
+4. Run required publish checks:
+
+```bash
+bash ./generate_sitemap.sh
+python3 scripts/site_quality_check.py --strict-placeholders
+```
+
+### Publish checklist summary
+
+*   No placeholders, TODOs, or dummy links.
+*   Canonical + OG + Twitter URLs aligned to final production URL.
+*   JSON-LD includes `Organization`, `WebSite`, and `WebPage` (plus `Event` on event pages).
+*   Internal links and asset paths resolve.
+*   Voice uses \"our union\" framing (never othering language).
+
+### Helper: promote script
+
+Use the helper to move a finished draft out of `test-pages/` and get reminders:
+
+```bash
+scripts/promote_page.sh test-pages/my-draft.html events 2026-04-12-rally.html
+```
+
+### Feed automation expectations
+
+If `events/events.json` or `news/news.json` changes, the workflow `.github/workflows/rss-feeds.yml` regenerates and commits:
+
+*   `events/rss.xml`
+*   `news/rss.xml`
+*   `feed.xml`
 
 ## RSS Feeds (Automated)
 

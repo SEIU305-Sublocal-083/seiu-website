@@ -1,0 +1,51 @@
+name: Site Quality Checks
+
+on:
+  pull_request:
+    paths:
+      - "*.html"
+      - "news/**"
+      - "events/**"
+      - "resources/**"
+      - "2026-bargaining/**"
+      - "images/**"
+      - "scripts/site_quality_check.py"
+      - ".github/workflows/site-quality.yml"
+  push:
+    paths:
+      - "*.html"
+      - "news/**"
+      - "events/**"
+      - "resources/**"
+      - "2026-bargaining/**"
+      - "images/**"
+      - "scripts/site_quality_check.py"
+      - ".github/workflows/site-quality.yml"
+  schedule:
+    - cron: "0 13 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Run site quality checks
+        run: python scripts/site_quality_check.py --report site-quality-report.md
+
+      - name: Upload report artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: site-quality-report
+          path: site-quality-report.md
