@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Calculate your SEIU Local 503 union dues and see how they are used to support members at Oregon State University.">
+    <meta name="description" content="Understand how our union dues are calculated and how each dollar is allocated with an interactive chart.">
     <meta name="author" content="SEIU Local 503 at OSU">
-    <title>Union Dues Calculator - SEIU Local 503, OSU</title>
+    <title>Understanding Union Dues - SEIU Local 503, OSU</title>
     <style>html{visibility:hidden;}html.tw-ready{visibility:visible;}</style>
     <script src="https://cdn.tailwindcss.com" onload="document.documentElement.classList.add('tw-ready')"></script>
     <link rel="icon" href="/images/logo.png" type="image/png">
@@ -13,20 +13,21 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Lora:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         :root {
-            --brand-purple-dark: #4C1D95; /* Deep Purple */
-            --brand-purple: #7C3AED;      /* Vibrant Purple */
-            --brand-purple-light: #EDE9FE; /* Lighter Lavender for high contrast */
-            --brand-dark: #111827;         /* Near-black for high contrast text/bg */
-            --brand-light: #F9FAFB;        /* Off-white Background */
+            --brand-purple-dark: #4C1D95;
+            --brand-purple: #7C3AED;
+            --brand-purple-light: #EDE9FE;
+            --brand-dark: #111827;
+            --brand-light: #F9FAFB;
             --text-primary: #1F2937;
-            --text-secondary: #374151;     /* Darker secondary text for better contrast */
+            --text-secondary: #374151;
             --border-color: #D1D5DB;
         }
 
         html {
-            scroll-padding-top: 80px; /* Offset for sticky header */
+            scroll-padding-top: 80px;
         }
 
         body {
@@ -42,21 +43,32 @@
             color: var(--brand-purple-dark);
         }
 
-        /* Accessibility: Clear focus indicators for all interactive elements */
         a:focus-visible, button:focus-visible, details:focus-visible, input:focus-visible, textarea:focus-visible {
             outline: 3px solid var(--brand-purple);
             outline-offset: 2px;
             border-radius: 4px;
         }
-        
+
         .btn {
             @apply font-bold py-3 px-6 rounded-lg transition-all duration-300 ease-in-out transform hover:scale-105;
         }
+
         .btn-primary {
             @apply bg-gradient-to-r from-brand-purple to-violet-600 text-white shadow-md hover:shadow-lg;
         }
-        
-        /* Custom Tailwind config for our CSS variables */
+
+        .allocation-button {
+            @apply w-full text-left rounded-xl border border-border-color bg-white px-4 py-3 transition-all duration-200;
+        }
+
+        .allocation-button:hover {
+            @apply border-brand-purple shadow-sm;
+        }
+
+        .allocation-button.is-active {
+            @apply border-brand-purple bg-brand-purple-light shadow-sm;
+        }
+
         tailwind.config = {
             theme: {
                 extend: {
@@ -78,14 +90,14 @@
     <link rel="canonical" href="https://www.local083.org/test-pages/calculator.html">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.local083.org/test-pages/calculator.html">
-    <meta property="og:title" content="Union Dues Calculator - SEIU Local 503, OSU">
-    <meta property="og:description" content="Calculate your SEIU Local 503 union dues and see how they are used to support members at Oregon State University.">
+    <meta property="og:title" content="Understanding Union Dues - SEIU Local 503, OSU">
+    <meta property="og:description" content="Understand how our union dues are calculated and how each dollar is allocated with an interactive chart.">
     <meta property="og:image" content="https://www.local083.org/images/card.webp">
     <meta property="og:site_name" content="SEIU Local 503 at Oregon State University">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://www.local083.org/test-pages/calculator.html">
-    <meta name="twitter:title" content="Union Dues Calculator - SEIU Local 503, OSU">
-    <meta name="twitter:description" content="Calculate your SEIU Local 503 union dues and see how they are used to support members at Oregon State University.">
+    <meta name="twitter:title" content="Understanding Union Dues - SEIU Local 503, OSU">
+    <meta name="twitter:description" content="Understand how our union dues are calculated and how each dollar is allocated with an interactive chart.">
     <meta name="twitter:image" content="https://www.local083.org/images/card.webp">
     <script type="application/ld+json">
 {
@@ -111,8 +123,8 @@
       "@type": "WebPage",
       "@id": "https://www.local083.org/test-pages/calculator.html#webpage",
       "url": "https://www.local083.org/test-pages/calculator.html",
-      "name": "Union Dues Calculator - SEIU Local 503, OSU",
-      "description": "Calculate your SEIU Local 503 union dues and see how they are used to support members at Oregon State University.",
+      "name": "Understanding Union Dues - SEIU Local 503, OSU",
+      "description": "Understand how our union dues are calculated and how each dollar is allocated with an interactive chart.",
       "isPartOf": {
         "@id": "https://www.local083.org#website"
       },
@@ -129,10 +141,9 @@
 <body class="bg-brand-light">
     <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:bg-white focus:text-brand-purple-dark focus:px-4 focus:py-2 focus:rounded focus:shadow-lg">Skip to content</a>
 
-    <!-- Header -->
     <header class="bg-white/80 backdrop-blur-lg border-b border-border-color sticky top-0 z-50">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="flex items-center space-x-2">
+            <a href="/index.html" class="flex items-center space-x-2">
                 <span class="text-2xl font-bold text-brand-purple-dark">SEIU 503</span>
                 <span class="text-lg text-text-secondary hidden md:block">| Oregon State University</span>
             </a>
@@ -150,7 +161,6 @@
                 </button>
             </div>
         </nav>
-        <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden lg:hidden absolute top-full left-0 w-full bg-white border-t border-border-color shadow-lg">
             <a href="/about.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">About</a>
             <a href="/events.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Events</a>
@@ -161,104 +171,138 @@
         </div>
     </header>
 
-    <!-- Page Header -->
     <section class="bg-brand-purple-light border-b border-border-color">
         <div class="container mx-auto px-6 py-16 text-center">
-            <h1 class="text-5xl font-bold">Union Dues Calculator</h1>
-            <p class="mt-4 text-lg text-text-secondary max-w-3xl mx-auto">See how your dues are calculated and how they power our union.</p>
+            <h1 class="text-5xl font-bold">Understanding Our Union Dues</h1>
+            <p class="mt-4 text-lg text-text-secondary max-w-3xl mx-auto">Our dues are an investment in the power we build together. Use the calculator to see how dues are estimated and how each dollar supports our work.</p>
         </div>
     </section>
 
-    <main id="main-content" class="container mx-auto px-6 py-16">
-        
-        <div class="bg-white p-8 md:p-12 rounded-xl border border-border-color shadow-lg mb-12">
-            <h2 class="text-3xl font-bold mb-6 text-center">Understanding Your Dues</h2>
-            <div class="max-w-4xl mx-auto">
-                <h3 class="text-2xl font-bold mb-4">How They're Calculated</h3>
-                <div class="space-y-4 text-text-secondary text-lg">
-                    <p>Our dues structure is designed to be fair and proportional, based on a simple formula applied to your gross pay (your regular pay before taxes and deductions). Here are the key principles:</p>
-                    <ul class="list-disc list-inside space-y-3 mt-4">
-                        <li>For every <strong class="text-brand-purple-dark">$1,000</strong> you earn in gross monthly pay, your dues are <strong class="text-brand-purple-dark">$17.00</strong> (plus a flat $2.75).</li>
-                        <li>The calculation <strong class="text-brand-purple-dark">never includes overtime pay</strong>.</li>
-                        <li>The dues rate of 1.7% of gross pay is equivalent to roughly <strong class="text-brand-purple-dark">three hours of your pay</strong> each month for a full-time (40 hours/week) employee.</li>
-                        <li>If your position is half-time (.5 FTE) or less, your dues are proportionally lower.</li>
+    <main id="main-content" class="container mx-auto px-6 py-16 space-y-12">
+        <section class="bg-white p-8 md:p-10 rounded-xl border border-border-color shadow-sm">
+            <div class="grid lg:grid-cols-3 gap-8">
+                <div class="lg:col-span-2">
+                    <h2 class="text-3xl font-bold">How dues are calculated</h2>
+                    <p class="mt-4 text-lg text-text-secondary">Our dues structure is designed to be proportional and transparent. We base monthly dues on regular gross pay before taxes or deductions, and we never include overtime in the calculation.</p>
+                    <ul class="mt-6 list-disc list-inside space-y-2 text-text-secondary">
+                        <li>Dues rate is <strong class="text-brand-purple-dark">1.7%</strong> of monthly gross pay.</li>
+                        <li>A flat <strong class="text-brand-purple-dark">$2.75</strong> is added each month.</li>
+                        <li>Hours are capped at <strong class="text-brand-purple-dark">40 per week</strong> for this estimate.</li>
                     </ul>
                 </div>
+                <div class="bg-brand-purple-light rounded-xl border border-border-color p-6">
+                    <h3 class="text-2xl font-bold">Formula</h3>
+                    <p class="mt-3 text-text-secondary">Monthly dues = (<strong class="text-brand-purple-dark">monthly gross × 1.7%</strong>) + <strong class="text-brand-purple-dark">$2.75</strong></p>
+                    <p class="mt-3 text-sm text-text-secondary">Monthly gross is estimated as: hourly wage × weekly hours (max 40) × 4.333.</p>
+                </div>
             </div>
-        </div>
+        </section>
 
-        <div class="grid lg:grid-cols-2 gap-12 items-start">
-
-            <!-- Left Column: Calculator -->
-            <div class="bg-white p-8 md:p-12 rounded-xl border border-border-color shadow-lg">
-                <h2 class="text-3xl font-bold mb-6">Calculate Your Dues</h2>
-                <div class="space-y-6">
+        <section class="grid lg:grid-cols-2 gap-8 items-start">
+            <div class="bg-white p-8 md:p-10 rounded-xl border border-border-color shadow-sm">
+                <h2 class="text-3xl font-bold">Estimate your monthly dues</h2>
+                <div class="mt-6 space-y-6">
                     <div>
-                        <label for="hourly-wage" class="block text-lg font-medium text-text-primary">Your Hourly Wage ($)</label>
-                        <input type="number" id="hourly-wage" name="hourly-wage" class="mt-2 block w-full p-3 border border-border-color rounded-md shadow-sm focus:ring-brand-purple focus:border-brand-purple text-lg" placeholder="e.g., 22.50" step="0.01">
+                        <label for="hourly-wage" class="block text-lg font-medium text-text-primary">Hourly wage ($)</label>
+                        <input type="number" id="hourly-wage" name="hourly-wage" class="mt-2 block w-full p-3 border border-border-color rounded-md shadow-sm focus:ring-brand-purple focus:border-brand-purple text-lg" placeholder="e.g., 22.50" step="0.01" min="0" inputmode="decimal">
                     </div>
                     <div>
-                        <label for="hours-week" class="block text-lg font-medium text-text-primary">Hours Worked Per Week (max 40)</label>
-                        <input type="number" id="hours-week" name="hours-week" class="mt-2 block w-full p-3 border border-border-color rounded-md shadow-sm focus:ring-brand-purple focus:border-brand-purple text-lg" placeholder="e.g., 40" value="40">
-                    </div>
-                </div>
-                <div class="mt-8 pt-8 border-t border-border-color">
-                    <h3 class="text-2xl font-bold text-center">Estimated Monthly Dues</h3>
-                    <p id="dues-result" class="text-5xl font-bold text-brand-purple text-center mt-4">$0.00</p>
-                </div>
-                 <div class="mt-6 text-center text-sm text-text-secondary">
-                    <p>Dues are 1.7% of your <strong>gross monthly pay</strong> (before taxes). Overtime is never included. A flat $2.75 is also added.</p>
-                </div>
-            </div>
-
-            <!-- Right Column: Dues Explanation -->
-            <div class="bg-white p-8 md:p-12 rounded-xl border border-border-color shadow-lg">
-                <h2 class="text-3xl font-bold mb-6">Where Your Dues Go</h2>
-                <p class="text-text-secondary text-lg mb-8">Your dues are an investment in our collective power. They provide the resources we need to win strong contracts, defend our rights, and build a better future for all workers at OSU.</p>
-                
-                <div class="space-y-4">
-                    <div class="flex items-center">
-                        <div class="w-1/3 text-lg font-semibold text-gray-700">Statewide Power</div>
-                        <div class="w-2/3 bg-gray-200 rounded-full h-6 overflow-hidden">
-                            <div id="state-bar" class="bg-indigo-700 h-6 rounded-full text-white text-sm font-bold flex items-center justify-center transition-all duration-500" style="width: 0%;">
-                                 <span id="state-percent"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="flex items-center">
-                        <div class="w-1/3 text-lg font-semibold text-gray-700">Our Local Union</div>
-                        <div class="w-2/3 bg-gray-200 rounded-full h-6 overflow-hidden">
-                            <div id="local-bar" class="bg-violet-500 h-6 rounded-full text-white text-sm font-bold flex items-center justify-center transition-all duration-500" style="width: 0%;">
-                                <span id="local-percent"></span>
-                            </div>
-                        </div>
-                    </div>
-                     <div class="flex items-center">
-                        <div class="w-1/3 text-lg font-semibold text-gray-700">Unity Fund</div>
-                        <div class="w-2/3 bg-gray-200 rounded-full h-6 overflow-hidden">
-                            <div id="unity-bar" class="bg-teal-500 h-6 rounded-full text-white text-sm font-bold flex items-center justify-center transition-all duration-500" style="width: 0%;">
-                                <span id="unity-percent"></span>
-                            </div>
-                        </div>
+                        <label for="hours-week" class="block text-lg font-medium text-text-primary">Hours worked per week</label>
+                        <input type="number" id="hours-week" name="hours-week" class="mt-2 block w-full p-3 border border-border-color rounded-md shadow-sm focus:ring-brand-purple focus:border-brand-purple text-lg" placeholder="e.g., 40" value="40" min="0" inputmode="decimal">
+                        <p id="hours-cap-message" class="mt-2 text-sm text-text-secondary hidden">Hours above 40 are capped at 40 for dues estimates because overtime is not included.</p>
                     </div>
                 </div>
 
-                <div class="mt-8 text-text-secondary space-y-4">
-                    <p><strong class="text-indigo-700">Statewide Power:</strong> Supports our statewide union's bargaining, organizing, and political action to raise standards for all public service workers in Oregon.</p>
-                    <p><strong class="text-violet-500">Our Local Union:</strong> Funds our local's operations, including steward trainings, legal support for grievances, and member events right here at OSU.</p>
-                    <p><strong class="text-teal-500">Unity Fund:</strong> A portion goes to our international union, SEIU, to support nationwide campaigns for worker justice.</p>
+                <div class="mt-8 grid sm:grid-cols-2 gap-4">
+                    <div class="rounded-xl border border-border-color bg-gray-50 p-4">
+                        <p class="text-sm uppercase tracking-wide text-text-secondary">Estimated monthly gross</p>
+                        <p id="monthly-gross-result" class="mt-2 text-3xl font-bold text-brand-purple-dark">$0.00</p>
+                    </div>
+                    <div class="rounded-xl border border-border-color bg-brand-purple-light p-4">
+                        <p class="text-sm uppercase tracking-wide text-text-secondary">Estimated monthly dues</p>
+                        <p id="dues-result" class="mt-2 text-3xl font-bold text-brand-purple">$0.00</p>
+                    </div>
+                </div>
+
+                <div class="mt-8 border-t border-border-color pt-6">
+                    <h3 class="text-2xl font-bold">Current allocation amounts</h3>
+                    <div class="mt-4 space-y-2 text-text-secondary">
+                        <p><strong class="text-[#4C1D95]">Statewide Power (50%):</strong> <span id="state-amount">$0.00</span></p>
+                        <p><strong class="text-[#7C3AED]">Our Local Union (40%):</strong> <span id="local-amount">$0.00</span></p>
+                        <p><strong class="text-[#14B8A6]">Unity Fund (10%):</strong> <span id="unity-amount">$0.00</span></p>
+                    </div>
                 </div>
             </div>
-        </div>
+
+            <div class="bg-white p-8 md:p-10 rounded-xl border border-border-color shadow-sm">
+                <h2 class="text-3xl font-bold">Where your dues go</h2>
+                <p class="mt-3 text-text-secondary">The chart updates live from your estimate. Hover or select a section to see details about what that part of our union work funds.</p>
+                <div class="mt-6 grid md:grid-cols-2 gap-6 items-start">
+                    <div class="w-full max-w-xs mx-auto">
+                        <canvas id="dues-pie-chart" aria-label="Interactive pie chart showing the distribution of union dues" role="img" tabindex="0"></canvas>
+                    </div>
+                    <div class="space-y-3" id="allocation-legend" aria-label="Dues allocation details">
+                        <button type="button" class="allocation-button" data-segment-index="0">
+                            <div class="flex items-center justify-between gap-2">
+                                <div class="flex items-center gap-3">
+                                    <span class="h-3 w-3 rounded-full bg-[#4C1D95]" aria-hidden="true"></span>
+                                    <span class="font-semibold text-text-primary">Statewide Power</span>
+                                </div>
+                                <span class="text-sm text-text-secondary">50%</span>
+                            </div>
+                        </button>
+                        <button type="button" class="allocation-button" data-segment-index="1">
+                            <div class="flex items-center justify-between gap-2">
+                                <div class="flex items-center gap-3">
+                                    <span class="h-3 w-3 rounded-full bg-[#7C3AED]" aria-hidden="true"></span>
+                                    <span class="font-semibold text-text-primary">Our Local Union</span>
+                                </div>
+                                <span class="text-sm text-text-secondary">40%</span>
+                            </div>
+                        </button>
+                        <button type="button" class="allocation-button" data-segment-index="2">
+                            <div class="flex items-center justify-between gap-2">
+                                <div class="flex items-center gap-3">
+                                    <span class="h-3 w-3 rounded-full bg-[#14B8A6]" aria-hidden="true"></span>
+                                    <span class="font-semibold text-text-primary">Unity Fund</span>
+                                </div>
+                                <span class="text-sm text-text-secondary">10%</span>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+                <div id="segment-detail-card" class="mt-6 rounded-xl border border-border-color bg-gray-50 p-5" aria-live="polite">
+                    <p id="segment-detail-title" class="text-lg font-bold text-brand-purple-dark">Statewide Power</p>
+                    <p class="mt-1 text-text-secondary"><span id="segment-detail-percent">50%</span> of dues, currently <span id="segment-detail-amount">$0.00</span>.</p>
+                    <p id="segment-detail-copy" class="mt-3 text-text-secondary">Enter wage and hours to see your personalized dues breakdown.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-white p-8 md:p-10 rounded-xl border border-border-color shadow-sm">
+            <h2 class="text-3xl font-bold">What each allocation supports</h2>
+            <div class="mt-6 grid md:grid-cols-3 gap-6">
+                <div class="rounded-xl border border-border-color p-6 bg-gray-50">
+                    <h3 class="text-2xl font-bold text-[#4C1D95]">Statewide Power</h3>
+                    <p class="mt-3 text-text-secondary">Supports statewide bargaining, organizing, and policy work that raises standards for public service workers across Oregon.</p>
+                </div>
+                <div class="rounded-xl border border-border-color p-6 bg-gray-50">
+                    <h3 class="text-2xl font-bold text-[#7C3AED]">Our Local Union</h3>
+                    <p class="mt-3 text-text-secondary">Funds our day-to-day local work at OSU, including steward support, representation, member communications, and trainings.</p>
+                </div>
+                <div class="rounded-xl border border-border-color p-6 bg-gray-50">
+                    <h3 class="text-2xl font-bold text-[#14B8A6]">Unity Fund</h3>
+                    <p class="mt-3 text-text-secondary">Contributes to broader union solidarity and larger campaigns that strengthen worker power beyond our campus.</p>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <!-- Footer -->
-                <footer class="bg-gray-100 pt-12 pb-8 text-text-primary">
+    <footer class="bg-gray-100 pt-12 pb-8 text-text-primary">
         <div class="container mx-auto px-6">
             <div class="mt-10 pt-8 border-t border-gray-700 text-center">
             </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Column 1: About the Union -->
                 <div class="md:col-span-2 lg:col-span-1">
                     <div class="flex items-center mb-4">
                         <img src="/images/logo.png" alt="SEIU 503 Logo" class="h-12 w-12 mr-3 bg-white p-1 rounded">
@@ -269,8 +313,7 @@
                     </div>
                     <p class="text-text-secondary leading-relaxed">Representing the classified employees of Oregon State University. We fight for fair contracts, defend workplace rights, and build a united community.</p>
                 </div>
-    
-                <!-- Column 2: Quick Links -->
+
                 <div>
                     <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase">Quick Links</h4>
                     <ul class="space-y-3">
@@ -280,8 +323,7 @@
                         <li><a href="/leadership.html" class="text-text-secondary hover:text-brand-purple transition-colors">Leadership</a></li>
                     </ul>
                 </div>
-    
-                <!-- Column 3: Resources -->
+
                 <div>
                     <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase"><a href="/resources.html" class="hover:text-brand-purple transition-colors">Resources</a></h4>
                     <ul class="space-y-3">
@@ -291,28 +333,26 @@
                         <li><a href="/resources/weingarten-rights.html" class="text-text-secondary hover:text-brand-purple transition-colors">Weingarten Rights</a></li>
                     </ul>
                 </div>
-    
-                <!-- Column 4: Contact -->
+
                 <div>
                     <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase"><a href="/contact.html" class="hover:text-brand-purple transition-colors">Contact Us</a></h4>
-                     <ul class="space-y-3 text-text-secondary">
+                    <ul class="space-y-3 text-text-secondary">
                         <li class="flex items-start">
-                            <span class="mr-2 mt-1">✉️</span> <!-- Mail icon -->
+                            <span class="mr-2 mt-1">✉️</span>
                             <a href="mailto:083execteam@seiu503.org" class="hover:text-brand-purple transition-colors">083execteam@seiu503.org</a>
                         </li>
                         <li class="flex items-start">
-                            <span class="mr-2 mt-1">✉️</span> <!-- Mail icon -->
+                            <span class="mr-2 mt-1">✉️</span>
                             <a href="mailto:083stewards@seiu503.org" class="hover:text-brand-purple transition-colors">083stewards@seiu503.org</a>
                         </li>
                         <li class="flex items-start">
-                            <span class="mr-2 mt-1">&#128205;</span> <!-- Pin icon -->
+                            <span class="mr-2 mt-1">&#128205;</span>
                             <a href="https://maps.app.goo.gl/9TWRZ9F4wjVjacsZ7" class="hover:text-brand-purple transition-colors">Adams Hall, Room 109<br>Corvallis, OR 97331</a>
                         </li>
                     </ul>
                 </div>
             </div>
-    
-            <!-- Bottom Bar -->
+
             <div class="mt-10 pt-8 border-t border-gray-700 text-center space-y-2">
                 <p class="text-text-secondary text-sm">&copy; 2026 SEIU Local 503, Sublocal 083. All rights reserved.</p>
                 <p class="text-text-secondary text-xs">
@@ -325,90 +365,257 @@
     </footer>
 
     <script>
-        // --- Mobile Menu Toggle ---
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const navLinks = document.querySelectorAll('#mobile-menu a');
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const navLinks = document.querySelectorAll('#mobile-menu a');
 
-        mobileMenuButton.addEventListener('click', () => {
-            const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
-            mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
-            mobileMenu.classList.toggle('hidden');
-        });
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', () => {
+                    const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+                    mobileMenuButton.setAttribute('aria-expanded', String(!isExpanded));
+                    mobileMenu.classList.toggle('hidden');
+                });
 
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-                mobileMenuButton.setAttribute('aria-expanded', 'false');
+                navLinks.forEach((link) => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                        mobileMenuButton.setAttribute('aria-expanded', 'false');
+                    });
+                });
+            }
+
+            const hourlyWageInput = document.getElementById('hourly-wage');
+            const hoursWeekInput = document.getElementById('hours-week');
+            const hoursCapMessage = document.getElementById('hours-cap-message');
+
+            const monthlyGrossResult = document.getElementById('monthly-gross-result');
+            const duesResult = document.getElementById('dues-result');
+
+            const stateAmount = document.getElementById('state-amount');
+            const localAmount = document.getElementById('local-amount');
+            const unityAmount = document.getElementById('unity-amount');
+
+            const detailTitle = document.getElementById('segment-detail-title');
+            const detailPercent = document.getElementById('segment-detail-percent');
+            const detailAmount = document.getElementById('segment-detail-amount');
+            const detailCopy = document.getElementById('segment-detail-copy');
+
+            const legendButtons = Array.from(document.querySelectorAll('[data-segment-index]'));
+
+            const DUES_RATE = 0.017;
+            const DUES_FLAT = 2.75;
+            const WEEKS_PER_MONTH = 4.333;
+            const MAX_WEEKLY_HOURS = 40;
+            const ALLOCATIONS = [
+                {
+                    label: 'Statewide Power',
+                    percent: 0.5,
+                    color: '#4C1D95',
+                    copy: 'Supports statewide bargaining, organizing, and political action to raise standards for public service workers across Oregon.'
+                },
+                {
+                    label: 'Our Local Union',
+                    percent: 0.4,
+                    color: '#7C3AED',
+                    copy: 'Funds our local union operations at OSU, including steward training, member support, contract enforcement, and communication.'
+                },
+                {
+                    label: 'Unity Fund',
+                    percent: 0.1,
+                    color: '#14B8A6',
+                    copy: 'Supports broader solidarity and larger worker campaigns through our international union.'
+                }
+            ];
+
+            let currentDues = 0;
+            let selectedSegmentIndex = 0;
+            let hoveredSegmentIndex = null;
+
+            const pieChartCanvas = document.getElementById('dues-pie-chart');
+            const chartContext = pieChartCanvas.getContext('2d');
+            const duesChart = new Chart(chartContext, {
+                type: 'doughnut',
+                data: {
+                    labels: ALLOCATIONS.map((item) => item.label),
+                    datasets: [{
+                        data: [0, 0, 0],
+                        backgroundColor: ALLOCATIONS.map((item) => item.color),
+                        borderColor: '#ffffff',
+                        borderWidth: 2,
+                        hoverOffset: 8
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: true,
+                    cutout: '55%',
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label(context) {
+                                    const label = context.label || '';
+                                    const value = Number(context.raw || 0);
+                                    return `${label}: ${formatCurrency(value)}`;
+                                }
+                            }
+                        }
+                    },
+                    onHover(event, elements) {
+                        if (!elements.length) {
+                            hoveredSegmentIndex = null;
+                            renderActiveState();
+                            return;
+                        }
+                        hoveredSegmentIndex = elements[0].index;
+                        renderActiveState();
+                    },
+                    onClick(event, elements) {
+                        if (!elements.length) {
+                            return;
+                        }
+                        selectedSegmentIndex = elements[0].index;
+                        renderActiveState();
+                    }
+                }
             });
+
+            function formatCurrency(value) {
+                return new Intl.NumberFormat('en-US', {
+                    style: 'currency',
+                    currency: 'USD'
+                }).format(value);
+            }
+
+            function computeAllocationAmounts(totalDues) {
+                return ALLOCATIONS.map((allocation, index) => {
+                    if (index < ALLOCATIONS.length - 1) {
+                        return Number((totalDues * allocation.percent).toFixed(2));
+                    }
+                    const runningTotal = ALLOCATIONS
+                        .slice(0, -1)
+                        .reduce((sum, item) => sum + Number((totalDues * item.percent).toFixed(2)), 0);
+                    return Number((totalDues - runningTotal).toFixed(2));
+                });
+            }
+
+            function updateSummary(totalDues, monthlyGross, allocationAmounts) {
+                monthlyGrossResult.textContent = formatCurrency(monthlyGross);
+                duesResult.textContent = formatCurrency(totalDues);
+                stateAmount.textContent = formatCurrency(allocationAmounts[0]);
+                localAmount.textContent = formatCurrency(allocationAmounts[1]);
+                unityAmount.textContent = formatCurrency(allocationAmounts[2]);
+            }
+
+            function updateChart(allocationAmounts) {
+                duesChart.data.datasets[0].data = allocationAmounts;
+                duesChart.update();
+            }
+
+            function renderActiveState() {
+                const activeIndex = hoveredSegmentIndex !== null ? hoveredSegmentIndex : selectedSegmentIndex;
+                legendButtons.forEach((button, index) => {
+                    button.classList.toggle('is-active', index === activeIndex);
+                    button.setAttribute('aria-pressed', String(index === activeIndex));
+                });
+                duesChart.setActiveElements([{ datasetIndex: 0, index: activeIndex }]);
+                duesChart.update('none');
+                updateDetailCard(activeIndex);
+            }
+
+            function updateDetailCard(index) {
+                const allocation = ALLOCATIONS[index];
+                const allocationAmounts = computeAllocationAmounts(currentDues);
+                detailTitle.textContent = allocation.label;
+                detailPercent.textContent = `${(allocation.percent * 100).toFixed(0)}%`;
+                detailAmount.textContent = formatCurrency(allocationAmounts[index]);
+                if (currentDues > 0) {
+                    detailCopy.textContent = allocation.copy;
+                } else {
+                    detailCopy.textContent = 'Enter wage and hours to see your personalized dues breakdown.';
+                }
+            }
+
+            function calculateDues() {
+                const hourlyWage = Number.parseFloat(hourlyWageInput.value) || 0;
+                let hoursWeek = Number.parseFloat(hoursWeekInput.value) || 0;
+
+                if (hoursWeek > MAX_WEEKLY_HOURS) {
+                    hoursCapMessage.classList.remove('hidden');
+                    hoursWeek = MAX_WEEKLY_HOURS;
+                } else {
+                    hoursCapMessage.classList.add('hidden');
+                }
+
+                const hasValidInput = hourlyWage > 0 && hoursWeek > 0;
+                const weeklyGross = hasValidInput ? hourlyWage * hoursWeek : 0;
+                const monthlyGross = hasValidInput ? weeklyGross * WEEKS_PER_MONTH : 0;
+                const totalDues = hasValidInput ? Number(((monthlyGross * DUES_RATE) + DUES_FLAT).toFixed(2)) : 0;
+                const allocationAmounts = computeAllocationAmounts(totalDues);
+
+                currentDues = totalDues;
+                updateSummary(totalDues, monthlyGross, allocationAmounts);
+                updateChart(allocationAmounts);
+                renderActiveState();
+            }
+
+            legendButtons.forEach((button) => {
+                const index = Number(button.dataset.segmentIndex);
+                button.addEventListener('click', () => {
+                    selectedSegmentIndex = index;
+                    hoveredSegmentIndex = null;
+                    renderActiveState();
+                });
+                button.addEventListener('mouseenter', () => {
+                    hoveredSegmentIndex = index;
+                    renderActiveState();
+                });
+                button.addEventListener('mouseleave', () => {
+                    hoveredSegmentIndex = null;
+                    renderActiveState();
+                });
+                button.addEventListener('focus', () => {
+                    hoveredSegmentIndex = index;
+                    renderActiveState();
+                });
+                button.addEventListener('blur', () => {
+                    hoveredSegmentIndex = null;
+                    renderActiveState();
+                });
+            });
+
+            pieChartCanvas.addEventListener('focus', () => {
+                hoveredSegmentIndex = selectedSegmentIndex;
+                renderActiveState();
+            });
+
+            pieChartCanvas.addEventListener('blur', () => {
+                hoveredSegmentIndex = null;
+                renderActiveState();
+            });
+
+            pieChartCanvas.addEventListener('keydown', (event) => {
+                if (event.key === 'ArrowRight' || event.key === 'ArrowDown') {
+                    selectedSegmentIndex = (selectedSegmentIndex + 1) % ALLOCATIONS.length;
+                    hoveredSegmentIndex = selectedSegmentIndex;
+                    event.preventDefault();
+                    renderActiveState();
+                } else if (event.key === 'ArrowLeft' || event.key === 'ArrowUp') {
+                    selectedSegmentIndex = (selectedSegmentIndex - 1 + ALLOCATIONS.length) % ALLOCATIONS.length;
+                    hoveredSegmentIndex = selectedSegmentIndex;
+                    event.preventDefault();
+                    renderActiveState();
+                }
+            });
+
+            hourlyWageInput.addEventListener('input', calculateDues);
+            hoursWeekInput.addEventListener('input', calculateDues);
+
+            calculateDues();
         });
-
-        // --- Dues Calculator Logic ---
-        const hourlyWageInput = document.getElementById('hourly-wage');
-        const hoursWeekInput = document.getElementById('hours-week');
-        const duesResult = document.getElementById('dues-result');
-        
-        const localBar = document.getElementById('local-bar');
-        const stateBar = document.getElementById('state-bar');
-        const unityBar = document.getElementById('unity-bar');
-        const localPercent = document.getElementById('local-percent');
-        const statePercent = document.getElementById('state-percent');
-        const unityPercent = document.getElementById('unity-percent');
-
-        const DUES_RATE = 0.017;
-        const DUES_FLAT = 2.75;
-
-        // Allocation percentages
-        const STATE_ALLOCATION = 0.50; // 50%
-        const LOCAL_ALLOCATION = 0.40; // 40%
-        const UNITY_ALLOCATION = 0.10; // 10%
-
-        function calculateDues() {
-            const hourlyWage = parseFloat(hourlyWageInput.value) || 0;
-            let hoursWeek = parseFloat(hoursWeekInput.value) || 0;
-
-            // UPDATED: Cap hours at 40 to exclude overtime from the calculation
-            if (hoursWeek > 40) {
-                hoursWeek = 40;
-            }
-
-            if (hourlyWage > 0 && hoursWeek > 0) {
-                const weeklyGross = hourlyWage * hoursWeek;
-                const monthlyGross = weeklyGross * 4.333; // Average weeks in a month
-                
-                let calculatedDues = (monthlyGross * DUES_RATE) + DUES_FLAT;
-                
-                duesResult.textContent = `$${calculatedDues.toFixed(2)}`;
-                updateChart(calculatedDues);
-            } else {
-                duesResult.textContent = '$0.00';
-                updateChart(0);
-            }
-        }
-        
-        function updateChart(totalDues) {
-            if (totalDues > 0) {
-                stateBar.style.width = `${STATE_ALLOCATION * 100}%`;
-                localBar.style.width = `${LOCAL_ALLOCATION * 100}%`;
-                unityBar.style.width = `${UNITY_ALLOCATION * 100}%`;
-                statePercent.textContent = `${(STATE_ALLOCATION * 100).toFixed(0)}%`;
-                localPercent.textContent = `${(LOCAL_ALLOCATION * 100).toFixed(0)}%`;
-                unityPercent.textContent = `${(UNITY_ALLOCATION * 100).toFixed(0)}%`;
-            } else {
-                stateBar.style.width = '0%';
-                localBar.style.width = '0%';
-                unityBar.style.width = '0%';
-                statePercent.textContent = '';
-                localPercent.textContent = '';
-                unityPercent.textContent = '';
-            }
-        }
-
-        hourlyWageInput.addEventListener('input', calculateDues);
-        hoursWeekInput.addEventListener('input', calculateDues);
-        
-        // Initial calculation on page load
-        calculateDues();
     </script>
 </body>
 </html>
