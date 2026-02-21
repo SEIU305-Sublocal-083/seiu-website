@@ -13,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Lora:wght@400;500;700&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js" onerror="(function(){var s=document.createElement('script');s.src='https://unpkg.com/chart.js@4.4.1/dist/chart.umd.js';document.head.appendChild(s);}())"></script>
     <style>
         :root {
             --brand-purple-dark: #4C1D95;
@@ -67,6 +67,18 @@
 
         .allocation-button.is-active {
             @apply border-brand-purple bg-brand-purple-light shadow-sm;
+        }
+
+        .chart-tab {
+            @apply rounded-lg border border-border-color px-4 py-2 text-sm font-semibold text-text-secondary transition-colors;
+        }
+
+        .chart-tab:hover {
+            @apply border-brand-purple text-brand-purple;
+        }
+
+        .chart-tab.is-active {
+            @apply border-brand-purple bg-brand-purple-light text-brand-purple-dark;
         }
 
         tailwind.config = {
@@ -236,46 +248,64 @@
 
             <div class="bg-white p-8 md:p-10 rounded-xl border border-border-color shadow-sm">
                 <h2 class="text-3xl font-bold">Where your dues go</h2>
-                <p class="mt-3 text-text-secondary">The chart updates live from your estimate. Hover or select a section to see details about what that part of our union work funds.</p>
-                <div class="mt-6 grid md:grid-cols-2 gap-6 items-start">
+                <p class="mt-3 text-text-secondary">Choose a view to see how dues compare to monthly gross income (before taxes) and how dues are allocated across our union priorities.</p>
+                <div class="mt-6 flex flex-wrap gap-3" role="tablist" aria-label="Dues chart views">
+                    <button id="chart-tab-gross" class="chart-tab is-active" type="button" role="tab" aria-selected="true" aria-controls="chart-panel-gross" tabindex="0">Gross Income View</button>
+                    <button id="chart-tab-allocation" class="chart-tab" type="button" role="tab" aria-selected="false" aria-controls="chart-panel-allocation" tabindex="-1">Dues Allocation View</button>
+                </div>
+
+                <div id="chart-panel-gross" class="mt-6" role="tabpanel" aria-labelledby="chart-tab-gross">
                     <div class="w-full max-w-xs mx-auto">
-                        <canvas id="dues-pie-chart" aria-label="Interactive pie chart showing the distribution of union dues" role="img" tabindex="0"></canvas>
+                        <canvas id="gross-income-pie-chart" class="w-64 h-64 mx-auto" width="256" height="256" aria-label="Interactive pie chart showing union dues versus remaining gross income before taxes" role="img"></canvas>
                     </div>
-                    <div class="space-y-3" id="allocation-legend" aria-label="Dues allocation details">
-                        <button type="button" class="allocation-button" data-segment-index="0">
-                            <div class="flex items-center justify-between gap-2">
-                                <div class="flex items-center gap-3">
-                                    <span class="h-3 w-3 rounded-full bg-[#4C1D95]" aria-hidden="true"></span>
-                                    <span class="font-semibold text-text-primary">Statewide Power</span>
-                                </div>
-                                <span class="text-sm text-text-secondary">50%</span>
-                            </div>
-                        </button>
-                        <button type="button" class="allocation-button" data-segment-index="1">
-                            <div class="flex items-center justify-between gap-2">
-                                <div class="flex items-center gap-3">
-                                    <span class="h-3 w-3 rounded-full bg-[#7C3AED]" aria-hidden="true"></span>
-                                    <span class="font-semibold text-text-primary">Our Local Union</span>
-                                </div>
-                                <span class="text-sm text-text-secondary">40%</span>
-                            </div>
-                        </button>
-                        <button type="button" class="allocation-button" data-segment-index="2">
-                            <div class="flex items-center justify-between gap-2">
-                                <div class="flex items-center gap-3">
-                                    <span class="h-3 w-3 rounded-full bg-[#14B8A6]" aria-hidden="true"></span>
-                                    <span class="font-semibold text-text-primary">Unity Fund</span>
-                                </div>
-                                <span class="text-sm text-text-secondary">10%</span>
-                            </div>
-                        </button>
+                    <div class="mt-6 rounded-xl border border-border-color bg-gray-50 p-5">
+                        <p class="text-text-secondary">Union dues this month: <strong id="gross-dues-amount" class="text-brand-purple-dark">$0.00</strong> (<strong id="gross-dues-percent" class="text-brand-purple-dark">0.00%</strong> of gross income)</p>
+                        <p class="mt-2 text-text-secondary">Remaining gross income (before taxes): <strong id="gross-remaining-amount" class="text-brand-purple-dark">$0.00</strong></p>
                     </div>
                 </div>
-                <div id="segment-detail-card" class="mt-6 rounded-xl border border-border-color bg-gray-50 p-5" aria-live="polite">
-                    <p id="segment-detail-title" class="text-lg font-bold text-brand-purple-dark">Statewide Power</p>
-                    <p class="mt-1 text-text-secondary"><span id="segment-detail-percent">50%</span> of dues, currently <span id="segment-detail-amount">$0.00</span>.</p>
-                    <p id="segment-detail-copy" class="mt-3 text-text-secondary">Enter wage and hours to see your personalized dues breakdown.</p>
+
+                <div id="chart-panel-allocation" class="mt-6 hidden" role="tabpanel" aria-labelledby="chart-tab-allocation">
+                    <div class="grid md:grid-cols-2 gap-6 items-start">
+                        <div class="w-full max-w-xs mx-auto">
+                            <canvas id="dues-pie-chart" class="w-64 h-64 mx-auto" width="256" height="256" aria-label="Interactive pie chart showing the distribution of union dues" role="img" tabindex="0"></canvas>
+                        </div>
+                        <div class="space-y-3" id="allocation-legend" aria-label="Dues allocation details">
+                            <button type="button" class="allocation-button" data-segment-index="0">
+                                <div class="flex items-center justify-between gap-2">
+                                    <div class="flex items-center gap-3">
+                                        <span class="h-3 w-3 rounded-full bg-[#4C1D95]" aria-hidden="true"></span>
+                                        <span class="font-semibold text-text-primary">Statewide Power</span>
+                                    </div>
+                                    <span class="text-sm text-text-secondary">50%</span>
+                                </div>
+                            </button>
+                            <button type="button" class="allocation-button" data-segment-index="1">
+                                <div class="flex items-center justify-between gap-2">
+                                    <div class="flex items-center gap-3">
+                                        <span class="h-3 w-3 rounded-full bg-[#7C3AED]" aria-hidden="true"></span>
+                                        <span class="font-semibold text-text-primary">Our Local Union</span>
+                                    </div>
+                                    <span class="text-sm text-text-secondary">40%</span>
+                                </div>
+                            </button>
+                            <button type="button" class="allocation-button" data-segment-index="2">
+                                <div class="flex items-center justify-between gap-2">
+                                    <div class="flex items-center gap-3">
+                                        <span class="h-3 w-3 rounded-full bg-[#14B8A6]" aria-hidden="true"></span>
+                                        <span class="font-semibold text-text-primary">Unity Fund</span>
+                                    </div>
+                                    <span class="text-sm text-text-secondary">10%</span>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                    <div id="segment-detail-card" class="mt-6 rounded-xl border border-border-color bg-gray-50 p-5" aria-live="polite">
+                        <p id="segment-detail-title" class="text-lg font-bold text-brand-purple-dark">Statewide Power</p>
+                        <p class="mt-1 text-text-secondary"><span id="segment-detail-percent">50%</span> of dues, currently <span id="segment-detail-amount">$0.00</span>.</p>
+                        <p id="segment-detail-copy" class="mt-3 text-text-secondary">Enter wage and hours to see your personalized dues breakdown.</p>
+                    </div>
                 </div>
+                <p id="chart-unavailable-message" class="mt-4 text-sm text-text-secondary hidden">Charts could not be loaded in this browser session. Refresh the page and try again.</p>
             </div>
         </section>
 
@@ -396,6 +426,16 @@
             const localAmount = document.getElementById('local-amount');
             const unityAmount = document.getElementById('unity-amount');
 
+            const grossDuesAmount = document.getElementById('gross-dues-amount');
+            const grossDuesPercent = document.getElementById('gross-dues-percent');
+            const grossRemainingAmount = document.getElementById('gross-remaining-amount');
+
+            const chartTabGross = document.getElementById('chart-tab-gross');
+            const chartTabAllocation = document.getElementById('chart-tab-allocation');
+            const chartPanelGross = document.getElementById('chart-panel-gross');
+            const chartPanelAllocation = document.getElementById('chart-panel-allocation');
+            const chartTabs = [chartTabGross, chartTabAllocation];
+
             const detailTitle = document.getElementById('segment-detail-title');
             const detailPercent = document.getElementById('segment-detail-percent');
             const detailAmount = document.getElementById('segment-detail-amount');
@@ -431,57 +471,99 @@
             let currentDues = 0;
             let selectedSegmentIndex = 0;
             let hoveredSegmentIndex = null;
-
+            let activeChartTab = 'gross';
+            const chartUnavailableMessage = document.getElementById('chart-unavailable-message');
+            const canRenderCharts = typeof window.Chart !== 'undefined';
             const pieChartCanvas = document.getElementById('dues-pie-chart');
-            const chartContext = pieChartCanvas.getContext('2d');
-            const duesChart = new Chart(chartContext, {
-                type: 'doughnut',
-                data: {
-                    labels: ALLOCATIONS.map((item) => item.label),
-                    datasets: [{
-                        data: [0, 0, 0],
-                        backgroundColor: ALLOCATIONS.map((item) => item.color),
-                        borderColor: '#ffffff',
-                        borderWidth: 2,
-                        hoverOffset: 8
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: true,
-                    cutout: '55%',
-                    plugins: {
-                        legend: {
-                            display: false
-                        },
-                        tooltip: {
-                            callbacks: {
-                                label(context) {
-                                    const label = context.label || '';
-                                    const value = Number(context.raw || 0);
-                                    return `${label}: ${formatCurrency(value)}`;
+
+            let grossIncomeChart = null;
+            let duesChart = null;
+
+            if (canRenderCharts) {
+                grossIncomeChart = new Chart(document.getElementById('gross-income-pie-chart').getContext('2d'), {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['Union Dues', 'Remaining Gross Income'],
+                        datasets: [{
+                            data: [0, 0],
+                            backgroundColor: ['#7C3AED', '#CBD5E1'],
+                            borderColor: '#ffffff',
+                            borderWidth: 2,
+                            hoverOffset: 8
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: true,
+                        cutout: '55%',
+                        plugins: {
+                            legend: {
+                                display: false
+                            },
+                            tooltip: {
+                                callbacks: {
+                                    label(context) {
+                                        const label = context.label || '';
+                                        const value = Number(context.raw || 0);
+                                        return `${label}: ${formatCurrency(value)}`;
+                                    }
                                 }
                             }
                         }
-                    },
-                    onHover(event, elements) {
-                        if (!elements.length) {
-                            hoveredSegmentIndex = null;
-                            renderActiveState();
-                            return;
-                        }
-                        hoveredSegmentIndex = elements[0].index;
-                        renderActiveState();
-                    },
-                    onClick(event, elements) {
-                        if (!elements.length) {
-                            return;
-                        }
-                        selectedSegmentIndex = elements[0].index;
-                        renderActiveState();
                     }
-                }
-            });
+                });
+
+                duesChart = new Chart(pieChartCanvas.getContext('2d'), {
+                    type: 'doughnut',
+                    data: {
+                        labels: ALLOCATIONS.map((item) => item.label),
+                        datasets: [{
+                            data: [0, 0, 0],
+                            backgroundColor: ALLOCATIONS.map((item) => item.color),
+                            borderColor: '#ffffff',
+                            borderWidth: 2,
+                            hoverOffset: 8
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: true,
+                        cutout: '55%',
+                        plugins: {
+                            legend: {
+                                display: false
+                            },
+                            tooltip: {
+                                callbacks: {
+                                    label(context) {
+                                        const label = context.label || '';
+                                        const value = Number(context.raw || 0);
+                                        return `${label}: ${formatCurrency(value)}`;
+                                    }
+                                }
+                            }
+                        },
+                        onHover(event, elements) {
+                            if (!elements.length) {
+                                hoveredSegmentIndex = null;
+                                renderActiveState();
+                                return;
+                            }
+                            hoveredSegmentIndex = elements[0].index;
+                            renderActiveState();
+                        },
+                        onClick(event, elements) {
+                            if (!elements.length) {
+                                return;
+                            }
+                            selectedSegmentIndex = elements[0].index;
+                            renderActiveState();
+                        }
+                    }
+                });
+            } else if (chartUnavailableMessage) {
+                chartUnavailableMessage.classList.remove('hidden');
+            }
 
             function formatCurrency(value) {
                 return new Intl.NumberFormat('en-US', {
@@ -510,9 +592,30 @@
                 unityAmount.textContent = formatCurrency(allocationAmounts[2]);
             }
 
-            function updateChart(allocationAmounts) {
+            function updateAllocationChart(allocationAmounts) {
+                if (!duesChart) {
+                    return;
+                }
                 duesChart.data.datasets[0].data = allocationAmounts;
                 duesChart.update();
+            }
+
+            function updateGrossIncomeChart(totalDues, monthlyGross) {
+                const remainingGross = Math.max(monthlyGross - totalDues, 0);
+                const duesPercentOfGross = monthlyGross > 0 ? (totalDues / monthlyGross) * 100 : 0;
+
+                grossDuesAmount.textContent = formatCurrency(totalDues);
+                grossDuesPercent.textContent = `${duesPercentOfGross.toFixed(2)}%`;
+                grossRemainingAmount.textContent = formatCurrency(remainingGross);
+
+                if (!grossIncomeChart) {
+                    return;
+                }
+                grossIncomeChart.data.datasets[0].data = [
+                    Number(totalDues.toFixed(2)),
+                    Number(remainingGross.toFixed(2))
+                ];
+                grossIncomeChart.update();
             }
 
             function renderActiveState() {
@@ -521,6 +624,10 @@
                     button.classList.toggle('is-active', index === activeIndex);
                     button.setAttribute('aria-pressed', String(index === activeIndex));
                 });
+                if (!duesChart) {
+                    updateDetailCard(activeIndex);
+                    return;
+                }
                 duesChart.setActiveElements([{ datasetIndex: 0, index: activeIndex }]);
                 duesChart.update('none');
                 updateDetailCard(activeIndex);
@@ -537,6 +644,39 @@
                 } else {
                     detailCopy.textContent = 'Enter wage and hours to see your personalized dues breakdown.';
                 }
+            }
+
+            function setActiveChartTab(mode) {
+                activeChartTab = mode;
+                const showGross = mode === 'gross';
+
+                chartTabGross.classList.toggle('is-active', showGross);
+                chartTabGross.setAttribute('aria-selected', String(showGross));
+                chartTabGross.setAttribute('tabindex', showGross ? '0' : '-1');
+
+                chartTabAllocation.classList.toggle('is-active', !showGross);
+                chartTabAllocation.setAttribute('aria-selected', String(!showGross));
+                chartTabAllocation.setAttribute('tabindex', showGross ? '-1' : '0');
+
+                chartPanelGross.classList.toggle('hidden', !showGross);
+                chartPanelAllocation.classList.toggle('hidden', showGross);
+
+                if (!canRenderCharts) {
+                    return;
+                }
+                if (showGross) {
+                    grossIncomeChart.resize();
+                } else {
+                    duesChart.resize();
+                    renderActiveState();
+                }
+            }
+
+            function activateTabByIndex(index) {
+                const normalizedIndex = (index + chartTabs.length) % chartTabs.length;
+                const targetTab = chartTabs[normalizedIndex];
+                setActiveChartTab(targetTab === chartTabGross ? 'gross' : 'allocation');
+                targetTab.focus();
             }
 
             function calculateDues() {
@@ -558,9 +698,39 @@
 
                 currentDues = totalDues;
                 updateSummary(totalDues, monthlyGross, allocationAmounts);
-                updateChart(allocationAmounts);
+                updateGrossIncomeChart(totalDues, monthlyGross);
+                updateAllocationChart(allocationAmounts);
                 renderActiveState();
             }
+
+            chartTabGross.addEventListener('click', () => {
+                setActiveChartTab('gross');
+            });
+
+            chartTabAllocation.addEventListener('click', () => {
+                setActiveChartTab('allocation');
+            });
+
+            chartTabs.forEach((tabButton, index) => {
+                tabButton.addEventListener('keydown', (event) => {
+                    if (event.key === 'ArrowRight') {
+                        event.preventDefault();
+                        activateTabByIndex(index + 1);
+                    } else if (event.key === 'ArrowLeft') {
+                        event.preventDefault();
+                        activateTabByIndex(index - 1);
+                    } else if (event.key === 'Home') {
+                        event.preventDefault();
+                        activateTabByIndex(0);
+                    } else if (event.key === 'End') {
+                        event.preventDefault();
+                        activateTabByIndex(chartTabs.length - 1);
+                    } else if (event.key === 'Enter' || event.key === ' ') {
+                        event.preventDefault();
+                        setActiveChartTab(tabButton === chartTabGross ? 'gross' : 'allocation');
+                    }
+                });
+            });
 
             legendButtons.forEach((button) => {
                 const index = Number(button.dataset.segmentIndex);
@@ -587,33 +757,36 @@
                 });
             });
 
-            pieChartCanvas.addEventListener('focus', () => {
-                hoveredSegmentIndex = selectedSegmentIndex;
-                renderActiveState();
-            });
-
-            pieChartCanvas.addEventListener('blur', () => {
-                hoveredSegmentIndex = null;
-                renderActiveState();
-            });
-
-            pieChartCanvas.addEventListener('keydown', (event) => {
-                if (event.key === 'ArrowRight' || event.key === 'ArrowDown') {
-                    selectedSegmentIndex = (selectedSegmentIndex + 1) % ALLOCATIONS.length;
+            if (pieChartCanvas) {
+                pieChartCanvas.addEventListener('focus', () => {
                     hoveredSegmentIndex = selectedSegmentIndex;
-                    event.preventDefault();
                     renderActiveState();
-                } else if (event.key === 'ArrowLeft' || event.key === 'ArrowUp') {
-                    selectedSegmentIndex = (selectedSegmentIndex - 1 + ALLOCATIONS.length) % ALLOCATIONS.length;
-                    hoveredSegmentIndex = selectedSegmentIndex;
-                    event.preventDefault();
+                });
+
+                pieChartCanvas.addEventListener('blur', () => {
+                    hoveredSegmentIndex = null;
                     renderActiveState();
-                }
-            });
+                });
+
+                pieChartCanvas.addEventListener('keydown', (event) => {
+                    if (event.key === 'ArrowRight' || event.key === 'ArrowDown') {
+                        selectedSegmentIndex = (selectedSegmentIndex + 1) % ALLOCATIONS.length;
+                        hoveredSegmentIndex = selectedSegmentIndex;
+                        event.preventDefault();
+                        renderActiveState();
+                    } else if (event.key === 'ArrowLeft' || event.key === 'ArrowUp') {
+                        selectedSegmentIndex = (selectedSegmentIndex - 1 + ALLOCATIONS.length) % ALLOCATIONS.length;
+                        hoveredSegmentIndex = selectedSegmentIndex;
+                        event.preventDefault();
+                        renderActiveState();
+                    }
+                });
+            }
 
             hourlyWageInput.addEventListener('input', calculateDues);
             hoursWeekInput.addEventListener('input', calculateDues);
 
+            setActiveChartTab(activeChartTab);
             calculateDues();
         });
     </script>
