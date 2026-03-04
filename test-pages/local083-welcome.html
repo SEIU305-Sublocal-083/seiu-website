@@ -50,13 +50,36 @@
         }
 
         .btn {
-            @apply font-bold py-3 px-6 rounded-lg transition-all duration-300 ease-in-out transform hover:scale-105;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            border: 2px solid transparent;
+            text-decoration: none;
+            transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+        }
+        .btn:hover {
+            transform: translateY(-1px);
         }
         .btn-primary {
-            @apply bg-gradient-to-r from-brand-purple to-violet-600 text-white shadow-md hover:shadow-lg;
+            background: var(--brand-purple-dark);
+            color: #ffffff;
+            box-shadow: 0 3px 10px rgba(76, 29, 149, 0.24);
+        }
+        .btn-primary:hover {
+            box-shadow: 0 5px 14px rgba(76, 29, 149, 0.3);
         }
         .btn-outline {
-             @apply bg-white text-brand-purple border-2 border-brand-purple hover:bg-brand-purple hover:text-white;
+            background: #ffffff;
+            color: var(--brand-purple);
+            border-color: var(--brand-purple);
+        }
+        .btn-outline:hover {
+            background: var(--brand-purple-dark);
+            border-color: var(--brand-purple-dark);
+            color: #ffffff;
         }
 
         /* Custom Tailwind config for our CSS variables */
@@ -182,6 +205,7 @@
                     <div class="mt-8 flex flex-col sm:flex-row sm:items-center gap-4">
                         <a href="#first-steps" class="btn btn-primary w-full sm:w-auto text-center">Start Here</a>
                         <a href="/resources.html" class="btn btn-outline w-full sm:w-auto text-center">Resources & Rights</a>
+                        <a href="https://seiu503-org.zoom.us/meeting/register/nNj7u00vTFKIes627vexKw#/registration" class="btn btn-outline w-full sm:w-auto text-center">Register for Onboarding</a>
                     </div>
                 </div>
                 <div class="lg:col-span-5">
@@ -486,7 +510,11 @@
         <section id="membership-meetings" class="mt-12 bg-brand-purple-light border border-border-color rounded-2xl p-8 md:p-10 text-center">
             <h2 class="text-3xl font-bold">Membership meetings</h2>
             <p class="mt-3 text-text-secondary max-w-2xl mx-auto">Third Thursday of each month at the Memorial Union. 12:00–1:00. Lunch provided.</p>
-            <a href="/events.html" class="btn btn-outline mt-6">See meeting details</a>
+            <p class="mt-3 text-text-secondary max-w-2xl mx-auto">New member onboarding: first Wednesday of every month, 11:45 AM to 12:15 PM. This is paid work time.</p>
+            <div class="mt-6 flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="/events.html" class="btn btn-outline">See meeting details</a>
+                <a href="https://seiu503-org.zoom.us/meeting/register/nNj7u00vTFKIes627vexKw#/registration" class="btn btn-primary">Register for Onboarding</a>
+            </div>
         </section>
 
         <!-- FAQ -->
