@@ -5,7 +5,10 @@
     "url": "/news/2026-02-12-bargaining-observation-time-change.html",
     "image": "/images/2026-bargaining-zoom-backgrounds.webp",
     "alt": "Purple 2026 higher education bargaining graphic",
-    "tags": ["Bargaining", "Update"],
+    "tags": [
+      "Bargaining",
+      "Update"
+    ],
     "author": {
       "name": "SEIU 503 Sublocal 083",
       "title": "Union Leadership"
@@ -21,7 +24,10 @@
     "url": "/news/2026-01-09-kickoff.html",
     "image": "/images/b568a7b5-d177-4336-af4c-beb1f8e16315-winter-mu-2026-kickoff.webp",
     "alt": "A vibrant sunrise over the Memorial Union building, featuring a gradient orange sky, distant mountains, and silhouette trees on a clear and cold winter morning.",
-    "tags": ["Bargaining", "Contract"],
+    "tags": [
+      "Bargaining",
+      "Contract"
+    ],
     "author": {
       "name": "SEIU 503 Sublocal 083",
       "title": "Union Leadership"
@@ -37,7 +43,10 @@
     "url": "/news/2026-02-04-zoom-backgrounds.html",
     "image": "/images/2026-bargaining-zoom-backgrounds.webp",
     "alt": "A purple background with silhouettes of raised fists. In the center is an illustrated cluster of Oregon university mascots including a duck, beaver, viking, and owl. Text reads \"Higher Education Bargaining 2026: Together in Solidarity.\"",
-    "tags": ["Bargaining", "Action"],
+    "tags": [
+      "Bargaining",
+      "Action"
+    ],
     "author": {
       "name": "SEIU 503 Sublocal 083",
       "title": "Union Leadership"
@@ -53,7 +62,10 @@
     "url": "/news/2025-12-15-fighting-for-higher-education.html",
     "image": "/images/452eb3b6-e72b-43ec-9698-bde681a4df9f-Fighting-for-Higher-Education-Banner.webp",
     "alt": "Graphic with text 'Bargaining Update' and SEIU 503 logo",
-    "tags": ["Bargaining", "Action"],
+    "tags": [
+      "Bargaining",
+      "Action"
+    ],
     "author": {
       "name": "SEIU 503 Sublocal 083",
       "title": "Union Leadership"
@@ -69,7 +81,10 @@
     "url": "/news/2025-11-03-bargaining-survey-update.html",
     "image": "/images/01d4b1b3-b65e-4614-9618-4eeba50f6407-Barg-Update.webp",
     "alt": "Graphic with text 'Bargaining Update' and SEIU 503 logo",
-    "tags": ["Bargaining", "Contract"],
+    "tags": [
+      "Bargaining",
+      "Contract"
+    ],
     "author": {
       "name": "Jax SN Johnson",
       "title": "083 Communications Chair"
@@ -85,7 +100,10 @@
     "url": "/news/2025-11-01-COLA.html",
     "image": "/images/54af20ff-cd31-4c1e-96b9-2907c2687a77-NOV-FALL-COLA.webp",
     "alt": "Graphic text announcing 'November Fall COLA'",
-    "tags": ["Update", "Contract"],
+    "tags": [
+      "Update",
+      "Contract"
+    ],
     "author": {
       "name": "Jax SN Johnson",
       "title": "083 Communications Chair"
@@ -101,7 +119,10 @@
     "url": "/news/2025-10-27-bowling-striking-success.html",
     "image": "/images/70197688-ecfb-482c-890e-6902b235e21e-2025-10-23-Kary-Bowling.webp",
     "alt": "Group of union members smiling and posing at a bowling alley",
-    "tags": ["Events", "Membership Meetings"],
+    "tags": [
+      "Events",
+      "Membership Meetings"
+    ],
     "author": {
       "name": "Jax SN Johnson",
       "title": "083 Communications Chair"
@@ -117,7 +138,10 @@
     "url": "/news/2025-08-22-Icecream.html",
     "image": "/images/719dac94-a776-4f31-b327-08861bd991d5-icecream.webp",
     "alt": "Union members gathering outdoors for an ice cream social event",
-    "tags": ["Events", "Membership Meetings"],
+    "tags": [
+      "Events",
+      "Membership Meetings"
+    ],
     "author": {
       "name": "Jax SN Johnson",
       "title": "083 Communications Chair"
@@ -132,7 +156,10 @@
     "url": "/news/2025-10-01-bargaining-survey-live.html",
     "image": "/images/989fb357-b161-4ae0-a2b0-3b0ca7808420-seiu-salem.jpg",
     "alt": "SEIU members holding purple signs and marching in a large group",
-    "tags": ["Bargaining", "Contract"],
+    "tags": [
+      "Bargaining",
+      "Contract"
+    ],
     "author": {
       "name": "Jax SN Johnson",
       "title": "083 Communications Chair"
@@ -140,5 +167,24 @@
     "publishedAt": "2025-10-01",
     "createdAt": "2025-10-01",
     "updatedAt": "2025-10-01"
+  },
+  {
+    "title": "Our Union Bargaining Update: Protecting Our Hardship Leave",
+    "description": "Our bargaining team is fighting management’s proposal to eliminate Hardship Leave. Learn why it matters and how members can take action today.",
+    "url": "/news/2026-03-11-protecting-our-hardship-leave.html",
+    "image": "/images/2026-bargaining-zoom-backgrounds.webp",
+    "alt": "Purple 2026 higher education bargaining graphic",
+    "tags": [
+      "Bargaining",
+      "Benefits"
+    ],
+    "author": {
+      "name": "SEIU 503 Sublocal 083",
+      "title": "Union Leadership"
+    },
+    "publishedAt": "2026-03-11",
+    "createdAt": "2026-03-11",
+    "updatedAt": "2026-03-11",
+    "featured": false
   }
 ]

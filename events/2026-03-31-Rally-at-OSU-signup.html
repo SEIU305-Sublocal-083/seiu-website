@@ -256,6 +256,16 @@
                 <div id="form-result" class="hidden mb-6 rounded-xl border border-border-color bg-brand-purple-light px-6 py-8 text-center" role="status" aria-live="polite">
                     <div id="form-result-icon" class="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-white text-3xl text-brand-purple"></div>
                     <p id="form-result-message" class="text-lg text-text-secondary"></p>
+                    <div id="invite-module" class="hidden mt-6 rounded-xl border border-border-color bg-white p-6 text-left">
+                        <h4 class="text-xl font-bold">Invite a coworker</h4>
+                        <p class="mt-2 text-text-secondary">Share this signup link so one more coworker can join the rally.</p>
+                        <div class="mt-4 flex flex-col sm:flex-row gap-3">
+                            <button type="button" id="share-invite-button" class="btn btn-primary w-full sm:w-auto hidden">Share Invite</button>
+                            <button type="button" id="copy-invite-button" class="btn btn-outline w-full sm:w-auto">Copy Invite Link</button>
+                        </div>
+                        <a id="invite-link-display" href="#" class="mt-3 block break-all text-sm text-brand-purple hover:underline" target="_blank" rel="noopener noreferrer"></a>
+                        <p id="invite-copy-feedback" class="mt-2 text-sm text-text-secondary" aria-live="polite"></p>
+                    </div>
                 </div>
 
                 <form id="rally-signup-form" action="#" method="post" class="space-y-6">
@@ -502,8 +512,149 @@
         const submitButton = document.getElementById('submit-button');
         const submitButtonText = document.getElementById('submit-button-text');
         const submitSpinner = document.getElementById('submit-spinner');
+        const inviteModule = document.getElementById('invite-module');
+        const shareInviteButton = document.getElementById('share-invite-button');
+        const copyInviteButton = document.getElementById('copy-invite-button');
+        const inviteLinkDisplay = document.getElementById('invite-link-display');
+        const inviteCopyFeedback = document.getElementById('invite-copy-feedback');
+
+        const INVITE_SOURCE = 'invite';
+        const INVITE_CAMPAIGN = 'osu_rally_2026';
+        const INVITE_ACCEPTED_SESSION_KEY = `invite_accepted:${INVITE_CAMPAIGN}`;
 
         const GOOGLE_SHEET_URL = 'https://script.google.com/macros/s/AKfycbyJIsm0a77hArZOuzOWGnEY6CnAHEFcMNFcnD7RkBoBy1wQFyGAZzSbkQ0E20JTwPQ/exec';
+
+        function safeCapture(name, props = {}) {
+            if (typeof window.phCapture === 'function') {
+                window.phCapture(name, props);
+            }
+        }
+
+        function buildInviteUrl() {
+            const url = new URL(window.location.href);
+            url.searchParams.set('src', INVITE_SOURCE);
+            url.searchParams.set('campaign', INVITE_CAMPAIGN);
+            return url.toString();
+        }
+
+        function showInvitePanel() {
+            if (!inviteModule || !inviteLinkDisplay) return;
+
+            const inviteUrl = buildInviteUrl();
+            inviteModule.classList.remove('hidden');
+            inviteLinkDisplay.href = inviteUrl;
+            inviteLinkDisplay.textContent = inviteUrl;
+
+            if (copyInviteButton) {
+                copyInviteButton.dataset.inviteUrl = inviteUrl;
+            }
+
+            if (shareInviteButton) {
+                shareInviteButton.dataset.inviteUrl = inviteUrl;
+                if (typeof navigator.share === 'function') {
+                    shareInviteButton.classList.remove('hidden');
+                } else {
+                    shareInviteButton.classList.add('hidden');
+                }
+            }
+
+            if (inviteCopyFeedback) {
+                inviteCopyFeedback.textContent = '';
+            }
+        }
+
+        async function copyInviteLink(inviteUrl) {
+            if (navigator.clipboard && typeof navigator.clipboard.writeText === 'function') {
+                await navigator.clipboard.writeText(inviteUrl);
+                return;
+            }
+
+            const helper = document.createElement('textarea');
+            helper.value = inviteUrl;
+            helper.setAttribute('readonly', '');
+            helper.style.position = 'absolute';
+            helper.style.left = '-10000px';
+            document.body.appendChild(helper);
+            helper.select();
+            const copied = document.execCommand('copy');
+            document.body.removeChild(helper);
+            if (!copied) {
+                throw new Error('Copy failed');
+            }
+        }
+
+        function captureInviteAcceptedOnce() {
+            try {
+                const params = new URLSearchParams(window.location.search);
+                if (params.get('src') !== INVITE_SOURCE) return;
+                if (sessionStorage.getItem(INVITE_ACCEPTED_SESSION_KEY) === '1') return;
+
+                sessionStorage.setItem(INVITE_ACCEPTED_SESSION_KEY, '1');
+                safeCapture('invite_accepted', {
+                    source: params.get('src'),
+                    campaign: params.get('campaign') || INVITE_CAMPAIGN,
+                    surface: 'rally_signup_landing'
+                });
+            } catch (error) {
+                // No-op: invite acceptance tracking should never block page use.
+            }
+        }
+
+        captureInviteAcceptedOnce();
+
+        if (copyInviteButton) {
+            copyInviteButton.addEventListener('click', async () => {
+                const inviteUrl = copyInviteButton.dataset.inviteUrl || buildInviteUrl();
+                try {
+                    await copyInviteLink(inviteUrl);
+                    if (inviteCopyFeedback) {
+                        inviteCopyFeedback.textContent = 'Invite link copied. Send it to a coworker.';
+                    }
+                    safeCapture('share_clicked', {
+                        channel: 'copy_link',
+                        campaign: INVITE_CAMPAIGN,
+                        surface: 'rally_signup_success',
+                        target_url: inviteUrl
+                    });
+                } catch (error) {
+                    if (inviteCopyFeedback) {
+                        inviteCopyFeedback.textContent = 'Could not copy automatically. Use the link below.';
+                    }
+                }
+            });
+        }
+
+        if (shareInviteButton) {
+            shareInviteButton.addEventListener('click', async () => {
+                const inviteUrl = shareInviteButton.dataset.inviteUrl || buildInviteUrl();
+                safeCapture('share_clicked', {
+                    channel: 'native_share',
+                    campaign: INVITE_CAMPAIGN,
+                    surface: 'rally_signup_success',
+                    target_url: inviteUrl
+                });
+
+                if (typeof navigator.share !== 'function') {
+                    return;
+                }
+
+                try {
+                    await navigator.share({
+                        title: 'Join me at the OSU Bargaining Rally',
+                        text: 'I just signed up for the OSU Bargaining Rally on March 31. Join me at the MU Quad.',
+                        url: inviteUrl
+                    });
+                    if (inviteCopyFeedback) {
+                        inviteCopyFeedback.textContent = 'Thanks for sharing this with your coworkers.';
+                    }
+                } catch (error) {
+                    if (error && error.name === 'AbortError') return;
+                    if (inviteCopyFeedback) {
+                        inviteCopyFeedback.textContent = 'Sharing did not complete. You can copy the invite link instead.';
+                    }
+                }
+            });
+        }
 
         function showResult(message, isError) {
             if (!resultEl || !resultIcon || !resultMessage) return;
@@ -511,8 +662,15 @@
             resultIcon.innerHTML = isError ? '&#10007;' : '&#10003;';
             resultIcon.classList.toggle('text-red-600', !!isError);
             resultIcon.classList.toggle('text-brand-purple', !isError);
+            if (inviteModule) {
+                inviteModule.classList.toggle('hidden', !!isError);
+            }
             resultEl.classList.remove('hidden');
             if (form) form.classList.add('hidden');
+
+            if (!isError) {
+                showInvitePanel();
+            }
         }
 
         function setSubmitState(isSubmitting) {
