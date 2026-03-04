@@ -161,6 +161,16 @@
     "location_detail": "Online via Zoom"
   },
   {
+    "date": "2026-03-10",
+    "time": "7:00 PM - 8:00 PM",
+    "title": "CAT Meeting",
+    "description": "Come to our Contact Action Team Meeting to get information to spread in your area!",
+    "type": "Zoom Meeting",
+    "url": "/events/2026-03-10-CAT-Meeting.html",
+    "featured": false,
+    "location_detail": "Online via Zoom"
+  },
+  {
     "date": "2025-10-09",
     "time": "6:00 PM",
     "title": "Executive Team Meeting",
