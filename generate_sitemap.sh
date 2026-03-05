@@ -18,6 +18,7 @@ echo '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' >> $OUTPUT_F
 # Find all .html files, excluding template sources, test pages, and 404.
 find . -name "*.html" \
   | grep -vE "^\\./templates/" \
+  | grep -vE "^\\./welcome/" \
   | grep -vE "^\\./test-pages/" \
   | grep -v "/404.html$" \
   | while read -r line; do
