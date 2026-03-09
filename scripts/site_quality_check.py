@@ -39,6 +39,7 @@ PLACEHOLDER_PATTERNS = (
 
 REQUIRED_NEWS_FIELDS = ("title", "description", "url", "image", "alt", "publishedAt")
 REQUIRED_EVENT_FIELDS = ("date", "time", "title", "description", "type", "url", "location_detail")
+VALID_NEWS_STATUSES = {"draft", "review", "published", "scheduled"}
 
 
 @dataclass
@@ -192,6 +193,15 @@ def is_valid_date(value: str) -> bool:
     return True
 
 
+def parse_ymd(value: str) -> datetime | None:
+    if not isinstance(value, str) or not value.strip():
+        return None
+    try:
+        return datetime.strptime(value, "%Y-%m-%d")
+    except ValueError:
+        return None
+
+
 def require_fields(item: dict, fields: tuple[str, ...], source: str) -> list[Issue]:
     issues: list[Issue] = []
     for field in fields:
@@ -205,6 +215,7 @@ def check_news_json() -> list[Issue]:
     issues: list[Issue] = []
     path = ROOT / "news" / "news.json"
     data = json.loads(path.read_text(encoding="utf-8"))
+    today = datetime.now(UTC).date()
 
     for idx, item in enumerate(data):
         source = f"news/news.json[{idx}]"
@@ -224,6 +235,29 @@ def check_news_json() -> list[Issue]:
             date_value = item.get(date_key)
             if isinstance(date_value, str) and date_value.strip() and not is_valid_date(date_value):
                 issues.append(Issue("ERROR", source, f"Invalid {date_key} date format: {date_value}"))
+
+        status = item.get("status", "published")
+        if not isinstance(status, str) or status not in VALID_NEWS_STATUSES:
+            issues.append(Issue("ERROR", source, f"Invalid news status: {status!r}"))
+            continue
+
+        created_at = parse_ymd(item.get("createdAt"))
+        published_at = parse_ymd(item.get("publishedAt"))
+        updated_at = parse_ymd(item.get("updatedAt"))
+
+        if created_at and published_at and created_at.date() > published_at.date():
+            issues.append(Issue("WARN", source, "createdAt is after publishedAt"))
+        if published_at and updated_at and published_at.date() > updated_at.date():
+            issues.append(Issue("WARN", source, "publishedAt is after updatedAt"))
+
+        if status == "published" and published_at and published_at.date() > today:
+            issues.append(Issue("ERROR", source, "Published article has a future publishedAt date"))
+
+        if status == "scheduled":
+            if not published_at:
+                issues.append(Issue("ERROR", source, "Scheduled article must include publishedAt"))
+            elif published_at.date() <= today:
+                issues.append(Issue("WARN", source, "Scheduled article publishedAt is not in the future"))
 
     return issues
 

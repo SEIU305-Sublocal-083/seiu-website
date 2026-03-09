@@ -15,17 +15,45 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     let allArticles = [];
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
     let activeFilters = {
         searchTerm: '',
         sortOrder: 'newest',
         activeTag: null
     };
 
+    function getArticleStatus(article) {
+        return article.status || 'published';
+    }
+
+    function parseArticleDate(value) {
+        if (!value) return null;
+        const parsed = new Date(`${value}T00:00:00`);
+        return Number.isNaN(parsed.getTime()) ? null : parsed;
+    }
+
+    function isPublicArticle(article) {
+        const status = getArticleStatus(article);
+        const publishedAt = parseArticleDate(article.publishedAt || article.createdAt);
+
+        if (status === 'draft' || status === 'review') {
+            return false;
+        }
+
+        if (status === 'scheduled') {
+            return Boolean(publishedAt) && publishedAt <= today;
+        }
+
+        return !publishedAt || publishedAt <= today;
+    }
+
     async function loadNews() {
         try {
             const response = await fetch('news/news.json');
             if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
             allArticles = await response.json();
+            allArticles = allArticles.filter(isPublicArticle);
 
             safeCapture('news_feed_loaded', { count: allArticles.length });
 

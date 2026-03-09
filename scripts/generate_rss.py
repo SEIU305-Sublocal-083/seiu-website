@@ -38,6 +38,25 @@ def parse_date(value: Optional[str]) -> datetime:
     return datetime.fromisoformat(value.replace("Z", "+00:00")).astimezone(timezone.utc)
 
 
+def get_article_status(article: dict) -> str:
+    status = article.get("status")
+    return status if isinstance(status, str) and status.strip() else "published"
+
+
+def is_public_news_article(article: dict, now: Optional[datetime] = None) -> bool:
+    now = now or datetime.now(timezone.utc)
+    status = get_article_status(article)
+    published_at = parse_date(article.get("publishedAt") or article.get("createdAt"))
+
+    if status in {"draft", "review"}:
+        return False
+
+    if status == "scheduled":
+        return published_at <= now
+
+    return published_at <= now
+
+
 def to_rfc2822(value: datetime) -> str:
     return format_datetime(value.astimezone(timezone.utc), usegmt=True)
 
@@ -98,8 +117,9 @@ def build_feed(
 
 
 def build_news_items(news_data: List[dict]) -> List[dict]:
+    public_news = [article for article in news_data if is_public_news_article(article)]
     sorted_news = sorted(
-        news_data,
+        public_news,
         key=lambda n: parse_date(n.get("publishedAt") or n.get("createdAt")),
         reverse=True,
     )
