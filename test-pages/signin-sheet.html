@@ -14,17 +14,148 @@
         table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
         img { -ms-interpolation-mode: bicubic; border: 0; height: auto; line-height: 100%; outline: none; text-decoration: none; }
         table { border-collapse: collapse !important; }
-        body { height: 100% !important; margin: 0 !important; padding: 0 !important; width: 100% !important; }
+        body { height: 100% !important; margin: 0 !important; padding: 0 !important; width: 100% !important; background-color: #F3F4F6; color: #1F2937; font-family: 'Inter', sans-serif; }
+        .sheet-shell { padding: 24px; }
+        .print-container { width: 100%; max-width: 760px; border: 1px solid #D1D5DB; background-color: #FFFFFF; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08); }
+        .sheet-header { padding: 20px 28px; background-color: #F5F3FF; border-bottom: 1px solid #DDD6FE; text-align: center; }
+        .sheet-title { margin: 0; font-family: 'Lora', serif; font-size: 28px; font-weight: 700; color: #3B0764; line-height: 1.2; }
+        .sheet-subtitle { margin: 6px 0 0; font-size: 15px; color: #374151; }
+        .sheet-body { padding: 26px 28px; }
+        .event-info { padding-bottom: 22px; font-size: 15px; color: #111827; }
+        .event-info-label { width: 72px; padding-right: 12px; font-weight: 700; white-space: nowrap; }
+        .event-info-line { height: 24px; border-bottom: 1.5px solid #6B7280; }
+        .event-info-spacer { height: 10px; }
+        .sheet-intro { padding-bottom: 22px; font-size: 15px; line-height: 1.5; color: #1F2937; }
+        .signup-table { width: 100%; table-layout: fixed; font-family: 'Inter', sans-serif; font-size: 14px; color: #1F2937; }
+        .signup-table thead { display: table-header-group; }
+        .signup-table tbody { display: table-row-group; }
+        .signup-table th { padding: 9px 8px; border-bottom: 2px solid #111827; font-size: 13px; font-weight: 700; text-align: left; color: #111827; vertical-align: bottom; }
+        .signup-table .subhead th { padding-top: 4px; padding-bottom: 8px; border-bottom: 2px solid #111827; font-size: 11px; font-weight: 600; color: #374151; }
+        .signup-table .subhead .blank-head { border-bottom: 2px solid #111827; }
+        .col-name { width: 27%; }
+        .col-location { width: 28%; }
+        .col-contact { width: 29%; }
+        .col-pref { width: 8%; text-align: center !important; }
+        .entry-row { break-inside: avoid; page-break-inside: avoid; }
+        .entry-row td { height: 52px; padding: 0 8px; border-bottom: 1px solid #9CA3AF; vertical-align: middle; }
+        .entry-row .pref-cell { text-align: center; }
+        .checkbox { width: 18px; height: 18px; border: 1.5px solid #111827; margin: 0 auto; border-radius: 3px; }
+        .sheet-footer { padding: 18px 28px 20px; border-top: 1px solid #E5E7EB; }
+        .footer-table { width: 100%; max-width: 640px; }
+        .footer-logo-cell { width: 52px; padding-right: 14px; vertical-align: top; }
+        .footer-copy { margin: 0; font-size: 10px; color: #4B5563; line-height: 1.45; }
+        @page {
+            size: Letter portrait;
+            margin: 0.5in 0.25in;
+        }
         @media print {
+            html, body {
+                background-color: #FFFFFF !important;
+            }
             body {
-                background-color: #FFFFFF;
+                color: #000000;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
             }
             .no-print {
                 display: none !important;
             }
+            .sheet-shell {
+                padding: 0 !important;
+            }
             .print-container {
                 border: none !important;
                 box-shadow: none !important;
+                border-radius: 0 !important;
+                width: 100% !important;
+                max-width: 8in !important;
+                margin: 0 auto !important;
+            }
+            .sheet-header {
+                padding: 0 0 12px !important;
+                background-color: transparent !important;
+                border-bottom: 2px solid #000000 !important;
+            }
+            .sheet-title {
+                font-size: 22px !important;
+                color: #000000 !important;
+            }
+            .sheet-subtitle {
+                color: #000000 !important;
+                font-size: 12px !important;
+            }
+            .sheet-body {
+                padding: 12px 0 8px !important;
+            }
+            .event-info,
+            .sheet-intro,
+            .sheet-header,
+            .sheet-footer {
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+            .event-info {
+                padding-bottom: 10px !important;
+                font-size: 13px !important;
+            }
+            .event-info-label {
+                width: 60px !important;
+            }
+            .event-info-line {
+                height: 20px !important;
+                border-bottom: 1px solid #000000 !important;
+            }
+            .sheet-intro {
+                padding-bottom: 10px !important;
+                font-size: 12px !important;
+                line-height: 1.25 !important;
+                color: #000000 !important;
+            }
+            .col-name { width: 28% !important; }
+            .col-location { width: 27% !important; }
+            .col-contact { width: 29% !important; }
+            .col-pref { width: 8% !important; }
+            .signup-table {
+                font-size: 12px !important;
+                color: #000000 !important;
+            }
+            .signup-table th,
+            .signup-table .subhead th {
+                border-bottom-color: #000000 !important;
+                color: #000000 !important;
+            }
+            .signup-table th {
+                padding: 5px 6px 6px !important;
+            }
+            .signup-table .subhead th {
+                padding: 2px 6px 5px !important;
+            }
+            .entry-row td {
+                height: 38px !important;
+                padding: 0 5px !important;
+                border-bottom: 1px solid #000000 !important;
+            }
+            .checkbox {
+                width: 15px !important;
+                height: 15px !important;
+                border: 1.5px solid #000000 !important;
+                border-radius: 2px !important;
+            }
+            .sheet-footer {
+                padding: 8px 0 0 !important;
+                border-top: 1px solid #000000 !important;
+            }
+            .footer-copy {
+                font-size: 8px !important;
+                line-height: 1.25 !important;
+                color: #000000 !important;
+            }
+            .footer-logo-cell {
+                width: 36px !important;
+                padding-right: 8px !important;
+            }
+            .footer-logo {
+                width: 26px !important;
             }
         }
     </style>
@@ -80,26 +211,24 @@
     <!-- SEO META END -->
     <script src="/js/analytics.js" defer></script>
 </head>
-<body style="margin: 0 !important; padding: 0 !important; background-color: #FFFFFF; font-family: 'Inter', sans-serif;">
-    <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:bg-white focus:text-brand-purple-dark focus:px-4 focus:py-2 focus:rounded focus:shadow-lg">Skip to content</a>
-
+<body>
     <!-- Main Container Table -->
     <table id="main-content" border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
-            <td align="center" style="padding: 20px;">
+            <td align="center" class="sheet-shell">
                 <!-- Centered Content Table -->
-                <table class="print-container" border="0" cellpadding="0" cellspacing="0" width="750" style="max-width: 750px; border: 1px solid #D1D5DB; background-color: #FFFFFF; border-radius: 12px; overflow: hidden;">
+                <table class="print-container" border="0" cellpadding="0" cellspacing="0" width="760">
 
                     <!-- Header -->
                     <tr>
-                        <td style="padding: 20px 30px; background-color: #EDE9FE; border-bottom: 1px solid #FFFFFF;">
+                        <td class="sheet-header">
                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
                                <tr>
                                    <td align="center" valign="middle">
-                                        <h1 style="margin: 0; font-family: 'Lora', serif; font-size: 28px; font-weight: bold; color: #4C1D95;">
+                                        <h1 class="sheet-title">
                                             Sign In, Get Involved, & Stay Updated!
                                         </h1>
-                                        <p style="margin: 5px 0 0; font-family: 'Inter', sans-serif; font-size: 16px; color: #374151;">SEIU Local 083, Oregon State University</p>
+                                        <p class="sheet-subtitle">SEIU Local 083, Oregon State University</p>
                                    </td>
                                </tr>
                            </table>
@@ -108,29 +237,29 @@
 
                     <!-- Main Content -->
                     <tr>
-                        <td align="center" style="padding: 30px 30px;">
+                        <td align="center" class="sheet-body">
                             <table border="0" cellpadding="0" cellspacing="0" width="100%">
                                 <!-- Event Info -->
                                 <tr>
-                                    <td align="left" style="padding-bottom: 25px; font-family: 'Inter', sans-serif; font-size: 16px; color: #1F2937;">
+                                    <td align="left" class="event-info">
                                         <table border="0" cellpadding="0" cellspacing="0" width="100%">
                                             <tr>
-                                                <td width="60" style="font-weight: 500; padding-right: 10px;">Date:</td>
-                                                <td style="border-bottom: 1px solid #9CA3AF;">&nbsp;</td>
+                                                <td class="event-info-label">Date:</td>
+                                                <td class="event-info-line">&nbsp;</td>
                                             </tr>
                                             <tr>
-                                                <td colspan="2" style="height: 10px;"></td> <!-- Spacer -->
+                                                <td colspan="2" class="event-info-spacer"></td>
                                             </tr>
                                             <tr>
-                                                <td width="60" style="font-weight: 500; padding-right: 10px;">Event:</td>
-                                                <td style="border-bottom: 1px solid #9CA3AF;">&nbsp;</td>
+                                                <td class="event-info-label">Event:</td>
+                                                <td class="event-info-line">&nbsp;</td>
                                             </tr>
                                         </table>
                                     </td>
                                 </tr>
                                 <!-- Introductory Text -->
                                 <tr>
-                                    <td align="left" style="padding-bottom: 25px; font-family: 'Inter', sans-serif; font-size: 16px; color: #1F2937; line-height: 1.6;">
+                                    <td align="left" class="sheet-intro">
                                         <p style="margin: 0;">Sign up to receive important news from our Sublocal as we prepare for bargaining.</p>
                                     </td>
                                 </tr>
@@ -138,113 +267,102 @@
                                 <!-- Sign-up Table -->
                                 <tr>
                                     <td>
-                                        <table border="0" cellpadding="0" cellspacing="0" width="100%" style="font-family: 'Inter', sans-serif; font-size: 14px; color: #374151;">
+                                        <table class="signup-table" border="0" cellpadding="0" cellspacing="0" width="100%">
                                             <!-- Table Header -->
                                             <thead>
                                                 <tr>
-                                                    <th align="left" style="padding: 8px 5px; border-bottom: 2px solid #4C1D95; font-weight: bold; width: 25%;">Name</th>
-                                                    <th align="left" style="padding: 8px 5px; border-bottom: 2px solid #4C1D95; font-weight: bold; width: 30%;">Building / Work Location</th>
-                                                    <th align="left" style="padding: 8px 5px; border-bottom: 2px solid #4C1D95; font-weight: bold;">Email or Phone</th>
-                                                    <th align="center" colspan="2" style="padding: 8px 5px; border-bottom: 2px solid #4C1D95; font-weight: bold;">Contact Preference</th>
+                                                    <th class="col-name">Name</th>
+                                                    <th class="col-location">Building / Work Location</th>
+                                                    <th class="col-contact">Email or Phone</th>
+                                                    <th align="center" colspan="2">Contact Preference</th>
                                                 </tr>
-                                                <tr>
-                                                   <th></th>
-                                                   <th></th>
-                                                   <th></th>
-                                                   <th align="center" style="padding: 4px 5px 8px; font-weight: normal; font-size: 12px; width: 60px;">Email</th>
-                                                   <th align="center" style="padding: 4px 5px 8px; font-weight: normal; font-size: 12px; width: 60px;">SMS</th>
+                                                <tr class="subhead">
+                                                   <th class="blank-head"></th>
+                                                   <th class="blank-head"></th>
+                                                   <th class="blank-head"></th>
+                                                   <th class="col-pref">Email</th>
+                                                   <th class="col-pref">SMS</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <!-- Repeat this row for each sign-up -->
-                                                <tr>
-                                                    <td style="padding: 22px 5px; border-bottom: 1px solid #D1D5DB;"></td>
-                                                    <td style="padding: 22px 5px; border-bottom: 1px solid #D1D5DB;"></td>
-                                                    <td style="padding: 22px 5px; border-bottom: 1px solid #D1D5DB;"></td>
-                                                    <td style="padding: 22px 5px; border-bottom: 1px solid #D1D5DB; text-align: center;">
-                                                        <div style="width: 20px; height: 20px; border: 1px solid #9CA3AF; margin: 0 auto; border-radius: 4px;"></div>
-                                                    </td>
-                                                    <td style="padding: 22px 5px; border-bottom: 1px solid #D1D5DB; text-align: center;">
-                                                        <div style="width: 20px; height: 20px; border: 1px solid #9CA3AF; margin: 0 auto; border-radius: 4px;"></div>
-                                                    </td>
+                                                <tr class="entry-row">
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td class="pref-cell"><div class="checkbox"></div></td>
+                                                    <td class="pref-cell"><div class="checkbox"></div></td>
                                                 </tr>
                                                 <!-- Repeat this row for each sign-up -->
-                                                <tr>
-                                                    <td style="padding: 22px 5px; border-bottom: 1px solid #D1D5DB;"></td>
-                                                    <td style="padding: 22px 5px; border-bottom: 1px solid #D1D5DB;"></td>
-                                                    <td style="padding: 22px 5px; border-bottom: 1px solid #D1D5DB;"></td>
-                                                    <td style="padding: 22px 5px; border-bottom: 1px solid #D1D5DB; text-align: center;">
-                                                        <div style="width: 20px; height: 20px; border: 1px solid #9CA3AF; margin: 0 auto; border-radius: 4px;"></div>
-                                                    </td>
-                                                    <td style="padding: 22px 5px; border-bottom: 1px solid #D1D5DB; text-align: center;">
-                                                        <div style="width: 20px; height: 20px; border: 1px solid #9CA3AF; margin: 0 auto; border-radius: 4px;"></div>
-                                                    </td>
+                                                <tr class="entry-row">
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td class="pref-cell"><div class="checkbox"></div></td>
+                                                    <td class="pref-cell"><div class="checkbox"></div></td>
                                                 </tr>
-                                                <tr>
-                                                    <td style="padding: 22px 5px; border-bottom: 1px solid #D1D5DB;"></td>
-                                                    <td style="padding: 22px 5px; border-bottom: 1px solid #D1D5DB;"></td>
-                                                    <td style="padding: 22px 5px; border-bottom: 1px solid #D1D5DB;"></td>
-                                                    <td style="padding: 22px 5px; border-bottom: 1px solid #D1D5DB; text-align: center;">
-                                                        <div style="width: 20px; height: 20px; border: 1px solid #9CA3AF; margin: 0 auto; border-radius: 4px;"></div>
-                                                    </td>
-                                                    <td style="padding: 22px 5px; border-bottom: 1px solid #D1D5DB; text-align: center;">
-                                                        <div style="width: 20px; height: 20px; border: 1px solid #9CA3AF; margin: 0 auto; border-radius: 4px;"></div>
-                                                    </td>
+                                                <tr class="entry-row">
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td class="pref-cell"><div class="checkbox"></div></td>
+                                                    <td class="pref-cell"><div class="checkbox"></div></td>
                                                 </tr>
-                                                <tr>
-                                                    <td style="padding: 22px 5px; border-bottom: 1px solid #D1D5DB;"></td>
-                                                    <td style="padding: 22px 5px; border-bottom: 1px solid #D1D5DB;"></td>
-                                                    <td style="padding: 22px 5px; border-bottom: 1px solid #D1D5DB;"></td>
-                                                    <td style="padding: 22px 5px; border-bottom: 1px solid #D1D5DB; text-align: center;">
-                                                        <div style="width: 20px; height: 20px; border: 1px solid #9CA3AF; margin: 0 auto; border-radius: 4px;"></div>
-                                                    </td>
-                                                    <td style="padding: 22px 5px; border-bottom: 1px solid #D1D5DB; text-align: center;">
-                                                        <div style="width: 20px; height: 20px; border: 1px solid #9CA3AF; margin: 0 auto; border-radius: 4px;"></div>
-                                                    </td>
+                                                <tr class="entry-row">
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td class="pref-cell"><div class="checkbox"></div></td>
+                                                    <td class="pref-cell"><div class="checkbox"></div></td>
                                                 </tr>
-                                                <tr>
-                                                    <td style="padding: 22px 5px; border-bottom: 1px solid #D1D5DB;"></td>
-                                                    <td style="padding: 22px 5px; border-bottom: 1px solid #D1D5DB;"></td>
-                                                    <td style="padding: 22px 5px; border-bottom: 1px solid #D1D5DB;"></td>
-                                                    <td style="padding: 22px 5px; border-bottom: 1px solid #D1D5DB; text-align: center;">
-                                                        <div style="width: 20px; height: 20px; border: 1px solid #9CA3AF; margin: 0 auto; border-radius: 4px;"></div>
-                                                    </td>
-                                                    <td style="padding: 22px 5px; border-bottom: 1px solid #D1D5DB; text-align: center;">
-                                                        <div style="width: 20px; height: 20px; border: 1px solid #9CA3AF; margin: 0 auto; border-radius: 4px;"></div>
-                                                    </td>
+                                                <tr class="entry-row">
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td class="pref-cell"><div class="checkbox"></div></td>
+                                                    <td class="pref-cell"><div class="checkbox"></div></td>
                                                 </tr>
-                                                 <tr>
-                                                    <td style="padding: 22px 5px; border-bottom: 1px solid #D1D5DB;"></td>
-                                                    <td style="padding: 22px 5px; border-bottom: 1px solid #D1D5DB;"></td>
-                                                    <td style="padding: 22px 5px; border-bottom: 1px solid #D1D5DB;"></td>
-                                                    <td style="padding: 22px 5px; border-bottom: 1px solid #D1D5DB; text-align: center;">
-                                                        <div style="width: 20px; height: 20px; border: 1px solid #9CA3AF; margin: 0 auto; border-radius: 4px;"></div>
-                                                    </td>
-                                                    <td style="padding: 22px 5px; border-bottom: 1px solid #D1D5DB; text-align: center;">
-                                                        <div style="width: 20px; height: 20px; border: 1px solid #9CA3AF; margin: 0 auto; border-radius: 4px;"></div>
-                                                    </td>
+                                                <tr class="entry-row">
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td class="pref-cell"><div class="checkbox"></div></td>
+                                                    <td class="pref-cell"><div class="checkbox"></div></td>
                                                 </tr>
-                                                 <tr>
-                                                    <td style="padding: 22px 5px; border-bottom: 1px solid #D1D5DB;"></td>
-                                                    <td style="padding: 22px 5px; border-bottom: 1px solid #D1D5DB;"></td>
-                                                    <td style="padding: 22px 5px; border-bottom: 1px solid #D1D5DB;"></td>
-                                                    <td style="padding: 22px 5px; border-bottom: 1px solid #D1D5DB; text-align: center;">
-                                                        <div style="width: 20px; height: 20px; border: 1px solid #9CA3AF; margin: 0 auto; border-radius: 4px;"></div>
-                                                    </td>
-                                                    <td style="padding: 22px 5px; border-bottom: 1px solid #D1D5DB; text-align: center;">
-                                                        <div style="width: 20px; height: 20px; border: 1px solid #9CA3AF; margin: 0 auto; border-radius: 4px;"></div>
-                                                    </td>
+                                                <tr class="entry-row">
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td class="pref-cell"><div class="checkbox"></div></td>
+                                                    <td class="pref-cell"><div class="checkbox"></div></td>
                                                 </tr>
-                                                 <tr>
-                                                    <td style="padding: 22px 5px; border-bottom: 1px solid #D1D5DB;"></td>
-                                                    <td style="padding: 22px 5px; border-bottom: 1px solid #D1D5DB;"></td>
-                                                    <td style="padding: 22px 5px; border-bottom: 1px solid #D1D5DB;"></td>
-                                                    <td style="padding: 22px 5px; border-bottom: 1px solid #D1D5DB; text-align: center;">
-                                                        <div style="width: 20px; height: 20px; border: 1px solid #9CA3AF; margin: 0 auto; border-radius: 4px;"></div>
-                                                    </td>
-                                                    <td style="padding: 22px 5px; border-bottom: 1px solid #D1D5DB; text-align: center;">
-                                                        <div style="width: 20px; height: 20px; border: 1px solid #9CA3AF; margin: 0 auto; border-radius: 4px;"></div>
-                                                    </td>
+                                                <tr class="entry-row">
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td class="pref-cell"><div class="checkbox"></div></td>
+                                                    <td class="pref-cell"><div class="checkbox"></div></td>
+                                                </tr>
+                                                <tr class="entry-row">
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td class="pref-cell"><div class="checkbox"></div></td>
+                                                    <td class="pref-cell"><div class="checkbox"></div></td>
+                                                </tr>
+                                                <tr class="entry-row">
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td class="pref-cell"><div class="checkbox"></div></td>
+                                                    <td class="pref-cell"><div class="checkbox"></div></td>
+                                                </tr>
+                                                <tr class="entry-row">
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td class="pref-cell"><div class="checkbox"></div></td>
+                                                    <td class="pref-cell"><div class="checkbox"></div></td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -255,14 +373,14 @@
                     </tr>
                     <!-- Footer Disclosure -->
                     <tr>
-                        <td align="center" style="padding: 20px 30px;">
-                             <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;">
+                        <td align="center" class="sheet-footer">
+                             <table class="footer-table" border="0" cellpadding="0" cellspacing="0" width="100%">
                                 <tr>
-                                    <td align="left" valign="middle" width="55" style="padding-right: 15px;">
-                                        <img src="/images/logo.png" alt="SEIU Logo" width="40" style="display: block;" decoding="async" height="827">
+                                    <td align="left" valign="middle" class="footer-logo-cell">
+                                        <img class="footer-logo" src="/images/logo.png" alt="SEIU Logo" width="36" style="display: block;" decoding="async" height="36">
                                     </td>
                                     <td align="left" valign="middle">
-                                        <p style="margin: 0; font-family: 'Inter', sans-serif; font-size: 10px; color: #6B7280; line-height: 1.5;">
+                                        <p class="footer-copy">
                                             By providing your phone number, you agree to receive text messages from SEIU Local 083. Message and data rates may apply. Reply STOP to unsubscribe. By providing your email, you agree to receive emails from SEIU Local 083. You can unsubscribe at any time.
                                         </p>
                                     </td>
