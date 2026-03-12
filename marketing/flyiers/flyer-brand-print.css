@@ -586,57 +586,119 @@ body.page-stage {
 }
 
 .desk-drop-card--urgent {
-    gap: 0.12in;
+    padding: 0.22in 0.2in 0.16in;
+    grid-template-rows: auto auto auto minmax(0, 1fr) auto;
+    gap: 0.05in;
+}
+
+.desk-drop-card--urgent .desk-drop-meta--header {
+    gap: 5px;
+}
+
+.desk-drop-card--urgent .desk-drop-meta--header .desk-drop-meta--tight {
+    column-gap: 10px;
+}
+
+.desk-drop-card--urgent .desk-drop-meta--sender {
+    gap: 5px;
+}
+
+.desk-drop-card--urgent .desk-drop-line-row {
+    gap: 6px;
+}
+
+.desk-drop-card--urgent .desk-drop-label {
+    min-width: 40px;
+    font-size: 9px;
+}
+
+.desk-drop-card--urgent .desk-drop-field {
+    min-height: 17px;
+    font-size: 11px;
+    line-height: 1.15;
 }
 
 .desk-drop-card--urgent .desk-drop-meta:last-of-type {
-    margin-bottom: 0.01in;
+    margin-bottom: 0;
+}
+
+.desk-drop-card--urgent .desk-drop-title {
+    font-size: 29px;
+    line-height: 0.94;
+}
+
+.desk-drop-card--urgent .desk-drop-body {
+    display: grid;
+    grid-template-rows: auto minmax(0, 1fr);
+    gap: 6px;
+    min-height: 0;
+    align-content: start;
+}
+
+.desk-drop-card--urgent .desk-drop-panel {
+    padding: 8px 10px;
+}
+
+.desk-drop-card--urgent .desk-drop-panel-title {
+    margin-bottom: 6px;
+}
+
+.desk-drop-card--urgent .desk-drop-list--action {
+    gap: 6px 10px;
 }
 
 .desk-drop-card--urgent .desk-drop-message-wrap {
-    padding: 10px 12px 8px;
+    padding: 4px 7px 4px;
     border: 1px solid rgba(17, 17, 17, 0.22);
     background: rgba(255, 255, 255, 0.28);
+    min-height: 0;
 }
 
 .desk-drop-card--urgent .desk-drop-message {
     padding-right: 0;
-    font-size: 22px;
-    line-height: 1.02;
+    font-size: 18.5px;
+    line-height: 0.94;
 }
 
 .desk-drop-card--urgent .desk-drop-footer {
-    grid-template-columns: minmax(0, 1fr) 1.16in;
-    gap: 12px;
-    align-items: stretch;
+    grid-template-columns: minmax(0, 1fr) 0.88in;
+    gap: 8px;
+    align-items: end;
+    min-height: 0.88in;
 }
 
 .desk-drop-card--urgent .desk-drop-details {
-    padding: 10px 12px;
+    padding: 5px 7px;
     border: 1px solid rgba(17, 17, 17, 0.18);
     background: rgba(255, 255, 255, 0.55);
     align-content: center;
+    gap: 2px;
+    min-height: 0.78in;
 }
 
 .desk-drop-card--urgent .desk-drop-qr {
     display: grid;
     align-content: center;
     justify-items: center;
-    gap: 6px;
-    padding: 10px 8px;
+    gap: 2px;
+    width: 0.88in;
+    min-height: 0.88in;
+    padding: 5px 4px 4px;
     border-width: 2px;
     background: #ffffff;
 }
 
 .desk-drop-card--urgent .desk-drop-qr img {
-    width: 82px;
-    height: 82px;
+    width: 50px;
+    height: 50px;
     margin: 0;
 }
 
 .desk-drop-card--urgent .desk-drop-qr span {
-    font-size: 8px;
-    line-height: 1.25;
+    font-size: 5.5px;
+    line-height: 1.05;
+    letter-spacing: 0.01em;
+    text-transform: none;
 }
 
 .letter-sheet--buttons {
@@ -767,6 +829,10 @@ body.page-stage {
         gap: 12px;
     }
 
+    .desk-drop-card--urgent {
+        padding: 16px 14px 12px;
+    }
+
     .desk-drop-title {
         font-size: 24px;
     }
@@ -788,12 +854,10 @@ body.page-stage {
         grid-template-columns: repeat(1, minmax(0, 1fr));
     }
 
-    .desk-drop-card--urgent .desk-drop-message {
-        font-size: 20px;
-    }
-
     .desk-drop-card--urgent .desk-drop-qr {
-        max-width: 118px;
+        width: 92px;
+        min-height: 92px;
+        max-width: none;
     }
 
     .desk-drop-footer {
@@ -881,17 +945,18 @@ body.page-stage {
     }
 
     .desk-drop-card--urgent .desk-drop-message {
-        font-size: 20px;
-        line-height: 1;
+        font-size: 17.25px;
+        line-height: 0.93;
     }
 
     .desk-drop-card--urgent .desk-drop-footer {
-        grid-template-columns: minmax(0, 1fr) 1.06in;
+        grid-template-columns: minmax(0, 1fr) 0.82in;
+        min-height: 0.82in;
     }
 
     .desk-drop-card--urgent .desk-drop-qr img {
-        width: 76px;
-        height: 76px;
+        width: 46px;
+        height: 46px;
     }
 
     .letter-sheet--buttons {
