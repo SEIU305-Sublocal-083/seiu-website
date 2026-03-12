@@ -10,152 +10,277 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Lora:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
-        body, table, td, a { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
-        table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
-        img { -ms-interpolation-mode: bicubic; border: 0; height: auto; line-height: 100%; outline: none; text-decoration: none; }
-        table { border-collapse: collapse !important; }
-        body { height: 100% !important; margin: 0 !important; padding: 0 !important; width: 100% !important; background-color: #F3F4F6; color: #1F2937; font-family: 'Inter', sans-serif; }
-        .sheet-shell { padding: 24px; }
-        .print-container { width: 100%; max-width: 760px; border: 1px solid #D1D5DB; background-color: #FFFFFF; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08); }
-        .sheet-header { padding: 20px 28px; background-color: #F5F3FF; border-bottom: 1px solid #DDD6FE; text-align: center; }
-        .sheet-title { margin: 0; font-family: 'Lora', serif; font-size: 28px; font-weight: 700; color: #3B0764; line-height: 1.2; }
-        .sheet-subtitle { margin: 6px 0 0; font-size: 15px; color: #374151; }
-        .sheet-body { padding: 26px 28px; }
-        .event-info { padding-bottom: 22px; font-size: 15px; color: #111827; }
-        .event-info-label { width: 72px; padding-right: 12px; font-weight: 700; white-space: nowrap; }
-        .event-info-line { height: 24px; border-bottom: 1.5px solid #6B7280; }
-        .event-info-spacer { height: 10px; }
-        .sheet-intro { padding-bottom: 22px; font-size: 15px; line-height: 1.5; color: #1F2937; }
-        .signup-table { width: 100%; table-layout: fixed; font-family: 'Inter', sans-serif; font-size: 14px; color: #1F2937; }
-        .signup-table thead { display: table-header-group; }
-        .signup-table tbody { display: table-row-group; }
-        .signup-table th { padding: 9px 8px; border-bottom: 2px solid #111827; font-size: 13px; font-weight: 700; text-align: left; color: #111827; vertical-align: bottom; }
-        .signup-table .subhead th { padding-top: 4px; padding-bottom: 8px; border-bottom: 2px solid #111827; font-size: 11px; font-weight: 600; color: #374151; }
-        .signup-table .subhead .blank-head { border-bottom: 2px solid #111827; }
-        .col-name { width: 27%; }
-        .col-location { width: 28%; }
-        .col-contact { width: 29%; }
-        .col-pref { width: 8%; text-align: center !important; }
-        .entry-row { break-inside: avoid; page-break-inside: avoid; }
-        .entry-row td { height: 52px; padding: 0 8px; border-bottom: 1px solid #9CA3AF; vertical-align: middle; }
-        .entry-row .pref-cell { text-align: center; }
-        .checkbox { width: 18px; height: 18px; border: 1.5px solid #111827; margin: 0 auto; border-radius: 3px; }
-        .sheet-footer { padding: 18px 28px 20px; border-top: 1px solid #E5E7EB; }
-        .footer-table { width: 100%; max-width: 640px; }
-        .footer-logo-cell { width: 52px; padding-right: 14px; vertical-align: top; }
-        .footer-copy { margin: 0; font-size: 10px; color: #4B5563; line-height: 1.45; }
+        :root {
+            --sheet-width: 7.86in;
+            --sheet-height: 9.84in;
+            --row-count: 12;
+            --table-head-height: 0.54in;
+            --ink: #111111;
+            --muted-ink: #4B5563;
+            --paper: #FFFFFF;
+            --line: #111111;
+            --screen-shadow: 0 14px 32px rgba(15, 23, 42, 0.08);
+        }
+
+        html, body {
+            margin: 0;
+            padding: 0;
+            min-height: 100%;
+        }
+
+        body {
+            background:
+                linear-gradient(180deg, #F6F4EF 0%, #ECE8DE 100%);
+            color: var(--ink);
+            font-family: 'Inter', sans-serif;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+        }
+
+        img {
+            border: 0;
+            height: auto;
+            line-height: 100%;
+            outline: none;
+            text-decoration: none;
+            -ms-interpolation-mode: bicubic;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+        .page-shell {
+            display: flex;
+            justify-content: center;
+            padding: 28px 20px;
+            box-sizing: border-box;
+        }
+
+        .print-sheet {
+            width: var(--sheet-width);
+            height: var(--sheet-height);
+            box-sizing: border-box;
+            padding: 0.12in 0.14in 0.1in;
+            background-color: var(--paper);
+            color: var(--ink);
+            display: grid;
+            grid-template-rows: 0.82in 0.66in 0.32in 1fr 0.5in;
+            row-gap: 0.05in;
+            border: 1px solid #D6D1C6;
+            border-radius: 8px;
+            box-shadow: var(--screen-shadow);
+        }
+
+        .sheet-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            border-bottom: 1.5px solid var(--line);
+            text-align: center;
+        }
+
+        .sheet-title {
+            margin: 0;
+            font-family: 'Lora', serif;
+            font-size: 25px;
+            font-weight: 700;
+            line-height: 1.05;
+            color: var(--ink);
+            letter-spacing: -0.02em;
+        }
+
+        .sheet-subtitle {
+            margin: 0.04in 0 0;
+            font-size: 11px;
+            line-height: 1.2;
+            color: var(--muted-ink);
+            letter-spacing: 0.01em;
+            text-transform: uppercase;
+        }
+
+        .sheet-meta {
+            display: grid;
+            align-content: center;
+            gap: 0.1in;
+        }
+
+        .meta-row {
+            display: grid;
+            grid-template-columns: 0.58in 1fr;
+            align-items: end;
+            column-gap: 0.06in;
+            font-size: 12px;
+        }
+
+        .meta-label {
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.02em;
+        }
+
+        .meta-line {
+            display: block;
+            height: 0.16in;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .sheet-intro {
+            display: flex;
+            align-items: center;
+            font-size: 11px;
+            line-height: 1.2;
+            color: #2F2F2F;
+        }
+
+        .sheet-intro p {
+            margin: 0;
+        }
+
+        .signup-grid {
+            min-height: 0;
+        }
+
+        .signup-table {
+            width: 100%;
+            height: 100%;
+            table-layout: fixed;
+            font-size: 12px;
+            color: var(--ink);
+            border-collapse: collapse;
+        }
+
+        .signup-table thead {
+            display: table;
+            width: 100%;
+            table-layout: fixed;
+            height: var(--table-head-height);
+        }
+
+        .signup-table tbody {
+            display: block;
+            width: 100%;
+            height: calc(100% - var(--table-head-height));
+        }
+
+        .signup-table tbody tr {
+            display: table;
+            width: 100%;
+            table-layout: fixed;
+            height: calc(100% / var(--row-count));
+            break-inside: avoid;
+            page-break-inside: avoid;
+        }
+
+        .signup-table th {
+            padding: 0 5px 0.04in;
+            border-bottom: 1.5px solid var(--line);
+            font-size: 12px;
+            font-weight: 700;
+            text-align: left;
+            vertical-align: bottom;
+            letter-spacing: -0.01em;
+        }
+
+        .signup-table .subhead th {
+            padding-top: 0.02in;
+            padding-bottom: 0.03in;
+            font-size: 9px;
+            font-weight: 700;
+            text-align: center;
+            color: var(--muted-ink);
+        }
+
+        .signup-table .subhead .blank-head {
+            text-align: left;
+        }
+
+        .signup-table td {
+            padding: 0 5px;
+            border-bottom: 0.8px solid #999999;
+            vertical-align: middle;
+            box-sizing: border-box;
+        }
+
+        .signup-table th:nth-child(1),
+        .signup-table td:nth-child(1) {
+            width: 27%;
+        }
+
+        .signup-table th:nth-child(2),
+        .signup-table td:nth-child(2) {
+            width: 27%;
+        }
+
+        .signup-table th:nth-child(3),
+        .signup-table td:nth-child(3) {
+            width: 31%;
+        }
+
+        .signup-table th:nth-child(4),
+        .signup-table td:nth-child(4),
+        .signup-table th:nth-child(5),
+        .signup-table td:nth-child(5) {
+            width: 7%;
+            text-align: center;
+        }
+
+        .checkbox {
+            width: 12px;
+            height: 12px;
+            margin: 0 auto;
+            border: 1.2px solid var(--line);
+            border-radius: 2px;
+            box-sizing: border-box;
+        }
+
+        .sheet-footer {
+            display: grid;
+            grid-template-columns: 0.24in 1fr;
+            align-items: start;
+            column-gap: 0.06in;
+            padding-top: 0.04in;
+            border-top: 0.9px solid var(--line);
+        }
+
+        .footer-logo {
+            width: 0.18in;
+            display: block;
+            margin-top: 0.01in;
+        }
+
+        .footer-copy {
+            margin: 0;
+            font-size: 6.8px;
+            line-height: 1.18;
+            color: var(--muted-ink);
+        }
+
         @page {
             size: Letter portrait;
             margin: 0.5in 0.25in;
         }
+
         @media print {
             html, body {
                 background-color: #FFFFFF !important;
             }
+
             body {
-                color: #000000;
                 -webkit-print-color-adjust: exact;
                 print-color-adjust: exact;
             }
-            .no-print {
-                display: none !important;
-            }
-            .sheet-shell {
+
+            .page-shell {
                 padding: 0 !important;
             }
-            .print-container {
+
+            .print-sheet {
                 border: none !important;
-                box-shadow: none !important;
                 border-radius: 0 !important;
-                width: 100% !important;
-                max-width: 8in !important;
-                margin: 0 auto !important;
-            }
-            .sheet-header {
-                padding: 0 0 12px !important;
-                background-color: transparent !important;
-                border-bottom: 2px solid #000000 !important;
-            }
-            .sheet-title {
-                font-size: 22px !important;
-                color: #000000 !important;
-            }
-            .sheet-subtitle {
-                color: #000000 !important;
-                font-size: 12px !important;
-            }
-            .sheet-body {
-                padding: 12px 0 8px !important;
-            }
-            .event-info,
-            .sheet-intro,
-            .sheet-header,
-            .sheet-footer {
-                break-inside: avoid;
-                page-break-inside: avoid;
-            }
-            .event-info {
-                padding-bottom: 10px !important;
-                font-size: 13px !important;
-            }
-            .event-info-label {
-                width: 60px !important;
-            }
-            .event-info-line {
-                height: 20px !important;
-                border-bottom: 1px solid #000000 !important;
-            }
-            .sheet-intro {
-                padding-bottom: 10px !important;
-                font-size: 12px !important;
-                line-height: 1.25 !important;
-                color: #000000 !important;
-            }
-            .col-name { width: 28% !important; }
-            .col-location { width: 27% !important; }
-            .col-contact { width: 29% !important; }
-            .col-pref { width: 8% !important; }
-            .signup-table {
-                font-size: 12px !important;
-                color: #000000 !important;
-            }
-            .signup-table th,
-            .signup-table .subhead th {
-                border-bottom-color: #000000 !important;
-                color: #000000 !important;
-            }
-            .signup-table th {
-                padding: 5px 6px 6px !important;
-            }
-            .signup-table .subhead th {
-                padding: 2px 6px 5px !important;
-            }
-            .entry-row td {
-                height: 38px !important;
-                padding: 0 5px !important;
-                border-bottom: 1px solid #000000 !important;
-            }
-            .checkbox {
-                width: 15px !important;
-                height: 15px !important;
-                border: 1.5px solid #000000 !important;
-                border-radius: 2px !important;
-            }
-            .sheet-footer {
-                padding: 8px 0 0 !important;
-                border-top: 1px solid #000000 !important;
-            }
-            .footer-copy {
-                font-size: 8px !important;
-                line-height: 1.25 !important;
-                color: #000000 !important;
-            }
-            .footer-logo-cell {
-                width: 36px !important;
-                padding-right: 8px !important;
-            }
-            .footer-logo {
-                width: 26px !important;
+                box-shadow: none !important;
             }
         }
     </style>
@@ -212,185 +337,69 @@
     <script src="/js/analytics.js" defer></script>
 </head>
 <body>
-    <!-- Main Container Table -->
-    <table id="main-content" border="0" cellpadding="0" cellspacing="0" width="100%">
-        <tr>
-            <td align="center" class="sheet-shell">
-                <!-- Centered Content Table -->
-                <table class="print-container" border="0" cellpadding="0" cellspacing="0" width="760">
+    <main class="page-shell">
+        <section class="print-sheet" id="main-content" aria-label="SEIU Local 083 sign-up sheet">
+            <header class="sheet-header">
+                <h1 class="sheet-title">Sign In, Get Involved, & Stay Updated!</h1>
+                <p class="sheet-subtitle">SEIU Local 083, Oregon State University</p>
+            </header>
 
-                    <!-- Header -->
-                    <tr>
-                        <td class="sheet-header">
-                           <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                               <tr>
-                                   <td align="center" valign="middle">
-                                        <h1 class="sheet-title">
-                                            Sign In, Get Involved, & Stay Updated!
-                                        </h1>
-                                        <p class="sheet-subtitle">SEIU Local 083, Oregon State University</p>
-                                   </td>
-                               </tr>
-                           </table>
-                        </td>
-                    </tr>
+            <section class="sheet-meta" aria-label="Event information">
+                <div class="meta-row">
+                    <span class="meta-label">Date:</span>
+                    <span class="meta-line" aria-hidden="true"></span>
+                </div>
+                <div class="meta-row">
+                    <span class="meta-label">Event:</span>
+                    <span class="meta-line" aria-hidden="true"></span>
+                </div>
+            </section>
 
-                    <!-- Main Content -->
-                    <tr>
-                        <td align="center" class="sheet-body">
-                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                                <!-- Event Info -->
-                                <tr>
-                                    <td align="left" class="event-info">
-                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                                            <tr>
-                                                <td class="event-info-label">Date:</td>
-                                                <td class="event-info-line">&nbsp;</td>
-                                            </tr>
-                                            <tr>
-                                                <td colspan="2" class="event-info-spacer"></td>
-                                            </tr>
-                                            <tr>
-                                                <td class="event-info-label">Event:</td>
-                                                <td class="event-info-line">&nbsp;</td>
-                                            </tr>
-                                        </table>
-                                    </td>
-                                </tr>
-                                <!-- Introductory Text -->
-                                <tr>
-                                    <td align="left" class="sheet-intro">
-                                        <p style="margin: 0;">Sign up to receive important news from our Sublocal as we prepare for bargaining.</p>
-                                    </td>
-                                </tr>
+            <section class="sheet-intro">
+                <p>Sign up to receive important news from our Sublocal as we prepare for bargaining.</p>
+            </section>
 
-                                <!-- Sign-up Table -->
-                                <tr>
-                                    <td>
-                                        <table class="signup-table" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                            <!-- Table Header -->
-                                            <thead>
-                                                <tr>
-                                                    <th class="col-name">Name</th>
-                                                    <th class="col-location">Building / Work Location</th>
-                                                    <th class="col-contact">Email or Phone</th>
-                                                    <th align="center" colspan="2">Contact Preference</th>
-                                                </tr>
-                                                <tr class="subhead">
-                                                   <th class="blank-head"></th>
-                                                   <th class="blank-head"></th>
-                                                   <th class="blank-head"></th>
-                                                   <th class="col-pref">Email</th>
-                                                   <th class="col-pref">SMS</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <!-- Repeat this row for each sign-up -->
-                                                <tr class="entry-row">
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td class="pref-cell"><div class="checkbox"></div></td>
-                                                    <td class="pref-cell"><div class="checkbox"></div></td>
-                                                </tr>
-                                                <!-- Repeat this row for each sign-up -->
-                                                <tr class="entry-row">
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td class="pref-cell"><div class="checkbox"></div></td>
-                                                    <td class="pref-cell"><div class="checkbox"></div></td>
-                                                </tr>
-                                                <tr class="entry-row">
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td class="pref-cell"><div class="checkbox"></div></td>
-                                                    <td class="pref-cell"><div class="checkbox"></div></td>
-                                                </tr>
-                                                <tr class="entry-row">
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td class="pref-cell"><div class="checkbox"></div></td>
-                                                    <td class="pref-cell"><div class="checkbox"></div></td>
-                                                </tr>
-                                                <tr class="entry-row">
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td class="pref-cell"><div class="checkbox"></div></td>
-                                                    <td class="pref-cell"><div class="checkbox"></div></td>
-                                                </tr>
-                                                <tr class="entry-row">
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td class="pref-cell"><div class="checkbox"></div></td>
-                                                    <td class="pref-cell"><div class="checkbox"></div></td>
-                                                </tr>
-                                                <tr class="entry-row">
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td class="pref-cell"><div class="checkbox"></div></td>
-                                                    <td class="pref-cell"><div class="checkbox"></div></td>
-                                                </tr>
-                                                <tr class="entry-row">
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td class="pref-cell"><div class="checkbox"></div></td>
-                                                    <td class="pref-cell"><div class="checkbox"></div></td>
-                                                </tr>
-                                                <tr class="entry-row">
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td class="pref-cell"><div class="checkbox"></div></td>
-                                                    <td class="pref-cell"><div class="checkbox"></div></td>
-                                                </tr>
-                                                <tr class="entry-row">
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td class="pref-cell"><div class="checkbox"></div></td>
-                                                    <td class="pref-cell"><div class="checkbox"></div></td>
-                                                </tr>
-                                                <tr class="entry-row">
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td class="pref-cell"><div class="checkbox"></div></td>
-                                                    <td class="pref-cell"><div class="checkbox"></div></td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </td>
-                                </tr>
-                            </table>
-                        </td>
-                    </tr>
-                    <!-- Footer Disclosure -->
-                    <tr>
-                        <td align="center" class="sheet-footer">
-                             <table class="footer-table" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                <tr>
-                                    <td align="left" valign="middle" class="footer-logo-cell">
-                                        <img class="footer-logo" src="/images/logo.png" alt="SEIU Logo" width="36" style="display: block;" decoding="async" height="36">
-                                    </td>
-                                    <td align="left" valign="middle">
-                                        <p class="footer-copy">
-                                            By providing your phone number, you agree to receive text messages from SEIU Local 083. Message and data rates may apply. Reply STOP to unsubscribe. By providing your email, you agree to receive emails from SEIU Local 083. You can unsubscribe at any time.
-                                        </p>
-                                    </td>
-                                </tr>
-                            </table>
-                        </td>
-                    </tr>
+            <section class="signup-grid" aria-label="Sign-up grid">
+                <table class="signup-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Building / Work Location</th>
+                            <th>Email or Phone</th>
+                            <th colspan="2" style="text-align: center;">Contact Preference</th>
+                        </tr>
+                        <tr class="subhead">
+                            <th class="blank-head"></th>
+                            <th class="blank-head"></th>
+                            <th class="blank-head"></th>
+                            <th>Email</th>
+                            <th>SMS</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td></td><td></td><td></td><td><div class="checkbox"></div></td><td><div class="checkbox"></div></td></tr>
+                        <tr><td></td><td></td><td></td><td><div class="checkbox"></div></td><td><div class="checkbox"></div></td></tr>
+                        <tr><td></td><td></td><td></td><td><div class="checkbox"></div></td><td><div class="checkbox"></div></td></tr>
+                        <tr><td></td><td></td><td></td><td><div class="checkbox"></div></td><td><div class="checkbox"></div></td></tr>
+                        <tr><td></td><td></td><td></td><td><div class="checkbox"></div></td><td><div class="checkbox"></div></td></tr>
+                        <tr><td></td><td></td><td></td><td><div class="checkbox"></div></td><td><div class="checkbox"></div></td></tr>
+                        <tr><td></td><td></td><td></td><td><div class="checkbox"></div></td><td><div class="checkbox"></div></td></tr>
+                        <tr><td></td><td></td><td></td><td><div class="checkbox"></div></td><td><div class="checkbox"></div></td></tr>
+                        <tr><td></td><td></td><td></td><td><div class="checkbox"></div></td><td><div class="checkbox"></div></td></tr>
+                        <tr><td></td><td></td><td></td><td><div class="checkbox"></div></td><td><div class="checkbox"></div></td></tr>
+                        <tr><td></td><td></td><td></td><td><div class="checkbox"></div></td><td><div class="checkbox"></div></td></tr>
+                        <tr><td></td><td></td><td></td><td><div class="checkbox"></div></td><td><div class="checkbox"></div></td></tr>
+                    </tbody>
                 </table>
-            </td>
-        </tr>
-    </table>
+            </section>
+
+            <footer class="sheet-footer">
+                <img class="footer-logo" src="/images/logo.png" alt="SEIU Logo" width="22" height="22" decoding="async">
+                <p class="footer-copy">
+                    By providing your phone number, you agree to receive text messages from SEIU Local 083. Message and data rates may apply. Reply STOP to unsubscribe. By providing your email, you agree to receive emails from SEIU Local 083. You can unsubscribe at any time.
+                </p>
+            </footer>
+        </section>
+    </main>
 </body>
 </html>

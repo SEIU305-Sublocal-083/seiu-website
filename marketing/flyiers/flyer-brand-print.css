@@ -323,3 +323,609 @@ p {
         display: none !important;
     }
 }
+
+:root {
+    --campaign-neon-yellow: #f7ff4d;
+    --campaign-neon-pink: #ff63c6;
+    --campaign-black: #111111;
+    --campaign-cut: rgba(17, 24, 39, 0.2);
+    --sheet-shadow: 0 18px 42px rgba(15, 23, 42, 0.18);
+}
+
+body.page-stage {
+    padding: 24px 16px 88px;
+    background:
+        radial-gradient(circle at top, rgba(124, 58, 237, 0.16), transparent 38%),
+        linear-gradient(180deg, #fbfafc 0%, #ede9fe 100%);
+}
+
+.skip-link {
+    position: absolute;
+    left: 16px;
+    top: 12px;
+    transform: translateY(-160%);
+    padding: 10px 14px;
+    border-radius: 10px;
+    background: #ffffff;
+    color: var(--brand-purple-dark);
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 12px 20px rgba(15, 23, 42, 0.16);
+    z-index: 20;
+}
+
+.skip-link:focus {
+    transform: translateY(0);
+}
+
+.print-stage-note {
+    max-width: 8.5in;
+    margin: 0 auto 16px;
+    padding: 12px 14px;
+    border: 1px solid var(--border-color);
+    background: rgba(255, 255, 255, 0.92);
+    color: var(--text-secondary);
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.letter-sheet {
+    width: 100%;
+    max-width: 8.5in;
+    margin: 0 auto;
+    background: #ffffff;
+    border: 1px solid rgba(17, 24, 39, 0.12);
+    box-shadow: var(--sheet-shadow);
+    overflow: hidden;
+}
+
+.letter-sheet--quarter {
+    aspect-ratio: 8.5 / 11;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+    background:
+        linear-gradient(to right,
+            transparent calc(50% - 0.5px),
+            var(--campaign-cut) calc(50% - 0.5px),
+            var(--campaign-cut) calc(50% + 0.5px),
+            transparent calc(50% + 0.5px)),
+        linear-gradient(to bottom,
+            transparent calc(50% - 0.5px),
+            var(--campaign-cut) calc(50% - 0.5px),
+            var(--campaign-cut) calc(50% + 0.5px),
+            transparent calc(50% + 0.5px)),
+        #ffffff;
+}
+
+.desk-drop-card {
+    position: relative;
+    height: 100%;
+    padding: 0.32in 0.28in 0.24in;
+    display: grid;
+    grid-template-rows: auto auto auto 1fr auto;
+    gap: 0.14in;
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.48) 0%, rgba(255, 255, 255, 0.18) 16%, rgba(255, 255, 255, 0) 16%),
+        repeating-linear-gradient(180deg, rgba(255, 255, 255, 0.42) 0, rgba(255, 255, 255, 0.42) 1px, transparent 1px, transparent 26px),
+        var(--campaign-paper, var(--campaign-neon-yellow));
+    color: var(--campaign-black);
+}
+
+.desk-drop-card::after {
+    content: "";
+    position: absolute;
+    inset: 0.12in;
+    border: 1px dashed rgba(17, 24, 39, 0.18);
+    pointer-events: none;
+}
+
+.desk-drop-meta {
+    display: grid;
+    gap: 7px;
+}
+
+.desk-drop-meta--tight {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 12px;
+}
+
+.desk-drop-line-row {
+    display: flex;
+    align-items: flex-end;
+    gap: 8px;
+}
+
+.desk-drop-label {
+    min-width: 44px;
+    color: rgba(17, 17, 17, 0.92);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.desk-drop-field {
+    flex: 1;
+    min-height: 20px;
+    border-bottom: 1.5px solid rgba(17, 17, 17, 0.72);
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.desk-drop-field--filled {
+    padding-bottom: 1px;
+}
+
+.desk-drop-title {
+    margin: 0;
+    font-size: 30px;
+    line-height: 0.96;
+    font-weight: 900;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+}
+
+.desk-drop-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px 10px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.desk-drop-list li {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 1.15;
+}
+
+.desk-drop-checkbox {
+    width: 13px;
+    height: 13px;
+    border: 1.6px solid rgba(17, 17, 17, 0.92);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 900;
+    line-height: 1;
+    flex-shrink: 0;
+    background: rgba(255, 255, 255, 0.66);
+}
+
+.desk-drop-message {
+    margin: 0;
+    padding-right: 0.05in;
+    font-family: "Caveat", "Comic Sans MS", cursive;
+    font-size: 28px;
+    line-height: 1.03;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+}
+
+.desk-drop-footer {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 0.92in;
+    gap: 12px;
+    align-items: end;
+}
+
+.desk-drop-details {
+    display: grid;
+    gap: 5px;
+}
+
+.desk-drop-detail {
+    font-size: 11px;
+    line-height: 1.2;
+    color: var(--campaign-black);
+}
+
+.desk-drop-detail strong {
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 9px;
+}
+
+.desk-drop-qr {
+    padding: 7px;
+    border: 1.5px solid rgba(17, 17, 17, 0.84);
+    background: rgba(255, 255, 255, 0.9);
+    text-align: center;
+}
+
+.desk-drop-qr img {
+    width: 74px;
+    height: 74px;
+    display: block;
+    margin: 0 auto 5px;
+}
+
+.desk-drop-qr span {
+    display: block;
+    font-size: 8px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--campaign-black);
+    font-weight: 800;
+}
+
+.desk-drop-panel {
+    padding: 10px 12px;
+    border: 1px solid rgba(17, 17, 17, 0.18);
+    background: rgba(255, 255, 255, 0.45);
+}
+
+.desk-drop-panel + .desk-drop-panel {
+    margin-top: 10px;
+}
+
+.desk-drop-panel-title {
+    margin: 0 0 8px;
+    font-size: 9px;
+    line-height: 1.2;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.desk-drop-list--action {
+    gap: 8px 12px;
+}
+
+.desk-drop-list--action li {
+    font-size: 10px;
+}
+
+.desk-drop-card--urgent {
+    gap: 0.12in;
+}
+
+.desk-drop-card--urgent .desk-drop-meta:last-of-type {
+    margin-bottom: 0.01in;
+}
+
+.desk-drop-card--urgent .desk-drop-message-wrap {
+    padding: 10px 12px 8px;
+    border: 1px solid rgba(17, 17, 17, 0.22);
+    background: rgba(255, 255, 255, 0.28);
+}
+
+.desk-drop-card--urgent .desk-drop-message {
+    padding-right: 0;
+    font-size: 22px;
+    line-height: 1.02;
+}
+
+.desk-drop-card--urgent .desk-drop-footer {
+    grid-template-columns: minmax(0, 1fr) 1.16in;
+    gap: 12px;
+    align-items: stretch;
+}
+
+.desk-drop-card--urgent .desk-drop-details {
+    padding: 10px 12px;
+    border: 1px solid rgba(17, 17, 17, 0.18);
+    background: rgba(255, 255, 255, 0.55);
+    align-content: center;
+}
+
+.desk-drop-card--urgent .desk-drop-qr {
+    display: grid;
+    align-content: center;
+    justify-items: center;
+    gap: 6px;
+    padding: 10px 8px;
+    border-width: 2px;
+    background: #ffffff;
+}
+
+.desk-drop-card--urgent .desk-drop-qr img {
+    width: 82px;
+    height: 82px;
+    margin: 0;
+}
+
+.desk-drop-card--urgent .desk-drop-qr span {
+    font-size: 8px;
+    line-height: 1.25;
+}
+
+.letter-sheet--buttons {
+    padding: 0.34in 0.52in 0.28in;
+    min-height: 11in;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    gap: 0.16in;
+}
+
+.wearable-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.wearable-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 10px;
+    border-radius: 999px;
+    background: var(--brand-purple-light);
+    color: var(--brand-purple-dark);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.wearable-header h1 {
+    margin-top: 10px;
+    font-size: 28px;
+    line-height: 1.06;
+}
+
+.wearable-header p {
+    margin-top: 6px;
+    max-width: 4.9in;
+    font-size: 14px;
+    line-height: 1.35;
+}
+
+.wearable-note {
+    margin-top: 8px;
+    display: inline-block;
+    padding: 6px 9px;
+    border: 1px solid var(--border-color);
+    background: #ffffff;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-secondary);
+}
+
+.wearable-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.34in 0.64in;
+    align-content: center;
+    justify-items: center;
+}
+
+.wearable-chip {
+    width: 100%;
+    max-width: 2.95in;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    padding: 0.3in;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    border: 3px solid currentColor;
+    box-sizing: border-box;
+}
+
+.wearable-chip--purple {
+    background: var(--brand-purple-dark);
+    color: #ffffff;
+    border-color: var(--brand-purple-dark);
+}
+
+.wearable-chip--yellow {
+    background: var(--campaign-neon-yellow);
+    color: #111111;
+    border-color: #111111;
+}
+
+.wearable-chip p {
+    margin: 0;
+    font-size: clamp(24px, 2.8vw, 34px);
+    line-height: 0.98;
+    font-weight: 900;
+    letter-spacing: -0.03em;
+}
+
+.wearable-chip .wearable-tight {
+    font-size: clamp(21px, 2.35vw, 30px);
+}
+
+.wearable-chip .wearable-compact {
+    font-size: clamp(18px, 2.05vw, 26px);
+}
+
+.wearable-footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    align-items: center;
+    font-size: 12px;
+    color: var(--text-secondary);
+}
+
+.wearable-footer strong {
+    color: var(--brand-dark);
+}
+
+@media (max-width: 900px) {
+    body.page-stage {
+        padding: 10px 8px 80px;
+    }
+
+    .print-stage-note {
+        font-size: 13px;
+    }
+
+    .desk-drop-card {
+        padding: 22px 18px 18px;
+        gap: 12px;
+    }
+
+    .desk-drop-title {
+        font-size: 24px;
+    }
+
+    .desk-drop-message {
+        font-size: 22px;
+    }
+
+    .desk-drop-label {
+        min-width: 38px;
+        font-size: 9px;
+    }
+
+    .desk-drop-field {
+        font-size: 11px;
+    }
+
+    .desk-drop-list {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+
+    .desk-drop-card--urgent .desk-drop-message {
+        font-size: 20px;
+    }
+
+    .desk-drop-card--urgent .desk-drop-qr {
+        max-width: 118px;
+    }
+
+    .desk-drop-footer {
+        grid-template-columns: 1fr;
+    }
+
+    .desk-drop-qr {
+        max-width: 100px;
+    }
+
+    .letter-sheet--buttons {
+        padding: 24px 16px 18px;
+        min-height: auto;
+    }
+
+    .wearable-header {
+        flex-direction: column;
+    }
+
+    .wearable-header h1 {
+        font-size: 24px;
+    }
+
+    .wearable-grid {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        gap: 14px;
+    }
+
+    .wearable-chip {
+        max-width: none;
+        padding: 18px;
+    }
+
+    .wearable-footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media print {
+    @page {
+        size: letter portrait;
+        margin: 0;
+    }
+
+    body.page-stage {
+        padding: 0;
+        background: #ffffff;
+    }
+
+    .print-stage-note {
+        display: none !important;
+    }
+
+    .letter-sheet {
+        width: 8.5in;
+        max-width: none;
+        min-height: 11in;
+        border: 0;
+        box-shadow: none;
+        margin: 0;
+    }
+
+    .letter-sheet--quarter {
+        height: 11in;
+        aspect-ratio: auto;
+        grid-template-columns: repeat(2, 4.25in);
+        grid-template-rows: repeat(2, 5.5in);
+    }
+
+    .desk-drop-card {
+        padding: 0.32in 0.28in 0.24in;
+    }
+
+    .desk-drop-title {
+        font-size: 28px;
+    }
+
+    .desk-drop-message {
+        font-size: 27px;
+    }
+
+    .desk-drop-field {
+        font-size: 11px;
+    }
+
+    .desk-drop-card--urgent .desk-drop-message {
+        font-size: 20px;
+        line-height: 1;
+    }
+
+    .desk-drop-card--urgent .desk-drop-footer {
+        grid-template-columns: minmax(0, 1fr) 1.06in;
+    }
+
+    .desk-drop-card--urgent .desk-drop-qr img {
+        width: 76px;
+        height: 76px;
+    }
+
+    .letter-sheet--buttons {
+        height: 11in;
+        padding: 0.28in 0.5in 0.24in;
+    }
+
+    .wearable-grid {
+        grid-template-columns: repeat(2, 2.25in);
+        grid-auto-rows: 2.25in;
+        justify-content: center;
+        gap: 0.32in 0.76in;
+    }
+
+    .wearable-chip {
+        width: 2.25in;
+        height: 2.25in;
+        max-width: none;
+        padding: 0.22in;
+    }
+
+    .wearable-chip p {
+        font-size: 0.41in;
+    }
+
+    .wearable-chip .wearable-tight {
+        font-size: 0.34in;
+    }
+
+    .wearable-chip .wearable-compact {
+        font-size: 0.3in;
+    }
+
+    .wearable-footer {
+        font-size: 11px;
+    }
+}
