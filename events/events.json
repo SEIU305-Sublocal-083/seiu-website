@@ -21,6 +21,16 @@
     "calendar_link": "/events/ical/2026-03-31-Rally-at-OSU.ics"
   },
   {
+    "date": "2026-04-01",
+    "time": "11:45 AM - 12:15 PM",
+    "title": "New Employee Orientation",
+    "description": "Employees within their first two months at OSU can attend this 30-minute Zoom orientation on paid time to learn about our union, workplace rights, and member resources.",
+    "type": "Orientation",
+    "url": "/events/2026-04-01-New-Employee-Orientation.html",
+    "featured": false,
+    "location_detail": "Online via Zoom"
+  },
+  {
     "date": "2026-02-12",
     "time": "1:15 PM",
     "title": "Bargaining Zoom Observation",

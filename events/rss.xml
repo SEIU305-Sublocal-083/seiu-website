@@ -5,7 +5,7 @@
     <link>https://www.local083.org</link>
     <description>Upcoming events from SEIU Local 503 at Oregon State University.</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 09 Mar 2026 19:10:08 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 20 Mar 2026 21:48:18 GMT</lastBuildDate>
     <atom:link href="https://www.local083.org/events/rss.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>CAT Meeting</title>
@@ -334,6 +334,14 @@
       <description>In-person bargaining sessions at OSU Corvallis. Day 2 of 2. | Date: 2026-03-31 | Time: All Day | Location: OSU Corvallis</description>
       <pubDate>Tue, 31 Mar 2026 00:00:00 GMT</pubDate>
       <category>Bargaining Session</category>
+    </item>
+    <item>
+      <title>New Employee Orientation</title>
+      <link>https://www.local083.org/events/2026-04-01-New-Employee-Orientation.html</link>
+      <guid isPermaLink="false">event:2026-04-01:New Employee Orientation</guid>
+      <description>Employees within their first two months at OSU can attend this 30-minute Zoom orientation on paid time to learn about our union, workplace rights, and member resources. | Date: 2026-04-01 | Time: 11:45 AM - 12:15 PM | Location: Online via Zoom</description>
+      <pubDate>Wed, 01 Apr 2026 00:00:00 GMT</pubDate>
+      <category>Orientation</category>
     </item>
     <item>
       <title>OSU Bargaining Sessions (Cascades)</title>
