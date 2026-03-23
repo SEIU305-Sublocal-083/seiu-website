@@ -15,6 +15,15 @@ The website uses a simple, flat-file structure. There is no complex build proces
 
 ## Adding and Updating Content
 
+### Email Campaigns
+
+Email HTML and campaign briefs live in `/marketing/email`.
+
+Use these docs when planning Mailchimp sends:
+
+*   `/marketing/email/mailchimp-segment-strategy.md`: Defines how to treat the broad list, `Engaged subscribers`, and `Disengaged subscribers`.
+*   `/marketing/email/mailchimp-campaign-brief-template.md`: Reusable template for writing segment-aware campaign briefs with distinct subject lines, CTAs, and metrics.
+
 ### Events
 
 To add a new event, you need to do three things:

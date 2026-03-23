@@ -1,0 +1,6 @@
+node_modules/
+.python-deps/
+.python39-deps/
+fonts/
+output/rendered/
+output/quicklook/
