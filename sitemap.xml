@@ -64,6 +64,21 @@
     <loc>https://www.local083.org/news.html</loc>
   </url>
   <url>
+    <loc>https://www.local083.org/slides/membership-meeting-template/node_modules/@mapbox/node-pre-gyp/lib/util/nw-pre-gyp/index.html</loc>
+  </url>
+  <url>
+    <loc>https://www.local083.org/slides/membership-meeting-template/node_modules/tslib/tslib.es6.html</loc>
+  </url>
+  <url>
+    <loc>https://www.local083.org/slides/membership-meeting-template/node_modules/tslib/tslib.html</loc>
+  </url>
+  <url>
+    <loc>https://www.local083.org/slides/membership-meeting-template/node_modules/mhchemparser/test/test-esm.html</loc>
+  </url>
+  <url>
+    <loc>https://www.local083.org/slides/membership-meeting-template/node_modules/mhchemparser/test/test-dist.html</loc>
+  </url>
+  <url>
     <loc>https://www.local083.org/resources.html</loc>
   </url>
   <url>
@@ -142,10 +157,19 @@
     <loc>https://www.local083.org/marketing/email/2026-04-01-New-Employee-Orientation-Day-Of.html</loc>
   </url>
   <url>
+    <loc>https://www.local083.org/marketing/email/2026-03-23-Rally-at-OSU-B.html</loc>
+  </url>
+  <url>
     <loc>https://www.local083.org/marketing/email/2026-03-11-Facilities-Membership-Meeting.html</loc>
   </url>
   <url>
+    <loc>https://www.local083.org/marketing/email/2026-04-01-Membership-Meeting-B.html</loc>
+  </url>
+  <url>
     <loc>https://www.local083.org/marketing/email/2026-03-31-Rally-Signup-Confirm.html</loc>
+  </url>
+  <url>
+    <loc>https://www.local083.org/marketing/email/2026-04-01-Membership-Meeting-A.html</loc>
   </url>
   <url>
     <loc>https://www.local083.org/marketing/email/2026-03-20-Bargaining-Observation-Aft.html</loc>
@@ -166,6 +190,9 @@
     <loc>https://www.local083.org/marketing/email/2026-03-12-Rally-at-OSU.html</loc>
   </url>
   <url>
+    <loc>https://www.local083.org/marketing/email/2026-03-23-Rally-at-OSU-A.html</loc>
+  </url>
+  <url>
     <loc>https://www.local083.org/marketing/email/2026-03-26-New-Employee-Orientation-B.html</loc>
   </url>
   <url>
@@ -173,6 +200,9 @@
   </url>
   <url>
     <loc>https://www.local083.org/marketing/2025-10-23-Bowling.html</loc>
+  </url>
+  <url>
+    <loc>https://www.local083.org/eps/index.html</loc>
   </url>
   <url>
     <loc>https://www.local083.org/leadership.html</loc>
