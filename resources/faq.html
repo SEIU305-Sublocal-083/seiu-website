@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <!-- Anti-FOUC (Flash of Unstyled Content) Fix -->
+    <style id="anti-fouc">html{visibility:hidden;opacity:0;}</style>
+    <script>
+    (function(){
+      var s = document.getElementById('anti-fouc');
+      var r = function(){
+        if(s){
+          s.remove();
+          document.documentElement.style.visibility='visible';
+          document.documentElement.style.opacity='1';
+        }
+      };
+      // Safety timeout in case of script error or slow load
+      setTimeout(r, 1500);
+
+      // Wait for DOMContentLoaded, then give a small buffer for Tailwind to parse
+      document.addEventListener('DOMContentLoaded', function(){
+        setTimeout(r, 100);
+      });
+    })();
+    </script>
+    <noscript>
+      <style>html{visibility:visible!important;opacity:1!important;}</style>
+    </noscript>
+    <!-- End Anti-FOUC Fix -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Frequently Asked Questions about SEIU Local 503 at Oregon State University. Find answers about dues, membership, and union representation.">
+    <meta name="author" content="SEIU Local 503 at OSU">
+    <title>FAQ - SEIU Local 503, OSU</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="/images/logo.png" type="image/png">
+    <link rel="apple-touch-icon" href="/images/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Lora:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --brand-purple-dark: #4C1D95; /* Deep Purple */
+            --brand-purple: #7C3AED;      /* Vibrant Purple */
+            --brand-purple-light: #EDE9FE; /* Lighter Lavender for high contrast */
+            --brand-dark: #111827;         /* Near-black for high contrast text/bg */
+            --brand-light: #F9FAFB;        /* Off-white Background */
+            --text-primary: #1F2937;
+            --text-secondary: #374151;     /* Darker secondary text for better contrast */
+            --border-color: #D1D5DB;
+        }
+
+        html {
+            scroll-padding-top: 80px; /* Offset for sticky header */
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--brand-light);
+            color: var(--text-primary);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Lora', serif;
+            color: var(--brand-purple-dark);
+        }
+
+        /* Accessibility: Clear focus indicators for all interactive elements */
+        a:focus-visible, button:focus-visible, details:focus-visible, input:focus-visible, textarea:focus-visible {
+            outline: 3px solid var(--brand-purple);
+            outline-offset: 2px;
+            border-radius: 4px;
+        }
+
+        .btn {
+            @apply font-bold py-3 px-6 rounded-lg transition-all duration-300 ease-in-out transform hover:scale-105;
+        }
+        .btn-primary {
+            @apply bg-gradient-to-r from-brand-purple to-violet-600 text-white shadow-md hover:shadow-lg;
+        }
+        .btn-outline {
+             @apply bg-white text-brand-purple border-2 border-brand-purple hover:bg-brand-purple hover:text-white;
+        }
+
+        /* Custom Tailwind config for our CSS variables */
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-purple-dark': 'var(--brand-purple-dark)',
+                        'brand-purple': 'var(--brand-purple)',
+                        'brand-purple-light': 'var(--brand-purple-light)',
+                        'brand-dark': 'var(--brand-dark)',
+                        'brand-light': 'var(--brand-light)',
+                        'text-primary': 'var(--text-primary)',
+                        'text-secondary': 'var(--text-secondary)',
+                        'border-color': 'var(--border-color)',
+                    }
+                }
+            }
+        }
+    </style>
+</head>
+<body class="bg-brand-light">
+
+    <!-- Header -->
+    <header class="bg-white/80 backdrop-blur-lg border-b border-border-color sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="/index.html" class="flex items-center space-x-2">
+                <span class="text-2xl font-bold text-brand-purple-dark">SEIU 503</span>
+                <span class="text-lg text-text-secondary hidden md:block">| Oregon State University</span>
+            </a>
+            <div class="hidden lg:flex space-x-8">
+                <a href="/about.html" class="text-text-secondary hover:text-brand-purple transition-colors">About</a>
+                <a href="/events.html" class="text-text-secondary hover:text-brand-purple transition-colors">Events</a>
+                <a href="/news.html" class="text-text-secondary hover:text-brand-purple transition-colors">News</a>
+                <a href="/resources.html" class="text-brand-purple font-bold">Resources & Rights</a>
+                <a href="/leadership.html" class="text-text-secondary hover:text-brand-purple transition-colors">Leadership</a>
+                <a href="/contact.html" class="text-text-secondary hover:text-brand-purple transition-colors">Contact</a>
+            </div>
+            <div class="lg:hidden">
+                <button id="mobile-menu-button" class="text-text-secondary hover:text-brand-purple focus:outline-none" aria-label="Open menu">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden absolute top-full left-0 w-full bg-white border-t border-border-color shadow-lg">
+            <a href="/about.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">About</a>
+            <a href="/events.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Events</a>
+            <a href="/news.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">News</a>
+            <a href="/resources.html" class="block text-center py-3 px-6 text-lg text-brand-purple bg-brand-purple-light font-semibold">Resources & Rights</a>
+            <a href="/leadership.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Leadership</a>
+            <a href="/contact.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Contact</a>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="bg-brand-purple-light border-b border-border-color">
+        <div class="container mx-auto px-6 py-16 text-center">
+            <h1 class="text-5xl font-bold">Frequently Asked Questions</h1>
+            <p class="mt-4 text-lg text-text-secondary max-w-3xl mx-auto">Common questions about membership, rights, and how our union works.</p>
+        </div>
+    </section>
+
+    <main class="container mx-auto px-6 py-16">
+        <div class="max-w-3xl mx-auto space-y-6">
+
+            <!-- FAQ Item 1 -->
+            <details class="group bg-white rounded-xl border border-border-color overflow-hidden hover:shadow-md transition-shadow">
+                <summary class="flex items-center justify-between p-6 cursor-pointer font-bold text-lg text-brand-purple-dark list-none">
+                    <span>What are union dues and how much are they?</span>
+                    <span class="transform transition-transform group-open:rotate-180">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-brand-purple" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+                    </span>
+                </summary>
+                <div class="px-6 pb-6 text-text-secondary leading-relaxed">
+                    <p>Union dues are the way we fund our activities, negotiations, and member support. For SEIU Local 503, dues are 1.7% of your gross monthly salary plus $2.75/month. This is capped at a maximum amount, so you never pay more than the cap regardless of how much you earn. Dues are tax-deductible in some situations, though you should consult a tax professional.</p>
+                </div>
+            </details>
+
+            <!-- FAQ Item 2 -->
+            <details class="group bg-white rounded-xl border border-border-color overflow-hidden hover:shadow-md transition-shadow">
+                <summary class="flex items-center justify-between p-6 cursor-pointer font-bold text-lg text-brand-purple-dark list-none">
+                    <span>What is the difference between a "member" and a "represented employee"?</span>
+                    <span class="transform transition-transform group-open:rotate-180">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-brand-purple" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+                    </span>
+                </summary>
+                <div class="px-6 pb-6 text-text-secondary leading-relaxed">
+                    <p>All classified staff in our bargaining unit are "represented employees," meaning the contract covers your wages, hours, and working conditions. However, only "members" who have signed a membership card have the right to vote on contracts, vote in union elections, and run for union office. Being a member gives you a voice in the decisions that affect your job.</p>
+                </div>
+            </details>
+
+            <!-- FAQ Item 3 -->
+            <details class="group bg-white rounded-xl border border-border-color overflow-hidden hover:shadow-md transition-shadow">
+                <summary class="flex items-center justify-between p-6 cursor-pointer font-bold text-lg text-brand-purple-dark list-none">
+                    <span>How do I contact my steward?</span>
+                    <span class="transform transition-transform group-open:rotate-180">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-brand-purple" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+                    </span>
+                </summary>
+                <div class="px-6 pb-6 text-text-secondary leading-relaxed">
+                    <p>You can find a list of stewards on our <a href="/resources/stewards.html" class="text-brand-purple underline hover:text-brand-purple-dark">Stewards page</a>. If you are unsure who to contact or have a general question, you can email the steward council at <a href="mailto:083stewards@seiu503.org" class="text-brand-purple underline hover:text-brand-purple-dark">083stewards@seiu503.org</a> and a steward will get back to you.</p>
+                </div>
+            </details>
+
+            <!-- FAQ Item 4 -->
+            <details class="group bg-white rounded-xl border border-border-color overflow-hidden hover:shadow-md transition-shadow">
+                <summary class="flex items-center justify-between p-6 cursor-pointer font-bold text-lg text-brand-purple-dark list-none">
+                    <span>Can I get in trouble for participating in union activities?</span>
+                    <span class="transform transition-transform group-open:rotate-180">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-brand-purple" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+                    </span>
+                </summary>
+                <div class="px-6 pb-6 text-text-secondary leading-relaxed">
+                    <p>No. It is illegal for an employer to retaliate against you for participating in protected union activities, such as attending meetings on your own time, wearing a union button, or filing a grievance. Your rights to organize and advocate for yourself are protected by both state law and our collective bargaining agreement.</p>
+                </div>
+            </details>
+
+             <!-- FAQ Item 5 -->
+            <details class="group bg-white rounded-xl border border-border-color overflow-hidden hover:shadow-md transition-shadow">
+                <summary class="flex items-center justify-between p-6 cursor-pointer font-bold text-lg text-brand-purple-dark list-none">
+                    <span>When and where are the union meetings?</span>
+                    <span class="transform transition-transform group-open:rotate-180">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-brand-purple" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+                    </span>
+                </summary>
+                <div class="px-6 pb-6 text-text-secondary leading-relaxed">
+                    <p>We hold General Membership Meetings (GMMs) regularly, usually once a month. Check our <a href="/events.html" class="text-brand-purple underline hover:text-brand-purple-dark">Events page</a> for the most up-to-date schedule. Meetings are typically held in person on campus with a Zoom option for those who cannot attend in person.</p>
+                </div>
+            </details>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+        <footer class="bg-brand-dark text-white pt-12 pb-8">
+        <div class="container mx-auto px-6">
+            <div class="mt-10 pt-8 border-t border-gray-700 text-center">
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Column 1: About the Union -->
+                <div class="md:col-span-2 lg:col-span-1">
+                    <div class="flex items-center mb-4">
+                        <img src="/images/logo.png" alt="SEIU 503 Logo" class="h-12 w-12 mr-3 bg-white p-1 rounded">
+                        <div>
+                            <h3 class="text-xl font-bold">SEIU Local 503</h3>
+                            <p class="text-gray-400 text-sm">Oregon State University</p>
+                        </div>
+                    </div>
+                    <p class="text-black leading-relaxed">Representing the classified employees of Oregon State University. We fight for fair contracts, defend workplace rights, and build a united community.</p>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="/about.html" class="text-black hover:text-gray-500 transition-colors">About Us</a></li>
+                        <li><a href="/events.html" class="text-black hover:text-gray-500 transition-colors">Events</a></li>
+                        <li><a href="/news.html" class="text-black hover:text-gray-500 transition-colors">News</a></li>
+                        <li><a href="/leadership.html" class="text-black hover:text-gray-500 transition-colors">Leadership</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Resources -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase"><a href="/resources.html" class="hover:text-gray-500 transition-colors">Resources</a></h4>
+                    <ul class="space-y-3">
+                        <li><a href="/resources.html" class="text-black hover:text-gray-500 transition-colors">Resources & Rights</a></li>
+                        <li><a href="/resources/seiu_cba_2022-2026.pdf" class="text-black hover:text-gray-500 transition-colors">Our Contract (PDF)</a></li>
+                        <li><a href="/resources/stewards.html" class="text-black hover:text-gray-500 transition-colors">Find a Steward</a></li>
+                        <li><a href="/resources/weingarten-rights.html" class="text-black hover:text-gray-500 transition-colors">Weingarten Rights</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Contact -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase"><a href="/contact.html" class="hover:text-gray-500 transition-colors">Contact Us</a></h4>
+                     <ul class="space-y-3 text-black">
+                        <li class="flex items-start">
+                            <span class="mr-2 mt-1">✉️</span> <!-- Mail icon -->
+                            <a href="mailto:083execteam@seiu503.org" class="hover:text-gray-500 transition-colors">083execteam@seiu503.org</a>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-2 mt-1">✉️</span> <!-- Mail icon -->
+                            <a href="mailto:083stewards@seiu503.org" class="hover:text-gray-500 transition-colors">083stewards@seiu503.org</a>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-2 mt-1">&#128205;</span> <!-- Pin icon -->
+                            <a href="https://maps.app.goo.gl/9TWRZ9F4wjVjacsZ7" class="hover:text-gray-500 transition-colors">Adams Hall, Room 109<br>Corvallis, OR 97331</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="mt-10 pt-8 border-t border-gray-700 text-center">
+                <p class="text-gray-400 text-sm">&copy; 2025 SEIU Local 503, Oregon State University. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // --- Mobile Menu Toggle ---
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = document.querySelectorAll('#mobile-menu a');
+
+        mobileMenuButton.addEventListener('click', () => {
+            const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+            mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenuButton.setAttribute('aria-expanded', 'false');
+            });
+        });
+    </script>
+</body>
+</html>
