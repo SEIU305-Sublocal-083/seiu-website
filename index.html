@@ -443,9 +443,9 @@
         </div>
     </footer>
     
-    <div id="bargaining-survey-modal" class="fixed inset-0 bg-black bg-opacity-60 backdrop-blur-sm flex items-center justify-center p-4 z-[100] hidden">
-        <div id="modal-content" role="dialog" aria-modal="true" aria-labelledby="bargaining-survey-modal-title" aria-describedby="bargaining-survey-modal-description" tabindex="-1" class="bg-white rounded-xl shadow-2xl max-w-lg w-full p-8 text-center relative transform transition-all duration-300 scale-95 opacity-0">
-            <button id="modal-close-button" class="absolute top-4 right-4 text-gray-400 hover:text-gray-800 transition-colors" aria-label="Close survey popup">
+    <div id="homepage-cta-modal" class="fixed inset-0 bg-black bg-opacity-60 backdrop-blur-sm flex items-center justify-center p-4 z-[100] hidden">
+        <div id="modal-content" role="dialog" aria-modal="true" aria-labelledby="homepage-cta-modal-title" aria-describedby="homepage-cta-modal-description" tabindex="-1" class="bg-white rounded-xl shadow-2xl max-w-lg w-full p-8 text-center relative transform transition-all duration-300 scale-95 opacity-0">
+            <button id="modal-close-button" class="absolute top-4 right-4 text-gray-400 hover:text-gray-800 transition-colors" aria-label="Close homepage popup">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
             </button>
     
@@ -460,13 +460,13 @@
                 </div>
             </div>
             <div id="modal-default-state">
-                <h2 id="bargaining-survey-modal-title" class="text-3xl font-bold text-brand-purple-dark mb-4">Get ready for the OSU rally</h2>
-                <p id="bargaining-survey-modal-description" class="text-text-secondary mb-6">
-                    Rally at OSU is Tuesday, March 31, 2026, from 12:00-1:00 PM at the MU Quad. Review event details and share with coworkers.
+                <h2 id="homepage-cta-modal-title" class="text-3xl font-bold text-brand-purple-dark mb-4">Save your spot for the April membership meeting</h2>
+                <p id="homepage-cta-modal-description" class="text-text-secondary mb-6">
+                    Join SEIU Local 083 on Thursday, April 16, 2026, from noon to 1 p.m. in MU 211. RSVP through the new form so we can plan food and send the calendar invite.
                 </p>
                 <div class="space-y-3 flex flex-col items-center">
-                    <a href="/events/2026-03-31-Rally-at-OSU.html" class="btn btn-secondary w-full">View Rally Details</a>
-                    <a href="/resources/zoom-backgrounds.html" class="btn btn-secondary w-full">Get Zoom Backgrounds</a>
+                    <a href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=4QVtzl48Yk2HqExKJxPBE4-lL5AFC2BMuMKwh1E-Ln9UREs3RjIzOVU5STAxSEs2REhVUUM1NU4xUi4u" class="btn btn-secondary w-full" target="_blank" rel="noopener noreferrer" data-ph-event="cta_click" data-ph-label="Modal RSVP Membership Meeting">RSVP for April 16</a>
+                    <a href="/events.html" class="btn btn-outline w-full" data-ph-event="cta_click" data-ph-label="Modal View Events">View Upcoming Events</a>
                 </div>
             </div>
         </div>
@@ -503,8 +503,8 @@
                 });
             });
 
-            // --- Bargaining Survey Modal Logic ---
-            const surveyModal = document.getElementById('bargaining-survey-modal');
+            // --- Homepage CTA Modal Logic ---
+            const surveyModal = document.getElementById('homepage-cta-modal');
             const modalContent = document.getElementById('modal-content');
             const closeButton = document.getElementById('modal-close-button');
             const modalLiveState = document.getElementById('modal-live-state');
@@ -514,8 +514,8 @@
             if (modalContent && modalLiveState && modalDefaultState) {
                 modalLiveState.classList.toggle('hidden', !isLiveBargainingMode);
                 modalDefaultState.classList.toggle('hidden', isLiveBargainingMode);
-                modalContent.setAttribute('aria-labelledby', isLiveBargainingMode ? 'bargaining-live-modal-title' : 'bargaining-survey-modal-title');
-                modalContent.setAttribute('aria-describedby', isLiveBargainingMode ? 'bargaining-live-modal-description' : 'bargaining-survey-modal-description');
+                modalContent.setAttribute('aria-labelledby', isLiveBargainingMode ? 'bargaining-live-modal-title' : 'homepage-cta-modal-title');
+                modalContent.setAttribute('aria-describedby', isLiveBargainingMode ? 'bargaining-live-modal-description' : 'homepage-cta-modal-description');
             }
             
             // Function to open the modal with a smooth animation
@@ -538,9 +538,9 @@
             };
 
             // Check sessionStorage to show the modal only once per session
-            if (!sessionStorage.getItem('bargainingSurveyModalShown')) {
+            if (!sessionStorage.getItem('homepageCtaModalShown')) {
                 setTimeout(openModal, 1500); // Show modal after 1.5 seconds
-                sessionStorage.setItem('bargainingSurveyModalShown', 'true');
+                sessionStorage.setItem('homepageCtaModalShown', 'true');
             }
 
             // --- Event listeners to close the modal ---

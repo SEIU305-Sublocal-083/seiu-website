@@ -31,6 +31,16 @@
     "location_detail": "Online via Zoom"
   },
   {
+    "date": "2026-04-16",
+    "time": "12:00 PM - 1:00 PM",
+    "title": "Membership Meeting",
+    "description": "Join SEIU Local 083 for our next membership meeting in MU 211. RSVP through the new form so we can plan food, track in-person and virtual attendance, and send the calendar invite.",
+    "type": "Membership Meeting",
+    "url": "/events/2026-04-16-Membership-Meeting.html",
+    "featured": false,
+    "location_detail": "MU 211"
+  },
+  {
     "date": "2026-02-12",
     "time": "1:15 PM",
     "title": "Bargaining Zoom Observation",

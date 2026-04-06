@@ -1,7 +1,7 @@
-# March 24, 2026 Rally Signup Campaign Brief
+# March 24, 2026 Rally Hardship Leave Campaign Brief
 
 ## Core Campaign Details
-- Campaign name: Rally at OSU signup push
+- Campaign name: Rally at OSU Hardship Leave push
 - Send date: Tuesday, March 24, 2026
 - Event date: Tuesday, March 31, 2026
 - Event time: Noon to 1 p.m.
@@ -9,89 +9,82 @@
 - Primary goal: drive rally signups one week out
 - Primary CTA: `https://www.local083.org/rally`
 - Success metric: signup clicks and completed signups from the rally page
-- Main message: this is a concrete turnout push, not just an event announcement
+- Main message: management has proposed eliminating Hardship Leave, and the March 31 rally is how we show opposition
+
+## Send Grid
+- March 24, 2026: `marketing/email/2026-03-24-Rally-at-OSU-Engaged.html`
+  Mobilization version for `Engaged subscribers`. Hardship Leave opposition plus recruit-one-coworker framing.
+- March 24, 2026: `marketing/email/2026-03-24-Rally-at-OSU-A.html`
+  Non-engaged version for everyone outside the engaged segment, including colder and disengaged subscribers. Firm but non-accusatory disagreement framing.
 
 ## Recommended Strategy
-- Lead with the date and time in the subject line so the send feels immediate and concrete.
-- Make the email about signing up, not just attending.
-- Keep the body copy short and pressure-forward:
-  sign up now, wear purple, bring a coworker, help fill the quad.
-- Use the broad member list for the standard signup push.
-- Use `Engaged subscribers` for a stronger turnout ask with a recruit-one-coworker message.
-- Use `Disengaged subscribers` for a simplified version with one reason to care and one button.
+- Anchor both emails on one documented issue:
+  management has proposed eliminating Hardship Leave.
+- Make the rally the practical response, not a generic bargaining support action.
+- Keep the body copy short and factual.
+- Use `Engaged subscribers` for the stronger turnout ask with a recruit-one-coworker message.
+- Use one non-engaged email for everyone outside the engaged segment, including colder and disengaged subscribers.
+- Keep the non-engaged version firm enough to drive action, but do not accuse readers that being quiet means they agree.
 
 ## Segment Versions
 
-### Broad member list
+### Non-engaged version
+- Audience: everyone outside `Engaged subscribers`, including colder and disengaged subscribers
 - Purpose: inform and convert
-- Angle: the rally is next Tuesday and we need members to sign up now so we can build turnout
-- Primary CTA button: `Sign up for the rally`
-- Secondary ask: wear purple and forward the signup link to a coworker
+- Angle: management is proposing to eliminate Hardship Leave; if you disagree, now is the time to sign up and show it
+- Primary CTA button: `Sign up to show you disagree`
+- Secondary ask: wear purple on March 31
 
 #### Subject line options
-- `SEIU Rally: March 31, Noon to 1 p.m. | Sign up now`
-- `March 31 rally at OSU: Sign up today`
-- `Next Tuesday: SEIU rally at the MU Quad | Sign up`
+- `Management is pushing to eliminate Hardship Leave`
+- `SEIU Rally: March 31, Noon to 1 p.m. | If you disagree, sign up`
+- `Hardship Leave is on the line. Show up March 31.`
 
 #### Preheader options
-- Sign up now to help us build a visible crowd at the MU Quad while bargaining is happening on campus.
-- Add your name today, wear purple, and help us bring a strong crowd next Tuesday.
+- If you do not agree with management's proposal, sign up now and join us at the MU Quad next Tuesday.
+- Hardship Leave is a safety-net benefit our union fought to win. Show management you do not want it taken away.
 
 ### Engaged subscribers
 - Purpose: mobilize and recruit
-- Angle: help us pack the quad and move one more coworker
-- Primary CTA button: `Help fill the quad`
+- Angle: management wants to eliminate Hardship Leave, and turnout is how we show clear opposition
+- Primary CTA button: `Show management no`
 - Secondary ask: bring one coworker or forward the signup link today
 
 #### Subject line options
-- `SEIU Rally: March 31, Noon to 1 p.m. | Help fill the quad`
-- `March 31 rally: Sign up and bring one coworker`
-- `We need a crowd OSU will notice on March 31`
+- `Management wants to eliminate Hardship Leave. Show up March 31.`
+- `SEIU Rally: March 31, Noon to 1 p.m. | Hands off Hardship Leave`
+- `They want to cut Hardship Leave. Help fill the quad.`
 
 #### Preheader options
-- Sign up today, wear purple, and help us bring one more coworker to the MU Quad next Tuesday.
-- A big signup list helps us organize harder and show real strength while bargaining is underway.
-
-### Disengaged subscribers
-- Purpose: reactivate with a simple, relevant ask
-- Angle: one important union event next week and one easy action today
-- Primary CTA button: `See rally details`
-- Secondary ask: none
-
-#### Subject line options
-- `SEIU Rally: March 31, Noon to 1 p.m.`
-- `One important union event next week`
-- `March 31 at OSU: rally details and signup`
-
-#### Preheader options
-- One important event next week: see the details and sign up if you can join us.
-- Join us at the MU Quad next Tuesday and show support for our bargaining campaign.
+- Sign up now, wear purple, and bring one coworker to tell management hands off Hardship Leave.
+- Show up March 31 with one coworker and help make opposition to this proposal impossible to miss.
 
 ## Copy Direction
 - Keep the email body short enough that the CTA is visible near the top.
 - Repeat the signup link once in the body below the main button.
+- Use only documented claims from the Hardship Leave bargaining update:
+  management has proposed eliminating Hardship Leave;
+  management says the benefit is no longer necessary because of FMLA and Paid Leave Oregon;
+  our union strongly disagrees.
 - Use concrete action language:
-  `Sign up now`, `Help fill the quad`, `Bring one coworker`, `Wear purple`.
-- Do not over-explain bargaining in this send. The message is turnout and visible support.
+  `Show management no`, `Sign up to show you disagree`, `Bring one coworker`, `Wear purple`.
 - Include the practical details in a compact block:
   Tuesday, March 31, 2026; noon to 1 p.m.; MU Quad.
+- Do not claim broader table issues that are not documented in the repo.
 
 ## Recommended Default Package
-- Broad member list default subject: `SEIU Rally: March 31, Noon to 1 p.m. | Sign up now`
-- Broad member list default preheader: `Sign up now to help us build a visible crowd at the MU Quad while bargaining is happening on campus.`
-- Engaged subscribers default subject: `SEIU Rally: March 31, Noon to 1 p.m. | Help fill the quad`
-- Engaged subscribers default preheader: `Sign up today, wear purple, and help us bring one more coworker to the MU Quad next Tuesday.`
-- Disengaged subscribers default subject: `SEIU Rally: March 31, Noon to 1 p.m.`
-- Disengaged subscribers default preheader: `One important event next week: see the details and sign up if you can join us.`
+- Non-engaged default subject: `Management is pushing to eliminate Hardship Leave`
+- Non-engaged default preheader: `If you do not agree with management's proposal, sign up now and join us at the MU Quad next Tuesday.`
+- Engaged subscribers default subject: `Management wants to eliminate Hardship Leave. Show up March 31.`
+- Engaged subscribers default preheader: `Sign up now, wear purple, and bring one coworker to tell management hands off Hardship Leave.`
 
 ## Measurement Rules
-- Broad member list: judge performance by click rate to the rally signup page.
+- Non-engaged version: judge performance by click rate to the rally signup page, with unsubscribe rate and spam complaints monitored because the pool includes disengaged subscribers.
 - Engaged subscribers: judge performance by click rate and any lift in signups after the mobilization version.
-- Disengaged subscribers: judge performance by click rate, unsubscribe rate, and spam complaints.
 - If Mailchimp reporting is delayed, use the default package above and keep the CTA button text aligned to segment intent.
 
 ## Follow-Up Recommendation
-- On Thursday, March 26, 2026, resend the rally email to non-openers with a tighter urgency subject line.
+- On Thursday, March 26, 2026, resend the non-engaged email to non-openers with a tighter urgency subject line.
 - For `Engaged subscribers`, follow with a short reminder on Monday, March 30, 2026:
-  `Rally tomorrow: sign up and bring one coworker`
-- For `Disengaged subscribers`, do not send more than one follow-up unless the first send shows acceptable unsubscribe and complaint rates.
+  `Rally tomorrow: hands off Hardship Leave`
+- Because the non-engaged pool includes disengaged subscribers, do not send more than one extra follow-up to that audience unless unsubscribe and complaint rates stay acceptable.
