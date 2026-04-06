@@ -5,7 +5,7 @@
     <link>https://www.local083.org</link>
     <description>Combined news and event updates from SEIU Local 503 at Oregon State University.</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 23 Mar 2026 17:18:05 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 06 Apr 2026 15:38:55 GMT</lastBuildDate>
     <atom:link href="https://www.local083.org/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>[Event] Purple Up Day (SOU)</title>
@@ -30,6 +30,14 @@
       <description>In-person bargaining sessions at OSU–Cascades. Dates: April 23–24. | Date: 2026-04-23 | Time: All Day | Location: OSU–Cascades (Bend)</description>
       <pubDate>Thu, 23 Apr 2026 00:00:00 GMT</pubDate>
       <category>Bargaining Session</category>
+    </item>
+    <item>
+      <title>[Event] Membership Meeting</title>
+      <link>https://www.local083.org/events/2026-04-16-Membership-Meeting.html</link>
+      <guid isPermaLink="false">event:2026-04-16:Membership Meeting:combined</guid>
+      <description>Join SEIU Local 083 for our next membership meeting in MU 211. RSVP through the new form so we can plan food, track in-person and virtual attendance, and send the calendar invite. | Date: 2026-04-16 | Time: 12:00 PM - 1:00 PM | Location: MU 211</description>
+      <pubDate>Thu, 16 Apr 2026 00:00:00 GMT</pubDate>
+      <category>Membership Meeting</category>
     </item>
     <item>
       <title>[Event] New Employee Orientation</title>

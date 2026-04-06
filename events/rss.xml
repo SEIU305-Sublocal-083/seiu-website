@@ -5,7 +5,7 @@
     <link>https://www.local083.org</link>
     <description>Upcoming events from SEIU Local 503 at Oregon State University.</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 23 Mar 2026 17:18:05 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 06 Apr 2026 15:38:55 GMT</lastBuildDate>
     <atom:link href="https://www.local083.org/events/rss.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>CAT Meeting</title>
@@ -342,6 +342,14 @@
       <description>Employees within their first two months at OSU can attend this 30-minute Zoom orientation on paid time to learn about our union, workplace rights, and member resources. | Date: 2026-04-01 | Time: 11:45 AM - 12:15 PM | Location: Online via Zoom</description>
       <pubDate>Wed, 01 Apr 2026 00:00:00 GMT</pubDate>
       <category>Orientation</category>
+    </item>
+    <item>
+      <title>Membership Meeting</title>
+      <link>https://www.local083.org/events/2026-04-16-Membership-Meeting.html</link>
+      <guid isPermaLink="false">event:2026-04-16:Membership Meeting</guid>
+      <description>Join SEIU Local 083 for our next membership meeting in MU 211. RSVP through the new form so we can plan food, track in-person and virtual attendance, and send the calendar invite. | Date: 2026-04-16 | Time: 12:00 PM - 1:00 PM | Location: MU 211</description>
+      <pubDate>Thu, 16 Apr 2026 00:00:00 GMT</pubDate>
+      <category>Membership Meeting</category>
     </item>
     <item>
       <title>OSU Bargaining Sessions (Cascades)</title>
