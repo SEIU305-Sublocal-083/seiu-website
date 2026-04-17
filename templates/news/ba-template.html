@@ -6,8 +6,7 @@
     <meta name="description" content="Bargaining Update: Progress on key issues as negotiations with OSU management continue.">
     <meta name="author" content="SEIU Local 503 at OSU">
     <title>Bargaining Update: Tentative Agreement Reached! - SEIU Local 503, OSU</title>
-    <style>html{visibility:hidden;}html.tw-ready{visibility:visible;}</style>
-    <script src="https://cdn.tailwindcss.com" onload="document.documentElement.classList.add('tw-ready')"></script>
+    <script data-cfasync="false" src="https://cdn.tailwindcss.com"></script>
     <link rel="icon" href="/images/logo.png" type="image/png">
     <link rel="apple-touch-icon" href="/images/logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -49,20 +48,106 @@
             border-radius: 4px;
         }
         
-        .btn {
-            @apply font-bold py-3 px-6 rounded-lg transition-all duration-300 ease-in-out transform hover:scale-105;
-        }
-        .btn-primary {
-            @apply bg-gradient-to-r from-brand-purple to-violet-600 text-white shadow-md hover:shadow-lg;
-        }
-        .btn-secondary {
-            @apply bg-brand-dark text-white hover:bg-black;
-        }
-        .btn-outline {
-             @apply bg-white text-brand-purple border-2 border-brand-purple hover:bg-brand-purple hover:text-white;
+        main {
+            max-width: 80rem;
+            margin: 0 auto;
+            padding: 4rem 1.5rem;
         }
 
-        /* Custom Tailwind config for our CSS variables */
+        article {
+            max-width: 56rem;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border: 1px solid var(--border-color);
+            border-radius: 0.75rem;
+            overflow: hidden;
+        }
+
+        article > header {
+            padding: 0 0 2rem;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid var(--border-color);
+            text-align: center;
+        }
+
+        article img {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 0.5rem;
+        }
+
+        .prose > * + * {
+            margin-top: 1.25rem;
+        }
+
+        .prose h1,
+        .prose h2,
+        .prose h3,
+        .prose h4,
+        .prose h5,
+        .prose h6 {
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .prose ul,
+        .prose ol {
+            padding-left: 1.5rem;
+        }
+
+        .prose li + li {
+            margin-top: 0.5rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-1px);
+        }
+
+        .btn-primary {
+            background: linear-gradient(90deg, var(--brand-purple) 0%, #7c3aed 100%);
+            color: #ffffff;
+            box-shadow: 0 4px 14px rgba(124, 58, 237, 0.2);
+        }
+
+        .btn-secondary {
+            background-color: var(--brand-dark);
+            color: #ffffff;
+        }
+
+        .btn-outline {
+            background-color: #ffffff;
+            color: var(--brand-purple);
+            border: 2px solid var(--brand-purple);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--brand-purple);
+            color: #ffffff;
+        }
+
+        @media (min-width: 768px) {
+            article {
+                padding: 3rem;
+            }
+        }
+
+        @media (max-width: 767px) {
+            article {
+                padding: 2rem;
+            }
+        }
+    </style>
+    <script data-cfasync="false">
         tailwind.config = {
             theme: {
                 extend: {
@@ -74,12 +159,12 @@
                         'brand-light': 'var(--brand-light)',
                         'text-primary': 'var(--text-primary)',
                         'text-secondary': 'var(--text-secondary)',
-                        'border-color': 'var(--border-color)',
+                        'border-color': 'var(--border-color)'
                     }
                 }
             }
-        }
-    </style>
+        };
+    </script>
     <!-- SEO META START -->
     <!-- REQUIRED BEFORE PUBLISH:
          1) Replace template title/description/URLs with final production page values.
