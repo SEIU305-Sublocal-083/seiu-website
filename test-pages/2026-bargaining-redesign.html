@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Draft redesign concept for the SEIU Local 503 OSU bargaining hub.">
+    <meta name="author" content="SEIU Local 503 at OSU">
+    <title>2026 Bargaining Redesign - SEIU Local 503 at OSU</title>
+    <link rel="icon" href="/images/logo.png" type="image/png">
+    <link rel="apple-touch-icon" href="/images/logo.png">
+    <script>
+        window.tailwind = window.tailwind || {};
+        window.tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-purple-dark': 'var(--brand-purple-dark)',
+                        'brand-purple': 'var(--brand-purple)',
+                        'brand-purple-light': 'var(--brand-purple-light)',
+                        'brand-dark': 'var(--brand-dark)',
+                        'brand-light': 'var(--brand-light)',
+                        'text-primary': 'var(--text-primary)',
+                        'text-secondary': 'var(--text-secondary)',
+                        'border-color': 'var(--border-color)',
+                    }
+                }
+            }
+        };
+    </script>
+    <style>html{visibility:hidden;}html.tw-ready{visibility:visible;}</style>
+    <script src="https://cdn.tailwindcss.com" onload="document.documentElement.classList.add('tw-ready')"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800;900&family=Lora:wght@400;500;700&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --brand-purple-dark: #4C1D95;
+            --brand-purple: #7C3AED;
+            --brand-purple-light: #EDE9FE;
+            --brand-dark: #111827;
+            --brand-light: #F9FAFB;
+            --text-primary: #1F2937;
+            --text-secondary: #374151;
+            --border-color: #D1D5DB;
+            --campaign-purple: #3b168a;
+            --campaign-purple-dark: #2b0b68;
+            --campaign-yellow: #ffcc14;
+            --campaign-cream: #fffaf2;
+        }
+
+        html {
+            scroll-padding-top: 80px;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #ffffff;
+            color: var(--text-primary);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            color: var(--campaign-purple-dark);
+        }
+
+        a:focus-visible, button:focus-visible, details:focus-visible, input:focus-visible, textarea:focus-visible {
+            outline: 3px solid var(--brand-purple);
+            outline-offset: 2px;
+            border-radius: 4px;
+        }
+
+        .text-brand-purple-dark { color: var(--brand-purple-dark) !important; }
+        .text-brand-purple { color: var(--brand-purple) !important; }
+        .text-text-primary { color: var(--text-primary) !important; }
+        .text-text-secondary { color: var(--text-secondary) !important; }
+        .bg-brand-light { background-color: var(--brand-light) !important; }
+        .bg-brand-purple-light { background-color: var(--brand-purple-light) !important; }
+        .border-border-color { border-color: var(--border-color) !important; }
+        .hover\:text-brand-purple:hover { color: var(--brand-purple) !important; }
+        .hover\:bg-brand-purple-light:hover { background-color: var(--brand-purple-light) !important; }
+
+        .campaign-page {
+            background:
+                radial-gradient(circle at 18% 8%, rgba(255, 204, 20, 0.12), transparent 22rem),
+                linear-gradient(180deg, #ffffff 0%, #ffffff 54%, #fbfbfd 100%);
+            overflow: hidden;
+        }
+
+        .bargaining-hero {
+            position: relative;
+            min-height: 520px;
+            background: #ffffff;
+            border-bottom: 1px solid rgba(209, 213, 219, 0.9);
+            overflow: hidden;
+        }
+
+        .bargaining-hero__grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1.04fr) minmax(500px, 0.96fr);
+            min-height: 520px;
+        }
+
+        .bargaining-hero__copy {
+            position: relative;
+            z-index: 2;
+            padding: clamp(2.25rem, 5vw, 4rem) clamp(1.5rem, 4vw, 4.5rem) 2.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            max-width: 760px;
+        }
+
+        .hero-title {
+            margin: 0;
+            max-width: 760px;
+            font-family: 'Anton', 'Inter', sans-serif;
+            font-size: clamp(3.75rem, 6.45vw, 6.6rem);
+            line-height: 0.88;
+            letter-spacing: 0;
+            color: var(--campaign-purple-dark);
+            text-transform: uppercase;
+        }
+
+        .hero-title__script {
+            display: block;
+            margin-top: 0.55rem;
+            font-family: 'Permanent Marker', 'Inter', sans-serif;
+            font-size: clamp(2.85rem, 5.1vw, 5.1rem);
+            line-height: 0.92;
+            color: var(--campaign-purple-dark);
+            text-transform: uppercase;
+        }
+
+        .hero-brushline {
+            position: relative;
+            width: min(100%, 650px);
+            height: 18px;
+            margin: 0.75rem 0 1.35rem;
+        }
+
+        .hero-brushline::before,
+        .hero-brushline::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            border-radius: 999px;
+            background: var(--campaign-yellow);
+            transform-origin: left center;
+        }
+
+        .hero-brushline::before {
+            top: 4px;
+            height: 10px;
+            transform: skewX(-18deg);
+        }
+
+        .hero-brushline::after {
+            top: 12px;
+            right: 22%;
+            height: 4px;
+            opacity: 0.88;
+            transform: skewX(-25deg);
+        }
+
+        .hero-copy {
+            max-width: 650px;
+            color: #171717;
+            font-size: clamp(1.18rem, 1.5vw, 1.5rem);
+            line-height: 1.32;
+            letter-spacing: 0;
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1.55rem;
+        }
+
+        .campaign-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.7rem;
+            min-height: 3.35rem;
+            padding: 0.9rem 1.45rem;
+            border: 2px solid var(--campaign-purple-dark);
+            border-radius: 0.28rem;
+            font-weight: 900;
+            line-height: 1;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: transform 170ms ease, box-shadow 170ms ease, background 170ms ease, color 170ms ease;
+        }
+
+        .campaign-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 13px 26px rgba(43, 11, 104, 0.2);
+        }
+
+        .campaign-btn--primary {
+            background: linear-gradient(135deg, var(--campaign-purple-dark), var(--campaign-purple));
+            color: var(--campaign-yellow);
+        }
+
+        .campaign-btn--secondary {
+            background: #ffffff;
+            color: var(--campaign-purple-dark);
+        }
+
+        .campaign-btn svg {
+            width: 1.15rem;
+            height: 1.15rem;
+            stroke-width: 3;
+        }
+
+        .bargaining-hero__visual {
+            position: relative;
+            min-height: 520px;
+            isolation: isolate;
+            background: var(--campaign-purple-dark);
+        }
+
+        .bargaining-hero__visual::before {
+            content: "";
+            position: absolute;
+            z-index: 2;
+            inset: -20% auto -20% -168px;
+            width: 290px;
+            background:
+                radial-gradient(ellipse at center, transparent 0 50%, rgba(255, 204, 20, 0.98) 51% 55%, transparent 56%),
+                radial-gradient(ellipse at center, transparent 0 63%, rgba(255, 204, 20, 0.92) 64% 67%, transparent 68%);
+            border-radius: 50%;
+            filter: drop-shadow(20px 0 0 rgba(255, 250, 242, 0.96));
+            transform: rotate(-7deg);
+            opacity: 0.98;
+        }
+
+        .bargaining-hero__visual::after {
+            content: "";
+            position: absolute;
+            z-index: 1;
+            inset: 0 auto 0 -80px;
+            width: 170px;
+            background: #ffffff;
+            clip-path: polygon(0 0, 54% 0, 100% 50%, 54% 100%, 0 100%);
+        }
+
+        .hero-photo {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: 58% 47%;
+            filter: saturate(1.08) contrast(1.03);
+        }
+
+        .photo-scrim {
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            background: linear-gradient(90deg, rgba(59, 22, 138, 0.08), transparent 34%, rgba(43, 11, 104, 0.08));
+        }
+
+        .picket-sign {
+            position: absolute;
+            z-index: 4;
+            top: clamp(2.75rem, 6vw, 4.3rem);
+            right: clamp(1.4rem, 3vw, 3.5rem);
+            width: min(38vw, 360px);
+            min-width: 260px;
+            padding: 1.75rem 1.55rem 1.55rem;
+            color: #ffffff;
+            background:
+                linear-gradient(135deg, rgba(255, 255, 255, 0.06), transparent 34%),
+                var(--campaign-purple);
+            box-shadow: 0 24px 48px rgba(16, 8, 38, 0.32);
+            clip-path: polygon(0 8%, 100% 0, 96% 92%, 4% 100%);
+            transform: rotate(-3deg);
+        }
+
+        .picket-sign::after {
+            content: "";
+            position: absolute;
+            left: 46%;
+            top: 96%;
+            width: 18px;
+            height: 170px;
+            background: linear-gradient(90deg, #9c6c39, #d4a05d 55%, #8a5c2f);
+            transform: rotate(5deg);
+            transform-origin: top center;
+            z-index: -1;
+            box-shadow: 8px 12px 16px rgba(0, 0, 0, 0.22);
+        }
+
+        .picket-sign__text {
+            display: block;
+            font-family: 'Permanent Marker', 'Inter', sans-serif;
+            font-size: clamp(2.05rem, 3.1vw, 3.35rem);
+            line-height: 1.03;
+            text-transform: uppercase;
+            letter-spacing: 0;
+            text-shadow: 0 2px 0 rgba(0, 0, 0, 0.16);
+        }
+
+        .picket-sign__text strong {
+            color: var(--campaign-yellow);
+            font-weight: inherit;
+        }
+
+        .picket-sign__underline {
+            display: block;
+            width: 70%;
+            height: 10px;
+            margin: 0.8rem 0 0.15rem;
+            background: #ffffff;
+            border-radius: 999px;
+            transform: skewX(-18deg);
+        }
+
+        .seiu-tab {
+            position: absolute;
+            right: 2.2rem;
+            bottom: 0;
+            z-index: 5;
+            width: 118px;
+            min-height: 126px;
+            padding: 0.8rem 0.7rem 0;
+            background: var(--campaign-purple);
+            color: #ffffff;
+            text-align: center;
+            font-family: 'Anton', 'Inter', sans-serif;
+            font-size: 2rem;
+            line-height: 0.92;
+            text-transform: uppercase;
+            box-shadow: 0 -14px 26px rgba(43, 11, 104, 0.24);
+        }
+
+        .seiu-tab span {
+            color: var(--campaign-yellow);
+            font-size: 2.15rem;
+        }
+
+        .seiu-tab::after {
+            content: "";
+            display: block;
+            height: 28px;
+            margin: 0.8rem -0.7rem 0;
+            background: var(--campaign-yellow);
+            border-radius: 80% 80% 0 0;
+        }
+
+        .feature-strip {
+            background: rgba(255, 255, 255, 0.94);
+            border-bottom: 1px solid rgba(209, 213, 219, 0.9);
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 0;
+            padding: 1.15rem 0;
+        }
+
+        .feature-card {
+            display: grid;
+            justify-items: center;
+            min-height: 170px;
+            padding: 0.95rem 2.2rem 0.85rem;
+            text-align: center;
+            color: #111111;
+            text-decoration: none;
+            border-right: 1px solid rgba(209, 213, 219, 0.92);
+            transition: transform 170ms ease, background 170ms ease, box-shadow 170ms ease;
+        }
+
+        .feature-card:last-child {
+            border-right: 0;
+        }
+
+        .feature-card:hover {
+            background: var(--campaign-cream);
+            transform: translateY(-3px);
+            box-shadow: inset 0 -4px 0 var(--campaign-yellow);
+        }
+
+        .feature-card__icon {
+            width: 58px;
+            height: 58px;
+            color: var(--campaign-purple);
+        }
+
+        .feature-card h2 {
+            margin: 0.28rem 0 0.35rem;
+            font-size: 1.15rem;
+            font-weight: 900;
+            line-height: 1.1;
+            color: var(--campaign-purple-dark);
+        }
+
+        .feature-card p {
+            max-width: 275px;
+            margin: 0;
+            font-size: 0.95rem;
+            line-height: 1.28;
+        }
+
+        .feature-card__link {
+            margin-top: 0.65rem;
+            color: var(--campaign-purple-dark);
+            font-weight: 900;
+            line-height: 1;
+        }
+
+        .info-panel {
+            display: grid;
+            grid-template-columns: minmax(0, 1.45fr) minmax(340px, 0.9fr) minmax(290px, 0.64fr);
+            margin: 1.65rem auto 0;
+            background: rgba(255, 255, 255, 0.96);
+            border: 1px solid rgba(209, 213, 219, 0.95);
+            border-radius: 0.34rem;
+            box-shadow: 0 22px 55px rgba(43, 11, 104, 0.08);
+            overflow: hidden;
+        }
+
+        .panel-section {
+            padding: 1.55rem;
+            min-width: 0;
+            border-right: 1px solid rgba(209, 213, 219, 0.95);
+        }
+
+        .panel-section:last-child {
+            border-right: 0;
+        }
+
+        .panel-heading {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            margin-bottom: 1.4rem;
+        }
+
+        .panel-heading h2 {
+            position: relative;
+            margin: 0;
+            font-size: clamp(1.35rem, 2vw, 1.75rem);
+            font-weight: 900;
+            color: var(--campaign-purple-dark);
+        }
+
+        .panel-heading h2::after {
+            content: "";
+            display: block;
+            width: 56px;
+            height: 5px;
+            margin-top: 0.35rem;
+            background: var(--campaign-yellow);
+            border-radius: 999px;
+        }
+
+        .panel-link {
+            color: var(--campaign-purple-dark);
+            font-size: 0.9rem;
+            font-weight: 900;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        .panel-link:hover {
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+
+        .update-card {
+            display: grid;
+            grid-template-columns: minmax(190px, 0.48fr) 1fr;
+            gap: 1.35rem;
+            align-items: center;
+        }
+
+        .update-card img {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 0.28rem;
+            box-shadow: 0 12px 24px rgba(17, 24, 39, 0.14);
+        }
+
+        .update-date {
+            margin: 0 0 0.4rem;
+            color: #66636c;
+            font-size: 0.82rem;
+            font-weight: 800;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+        }
+
+        .update-title {
+            margin: 0 0 0.55rem;
+            color: var(--campaign-purple-dark);
+            font-size: 1.12rem;
+            font-weight: 900;
+            line-height: 1.18;
+        }
+
+        .update-copy {
+            margin: 0;
+            font-size: 0.96rem;
+            line-height: 1.42;
+        }
+
+        .read-more {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 0.8rem;
+            color: var(--campaign-purple-dark);
+            font-weight: 900;
+            text-decoration: none;
+        }
+
+        .dates-list {
+            display: grid;
+            gap: 1rem;
+        }
+
+        .date-row {
+            display: grid;
+            grid-template-columns: 64px 1fr;
+            gap: 1rem;
+            align-items: center;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid rgba(209, 213, 219, 0.95);
+        }
+
+        .date-row:last-child {
+            border-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .date-badge {
+            display: grid;
+            place-items: center;
+            min-height: 64px;
+            border-radius: 0.24rem;
+            background: linear-gradient(135deg, var(--campaign-purple-dark), var(--campaign-purple));
+            color: #ffffff;
+            font-family: 'Anton', 'Inter', sans-serif;
+            line-height: 0.9;
+            text-align: center;
+            text-transform: uppercase;
+            box-shadow: 0 12px 24px rgba(59, 22, 138, 0.18);
+        }
+
+        .date-badge small {
+            color: #ffffff;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.72rem;
+            font-weight: 900;
+            letter-spacing: 0.04em;
+        }
+
+        .date-badge strong {
+            color: #ffffff;
+            font-size: 1.65rem;
+            font-weight: 400;
+        }
+
+        .date-row h3 {
+            margin: 0 0 0.25rem;
+            color: #171717;
+            font-size: 1rem;
+            font-weight: 900;
+        }
+
+        .date-row p {
+            margin: 0;
+            color: #26232a;
+            font-size: 0.98rem;
+            line-height: 1.28;
+        }
+
+        .involve-card {
+            height: 100%;
+            min-height: 245px;
+            display: grid;
+            align-content: center;
+            justify-items: center;
+            gap: 0.8rem;
+            padding: 1.35rem;
+            background:
+                radial-gradient(circle at 12% 12%, rgba(255, 255, 255, 0.42), transparent 8rem),
+                var(--campaign-yellow);
+            color: var(--campaign-purple-dark);
+            border-radius: 0.34rem;
+            text-align: center;
+        }
+
+        .fists-icon {
+            width: 92px;
+            height: 78px;
+            color: var(--campaign-purple);
+        }
+
+        .involve-card h2 {
+            margin: 0;
+            max-width: 270px;
+            color: var(--campaign-purple-dark);
+            font-size: 1.28rem;
+            font-weight: 900;
+            line-height: 1.24;
+        }
+
+        .involve-card .campaign-btn {
+            width: min(100%, 220px);
+            min-height: 3rem;
+            margin-top: 0.3rem;
+            background: var(--campaign-purple-dark);
+            color: #ffffff;
+        }
+
+        .involve-card p {
+            margin: 0;
+            color: var(--campaign-purple-dark);
+            font-size: 0.86rem;
+            font-weight: 700;
+            line-height: 1.25;
+        }
+
+        @media (max-width: 1180px) {
+            .bargaining-hero__grid {
+                grid-template-columns: minmax(0, 1fr);
+            }
+
+            .bargaining-hero__copy {
+                max-width: none;
+                padding-right: 2rem;
+            }
+
+            .bargaining-hero__visual {
+                min-height: 420px;
+            }
+
+            .bargaining-hero__visual::before {
+                inset: -110px auto auto 1.4rem;
+                width: 180px;
+                height: 180px;
+                transform: rotate(85deg);
+                border-radius: 50%;
+                filter: none;
+            }
+
+            .bargaining-hero__visual::after {
+                display: none;
+            }
+
+            .info-panel {
+                grid-template-columns: minmax(0, 1fr) minmax(300px, 0.82fr);
+            }
+
+            .panel-section:nth-child(2) {
+                border-right: 0;
+            }
+
+            .panel-section--involve {
+                grid-column: 1 / -1;
+                border-top: 1px solid rgba(209, 213, 219, 0.95);
+            }
+        }
+
+        @media (max-width: 1320px) {
+            .update-card {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 900px) {
+            .hero-title {
+                font-size: clamp(3.35rem, 14vw, 5.6rem);
+            }
+
+            .hero-title__script {
+                font-size: clamp(2.65rem, 11vw, 4.45rem);
+            }
+
+            .hero-actions {
+                align-items: stretch;
+            }
+
+            .campaign-btn {
+                width: 100%;
+            }
+
+            .feature-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .feature-card:nth-child(2) {
+                border-right: 0;
+            }
+
+            .feature-card:nth-child(-n + 2) {
+                border-bottom: 1px solid rgba(209, 213, 219, 0.92);
+            }
+
+            .info-panel {
+                grid-template-columns: 1fr;
+            }
+
+            .panel-section {
+                border-right: 0;
+                border-bottom: 1px solid rgba(209, 213, 219, 0.95);
+            }
+
+            .panel-section:last-child {
+                border-bottom: 0;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .bargaining-hero__copy {
+                padding: 2rem 1.25rem 1.75rem;
+            }
+
+            .bargaining-hero__visual {
+                min-height: 430px;
+            }
+
+            .hero-copy {
+                font-size: 1.05rem;
+            }
+
+            .picket-sign {
+                top: 1.5rem;
+                right: 1rem;
+                width: calc(100% - 2rem);
+                min-width: 0;
+            }
+
+            .seiu-tab {
+                right: 1rem;
+                width: 96px;
+                min-height: 104px;
+                font-size: 1.58rem;
+            }
+
+            .seiu-tab span {
+                font-size: 1.72rem;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .feature-card,
+            .feature-card:nth-child(2) {
+                border-right: 0;
+                border-bottom: 1px solid rgba(209, 213, 219, 0.92);
+            }
+
+            .feature-card:last-child {
+                border-bottom: 0;
+            }
+
+            .panel-section {
+                padding: 1.2rem;
+            }
+
+            .panel-heading {
+                align-items: flex-start;
+                flex-direction: column;
+                margin-bottom: 1.1rem;
+            }
+
+            .update-card {
+                grid-template-columns: 1fr;
+            }
+
+            .date-row {
+                grid-template-columns: 58px 1fr;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                scroll-behavior: auto !important;
+                transition-duration: 0.01ms !important;
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+            }
+        }
+    </style>
+    <link rel="canonical" href="https://www.local083.org/test-pages/2026-bargaining-redesign.html">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.local083.org/test-pages/2026-bargaining-redesign.html">
+    <meta property="og:title" content="2026 Bargaining Redesign - SEIU Local 503 at OSU">
+    <meta property="og:description" content="Draft redesign concept for the SEIU Local 503 OSU bargaining hub.">
+    <meta property="og:image" content="https://www.local083.org/images/8672a150-f638-4ad4-ba19-72ab754f74b8-homepage.webp">
+    <meta property="og:site_name" content="SEIU Local 503 at Oregon State University">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://www.local083.org/test-pages/2026-bargaining-redesign.html">
+    <meta name="twitter:title" content="2026 Bargaining Redesign - SEIU Local 503 at OSU">
+    <meta name="twitter:description" content="Draft redesign concept for the SEIU Local 503 OSU bargaining hub.">
+    <meta name="twitter:image" content="https://www.local083.org/images/8672a150-f638-4ad4-ba19-72ab754f74b8-homepage.webp">
+    <script src="/js/analytics.js" defer></script>
+</head>
+<body class="bg-brand-light">
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:bg-white focus:text-brand-purple-dark focus:px-4 focus:py-2 focus:rounded focus:shadow-lg">Skip to content</a>
+
+    <header class="bg-white/80 backdrop-blur-lg border-b border-border-color sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="/index.html" class="flex items-center space-x-2">
+                <span class="text-2xl font-bold text-brand-purple-dark">SEIU 503</span>
+                <span class="text-lg text-text-secondary hidden md:block">| Oregon State University</span>
+            </a>
+            <div class="hidden lg:flex space-x-8">
+                <a href="/about.html" class="text-text-secondary hover:text-brand-purple transition-colors">About</a>
+                <a href="/events.html" class="text-text-secondary hover:text-brand-purple transition-colors">Events</a>
+                <a href="/news.html" class="text-text-secondary hover:text-brand-purple transition-colors">News</a>
+                <a href="/resources.html" class="text-text-secondary hover:text-brand-purple transition-colors">Resources & Rights</a>
+                <a href="/leadership.html" class="text-text-secondary hover:text-brand-purple transition-colors">Leadership</a>
+                <a href="/contact.html" class="text-text-secondary hover:text-brand-purple transition-colors">Contact</a>
+            </div>
+            <div class="lg:hidden">
+                <button id="mobile-menu-button" class="text-text-secondary hover:text-brand-purple focus:outline-none" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </nav>
+        <div id="mobile-menu" class="hidden lg:hidden absolute top-full left-0 w-full bg-white border-t border-border-color shadow-lg">
+            <a href="/about.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">About</a>
+            <a href="/events.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Events</a>
+            <a href="/news.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">News</a>
+            <a href="/resources.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Resources & Rights</a>
+            <a href="/leadership.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Leadership</a>
+            <a href="/contact.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Contact</a>
+        </div>
+    </header>
+
+    <main id="main-content" class="campaign-page">
+        <section class="bargaining-hero" aria-labelledby="campaign-title">
+            <div class="bargaining-hero__grid">
+                <div class="bargaining-hero__copy">
+                    <h1 id="campaign-title" class="hero-title">
+                        Together at<br>
+                        the table.
+                        <span class="hero-title__script">Stronger for OSU.</span>
+                    </h1>
+                    <div class="hero-brushline" aria-hidden="true"></div>
+                    <p class="hero-copy">We are in bargaining for a fair contract that values our work, respects our contributions, and builds a better Oregon State University for all.</p>
+                    <div class="hero-actions" aria-label="Bargaining actions">
+                        <a href="/2026-bargaining/index.html" class="campaign-btn campaign-btn--primary">
+                            Our bargaining priorities
+                            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg>
+                        </a>
+                        <a href="/news/2026-04-16-membership-meeting-update.html" class="campaign-btn campaign-btn--secondary">
+                            Bargaining updates
+                            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="bargaining-hero__visual" aria-label="OSU bargaining campaign artwork">
+                    <img class="hero-photo" src="/images/83a4a1c4-4d9a-482a-8ad9-a3e73c338df3-wngr-barg-update.webp" alt="Oregon State University campus building under a clear blue sky." decoding="async" width="4096" height="3072">
+                    <div class="photo-scrim" aria-hidden="true"></div>
+                    <div class="picket-sign" aria-label="Our work. Our union. Our future.">
+                        <span class="picket-sign__text">Our work.<br>Our union.<br><strong>Our future.</strong></span>
+                        <span class="picket-sign__underline" aria-hidden="true"></span>
+                    </div>
+                    <div class="seiu-tab" aria-hidden="true">SEIU<br><span>503</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="feature-strip" aria-label="Bargaining participation links">
+            <div class="container mx-auto px-6">
+                <div class="feature-grid">
+                    <a class="feature-card" href="/2026-bargaining/index.html">
+                        <svg class="feature-card__icon" aria-hidden="true" viewBox="0 0 64 64" fill="currentColor">
+                            <circle cx="18" cy="22" r="8"></circle>
+                            <circle cx="32" cy="17" r="9"></circle>
+                            <circle cx="46" cy="22" r="8"></circle>
+                            <path d="M5 49c1-10 8-16 18-16 3 0 6 .6 9 2.1C35 33.6 38 33 41 33c10 0 17 6 18 16H42c-.4-5.4-4.4-9-10-9s-9.6 3.6-10 9H5z"></path>
+                        </svg>
+                        <h2>Why We Bargain</h2>
+                        <p>Our contract determines our wages, benefits, workloads, and working conditions. Together, we have power.</p>
+                        <span class="feature-card__link">Learn more &rarr;</span>
+                    </a>
+                    <a class="feature-card" href="/2026-bargaining/bargaining-survey-landing-page.html">
+                        <svg class="feature-card__icon" aria-hidden="true" viewBox="0 0 64 64" fill="currentColor">
+                            <path d="M12 12h31c6.6 0 12 5.4 12 12v7c0 6.6-5.4 12-12 12H31L18 53v-10h-6C5.4 43 0 37.6 0 31v-7c0-6.6 5.4-12 12-12z"></path>
+                            <circle cx="17" cy="27" r="3" fill="#fff"></circle>
+                            <circle cx="28" cy="27" r="3" fill="#fff"></circle>
+                            <circle cx="39" cy="27" r="3" fill="#fff"></circle>
+                            <path d="M50 17h2c6.6 0 12 5.4 12 12v6c0 5.3-3.5 9.8-8.3 11.4L58 54l-10-7h-3c5.8-1.4 10-6.6 10-12v-7c0-4.3-1.8-8.2-5-11z"></path>
+                        </svg>
+                        <h2>Have Your Say</h2>
+                        <p>Take our member survey and share what matters most to you in bargaining.</p>
+                        <span class="feature-card__link">Take the survey &rarr;</span>
+                    </a>
+                    <a class="feature-card" href="/2026-bargaining/index.html">
+                        <svg class="feature-card__icon" aria-hidden="true" viewBox="0 0 64 64" fill="currentColor">
+                            <circle cx="23" cy="18" r="8"></circle>
+                            <circle cx="41" cy="18" r="8"></circle>
+                            <circle cx="32" cy="32" r="9"></circle>
+                            <path d="M8 54c1.1-9.8 8-16 18-16 2.3 0 4.2 .3 6 1 1.8-.7 3.7-1 6-1 10 0 16.9 6.2 18 16H8z"></path>
+                        </svg>
+                        <h2>Bargaining Team</h2>
+                        <p>Meet your SEIU 503 OSU bargaining team and learn how decisions are made.</p>
+                        <span class="feature-card__link">Meet the team &rarr;</span>
+                    </a>
+                    <a class="feature-card" href="/events.html">
+                        <svg class="feature-card__icon" aria-hidden="true" viewBox="0 0 64 64" fill="currentColor">
+                            <path d="M8 27h11l23-12v34L19 37H8V27z"></path>
+                            <path d="M47 23l9-7 3 4-9 7-3-4zM50 32h12v5H50v-5zM47 46l3-4 9 7-3 4-9-7z"></path>
+                            <path d="M19 37l6 16h-8l-5-16h7z"></path>
+                        </svg>
+                        <h2>Take Action</h2>
+                        <p>Show up, speak out, and stand together for a contract that works for all of us.</p>
+                        <span class="feature-card__link">Get involved &rarr;</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="container mx-auto px-6 pb-12" aria-label="Bargaining updates and dates">
+            <div class="info-panel">
+                <article class="panel-section">
+                    <div class="panel-heading">
+                        <h2>Latest Updates</h2>
+                        <a class="panel-link" href="/news.html">View all updates &rarr;</a>
+                    </div>
+                    <div class="update-card">
+                        <img src="/images/8672a150-f638-4ad4-ba19-72ab754f74b8-homepage.webp" alt="SEIU members holding signs at an OSU rally." loading="lazy" decoding="async" width="1280" height="720">
+                        <div>
+                            <p class="update-date">April 16, 2026</p>
+                            <h3 class="update-title">Bargaining continues: We are fighting for what OSU workers deserve</h3>
+                            <p class="update-copy">Our bargaining team met with management again this month. We made progress on several topics, but there is still more work to do.</p>
+                            <a class="read-more" href="/news/2026-04-16-membership-meeting-update.html">Read the update &rarr;</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="panel-section">
+                    <div class="panel-heading">
+                        <h2>Upcoming Bargaining Dates</h2>
+                        <a class="panel-link" href="/events.html">View all dates &rarr;</a>
+                    </div>
+                    <div class="dates-list">
+                        <div class="date-row">
+                            <div class="date-badge"><small>May</small><strong>14</strong></div>
+                            <div>
+                                <h3>Bargaining Session</h3>
+                                <p>9:00 AM - 4:00 PM<br>OSU Valley Library</p>
+                            </div>
+                        </div>
+                        <div class="date-row">
+                            <div class="date-badge"><small>May</small><strong>21</strong></div>
+                            <div>
+                                <h3>Bargaining Session</h3>
+                                <p>9:00 AM - 4:00 PM<br>OSU Valley Library</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <aside class="panel-section panel-section--involve">
+                    <div class="involve-card">
+                        <svg class="fists-icon" aria-hidden="true" viewBox="0 0 110 92" fill="none">
+                            <path d="M23 75V43c0-6 9-6 9 0v16" stroke="currentColor" stroke-width="7" stroke-linecap="round"></path>
+                            <path d="M32 59V34c0-6 9-6 9 0v25" stroke="currentColor" stroke-width="7" stroke-linecap="round"></path>
+                            <path d="M41 58V30c0-6 9-6 9 0v28" stroke="currentColor" stroke-width="7" stroke-linecap="round"></path>
+                            <path d="M50 59V38c0-6 9-6 9 0v27c0 13-8 20-18 20H30c-8 0-14-6-14-14V58c0-5 7-5 7 0" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M73 77V45c0-6 9-6 9 0v16" stroke="currentColor" stroke-width="7" stroke-linecap="round"></path>
+                            <path d="M82 61V37c0-6 9-6 9 0v31c0 11-7 17-16 17H65" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M14 21l-8-8M31 13V3M49 14l8-10M81 15l8-10M96 28l10-5" stroke="currentColor" stroke-width="5" stroke-linecap="round"></path>
+                        </svg>
+                        <h2>When we stand together, we win. Stay engaged. Stay united.</h2>
+                        <a class="campaign-btn" href="/contact.html">Get involved</a>
+                        <p>Contract updates - Actions - Events<br>Delivered to your inbox.</p>
+                    </div>
+                </aside>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-100 pt-12 pb-8 text-text-primary">
+        <div class="container mx-auto px-6">
+            <div class="mt-10 pt-8 border-t border-gray-700 text-center">
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="md:col-span-2 lg:col-span-1">
+                    <div class="flex items-center mb-4">
+                        <img src="/images/logo.png" alt="SEIU 503 Logo" class="h-12 w-12 mr-3 bg-white p-1 rounded" loading="lazy" decoding="async" width="800" height="827">
+                        <div>
+                            <h3 class="text-xl font-bold">SEIU Local 503</h3>
+                            <p class="text-text-secondary text-sm">Oregon State University</p>
+                        </div>
+                    </div>
+                    <p class="text-text-secondary leading-relaxed">Representing the classified employees of Oregon State University. We fight for fair contracts, defend workplace rights, and build a united community.</p>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="/about.html" class="text-text-secondary hover:text-brand-purple transition-colors">About Us</a></li>
+                        <li><a href="/events.html" class="text-text-secondary hover:text-brand-purple transition-colors">Events</a></li>
+                        <li><a href="/news.html" class="text-text-secondary hover:text-brand-purple transition-colors">News</a></li>
+                        <li><a href="/leadership.html" class="text-text-secondary hover:text-brand-purple transition-colors">Leadership</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase"><a href="/resources.html" class="hover:text-brand-purple transition-colors">Resources</a></h4>
+                    <ul class="space-y-3">
+                        <li><a href="/resources.html" class="text-text-secondary hover:text-brand-purple transition-colors">Resources & Rights</a></li>
+                        <li><a href="/resources/seiu_cba_2022-2026.pdf" class="text-text-secondary hover:text-brand-purple transition-colors">Our Contract (PDF)</a></li>
+                        <li><a href="/resources/stewards.html" class="text-text-secondary hover:text-brand-purple transition-colors">Find a Steward</a></li>
+                        <li><a href="/resources/weingarten-rights.html" class="text-text-secondary hover:text-brand-purple transition-colors">Weingarten Rights</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase"><a href="/contact.html" class="hover:text-brand-purple transition-colors">Contact Us</a></h4>
+                     <ul class="space-y-3 text-text-secondary">
+                        <li><a href="mailto:083execteam@seiu503.org" class="hover:text-brand-purple transition-colors">083execteam@seiu503.org</a></li>
+                        <li><a href="mailto:083stewards@seiu503.org" class="hover:text-brand-purple transition-colors">083stewards@seiu503.org</a></li>
+                        <li><a href="https://maps.app.goo.gl/9TWRZ9F4wjVjacsZ7" class="hover:text-brand-purple transition-colors">Adams Hall, Room 109<br>Corvallis, OR 97331</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mt-10 pt-8 border-t border-gray-700 text-center space-y-2">
+                <p class="text-text-secondary text-sm">&copy; 2026 SEIU Local 503, Sublocal 083. All rights reserved.</p>
+                <p class="text-text-secondary text-xs">
+                    <button type="button" class="underline hover:text-brand-purple" onclick="(localStorage.getItem('ph_opt_out') === '1' ? phOptIn() : phOptOut());">
+                        Privacy settings
+                    </button>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = document.querySelectorAll('#mobile-menu a');
+
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', () => {
+                const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+                mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenuButton.setAttribute('aria-expanded', 'false');
+            });
+        });
+    </script>
+</body>
+</html>
