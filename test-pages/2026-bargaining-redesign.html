@@ -463,6 +463,8 @@
             grid-template-columns: minmax(190px, 0.48fr) 1fr;
             gap: 1.35rem;
             align-items: center;
+            color: inherit;
+            text-decoration: none;
         }
 
         .update-card img {
@@ -472,6 +474,38 @@
             object-position: center;
             border-radius: 0.28rem;
             box-shadow: 0 12px 24px rgba(17, 24, 39, 0.14);
+        }
+
+        .update-card:hover .update-title,
+        .secondary-update:hover h3,
+        .date-row:hover h3 {
+            color: var(--campaign-purple);
+        }
+
+        .updates-list {
+            display: grid;
+            gap: 1.05rem;
+        }
+
+        .secondary-updates {
+            display: grid;
+            gap: 0.75rem;
+        }
+
+        .secondary-update {
+            display: block;
+            padding-top: 0.85rem;
+            color: inherit;
+            text-decoration: none;
+            border-top: 1px solid rgba(209, 213, 219, 0.95);
+        }
+
+        .secondary-update h3 {
+            margin: 0;
+            color: var(--campaign-purple-dark);
+            font-size: 0.98rem;
+            font-weight: 900;
+            line-height: 1.22;
         }
 
         .update-date {
@@ -507,6 +541,11 @@
             text-decoration: none;
         }
 
+        .read-more:hover {
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+
         .dates-list {
             display: grid;
             gap: 1rem;
@@ -518,6 +557,8 @@
             gap: 1rem;
             align-items: center;
             padding-bottom: 1rem;
+            color: inherit;
+            text-decoration: none;
             border-bottom: 1px solid rgba(209, 213, 219, 0.95);
         }
 
@@ -910,17 +951,19 @@
             <div class="info-panel">
                 <article class="panel-section">
                     <div class="panel-heading">
-                        <h2>Latest Updates</h2>
+                        <h2>Latest Bargaining Updates</h2>
                         <a class="panel-link" href="/news.html">View all updates &rarr;</a>
                     </div>
-                    <div class="update-card">
-                        <img src="/images/8672a150-f638-4ad4-ba19-72ab754f74b8-homepage.webp" alt="SEIU members holding signs at an OSU rally." loading="lazy" decoding="async" width="1280" height="720">
-                        <div>
-                            <p class="update-date">April 16, 2026</p>
-                            <h3 class="update-title">Bargaining continues: We are fighting for what OSU workers deserve</h3>
-                            <p class="update-copy">Our bargaining team met with management again this month. We made progress on several topics, but there is still more work to do.</p>
-                            <a class="read-more" href="/news/2026-04-16-membership-meeting-update.html">Read the update &rarr;</a>
-                        </div>
+                    <div id="bargaining-news-list" class="updates-list">
+                        <a class="update-card" href="/news/2026-04-16-membership-meeting-update.html">
+                            <img src="/images/83a4a1c4-4d9a-482a-8ad9-a3e73c338df3-wngr-barg-update.webp" alt="Purple 2026 higher education bargaining graphic." loading="lazy" decoding="async" width="1280" height="720">
+                            <div>
+                                <p class="update-date">April 16, 2026</p>
+                                <h3 class="update-title">April 16 Bargaining Update</h3>
+                                <p class="update-copy">Read the bargaining-only April 16 membership meeting update, including bargaining timeline notes and next steps.</p>
+                                <span class="read-more">Read the update &rarr;</span>
+                            </div>
+                        </a>
                     </div>
                 </article>
 
@@ -929,21 +972,21 @@
                         <h2>Upcoming Bargaining Dates</h2>
                         <a class="panel-link" href="/events.html">View all dates &rarr;</a>
                     </div>
-                    <div class="dates-list">
-                        <div class="date-row">
+                    <div id="bargaining-events-list" class="dates-list">
+                        <a class="date-row" href="/news/2026-02-04-upcoming-bargaining-events.html">
                             <div class="date-badge"><small>May</small><strong>14</strong></div>
                             <div>
-                                <h3>Bargaining Session</h3>
-                                <p>9:00 AM - 4:00 PM<br>OSU Valley Library</p>
+                                <h3>Purple Up Day (UO)</h3>
+                                <p>All Day<br>University of Oregon</p>
                             </div>
-                        </div>
-                        <div class="date-row">
-                            <div class="date-badge"><small>May</small><strong>21</strong></div>
+                        </a>
+                        <a class="date-row" href="/news/2026-02-04-upcoming-bargaining-events.html">
+                            <div class="date-badge"><small>May</small><strong>28</strong></div>
                             <div>
-                                <h3>Bargaining Session</h3>
-                                <p>9:00 AM - 4:00 PM<br>OSU Valley Library</p>
+                                <h3>Purple Up Day (SOU)</h3>
+                                <p>All Day<br>Southern Oregon University</p>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </article>
 
@@ -1043,6 +1086,141 @@
                 mobileMenuButton.setAttribute('aria-expanded', 'false');
             });
         });
+
+        (() => {
+            const newsContainer = document.getElementById('bargaining-news-list');
+            const eventsContainer = document.getElementById('bargaining-events-list');
+            const today = new Date();
+            today.setHours(0, 0, 0, 0);
+            const campaignEventPattern = /\b(bargaining|rally|purple up|action|membership meeting|cat)\b/i;
+
+            const escapeHtml = (value) => String(value || '').replace(/[&<>"']/g, (char) => ({
+                '&': '&amp;',
+                '<': '&lt;',
+                '>': '&gt;',
+                '"': '&quot;',
+                "'": '&#39;'
+            }[char]));
+
+            const parseLocalDate = (value) => {
+                if (!value) return null;
+                const parsed = new Date(`${value}T00:00:00`);
+                return Number.isNaN(parsed.getTime()) ? null : parsed;
+            };
+
+            const formatDate = (value, options = { month: 'long', day: 'numeric', year: 'numeric' }) => {
+                const parsed = parseLocalDate(value);
+                return parsed ? new Intl.DateTimeFormat('en-US', options).format(parsed) : '';
+            };
+
+            const isPublicArticle = (article) => {
+                const status = article.status || 'published';
+                const publishedAt = parseLocalDate(article.publishedAt || article.createdAt);
+
+                if (status === 'draft' || status === 'review') return false;
+                if (status === 'scheduled') return Boolean(publishedAt) && publishedAt <= today;
+                return !publishedAt || publishedAt <= today;
+            };
+
+            const renderNews = (articles) => {
+                if (!newsContainer) return;
+
+                const bargainingArticles = articles
+                    .filter(isPublicArticle)
+                    .filter((article) => Array.isArray(article.tags) && article.tags.includes('Bargaining'))
+                    .sort((a, b) => (parseLocalDate(b.publishedAt || b.createdAt) || 0) - (parseLocalDate(a.publishedAt || a.createdAt) || 0))
+                    .slice(0, 3);
+
+                if (bargainingArticles.length === 0) {
+                    newsContainer.innerHTML = '<p class="update-copy">No bargaining updates are posted yet. Check back soon.</p>';
+                    return;
+                }
+
+                const [leadArticle, ...secondaryArticles] = bargainingArticles;
+                const leadImage = leadArticle.image || '/images/card.webp';
+                const leadAlt = leadArticle.alt || leadArticle.title;
+
+                let html = `
+                    <a class="update-card" href="${escapeHtml(leadArticle.url)}">
+                        <img src="${escapeHtml(leadImage)}" alt="${escapeHtml(leadAlt)}" loading="lazy" decoding="async">
+                        <div>
+                            <p class="update-date">${escapeHtml(formatDate(leadArticle.publishedAt || leadArticle.createdAt))}</p>
+                            <h3 class="update-title">${escapeHtml(leadArticle.title)}</h3>
+                            <p class="update-copy">${escapeHtml(leadArticle.description)}</p>
+                            <span class="read-more">Read the update &rarr;</span>
+                        </div>
+                    </a>
+                `;
+
+                if (secondaryArticles.length > 0) {
+                    html += `<div class="secondary-updates">${secondaryArticles.map((article) => `
+                        <a class="secondary-update" href="${escapeHtml(article.url)}">
+                            <p class="update-date">${escapeHtml(formatDate(article.publishedAt || article.createdAt))}</p>
+                            <h3>${escapeHtml(article.title)}</h3>
+                        </a>
+                    `).join('')}</div>`;
+                }
+
+                newsContainer.innerHTML = html;
+            };
+
+            const isCampaignEvent = (event) => {
+                const haystack = [event.type, event.title, event.description].filter(Boolean).join(' ');
+                return campaignEventPattern.test(haystack);
+            };
+
+            const renderEvents = (events) => {
+                if (!eventsContainer) return;
+
+                const upcomingEvents = events
+                    .filter((event) => {
+                        const eventDate = parseLocalDate(event.date);
+                        return eventDate && eventDate >= today && isCampaignEvent(event);
+                    })
+                    .sort((a, b) => parseLocalDate(a.date) - parseLocalDate(b.date))
+                    .slice(0, 3);
+
+                if (upcomingEvents.length === 0) {
+                    eventsContainer.innerHTML = '<p class="update-copy">No campaign dates are posted yet. Check back soon.</p>';
+                    return;
+                }
+
+                eventsContainer.innerHTML = upcomingEvents.map((event) => {
+                    const eventDate = parseLocalDate(event.date);
+                    const month = new Intl.DateTimeFormat('en-US', { month: 'short' }).format(eventDate);
+                    const day = new Intl.DateTimeFormat('en-US', { day: 'numeric' }).format(eventDate);
+                    const location = event.location_detail || '';
+                    const time = event.time || '';
+                    const details = [time, location].filter(Boolean).map(escapeHtml).join('<br>');
+
+                    return `
+                        <a class="date-row" href="${escapeHtml(event.url)}">
+                            <div class="date-badge"><small>${escapeHtml(month)}</small><strong>${escapeHtml(day)}</strong></div>
+                            <div>
+                                <h3>${escapeHtml(event.title)}</h3>
+                                <p>${details}</p>
+                            </div>
+                        </a>
+                    `;
+                }).join('');
+            };
+
+            fetch('/news/news.json')
+                .then((response) => {
+                    if (!response.ok) throw new Error(`News feed returned ${response.status}`);
+                    return response.json();
+                })
+                .then(renderNews)
+                .catch((error) => console.error('Could not load bargaining news:', error));
+
+            fetch('/events/events.json')
+                .then((response) => {
+                    if (!response.ok) throw new Error(`Events feed returned ${response.status}`);
+                    return response.json();
+                })
+                .then(renderEvents)
+                .catch((error) => console.error('Could not load bargaining events:', error));
+        })();
     </script>
 </body>
 </html>
