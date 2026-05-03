@@ -1,0 +1,1 @@
+## 2024-04-30 - [Missing Lazy Loading] Learning: [Many images are missing `loading="lazy"` attribute, which causes all images to load synchronously and impacts page load time] Action: [Add `loading="lazy"` to `<img>` tags, except for those in the above-the-fold or hero section]

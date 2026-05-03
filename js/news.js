@@ -165,7 +165,8 @@ document.addEventListener('DOMContentLoaded', () => {
                             <span class="font-semibold text-brand-purple">Read More →</span>
                         </div>
                         <div class="hidden lg:block">
-                            <img src="${article.image}" alt="${altText}" class="w-full h-full object-cover">
+                            <!-- ⚡ Bolt: Add loading="lazy" to defer offscreen images and improve initial page load time -->
+                            <img src="${article.image}" alt="${altText}" class="w-full h-full object-cover" loading="lazy">
                         </div>
                     </div>
                 </a>
@@ -220,7 +221,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
             articleCard.innerHTML = `
                 <a href="${article.url}" class="group flex flex-col h-full flex-grow" data-ph-event="news_article_click" data-ph-label="${escapeAttr(article.title)}" data-ph-metadata='{"position":"grid"}'>
-                    <img src="${article.image}" alt="${altText}" class="w-full h-48 object-cover">
+                    <!-- ⚡ Bolt: Add loading="lazy" to defer offscreen images and improve initial page load time -->
+                    <img src="${article.image}" alt="${altText}" class="w-full h-48 object-cover" loading="lazy">
                     <div class="p-6 flex-grow">
                         <div class="flex items-center justify-between mb-2">
                             <p class="text-text-secondary text-sm" title="${dateTooltip}">Last updated: ${formattedDate}</p>
