@@ -497,13 +497,20 @@
             </div>
         </div>
     </footer>
-    
+
+    <!--
+    Homepage CTA modal template
+
+    Keep this block as a reference for future homepage CTAs. To restore a popup:
+    1. Uncomment and update the modal markup below.
+    2. Restore the modal JavaScript hook near the start of the DOMContentLoaded handler.
+
     <div id="homepage-cta-modal" class="fixed inset-0 bg-black bg-opacity-60 backdrop-blur-sm flex items-center justify-center p-4 z-[100] hidden">
         <div id="modal-content" role="dialog" aria-modal="true" aria-labelledby="homepage-cta-modal-title" aria-describedby="homepage-cta-modal-description" tabindex="-1" class="bg-white rounded-xl shadow-2xl max-w-lg w-full p-8 text-center relative transform transition-all duration-300 scale-95 opacity-0">
             <button id="modal-close-button" class="absolute top-4 right-4 text-gray-400 hover:text-gray-800 transition-colors" aria-label="Close homepage popup">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
             </button>
-    
+
             <div id="modal-live-state" class="hidden">
                 <h2 id="bargaining-live-modal-title" class="text-3xl font-bold text-brand-purple-dark mb-4">Bargaining is happening NOW</h2>
                 <p id="bargaining-live-modal-description" class="text-text-secondary mb-6">
@@ -515,19 +522,19 @@
                 </div>
             </div>
             <div id="modal-default-state">
-                <h2 id="homepage-cta-modal-title" class="text-3xl font-bold text-brand-purple-dark mb-4">May 1, 2026: Join International Workers' Day</h2>
+                <h2 id="homepage-cta-modal-title" class="text-3xl font-bold text-brand-purple-dark mb-4">Future Homepage CTA Title</h2>
                 <p id="homepage-cta-modal-description" class="text-text-secondary mb-6">
-                    International Workers' Day will celebrate Day Without an Immigrant with rallies across Oregon. Join us in solidarity for workers' rights and an end to mass deportations. SEIU 503 is primarily supporting the PCUN-hosted Salem event from 12 to 2 p.m., with Portland and Eugene transportation support available. Registration will help you get updates about Salem, Portland-area actions, and other statewide events. More details: <a href="https://mayday.pcun.org/" class="font-semibold text-brand-purple underline decoration-2 underline-offset-2" target="_blank" rel="noopener noreferrer">mayday.pcun.org</a>.
+                    Future homepage CTA copy goes here.
                 </p>
                 <div class="space-y-3 flex flex-col items-center">
-                    <a href="/mayday" class="btn btn-secondary w-full" data-ph-event="cta_click" data-ph-label="Modal Register International Workers Day">Register for May 1</a>
-                    <a href="/events.html" class="btn btn-outline w-full" data-ph-event="cta_click" data-ph-label="Modal View Events">View Upcoming Events</a>
+                    <a href="/events.html" class="btn btn-secondary w-full" data-ph-event="cta_click" data-ph-label="Modal Primary CTA">Primary CTA</a>
+                    <a href="/events.html" class="btn btn-outline w-full" data-ph-event="cta_click" data-ph-label="Modal Secondary CTA">Secondary CTA</a>
                 </div>
             </div>
         </div>
     </div>
-
-
+    -->
+    
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const BARGAINING_LIVE_CUTOFF_ISO = '2026-03-05T10:01:00-08:00';
@@ -558,67 +565,65 @@
                 });
             });
 
-            // --- Homepage CTA Modal Logic ---
-            const surveyModal = document.getElementById('homepage-cta-modal');
-            const modalContent = document.getElementById('modal-content');
-            const closeButton = document.getElementById('modal-close-button');
-            const modalLiveState = document.getElementById('modal-live-state');
-            const modalDefaultState = document.getElementById('modal-default-state');
-            let lastFocusedElement = null;
-
-            if (modalContent && modalLiveState && modalDefaultState) {
-                modalLiveState.classList.toggle('hidden', !isLiveBargainingMode);
-                modalDefaultState.classList.toggle('hidden', isLiveBargainingMode);
-                modalContent.setAttribute('aria-labelledby', isLiveBargainingMode ? 'bargaining-live-modal-title' : 'homepage-cta-modal-title');
-                modalContent.setAttribute('aria-describedby', isLiveBargainingMode ? 'bargaining-live-modal-description' : 'homepage-cta-modal-description');
-            }
-            
-            // Function to open the modal with a smooth animation
-            const openModal = () => {
-                lastFocusedElement = document.activeElement instanceof HTMLElement ? document.activeElement : null;
-                surveyModal.classList.remove('hidden');
-                setTimeout(() => {
-                    modalContent.classList.remove('opacity-0', 'scale-95');
-                    closeButton?.focus();
-                }, 10);
-            };
-
-            // Function to close the modal with a smooth animation
-            const closeModal = () => {
-                modalContent.classList.add('opacity-0', 'scale-95');
-                setTimeout(() => {
-                    surveyModal.classList.add('hidden');
-                    lastFocusedElement?.focus();
-                }, 300); // Should match transition duration
-            };
-
-            // Check sessionStorage to show the modal only once per session
-            if (!sessionStorage.getItem('homepageCtaModalShown')) {
-                setTimeout(openModal, 1500); // Show modal after 1.5 seconds
-                sessionStorage.setItem('homepageCtaModalShown', 'true');
-            }
-
-            // --- Event listeners to close the modal ---
-            // Close with the 'X' button.
-            // The other buttons are links and will navigate away.
-            if (closeButton) {
-                closeButton.addEventListener('click', closeModal);
-            }
-
-            // Close by clicking the dark background overlay
-            surveyModal.addEventListener('click', (event) => {
-                if (event.target === surveyModal) {
-                    closeModal();
-                }
-            });
-
-            // Close on Escape for keyboard users
-            document.addEventListener('keydown', (event) => {
-                if (event.key === 'Escape' && !surveyModal.classList.contains('hidden')) {
-                    event.preventDefault();
-                    closeModal();
-                }
-            });
+            /*
+             * Homepage CTA modal template logic
+             *
+             * Keep this as a reference for future homepage CTAs. To restore,
+             * uncomment this block after restoring the modal markup above.
+             *
+             * const surveyModal = document.getElementById('homepage-cta-modal');
+             * const modalContent = document.getElementById('modal-content');
+             * const closeButton = document.getElementById('modal-close-button');
+             * const modalLiveState = document.getElementById('modal-live-state');
+             * const modalDefaultState = document.getElementById('modal-default-state');
+             * let lastFocusedElement = null;
+             *
+             * if (modalContent && modalLiveState && modalDefaultState) {
+             *     modalLiveState.classList.toggle('hidden', !isLiveBargainingMode);
+             *     modalDefaultState.classList.toggle('hidden', isLiveBargainingMode);
+             *     modalContent.setAttribute('aria-labelledby', isLiveBargainingMode ? 'bargaining-live-modal-title' : 'homepage-cta-modal-title');
+             *     modalContent.setAttribute('aria-describedby', isLiveBargainingMode ? 'bargaining-live-modal-description' : 'homepage-cta-modal-description');
+             * }
+             *
+             * const openModal = () => {
+             *     lastFocusedElement = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+             *     surveyModal.classList.remove('hidden');
+             *     setTimeout(() => {
+             *         modalContent.classList.remove('opacity-0', 'scale-95');
+             *         closeButton?.focus();
+             *     }, 10);
+             * };
+             *
+             * const closeModal = () => {
+             *     modalContent.classList.add('opacity-0', 'scale-95');
+             *     setTimeout(() => {
+             *         surveyModal.classList.add('hidden');
+             *         lastFocusedElement?.focus();
+             *     }, 300);
+             * };
+             *
+             * if (!sessionStorage.getItem('homepageCtaModalShown')) {
+             *     setTimeout(openModal, 1500);
+             *     sessionStorage.setItem('homepageCtaModalShown', 'true');
+             * }
+             *
+             * if (closeButton) {
+             *     closeButton.addEventListener('click', closeModal);
+             * }
+             *
+             * surveyModal.addEventListener('click', (event) => {
+             *     if (event.target === surveyModal) {
+             *         closeModal();
+             *     }
+             * });
+             *
+             * document.addEventListener('keydown', (event) => {
+             *     if (event.key === 'Escape' && !surveyModal.classList.contains('hidden')) {
+             *         event.preventDefault();
+             *         closeModal();
+             *     }
+             * });
+             */
 
             // --- Load Upcoming Events ---
             const safeCapture = (name, props = {}) => {
