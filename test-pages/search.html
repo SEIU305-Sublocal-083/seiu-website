@@ -49,6 +49,7 @@
     <meta name="twitter:title" content="Search - SEIU Local 503, OSU">
     <meta name="twitter:description" content="Search for news, events, and resources on the SEIU Local 503 at OSU website.">
     <meta name="twitter:image" content="https://www.local083.org/images/card.webp">
+    <script src="/js/utils.js" defer></script>
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -283,24 +284,31 @@
             }
 
             function displayResults(results, query) {
+                const escapeHTML = window.Sentinel && window.Sentinel.escapeHTML
+                    ? window.Sentinel.escapeHTML
+                    : (str) => String(str || '').replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
+
                 if (results.length === 0) {
-                    resultsContainer.innerHTML = `<p class="text-center text-text-secondary">No results found for "${query}".</p>`;
+                    resultsContainer.innerHTML = `<p class="text-center text-text-secondary">No results found for "${escapeHTML(query)}".</p>`;
                     return;
                 }
                 
                 resultsContainer.innerHTML = results.map(item => {
                     // Create a snippet and highlight the query term
                     let snippet = item.content.substring(0, 150) + '...';
+                    snippet = escapeHTML(snippet);
                     if (query) {
-                        const regex = new RegExp(`(${query})`, 'gi');
+                        const escapedQuery = escapeHTML(query);
+                        const safeQuery = escapedQuery.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); // Escape regex control characters
+                        const regex = new RegExp(`(${safeQuery})`, 'gi');
                         snippet = snippet.replace(regex, `<mark class="bg-yellow-200">$1</mark>`);
                     }
 
                     return `
-                        <a href="${item.url}" class="block bg-white p-6 rounded-xl border border-border-color hover:shadow-lg hover:border-brand-purple transition-all duration-300">
+                        <a href="${escapeHTML(item.url)}" class="block bg-white p-6 rounded-xl border border-border-color hover:shadow-lg hover:border-brand-purple transition-all duration-300">
                             <div class="flex justify-between items-start">
-                                <h3 class="text-2xl font-bold text-brand-purple-dark group-hover:underline">${item.title}</h3>
-                                <span class="bg-brand-purple-light text-brand-purple-dark font-bold rounded-full px-3 py-1 text-xs whitespace-nowrap">${item.category}</span>
+                                <h3 class="text-2xl font-bold text-brand-purple-dark group-hover:underline">${escapeHTML(item.title)}</h3>
+                                <span class="bg-brand-purple-light text-brand-purple-dark font-bold rounded-full px-3 py-1 text-xs whitespace-nowrap">${escapeHTML(item.category)}</span>
                             </div>
                             <p class="text-text-secondary mt-2">${snippet}</p>
                         </a>
