@@ -86,6 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // "All" button
         const allButton = createTagButton('All');
         allButton.classList.add('active');
+        allButton.setAttribute('aria-pressed', 'true');
         allButton.addEventListener('click', () => {
             activeFilters.activeTag = null;
             setActiveTag(allButton);
@@ -142,13 +143,18 @@ document.addEventListener('DOMContentLoaded', () => {
         const button = document.createElement('button');
         button.className = 'tag-button px-4 py-2 rounded-full text-sm font-semibold transition-colors hover:bg-brand-purple hover:text-white';
         button.textContent = tag;
+        button.setAttribute('aria-pressed', 'false');
         return button;
     }
 
     function setActiveTag(activeButton) {
-        document.querySelectorAll('.tag-button').forEach(btn => btn.classList.remove('active'));
+        document.querySelectorAll('.tag-button').forEach(btn => {
+            btn.classList.remove('active');
+            btn.setAttribute('aria-pressed', 'false');
+        });
         if (activeButton) {
             activeButton.classList.add('active');
+            activeButton.setAttribute('aria-pressed', 'true');
         }
     }
 
