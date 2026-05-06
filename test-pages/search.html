@@ -138,10 +138,10 @@
 
             <!-- Filters -->
             <div id="filter-container" class="mt-6 flex justify-center items-center gap-2 flex-wrap">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="News">News</button>
-                <button class="filter-btn" data-filter="Event">Events</button>
-                <button class="filter-btn" data-filter="Other">Resources & Other</button>
+                <button class="filter-btn active" data-filter="all" aria-pressed="true">All</button>
+                <button class="filter-btn" data-filter="News" aria-pressed="false">News</button>
+                <button class="filter-btn" data-filter="Event" aria-pressed="false">Events</button>
+                <button class="filter-btn" data-filter="Other" aria-pressed="false">Resources & Other</button>
             </div>
 
             <!-- Results -->
@@ -249,8 +249,13 @@
                 const target = e.target.closest('.filter-btn');
                 if (!target) return;
 
-                filterContainer.querySelector('.active').classList.remove('active');
+                const currentActive = filterContainer.querySelector('.active');
+                if (currentActive) {
+                    currentActive.classList.remove('active');
+                    currentActive.setAttribute('aria-pressed', 'false');
+                }
                 target.classList.add('active');
+                target.setAttribute('aria-pressed', 'true');
                 currentFilter = target.dataset.filter;
                 performSearch();
             });
