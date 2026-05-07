@@ -53,6 +53,14 @@ document.addEventListener('DOMContentLoaded', () => {
             const response = await fetch('news/news.json');
             if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
             allArticles = await response.json();
+
+            // ⚡ Bolt: Pre-format dates to avoid redundant formatting in display loop
+            allArticles.forEach(article => {
+                if (article.updatedAt) {
+                    article.formattedUpdatedAt = new Date(article.updatedAt + 'T00:00:00').toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+                }
+            });
+
             allArticles = allArticles.filter(isPublicArticle);
 
             safeCapture('news_feed_loaded', { count: allArticles.length });
@@ -221,7 +229,6 @@ document.addEventListener('DOMContentLoaded', () => {
             const articleCard = document.createElement('div');
             articleCard.className = 'bg-white rounded-xl border border-border-color overflow-hidden flex flex-col h-full';
 
-            const formattedDate = new Date(article.updatedAt + 'T00:00:00').toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
             const dateTooltip = `Created: ${article.createdAt}\nPublished: ${article.publishedAt}\nUpdated: ${article.updatedAt}`;
             const altText = article.alt || article.title;
 
@@ -231,7 +238,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <img src="${article.image}" alt="${altText}" class="w-full h-48 object-cover" loading="lazy">
                     <div class="p-6 flex-grow">
                         <div class="flex items-center justify-between mb-2">
-                            <p class="text-text-secondary text-sm" title="${dateTooltip}">Last updated: ${formattedDate}</p>
+                            <p class="text-text-secondary text-sm" title="${dateTooltip}">Last updated: ${article.formattedUpdatedAt}</p>
                         </div>
                         <h3 class="font-bold text-xl mb-3 group-hover:text-brand-purple transition-colors">${article.title}</h3>
                         <p class="text-text-secondary">${article.description}</p>

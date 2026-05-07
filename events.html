@@ -328,12 +328,18 @@
                     const response = await fetch('events/events.json');
                     if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
                     const allEvents = await response.json();
+
+                    // ⚡ Bolt: Pre-parse dates to avoid redundant Date instantiations in loops
+                    allEvents.forEach(event => {
+                        event.parsedDate = new Date(event.date.replace(/-/g, '\/'));
+                    });
+
                     processAndRenderEvents(allEvents);
                     const today = new Date();
                     today.setHours(0, 0, 0, 0);
                     safeCapture('events_loaded', {
-                        upcoming_count: allEvents.filter(e => new Date(e.date.replace(/-/g, '/')) >= today).length,
-                        past_count: allEvents.filter(e => new Date(e.date.replace(/-/g, '/')) < today).length
+                        upcoming_count: allEvents.filter(e => e.parsedDate >= today).length,
+                        past_count: allEvents.filter(e => e.parsedDate < today).length
                     });
                 } catch (error) {
                     console.error('Error fetching or processing events:', error);
@@ -349,22 +355,20 @@
                 thirtyDaysFromNow.setDate(today.getDate() + 30);
 
                 const allUpcomingEvents = allEvents
-                    .filter(event => new Date(event.date.replace(/-/g, '\/')) >= today)
+                    .filter(event => event.parsedDate >= today)
                     // ⚡ Bolt: Use fast string comparison instead of new Date() in sort loop (~25x faster)
                     .sort((a, b) => a.date > b.date ? 1 : (a.date < b.date ? -1 : 0));
 
                 const displayNowEvents = allUpcomingEvents.filter(event => {
-                    const eventDate = new Date(event.date.replace(/-/g, '\/'));
-                    return event.featured || eventDate <= thirtyDaysFromNow;
+                    return event.featured || event.parsedDate <= thirtyDaysFromNow;
                 });
 
                 const stackedFutureEvents = allUpcomingEvents.filter(event => {
-                    const eventDate = new Date(event.date.replace(/-/g, '\/'));
-                    return !event.featured && eventDate > thirtyDaysFromNow;
+                    return !event.featured && event.parsedDate > thirtyDaysFromNow;
                 });
 
                 const pastEvents = allEvents
-                    .filter(event => new Date(event.date.replace(/-/g, '\/')) < today)
+                    .filter(event => event.parsedDate < today)
                     // ⚡ Bolt: Use fast string comparison instead of new Date() in sort loop (~25x faster)
                     .sort((a, b) => a.date < b.date ? 1 : (a.date > b.date ? -1 : 0));
 
@@ -385,9 +389,8 @@
                 }
 
                 upcomingEventsContainer.innerHTML = events.map(event => {
-                    const eventDate = new Date(event.date.replace(/-/g, '\/'));
-                    const month = eventDate.toLocaleString('en-US', { month: 'short' }).toUpperCase();
-                    const day = eventDate.getDate().toString().padStart(2, '0');
+                    const month = event.parsedDate.toLocaleString('en-US', { month: 'short' }).toUpperCase();
+                    const day = event.parsedDate.getDate().toString().padStart(2, '0');
                     const featuredClass = event.featured ? 'border-2 border-brand-purple shadow-lg' : 'border border-border-color';
                     
                     let detailsHtml = `<div class="mt-4 flex items-center gap-4"><a href="${event.url}" class="font-semibold text-brand-purple hover:underline" data-ph-event="event_click" data-ph-label="${event.title}" data-ph-metadata='{"section":"upcoming"}'>View Details &rarr;</a>`;
@@ -433,8 +436,7 @@
                 if (moreEventsSection) moreEventsSection.classList.remove('hidden');
 
                 stackedEventsContainer.innerHTML = events.map(event => {
-                    const eventDate = new Date(event.date.replace(/-/g, '\/'));
-                    const formattedDate = eventDate.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+                    const formattedDate = event.parsedDate.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
 
                     let calendarButton = '';
                     if (event.calendar_link) {
@@ -467,8 +469,7 @@
                 }
 
                 const groupedByMonth = events.reduce((acc, event) => {
-                    const eventDate = new Date(event.date.replace(/-/g, '\/'));
-                    const monthYear = eventDate.toLocaleString('default', { month: 'long', year: 'numeric' });
+                    const monthYear = event.parsedDate.toLocaleString('default', { month: 'long', year: 'numeric' });
                     if (!acc[monthYear]) acc[monthYear] = [];
                     acc[monthYear].push(event);
                     return acc;
@@ -477,7 +478,7 @@
                 pastEventsContainer.innerHTML = Object.entries(groupedByMonth).map(([monthYear, monthEvents]) => {
                     const eventListItems = monthEvents.map(event => `
                         <li class="py-2">
-                            <strong>${new Date(event.date.replace(/-/g, '\/')).getDate()}:</strong> ${event.title}
+                            <strong>${event.parsedDate.getDate()}:</strong> ${event.title}
                             ${event.url !== '#' ? `<a href="${event.url}" class="font-semibold text-brand-purple hover:underline ml-2" data-ph-event="event_click" data-ph-label="${event.title}" data-ph-metadata='{"section":"past"}'>View Details</a>` : ''}
                         </li>
                     `).join('');
@@ -502,9 +503,8 @@
 
             function createCalendarEventObject(allEvents) {
                 return allEvents.reduce((acc, event) => {
-                    const date = new Date(event.date.replace(/-/g, '\/'));
-                    const month = date.getMonth();
-                    const day = date.getDate();
+                    const month = event.parsedDate.getMonth();
+                    const day = event.parsedDate.getDate();
                     if (!acc[month]) acc[month] = [];
                     if (!acc[month].includes(day)) acc[month].push(day);
                     return acc;

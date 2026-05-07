@@ -637,11 +637,17 @@
                     const response = await fetch('/events/events.json');
                     if (!response.ok) throw new Error('Network response was not ok');
                     const events = await response.json();
+
+                    // ⚡ Bolt: Pre-parse dates to avoid redundant Date instantiations in loops
+                    events.forEach(event => {
+                        event.parsedDate = new Date(event.date.replace(/-/g, '/'));
+                    });
+
                     const today = new Date();
                     today.setHours(0, 0, 0, 0);
 
                     const upcomingEvents = events
-                        .filter(event => new Date(event.date.replace(/-/g, '/')) >= today)
+                        .filter(event => event.parsedDate >= today)
                         .sort((a, b) => {
                             const aIsFeaturedBargaining = a.title === featuredBargainingTitle;
                             const bIsFeaturedBargaining = b.title === featuredBargainingTitle;
@@ -656,8 +662,7 @@
 
                     if (upcomingEvents.length > 0) {
                         eventsContainer.innerHTML = upcomingEvents.map(event => {
-                            const eventDate = new Date(event.date.replace(/-/g, '\/'));
-                            const formattedDate = eventDate.toLocaleDateString('en-US', {
+                            const formattedDate = event.parsedDate.toLocaleDateString('en-US', {
                                 weekday: 'short',
                                 month: 'short',
                                 day: 'numeric',
@@ -708,6 +713,11 @@
                     if (!response.ok) throw new Error('Network response was not ok');
                     const newsItems = await response.json();
 
+                    // ⚡ Bolt: Pre-format dates to avoid redundant Date instantiations during rendering
+                    newsItems.forEach(item => {
+                        item.formattedPublishedAt = new Date(item.publishedAt.replace(/-/g, '/')).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+                    });
+
                     const sortedNews = newsItems
                         // ⚡ Bolt: Use fast string comparison instead of new Date() in sort loop (~25x faster)
                         .sort((a, b) => a.publishedAt < b.publishedAt ? 1 : (a.publishedAt > b.publishedAt ? -1 : 0))
@@ -719,7 +729,7 @@
 
                         const mainStoryHtml = `
                             <div class="lg:col-span-1 bg-white rounded-xl border border-border-color p-6 group">
-                                <p class="text-text-secondary text-sm mb-2">${new Date(mainStory.publishedAt.replace(/-/g, '/')).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</p>
+                                <p class="text-text-secondary text-sm mb-2">${mainStory.formattedPublishedAt}</p>
                                 <h3 class="font-bold text-2xl md:text-3xl mb-3">${mainStory.title}</h3>
                                 <p class="text-text-secondary">${mainStory.description}</p>
                                 <a href="${mainStory.url}" class="text-brand-purple font-semibold mt-4 inline-block group-hover:underline">Read More →</a>
@@ -727,7 +737,7 @@
                         
                         const sideStoriesHtml = sideStories.map(story => `
                             <div class="bg-white rounded-xl border border-border-color p-6 group">
-                                <p class="text-text-secondary text-sm mb-2">${new Date(story.publishedAt.replace(/-/g, '/')).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</p>
+                                <p class="text-text-secondary text-sm mb-2">${story.formattedPublishedAt}</p>
                                 <h3 class="font-bold text-xl mb-3">${story.title}</h3>
                                 <p class="text-text-secondary">${story.description}</p>
                                 <a href="${story.url}" class="text-brand-purple font-semibold mt-4 inline-block group-hover:underline">Learn More →</a>
