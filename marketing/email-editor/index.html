@@ -1,0 +1,1208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local 083 Email Editor</title>
+    <style>
+        :root {
+            --bg: #f4f6f8;
+            --panel: #ffffff;
+            --ink: #172033;
+            --muted: #647084;
+            --line: #d8dee8;
+            --soft: #eef1f6;
+            --purple: #6d28d9;
+            --purple-dark: #4c1d95;
+            --purple-soft: #ede9fe;
+            --danger: #b42318;
+            --ok: #047857;
+            --shadow: 0 16px 44px rgba(23, 32, 51, 0.12);
+            --radius: 8px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: var(--bg);
+            color: var(--ink);
+            font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            line-height: 1.5;
+        }
+
+        button,
+        input,
+        textarea,
+        select {
+            font: inherit;
+        }
+
+        button {
+            cursor: pointer;
+        }
+
+        .app-shell {
+            min-height: 100vh;
+            display: grid;
+            grid-template-rows: auto 1fr;
+        }
+
+        .topbar {
+            position: sticky;
+            top: 0;
+            z-index: 20;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            padding: 14px 20px;
+            background: rgba(255, 255, 255, 0.94);
+            border-bottom: 1px solid var(--line);
+            backdrop-filter: blur(14px);
+        }
+
+        .brand {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            min-width: 0;
+        }
+
+        .brand strong {
+            font-size: 18px;
+            line-height: 1.1;
+            color: var(--purple-dark);
+        }
+
+        .brand span {
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        .top-actions,
+        .row-actions,
+        .block-actions,
+        .export-actions,
+        .preview-toolbar {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .layout {
+            display: grid;
+            grid-template-columns: minmax(420px, 0.9fr) minmax(460px, 1.1fr);
+            min-height: 0;
+        }
+
+        .editor-pane,
+        .preview-pane {
+            min-width: 0;
+            padding: 20px;
+        }
+
+        .editor-pane {
+            border-right: 1px solid var(--line);
+            background: #fbfcfe;
+        }
+
+        .preview-pane {
+            position: sticky;
+            top: 65px;
+            height: calc(100vh - 65px);
+            overflow: auto;
+        }
+
+        .panel {
+            background: var(--panel);
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            box-shadow: 0 1px 2px rgba(23, 32, 51, 0.04);
+            margin-bottom: 16px;
+        }
+
+        .panel-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            padding: 14px 16px;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .panel-header h2,
+        .panel-header h3 {
+            margin: 0;
+            font-size: 15px;
+            letter-spacing: 0;
+        }
+
+        .panel-header p {
+            margin: 2px 0 0;
+            color: var(--muted);
+            font-size: 12px;
+        }
+
+        .panel-body {
+            padding: 16px;
+        }
+
+        .field-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 14px;
+        }
+
+        .field,
+        .check-row {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .field.full {
+            grid-column: 1 / -1;
+        }
+
+        label,
+        .field-label {
+            color: #334155;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .hint {
+            color: var(--muted);
+            font-size: 12px;
+        }
+
+        input,
+        textarea,
+        select {
+            width: 100%;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            background: #ffffff;
+            color: var(--ink);
+            padding: 9px 10px;
+            min-height: 38px;
+            outline: none;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 88px;
+        }
+
+        input:focus,
+        textarea:focus,
+        select:focus {
+            border-color: var(--purple);
+            box-shadow: 0 0 0 3px rgba(109, 40, 217, 0.16);
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 7px;
+            min-height: 36px;
+            padding: 8px 12px;
+            border: 1px solid var(--line);
+            border-radius: 6px;
+            background: #ffffff;
+            color: var(--ink);
+            font-size: 13px;
+            font-weight: 700;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        .btn:hover {
+            border-color: #aeb8c7;
+            background: #f8fafc;
+        }
+
+        .btn.primary {
+            border-color: #5b21b6;
+            background: var(--purple);
+            color: #ffffff;
+        }
+
+        .btn.primary:hover {
+            background: #5b21b6;
+        }
+
+        .btn.danger {
+            color: var(--danger);
+        }
+
+        .btn.icon {
+            width: 36px;
+            padding: 0;
+        }
+
+        .status {
+            min-height: 18px;
+            color: var(--muted);
+            font-size: 12px;
+        }
+
+        .status.ok {
+            color: var(--ok);
+        }
+
+        .block-card {
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            background: #ffffff;
+            margin-bottom: 12px;
+            overflow: hidden;
+        }
+
+        .block-card.active {
+            border-color: var(--purple);
+            box-shadow: 0 0 0 3px rgba(109, 40, 217, 0.12);
+        }
+
+        .block-title {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            padding: 10px 12px;
+            background: #f8fafc;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .block-title strong {
+            font-size: 13px;
+        }
+
+        .block-title span {
+            color: var(--muted);
+            font-size: 12px;
+        }
+
+        .block-body {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 12px;
+            padding: 12px;
+        }
+
+        .block-body .field.full {
+            grid-column: 1 / -1;
+        }
+
+        .add-blocks {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 8px;
+        }
+
+        .preview-frame {
+            width: min(100%, 760px);
+            margin: 0 auto 20px;
+        }
+
+        .preview-toolbar {
+            justify-content: space-between;
+            margin: 0 auto 14px;
+            width: min(100%, 760px);
+        }
+
+        .preview-size {
+            display: inline-flex;
+            align-items: center;
+            border: 1px solid var(--line);
+            border-radius: 7px;
+            overflow: hidden;
+            background: #ffffff;
+        }
+
+        .preview-size button {
+            border: 0;
+            background: transparent;
+            padding: 8px 10px;
+            color: var(--muted);
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .preview-size button.active {
+            background: var(--purple);
+            color: #ffffff;
+        }
+
+        .email-canvas {
+            background: #f9fafb;
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .email-canvas.mobile {
+            max-width: 390px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #preview {
+            width: 100%;
+            border: 0;
+            display: block;
+            background: #f9fafb;
+            min-height: 760px;
+        }
+
+        dialog {
+            width: min(920px, calc(100vw - 32px));
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 0;
+        }
+
+        dialog::backdrop {
+            background: rgba(15, 23, 42, 0.46);
+        }
+
+        .dialog-body {
+            padding: 16px;
+        }
+
+        #htmlOutput {
+            min-height: 420px;
+            font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+            font-size: 12px;
+            line-height: 1.45;
+        }
+
+        .check-row {
+            flex-direction: row;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .check-row input {
+            width: auto;
+            margin-top: 3px;
+            min-height: 0;
+        }
+
+        .empty-state {
+            border: 1px dashed #b9c2d0;
+            border-radius: var(--radius);
+            color: var(--muted);
+            padding: 22px;
+            text-align: center;
+        }
+
+        @media (max-width: 1050px) {
+            .layout {
+                grid-template-columns: 1fr;
+            }
+
+            .editor-pane {
+                border-right: 0;
+                border-bottom: 1px solid var(--line);
+            }
+
+            .preview-pane {
+                position: static;
+                height: auto;
+            }
+        }
+
+        @media (max-width: 720px) {
+            .topbar {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+
+            .top-actions,
+            .export-actions {
+                width: 100%;
+            }
+
+            .top-actions .btn,
+            .export-actions .btn {
+                flex: 1 1 auto;
+            }
+
+            .editor-pane,
+            .preview-pane {
+                padding: 12px;
+            }
+
+            .field-grid,
+            .block-body,
+            .add-blocks {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="app-shell">
+        <header class="topbar">
+            <div class="brand">
+                <strong>Local 083 Email Editor</strong>
+                <span>Private Mailchimp HTML builder with local autosave</span>
+            </div>
+            <div class="top-actions">
+                <button class="btn" id="newDraftBtn" type="button">New draft</button>
+                <button class="btn" id="restoreBtn" type="button">Restore draft</button>
+                <button class="btn danger" id="resetBtn" type="button">Reset</button>
+                <button class="btn primary" id="exportBtn" type="button">Export HTML</button>
+            </div>
+        </header>
+
+        <main class="layout">
+            <section class="editor-pane" aria-label="Email editor controls">
+                <div class="panel">
+                    <div class="panel-header">
+                        <div>
+                            <h2>Campaign</h2>
+                            <p>These fields become the Mailchimp subject, preview text, and header.</p>
+                        </div>
+                        <span class="status" id="saveStatus">Autosaved locally</span>
+                    </div>
+                    <div class="panel-body field-grid">
+                        <div class="field full">
+                            <label for="subject">Subject line</label>
+                            <input id="subject" data-field="subject" type="text">
+                        </div>
+                        <div class="field full">
+                            <label for="previewText">Preview text</label>
+                            <textarea id="previewText" data-field="previewText"></textarea>
+                        </div>
+                        <div class="field">
+                            <label for="kicker">Small header line</label>
+                            <input id="kicker" data-field="kicker" type="text">
+                        </div>
+                        <div class="field">
+                            <label for="headline">Headline</label>
+                            <input id="headline" data-field="headline" type="text">
+                        </div>
+                        <div class="field">
+                            <label for="subheadline">Subheadline or date</label>
+                            <input id="subheadline" data-field="subheadline" type="text">
+                        </div>
+                        <div class="field">
+                            <label for="locationLine">Location or supporting line</label>
+                            <input id="locationLine" data-field="locationLine" type="text">
+                        </div>
+                        <div class="field">
+                            <label for="greeting">Greeting</label>
+                            <input id="greeting" data-field="greeting" type="text">
+                        </div>
+                        <div class="field">
+                            <label for="signoff">Signoff</label>
+                            <textarea id="signoff" data-field="signoff"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel">
+                    <div class="panel-header">
+                        <div>
+                            <h2>Content blocks</h2>
+                            <p>Add blocks in the order they should appear in the email.</p>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <div class="add-blocks" aria-label="Add content block">
+                            <button class="btn" type="button" data-add-block="paragraph">Paragraph</button>
+                            <button class="btn" type="button" data-add-block="heading">Heading</button>
+                            <button class="btn" type="button" data-add-block="button">Button</button>
+                            <button class="btn" type="button" data-add-block="details">Details</button>
+                            <button class="btn" type="button" data-add-block="callout">Callout</button>
+                            <button class="btn" type="button" data-add-block="links">Link list</button>
+                            <button class="btn" type="button" data-add-block="divider">Divider</button>
+                        </div>
+                    </div>
+                    <div class="panel-body" id="blocks"></div>
+                </div>
+
+                <div class="panel">
+                    <div class="panel-header">
+                        <div>
+                            <h2>Footer</h2>
+                            <p>Mailchimp compliance links are included automatically.</p>
+                        </div>
+                    </div>
+                    <div class="panel-body field-grid">
+                        <label class="check-row full">
+                            <input id="includeSteward" data-field="includeSteward" type="checkbox">
+                            <span>
+                                <span class="field-label">Include steward contact line</span>
+                                <span class="hint">Adds the standard steward email link above unsubscribe/preferences.</span>
+                            </span>
+                        </label>
+                        <div class="field full">
+                            <label for="footerNote">Footer note</label>
+                            <textarea id="footerNote" data-field="footerNote"></textarea>
+                        </div>
+                        <div class="field">
+                            <label for="fileName">Export filename</label>
+                            <input id="fileName" data-field="fileName" type="text">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="preview-pane" aria-label="Live email preview">
+                <div class="preview-toolbar">
+                    <strong>Live preview</strong>
+                    <div class="preview-size" aria-label="Preview size">
+                        <button type="button" class="active" data-preview-size="desktop">Desktop</button>
+                        <button type="button" data-preview-size="mobile">Mobile</button>
+                    </div>
+                </div>
+                <div class="preview-frame">
+                    <div class="email-canvas" id="emailCanvas">
+                        <iframe id="preview" title="Email preview"></iframe>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <dialog id="exportDialog">
+        <div class="panel-header">
+            <div>
+                <h2>Export HTML</h2>
+                <p>Copy this into Mailchimp custom HTML or download it as a file.</p>
+            </div>
+            <button class="btn icon" id="closeExportBtn" type="button" aria-label="Close">x</button>
+        </div>
+        <div class="dialog-body">
+            <div class="export-actions" style="margin-bottom: 12px;">
+                <button class="btn primary" id="copyHtmlBtn" type="button">Copy HTML</button>
+                <button class="btn" id="downloadHtmlBtn" type="button">Download .html</button>
+                <span class="status" id="exportStatus"></span>
+            </div>
+            <textarea id="htmlOutput" spellcheck="false"></textarea>
+        </div>
+    </dialog>
+
+    <script>
+        const STORAGE_KEY = "local083MailchimpEditorDraft";
+        const ALLOWED_MERGE_TAGS = [
+            "*|FNAME|*",
+            "*|LNAME|*",
+            "*|EMAIL|*",
+            "*|UNSUB|*",
+            "*|UPDATE_PROFILE|*",
+            "*|LIST:ADDRESS|*",
+            "*|IF:REWARDS|*",
+            "*|REWARDS|*",
+            "*|END:IF|*",
+            "|FNAME|",
+            "|UPDATE_PROFILE|"
+        ];
+
+        const defaultState = {
+            subject: "SEIU Local 083 membership meeting",
+            previewText: "Join our union for the next membership meeting and RSVP today.",
+            kicker: "SEIU Local 503 at Oregon State University",
+            headline: "Join our next membership meeting",
+            subheadline: "Thursday, May 21, 2026 - Noon to 1 p.m.",
+            locationLine: "Memorial Union - Zoom details in calendar invite",
+            greeting: "Hi *|FNAME|*,",
+            signoff: "In solidarity,\nSEIU Local 503, Sublocal 083",
+            includeSteward: true,
+            footerNote: "You are receiving this email because you are on our union announcement list.",
+            fileName: "local-083-email.html",
+            blocks: [
+                {
+                    id: createId(),
+                    type: "paragraph",
+                    text: "Please join our union for our next membership meeting. We will share updates, answer questions, and make sure members know the next steps."
+                },
+                {
+                    id: createId(),
+                    type: "button",
+                    label: "RSVP now",
+                    url: "https://www.local083.org/events.html",
+                    style: "primary"
+                },
+                {
+                    id: createId(),
+                    type: "details",
+                    title: "Meeting details",
+                    rows: "Date | Thursday, May 21, 2026\nTime | Noon to 1 p.m.\nLocation | Memorial Union\nOnline | Zoom details will be added to the calendar invite."
+                },
+                {
+                    id: createId(),
+                    type: "paragraph",
+                    text: "Please forward this invitation to any coworker who should be in the room with us."
+                }
+            ]
+        };
+
+        let state = loadDraft() || structuredClone(defaultState);
+        let activeBlockId = null;
+        let saveTimer = null;
+
+        const fields = document.querySelectorAll("[data-field]");
+        const blocksRoot = document.getElementById("blocks");
+        const preview = document.getElementById("preview");
+        const saveStatus = document.getElementById("saveStatus");
+        const exportDialog = document.getElementById("exportDialog");
+        const htmlOutput = document.getElementById("htmlOutput");
+        const exportStatus = document.getElementById("exportStatus");
+        const emailCanvas = document.getElementById("emailCanvas");
+
+        function createId() {
+            return "b" + Math.random().toString(36).slice(2, 9);
+        }
+
+        function structuredClone(value) {
+            return JSON.parse(JSON.stringify(value));
+        }
+
+        function loadDraft() {
+            try {
+                const saved = localStorage.getItem(STORAGE_KEY);
+                return saved ? JSON.parse(saved) : null;
+            } catch {
+                return null;
+            }
+        }
+
+        function saveDraftSoon() {
+            saveStatus.textContent = "Saving...";
+            saveStatus.className = "status";
+            window.clearTimeout(saveTimer);
+            saveTimer = window.setTimeout(() => {
+                localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+                saveStatus.textContent = "Autosaved locally";
+                saveStatus.className = "status ok";
+            }, 220);
+        }
+
+        function bindForm() {
+            fields.forEach((field) => {
+                if (field.type === "checkbox") {
+                    field.checked = Boolean(state[field.dataset.field]);
+                } else {
+                    field.value = state[field.dataset.field] || "";
+                }
+
+                field.addEventListener("input", () => {
+                    const key = field.dataset.field;
+                    state[key] = field.type === "checkbox" ? field.checked : field.value;
+                    render();
+                });
+            });
+        }
+
+        function syncForm() {
+            fields.forEach((field) => {
+                const key = field.dataset.field;
+                if (field.type === "checkbox") {
+                    field.checked = Boolean(state[key]);
+                } else {
+                    field.value = state[key] || "";
+                }
+            });
+        }
+
+        function addBlock(type) {
+            const block = {
+                id: createId(),
+                type
+            };
+
+            if (type === "paragraph") block.text = "Add your paragraph text here.";
+            if (type === "heading") block.text = "Section heading";
+            if (type === "button") {
+                block.label = "Button text";
+                block.url = "https://www.local083.org/";
+                block.style = "primary";
+            }
+            if (type === "details") {
+                block.title = "At a glance";
+                block.rows = "Date | Add date\nTime | Add time\nLocation | Add location";
+            }
+            if (type === "callout") {
+                block.title = "Important note";
+                block.text = "Add a short highlighted message.";
+            }
+            if (type === "links") {
+                block.title = "Helpful links";
+                block.links = "Visit our website | https://www.local083.org/";
+            }
+
+            state.blocks.push(block);
+            activeBlockId = block.id;
+            render();
+        }
+
+        function updateBlock(id, key, value) {
+            const block = state.blocks.find((item) => item.id === id);
+            if (!block) return;
+            block[key] = value;
+            activeBlockId = id;
+            writePreview();
+            saveDraftSoon();
+        }
+
+        function moveBlock(id, direction) {
+            const index = state.blocks.findIndex((item) => item.id === id);
+            const nextIndex = index + direction;
+            if (index < 0 || nextIndex < 0 || nextIndex >= state.blocks.length) return;
+            const [block] = state.blocks.splice(index, 1);
+            state.blocks.splice(nextIndex, 0, block);
+            activeBlockId = id;
+            render();
+        }
+
+        function removeBlock(id) {
+            const block = state.blocks.find((item) => item.id === id);
+            if (!block) return;
+            if (!window.confirm(`Remove this ${block.type} block?`)) return;
+            state.blocks = state.blocks.filter((item) => item.id !== id);
+            activeBlockId = null;
+            render();
+        }
+
+        function renderBlocks() {
+            if (!state.blocks.length) {
+                blocksRoot.innerHTML = '<div class="empty-state">No content blocks yet. Add a paragraph, button, details block, or callout to start.</div>';
+                return;
+            }
+
+            blocksRoot.innerHTML = state.blocks.map((block, index) => {
+                const active = block.id === activeBlockId ? " active" : "";
+                return `
+                    <article class="block-card${active}" data-block-id="${block.id}">
+                        <div class="block-title">
+                            <div>
+                                <strong>${titleCase(block.type)}</strong>
+                                <span>Block ${index + 1}</span>
+                            </div>
+                            <div class="block-actions">
+                                <button class="btn icon" type="button" data-move="-1" aria-label="Move up">Up</button>
+                                <button class="btn icon" type="button" data-move="1" aria-label="Move down">Dn</button>
+                                <button class="btn icon danger" type="button" data-remove aria-label="Remove">x</button>
+                            </div>
+                        </div>
+                        <div class="block-body">
+                            ${renderBlockFields(block)}
+                        </div>
+                    </article>
+                `;
+            }).join("");
+        }
+
+        function renderBlockFields(block) {
+            if (block.type === "paragraph") {
+                return fieldMarkup(block.id, "text", "Paragraph text", block.text, "textarea", "full");
+            }
+            if (block.type === "heading") {
+                return fieldMarkup(block.id, "text", "Heading text", block.text, "input", "full");
+            }
+            if (block.type === "button") {
+                return [
+                    fieldMarkup(block.id, "label", "Button label", block.label, "input", ""),
+                    fieldMarkup(block.id, "url", "Button URL", block.url, "input", ""),
+                    selectMarkup(block.id, "style", "Button style", block.style || "primary")
+                ].join("");
+            }
+            if (block.type === "details") {
+                return [
+                    fieldMarkup(block.id, "title", "Details title", block.title, "input", "full"),
+                    fieldMarkup(block.id, "rows", "Rows", block.rows, "textarea", "full", "Use one row per line: Label | Value")
+                ].join("");
+            }
+            if (block.type === "callout") {
+                return [
+                    fieldMarkup(block.id, "title", "Callout title", block.title, "input", "full"),
+                    fieldMarkup(block.id, "text", "Callout text", block.text, "textarea", "full")
+                ].join("");
+            }
+            if (block.type === "links") {
+                return [
+                    fieldMarkup(block.id, "title", "List title", block.title, "input", "full"),
+                    fieldMarkup(block.id, "links", "Links", block.links, "textarea", "full", "Use one link per line: Label | URL")
+                ].join("");
+            }
+            return '<p class="hint">Divider blocks do not need settings.</p>';
+        }
+
+        function fieldMarkup(id, key, label, value = "", type = "input", width = "", hint = "") {
+            const safeValue = escapeHtml(value);
+            const input = type === "textarea"
+                ? `<textarea data-block-field="${key}">${safeValue}</textarea>`
+                : `<input data-block-field="${key}" type="text" value="${escapeAttr(value)}">`;
+            return `
+                <div class="field ${width}">
+                    <label>${label}</label>
+                    ${input}
+                    ${hint ? `<span class="hint">${hint}</span>` : ""}
+                </div>
+            `;
+        }
+
+        function selectMarkup(id, key, label, value) {
+            return `
+                <div class="field">
+                    <label>${label}</label>
+                    <select data-block-field="${key}">
+                        <option value="primary"${value === "primary" ? " selected" : ""}>Primary purple</option>
+                        <option value="secondary"${value === "secondary" ? " selected" : ""}>Secondary outline</option>
+                    </select>
+                </div>
+            `;
+        }
+
+        function bindBlockEvents() {
+            blocksRoot.querySelectorAll(".block-card").forEach((card) => {
+                const id = card.dataset.blockId;
+                card.addEventListener("focusin", () => {
+                    activeBlockId = id;
+                    renderBlocks();
+                    bindBlockEvents();
+                });
+                card.querySelectorAll("[data-block-field]").forEach((field) => {
+                    field.addEventListener("input", () => updateBlock(id, field.dataset.blockField, field.value));
+                });
+                const remove = card.querySelector("[data-remove]");
+                if (remove) remove.addEventListener("click", () => removeBlock(id));
+                card.querySelectorAll("[data-move]").forEach((button) => {
+                    button.addEventListener("click", () => moveBlock(id, Number(button.dataset.move)));
+                });
+            });
+        }
+
+        function render() {
+            renderBlocks();
+            bindBlockEvents();
+            writePreview();
+            saveDraftSoon();
+        }
+
+        function writePreview() {
+            const html = generateEmailHtml();
+            const doc = preview.contentDocument || preview.contentWindow.document;
+            doc.open();
+            doc.write(html);
+            doc.close();
+            window.setTimeout(() => {
+                const height = Math.max(760, doc.body ? doc.body.scrollHeight + 20 : 760);
+                preview.style.height = `${height}px`;
+            }, 40);
+        }
+
+        function escapeHtml(value = "") {
+            return String(value)
+                .replace(/&/g, "&amp;")
+                .replace(/</g, "&lt;")
+                .replace(/>/g, "&gt;")
+                .replace(/"/g, "&quot;")
+                .replace(/'/g, "&#39;");
+        }
+
+        function escapeAttr(value = "") {
+            return preserveMergeTags(escapeHtml(value));
+        }
+
+        function preserveMergeTags(value = "") {
+            let output = value;
+            ALLOWED_MERGE_TAGS.forEach((tag) => {
+                const escaped = escapeHtml(tag);
+                output = output.split(escaped).join(tag);
+            });
+            return output;
+        }
+
+        function inlineText(value = "") {
+            return preserveMergeTags(escapeHtml(value)).replace(/\n/g, "<br>");
+        }
+
+        function pStyle(extra = "") {
+            return `font-family: 'Inter', Helvetica, Arial, sans-serif; margin: 0 0 16px 0; color: #1F2937; font-size: 16px; line-height: 1.6;${extra}`;
+        }
+
+        function hStyle() {
+            return "font-family: 'Lora', Georgia, serif; font-size: 24px; margin: 0 0 14px 0; color: #4C1D95; line-height: 1.25;";
+        }
+
+        function renderEmailBlock(block) {
+            if (block.type === "paragraph") {
+                return `<p style="${pStyle()}">${inlineText(block.text)}</p>`;
+            }
+
+            if (block.type === "heading") {
+                return `<h2 style="${hStyle()}">${inlineText(block.text)}</h2>`;
+            }
+
+            if (block.type === "button") {
+                const isSecondary = block.style === "secondary";
+                const tdStyle = isSecondary
+                    ? "border-radius: 8px; background-color: #FFFFFF; border: 1px solid #6D28D9;"
+                    : "border-radius: 8px; background-color: #6D28D9;";
+                const linkStyle = isSecondary
+                    ? "font-size: 16px; font-family: 'Inter', Helvetica, Arial, sans-serif; font-weight: bold; color: #6D28D9; background-color: #FFFFFF; text-decoration: none; border-radius: 8px; padding: 15px 28px; display: block; width: 100%; box-sizing: border-box; text-align: center;"
+                    : "font-size: 16px; font-family: 'Inter', Helvetica, Arial, sans-serif; font-weight: bold; color: #FFFFFF; background-color: #6D28D9; text-decoration: none; border-radius: 8px; padding: 15px 28px; border: 1px solid #5B21B6; display: block; width: 100%; box-sizing: border-box; text-align: center;";
+                return `
+                            <table role="presentation" border="0" cellspacing="0" cellpadding="0" width="100%" style="margin: 0 0 24px 0;">
+                                <tr>
+                                    <td align="center" style="${tdStyle}">
+                                        <a href="${escapeAttr(block.url)}" target="_blank" style="${linkStyle}">${inlineText(block.label)}</a>
+                                    </td>
+                                </tr>
+                            </table>`;
+            }
+
+            if (block.type === "details") {
+                const rows = parsePipedLines(block.rows).map((row) => `
+                                <tr>
+                                    <td style="padding: 14px 20px; border-top: 1px solid #E5E7EB;">
+                                        <p style="margin: 0 0 4px 0; font-family: 'Inter', Helvetica, Arial, sans-serif; font-size: 12px; letter-spacing: 0.05em; text-transform: uppercase; font-weight: 700; color: #6B7280;">${inlineText(row.label)}</p>
+                                        <p style="margin: 0; font-family: 'Inter', Helvetica, Arial, sans-serif; font-size: 16px; color: #1F2937; line-height: 1.5;">${inlineText(row.value)}</p>
+                                    </td>
+                                </tr>`).join("");
+                return `
+                            <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #FFFFFF; border-radius: 8px; border: 1px solid #D1D5DB; margin-bottom: 24px;">
+                                <tr>
+                                    <td style="font-family: 'Inter', Helvetica, Arial, sans-serif; padding: 20px; color: #374151; font-size: 16px; line-height: 1.6;">
+                                        <h2 style="${hStyle()} margin-bottom: 0;">${inlineText(block.title)}</h2>
+                                    </td>
+                                </tr>
+                                ${rows}
+                            </table>`;
+            }
+
+            if (block.type === "callout") {
+                return `
+                            <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #F9FAFB; border-radius: 8px; border: 1px solid #D1D5DB; margin-bottom: 24px;">
+                                <tr>
+                                    <td style="padding: 20px;">
+                                        <h2 style="${hStyle()}">${inlineText(block.title)}</h2>
+                                        <p style="${pStyle(" margin-bottom: 0; color: #374151;")}">${inlineText(block.text)}</p>
+                                    </td>
+                                </tr>
+                            </table>`;
+            }
+
+            if (block.type === "links") {
+                const links = parsePipedLines(block.links).map((row) => `
+                                        <p style="margin: 0 0 10px 0; font-family: 'Inter', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 1.6; color: #374151;">
+                                            <a href="${escapeAttr(row.value)}" target="_blank" style="color: #6D28D9; text-decoration: underline; word-break: break-word;">${inlineText(row.label)}</a>
+                                        </p>`).join("");
+                return `
+                            <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #F9FAFB; border-radius: 8px; border: 1px solid #D1D5DB; margin-bottom: 24px;">
+                                <tr>
+                                    <td style="padding: 20px;">
+                                        <h2 style="${hStyle()}">${inlineText(block.title)}</h2>
+                                        ${links}
+                                    </td>
+                                </tr>
+                            </table>`;
+            }
+
+            if (block.type === "divider") {
+                return '<hr style="border: 0; border-top: 1px solid #E5E7EB; margin: 8px 0 24px 0;">';
+            }
+
+            return "";
+        }
+
+        function parsePipedLines(value = "") {
+            return value
+                .split("\n")
+                .map((line) => line.trim())
+                .filter(Boolean)
+                .map((line) => {
+                    const parts = line.split("|");
+                    const label = parts.shift().trim();
+                    const rest = parts.join("|").trim();
+                    return { label, value: rest || label };
+                });
+        }
+
+        function generateFooter() {
+            const steward = state.includeSteward ? `
+                            <p style="font-family: 'Inter', Helvetica, Arial, sans-serif; font-size: 12px; color: #6B7280; margin: 0 0 12px 0; line-height: 1.6;">
+                                Need a steward? <a href="mailto:083stewards@seiu503.org" style="color: #6D28D9; text-decoration: underline;">Click here</a> or email:
+                                <a href="mailto:083stewards@seiu503.org" style="color: #6D28D9; text-decoration: underline;">083stewards@seiu503.org</a>
+                            </p>` : "";
+
+            return `
+                    <tr>
+                        <td style="background-color: #F9FAFB; padding: 24px 30px; text-align: center; border-top: 1px solid #D1D5DB; border-bottom-left-radius: 16px; border-bottom-right-radius: 16px;">
+                            ${steward}
+                            <p style="font-family: 'Inter', Helvetica, Arial, sans-serif; font-size: 12px; color: #6B7280; margin: 0; line-height: 1.6;">
+                                ${inlineText(state.footerNote)}<br><br>
+                                <a href="*|UNSUB|*" style="color: #6D28D9; text-decoration: underline;">Unsubscribe</a>
+                                &nbsp;|&nbsp;
+                                <a href="*|UPDATE_PROFILE|*" style="color: #6D28D9; text-decoration: underline;">Update your preferences</a><br><br>
+                                SEIU Local 503, Sublocal 083<br>
+                                *|LIST:ADDRESS|*<br><br>
+                                *|IF:REWARDS|**|REWARDS|**|END:IF|*
+                            </p>
+                        </td>
+                    </tr>`;
+        }
+
+        function generateEmailHtml() {
+            const blocks = state.blocks.map(renderEmailBlock).join("\n");
+            const title = inlineText(state.subject);
+            return `<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Mailchimp subject: ${inlineText(state.subject)} -->
+    <!-- Mailchimp preview text: ${inlineText(state.previewText)} -->
+    <title>${title}</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;family=Lora:wght@700&amp;display=swap" rel="stylesheet">
+    <style>
+        body, table, td, a { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+        table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+        img { -ms-interpolation-mode: bicubic; border: 0; height: auto; line-height: 100%; outline: none; text-decoration: none; }
+        body { height: 100% !important; margin: 0 !important; padding: 0 !important; width: 100% !important; background-color: #F9FAFB; }
+    </style>
+</head>
+<body style="background-color: #F9FAFB; margin: 0; padding: 0; width: 100%; -webkit-font-smoothing: antialiased;">
+    <div style="display: none; max-height: 0; overflow: hidden; opacity: 0; mso-hide: all; line-height: 1px; font-size: 1px;">
+        ${inlineText(state.previewText)}
+    </div>
+    <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #F9FAFB;">
+        <tr>
+            <td align="center" style="padding: 40px 20px;">
+                <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px; background-color: #FFFFFF; border-radius: 16px; border: 1px solid #D1D5DB; text-align: left;">
+                    <tr>
+                        <td style="background-color: #EDE9FE; padding: 36px 30px; text-align: center; border-bottom: 1px solid #D1D5DB; border-top-left-radius: 16px; border-top-right-radius: 16px;">
+                            <p style="font-family: 'Inter', Helvetica, Arial, sans-serif; margin: 0 0 12px 0; color: #4C1D95; font-size: 13px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase;">${inlineText(state.kicker)}</p>
+                            <h1 style="font-family: 'Lora', Georgia, serif; font-size: 32px; margin: 0 0 10px 0; color: #4C1D95; line-height: 1.18;">${inlineText(state.headline)}</h1>
+                            ${state.subheadline ? `<p style="font-family: 'Inter', Helvetica, Arial, sans-serif; margin: 0 0 6px 0; font-size: 18px; color: #4C1D95; line-height: 1.5; font-weight: 700;">${inlineText(state.subheadline)}</p>` : ""}
+                            ${state.locationLine ? `<p style="font-family: 'Inter', Helvetica, Arial, sans-serif; margin: 0; font-size: 17px; color: #4C1D95; line-height: 1.5;">${inlineText(state.locationLine)}</p>` : ""}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 40px 30px;">
+                            ${state.greeting ? `<p style="${pStyle()}">${inlineText(state.greeting)}</p>` : ""}
+                            ${blocks}
+                            ${state.signoff ? `<p style="${pStyle(" margin-bottom: 0;")}">${inlineText(state.signoff)}</p>` : ""}
+                        </td>
+                    </tr>
+                    ${generateFooter()}
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>`;
+        }
+
+        function titleCase(value) {
+            return value.charAt(0).toUpperCase() + value.slice(1);
+        }
+
+        function normalizedFileName() {
+            const name = (state.fileName || "local-083-email.html").trim();
+            return name.endsWith(".html") ? name : `${name}.html`;
+        }
+
+        document.querySelectorAll("[data-add-block]").forEach((button) => {
+            button.addEventListener("click", () => addBlock(button.dataset.addBlock));
+        });
+
+        document.getElementById("exportBtn").addEventListener("click", () => {
+            htmlOutput.value = generateEmailHtml();
+            exportStatus.textContent = "";
+            exportDialog.showModal();
+            htmlOutput.focus();
+            htmlOutput.select();
+        });
+
+        document.getElementById("closeExportBtn").addEventListener("click", () => exportDialog.close());
+
+        document.getElementById("copyHtmlBtn").addEventListener("click", async () => {
+            htmlOutput.value = generateEmailHtml();
+            try {
+                await navigator.clipboard.writeText(htmlOutput.value);
+                exportStatus.textContent = "Copied.";
+                exportStatus.className = "status ok";
+            } catch {
+                htmlOutput.focus();
+                htmlOutput.select();
+                exportStatus.textContent = "Select all and copy manually.";
+                exportStatus.className = "status";
+            }
+        });
+
+        document.getElementById("downloadHtmlBtn").addEventListener("click", () => {
+            const blob = new Blob([generateEmailHtml()], { type: "text/html;charset=utf-8" });
+            const url = URL.createObjectURL(blob);
+            const link = document.createElement("a");
+            link.href = url;
+            link.download = normalizedFileName();
+            document.body.appendChild(link);
+            link.click();
+            link.remove();
+            URL.revokeObjectURL(url);
+            exportStatus.textContent = "Downloaded.";
+            exportStatus.className = "status ok";
+        });
+
+        document.getElementById("newDraftBtn").addEventListener("click", () => {
+            if (!window.confirm("Start a new draft? Your current draft will remain saved until the new draft autosaves.")) return;
+            state = structuredClone(defaultState);
+            state.subject = "";
+            state.previewText = "";
+            state.headline = "";
+            state.subheadline = "";
+            state.locationLine = "";
+            state.blocks = [];
+            activeBlockId = null;
+            syncForm();
+            render();
+        });
+
+        document.getElementById("restoreBtn").addEventListener("click", () => {
+            const saved = loadDraft();
+            if (!saved) {
+                window.alert("No saved draft found in this browser.");
+                return;
+            }
+            state = saved;
+            activeBlockId = null;
+            syncForm();
+            render();
+        });
+
+        document.getElementById("resetBtn").addEventListener("click", () => {
+            if (!window.confirm("Reset to the starter email and clear the saved browser draft?")) return;
+            localStorage.removeItem(STORAGE_KEY);
+            state = structuredClone(defaultState);
+            activeBlockId = null;
+            syncForm();
+            render();
+        });
+
+        document.querySelectorAll("[data-preview-size]").forEach((button) => {
+            button.addEventListener("click", () => {
+                document.querySelectorAll("[data-preview-size]").forEach((item) => item.classList.remove("active"));
+                button.classList.add("active");
+                emailCanvas.classList.toggle("mobile", button.dataset.previewSize === "mobile");
+                writePreview();
+            });
+        });
+
+        bindForm();
+        render();
+    </script>
+</body>
+</html>
