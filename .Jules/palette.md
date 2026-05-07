@@ -9,3 +9,6 @@ Critical UX/accessibility learnings only.
 ## 2024-05-18 - [Add `aria-label` to icon-only buttons]
 **Learning:** Icon-only buttons (like image carousel controls or share buttons) that rely solely on `title` attributes or surrounding context are inaccessible to screen readers, leaving users unaware of the button's function.
 **Action:** Always add descriptive `aria-label` attributes to `<button>` or `<a>` elements that do not contain visible text.
+## 2024-05-18 - [Add `aria-pressed` to toggle buttons]
+**Learning:** When using buttons as visual toggles (like category filters that turn a distinct color when active), screen reader users are unaware of which filter is currently active if relying solely on CSS classes (e.g., `class="active"`). Using the `aria-pressed` attribute correctly translates the visual state into semantic state for assistive technologies.
+**Action:** Always add `aria-pressed="true"` to active toggle buttons and `aria-pressed="false"` to inactive ones, ensuring JavaScript updates this attribute synchronously with any visual class toggles.
