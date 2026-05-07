@@ -1,0 +1,1157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Print-ready SEIU 503 rally flyer for a May 15 University of Oregon rally, with placeholder QR boxes.">
+    <meta name="author" content="SEIU Local 503">
+    <title>May 15 UO Rally Flyer - SEIU 503</title>
+    <link rel="icon" href="/images/logo.png" type="image/png">
+    <link rel="apple-touch-icon" href="/images/logo.png">
+    <style>
+        :root {
+            --purple: #24105f;
+            --purple-2: #321783;
+            --yellow: #ffc800;
+            --yellow-2: #f3b900;
+            --green: #006633;
+            --ink: #180b4d;
+            --white: #ffffff;
+            --black: #111111;
+            --paper-shadow: 0 20px 48px rgba(20, 14, 59, 0.2);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            background: #ede9fe;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            padding: 24px 14px 88px;
+            background:
+                radial-gradient(circle at top left, rgba(255, 200, 0, 0.2), transparent 28rem),
+                linear-gradient(180deg, #f8f7ff, #ede9fe);
+            color: var(--ink);
+            font-family: Impact, "Arial Black", "Inter", Arial, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .skip-link {
+            position: absolute;
+            left: 16px;
+            top: 12px;
+            transform: translateY(-160%);
+            z-index: 50;
+            padding: 10px 14px;
+            background: var(--white);
+            color: var(--purple);
+            border: 2px solid var(--yellow);
+            font: 700 14px/1.2 Arial, sans-serif;
+            text-decoration: none;
+        }
+
+        .skip-link:focus {
+            transform: translateY(0);
+        }
+
+        .page-controls {
+            width: min(8.5in, 100%);
+            margin: 0 auto 16px;
+            padding: 12px 14px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            background: rgba(255, 255, 255, 0.94);
+            border: 1px solid rgba(36, 16, 95, 0.18);
+            box-shadow: 0 12px 28px rgba(36, 16, 95, 0.12);
+            font-family: Arial, sans-serif;
+        }
+
+        .page-controls p {
+            margin: 0;
+            color: #3f356f;
+            font-size: 14px;
+            line-height: 1.35;
+        }
+
+        .print-button {
+            min-height: 42px;
+            padding: 0 16px;
+            border: 0;
+            background: var(--purple);
+            color: var(--white);
+            font: 800 14px/1 Arial, sans-serif;
+            cursor: pointer;
+        }
+
+        .sheet-stage {
+            width: 8.5in;
+            height: 11in;
+            margin: 0 auto;
+        }
+
+        .sheet {
+            position: relative;
+            width: 8.5in;
+            height: 11in;
+            margin: 0;
+            overflow: hidden;
+            background:
+                linear-gradient(178deg, transparent 0 72%, rgba(36, 16, 95, 0.03) 72% 73%, transparent 73%),
+                linear-gradient(0deg, rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0.88)),
+                var(--white);
+            box-shadow: var(--paper-shadow);
+            isolation: isolate;
+        }
+
+        .brush {
+            position: relative;
+        }
+
+        .brush::before,
+        .brush::after {
+            content: "";
+            position: absolute;
+            pointer-events: none;
+            background-repeat: repeat-x;
+            opacity: 1;
+        }
+
+        .top-banner {
+            position: absolute;
+            left: -0.18in;
+            top: -0.08in;
+            width: 8.86in;
+            height: 1.28in;
+            padding: 0.23in 0.58in 0.16in;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--white);
+            background: var(--purple);
+            transform: rotate(-1.5deg);
+            clip-path: polygon(0 10%, 35% 0, 72% 5%, 97% 0, 100% 15%, 98% 72%, 100% 87%, 75% 92%, 42% 87%, 4% 100%, 0 83%, 2% 58%);
+            z-index: 4;
+        }
+
+        .top-banner::before {
+            inset: auto 0 -0.13in 0;
+            height: 0.22in;
+            background:
+                linear-gradient(90deg, transparent 0 4%, var(--purple) 4% 12%, transparent 12% 15%, var(--purple) 15% 34%, transparent 34% 38%, var(--purple) 38% 64%, transparent 64% 68%, var(--purple) 68% 95%, transparent 95%),
+                repeating-linear-gradient(90deg, var(--purple) 0 16px, transparent 16px 24px);
+        }
+
+        .top-banner::after {
+            inset: 0.12in 0.28in auto 0.32in;
+            height: 0.06in;
+            background: repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.12) 0 0.22in, transparent 0.22in 0.34in);
+            transform: rotate(-1deg);
+        }
+
+        .brand-lockup {
+            display: flex;
+            align-items: baseline;
+            gap: 0.12in;
+            transform: rotate(-2deg);
+            text-transform: uppercase;
+            font-size: 0.62in;
+            line-height: 0.78;
+            letter-spacing: 0.01em;
+            text-shadow: 0.02in 0.02in 0 rgba(0, 0, 0, 0.05);
+        }
+
+        .brand-lockup .brand-number {
+            color: var(--yellow);
+            font-style: italic;
+            transform: skew(-8deg);
+        }
+
+        .tagline {
+            position: relative;
+            padding-right: 0.28in;
+            font-size: 0.42in;
+            line-height: 0.95;
+            font-style: italic;
+            transform: rotate(-2deg) skew(-6deg);
+            text-transform: none;
+        }
+
+        .tagline::after {
+            content: "";
+            position: absolute;
+            left: 0.06in;
+            right: 0;
+            bottom: -0.12in;
+            height: 0.07in;
+            background: var(--yellow);
+            clip-path: polygon(0 38%, 100% 0, 96% 72%, 6% 100%);
+        }
+
+        .hero-title {
+            position: absolute;
+            left: 0.34in;
+            top: 1.08in;
+            z-index: 3;
+            width: 4.85in;
+            color: var(--purple);
+        }
+
+        .rally-word {
+            margin: 0;
+            font-size: 1.52in;
+            line-height: 0.82;
+            letter-spacing: 0.015em;
+            text-transform: uppercase;
+            transform: rotate(-2deg) skew(-8deg);
+            text-shadow: 0.03in 0.03in 0 rgba(36, 16, 95, 0.04);
+        }
+
+        .uo-lockup {
+            margin-top: 0.18in;
+            display: grid;
+            grid-template-columns: auto 1fr auto 1fr;
+            align-items: end;
+            gap: 0.11in;
+        }
+
+        .at-stack {
+            display: grid;
+            gap: 0.05in;
+            align-self: center;
+        }
+
+        .at {
+            font-size: 0.47in;
+            line-height: 0.78;
+            color: var(--purple);
+            transform: rotate(-2deg) skew(-8deg);
+            text-transform: uppercase;
+        }
+
+        .mini-brush {
+            width: 0.78in;
+            height: 0.06in;
+            background: var(--yellow);
+            clip-path: polygon(0 35%, 100% 0, 92% 100%, 6% 84%);
+        }
+
+        .uo-letter {
+            color: var(--green);
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 1.42in;
+            font-weight: 900;
+            line-height: 0.72;
+            letter-spacing: -0.04em;
+        }
+
+        .of {
+            align-self: center;
+            color: var(--green);
+            font-size: 0.32in;
+            transform: rotate(-2deg) skew(-8deg);
+            text-transform: uppercase;
+        }
+
+        .campus-scene {
+            position: absolute;
+            right: -0.02in;
+            top: 0.78in;
+            width: 3.9in;
+            height: 3.55in;
+            z-index: 2;
+            overflow: hidden;
+            background:
+                radial-gradient(circle at 86% 36%, rgba(255, 255, 255, 0.92) 0 0.02in, transparent 0.03in),
+                linear-gradient(180deg, #f6fbff 0 38%, #e6f0dc 39% 100%);
+            clip-path: polygon(7% 8%, 100% 0, 98% 91%, 90% 100%, 0 95%, 5% 67%, 0 48%);
+        }
+
+        .campus-scene::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: 6;
+            background:
+                linear-gradient(90deg, #ffffff 0 4%, transparent 11% 88%, #ffffff 98%),
+                linear-gradient(180deg, transparent 0 82%, rgba(255, 255, 255, 0.6) 100%);
+            mix-blend-mode: normal;
+            pointer-events: none;
+        }
+
+        .building {
+            position: absolute;
+            right: 0.58in;
+            top: 0.16in;
+            width: 2.02in;
+            height: 2.12in;
+            background: #b97345;
+            border-radius: 0.18in 0.18in 0 0;
+            border: 0.03in solid rgba(60, 45, 40, 0.34);
+            overflow: hidden;
+            box-shadow: 0 0.06in 0 rgba(0, 0, 0, 0.14);
+        }
+
+        .building::before {
+            content: "";
+            position: absolute;
+            inset: 0.12in 0.24in 0;
+            border-radius: 0.1in 0.1in 0 0;
+            background:
+                linear-gradient(90deg, transparent calc(25% - 1px), rgba(255, 255, 255, 0.55) calc(25% - 1px) calc(25% + 1px), transparent calc(25% + 1px) calc(50% - 1px), rgba(255, 255, 255, 0.55) calc(50% - 1px) calc(50% + 1px), transparent calc(50% + 1px) calc(75% - 1px), rgba(255, 255, 255, 0.55) calc(75% - 1px) calc(75% + 1px), transparent calc(75% + 1px)),
+                linear-gradient(180deg, transparent calc(25% - 1px), rgba(255, 255, 255, 0.55) calc(25% - 1px) calc(25% + 1px), transparent calc(25% + 1px) calc(50% - 1px), rgba(255, 255, 255, 0.55) calc(50% - 1px) calc(50% + 1px), transparent calc(50% + 1px) calc(75% - 1px), rgba(255, 255, 255, 0.55) calc(75% - 1px) calc(75% + 1px), transparent calc(75% + 1px)),
+                linear-gradient(180deg, #8fb0b7, #45646f);
+            border: 0.02in solid rgba(255, 255, 255, 0.48);
+        }
+
+        .building::after {
+            content: "O";
+            position: absolute;
+            inset: 0.58in 0 0 auto;
+            right: 0.58in;
+            color: #ffd957;
+            font: 900 0.76in/1 Georgia, serif;
+            z-index: 2;
+        }
+
+        .tree {
+            position: absolute;
+            z-index: 3;
+            width: 0.92in;
+            height: 1.28in;
+            border-radius: 50%;
+            background:
+                radial-gradient(circle at 30% 32%, #2f812f 0 0.18in, transparent 0.19in),
+                radial-gradient(circle at 62% 26%, #1f6e25 0 0.22in, transparent 0.23in),
+                radial-gradient(circle at 48% 54%, #398f36 0 0.28in, transparent 0.29in),
+                linear-gradient(90deg, #75451f 0 0.08in, transparent 0.08in);
+            background-position: center bottom;
+            background-repeat: no-repeat;
+        }
+
+        .tree--left {
+            left: 0.08in;
+            top: 0.3in;
+            transform: rotate(-8deg);
+        }
+
+        .tree--right {
+            right: -0.08in;
+            top: 0.18in;
+            transform: rotate(7deg) scale(1.08);
+        }
+
+        .crowd {
+            position: absolute;
+            left: 0.02in;
+            right: 0;
+            bottom: 0.02in;
+            z-index: 5;
+            height: 1.6in;
+        }
+
+        .crowd::before {
+            content: "";
+            position: absolute;
+            left: 0.12in;
+            right: 0.08in;
+            bottom: 0.04in;
+            height: 0.64in;
+            background:
+                radial-gradient(circle at 6% 18%, #8d5c35 0 0.055in, transparent 0.06in),
+                radial-gradient(circle at 16% 9%, #1b1b1b 0 0.06in, transparent 0.065in),
+                radial-gradient(circle at 27% 15%, #a36b3d 0 0.055in, transparent 0.06in),
+                radial-gradient(circle at 38% 10%, #754722 0 0.058in, transparent 0.063in),
+                radial-gradient(circle at 50% 17%, #121212 0 0.055in, transparent 0.06in),
+                radial-gradient(circle at 62% 11%, #b57945 0 0.058in, transparent 0.063in),
+                radial-gradient(circle at 74% 16%, #8d5c35 0 0.055in, transparent 0.06in),
+                radial-gradient(circle at 86% 9%, #111 0 0.058in, transparent 0.063in),
+                linear-gradient(90deg, transparent 0 1%, var(--purple-2) 1% 10%, transparent 10% 13%, var(--purple-2) 13% 22%, transparent 22% 25%, var(--purple-2) 25% 34%, transparent 34% 37%, var(--purple-2) 37% 46%, transparent 46% 49%, var(--purple-2) 49% 58%, transparent 58% 61%, var(--purple-2) 61% 70%, transparent 70% 73%, var(--purple-2) 73% 82%, transparent 82% 85%, var(--purple-2) 85% 94%, transparent 94%);
+        }
+
+        .person {
+            position: absolute;
+            bottom: 0;
+            width: 0.26in;
+            height: 0.7in;
+            background: var(--purple-2);
+            border-radius: 0.11in 0.11in 0.02in 0.02in;
+        }
+
+        .person::before {
+            content: "";
+            position: absolute;
+            left: 0.05in;
+            top: -0.17in;
+            width: 0.16in;
+            height: 0.16in;
+            border-radius: 50%;
+            background: #9a6a3b;
+            box-shadow: 0.02in 0.02in 0 rgba(0, 0, 0, 0.16);
+        }
+
+        .person::after {
+            content: "";
+            position: absolute;
+            left: -0.08in;
+            top: 0.08in;
+            width: 0.42in;
+            height: 0.05in;
+            background: #9a6a3b;
+            transform: rotate(-22deg);
+            transform-origin: right center;
+        }
+
+        .person:nth-child(1) { left: 0.18in; transform: scale(0.9); }
+        .person:nth-child(2) { left: 0.52in; transform: scale(1.05); }
+        .person:nth-child(3) { left: 0.86in; transform: scale(0.86); }
+        .person:nth-child(4) { left: 1.24in; transform: scale(1.12); }
+        .person:nth-child(5) { left: 1.62in; transform: scale(0.95); }
+        .person:nth-child(6) { left: 2.0in; transform: scale(1.08); }
+        .person:nth-child(7) { left: 2.38in; transform: scale(0.92); }
+        .person:nth-child(8) { left: 2.74in; transform: scale(1.06); }
+        .person:nth-child(9) { left: 3.08in; transform: scale(0.92); }
+
+        .sign {
+            position: absolute;
+            z-index: 7;
+            width: 0.82in;
+            min-height: 0.62in;
+            padding: 0.07in 0.05in;
+            background: var(--purple-2);
+            border: 0.02in solid var(--white);
+            color: var(--white);
+            font-size: 0.15in;
+            line-height: 0.98;
+            text-align: center;
+            text-transform: uppercase;
+            box-shadow: 0 0.03in 0 rgba(0, 0, 0, 0.18);
+        }
+
+        .sign::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 100%;
+            width: 0.035in;
+            height: 0.55in;
+            background: #8f6333;
+            transform: translateX(-50%);
+        }
+
+        .sign strong {
+            color: var(--yellow);
+        }
+
+        .sign--one {
+            left: 0.38in;
+            top: 1.52in;
+            transform: rotate(3deg);
+        }
+
+        .sign--two {
+            left: 1.46in;
+            top: 1.82in;
+            width: 0.62in;
+            transform: rotate(-2deg);
+        }
+
+        .sign--three {
+            left: 2.32in;
+            top: 1.36in;
+            width: 0.76in;
+            transform: rotate(-8deg);
+        }
+
+        .sign--four {
+            right: 0.02in;
+            top: 1.76in;
+            width: 0.57in;
+            transform: rotate(5deg);
+            font-size: 0.16in;
+        }
+
+        .yellow-band {
+            position: absolute;
+            left: -0.12in;
+            top: 4.08in;
+            width: 8.75in;
+            height: 2.22in;
+            z-index: 6;
+            display: grid;
+            grid-template-columns: 4.36in 1px 2.98in;
+            align-items: center;
+            gap: 0.16in;
+            padding: 0.24in 0.48in 0.22in;
+            background: var(--yellow);
+            clip-path: polygon(0 7%, 100% 0, 98% 92%, 89% 96%, 72% 94%, 44% 100%, 7% 96%, 0 86%);
+        }
+
+        .yellow-band::before,
+        .yellow-band::after {
+            left: 0.12in;
+            right: 0.16in;
+            height: 0.12in;
+            background: repeating-linear-gradient(90deg, var(--yellow) 0 0.28in, transparent 0.28in 0.4in);
+        }
+
+        .yellow-band::before {
+            top: -0.05in;
+        }
+
+        .yellow-band::after {
+            bottom: -0.05in;
+        }
+
+        .win-copy {
+            margin: 0;
+            color: var(--purple);
+            font-size: 0.405in;
+            line-height: 0.9;
+            letter-spacing: 0.01em;
+            transform: rotate(-2deg) skew(-8deg);
+            text-transform: uppercase;
+        }
+
+        .win-copy .white-win {
+            display: block;
+            margin-top: 0.08in;
+            color: var(--white);
+            font-size: 0.62in;
+            line-height: 0.84;
+            text-shadow: 0.03in 0.03in 0 rgba(36, 16, 95, 0.06);
+        }
+
+        .purple-underline {
+            display: block;
+            width: 3.35in;
+            height: 0.09in;
+            margin: 0.08in 0 0 0.68in;
+            background: var(--purple);
+            clip-path: polygon(0 60%, 100% 0, 97% 72%, 7% 100%);
+        }
+
+        .band-rule {
+            width: 1px;
+            height: 1.62in;
+            background: var(--purple);
+            opacity: 0.9;
+        }
+
+        .band-message {
+            margin: 0;
+            color: var(--purple);
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 0.188in;
+            line-height: 1.11;
+            font-weight: 900;
+        }
+
+        .details-strip {
+            position: absolute;
+            left: 0.2in;
+            top: 6.46in;
+            width: 8.08in;
+            height: 1.32in;
+            z-index: 7;
+            display: grid;
+            grid-template-columns: 1.92in 2.05in 1px 2.98in;
+            align-items: center;
+            gap: 0.13in;
+            padding: 0.14in 0.4in 0.14in 0.2in;
+            color: var(--white);
+            background: var(--purple);
+            clip-path: polygon(0 6%, 99% 0, 100% 14%, 99% 88%, 94% 96%, 6% 100%, 0 86%);
+        }
+
+        .detail-group {
+            display: grid;
+            grid-template-columns: 0.7in 1fr;
+            align-items: center;
+            gap: 0.12in;
+        }
+
+        .detail-icon {
+            width: 0.64in;
+            height: 0.64in;
+            color: var(--yellow);
+        }
+
+        .date-copy {
+            display: grid;
+            gap: 0.02in;
+            text-transform: uppercase;
+        }
+
+        .date-copy .small {
+            font-size: 0.21in;
+            line-height: 0.9;
+        }
+
+        .date-copy .large {
+            font-size: 0.4in;
+            line-height: 0.86;
+        }
+
+        .time-copy {
+            display: grid;
+            gap: 0.09in;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 900;
+        }
+
+        .time-copy p,
+        .location-copy p {
+            margin: 0;
+        }
+
+        .time-copy .time {
+            display: block;
+            font-size: 0.225in;
+            line-height: 1;
+        }
+
+        .time-copy .label {
+            display: block;
+            margin-top: 0.02in;
+            font-size: 0.135in;
+            line-height: 1.05;
+            text-transform: uppercase;
+        }
+
+        .strip-rule {
+            width: 1px;
+            height: 0.9in;
+            background: rgba(255, 255, 255, 0.72);
+        }
+
+        .location {
+            display: grid;
+            grid-template-columns: 0.64in 1fr;
+            align-items: center;
+            gap: 0.14in;
+        }
+
+        .location-copy {
+            font-family: Arial, Helvetica, sans-serif;
+            text-transform: uppercase;
+        }
+
+        .location-copy .label {
+            font-size: 0.14in;
+            font-weight: 900;
+            line-height: 1.05;
+        }
+
+        .location-copy .place {
+            margin-top: 0.04in;
+            font-size: 0.105in;
+            line-height: 1.18;
+        }
+
+        .organizer-row {
+            position: absolute;
+            left: 0.2in;
+            right: 0.2in;
+            top: 7.98in;
+            height: 1.55in;
+            z-index: 5;
+            display: grid;
+            grid-template-columns: 2.62in 2.45in 1fr;
+            align-items: end;
+            gap: 0.22in;
+        }
+
+        .silhouette-block {
+            position: relative;
+            height: 1.5in;
+            overflow: hidden;
+            border-bottom: 0.09in solid var(--purple);
+        }
+
+        .sil-person {
+            position: absolute;
+            bottom: -0.01in;
+            width: 0.24in;
+            height: 0.56in;
+            background: var(--purple);
+            border-radius: 0.12in 0.12in 0 0;
+        }
+
+        .sil-person::before {
+            content: "";
+            position: absolute;
+            top: -0.19in;
+            left: 0.02in;
+            width: 0.2in;
+            height: 0.2in;
+            border-radius: 50%;
+            background: var(--purple);
+        }
+
+        .sil-person:nth-child(1) { left: 0.02in; transform: scale(0.82); }
+        .sil-person:nth-child(2) { left: 0.38in; transform: scale(1.02); }
+        .sil-person:nth-child(3) { left: 0.82in; transform: scale(0.9); }
+        .sil-person:nth-child(4) { left: 1.24in; transform: scale(1.1); }
+        .sil-person:nth-child(5) { left: 1.82in; transform: scale(0.95); }
+
+        .mini-sign {
+            position: absolute;
+            top: 0.08in;
+            width: 0.76in;
+            height: 0.54in;
+            padding: 0.07in 0.05in;
+            background: var(--purple);
+            color: var(--white);
+            border: 0.02in solid var(--white);
+            font-size: 0.14in;
+            line-height: 0.96;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        .mini-sign::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 100%;
+            width: 0.04in;
+            height: 0.62in;
+            background: var(--purple);
+            transform: translateX(-50%);
+        }
+
+        .mini-sign:nth-of-type(1) {
+            left: 0.02in;
+            transform: rotate(-3deg);
+        }
+
+        .mini-sign:nth-of-type(2) {
+            left: 0.88in;
+            transform: rotate(2deg);
+        }
+
+        .mini-sign:nth-of-type(3) {
+            left: 1.7in;
+            transform: rotate(-3deg);
+        }
+
+        .voice-copy {
+            align-self: center;
+            color: var(--purple);
+            text-transform: uppercase;
+            transform: rotate(-3deg) skew(-7deg);
+        }
+
+        .voice-copy p {
+            margin: 0;
+            font-size: 0.32in;
+            line-height: 0.95;
+        }
+
+        .voice-copy .future {
+            margin-top: 0.04in;
+            color: var(--yellow);
+            font-size: 0.34in;
+        }
+
+        .voice-copy .voice-line {
+            display: block;
+            width: 2.08in;
+            height: 0.06in;
+            margin-top: 0.05in;
+            background: var(--purple);
+            clip-path: polygon(0 64%, 100% 0, 96% 72%, 7% 100%);
+        }
+
+        .qr-pair {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.28in;
+            align-self: start;
+            padding-top: 0.02in;
+        }
+
+        .qr-card {
+            display: grid;
+            justify-items: center;
+            color: var(--purple);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .qr-box {
+            width: 1.05in;
+            height: 1.05in;
+            border: 0.03in solid var(--purple);
+            border-radius: 0.06in;
+            background:
+                linear-gradient(45deg, transparent 0 45%, rgba(36, 16, 95, 0.06) 45% 55%, transparent 55%),
+                #ffffff;
+        }
+
+        .qr-label {
+            position: relative;
+            margin-top: 0.08in;
+            font-size: 0.15in;
+            font-weight: 900;
+            line-height: 1;
+            text-transform: uppercase;
+        }
+
+        .qr-label::after {
+            content: "";
+            position: absolute;
+            right: -0.32in;
+            top: -0.24in;
+            width: 0.26in;
+            height: 0.32in;
+            border-right: 0.03in solid var(--purple);
+            border-bottom: 0.03in solid var(--purple);
+            border-radius: 0 0 0.22in 0;
+            transform: rotate(20deg);
+        }
+
+        .qr-card p {
+            margin: 0.04in 0 0;
+            max-width: 1.18in;
+            color: #20173f;
+            font-size: 0.13in;
+            line-height: 1.12;
+            text-align: center;
+        }
+
+        .footer-band {
+            position: absolute;
+            left: -0.08in;
+            right: -0.08in;
+            bottom: -0.02in;
+            height: 1.34in;
+            z-index: 8;
+            display: grid;
+            grid-template-columns: 4.25in 1px 1.55in 1.1in;
+            align-items: center;
+            gap: 0.18in;
+            padding: 0.1in 0.28in 0.1in 0.36in;
+            color: var(--white);
+            background: var(--purple);
+            clip-path: polygon(0 7%, 100% 0, 100% 100%, 0 100%);
+        }
+
+        .footer-message {
+            display: grid;
+            grid-template-columns: 0.78in 1fr;
+            align-items: center;
+            gap: 0.14in;
+        }
+
+        .megaphone {
+            color: var(--yellow);
+            width: 0.74in;
+            height: 0.64in;
+        }
+
+        .footer-copy p {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 0.18in;
+            font-weight: 900;
+            line-height: 1.05;
+        }
+
+        .footer-copy .stay {
+            margin-top: 0.08in;
+            color: var(--yellow);
+            font-family: Impact, "Arial Black", Arial, sans-serif;
+            font-size: 0.23in;
+            font-style: italic;
+            transform: skew(-7deg);
+            text-transform: uppercase;
+        }
+
+        .footer-rule {
+            width: 1px;
+            height: 0.78in;
+            background: rgba(255, 255, 255, 0.7);
+        }
+
+        .social-list {
+            display: grid;
+            gap: 0.075in;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 0.13in;
+            font-weight: 800;
+        }
+
+        .social-item {
+            display: grid;
+            grid-template-columns: 0.22in 1fr;
+            align-items: center;
+            gap: 0.08in;
+        }
+
+        .social-icon {
+            width: 0.2in;
+            height: 0.2in;
+            color: var(--yellow);
+        }
+
+        .logo-block {
+            position: relative;
+            align-self: stretch;
+            display: grid;
+            place-items: center;
+            border: 0.01in solid rgba(255, 255, 255, 0.42);
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0));
+            overflow: hidden;
+        }
+
+        .logo-text {
+            position: relative;
+            z-index: 1;
+            color: var(--white);
+            font-size: 0.28in;
+            line-height: 0.82;
+            font-style: italic;
+            text-align: center;
+        }
+
+        .logo-text span {
+            color: var(--yellow);
+        }
+
+        .logo-block::after {
+            content: "";
+            position: absolute;
+            right: 0.05in;
+            bottom: -0.34in;
+            width: 1.18in;
+            height: 0.62in;
+            border-radius: 50%;
+            border-top: 0.11in solid var(--yellow);
+            transform: rotate(-12deg);
+        }
+
+        @media screen and (max-width: 900px) {
+            body {
+                padding: 12px 8px 72px;
+            }
+
+            .page-controls {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .sheet-stage {
+                width: calc(100vw - 16px);
+                height: calc((100vw - 16px) * 11 / 8.5);
+            }
+
+            .sheet {
+                width: 8.5in;
+                height: 11in;
+                transform: scale(calc((100vw - 16px) / 816));
+                transform-origin: top left;
+            }
+        }
+
+        @page {
+            size: letter portrait;
+            margin: 0;
+        }
+
+        @media print {
+            html,
+            body {
+                width: 8.5in;
+                height: 11in;
+                margin: 0;
+                padding: 0;
+                background: #ffffff;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            .no-print {
+                display: none !important;
+            }
+
+            .sheet-stage {
+                width: 8.5in;
+                height: 11in;
+                margin: 0;
+            }
+
+            .sheet {
+                width: 8.5in;
+                height: 11in;
+                margin: 0;
+                transform: none;
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link no-print">Skip to flyer</a>
+
+    <div class="page-controls no-print" aria-label="Print controls">
+        <p>Print at 100% scale on letter paper. QR boxes are placeholders only.</p>
+        <button type="button" class="print-button" onclick="window.print()">Print / Save PDF</button>
+    </div>
+
+    <div class="sheet-stage">
+    <main id="main-content" class="sheet" aria-label="SEIU 503 University of Oregon rally flyer">
+        <header class="top-banner brush" aria-label="SEIU 503 stronger together">
+            <div class="brand-lockup"><span>SEIU</span><span class="brand-number">503</span></div>
+            <div class="tagline">Stronger Together.</div>
+        </header>
+
+        <section class="hero-title" aria-label="Rally at U of O">
+            <h1 class="rally-word">Rally</h1>
+            <div class="uo-lockup">
+                <div class="at-stack">
+                    <span class="at">At</span>
+                    <span class="mini-brush" aria-hidden="true"></span>
+                </div>
+                <span class="uo-letter">U</span>
+                <span class="of">of</span>
+                <span class="uo-letter">O</span>
+            </div>
+        </section>
+
+        <section class="campus-scene" aria-label="Stylized University of Oregon rally scene">
+            <div class="building" aria-hidden="true"></div>
+            <div class="tree tree--left" aria-hidden="true"></div>
+            <div class="tree tree--right" aria-hidden="true"></div>
+            <div class="sign sign--one">Our work.<br>Our union.<br><strong>Our future.</strong></div>
+            <div class="sign sign--two">Fair<br>contract<br>now!</div>
+            <div class="sign sign--three">Fiercer<br>we<br>win!</div>
+            <div class="sign sign--four">SEIU<br><strong>503</strong></div>
+            <div class="crowd" aria-hidden="true">
+                <span class="person"></span>
+                <span class="person"></span>
+                <span class="person"></span>
+                <span class="person"></span>
+                <span class="person"></span>
+                <span class="person"></span>
+                <span class="person"></span>
+                <span class="person"></span>
+                <span class="person"></span>
+            </div>
+        </section>
+
+        <section class="yellow-band brush" aria-label="Rally message">
+            <div>
+                <p class="win-copy">We show up.<br>We speak out.<span class="white-win">We win!</span></p>
+                <span class="purple-underline" aria-hidden="true"></span>
+            </div>
+            <span class="band-rule" aria-hidden="true"></span>
+            <p class="band-message">We’re rallying for a fair contract that values our work, respects our contributions, and builds a better university for all.</p>
+        </section>
+
+        <section class="details-strip" aria-label="Rally date time and location">
+            <div class="detail-group">
+                <svg class="detail-icon" viewBox="0 0 64 64" role="img" aria-label="Calendar icon">
+                    <rect x="8" y="12" width="48" height="44" rx="5" fill="none" stroke="currentColor" stroke-width="6"/>
+                    <path d="M18 8v12M46 8v12M10 26h44" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round"/>
+                    <path d="M18 34h8v8h-8zM30 34h8v8h-8zM42 34h8v8h-8zM18 46h8v6h-8zM30 46h8v6h-8z" fill="currentColor"/>
+                </svg>
+                <div class="date-copy">
+                    <span class="small">Thursday</span>
+                    <span class="large">May 15</span>
+                </div>
+            </div>
+            <div class="detail-group">
+                <svg class="detail-icon" viewBox="0 0 64 64" role="img" aria-label="Clock icon">
+                    <circle cx="32" cy="32" r="24" fill="none" stroke="currentColor" stroke-width="6"/>
+                    <path d="M32 17v17l12 8" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <div class="time-copy">
+                    <p><span class="time">12:00 PM</span><span class="label">Rally &amp; Speakers</span></p>
+                    <p><span class="time">12:30 PM</span><span class="label">March to Admin</span></p>
+                </div>
+            </div>
+            <span class="strip-rule" aria-hidden="true"></span>
+            <div class="location">
+                <svg class="detail-icon" viewBox="0 0 64 64" role="img" aria-label="Location pin icon">
+                    <path d="M32 58S13 37 13 24a19 19 0 1 1 38 0c0 13-19 34-19 34z" fill="currentColor"/>
+                    <circle cx="32" cy="24" r="7" fill="var(--purple)"/>
+                </svg>
+                <div class="location-copy">
+                    <p class="label">Rally Location:<br>EMU Amphitheater</p>
+                    <p class="place">13th Ave &amp; University St.<br>Eugene, OR</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="organizer-row" aria-label="Organizer actions and QR placeholders">
+            <div class="silhouette-block" aria-hidden="true">
+                <div class="mini-sign">Respect<br>our work</div>
+                <div class="mini-sign">Fair wages<br>now</div>
+                <div class="mini-sign">Strong<br>together</div>
+                <span class="sil-person"></span>
+                <span class="sil-person"></span>
+                <span class="sil-person"></span>
+                <span class="sil-person"></span>
+                <span class="sil-person"></span>
+            </div>
+            <div class="voice-copy">
+                <p>Your voice.<br>Your union.</p>
+                <p class="future">Our future.</p>
+                <span class="voice-line" aria-hidden="true"></span>
+            </div>
+            <div class="qr-pair">
+                <div class="qr-card">
+                    <div class="qr-box" aria-hidden="true"></div>
+                    <div class="qr-label">RSVP Here!</div>
+                    <p>Let us know you’re coming.</p>
+                </div>
+                <div class="qr-card">
+                    <div class="qr-box" aria-hidden="true"></div>
+                    <div class="qr-label">Need a ride?</div>
+                    <p>Scan to find or offer a ride.</p>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer-band" aria-label="SEIU 503 footer">
+            <div class="footer-message">
+                <svg class="megaphone" viewBox="0 0 96 76" role="img" aria-label="Megaphone icon">
+                    <path d="M12 44h14l42 18V14L26 32H12a10 10 0 0 0 0 12z" fill="none" stroke="currentColor" stroke-width="7" stroke-linejoin="round"/>
+                    <path d="M31 46l7 22h14l-9-18M76 28l12-6M78 42h14M76 56l12 6" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <div class="footer-copy">
+                    <p>When we stand together, we win.</p>
+                    <p class="stay">Stay engaged. Stay united.</p>
+                </div>
+            </div>
+            <span class="footer-rule" aria-hidden="true"></span>
+            <div class="social-list">
+                <div class="social-item">
+                    <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+                    <span>seiu503.org</span>
+                </div>
+                <div class="social-item">
+                    <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="currentColor"/><path d="M13 19v-6h2l1-3h-3V8c0-.8.4-1 1.1-1H16V4.3c-.8-.1-1.6-.2-2.4-.2-2.4 0-4 1.5-4 4.1V10H7v3h2.6v6H13z" fill="var(--purple)"/></svg>
+                    <span>SEIU 503</span>
+                </div>
+                <div class="social-item">
+                    <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17" cy="7" r="1.5" fill="currentColor"/></svg>
+                    <span>@seiu503</span>
+                </div>
+            </div>
+            <div class="logo-block" aria-label="SEIU 503">
+                <div class="logo-text">SEIU<br><span>503</span></div>
+            </div>
+        </footer>
+    </main>
+    </div>
+</body>
+</html>
