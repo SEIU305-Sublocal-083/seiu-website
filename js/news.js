@@ -7,6 +7,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const featuredArticleSection = document.getElementById('featured-article-section');
 
     const escapeAttr = (str) => String(str || '').replace(/"/g, '&quot;');
+    const escapeHTML = window.Sentinel && window.Sentinel.escapeHTML
+        ? window.Sentinel.escapeHTML
+        : (str) => String(str || '').replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
 
     const safeCapture = (name, props = {}) => {
         if (typeof window.phCapture === 'function') {
@@ -162,17 +165,17 @@ document.addEventListener('DOMContentLoaded', () => {
         const altText = article.alt || article.title;
         featuredArticleSection.innerHTML = `
             <div class="bg-white rounded-xl border border-border-color overflow-hidden">
-                <a href="${article.url}" class="block group" data-ph-event="news_article_click" data-ph-label="${article.title}" data-ph-metadata='{"position":"featured"}'>
+                <a href="${escapeHTML(article.url)}" class="block group" data-ph-event="news_article_click" data-ph-label="${escapeAttr(article.title)}" data-ph-metadata='{"position":"featured"}'>
                     <div class="grid lg:grid-cols-2">
                         <div class="p-8 lg:p-12">
                             <p class="text-text-secondary text-sm mb-2 font-semibold">FEATURED STORY</p>
-                            <h2 class="text-4xl font-bold mb-4 group-hover:text-brand-purple transition-colors">${article.title}</h2>
-                            <p class="text-text-secondary text-lg mb-6">${article.description}</p>
+                            <h2 class="text-4xl font-bold mb-4 group-hover:text-brand-purple transition-colors">${escapeHTML(article.title)}</h2>
+                            <p class="text-text-secondary text-lg mb-6">${escapeHTML(article.description)}</p>
                             <span class="font-semibold text-brand-purple">Read More →</span>
                         </div>
                         <div class="hidden lg:block">
                             <!-- ⚡ Bolt: Add loading="lazy" to defer offscreen images and improve initial page load time -->
-                            <img src="${article.image}" alt="${altText}" class="w-full h-full object-cover" loading="lazy">
+                            <img src="${escapeHTML(article.image)}" alt="${escapeHTML(altText)}" class="w-full h-full object-cover" loading="lazy">
                         </div>
                     </div>
                 </a>
@@ -226,22 +229,22 @@ document.addEventListener('DOMContentLoaded', () => {
             const altText = article.alt || article.title;
 
             articleCard.innerHTML = `
-                <a href="${article.url}" class="group flex flex-col h-full flex-grow" data-ph-event="news_article_click" data-ph-label="${escapeAttr(article.title)}" data-ph-metadata='{"position":"grid"}'>
+                <a href="${escapeHTML(article.url)}" class="group flex flex-col h-full flex-grow" data-ph-event="news_article_click" data-ph-label="${escapeAttr(article.title)}" data-ph-metadata='{"position":"grid"}'>
                     <!-- ⚡ Bolt: Add loading="lazy" to defer offscreen images and improve initial page load time -->
-                    <img src="${article.image}" alt="${altText}" class="w-full h-48 object-cover" loading="lazy">
+                    <img src="${escapeHTML(article.image)}" alt="${escapeHTML(altText)}" class="w-full h-48 object-cover" loading="lazy">
                     <div class="p-6 flex-grow">
                         <div class="flex items-center justify-between mb-2">
-                            <p class="text-text-secondary text-sm" title="${dateTooltip}">Last updated: ${formattedDate}</p>
+                            <p class="text-text-secondary text-sm" title="${escapeHTML(dateTooltip)}">Last updated: ${formattedDate}</p>
                         </div>
-                        <h3 class="font-bold text-xl mb-3 group-hover:text-brand-purple transition-colors">${article.title}</h3>
-                        <p class="text-text-secondary">${article.description}</p>
+                        <h3 class="font-bold text-xl mb-3 group-hover:text-brand-purple transition-colors">${escapeHTML(article.title)}</h3>
+                        <p class="text-text-secondary">${escapeHTML(article.description)}</p>
                         <div class="mt-4 flex flex-wrap gap-2">
-                            ${article.tags.map(tag => `<span class="bg-gray-200 text-gray-800 px-2 py-1 rounded-full text-xs">${tag}</span>`).join('')}
+                            ${article.tags.map(tag => `<span class="bg-gray-200 text-gray-800 px-2 py-1 rounded-full text-xs">${escapeHTML(tag)}</span>`).join('')}
                         </div>
                     </div>
                 </a>
                 <div class="bg-gray-50 border-t border-border-color p-4">
-                     <p class="text-sm text-text-secondary">${article.author.name} - ${article.author.title}</p>
+                     <p class="text-sm text-text-secondary">${escapeHTML(article.author.name)} - ${escapeHTML(article.author.title)}</p>
                 </div>
             `;
             articlesGrid.appendChild(articleCard);
