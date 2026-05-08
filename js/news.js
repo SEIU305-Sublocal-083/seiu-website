@@ -6,7 +6,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const tagsContainer = document.getElementById('tags-container');
     const featuredArticleSection = document.getElementById('featured-article-section');
 
-    const escapeAttr = (str) => String(str || '').replace(/"/g, '&quot;');
+    const escapeHtml = (str) => String(str || '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;');
+    const escapeAttr = escapeHtml;
+    const tagHref = (tag) => `/news.html?tag=${encodeURIComponent(tag)}`;
 
     const safeCapture = (name, props = {}) => {
         if (typeof window.phCapture === 'function') {
@@ -90,14 +97,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const campaigns = new Set(['2026 Bargaining', '2026 Elections']);
         const regularTags = [...allTags].filter(tag => !campaigns.has(tag));
+        const requestedTag = new URLSearchParams(window.location.search).get('tag');
+        const requestedActiveTag = [...allTags].find(tag => tag.toLowerCase() === String(requestedTag || '').toLowerCase()) || null;
+        activeFilters.activeTag = requestedActiveTag;
 
         // "All" button
         const allButton = createTagButton('All');
-        allButton.classList.add('active');
-        allButton.setAttribute('aria-pressed', 'true');
+        if (!activeFilters.activeTag) {
+            allButton.classList.add('active');
+            allButton.setAttribute('aria-pressed', 'true');
+        }
         allButton.addEventListener('click', () => {
             activeFilters.activeTag = null;
             setActiveTag(allButton);
+            updateTagUrl(null);
             renderArticles();
         });
         tagsContainer.appendChild(allButton);
@@ -105,9 +118,14 @@ document.addEventListener('DOMContentLoaded', () => {
         // Regular tags
         regularTags.forEach(tag => {
             const button = createTagButton(tag);
+            if (activeFilters.activeTag === tag) {
+                button.classList.add('active');
+                button.setAttribute('aria-pressed', 'true');
+            }
             button.addEventListener('click', () => {
                 activeFilters.activeTag = tag;
                 setActiveTag(button);
+                updateTagUrl(tag);
                 safeCapture('news_filter_tag', { tag });
                 renderArticles();
             });
@@ -121,7 +139,7 @@ document.addEventListener('DOMContentLoaded', () => {
             details.className = 'relative';
             const summary = document.createElement('summary');
             summary.className = 'cursor-pointer bg-brand-purple-light text-brand-purple-dark px-4 py-2 rounded-full text-sm font-semibold transition-colors hover:bg-brand-purple hover:text-white';
-            summary.textContent = 'Campaigns';
+            summary.textContent = campaigns.has(activeFilters.activeTag) ? activeFilters.activeTag : 'Campaigns';
             const div = document.createElement('div');
             div.className = 'absolute z-10 mt-2 w-48 bg-white rounded-md shadow-lg border border-border-color';
             campaignTags.forEach(tag => {
@@ -135,6 +153,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     setActiveTag(null);
                     summary.textContent = tag;
                     details.removeAttribute('open');
+                    updateTagUrl(tag);
                     safeCapture('news_filter_tag', { tag });
                     renderArticles();
                 });
@@ -153,6 +172,16 @@ document.addEventListener('DOMContentLoaded', () => {
         button.textContent = tag;
         button.setAttribute('aria-pressed', 'false');
         return button;
+    }
+
+    function updateTagUrl(tag) {
+        const url = new URL(window.location.href);
+        if (tag) {
+            url.searchParams.set('tag', tag);
+        } else {
+            url.searchParams.delete('tag');
+        }
+        window.history.replaceState({}, '', `${url.pathname}${url.search}${url.hash}`);
     }
 
     function setActiveTag(activeButton) {
@@ -233,22 +262,24 @@ document.addEventListener('DOMContentLoaded', () => {
             const altText = article.alt || article.title;
 
             articleCard.innerHTML = `
-                <a href="${article.url}" class="group flex flex-col h-full flex-grow" data-ph-event="news_article_click" data-ph-label="${escapeAttr(article.title)}" data-ph-metadata='{"position":"grid"}'>
+                <a href="${article.url}" class="group block" data-ph-event="news_article_click" data-ph-label="${escapeAttr(article.title)}" data-ph-metadata='{"position":"grid"}'>
                     <!-- ⚡ Bolt: Add loading="lazy" to defer offscreen images and improve initial page load time -->
-                    <img src="${article.image}" alt="${altText}" class="w-full h-48 object-cover" loading="lazy">
-                    <div class="p-6 flex-grow">
-                        <div class="flex items-center justify-between mb-2">
-                            <p class="text-text-secondary text-sm" title="${dateTooltip}">Last updated: ${article.formattedUpdatedAt}</p>
-                        </div>
-                        <h3 class="font-bold text-xl mb-3 group-hover:text-brand-purple transition-colors">${article.title}</h3>
-                        <p class="text-text-secondary">${article.description}</p>
-                        <div class="mt-4 flex flex-wrap gap-2">
-                            ${article.tags.map(tag => `<span class="bg-gray-200 text-gray-800 px-2 py-1 rounded-full text-xs">${tag}</span>`).join('')}
-                        </div>
-                    </div>
+                    <img src="${article.image}" alt="${escapeAttr(altText)}" class="w-full h-48 object-cover" loading="lazy">
                 </a>
+                <div class="p-6 flex-grow">
+                    <div class="flex items-center justify-between mb-2">
+                        <p class="text-text-secondary text-sm" title="${escapeAttr(dateTooltip)}">Last updated: ${article.formattedUpdatedAt}</p>
+                    </div>
+                    <a href="${article.url}" class="group block" data-ph-event="news_article_click" data-ph-label="${escapeAttr(article.title)}" data-ph-metadata='{"position":"grid"}'>
+                        <h3 class="font-bold text-xl mb-3 group-hover:text-brand-purple transition-colors">${escapeHtml(article.title)}</h3>
+                        <p class="text-text-secondary">${escapeHtml(article.description)}</p>
+                    </a>
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        ${article.tags.map(tag => `<a href="${tagHref(tag)}" class="bg-gray-200 text-gray-800 px-2 py-1 rounded-full text-xs hover:bg-brand-purple hover:text-white transition-colors" data-ph-event="news_tag_click" data-ph-label="${escapeAttr(tag)}">${escapeHtml(tag)}</a>`).join('')}
+                    </div>
+                </div>
                 <div class="bg-gray-50 border-t border-border-color p-4">
-                     <p class="text-sm text-text-secondary">${article.author.name} - ${article.author.title}</p>
+                     <p class="text-sm text-text-secondary">${escapeHtml(article.author.name)} - ${escapeHtml(article.author.title)}</p>
                 </div>
             `;
             articlesGrid.appendChild(articleCard);
