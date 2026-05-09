@@ -620,6 +620,11 @@
              * });
              */
 
+            // --- Helpers ---
+            const escapeHTML = window.Sentinel && window.Sentinel.escapeHTML
+                ? window.Sentinel.escapeHTML
+                : (str) => String(str || '').replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
+
             // --- Load Upcoming Events ---
             const safeCapture = (name, props = {}) => {
                 if (typeof window.phCapture === 'function') window.phCapture(name, props);
@@ -669,7 +674,7 @@
                                 timeHtml = `
                                 <div class="flex items-center text-text-secondary">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.414-1.414L11 9.586V6z" clip-rule="evenodd" /></svg>
-                                    <span>${event.time.split(' - ')[0]}</span>
+                                    <span>${escapeHTML(event.time.split(' - ')[0])}</span>
                                 </div>`;
                             }
 
@@ -677,15 +682,15 @@
                                 <div class="bg-white rounded-xl border border-border-color overflow-hidden flex flex-col">
                                     <div class="p-6 flex-grow">
                                         <div class="flex items-center justify-between mb-4">
-                                            <div class="bg-brand-purple-light text-brand-purple-dark font-bold rounded-full px-3 py-1 text-sm">${event.type}</div>
+                                            <div class="bg-brand-purple-light text-brand-purple-dark font-bold rounded-full px-3 py-1 text-sm">${escapeHTML(event.type)}</div>
                                             ${timeHtml}
                                         </div>
-                                        <h3 class="font-bold text-2xl mb-2">${event.title}</h3>
-                                        <p class="text-text-secondary">${event.description}</p>
+                                        <h3 class="font-bold text-2xl mb-2">${escapeHTML(event.title)}</h3>
+                                        <p class="text-text-secondary">${escapeHTML(event.description)}</p>
                                     </div>
                                     <div class="bg-gray-50 border-t border-border-color p-4 flex items-center justify-between">
-                                        <div class="font-bold text-text-primary">${formattedDate}</div>
-                                        <a href="${event.url}" class="text-brand-purple font-semibold hover:underline">More Info →</a>
+                                        <div class="font-bold text-text-primary">${escapeHTML(formattedDate)}</div>
+                                        <a href="${escapeHTML(event.url)}" class="text-brand-purple font-semibold hover:underline">More Info →</a>
                                     </div>
                                 </div>
                             `;
@@ -724,18 +729,18 @@
 
                         const mainStoryHtml = `
                             <div class="lg:col-span-1 bg-white rounded-xl border border-border-color p-6 group">
-                                <p class="text-text-secondary text-sm mb-2">${mainStory.formattedPublishedAt}</p>
-                                <h3 class="font-bold text-2xl md:text-3xl mb-3">${mainStory.title}</h3>
-                                <p class="text-text-secondary">${mainStory.description}</p>
-                                <a href="${mainStory.url}" class="text-brand-purple font-semibold mt-4 inline-block group-hover:underline">Read More →</a>
+                                <p class="text-text-secondary text-sm mb-2">${escapeHTML(mainStory.formattedPublishedAt)}</p>
+                                <h3 class="font-bold text-2xl md:text-3xl mb-3">${escapeHTML(mainStory.title)}</h3>
+                                <p class="text-text-secondary">${escapeHTML(mainStory.description)}</p>
+                                <a href="${escapeHTML(mainStory.url)}" class="text-brand-purple font-semibold mt-4 inline-block group-hover:underline">Read More →</a>
                             </div>`;
                         
                         const sideStoriesHtml = sideStories.map(story => `
                             <div class="bg-white rounded-xl border border-border-color p-6 group">
-                                <p class="text-text-secondary text-sm mb-2">${story.formattedPublishedAt}</p>
-                                <h3 class="font-bold text-xl mb-3">${story.title}</h3>
-                                <p class="text-text-secondary">${story.description}</p>
-                                <a href="${story.url}" class="text-brand-purple font-semibold mt-4 inline-block group-hover:underline">Learn More →</a>
+                                <p class="text-text-secondary text-sm mb-2">${escapeHTML(story.formattedPublishedAt)}</p>
+                                <h3 class="font-bold text-xl mb-3">${escapeHTML(story.title)}</h3>
+                                <p class="text-text-secondary">${escapeHTML(story.description)}</p>
+                                <a href="${escapeHTML(story.url)}" class="text-brand-purple font-semibold mt-4 inline-block group-hover:underline">Learn More →</a>
                             </div>
                         `).join('');
 
