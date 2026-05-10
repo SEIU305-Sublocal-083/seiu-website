@@ -7,3 +7,8 @@
 **Vulnerability:** JSON response data for Events and News in `index.html` were injected into the DOM via `innerHTML` without escaping, exposing the site to DOM-based Cross-Site Scripting (XSS).
 **Learning:** Even though the JSON payload comes from a trusted internal source (`/events/events.json` and `/news/news.json`), client-side XSS vulnerabilities manifest if data is directly interpolated into HTML strings. The missing shared `escapeHTML` helper highlighted that scripts embedded directly in HTML files (like the one in `index.html`) can be easily overlooked.
 **Prevention:** Ensured the `escapeHTML` helper was defined locally in `index.html` (falling back to `window.Sentinel.escapeHTML` if available) and wrapped all dynamic interpolations (`event.title`, `event.time`, `story.description`, etc.) before rendering. Continue to systematically audit any remaining instances of `innerHTML` across other views (like `events.html`).
+
+## 2025-05-11 - [DOM-based XSS in Events Page]
+**Vulnerability:** JSON response data for Events in `events.html` were injected into the DOM via `innerHTML` without escaping, exposing the site to DOM-based Cross-Site Scripting (XSS).
+**Learning:** Similarly to `index.html`, `events.html` contained embedded script tags with client-side rendering logic parsing data into `.innerHTML` strings without calling an escaping helper, relying purely on the backend for sanitization.
+**Prevention:** Injected a localized `escapeHTML` and `escapeAttr` helper function within `events.html`'s script. Wrapped all dynamically interpolated fields (e.g., `event.title`, `event.url`, `event.time`) within `renderUpcomingEvents`, `renderStackedEvents`, and `renderPastEvents` before they are assigned to `.innerHTML`.
