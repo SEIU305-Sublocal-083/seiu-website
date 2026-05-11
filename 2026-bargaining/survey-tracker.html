@@ -10,6 +10,7 @@
     <link rel="apple-touch-icon" href="/images/logo.png">
     <style>html{visibility:hidden;}html.tw-ready{visibility:visible;}</style>
     <script src="https://cdn.tailwindcss.com" onload="document.documentElement.classList.add('tw-ready')"></script>
+    <script src="/js/utils.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Lora:wght@400;500;700&display=swap" rel="stylesheet">
@@ -262,6 +263,10 @@
 
             // --- Render Trackers ---
             const trackerContainer = document.getElementById('tracker-container');
+            const escapeHTML = window.Sentinel && window.Sentinel.escapeHTML
+                ? window.Sentinel.escapeHTML
+                : (str) => String(str || '').replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
+
             if (trackerContainer) {
                 if (departmentData.length > 0) {
                     trackerContainer.innerHTML = departmentData.map(dept => {
@@ -269,7 +274,7 @@
                         return `
                             <div class="bg-white p-6 md:p-8 rounded-xl border border-border-color shadow-md">
                                 <div class="flex justify-between items-baseline mb-3">
-                                    <h2 class="text-3xl font-bold">${dept.name}</h2>
+                                    <h2 class="text-3xl font-bold">${escapeHTML(dept.name)}</h2>
                                     <p class="text-xl font-semibold text-text-secondary">
                                         <span class="text-brand-purple-dark text-2xl">${dept.completed}</span> / ${dept.total}
                                     </p>
