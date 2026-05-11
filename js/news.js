@@ -295,8 +295,9 @@ document.addEventListener('DOMContentLoaded', () => {
             if (value.trim().length >= 2) {
                 safeCapture('news_search', { term: value.trim() });
             }
+            // ⚡ Bolt: Debounce search input to reduce DOM manipulations and refiltering on every keystroke
+            renderArticles();
         }, 250);
-        renderArticles();
     });
 
     sortSelect.addEventListener('change', (e) => {
