@@ -7,3 +7,7 @@
 ## 2024-05-18 - [Missing Debounce on Render]
 **Learning:** [Discovered a pattern where search input analytics were debounced, but the actual heavy DOM rendering and array filtering/sorting (`renderArticles`) was left synchronous on every keystroke, causing unnecessary main thread blocking.]
 **Action:** [Always ensure that expensive rendering logic is included within the debounce timeout along with analytics when handling frequent input events.]
+
+## 2024-05-18 - [DOM Layout Thrashing]
+**Learning:** [Repeatedly appending to the DOM within loops (like `appendChild` in a `forEach` loop for news articles or tags) causes unnecessary layout recalculations and repaints, severely degrading rendering performance on large lists.]
+**Action:** [Batch DOM updates using `innerHTML = array.map().join('')` for list rendering, or use a `DocumentFragment` to build complex nested elements in memory before appending to the live DOM once.]
