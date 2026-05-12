@@ -262,20 +262,20 @@ document.addEventListener('DOMContentLoaded', () => {
             const altText = article.alt || article.title;
 
             articleCard.innerHTML = `
-                <a href="${article.url}" class="group block" data-ph-event="news_article_click" data-ph-label="${escapeAttr(article.title)}" data-ph-metadata='{"position":"grid"}'>
+                <a href="${escapeAttr(article.url)}" class="group block" data-ph-event="news_article_click" data-ph-label="${escapeAttr(article.title)}" data-ph-metadata='{"position":"grid"}'>
                     <!-- ⚡ Bolt: Add loading="lazy" to defer offscreen images and improve initial page load time -->
-                    <img src="${article.image}" alt="${escapeAttr(altText)}" class="w-full h-48 object-cover" loading="lazy">
+                    <img src="${escapeAttr(article.image)}" alt="${escapeAttr(altText)}" class="w-full h-48 object-cover" loading="lazy">
                 </a>
                 <div class="p-6 flex-grow">
                     <div class="flex items-center justify-between mb-2">
-                        <p class="text-text-secondary text-sm" title="${escapeAttr(dateTooltip)}">Last updated: ${article.formattedUpdatedAt}</p>
+                        <p class="text-text-secondary text-sm" title="${escapeAttr(dateTooltip)}">Last updated: ${escapeHtml(article.formattedUpdatedAt)}</p>
                     </div>
-                    <a href="${article.url}" class="group block" data-ph-event="news_article_click" data-ph-label="${escapeAttr(article.title)}" data-ph-metadata='{"position":"grid"}'>
+                    <a href="${escapeAttr(article.url)}" class="group block" data-ph-event="news_article_click" data-ph-label="${escapeAttr(article.title)}" data-ph-metadata='{"position":"grid"}'>
                         <h3 class="font-bold text-xl mb-3 group-hover:text-brand-purple transition-colors">${escapeHtml(article.title)}</h3>
                         <p class="text-text-secondary">${escapeHtml(article.description)}</p>
                     </a>
                     <div class="mt-4 flex flex-wrap gap-2">
-                        ${article.tags.map(tag => `<a href="${tagHref(tag)}" class="bg-gray-200 text-gray-800 px-2 py-1 rounded-full text-xs hover:bg-brand-purple hover:text-white transition-colors" data-ph-event="news_tag_click" data-ph-label="${escapeAttr(tag)}">${escapeHtml(tag)}</a>`).join('')}
+                        ${article.tags.map(tag => `<a href="${escapeAttr(tagHref(tag))}" class="bg-gray-200 text-gray-800 px-2 py-1 rounded-full text-xs hover:bg-brand-purple hover:text-white transition-colors" data-ph-event="news_tag_click" data-ph-label="${escapeAttr(tag)}">${escapeHtml(tag)}</a>`).join('')}
                     </div>
                 </div>
                 <div class="bg-gray-50 border-t border-border-color p-4">

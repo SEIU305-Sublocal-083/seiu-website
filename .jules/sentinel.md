@@ -17,3 +17,8 @@
 **Vulnerability:** User-controlled data for the featured news article (`article.url`, `article.title`, `article.description`, `article.image`) was injected into the DOM via `innerHTML` without escaping in `js/news.js`. A similar vulnerability existed in `2026-bargaining/survey-tracker.html` where department names were directly interpolated.
 **Learning:** Even when the main rendering loops (like `displayArticles` in `js/news.js`) implement proper sanitization, secondary rendering paths (like the featured article banner or one-off campaign trackers) are often overlooked. This inconsistency creates critical blind spots for DOM-based XSS.
 **Prevention:** Apply `escapeHTML` (and `escapeAttr` for attributes) universally to *all* properties injected into HTML strings, regardless of where they appear on the page or whether the component is a "one-off". Consistent use of a shared library (`utils.js`) helps maintain this standard across both external scripts and inline script tags.
+
+## 2025-05-12 - [DOM-based XSS in News Articles Grid]
+**Vulnerability:** User-controlled data for the news articles grid (`article.url`, `article.image`, `article.formattedUpdatedAt` and tag URLs) was injected into the DOM via `innerHTML` without escaping in `js/news.js`.
+**Learning:** Even though `renderFeaturedArticle` correctly escaped attributes, `displayArticles` (the main render loop) missed them for `url` and `image`. This highlights the need for consistency across all rendering paths, not just secondary ones.
+**Prevention:** Apply `escapeHTML` (and `escapeAttr` for attributes) universally to *all* properties injected into HTML strings across *all* rendering loops. Consistent use of shared helper functions prevents these oversights.
