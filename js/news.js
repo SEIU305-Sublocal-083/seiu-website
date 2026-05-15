@@ -62,10 +62,13 @@ document.addEventListener('DOMContentLoaded', () => {
             allArticles = await response.json();
 
             // ⚡ Bolt: Pre-format dates to avoid redundant formatting in display loop
+            // ⚡ Bolt: Pre-calculate lowercase search strings to prevent redundant string allocations and operations (.toLowerCase()) within render loops
             allArticles.forEach(article => {
                 if (article.updatedAt) {
                     article.formattedUpdatedAt = new Date(article.updatedAt + 'T00:00:00').toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
                 }
+                article.searchTitle = article.title.toLowerCase();
+                article.searchDescription = article.description.toLowerCase();
             });
 
             allArticles = allArticles.filter(isPublicArticle);
@@ -223,9 +226,10 @@ document.addEventListener('DOMContentLoaded', () => {
         // Filter by search term
         if (activeFilters.searchTerm) {
             const term = activeFilters.searchTerm.toLowerCase();
+            // ⚡ Bolt: Use pre-calculated lowercase search strings instead of calling toLowerCase() on title and description repeatedly
             filteredArticles = filteredArticles.filter(article =>
-                article.title.toLowerCase().includes(term) ||
-                article.description.toLowerCase().includes(term)
+                article.searchTitle.includes(term) ||
+                article.searchDescription.includes(term)
             );
         }
 
