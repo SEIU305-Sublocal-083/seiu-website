@@ -342,7 +342,7 @@
         // --- Passcode Copy Functionality ---
         const passcodeContainer = document.getElementById('passcode-container');
         const passcodeTextElement = document.getElementById('passcode-text');
-        const originalPasscodeText = passcodeTextElement.innerHTML;
+        const originalPasscodeText = passcodeTextElement.textContent;
         const passcode = '942666';
 
         passcodeContainer.addEventListener('click', () => {
@@ -356,7 +356,7 @@
             passcodeTextElement.textContent = 'Copied!';
             
             setTimeout(() => {
-                passcodeTextElement.innerHTML = originalPasscodeText;
+                passcodeTextElement.textContent = originalPasscodeText;
             }, 2000);
         });
     </script>
