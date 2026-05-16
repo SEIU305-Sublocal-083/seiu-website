@@ -279,7 +279,7 @@
         const passcodeContainer = document.getElementById('passcode-container');
         if (passcodeContainer) {
             const passcodeTextElement = document.getElementById('passcode-text');
-            const originalPasscodeText = passcodeTextElement.innerHTML;
+            const originalPasscodeText = passcodeTextElement.textContent;
             const passcode = '442716';
 
             passcodeContainer.addEventListener('click', () => {
@@ -297,7 +297,7 @@
                 document.body.removeChild(tempTextArea);
 
                 setTimeout(() => {
-                    passcodeTextElement.innerHTML = originalPasscodeText;
+                    passcodeTextElement.textContent = originalPasscodeText;
                 }, 2000);
             });
         }

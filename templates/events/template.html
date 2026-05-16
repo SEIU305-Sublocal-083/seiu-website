@@ -298,7 +298,7 @@
         const passcodeContainer = document.getElementById('passcode-container');
         if (passcodeContainer) {
             const passcodeTextElement = document.getElementById('passcode-text');
-            const originalPasscodeText = passcodeTextElement.innerHTML;
+            const originalPasscodeText = passcodeTextElement.textContent;
             // Extract passcode from the text content
             const passcode = originalPasscodeText.split(': ')[1];
 
@@ -314,7 +314,7 @@
                     passcodeTextElement.textContent = 'Copied!';
                     
                     setTimeout(() => {
-                        passcodeTextElement.innerHTML = originalPasscodeText;
+                        passcodeTextElement.textContent = originalPasscodeText;
                     }, 2000);
                 }
             });
