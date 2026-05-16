@@ -104,6 +104,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const requestedActiveTag = [...allTags].find(tag => tag.toLowerCase() === String(requestedTag || '').toLowerCase()) || null;
         activeFilters.activeTag = requestedActiveTag;
 
+        // ⚡ Bolt: Use DocumentFragment to batch DOM updates
+        const fragment = document.createDocumentFragment();
+
         // "All" button
         const allButton = createTagButton('All');
         if (!activeFilters.activeTag) {
@@ -116,7 +119,7 @@ document.addEventListener('DOMContentLoaded', () => {
             updateTagUrl(null);
             renderArticles();
         });
-        tagsContainer.appendChild(allButton);
+        fragment.appendChild(allButton);
 
         // Regular tags
         regularTags.forEach(tag => {
@@ -132,7 +135,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 safeCapture('news_filter_tag', { tag });
                 renderArticles();
             });
-            tagsContainer.appendChild(button);
+            fragment.appendChild(button);
         });
 
         // Campaigns dropdown
@@ -165,8 +168,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
             details.appendChild(summary);
             details.appendChild(div);
-            tagsContainer.appendChild(details);
+            fragment.appendChild(details);
         }
+
+        // ⚡ Bolt: Append all tags at once to avoid layout thrashing
+        tagsContainer.appendChild(fragment);
     }
 
     function createTagButton(tag) {
@@ -251,21 +257,18 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function displayArticles(articles) {
-        articlesGrid.innerHTML = '';
-
         if (articles.length === 0) {
             articlesGrid.innerHTML = '<p class="text-text-secondary col-span-full text-center">No news articles match your criteria.</p>';
             return;
         }
 
-        articles.forEach(article => {
-            const articleCard = document.createElement('div');
-            articleCard.className = 'bg-white rounded-xl border border-border-color overflow-hidden flex flex-col h-full';
-
+        // ⚡ Bolt: Batch DOM updates using innerHTML and map to avoid layout thrashing in loops
+        articlesGrid.innerHTML = articles.map(article => {
             const dateTooltip = `Created: ${article.createdAt}\nPublished: ${article.publishedAt}\nUpdated: ${article.updatedAt}`;
             const altText = article.alt || article.title;
 
-            articleCard.innerHTML = `
+            return `
+            <div class="bg-white rounded-xl border border-border-color overflow-hidden flex flex-col h-full">
                 <a href="${escapeAttr(article.url)}" class="group block" data-ph-event="news_article_click" data-ph-label="${escapeAttr(article.title)}" data-ph-metadata='{"position":"grid"}'>
                     <!-- ⚡ Bolt: Add loading="lazy" to defer offscreen images and improve initial page load time -->
                     <img src="${escapeAttr(article.image)}" alt="${escapeAttr(altText)}" class="w-full h-48 object-cover" loading="lazy">
@@ -285,9 +288,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="bg-gray-50 border-t border-border-color p-4">
                      <p class="text-sm text-text-secondary">${escapeHtml(article.author.name)} - ${escapeHtml(article.author.title)}</p>
                 </div>
-            `;
-            articlesGrid.appendChild(articleCard);
-        });
+            </div>`;
+        }).join('');
     }
 
     let searchDebounce;

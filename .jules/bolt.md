@@ -11,3 +11,7 @@
 ## 2024-05-18 - [Incorrect Cross-Boundary Search Optimization]
 **Learning:** [Attempting to optimize search performance by pre-calculating a single, concatenated string of multiple fields (e.g., \`${title} ${description}\`) introduces a bug where searches can incorrectly match across the boundary of the joined fields (e.g., matching the end of the title and the beginning of the description).]
 **Action:** [When optimizing search filters, pre-calculate the lowercase string for each field individually (e.g., \`searchTitle\`, \`searchDescription\`) to maintain the exact semantic boundaries and behavior of the original unoptimized code.]
+
+## 2026-05-16 - [DOM Layout Thrashing]
+**Learning:** [Appending DOM elements individually within a loop (e.g., using `appendChild`) causes layout thrashing because the browser has to recalculate styles and layout for every element. This significantly impacts rendering performance.]
+**Action:** [Batch DOM updates using `innerHTML` with a mapped array joined into a single string (e.g. `element.innerHTML = items.map().join('')`) or use a `DocumentFragment` when creating elements dynamically.]
