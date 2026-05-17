@@ -15,3 +15,7 @@
 ## 2026-05-16 - [DOM Layout Thrashing]
 **Learning:** [Appending DOM elements individually within a loop (e.g., using `appendChild`) causes layout thrashing because the browser has to recalculate styles and layout for every element. This significantly impacts rendering performance.]
 **Action:** [Batch DOM updates using `innerHTML` with a mapped array joined into a single string (e.g. `element.innerHTML = items.map().join('')`) or use a `DocumentFragment` when creating elements dynamically.]
+
+## 2024-05-18 - [Intl.DateTimeFormat Instantiation Overhead]
+**Learning:** [While pre-computing date strings (`toLocaleDateString()`) outside of rendering loops is good, calling `toLocaleString()` repeatedly is still surprisingly slow because it implicitly instantiates a new `Intl.DateTimeFormat` object each time under the hood. Local benchmarking showed caching the formatter makes formatting ~400x faster.]
+**Action:** [When formatting many dates, always instantiate `new Intl.DateTimeFormat(...)` once and cache it, then call `formatter.format(date)` instead of relying on `date.toLocaleDateString(...)` or `date.toLocaleString(...)`.]

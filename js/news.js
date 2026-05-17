@@ -62,10 +62,13 @@ document.addEventListener('DOMContentLoaded', () => {
             allArticles = await response.json();
 
             // ⚡ Bolt: Pre-format dates to avoid redundant formatting in display loop
+            // ⚡ Bolt: Cache Intl.DateTimeFormat objects to drastically reduce instantiation overhead
+            const updatedAtFormatter = new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
             // ⚡ Bolt: Pre-calculate lowercase search strings to prevent redundant string allocations and operations (.toLowerCase()) within render loops
             allArticles.forEach(article => {
                 if (article.updatedAt) {
-                    article.formattedUpdatedAt = new Date(article.updatedAt + 'T00:00:00').toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+                    article.formattedUpdatedAt = updatedAtFormatter.format(new Date(article.updatedAt + 'T00:00:00'));
                 }
                 article.searchTitle = article.title.toLowerCase();
                 article.searchDescription = article.description.toLowerCase();

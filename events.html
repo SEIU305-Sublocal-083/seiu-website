@@ -331,8 +331,18 @@
                     const allEvents = await response.json();
 
                     // ⚡ Bolt: Pre-parse dates to avoid redundant Date instantiations in loops
+                    // ⚡ Bolt: Cache Intl.DateTimeFormat objects to drastically reduce instantiation overhead
+                    const monthShortFormatter = new Intl.DateTimeFormat('en-US', { month: 'short' });
+                    const dateLongFormatter = new Intl.DateTimeFormat('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+                    const monthYearFormatter = new Intl.DateTimeFormat('default', { month: 'long', year: 'numeric' });
+
                     allEvents.forEach(event => {
                         event.parsedDate = new Date(event.date.replace(/-/g, '\/'));
+                        event.formattedMonthShort = monthShortFormatter.format(event.parsedDate).toUpperCase();
+                        event.formattedDay2Digit = event.parsedDate.getDate().toString().padStart(2, '0');
+                        event.formattedDateLong = dateLongFormatter.format(event.parsedDate);
+                        event.formattedMonthYear = monthYearFormatter.format(event.parsedDate);
+                        event.formattedDate = event.parsedDate.getDate();
                     });
 
                     processAndRenderEvents(allEvents);
@@ -390,8 +400,8 @@
                 }
 
                 upcomingEventsContainer.innerHTML = events.map(event => {
-                    const month = event.parsedDate.toLocaleString('en-US', { month: 'short' }).toUpperCase();
-                    const day = event.parsedDate.getDate().toString().padStart(2, '0');
+                    const month = event.formattedMonthShort;
+                    const day = event.formattedDay2Digit;
                     const featuredClass = event.featured ? 'border-2 border-brand-purple shadow-lg' : 'border border-border-color';
                     
                     let detailsHtml = `<div class="mt-4 flex items-center gap-4"><a href="${escapeHTML(event.url)}" class="font-semibold text-brand-purple hover:underline" data-ph-event="event_click" data-ph-label="${escapeHTML(event.title)}" data-ph-metadata='{"section":"upcoming"}'>View Details &rarr;</a>`;
@@ -437,7 +447,7 @@
                 if (moreEventsSection) moreEventsSection.classList.remove('hidden');
 
                 stackedEventsContainer.innerHTML = events.map(event => {
-                    const formattedDate = event.parsedDate.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+                    const formattedDate = event.formattedDateLong;
 
                     let calendarButton = '';
                     if (event.calendar_link) {
@@ -470,7 +480,7 @@
                 }
 
                 const groupedByMonth = events.reduce((acc, event) => {
-                    const monthYear = event.parsedDate.toLocaleString('default', { month: 'long', year: 'numeric' });
+                    const monthYear = event.formattedMonthYear;
                     if (!acc[monthYear]) acc[monthYear] = [];
                     acc[monthYear].push(event);
                     return acc;
@@ -479,7 +489,7 @@
                 pastEventsContainer.innerHTML = Object.entries(groupedByMonth).map(([monthYear, monthEvents]) => {
                     const eventListItems = monthEvents.map(event => `
                         <li class="py-2">
-                            <strong>${event.parsedDate.getDate()}:</strong> ${escapeHTML(event.title)}
+                            <strong>${event.formattedDate}:</strong> ${escapeHTML(event.title)}
                             ${event.url !== '#' ? `<a href="${escapeHTML(event.url)}" class="font-semibold text-brand-purple hover:underline ml-2" data-ph-event="event_click" data-ph-label="${escapeHTML(event.title)}" data-ph-metadata='{"section":"past"}'>View Details</a>` : ''}
                         </li>
                     `).join('');
