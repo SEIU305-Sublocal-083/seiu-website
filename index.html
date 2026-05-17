@@ -639,8 +639,15 @@
                     const events = await response.json();
 
                     // ⚡ Bolt: Pre-parse dates to avoid redundant Date instantiations in loops
+                    const dateShortFormatter = new Intl.DateTimeFormat('en-US', {
+                        weekday: 'short',
+                        month: 'short',
+                        day: 'numeric',
+                        year: 'numeric'
+                    });
                     events.forEach(event => {
                         event.parsedDate = new Date(event.date.replace(/-/g, '/'));
+                        event.formattedDateShort = dateShortFormatter.format(event.parsedDate);
                     });
 
                     const today = new Date();
@@ -662,12 +669,7 @@
 
                     if (upcomingEvents.length > 0) {
                         eventsContainer.innerHTML = upcomingEvents.map(event => {
-                            const formattedDate = event.parsedDate.toLocaleDateString('en-US', {
-                                weekday: 'short',
-                                month: 'short',
-                                day: 'numeric',
-                                year: 'numeric'
-                            });
+                            const formattedDate = event.formattedDateShort;
 
                             let timeHtml = '';
                             if (event.time) {
@@ -714,8 +716,9 @@
                     const newsItems = await response.json();
 
                     // ⚡ Bolt: Pre-format dates to avoid redundant Date instantiations during rendering
+                    const newsDateFormatter = new Intl.DateTimeFormat('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
                     newsItems.forEach(item => {
-                        item.formattedPublishedAt = new Date(item.publishedAt.replace(/-/g, '/')).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+                        item.formattedPublishedAt = newsDateFormatter.format(new Date(item.publishedAt.replace(/-/g, '/')));
                     });
 
                     const sortedNews = newsItems
