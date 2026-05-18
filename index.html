@@ -639,15 +639,8 @@
                     const events = await response.json();
 
                     // ⚡ Bolt: Pre-parse dates to avoid redundant Date instantiations in loops
-                    const dateShortFormatter = new Intl.DateTimeFormat('en-US', {
-                        weekday: 'short',
-                        month: 'short',
-                        day: 'numeric',
-                        year: 'numeric'
-                    });
                     events.forEach(event => {
                         event.parsedDate = new Date(event.date.replace(/-/g, '/'));
-                        event.formattedDateShort = dateShortFormatter.format(event.parsedDate);
                     });
 
                     const today = new Date();
@@ -666,6 +659,17 @@
                             return a.date > b.date ? 1 : (a.date < b.date ? -1 : 0);
                         })
                         .slice(0, 3);
+
+                    // ⚡ Bolt: Format dates only for the sliced items to avoid expensive operations on hidden entries
+                    const dateShortFormatter = new Intl.DateTimeFormat('en-US', {
+                        weekday: 'short',
+                        month: 'short',
+                        day: 'numeric',
+                        year: 'numeric'
+                    });
+                    upcomingEvents.forEach(event => {
+                        event.formattedDateShort = dateShortFormatter.format(event.parsedDate);
+                    });
 
                     if (upcomingEvents.length > 0) {
                         eventsContainer.innerHTML = upcomingEvents.map(event => {
@@ -715,16 +719,16 @@
                     if (!response.ok) throw new Error('Network response was not ok');
                     const newsItems = await response.json();
 
-                    // ⚡ Bolt: Pre-format dates to avoid redundant Date instantiations during rendering
-                    const newsDateFormatter = new Intl.DateTimeFormat('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
-                    newsItems.forEach(item => {
-                        item.formattedPublishedAt = newsDateFormatter.format(new Date(item.publishedAt.replace(/-/g, '/')));
-                    });
-
                     const sortedNews = newsItems
                         // ⚡ Bolt: Use fast string comparison instead of new Date() in sort loop (~25x faster)
                         .sort((a, b) => a.publishedAt < b.publishedAt ? 1 : (a.publishedAt > b.publishedAt ? -1 : 0))
                         .slice(0, 3);
+
+                    // ⚡ Bolt: Format dates only for the sliced items to avoid expensive operations on hidden entries
+                    const newsDateFormatter = new Intl.DateTimeFormat('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+                    sortedNews.forEach(item => {
+                        item.formattedPublishedAt = newsDateFormatter.format(new Date(item.publishedAt.replace(/-/g, '/')));
+                    });
                     
                     if (sortedNews.length > 0) {
                         const mainStory = sortedNews[0];

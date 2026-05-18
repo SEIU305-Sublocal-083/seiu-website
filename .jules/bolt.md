@@ -19,3 +19,7 @@
 ## 2024-05-18 - [Intl.DateTimeFormat Instantiation Overhead]
 **Learning:** [While pre-computing date strings (`toLocaleDateString()`) outside of rendering loops is good, calling `toLocaleString()` repeatedly is still surprisingly slow because it implicitly instantiates a new `Intl.DateTimeFormat` object each time under the hood. Local benchmarking showed caching the formatter makes formatting ~400x faster.]
 **Action:** [When formatting many dates, always instantiate `new Intl.DateTimeFormat(...)` once and cache it, then call `formatter.format(date)` instead of relying on `date.toLocaleDateString(...)` or `date.toLocaleString(...)`.]
+
+## 2026-05-18 - [Premature Date Formatting]
+**Learning:** [Applying expensive operations like `Intl.DateTimeFormat` across an entire dataset (e.g. hundreds of items) before filtering and slicing it down to the handful of items that will actually be rendered is a significant performance anti-pattern. This wastes CPU and memory on data that the user will never see.]
+**Action:** [Always perform filtering, sorting, and slicing first, and only apply expensive formatting or data transformations to the minimal subset of data that will be rendered.]
