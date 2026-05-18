@@ -14,3 +14,18 @@ window.Sentinel.escapeHTML = function (unsafe) {
          .replace(/"/g, "&quot;")
          .replace(/'/g, "&#039;");
 };
+
+/**
+ * Sanitizes URLs to prevent javascript: or data: injection.
+ * @param {string} url The unsafe URL.
+ * @returns {string} The sanitized URL, or '#' if invalid.
+ */
+window.Sentinel.sanitizeUrl = function (url) {
+    if (!url) return '#';
+    const str = String(url).trim();
+    const lower = str.toLowerCase();
+    if (lower.startsWith('javascript:') || lower.startsWith('data:')) {
+        return '#';
+    }
+    return str;
+};

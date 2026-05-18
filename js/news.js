@@ -13,6 +13,16 @@ document.addEventListener('DOMContentLoaded', () => {
         .replace(/"/g, '&quot;')
         .replace(/'/g, '&#039;');
     const escapeAttr = escapeHtml;
+    const sanitizeUrl = (url) => {
+        if (window.Sentinel && typeof window.Sentinel.sanitizeUrl === 'function') {
+            return window.Sentinel.sanitizeUrl(url);
+        }
+        if (!url) return '#';
+        const str = String(url).trim();
+        const lower = str.toLowerCase();
+        if (lower.startsWith('javascript:') || lower.startsWith('data:')) return '#';
+        return str;
+    };
     const tagHref = (tag) => `/news.html?tag=${encodeURIComponent(tag)}`;
 
     const safeCapture = (name, props = {}) => {
@@ -211,7 +221,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const altText = article.alt || article.title;
         featuredArticleSection.innerHTML = `
             <div class="bg-white rounded-xl border border-border-color overflow-hidden">
-                <a href="${escapeAttr(article.url)}" class="block group" data-ph-event="news_article_click" data-ph-label="${escapeAttr(article.title)}" data-ph-metadata='{"position":"featured"}'>
+                <a href="${escapeAttr(sanitizeUrl(article.url))}" class="block group" data-ph-event="news_article_click" data-ph-label="${escapeAttr(article.title)}" data-ph-metadata='{"position":"featured"}'>
                     <div class="grid lg:grid-cols-2">
                         <div class="p-8 lg:p-12">
                             <p class="text-text-secondary text-sm mb-2 font-semibold">FEATURED STORY</p>
@@ -221,7 +231,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         </div>
                         <div class="hidden lg:block">
                             <!-- ⚡ Bolt: Add loading="lazy" to defer offscreen images and improve initial page load time -->
-                            <img src="${escapeAttr(article.image)}" alt="${escapeAttr(altText)}" class="w-full h-full object-cover" loading="lazy">
+                            <img src="${escapeAttr(sanitizeUrl(article.image))}" alt="${escapeAttr(altText)}" class="w-full h-full object-cover" loading="lazy">
                         </div>
                     </div>
                 </a>
@@ -272,15 +282,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
             return `
             <div class="bg-white rounded-xl border border-border-color overflow-hidden flex flex-col h-full">
-                <a href="${escapeAttr(article.url)}" class="group block" data-ph-event="news_article_click" data-ph-label="${escapeAttr(article.title)}" data-ph-metadata='{"position":"grid"}'>
+                <a href="${escapeAttr(sanitizeUrl(article.url))}" class="group block" data-ph-event="news_article_click" data-ph-label="${escapeAttr(article.title)}" data-ph-metadata='{"position":"grid"}'>
                     <!-- ⚡ Bolt: Add loading="lazy" to defer offscreen images and improve initial page load time -->
-                    <img src="${escapeAttr(article.image)}" alt="${escapeAttr(altText)}" class="w-full h-48 object-cover" loading="lazy">
+                    <img src="${escapeAttr(sanitizeUrl(article.image))}" alt="${escapeAttr(altText)}" class="w-full h-48 object-cover" loading="lazy">
                 </a>
                 <div class="p-6 flex-grow">
                     <div class="flex items-center justify-between mb-2">
                         <p class="text-text-secondary text-sm" title="${escapeAttr(dateTooltip)}">Last updated: ${escapeHtml(article.formattedUpdatedAt)}</p>
                     </div>
-                    <a href="${escapeAttr(article.url)}" class="group block" data-ph-event="news_article_click" data-ph-label="${escapeAttr(article.title)}" data-ph-metadata='{"position":"grid"}'>
+                    <a href="${escapeAttr(sanitizeUrl(article.url))}" class="group block" data-ph-event="news_article_click" data-ph-label="${escapeAttr(article.title)}" data-ph-metadata='{"position":"grid"}'>
                         <h3 class="font-bold text-xl mb-3 group-hover:text-brand-purple transition-colors">${escapeHtml(article.title)}</h3>
                         <p class="text-text-secondary">${escapeHtml(article.description)}</p>
                     </a>
