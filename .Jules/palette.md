@@ -12,3 +12,6 @@ Critical UX/accessibility learnings only.
 ## 2024-05-18 - [Add `aria-pressed` to toggle buttons]
 **Learning:** When using buttons as visual toggles (like category filters that turn a distinct color when active), screen reader users are unaware of which filter is currently active if relying solely on CSS classes (e.g., `class="active"`). Using the `aria-pressed` attribute correctly translates the visual state into semantic state for assistive technologies.
 **Action:** Always add `aria-pressed="true"` to active toggle buttons and `aria-pressed="false"` to inactive ones, ensuring JavaScript updates this attribute synchronously with any visual class toggles.
+## 2026-05-18 - [Add helpful empty states for filtered lists]
+**Learning:** When users apply search filters that return zero results, a generic "no results" message leaves them stuck. A well-designed empty state with an actionable "Clear Filters" button significantly improves recovery and usability.
+**Action:** Always include a helpful empty state with a clear call-to-action (e.g., a button to reset filters) for any search or filtering mechanism that can return zero results.
