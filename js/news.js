@@ -261,7 +261,35 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function displayArticles(articles) {
         if (articles.length === 0) {
-            articlesGrid.innerHTML = '<p class="text-text-secondary col-span-full text-center">No news articles match your criteria.</p>';
+            articlesGrid.innerHTML = `
+                <div class="col-span-full flex flex-col items-center justify-center py-16 bg-white rounded-xl border border-border-color border-dashed">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-gray-400 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                    <h3 class="text-xl font-bold text-brand-purple-dark mb-2">No articles found</h3>
+                    <p class="text-text-secondary mb-6 text-center max-w-md">We couldn't find any news articles matching your search or filter criteria. Try adjusting your search term or clearing the filters.</p>
+                    <button id="reset-filters-btn" class="btn btn-outline" aria-label="Clear all search filters and text">Clear Search & Filters</button>
+                </div>
+            `;
+
+            document.getElementById('reset-filters-btn').addEventListener('click', () => {
+                searchInput.value = '';
+                activeFilters.searchTerm = '';
+                activeFilters.activeTag = null;
+
+                const allNewsTag = Array.from(document.querySelectorAll('.tag-button')).find(btn => btn.textContent === 'All News');
+                if (allNewsTag) setActiveTag(allNewsTag);
+
+                updateTagUrl(null);
+
+                const summary = document.querySelector('details summary');
+                if (summary) {
+                    summary.textContent = 'Campaigns';
+                    summary.parentElement.removeAttribute('open');
+                }
+
+                renderArticles();
+            });
             return;
         }
 
