@@ -625,6 +625,17 @@
                 ? window.Sentinel.escapeHTML
                 : (str) => String(str || '').replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
 
+            const sanitizeUrl = (url) => {
+                if (window.Sentinel && typeof window.Sentinel.sanitizeUrl === 'function') {
+                    return window.Sentinel.sanitizeUrl(url);
+                }
+                if (!url) return '#';
+                const str = String(url).trim();
+                const lower = str.toLowerCase();
+                if (lower.startsWith('javascript:') || lower.startsWith('data:')) return '#';
+                return str;
+            };
+
             // --- Load Upcoming Events ---
             const safeCapture = (name, props = {}) => {
                 if (typeof window.phCapture === 'function') window.phCapture(name, props);
@@ -696,7 +707,7 @@
                                     </div>
                                     <div class="bg-gray-50 border-t border-border-color p-4 flex items-center justify-between">
                                         <div class="font-bold text-text-primary">${escapeHTML(formattedDate)}</div>
-                                        <a href="${escapeHTML(event.url)}" class="text-brand-purple font-semibold hover:underline">More Info →</a>
+                                        <a href="${escapeHTML(sanitizeUrl(event.url))}" class="text-brand-purple font-semibold hover:underline">More Info →</a>
                                     </div>
                                 </div>
                             `;
@@ -739,7 +750,7 @@
                                 <p class="text-text-secondary text-sm mb-2">${escapeHTML(mainStory.formattedPublishedAt)}</p>
                                 <h3 class="font-bold text-2xl md:text-3xl mb-3">${escapeHTML(mainStory.title)}</h3>
                                 <p class="text-text-secondary">${escapeHTML(mainStory.description)}</p>
-                                <a href="${escapeHTML(mainStory.url)}" class="text-brand-purple font-semibold mt-4 inline-block group-hover:underline">Read More →</a>
+                                <a href="${escapeHTML(sanitizeUrl(mainStory.url))}" class="text-brand-purple font-semibold mt-4 inline-block group-hover:underline">Read More →</a>
                             </div>`;
                         
                         const sideStoriesHtml = sideStories.map(story => `
@@ -747,7 +758,7 @@
                                 <p class="text-text-secondary text-sm mb-2">${escapeHTML(story.formattedPublishedAt)}</p>
                                 <h3 class="font-bold text-xl mb-3">${escapeHTML(story.title)}</h3>
                                 <p class="text-text-secondary">${escapeHTML(story.description)}</p>
-                                <a href="${escapeHTML(story.url)}" class="text-brand-purple font-semibold mt-4 inline-block group-hover:underline">Learn More →</a>
+                                <a href="${escapeHTML(sanitizeUrl(story.url))}" class="text-brand-purple font-semibold mt-4 inline-block group-hover:underline">Learn More →</a>
                             </div>
                         `).join('');
 
