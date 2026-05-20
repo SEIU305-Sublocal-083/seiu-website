@@ -214,7 +214,13 @@
                     <h2 class="text-4xl font-bold mb-8">Coming Up Soon</h2>
                     <div id="upcoming-events-container" class="space-y-6">
                          <!-- Events will be dynamically injected here -->
-                         <p class="text-center text-text-secondary">Loading events...</p>
+                         <div class="flex justify-center py-12 text-brand-purple" role="status">
+                             <svg class="animate-spin h-10 w-10" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                 <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                                 <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                             </svg>
+                             <span class="sr-only">Loading events...</span>
+                         </div>
                     </div>
                 </div>
                 
@@ -315,6 +321,17 @@
                 ? window.Sentinel.escapeHTML
                 : (str) => String(str || '').replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
 
+            const sanitizeUrl = (url) => {
+                if (window.Sentinel && typeof window.Sentinel.sanitizeUrl === 'function') {
+                    return window.Sentinel.sanitizeUrl(url);
+                }
+                if (!url) return '#';
+                const str = String(url).trim();
+                const lower = str.toLowerCase();
+                if (lower.startsWith('javascript:') || lower.startsWith('data:')) return '#';
+                return str;
+            };
+
             // --- Global Variables ---
             const calendarContainer = document.getElementById('calendar-container');
             const upcomingEventsContainer = document.getElementById('upcoming-events-container');
@@ -404,9 +421,9 @@
                     const day = event.formattedDay2Digit;
                     const featuredClass = event.featured ? 'border-2 border-brand-purple shadow-lg' : 'border border-border-color';
                     
-                    let detailsHtml = `<div class="mt-4 flex items-center gap-4"><a href="${escapeHTML(event.url)}" class="font-semibold text-brand-purple hover:underline" data-ph-event="event_click" data-ph-label="${escapeHTML(event.title)}" data-ph-metadata='{"section":"upcoming"}'>View Details &rarr;</a>`;
+                    let detailsHtml = `<div class="mt-4 flex items-center gap-4"><a href="${escapeHTML(sanitizeUrl(event.url))}" class="font-semibold text-brand-purple hover:underline" data-ph-event="event_click" data-ph-label="${escapeHTML(event.title)}" data-ph-metadata='{"section":"upcoming"}'>View Details &rarr;</a>`;
                     if (event.calendar_link) {
-                        detailsHtml += `<a href="${escapeHTML(event.calendar_link)}" download class="btn btn-outline !py-2 !px-4 text-sm">Add to Calendar</a>`;
+                        detailsHtml += `<a href="${escapeHTML(sanitizeUrl(event.calendar_link))}" download class="btn btn-outline !py-2 !px-4 text-sm">Add to Calendar</a>`;
                     }
                     detailsHtml += '</div>';
 
@@ -451,7 +468,7 @@
 
                     let calendarButton = '';
                     if (event.calendar_link) {
-                        calendarButton = `<a href="${escapeHTML(event.calendar_link)}" download class="btn btn-outline !py-2 !px-4 text-sm">Add to Calendar</a>`;
+                        calendarButton = `<a href="${escapeHTML(sanitizeUrl(event.calendar_link))}" download class="btn btn-outline !py-2 !px-4 text-sm">Add to Calendar</a>`;
                     }
 
                     return `
@@ -462,7 +479,7 @@
                                      <p class="font-semibold text-text-secondary">${escapeHTML(formattedDate)}</p>
                                 </div>
                                 <div class="flex items-center gap-4">
-                                    <a href="${escapeHTML(event.url)}" class="btn btn-outline" data-ph-event="event_click" data-ph-label="${escapeHTML(event.title)}" data-ph-metadata='{"section":"stacked"}'>View Details &rarr;</a>
+                                    <a href="${escapeHTML(sanitizeUrl(event.url))}" class="btn btn-outline" data-ph-event="event_click" data-ph-label="${escapeHTML(event.title)}" data-ph-metadata='{"section":"stacked"}'>View Details &rarr;</a>
                                     ${calendarButton}
                                 </div>
                             </div>
@@ -490,7 +507,7 @@
                     const eventListItems = monthEvents.map(event => `
                         <li class="py-2">
                             <strong>${event.formattedDate}:</strong> ${escapeHTML(event.title)}
-                            ${event.url !== '#' ? `<a href="${escapeHTML(event.url)}" class="font-semibold text-brand-purple hover:underline ml-2" data-ph-event="event_click" data-ph-label="${escapeHTML(event.title)}" data-ph-metadata='{"section":"past"}'>View Details</a>` : ''}
+                            ${event.url !== '#' ? `<a href="${escapeHTML(sanitizeUrl(event.url))}" class="font-semibold text-brand-purple hover:underline ml-2" data-ph-event="event_click" data-ph-label="${escapeHTML(event.title)}" data-ph-metadata='{"section":"past"}'>View Details</a>` : ''}
                         </li>
                     `).join('');
 

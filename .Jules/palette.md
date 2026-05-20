@@ -15,3 +15,6 @@ Critical UX/accessibility learnings only.
 ## 2026-05-18 - [Add helpful empty states for filtered lists]
 **Learning:** When users apply search filters that return zero results, a generic "no results" message leaves them stuck. A well-designed empty state with an actionable "Clear Filters" button significantly improves recovery and usability.
 **Action:** Always include a helpful empty state with a clear call-to-action (e.g., a button to reset filters) for any search or filtering mechanism that can return zero results.
+## 2026-05-18 - [Add visual and semantic loading states]
+**Learning:** Plain text loading indicators (like "Loading...") can feel unresponsive and lack proper semantic meaning for assistive technologies. Replacing them with an animated visual spinner and a `role="status"` wrapper ensures both sighted and screen-reader users understand the system is processing information.
+**Action:** Always use a visual indicator (like a spinner) accompanied by semantic `role="status"` and visually hidden text for asynchronous loading states.
