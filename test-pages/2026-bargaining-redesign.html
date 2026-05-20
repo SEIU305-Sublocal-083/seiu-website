@@ -1102,6 +1102,17 @@
                 "'": '&#39;'
             }[char]));
 
+            const sanitizeUrl = (url) => {
+                if (window.Sentinel && typeof window.Sentinel.sanitizeUrl === 'function') {
+                    return window.Sentinel.sanitizeUrl(url);
+                }
+                if (!url) return '#';
+                const str = String(url).trim();
+                const lower = str.toLowerCase();
+                if (lower.startsWith('javascript:') || lower.startsWith('data:')) return '#';
+                return str;
+            };
+
             const parseLocalDate = (value) => {
                 if (!value) return null;
                 const parsed = new Date(`${value}T00:00:00`);
@@ -1141,7 +1152,7 @@
                 const leadAlt = leadArticle.alt || leadArticle.title;
 
                 let html = `
-                    <a class="update-card" href="${escapeHtml(leadArticle.url)}">
+                    <a class="update-card" href="${escapeHtml(sanitizeUrl(leadArticle.url))}">
                         <img src="${escapeHtml(leadImage)}" alt="${escapeHtml(leadAlt)}" loading="lazy" decoding="async">
                         <div>
                             <p class="update-date">${escapeHtml(formatDate(leadArticle.publishedAt || leadArticle.createdAt))}</p>
@@ -1154,7 +1165,7 @@
 
                 if (secondaryArticles.length > 0) {
                     html += `<div class="secondary-updates">${secondaryArticles.map((article) => `
-                        <a class="secondary-update" href="${escapeHtml(article.url)}">
+                        <a class="secondary-update" href="${escapeHtml(sanitizeUrl(article.url))}">
                             <p class="update-date">${escapeHtml(formatDate(article.publishedAt || article.createdAt))}</p>
                             <h3>${escapeHtml(article.title)}</h3>
                         </a>
@@ -1194,7 +1205,7 @@
                     const details = [time, location].filter(Boolean).map(escapeHtml).join('<br>');
 
                     return `
-                        <a class="date-row" href="${escapeHtml(event.url)}">
+                        <a class="date-row" href="${escapeHtml(sanitizeUrl(event.url))}">
                             <div class="date-badge"><small>${escapeHtml(month)}</small><strong>${escapeHtml(day)}</strong></div>
                             <div>
                                 <h3>${escapeHtml(event.title)}</h3>
