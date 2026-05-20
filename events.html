@@ -315,6 +315,17 @@
                 ? window.Sentinel.escapeHTML
                 : (str) => String(str || '').replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
 
+            const sanitizeUrl = (url) => {
+                if (window.Sentinel && typeof window.Sentinel.sanitizeUrl === 'function') {
+                    return window.Sentinel.sanitizeUrl(url);
+                }
+                if (!url) return '#';
+                const str = String(url).trim();
+                const lower = str.toLowerCase();
+                if (lower.startsWith('javascript:') || lower.startsWith('data:')) return '#';
+                return str;
+            };
+
             // --- Global Variables ---
             const calendarContainer = document.getElementById('calendar-container');
             const upcomingEventsContainer = document.getElementById('upcoming-events-container');
@@ -404,9 +415,9 @@
                     const day = event.formattedDay2Digit;
                     const featuredClass = event.featured ? 'border-2 border-brand-purple shadow-lg' : 'border border-border-color';
                     
-                    let detailsHtml = `<div class="mt-4 flex items-center gap-4"><a href="${escapeHTML(event.url)}" class="font-semibold text-brand-purple hover:underline" data-ph-event="event_click" data-ph-label="${escapeHTML(event.title)}" data-ph-metadata='{"section":"upcoming"}'>View Details &rarr;</a>`;
+                    let detailsHtml = `<div class="mt-4 flex items-center gap-4"><a href="${escapeHTML(sanitizeUrl(event.url))}" class="font-semibold text-brand-purple hover:underline" data-ph-event="event_click" data-ph-label="${escapeHTML(event.title)}" data-ph-metadata='{"section":"upcoming"}'>View Details &rarr;</a>`;
                     if (event.calendar_link) {
-                        detailsHtml += `<a href="${escapeHTML(event.calendar_link)}" download class="btn btn-outline !py-2 !px-4 text-sm">Add to Calendar</a>`;
+                        detailsHtml += `<a href="${escapeHTML(sanitizeUrl(event.calendar_link))}" download class="btn btn-outline !py-2 !px-4 text-sm">Add to Calendar</a>`;
                     }
                     detailsHtml += '</div>';
 
@@ -451,7 +462,7 @@
 
                     let calendarButton = '';
                     if (event.calendar_link) {
-                        calendarButton = `<a href="${escapeHTML(event.calendar_link)}" download class="btn btn-outline !py-2 !px-4 text-sm">Add to Calendar</a>`;
+                        calendarButton = `<a href="${escapeHTML(sanitizeUrl(event.calendar_link))}" download class="btn btn-outline !py-2 !px-4 text-sm">Add to Calendar</a>`;
                     }
 
                     return `
@@ -462,7 +473,7 @@
                                      <p class="font-semibold text-text-secondary">${escapeHTML(formattedDate)}</p>
                                 </div>
                                 <div class="flex items-center gap-4">
-                                    <a href="${escapeHTML(event.url)}" class="btn btn-outline" data-ph-event="event_click" data-ph-label="${escapeHTML(event.title)}" data-ph-metadata='{"section":"stacked"}'>View Details &rarr;</a>
+                                    <a href="${escapeHTML(sanitizeUrl(event.url))}" class="btn btn-outline" data-ph-event="event_click" data-ph-label="${escapeHTML(event.title)}" data-ph-metadata='{"section":"stacked"}'>View Details &rarr;</a>
                                     ${calendarButton}
                                 </div>
                             </div>
@@ -490,7 +501,7 @@
                     const eventListItems = monthEvents.map(event => `
                         <li class="py-2">
                             <strong>${event.formattedDate}:</strong> ${escapeHTML(event.title)}
-                            ${event.url !== '#' ? `<a href="${escapeHTML(event.url)}" class="font-semibold text-brand-purple hover:underline ml-2" data-ph-event="event_click" data-ph-label="${escapeHTML(event.title)}" data-ph-metadata='{"section":"past"}'>View Details</a>` : ''}
+                            ${event.url !== '#' ? `<a href="${escapeHTML(sanitizeUrl(event.url))}" class="font-semibold text-brand-purple hover:underline ml-2" data-ph-event="event_click" data-ph-label="${escapeHTML(event.title)}" data-ph-metadata='{"section":"past"}'>View Details</a>` : ''}
                         </li>
                     `).join('');
 

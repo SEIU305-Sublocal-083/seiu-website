@@ -288,6 +288,17 @@
                     ? window.Sentinel.escapeHTML
                     : (str) => String(str || '').replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
 
+                const sanitizeUrl = (url) => {
+                    if (window.Sentinel && typeof window.Sentinel.sanitizeUrl === 'function') {
+                        return window.Sentinel.sanitizeUrl(url);
+                    }
+                    if (!url) return '#';
+                    const str = String(url).trim();
+                    const lower = str.toLowerCase();
+                    if (lower.startsWith('javascript:') || lower.startsWith('data:')) return '#';
+                    return str;
+                };
+
                 if (results.length === 0) {
                     resultsContainer.innerHTML = `<p class="text-center text-text-secondary">No results found for "${escapeHTML(query)}".</p>`;
                     return;
@@ -305,7 +316,7 @@
                     }
 
                     return `
-                        <a href="${escapeHTML(item.url)}" class="block bg-white p-6 rounded-xl border border-border-color hover:shadow-lg hover:border-brand-purple transition-all duration-300">
+                        <a href="${escapeHTML(sanitizeUrl(item.url))}" class="block bg-white p-6 rounded-xl border border-border-color hover:shadow-lg hover:border-brand-purple transition-all duration-300">
                             <div class="flex justify-between items-start">
                                 <h3 class="text-2xl font-bold text-brand-purple-dark group-hover:underline">${escapeHTML(item.title)}</h3>
                                 <span class="bg-brand-purple-light text-brand-purple-dark font-bold rounded-full px-3 py-1 text-xs whitespace-nowrap">${escapeHTML(item.category)}</span>
