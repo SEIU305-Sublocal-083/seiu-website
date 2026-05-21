@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="The 2026 Bargaining Hub for SEIU Local 503 at OSU. Get current updates, confirmed bargaining events, and member resources.">
+    <meta name="description" content="The 2026 Bargaining Hub for SEIU Local 503 at OSU. Management is proposing no step increases, no COLAs, higher healthcare costs, and fewer contract protections.">
     <meta name="author" content="SEIU Local 503 at OSU">
 
     <!-- Open Graph / Facebook -->
@@ -61,16 +61,44 @@
         }
         
         .btn {
-            @apply font-bold py-3 px-6 rounded-lg transition-all duration-300 ease-in-out transform hover:scale-105;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 3rem;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            text-align: center;
+            text-decoration: none;
+            transition: transform 200ms ease, box-shadow 200ms ease, background-color 200ms ease, color 200ms ease, border-color 200ms ease;
+        }
+        .btn:hover {
+            transform: scale(1.05);
         }
         .btn-primary {
-            @apply bg-gradient-to-r from-brand-purple to-violet-600 text-white shadow-md hover:shadow-lg;
+            background: linear-gradient(90deg, var(--brand-purple), #7c3aed);
+            color: #ffffff;
+            box-shadow: 0 4px 10px rgba(76, 29, 149, 0.22);
+        }
+        .btn-primary:hover {
+            box-shadow: 0 10px 20px rgba(76, 29, 149, 0.26);
         }
         .btn-secondary {
-            @apply bg-brand-dark text-white hover:bg-black;
+            background: var(--brand-dark);
+            color: #ffffff;
+        }
+        .btn-secondary:hover {
+            background: #000000;
         }
         .btn-outline {
-             @apply bg-white text-brand-purple border-2 border-brand-purple hover:bg-brand-purple hover:text-white;
+            background: #ffffff;
+            color: var(--brand-purple);
+            border: 2px solid var(--brand-purple);
+        }
+        .btn-outline:hover {
+            background: var(--brand-purple);
+            color: #ffffff;
         }
 
         /* Custom Tailwind config for our CSS variables */
@@ -90,6 +118,22 @@
                 }
             }
         }
+
+        .bg-brand-purple-dark { background-color: var(--brand-purple-dark) !important; }
+        .bg-brand-purple { background-color: var(--brand-purple) !important; }
+        .bg-brand-purple-light { background-color: var(--brand-purple-light) !important; }
+        .bg-brand-dark { background-color: var(--brand-dark) !important; }
+        .bg-brand-light { background-color: var(--brand-light) !important; }
+        .text-brand-purple-dark { color: var(--brand-purple-dark) !important; }
+        .text-brand-purple { color: var(--brand-purple) !important; }
+        .text-brand-purple-light { color: var(--brand-purple-light) !important; }
+        .text-text-primary { color: var(--text-primary) !important; }
+        .text-text-secondary { color: var(--text-secondary) !important; }
+        .border-brand-purple { border-color: var(--brand-purple) !important; }
+        .border-border-color { border-color: var(--border-color) !important; }
+        .hover\:text-brand-purple:hover { color: var(--brand-purple) !important; }
+        .hover\:bg-brand-purple-light:hover { background-color: var(--brand-purple-light) !important; }
+        header .text-brand-purple-dark { color: var(--brand-dark) !important; }
 
         .participate-columns {
             column-gap: 1.5rem;
@@ -111,13 +155,13 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.local083.org/2026-bargaining/index.html">
     <meta property="og:title" content="2026 Bargaining Hub - SEIU Local 503 at OSU">
-    <meta property="og:description" content="The 2026 Bargaining Hub for SEIU Local 503 at OSU. Get current updates, confirmed bargaining events, and member resources.">
+    <meta property="og:description" content="The 2026 Bargaining Hub for SEIU Local 503 at OSU. Management is proposing no step increases, no COLAs, higher healthcare costs, and fewer contract protections.">
     <meta property="og:image" content="https://www.local083.org/images/card.webp">
     <meta property="og:site_name" content="SEIU Local 503 at Oregon State University">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://www.local083.org/2026-bargaining/index.html">
     <meta name="twitter:title" content="2026 Bargaining Hub - SEIU Local 503 at OSU">
-    <meta name="twitter:description" content="The 2026 Bargaining Hub for SEIU Local 503 at OSU. Get current updates, confirmed bargaining events, and member resources.">
+    <meta name="twitter:description" content="The 2026 Bargaining Hub for SEIU Local 503 at OSU. Management is proposing no step increases, no COLAs, higher healthcare costs, and fewer contract protections.">
     <meta name="twitter:image" content="https://www.local083.org/images/card.webp">
     <script type="application/ld+json">
 {
@@ -144,7 +188,7 @@
       "@id": "https://www.local083.org/2026-bargaining/index.html#webpage",
       "url": "https://www.local083.org/2026-bargaining/index.html",
       "name": "2026 Bargaining Hub - SEIU Local 503 at OSU",
-      "description": "The 2026 Bargaining Hub for SEIU Local 503 at OSU. Get current updates, confirmed bargaining events, and member resources.",
+      "description": "The 2026 Bargaining Hub for SEIU Local 503 at OSU. Management is proposing no step increases, no COLAs, higher healthcare costs, and fewer contract protections.",
       "isPartOf": {
         "@id": "https://www.local083.org#website"
       },
@@ -197,12 +241,14 @@
     <section class="bg-white">
         <div class="container mx-auto px-6 py-20 md:py-24 flex flex-col lg:flex-row items-center gap-12">
             <div class="lg:w-3/5 text-center lg:text-left">
-                <div class="inline-flex items-center px-4 py-2 rounded-full bg-brand-purple-light text-brand-purple-dark text-sm font-semibold mb-4">2026 Bargaining Hub</div>
-                <h1 class="text-4xl md:text-6xl font-bold leading-tight">Bargaining for a Fair Contract in 2026</h1>
-                <p class="mt-4 text-lg md:text-xl text-text-secondary max-w-2xl">This page tracked bargaining updates, confirmed dates, and key resources during the 2026 campaign.</p>
+                <div class="inline-flex items-center px-4 py-2 rounded-full bg-brand-purple-light text-brand-purple-dark text-sm font-semibold mb-4">Urgent Bargaining Update</div>
+                <h1 class="text-4xl md:text-6xl font-bold leading-tight">Management is proposing no wage increases for 4 years</h1>
+                <p class="mt-4 text-xl md:text-2xl font-bold text-brand-purple-dark max-w-3xl">No step increases. No COLAs. Higher healthcare costs. Fewer layoff protections.</p>
+                <p class="mt-4 text-lg md:text-xl text-text-secondary max-w-2xl">The universities put a takeaway offer on the table while workers face rising costs. Our union is fighting for real raises, protected benefits, and contract rights we can enforce.</p>
                 <div class="mt-8 flex flex-col sm:flex-row sm:items-center gap-4 justify-center lg:justify-start">
-                    <a href="/news/2026-02-04-upcoming-bargaining-events.html" class="btn btn-primary w-full sm:w-auto">View Bargaining Events</a>
-                    <a href="/resources/zoom-backgrounds.html" class="btn btn-secondary w-full sm:w-auto">Get Zoom Backgrounds</a>
+                    <a href="https://seiu503.tfaforms.net/759" class="btn btn-primary w-full sm:w-auto" target="_blank" rel="noopener noreferrer">Join the CAT</a>
+                    <a href="https://seiu503signup.org" class="btn btn-secondary w-full sm:w-auto" target="_blank" rel="noopener noreferrer">Become a Member</a>
+                    <a href="/2026-bargaining/Higher-Ed-They-Say-We-Say-Flyer.pdf" class="btn btn-outline w-full sm:w-auto" target="_blank" rel="noopener">Open the Flyer</a>
                 </div>
             </div>
             <div class="lg:w-2/5 flex justify-center">
@@ -214,23 +260,67 @@
     <main id="main-content" class="container mx-auto px-6 py-16">
 
         <section class="mb-20">
+            <div class="bg-brand-purple-dark text-white rounded-2xl p-6 md:p-10 shadow-2xl">
+                <div class="max-w-4xl">
+                    <p class="text-sm font-bold uppercase tracking-wide text-brand-purple-light">Right now at the table</p>
+                    <h2 class="mt-2 text-4xl md:text-5xl font-bold text-white">They say takeaways. We say fair contract.</h2>
+                    <p class="mt-4 text-lg md:text-xl text-brand-purple-light">Management is trying to freeze wages, shift costs, and weaken protections. Our union is proposing raises, benefits security, and stronger rights for classified staff.</p>
+                </div>
+                <div class="grid lg:grid-cols-2 gap-6 mt-8">
+                    <article class="bg-white text-text-primary rounded-xl p-6 md:p-8 border-4 border-red-600">
+                        <p class="text-sm font-bold uppercase tracking-wide text-red-700">Management's offer</p>
+                        <h3 class="mt-2 text-3xl font-bold text-red-800">No raises for four years</h3>
+                        <ul class="mt-5 space-y-3 text-text-secondary">
+                            <li><strong class="text-text-primary">No step increases and no COLAs</strong> for four years.</li>
+                            <li>Change overtime calculations so workers earn less.</li>
+                            <li>Shift healthcare costs onto workers by changing how plans qualify for the 97/3 premium share.</li>
+                            <li>Require a doctor's note after 3 consecutive sick days instead of 7.</li>
+                            <li>Cap bereavement leave at 8 days per year and let management require documentation of death.</li>
+                            <li>Complicate annual vacation cash-out rules.</li>
+                            <li>Eliminate layoff protections, including bumping rights during layoffs.</li>
+                            <li>Weaken contracting-out protections by removing feasibility studies from the contract.</li>
+                        </ul>
+                    </article>
+                    <article class="bg-white text-text-primary rounded-xl p-6 md:p-8 border-4 border-brand-purple">
+                        <p class="text-sm font-bold uppercase tracking-wide text-brand-purple">Our union's proposals</p>
+                        <h3 class="mt-2 text-3xl font-bold">Real raises and real protections</h3>
+                        <ul class="mt-5 space-y-3 text-text-secondary">
+                            <li><strong class="text-text-primary">July 1, 2026:</strong> CPI + 3%, with at least 4% total.</li>
+                            <li><strong class="text-text-primary">July 1, 2027:</strong> CPI + 2%, with at least 4% total.</li>
+                            <li>Increase the longevity premium by an additional 1% for every 5 years of service.</li>
+                            <li>Pilot a 32-hour workweek.</li>
+                            <li>Maintain healthcare benefits and add pay-schedule options for PEBB coverage during the academic year.</li>
+                            <li>Win union orientations for new employees in their first 30 days.</li>
+                            <li>Add job protections and training when work is eliminated by AI, plus transparency around computer monitoring.</li>
+                            <li>Strengthen equity, discrimination, adverse-weather, gear, immigrant, and data protections.</li>
+                        </ul>
+                    </article>
+                </div>
+                <div class="mt-8 flex flex-col sm:flex-row gap-4">
+                    <a href="/2026-bargaining/Higher-Ed-They-Say-We-Say-Flyer.pdf" class="btn btn-outline w-full sm:w-auto text-center" target="_blank" rel="noopener">Download the Bilingual Flyer</a>
+                    <a href="https://seiu503.tfaforms.net/759" class="btn btn-secondary w-full sm:w-auto text-center" target="_blank" rel="noopener noreferrer">Join the Contract Action Team</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-20">
             <h2 class="text-4xl font-bold text-center mb-10">What We’re Fighting For</h2>
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div class="bg-white p-6 rounded-xl border border-border-color">
-                    <h3 class="text-xl font-bold mb-2">Healthcare Security</h3>
-                    <p class="text-text-secondary">Protect affordable healthcare and stop cost-shifting to members.</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl border border-border-color">
                     <h3 class="text-xl font-bold mb-2">Economics</h3>
-                    <p class="text-text-secondary">Wages that keep pace with inflation and the real cost of living in Oregon.</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl border border-border-color">
-                    <h3 class="text-xl font-bold mb-2">Workload & Safety</h3>
-                    <p class="text-text-secondary">Clear protections against unsafe workloads and “other duties as assigned.”</p>
+                    <p class="text-text-secondary">Raises that beat a four-year wage freeze: CPI-linked increases, step movement, and stronger longevity pay.</p>
                 </div>
                 <div class="bg-white p-6 rounded-xl border border-border-color">
                     <h3 class="text-xl font-bold mb-2">Union Power</h3>
-                    <p class="text-text-secondary">Stronger access, communication, and rights for all classified staff.</p>
+                    <p class="text-text-secondary">New employee orientations, stronger communication, and member power at every worksite.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl border border-border-color">
+                    <h3 class="text-xl font-bold mb-2">Benefits</h3>
+                    <p class="text-text-secondary">Protect affordable healthcare, defend leave, and stop management from shifting more costs onto workers.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl border border-border-color">
+                    <h3 class="text-xl font-bold mb-2">Employee Protections</h3>
+                    <p class="text-text-secondary">Keep layoff rights, strengthen equity language, protect immigrant workers and data, and address AI-driven job changes.</p>
                 </div>
             </div>
         </section>

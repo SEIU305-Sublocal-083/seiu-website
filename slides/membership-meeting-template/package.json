@@ -4,7 +4,8 @@
   "private": true,
   "description": "SEIU Local 083 membership meeting slide template",
   "scripts": {
-    "generate": "node build-membership-template.js"
+    "generate": "node build-membership-template.js",
+    "generate:may21": "node build-may-21-2026-membership-meeting.js"
   },
   "dependencies": {
     "@fontsource/inter": "^5.0.17",

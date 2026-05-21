@@ -41,6 +41,17 @@
     "location_detail": "MU 211"
   },
   {
+    "date": "2026-05-21",
+    "time": "12:00 PM - 1:00 PM",
+    "title": "Membership Meeting",
+    "description": "Join SEIU Local 083 for a bargaining update membership meeting in Memorial Union room 211 or on Zoom. We will talk through where bargaining stands, what is at stake, and how members are preparing to fight back together.",
+    "type": "Membership Meeting",
+    "url": "/events/2026-05-21-Membership-Meeting.html",
+    "featured": true,
+    "location_detail": "Memorial Union room 211 or Zoom",
+    "calendar_link": "/events/ical/2026-05-21-Membership-Meeting.ics"
+  },
+  {
     "date": "2026-02-12",
     "time": "1:15 PM",
     "title": "Bargaining Zoom Observation",
@@ -139,6 +150,17 @@
     "url": "/news/2026-02-04-upcoming-bargaining-events.html",
     "featured": false,
     "location_detail": "Southern Oregon University"
+  },
+  {
+    "date": "2026-06-30",
+    "time": "12:00 PM - 1:00 PM",
+    "title": "Rally June 30 at McNary Field",
+    "description": "Join coworkers at McNary Field for food, lawn games, and a strong show of unity. Management is offering no raises or COLA for four years, and members are showing up for real raises and a fair contract.",
+    "type": "Rally",
+    "url": "/events/2026-06-30-Rally-at-McNary-Field.html",
+    "featured": true,
+    "location_detail": "McNary Field",
+    "calendar_link": "/events/ical/2026-06-30-Rally-at-McNary-Field.ics"
   },
   {
     "date": "2025-10-01",

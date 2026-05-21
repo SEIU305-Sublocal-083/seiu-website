@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Printable paper signup form for the June 30, 2026 SEIU Local 83 Higher Education Bargaining Rally for OUR FUTURE.">
+    <meta name="author" content="SEIU Local 503 at OSU">
+    <title>June 30 Rally Paper Signup Form - SEIU Local 503, OSU</title>
+    <link rel="canonical" href="https://www.local083.org/marketing/flyiers/2026-06-30-rally-signup-form.html">
+    <link rel="icon" href="/images/logo.png" type="image/png">
+    <link rel="apple-touch-icon" href="/images/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&family=Lora:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./flyer-brand-print.css">
+    <style>
+        body.paper-form-stage {
+            padding: 24px 16px 88px;
+            background:
+                radial-gradient(circle at top, rgba(124, 58, 237, 0.14), transparent 38%),
+                linear-gradient(180deg, #fbfafc 0%, #ede9fe 100%);
+        }
+
+        .form-packet {
+            display: grid;
+            justify-items: center;
+        }
+
+        .form-sheet {
+            width: 8in;
+            min-height: 10.5in;
+            padding: 0.26in;
+            background: #ffffff;
+            border: 1px solid rgba(17, 24, 39, 0.14);
+            box-shadow: var(--sheet-shadow);
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            gap: 0.1in;
+        }
+
+        .form-header {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) 0.72in;
+            gap: 0.12in;
+            align-items: start;
+            padding-bottom: 0.1in;
+            border-bottom: 4px solid var(--brand-purple);
+        }
+
+        .form-kicker {
+            margin: 0 0 0.04in;
+            color: var(--brand-purple);
+            font-size: 9px;
+            font-weight: 900;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+
+        .form-title {
+            margin: 0;
+            color: var(--brand-purple-dark);
+            font-size: 22px;
+            line-height: 1.02;
+            font-weight: 700;
+        }
+
+        .form-detail {
+            margin-top: 0.05in;
+            color: var(--text-primary);
+            font-size: 11px;
+            line-height: 1.25;
+            font-weight: 700;
+        }
+
+        .form-mark {
+            border: 1.5px solid var(--brand-purple);
+            padding: 0.07in;
+            background: #ffffff;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 0.62in;
+        }
+
+        .form-logo {
+            display: block;
+            width: 0.46in;
+            height: 0.46in;
+            object-fit: contain;
+        }
+
+        .required-note {
+            display: inline-flex;
+            width: fit-content;
+            margin-top: 0.06in;
+            padding: 0.04in 0.07in;
+            border: 1px solid var(--border-color);
+            background: var(--brand-light);
+            color: var(--brand-dark);
+            font-size: 8px;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+        }
+
+        .form-fields {
+            display: grid;
+            align-content: space-between;
+            gap: 0.08in;
+        }
+
+        .field-row {
+            display: grid;
+            gap: 0.028in;
+        }
+
+        .field-row--split {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            column-gap: 0.14in;
+        }
+
+        .field-label {
+            color: var(--text-primary);
+            font-size: 9.5px;
+            font-weight: 800;
+            line-height: 1.12;
+        }
+
+        .required {
+            color: #b91c1c;
+            font-weight: 900;
+        }
+
+        .write-line {
+            height: 0.25in;
+            border-bottom: 1.5px solid var(--brand-dark);
+        }
+
+        .write-box {
+            min-height: 0.54in;
+            border: 1.5px solid var(--border-color);
+            background:
+                repeating-linear-gradient(180deg, transparent 0, transparent 0.18in, rgba(17, 24, 39, 0.22) 0.19in),
+                #ffffff;
+        }
+
+        .write-box--large {
+            min-height: 0.66in;
+        }
+
+        .write-box--notes {
+            min-height: 1.28in;
+        }
+
+        .conduct-box {
+            border: 1.5px solid var(--border-color);
+            background: var(--brand-light);
+            padding: 0.07in;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.07in;
+        }
+
+        .conduct-copy {
+            color: var(--text-primary);
+            font-size: 9.5px;
+            line-height: 1.22;
+            font-weight: 700;
+        }
+
+        .conduct-url {
+            display: block;
+            margin-top: 0.02in;
+            color: var(--brand-purple-dark);
+            font-size: 7px;
+            line-height: 1.25;
+            word-break: break-all;
+        }
+
+        .option-group {
+            display: grid;
+            gap: 0.035in;
+        }
+
+        .option-list {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 0.035in 0.14in;
+        }
+
+        .option-list--pronouns {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        .paper-option {
+            display: flex;
+            align-items: center;
+            gap: 0.05in;
+            color: var(--text-primary);
+            font-size: 9.5px;
+            line-height: 1.2;
+            font-weight: 600;
+        }
+
+        .paper-circle {
+            width: 0.12in;
+            height: 0.12in;
+            border: 1.4px solid var(--brand-dark);
+            border-radius: 999px;
+            flex: 0 0 auto;
+        }
+
+        .paper-box {
+            width: 0.12in;
+            height: 0.12in;
+            border: 1.4px solid var(--brand-dark);
+            flex: 0 0 auto;
+            margin-top: 0.01in;
+        }
+
+        .option-write {
+            flex: 1;
+            min-width: 0.9in;
+            height: 0.14in;
+            border-bottom: 1.2px solid var(--brand-dark);
+        }
+
+        .page-note {
+            border-left: 4px solid var(--brand-purple);
+            background: var(--brand-purple-light);
+            padding: 0.055in 0.08in;
+            color: var(--text-primary);
+            font-size: 8.5px;
+            line-height: 1.22;
+            font-weight: 700;
+        }
+
+        .form-footer {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) 0.72in;
+            gap: 0.1in;
+            align-items: end;
+            padding-top: 0.08in;
+            border-top: 1.5px solid var(--border-color);
+        }
+
+        .footer-copy {
+            color: var(--text-secondary);
+            font-size: 7.4px;
+            line-height: 1.25;
+        }
+
+        .footer-copy strong {
+            color: var(--brand-dark);
+        }
+
+        .form-qr {
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 7px;
+            font-weight: 800;
+            line-height: 1.15;
+            text-transform: uppercase;
+        }
+
+        .form-qr img {
+            display: block;
+            width: 0.58in;
+            height: 0.58in;
+            margin: 0 auto 0.04in;
+            border: 1px solid var(--border-color);
+        }
+
+        @media screen and (max-width: 900px) {
+            .form-sheet {
+                width: 100%;
+                min-height: auto;
+            }
+
+            .form-header,
+            .form-footer,
+            .field-row--split,
+            .option-list {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media print {
+            @page {
+                size: letter portrait;
+                margin: 0.25in;
+            }
+
+            body.paper-form-stage {
+                padding: 0;
+                background: #ffffff;
+            }
+
+            .form-packet {
+                gap: 0;
+            }
+
+            .form-sheet {
+                width: auto;
+                min-height: 10.5in;
+                padding: 0.2in 0.18in 0.16in;
+                border: 0;
+                box-shadow: none;
+                gap: 0.08in;
+            }
+
+            .form-header {
+                grid-template-columns: minmax(0, 1fr) 0.62in;
+                gap: 0.1in;
+                padding-bottom: 0.08in;
+                border-bottom-width: 2.5px;
+            }
+
+            .form-title {
+                font-size: 18px;
+                line-height: 1.02;
+            }
+
+            .form-detail {
+                font-size: 9.5px;
+            }
+
+            .form-mark {
+                padding: 0.055in;
+                min-height: 0.54in;
+            }
+
+            .form-logo {
+                width: 0.4in;
+                height: 0.4in;
+            }
+
+            .required-note {
+                padding: 0.03in 0.06in;
+                font-size: 7px;
+            }
+
+            .page-note {
+                padding: 0.045in 0.07in;
+                font-size: 7.8px;
+            }
+
+            .form-fields {
+                align-content: start;
+                gap: 0.06in;
+            }
+
+            .field-label,
+            .conduct-copy,
+            .paper-option {
+                font-size: 8.6px;
+            }
+
+            .write-line {
+                height: 0.2in;
+            }
+
+            .write-box {
+                min-height: 0.42in;
+            }
+
+            .write-box--large {
+                min-height: 0.5in;
+            }
+
+            .write-box--notes {
+                min-height: 2.45in;
+            }
+
+            .option-list {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 0.028in 0.12in;
+            }
+
+            .option-list--pronouns {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+
+            .form-footer {
+                grid-template-columns: minmax(0, 1fr) 0.7in;
+                padding-top: 0.055in;
+            }
+
+            .footer-copy {
+                font-size: 6.8px;
+            }
+
+            .form-qr img {
+                width: 0.56in;
+                height: 0.56in;
+            }
+        }
+    </style>
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.local083.org/marketing/flyiers/2026-06-30-rally-signup-form.html">
+    <meta property="og:title" content="June 30 Rally Paper Signup Form - SEIU Local 503, OSU">
+    <meta property="og:description" content="Printable paper signup form for the June 30, 2026 SEIU Local 83 Higher Education Bargaining Rally for OUR FUTURE.">
+    <meta property="og:image" content="https://www.local083.org/images/card.webp">
+    <meta property="og:site_name" content="SEIU Local 503 at Oregon State University">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://www.local083.org/marketing/flyiers/2026-06-30-rally-signup-form.html">
+    <meta name="twitter:title" content="June 30 Rally Paper Signup Form - SEIU Local 503, OSU">
+    <meta name="twitter:description" content="Printable paper signup form for the June 30, 2026 SEIU Local 83 Higher Education Bargaining Rally for OUR FUTURE.">
+    <meta name="twitter:image" content="https://www.local083.org/images/card.webp">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.local083.org#organization",
+      "name": "SEIU Local 503 at Oregon State University",
+      "url": "https://www.local083.org",
+      "logo": "https://www.local083.org/images/logo.png"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.local083.org#website",
+      "name": "SEIU Local 503 at Oregon State University",
+      "url": "https://www.local083.org",
+      "publisher": {
+        "@id": "https://www.local083.org#organization"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://www.local083.org/marketing/flyiers/2026-06-30-rally-signup-form.html#webpage",
+      "url": "https://www.local083.org/marketing/flyiers/2026-06-30-rally-signup-form.html",
+      "name": "June 30 Rally Paper Signup Form - SEIU Local 503, OSU",
+      "description": "Printable paper signup form for the June 30, 2026 SEIU Local 83 Higher Education Bargaining Rally for OUR FUTURE.",
+      "isPartOf": {
+        "@id": "https://www.local083.org#website"
+      },
+      "about": {
+        "@id": "https://www.local083.org#organization"
+      }
+    }
+  ]
+}
+    </script>
+    <script src="/js/analytics.js" defer></script>
+</head>
+<body class="paper-form-stage">
+    <a href="#main-content" class="skip-link">Skip to content</a>
+
+    <main id="main-content">
+        <div class="print-stage-note no-print">
+            One-page paper signup form for the June 30 rally. Print at 100% on letter paper.
+        </div>
+
+        <section class="form-packet" aria-label="June 30 rally paper signup form">
+            <article class="form-sheet" aria-label="Rally signup form">
+                <div>
+                    <header class="form-header">
+                        <div>
+                            <p class="form-kicker">Paper signup form</p>
+                            <h1 class="form-title">SEIU Local 83 Higher Education Bargaining Rally for OUR FUTURE</h1>
+                            <p class="form-detail">Tuesday, June 30, 12:00 - 1:00<br>McNary Field - Lunch Provided</p>
+                            <p class="required-note">* Required</p>
+                        </div>
+                        <div class="form-mark"><img class="form-logo" src="/images/logo.png" alt="SEIU Local 503 logo" width="44" height="44"></div>
+                    </header>
+                </div>
+
+                <section class="form-fields">
+                    <p class="page-note">Please write clearly. This paper form does not automatically collect your details; only the information you provide here will be used for rally registration and follow-up.</p>
+
+                    <div class="field-row field-row--split">
+                        <label class="field-row">
+                            <span class="field-label">First Name <span class="required">*</span></span>
+                            <span class="write-line" aria-hidden="true"></span>
+                        </label>
+                        <label class="field-row">
+                            <span class="field-label">Last Name <span class="required">*</span></span>
+                            <span class="write-line" aria-hidden="true"></span>
+                        </label>
+                    </div>
+
+                    <label class="field-row">
+                        <span class="field-label">Home Email <span class="required">*</span></span>
+                        <span class="write-line" aria-hidden="true"></span>
+                    </label>
+
+                    <label class="field-row">
+                        <span class="field-label">Cell Phone <span class="required">*</span></span>
+                        <span class="write-line" aria-hidden="true"></span>
+                    </label>
+
+                    <label class="field-row">
+                        <span class="field-label">Building &amp; Department Where You Work <span class="required">*</span></span>
+                        <span class="write-box" aria-hidden="true"></span>
+                    </label>
+
+                    <section class="conduct-box" aria-label="Code of Conduct agreement">
+                        <span class="paper-box" aria-hidden="true"></span>
+                        <p class="conduct-copy">By registering for this event, I agree to follow the SEIU Local 503 Code of Conduct <span class="required">*</span><span class="conduct-url">https://seiu503.org/leadership-and-governance/governing-documents/seiu-503-code-of-conduct/</span></p>
+                    </section>
+
+                    <label class="field-row">
+                        <span class="field-label">Do you have any medical related food allergies, or dietary restrictions due to lifestyle, health, or Religion? <span class="required">*</span></span>
+                        <span class="write-box write-box--large" aria-hidden="true"></span>
+                    </label>
+
+                    <section class="option-group" aria-label="Preferred communication language">
+                        <p class="field-label">Which spoken, or sign language do you prefer for communications? <span class="required">*</span></p>
+                        <div class="option-list">
+                            <span class="paper-option"><span class="paper-circle" aria-hidden="true"></span>English</span>
+                            <span class="paper-option"><span class="paper-circle" aria-hidden="true"></span>American Sign Language</span>
+                            <span class="paper-option"><span class="paper-circle" aria-hidden="true"></span>Spanish</span>
+                            <span class="paper-option"><span class="paper-circle" aria-hidden="true"></span>Other <span class="option-write" aria-hidden="true"></span></span>
+                        </div>
+                    </section>
+
+                    <section class="option-group" aria-label="Simultaneous interpretation">
+                        <p class="field-label">Would simultaneous interpretation into your native language help you better understand and more fully participate in the program? <span class="required">*</span></p>
+                        <div class="option-list">
+                            <span class="paper-option"><span class="paper-circle" aria-hidden="true"></span>Yes</span>
+                            <span class="paper-option"><span class="paper-circle" aria-hidden="true"></span>No</span>
+                        </div>
+                    </section>
+
+                    <section class="option-group" aria-label="Pronouns">
+                        <p class="field-label">What are your pronouns? <span class="required">*</span></p>
+                        <div class="option-list option-list--pronouns">
+                            <span class="paper-option"><span class="paper-circle" aria-hidden="true"></span>They/Them/Theirs</span>
+                            <span class="paper-option"><span class="paper-circle" aria-hidden="true"></span>She/Her/Hers</span>
+                            <span class="paper-option"><span class="paper-circle" aria-hidden="true"></span>He/Him/His</span>
+                            <span class="paper-option"><span class="paper-circle" aria-hidden="true"></span>Other <span class="option-write" aria-hidden="true"></span></span>
+                            <span class="paper-option"><span class="paper-circle" aria-hidden="true"></span>I prefer not to say</span>
+                        </div>
+                    </section>
+
+                    <label class="field-row">
+                        <span class="field-label">Organizer notes / data entry follow-up</span>
+                        <span class="write-box write-box--notes" aria-hidden="true"></span>
+                    </label>
+                </section>
+
+                <footer class="form-footer">
+                    <p class="footer-copy"><strong>Online option:</strong> People who prefer the online form can scan the QR code or visit local083.org/rally. Organizer note: keep completed paper forms secure and enter them into the official signup list promptly.</p>
+                    <div>
+                        <div class="form-qr">
+                            <img src="/images/rally-signup-qr.png" alt="QR code for local083.org/rally">
+                            local083.org/rally
+                        </div>
+                    </div>
+                </footer>
+            </article>
+        </section>
+    </main>
+
+    <button onclick="window.print()" class="print-button no-print">Print / Save PDF</button>
+</body>
+</html>
