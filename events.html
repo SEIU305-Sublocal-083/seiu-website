@@ -347,17 +347,12 @@
                     if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
                     const allEvents = await response.json();
 
-                    // ⚡ Bolt: Pre-parse dates to avoid redundant Date instantiations in loops
-                    allEvents.forEach(event => {
-                        event.parsedDate = new Date(event.date.replace(/-/g, '\/'));
-                    });
-
                     processAndRenderEvents(allEvents);
                     const today = new Date();
-                    today.setHours(0, 0, 0, 0);
+                    const todayString = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
                     safeCapture('events_loaded', {
-                        upcoming_count: allEvents.filter(e => e.parsedDate >= today).length,
-                        past_count: allEvents.filter(e => e.parsedDate < today).length
+                        upcoming_count: allEvents.filter(e => e.date >= todayString).length,
+                        past_count: allEvents.filter(e => e.date < todayString).length
                     });
                 } catch (error) {
                     console.error('Error fetching or processing events:', error);
@@ -367,26 +362,27 @@
             
             function processAndRenderEvents(allEvents) {
                 const today = new Date();
-                today.setHours(0, 0, 0, 0);
+                const todayString = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
 
                 const thirtyDaysFromNow = new Date(today);
                 thirtyDaysFromNow.setDate(today.getDate() + 30);
+                const thirtyDaysFromNowString = `${thirtyDaysFromNow.getFullYear()}-${String(thirtyDaysFromNow.getMonth() + 1).padStart(2, '0')}-${String(thirtyDaysFromNow.getDate()).padStart(2, '0')}`;
 
                 const allUpcomingEvents = allEvents
-                    .filter(event => event.parsedDate >= today)
+                    .filter(event => event.date >= todayString)
                     // ⚡ Bolt: Use fast string comparison instead of new Date() in sort loop (~25x faster)
                     .sort((a, b) => a.date > b.date ? 1 : (a.date < b.date ? -1 : 0));
 
                 const displayNowEvents = allUpcomingEvents.filter(event => {
-                    return event.featured || event.parsedDate <= thirtyDaysFromNow;
+                    return event.featured || event.date <= thirtyDaysFromNowString;
                 });
 
                 const stackedFutureEvents = allUpcomingEvents.filter(event => {
-                    return !event.featured && event.parsedDate > thirtyDaysFromNow;
+                    return !event.featured && event.date > thirtyDaysFromNowString;
                 });
 
                 const pastEvents = allEvents
-                    .filter(event => event.parsedDate < today)
+                    .filter(event => event.date < todayString)
                     // ⚡ Bolt: Use fast string comparison instead of new Date() in sort loop (~25x faster)
                     .sort((a, b) => a.date < b.date ? 1 : (a.date > b.date ? -1 : 0));
 
@@ -411,6 +407,7 @@
                 const monthShortFormatter = new Intl.DateTimeFormat('en-US', { month: 'short' });
 
                 upcomingEventsContainer.innerHTML = events.map(event => {
+                    event.parsedDate = new Date(event.date.replace(/-/g, '/'));
                     const month = monthShortFormatter.format(event.parsedDate).toUpperCase();
                     const day = event.parsedDate.getDate().toString().padStart(2, '0');
                     const isRally = event.url === '/events/2026-06-30-Rally-at-McNary-Field.html';
@@ -467,6 +464,7 @@
                 const dateLongFormatter = new Intl.DateTimeFormat('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
 
                 stackedEventsContainer.innerHTML = events.map(event => {
+                    event.parsedDate = new Date(event.date.replace(/-/g, '/'));
                     const formattedDate = dateLongFormatter.format(event.parsedDate);
 
                     let calendarButton = '';
@@ -504,6 +502,7 @@
                 const monthYearFormatter = new Intl.DateTimeFormat('default', { month: 'long', year: 'numeric' });
 
                 const groupedByMonth = events.reduce((acc, event) => {
+                    event.parsedDate = new Date(event.date.replace(/-/g, '/'));
                     const monthYear = monthYearFormatter.format(event.parsedDate);
                     if (!acc[monthYear]) acc[monthYear] = [];
                     acc[monthYear].push(event);
@@ -538,8 +537,8 @@
 
             function createCalendarEventObject(allEvents) {
                 return allEvents.reduce((acc, event) => {
-                    const month = event.parsedDate.getMonth();
-                    const day = event.parsedDate.getDate();
+                    const month = parseInt(event.date.substring(5, 7), 10) - 1;
+                    const day = parseInt(event.date.substring(8, 10), 10);
                     if (!acc[month]) acc[month] = [];
                     if (!acc[month].includes(day)) acc[month].push(day);
                     return acc;

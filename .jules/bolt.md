@@ -23,3 +23,7 @@
 ## 2026-05-18 - [Premature Date Formatting]
 **Learning:** [Applying expensive operations like `Intl.DateTimeFormat` across an entire dataset (e.g. hundreds of items) before filtering and slicing it down to the handful of items that will actually be rendered is a significant performance anti-pattern. This wastes CPU and memory on data that the user will never see.]
 **Action:** [Always perform filtering, sorting, and slicing first, and only apply expensive formatting or data transformations to the minimal subset of data that will be rendered.]
+
+## 2024-05-18 - [Premature Date Parsing for Filtering]
+**Learning:** [Instantiating `new Date()` for every item in a large dataset (e.g., hundreds of JSON events) just to filter by "upcoming" or "past" dates is an extremely slow performance anti-pattern. Because ISO-8601 dates (YYYY-MM-DD) are lexicographically sortable, direct string comparison (e.g. `event.date >= todayString`) achieves the same result ~50x faster.]
+**Action:** [Filter date strings directly using string comparison first, and defer instantiating `new Date()` only for the remaining slice of items that actually need advanced manipulation or formatting for display.]
