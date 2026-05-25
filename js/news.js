@@ -283,7 +283,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 activeFilters.searchTerm = '';
                 activeFilters.activeTag = null;
 
-                const allNewsTag = Array.from(document.querySelectorAll('.tag-button')).find(btn => btn.textContent === 'All News');
+                const allNewsTag = Array.from(document.querySelectorAll('.tag-button')).find(btn => btn.textContent === 'All');
                 if (allNewsTag) setActiveTag(allNewsTag);
 
                 updateTagUrl(null);
