@@ -236,7 +236,15 @@
             try {
                 const response = await fetch('/test-pages/search-index.json');
                 if (!response.ok) throw new Error('Search index not found.');
-                searchIndex = await response.json();
+                const rawIndex = await response.json();
+
+                // ⚡ Bolt: Pre-calculate lowercase search strings to prevent redundant .toLowerCase() calls during render loops
+                searchIndex = rawIndex.map(item => ({
+                    ...item,
+                    searchTitle: item.title.toLowerCase(),
+                    searchContent: item.content.toLowerCase()
+                }));
+
                 displayInitialMessage();
             } catch (error) {
                 console.error("Failed to load search index:", error);
@@ -244,7 +252,14 @@
             }
             
             // --- Event Listeners ---
-            searchInput.addEventListener('input', () => performSearch());
+            let searchDebounce;
+            searchInput.addEventListener('input', () => {
+                clearTimeout(searchDebounce);
+                // ⚡ Bolt: Debounce search input to reduce DOM manipulations and refiltering on every keystroke
+                searchDebounce = setTimeout(() => {
+                    performSearch();
+                }, 250);
+            });
             
             filterContainer.addEventListener('click', (e) => {
                 const target = e.target.closest('.filter-btn');
@@ -274,9 +289,10 @@
                     currentFilter === 'all' || item.category === currentFilter
                 );
 
+                // ⚡ Bolt: Use pre-calculated lowercase search strings instead of calling toLowerCase() on title and content repeatedly
                 const results = filteredByCategory.filter(item => {
-                    const titleMatch = item.title.toLowerCase().includes(query);
-                    const contentMatch = item.content.toLowerCase().includes(query);
+                    const titleMatch = item.searchTitle.includes(query);
+                    const contentMatch = item.searchContent.includes(query);
                     return titleMatch || contentMatch;
                 });
 
