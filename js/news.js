@@ -256,12 +256,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         // Sort
-        if (activeFilters.sortOrder === 'newest') {
-            // ⚡ Bolt: Use fast string comparison instead of new Date() in sort loop (~25x faster)
-            filteredArticles.sort((a, b) => a.publishedAt < b.publishedAt ? 1 : (a.publishedAt > b.publishedAt ? -1 : 0));
-        } else {
-            // ⚡ Bolt: Use fast string comparison instead of new Date() in sort loop (~25x faster)
-            filteredArticles.sort((a, b) => a.publishedAt > b.publishedAt ? 1 : (a.publishedAt < b.publishedAt ? -1 : 0));
+        // ⚡ Bolt: allArticles is pre-sorted "newest" and .filter() preserves order.
+        // We can skip sorting for "newest", and use the much faster .reverse() for "oldest".
+        if (activeFilters.sortOrder === 'oldest') {
+            filteredArticles.reverse();
         }
 
         displayArticles(filteredArticles);

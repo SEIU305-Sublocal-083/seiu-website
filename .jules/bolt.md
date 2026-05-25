@@ -27,3 +27,7 @@
 ## 2024-05-18 - [Premature Date Parsing for Filtering]
 **Learning:** [Instantiating `new Date()` for every item in a large dataset (e.g., hundreds of JSON events) just to filter by "upcoming" or "past" dates is an extremely slow performance anti-pattern. Because ISO-8601 dates (YYYY-MM-DD) are lexicographically sortable, direct string comparison (e.g. `event.date >= todayString`) achieves the same result ~50x faster.]
 **Action:** [Filter date strings directly using string comparison first, and defer instantiating `new Date()` only for the remaining slice of items that actually need advanced manipulation or formatting for display.]
+
+## 2024-05-18 - [Redundant Array Sorting]
+**Learning:** [Calling `.sort()` on an array that is already sorted, or can be trivially reversed, is a waste of O(n log n) operations. JavaScript's `.filter()` method preserves the original array order. If the source data is pre-sorted, the filtered result remains sorted in that same order.]
+**Action:** [Skip sorting entirely if the data is already in the desired order (e.g., "newest first"). If the opposite order is needed (e.g., "oldest first"), use the O(n) `.reverse()` method instead of re-evaluating the sort criteria.]
