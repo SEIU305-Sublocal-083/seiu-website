@@ -649,16 +649,11 @@
                     if (!response.ok) throw new Error('Network response was not ok');
                     const events = await response.json();
 
-                    // ⚡ Bolt: Pre-parse dates to avoid redundant Date instantiations in loops
-                    events.forEach(event => {
-                        event.parsedDate = new Date(event.date.replace(/-/g, '/'));
-                    });
-
                     const today = new Date();
-                    today.setHours(0, 0, 0, 0);
+                    const todayString = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
 
                     const upcomingEvents = events
-                        .filter(event => event.parsedDate >= today)
+                        .filter(event => event.date >= todayString)
                         .sort((a, b) => {
                             const aIsRally = a.url === rallyEventUrl;
                             const bIsRally = b.url === rallyEventUrl;
@@ -683,6 +678,7 @@
                         year: 'numeric'
                     });
                     upcomingEvents.forEach(event => {
+                        event.parsedDate = new Date(event.date.replace(/-/g, '/'));
                         event.formattedDateShort = dateShortFormatter.format(event.parsedDate);
                     });
 
