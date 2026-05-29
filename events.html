@@ -569,6 +569,9 @@
             }
 
             // --- Calendar Generation ---
+            // ⚡ Bolt: Cache Intl.DateTimeFormat objects to drastically reduce instantiation overhead
+            const calendarMonthFormatter = new Intl.DateTimeFormat('default', { month: 'long' });
+
             function generateCalendar(month, year) {
                 if (!calendarContainer) return;
                 calendarContainer.innerHTML = '';
@@ -578,7 +581,7 @@
                 const daysInMonth = lastDay.getDate();
                 const startingDay = firstDay.getDay();
 
-                const monthName = firstDay.toLocaleString('default', { month: 'long' });
+                const monthName = calendarMonthFormatter.format(firstDay);
 
                 let html = `
                     <div class="text-center">
