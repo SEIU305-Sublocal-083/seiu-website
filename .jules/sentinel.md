@@ -45,3 +45,8 @@
 **Vulnerability:** In `marketing/email-editor/index.html`, user-provided URLs in 'button' and 'links' blocks were injected into the `href` attributes of `<a>` tags. While the code used `escapeAttr()` (which escapes HTML entities), it did not sanitize the URL scheme, allowing `javascript:` or `data:` URIs to execute if the preview or exported HTML was interacted with.
 **Learning:** Even internal or admin-facing tools (like an email editor) are susceptible to DOM-based XSS if user input is rendered into critical attributes like `href`. Simple HTML escaping (`escapeHtml` / `escapeAttr`) is insufficient for URLs.
 **Prevention:** Ensure that a `sanitizeUrl` function (which explicitly blocks `javascript:` and `data:` schemes) is defined and applied to all user-controlled URLs before they are passed into `escapeAttr()` for insertion into HTML templates.
+
+## 2026-05-25 - [Removed sanitizeUrl on img src]
+**Vulnerability:** The application incorrectly used `sanitizeUrl` on `img src` attributes in `js/news.js`. While intended to prevent injection, `sanitizeUrl` explicitly strips `data:` URIs, which breaks legitimate base64-encoded images.
+**Learning:** Security functions must be applied only to their intended context. `sanitizeUrl` is designed to prevent `javascript:` and malicious `data:` scheme execution in contexts where they can execute (like `href` or `form action`). Browsers do not execute `javascript:` URIs in `<img> src` attributes, and blocking `data:` URIs unnecessarily breaks image rendering.
+**Prevention:** Removed `sanitizeUrl` from `<img src="...">` interpolations in `js/news.js`. Always verify the security context before applying a sanitization function to avoid breaking intended functionality.
