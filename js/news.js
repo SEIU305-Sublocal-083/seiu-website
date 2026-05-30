@@ -77,12 +77,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // ⚡ Bolt: Pre-calculate lowercase search strings to prevent redundant string allocations and operations (.toLowerCase()) within render loops
             allArticles.forEach(article => {
-                if (article.updatedAt) {
-                    article.formattedUpdatedAt = updatedAtFormatter.format(new Date(article.updatedAt + 'T00:00:00'));
-                }
                 article.searchTitle = article.title.toLowerCase();
                 article.searchDescription = article.description.toLowerCase();
             });
+
+            // ⚡ Bolt: Lazy formatting of date strings to avoid computing Intl.DateTimeFormat for hidden articles
+            const getFormattedUpdatedAt = (article) => {
+                if (!article.formattedUpdatedAt && article.updatedAt) {
+                    article.formattedUpdatedAt = updatedAtFormatter.format(new Date(article.updatedAt + 'T00:00:00'));
+                }
+                return article.formattedUpdatedAt || '';
+            };
 
             safeCapture('news_feed_loaded', { count: allArticles.length });
 
@@ -312,7 +317,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 </a>
                 <div class="p-6 flex-grow">
                     <div class="flex items-center justify-between mb-2">
-                        <p class="text-text-secondary text-sm" title="${escapeAttr(dateTooltip)}">Last updated: ${escapeHtml(article.formattedUpdatedAt)}</p>
+                        <p class="text-text-secondary text-sm" title="${escapeAttr(dateTooltip)}">Last updated: ${escapeHtml(getFormattedUpdatedAt(article))}</p>
                     </div>
                     <a href="${escapeAttr(sanitizeUrl(article.url))}" class="group block" data-ph-event="news_article_click" data-ph-label="${escapeAttr(article.title)}" data-ph-metadata='{"position":"grid"}'>
                         <h3 class="font-bold text-xl mb-3 group-hover:text-brand-purple transition-colors">${escapeHtml(article.title)}</h3>
