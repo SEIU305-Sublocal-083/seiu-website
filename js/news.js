@@ -229,7 +229,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         </div>
                         <div class="hidden lg:block">
                             <!-- ⚡ Bolt: Add loading="lazy" to defer offscreen images and improve initial page load time -->
-                            <img src="${escapeAttr(sanitizeUrl(article.image))}" alt="${escapeAttr(altText)}" class="w-full h-full object-cover" loading="lazy">
+                            <img src="${escapeAttr(article.image)}" alt="${escapeAttr(altText)}" class="w-full h-full object-cover" loading="lazy">
                         </div>
                     </div>
                 </a>
@@ -308,7 +308,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="bg-white rounded-xl border border-border-color overflow-hidden flex flex-col h-full">
                 <a href="${escapeAttr(sanitizeUrl(article.url))}" class="group block" data-ph-event="news_article_click" data-ph-label="${escapeAttr(article.title)}" data-ph-metadata='{"position":"grid"}'>
                     <!-- ⚡ Bolt: Add loading="lazy" to defer offscreen images and improve initial page load time -->
-                    <img src="${escapeAttr(sanitizeUrl(article.image))}" alt="${escapeAttr(altText)}" class="w-full h-48 object-cover" loading="lazy">
+                    <img src="${escapeAttr(article.image)}" alt="${escapeAttr(altText)}" class="w-full h-48 object-cover" loading="lazy">
                 </a>
                 <div class="p-6 flex-grow">
                     <div class="flex items-center justify-between mb-2">
