@@ -41,6 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
         sortOrder: 'newest',
         activeTag: null
     };
+    const updatedAtFormatter = new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
 
     function getArticleStatus(article) {
         return article.status || 'published';
@@ -63,16 +64,20 @@ document.addEventListener('DOMContentLoaded', () => {
         return !publishedAt || publishedAt <= todayString;
     }
 
+    function getFormattedUpdatedAt(article) {
+        if (!article.formattedUpdatedAt && article.updatedAt) {
+            article.formattedUpdatedAt = updatedAtFormatter.format(new Date(article.updatedAt + 'T00:00:00'));
+        }
+        return article.formattedUpdatedAt || '';
+    }
+
     async function loadNews() {
         try {
             const response = await fetch('news/news.json');
             if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
             allArticles = await response.json();
 
-            // ⚡ Bolt: Pre-format dates to avoid redundant formatting in display loop
             // ⚡ Bolt: Cache Intl.DateTimeFormat objects to drastically reduce instantiation overhead
-            const updatedAtFormatter = new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
-
             allArticles = allArticles.filter(isPublicArticle);
 
             // ⚡ Bolt: Pre-calculate lowercase search strings to prevent redundant string allocations and operations (.toLowerCase()) within render loops
@@ -80,14 +85,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 article.searchTitle = article.title.toLowerCase();
                 article.searchDescription = article.description.toLowerCase();
             });
-
-            // ⚡ Bolt: Lazy formatting of date strings to avoid computing Intl.DateTimeFormat for hidden articles
-            const getFormattedUpdatedAt = (article) => {
-                if (!article.formattedUpdatedAt && article.updatedAt) {
-                    article.formattedUpdatedAt = updatedAtFormatter.format(new Date(article.updatedAt + 'T00:00:00'));
-                }
-                return article.formattedUpdatedAt || '';
-            };
 
             safeCapture('news_feed_loaded', { count: allArticles.length });
 
