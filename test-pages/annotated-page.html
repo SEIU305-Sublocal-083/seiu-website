@@ -419,8 +419,9 @@
                         return;
                     }
 
-                    const activeSection = contractContainer.querySelector(`.contract-section[data-target="${targetId}"]`);
-                    const activeAnnotation = annotationsContainer.querySelector(`#${targetId}`);
+                    const safeTargetId = CSS.escape(targetId);
+                    const activeSection = contractContainer.querySelector(`.contract-section[data-target="${safeTargetId}"]`);
+                    const activeAnnotation = annotationsContainer.querySelector(`#${safeTargetId}`);
 
                     if (activeSection && activeAnnotation) {
                         activeSection.classList.add('active');

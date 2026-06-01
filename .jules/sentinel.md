@@ -50,3 +50,8 @@
 **Vulnerability:** The application incorrectly used `sanitizeUrl` on `img src` attributes in `js/news.js`. While intended to prevent injection, `sanitizeUrl` explicitly strips `data:` URIs, which breaks legitimate base64-encoded images.
 **Learning:** Security functions must be applied only to their intended context. `sanitizeUrl` is designed to prevent `javascript:` and malicious `data:` scheme execution in contexts where they can execute (like `href` or `form action`). Browsers do not execute `javascript:` URIs in `<img> src` attributes, and blocking `data:` URIs unnecessarily breaks image rendering.
 **Prevention:** Removed `sanitizeUrl` from `<img src="...">` interpolations in `js/news.js`. Always verify the security context before applying a sanitization function to avoid breaking intended functionality.
+
+## $(date +%Y-%m-%d) - [MEDIUM] Fix CSS Selector Injection in test-pages/annotated-page.html
+**Vulnerability:** User-controlled input (`targetId` derived from the `section` URL query parameter) was used directly to construct CSS selectors via `document.querySelector` inside `test-pages/annotated-page.html`. This creates a vulnerability to Client-Side DoS and Selector Injection, potentially causing unhandled exceptions if the parameter contains CSS control characters like brackets or quotes.
+**Learning:** Even internal testing or annotated tools that rely on URL parameters for state must defensively sanitize those parameters before using them in DOM manipulation functions like `querySelector()`.
+**Prevention:** Always use `CSS.escape()` to sanitize any dynamically generated or user-provided strings before concatenating them into a CSS selector string.
