@@ -419,8 +419,10 @@
                         return;
                     }
 
-                    const activeSection = contractContainer.querySelector(`.contract-section[data-target="${targetId}"]`);
-                    const activeAnnotation = annotationsContainer.querySelector(`#${targetId}`);
+                    // ⚡ Sentinel: Escape user input to prevent Selector Injection
+                    const escapedTargetId = CSS.escape(targetId);
+                    const activeSection = contractContainer.querySelector(`.contract-section[data-target="${escapedTargetId}"]`);
+                    const activeAnnotation = annotationsContainer.querySelector(`#${escapedTargetId}`);
 
                     if (activeSection && activeAnnotation) {
                         activeSection.classList.add('active');
