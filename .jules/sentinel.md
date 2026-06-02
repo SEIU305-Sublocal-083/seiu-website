@@ -55,3 +55,13 @@
 **Vulnerability:** User-controlled URL parameter `targetId` was used directly in `document.querySelector()` without being escaped in `test-pages/annotated-page.html`.
 **Learning:** Constructing CSS selectors using unescaped user input can lead to Selector Injection. Attackers can inject arbitrary selectors or execute Client-Side Denial of Service (DoS) by providing excessively complex or malformed inputs, which could break the JavaScript execution.
 **Prevention:** Always sanitize and escape user-controlled data using `CSS.escape()` before interpolating it into a CSS selector string.
+
+## 2026-06-05 - [Fix Reverse Tabnabbing Vulnerability]
+**Vulnerability:** Instances of  were found missing the  attribute, leaving the application susceptible to reverse tabnabbing attacks.
+**Learning:** Using  without proper  attributes can allow newly opened tabs to hijack the original tab's  object.
+**Prevention:** Ensured  is added to all user-facing  anchor tags dynamically interpolated in client-side HTML.
+
+## 2026-06-05 - [Fix Reverse Tabnabbing Vulnerability]
+**Vulnerability:** Instances of target="_blank" were found missing the rel="noopener noreferrer" attribute, leaving the application susceptible to reverse tabnabbing attacks.
+**Learning:** Using target="_blank" without proper rel attributes can allow newly opened tabs to hijack the original tab's window.opener object.
+**Prevention:** Ensured rel="noopener noreferrer" is added to all user-facing target="_blank" anchor tags dynamically interpolated in client-side HTML.
