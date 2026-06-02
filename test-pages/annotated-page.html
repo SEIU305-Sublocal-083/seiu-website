@@ -419,10 +419,9 @@
                         return;
                     }
 
-                    // ⚡ Sentinel: Escape user input to prevent Selector Injection
-                    const escapedTargetId = CSS.escape(targetId);
-                    const activeSection = contractContainer.querySelector(`.contract-section[data-target="${escapedTargetId}"]`);
-                    const activeAnnotation = annotationsContainer.querySelector(`#${escapedTargetId}`);
+                    const safeTargetId = CSS.escape(targetId);
+                    const activeSection = contractContainer.querySelector(`.contract-section[data-target="${safeTargetId}"]`);
+                    const activeAnnotation = annotationsContainer.querySelector(`#${safeTargetId}`);
 
                     if (activeSection && activeAnnotation) {
                         activeSection.classList.add('active');
