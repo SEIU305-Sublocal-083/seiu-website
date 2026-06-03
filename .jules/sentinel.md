@@ -65,3 +65,8 @@
 **Vulnerability:** Instances of target="_blank" were found missing the rel="noopener noreferrer" attribute, leaving the application susceptible to reverse tabnabbing attacks.
 **Learning:** Using target="_blank" without proper rel attributes can allow newly opened tabs to hijack the original tab's window.opener object.
 **Prevention:** Ensured rel="noopener noreferrer" is added to all user-facing target="_blank" anchor tags dynamically interpolated in client-side HTML.
+
+## 2026-06-08 - Fix Selector Injection in events.html
+**Vulnerability:** User-controlled data (the `dateStr` derived from user clicks on calendar elements, stored in `dataset.date`) was interpolated directly into CSS selectors within `document.querySelector` calls in `events.html`'s `highlightEvent` function.
+**Learning:** Constructing CSS selectors using unescaped user input can lead to Selector Injection. This allows attackers to potentially inject arbitrary selectors or trigger Client-Side Denial of Service (DoS) by crafting complex inputs.
+**Prevention:** Always sanitize and escape user-controlled data using `CSS.escape()` before interpolating it into a CSS selector string.

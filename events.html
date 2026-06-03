@@ -642,9 +642,10 @@
             function highlightEvent(dateStr) {
                 document.querySelectorAll('.highlight-event').forEach(el => el.classList.remove('highlight-event'));
 
-                let targetEvent = document.querySelector(`#upcoming-events-container #event-${dateStr}`);
+                const safeDateStr = CSS.escape(dateStr);
+                let targetEvent = document.querySelector(`#upcoming-events-container #event-${safeDateStr}`);
                 if (!targetEvent) {
-                    targetEvent = document.querySelector(`#stacked-events-container #event-${dateStr}`);
+                    targetEvent = document.querySelector(`#stacked-events-container #event-${safeDateStr}`);
                 }
 
                 if (targetEvent) {
