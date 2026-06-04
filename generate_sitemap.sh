@@ -15,13 +15,23 @@ rm -f $OUTPUT_FILE
 echo '<?xml version="1.0" encoding="UTF-8"?>' > $OUTPUT_FILE
 echo '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' >> $OUTPUT_FILE
 
-# Find all .html files, excluding template sources, test pages, and 404.
+# Find all public .html files, excluding templates, drafts, redirects, and internal tools.
 find . -name "*.html" \
-  | grep -vE "^\\./templates/" \
-  | grep -vE "^\\./welcome/" \
-  | grep -vE "^\\./test-pages/" \
-  | grep -v "/404.html$" \
+  -not -path "./templates/*" \
+  -not -path "./welcome/*" \
+  -not -path "./test-pages/*" \
+  -not -path "./marketing/*" \
+  -not -path "./slides/*" \
+  -not -path "./.*" \
+  -not -path "*/node_modules/*" \
+  -not -name "test-pages.html" \
+  -not -name "404.html" \
+  | sort \
   | while read -r line; do
+    if grep -Eiq '<meta[^>]+(http-equiv=["'\'']refresh["'\'']|name=["'\'']robots["'\''][^>]+noindex)' "$line"; then
+        continue
+    fi
+
     # Remove the leading './' from the file path.
     url_path=$(echo "$line" | sed 's|^\./||')
 

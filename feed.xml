@@ -5,7 +5,7 @@
     <link>https://www.local083.org</link>
     <description>Combined news and event updates from SEIU Local 503 at Oregon State University.</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 21 May 2026 05:02:08 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 04 Jun 2026 06:29:36 GMT</lastBuildDate>
     <atom:link href="https://www.local083.org/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>[Event] Rally June 30 at McNary Field</title>
@@ -14,6 +14,15 @@
       <description>Join coworkers at McNary Field for food, lawn games, and a strong show of unity. Management is offering no raises or COLA for four years, and members are showing up for real raises and a fair contract. | Date: 2026-06-30 | Time: 12:00 PM - 1:00 PM | Location: McNary Field</description>
       <pubDate>Tue, 30 Jun 2026 00:00:00 GMT</pubDate>
       <category>Rally</category>
+    </item>
+    <item>
+      <title>[News] What Is a CAT?</title>
+      <link>https://www.local083.org/news/2026-06-03-what-is-a-cat.html</link>
+      <guid isPermaLink="false">https://www.local083.org/news/2026-06-03-what-is-a-cat.html#news</guid>
+      <description>The Contract Action Team is how members keep each other informed, build participation, and turn bargaining priorities into visible workplace power.</description>
+      <pubDate>Wed, 03 Jun 2026 00:00:00 GMT</pubDate>
+      <category>Union Basics</category>
+      <category>Organizing</category>
     </item>
     <item>
       <title>[Event] Purple Up Day (SOU)</title>
@@ -495,7 +504,7 @@
       <title>[Event] Sub Local Leadership Meeting</title>
       <link>https://www.local083.org/#</link>
       <guid isPermaLink="false">event:2025-08-14:Sub Local Leadership Meeting:combined</guid>
-      <description>A meeting with the leadership of our Sub Local. | Date: 2025-08-14 | Time: TBD | Location: TBD</description>
+      <description>A meeting with the leadership of our Sub Local. | Date: 2025-08-14 | Time: Time not posted | Location: Location not posted</description>
       <pubDate>Thu, 14 Aug 2025 00:00:00 GMT</pubDate>
       <category>Meeting</category>
     </item>
@@ -503,7 +512,7 @@
       <title>[Event] CAT Meeting</title>
       <link>https://www.local083.org/#</link>
       <guid isPermaLink="false">event:2025-08-06:CAT Meeting:combined</guid>
-      <description>A C.A.T. meeting focusing on current campaign events. | Date: 2025-08-06 | Time: TBD | Location: TBD</description>
+      <description>A C.A.T. meeting focusing on current campaign events. | Date: 2025-08-06 | Time: Time not posted | Location: Location not posted</description>
       <pubDate>Wed, 06 Aug 2025 00:00:00 GMT</pubDate>
       <category>Meeting</category>
     </item>
