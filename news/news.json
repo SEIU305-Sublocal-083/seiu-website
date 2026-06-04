@@ -1,10 +1,50 @@
 [
   {
+    "title": "What Is a Steward?",
+    "description": "A steward is a trained coworker who helps members understand the contract, exercise their rights, and respond when workplace problems come up.",
+    "url": "/news/2026-06-10-what-is-a-steward.html",
+    "image": "/images/card.webp",
+    "alt": "SEIU Local 503 at Oregon State University card graphic",
+    "tags": [
+      "Union Basics",
+      "Representation"
+    ],
+    "author": {
+      "name": "SEIU 503 Sublocal 083",
+      "title": "Union Leadership"
+    },
+    "publishedAt": "2026-06-10",
+    "createdAt": "2026-06-10",
+    "updatedAt": "2026-06-10",
+    "status": "scheduled",
+    "featured": false
+  },
+  {
+    "title": "What Is a CAT?",
+    "description": "The Contract Action Team is how members keep each other informed, build participation, and turn bargaining priorities into visible workplace power.",
+    "url": "/news/2026-06-03-what-is-a-cat.html",
+    "image": "/resources/zoom-backgrounds/2026-bargaining/SEIU-503-Bargaining-2026-Fists-Landscape.png",
+    "alt": "Purple 2026 higher education bargaining graphic with raised fists and SEIU 503 branding",
+    "tags": [
+      "Union Basics",
+      "Organizing"
+    ],
+    "author": {
+      "name": "SEIU 503 Sublocal 083",
+      "title": "Union Leadership"
+    },
+    "publishedAt": "2026-06-03",
+    "createdAt": "2026-06-03",
+    "updatedAt": "2026-06-03",
+    "status": "published",
+    "featured": false
+  },
+  {
     "title": "Economics They Say / We Say",
     "description": "Management said it would provide economics proposals, but failed to bring them when expected. SEIU put our proposals forward for members to review and share.",
     "url": "/news/2026-05-07-economics-they-say-we-say.html",
-    "image": "/images/card.webp",
-    "alt": "SEIU Local 503 at Oregon State University card graphic",
+    "image": "/resources/zoom-backgrounds/2026-bargaining/SEIU-503-Bargaining-2026-Fists-Landscape.png",
+    "alt": "Purple 2026 higher education bargaining graphic with raised fists and SEIU 503 branding",
     "tags": [
       "Bargaining",
       "Economics"

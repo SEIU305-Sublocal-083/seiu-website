@@ -43,10 +43,29 @@
             border-radius: 4px;
         }
         .btn {
-            @apply font-bold py-3 px-6 rounded-lg transition-all duration-300 ease-in-out transform hover:scale-105;
+            display: inline-flex;
+            min-height: 3rem;
+            align-items: center;
+            justify-content: center;
+            border-radius: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            text-align: center;
+            text-decoration: none;
+            transition: transform 200ms ease, box-shadow 200ms ease, background-color 200ms ease, color 200ms ease, border-color 200ms ease;
+        }
+        .btn:hover {
+            transform: scale(1.05);
         }
         .btn-outline {
-             @apply bg-white text-brand-purple border-2 border-brand-purple hover:bg-brand-purple hover:text-white;
+            background: #ffffff;
+            color: var(--brand-purple);
+            border: 2px solid var(--brand-purple);
+        }
+        .btn-outline:hover {
+            background: var(--brand-purple);
+            color: #ffffff;
         }
         tailwind.config = {
             theme: {
@@ -70,13 +89,13 @@
     <meta property="og:url" content="https://www.local083.org/events/2026-06-30-Rally-at-McNary-Field.html">
     <meta property="og:title" content="Event: Rally June 30 at McNary Field - SEIU Local 503, OSU">
     <meta property="og:description" content="Join coworkers Tuesday, June 30, noon to 1 p.m. at McNary Field for food, lawn games, and a strong show of unity.">
-    <meta property="og:image" content="https://www.local083.org/images/card.webp">
+    <meta property="og:image" content="https://www.local083.org/resources/zoom-backgrounds/2026-bargaining/SEIU-503-Bargaining-2026-Protest-Landscape.png">
     <meta property="og:site_name" content="SEIU Local 503 at Oregon State University">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://www.local083.org/events/2026-06-30-Rally-at-McNary-Field.html">
     <meta name="twitter:title" content="Event: Rally June 30 at McNary Field - SEIU Local 503, OSU">
     <meta name="twitter:description" content="Join coworkers Tuesday, June 30, noon to 1 p.m. at McNary Field for food, lawn games, and a strong show of unity.">
-    <meta name="twitter:image" content="https://www.local083.org/images/card.webp">
+    <meta name="twitter:image" content="https://www.local083.org/resources/zoom-backgrounds/2026-bargaining/SEIU-503-Bargaining-2026-Protest-Landscape.png">
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -118,9 +137,19 @@
       "startDate": "2026-06-30T12:00:00-07:00",
       "endDate": "2026-06-30T13:00:00-07:00",
       "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "image": [
+        "https://www.local083.org/resources/zoom-backgrounds/2026-bargaining/SEIU-503-Bargaining-2026-Protest-Landscape.png"
+      ],
       "location": {
         "@type": "Place",
-        "name": "McNary Field, Oregon State University"
+        "name": "McNary Field, Oregon State University",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Corvallis",
+          "addressRegion": "OR",
+          "addressCountry": "US"
+        }
       },
       "organizer": {
         "@type": "Organization",
@@ -187,6 +216,33 @@
                         <li>Wear purple and bring one coworker with you.</li>
                         <li>Arrive a few minutes early so we can gather before noon.</li>
                     </ul>
+                    <div class="rounded-xl border border-brand-purple/20 bg-brand-purple-light/40 p-5">
+                        <h3 class="text-2xl font-bold mb-3">Why turnout matters</h3>
+                        <p>Management's offer would freeze wages, shift healthcare costs, and weaken protections. Read the issue guides before the rally so you can talk with coworkers about what is at stake.</p>
+                        <div class="mt-4 flex flex-wrap gap-3">
+                            <a href="/2026-bargaining/cola.html" class="font-semibold text-brand-purple underline decoration-2 underline-offset-2">COLA raises</a>
+                            <a href="/2026-bargaining/step-increases.html" class="font-semibold text-brand-purple underline decoration-2 underline-offset-2">Step increases</a>
+                            <a href="/2026-bargaining/healthcare-cost-share.html" class="font-semibold text-brand-purple underline decoration-2 underline-offset-2">Healthcare cost share</a>
+                            <a href="/2026-bargaining/layoff-protections.html" class="font-semibold text-brand-purple underline decoration-2 underline-offset-2">Layoff protections</a>
+                        </div>
+                    </div>
+                    <div class="rounded-xl border border-border-color bg-white p-5">
+                        <h3 class="text-2xl font-bold mb-3">Who can come?</h3>
+                        <p>This rally is centered on classified staff, and supporters are welcome. Students, faculty, researchers, graduate workers, families, community members, public-safety colleagues, and labor allies can all help show that OSU's contract choices affect the whole campus.</p>
+                        <div class="mt-4 grid sm:grid-cols-2 gap-3">
+                            <a href="/2026-bargaining/students.html" class="font-semibold text-brand-purple underline decoration-2 underline-offset-2">Students</a>
+                            <a href="/2026-bargaining/faculty-researchers.html" class="font-semibold text-brand-purple underline decoration-2 underline-offset-2">Faculty and researchers</a>
+                            <a href="/2026-bargaining/graduate-workers.html" class="font-semibold text-brand-purple underline decoration-2 underline-offset-2">Graduate workers</a>
+                            <a href="/2026-bargaining/labor-allies.html" class="font-semibold text-brand-purple underline decoration-2 underline-offset-2">Labor allies</a>
+                        </div>
+                    </div>
+                    <div class="rounded-xl border border-brand-purple/20 bg-brand-purple-light/40 p-5">
+                        <h3 class="text-2xl font-bold mb-3">Help build turnout</h3>
+                        <p>Use the rally toolkit for sample posts, short invitation text, and links you can send to coworkers or supporters.</p>
+                        <div class="mt-4">
+                            <a href="/2026-bargaining/rally-toolkit.html" class="font-semibold text-brand-purple underline decoration-2 underline-offset-2">Open the rally toolkit</a>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -200,7 +256,7 @@
                         </div>
                         <div>
                             <h4 class="font-bold">Location</h4>
-                            <p class="text-text-secondary">McNary Field</p>
+                            <p class="text-text-secondary">McNary Field<br>Oregon State University<br>Corvallis, OR</p>
                         </div>
                         <div>
                             <h4 class="font-bold">What to expect</h4>
@@ -209,6 +265,7 @@
                     </div>
                     <div class="mt-8 space-y-3">
                         <a href="/rally" class="w-full inline-flex items-center justify-center gap-2 rounded-lg px-6 py-4 text-lg font-bold text-white shadow-md hover:shadow-lg transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-purple" style="background-color: var(--brand-purple);">Sign Up for the Rally</a>
+                        <a href="/2026-bargaining/why-rally.html" class="btn btn-outline w-full text-center">Why Show Up June 30</a>
                         <a href="/events/ical/2026-06-30-Rally-at-McNary-Field.ics" download class="btn btn-outline w-full text-center">Add to Calendar</a>
                         <a href="/events.html" class="btn btn-outline w-full text-center">Back to Events</a>
                     </div>
