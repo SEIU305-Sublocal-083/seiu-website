@@ -70,3 +70,8 @@
 **Vulnerability:** User-controlled data (the `dateStr` derived from user clicks on calendar elements, stored in `dataset.date`) was interpolated directly into CSS selectors within `document.querySelector` calls in `events.html`'s `highlightEvent` function.
 **Learning:** Constructing CSS selectors using unescaped user input can lead to Selector Injection. This allows attackers to potentially inject arbitrary selectors or trigger Client-Side Denial of Service (DoS) by crafting complex inputs.
 **Prevention:** Always sanitize and escape user-controlled data using `CSS.escape()` before interpolating it into a CSS selector string.
+
+## 2026-06-08 - Fix Reverse Tabnabbing Vulnerability
+**Vulnerability:** Many `<a>` tags with `target="_blank"` were found either missing the `rel` attribute entirely or only having `rel="noopener"`, leaving the application partially susceptible to reverse tabnabbing attacks (especially in older browsers that don't imply `noopener`).
+**Learning:** Using `target="_blank"` without proper `rel="noopener noreferrer"` attributes can allow newly opened tabs to hijack the original tab's `window.opener` object.
+**Prevention:** Always ensure `rel="noopener noreferrer"` is added to all user-facing `target="_blank"` anchor tags, both in static HTML and dynamically interpolated client-side HTML.
