@@ -31,3 +31,7 @@
 ## 2024-05-18 - [Redundant Array Sorting]
 **Learning:** [Calling `.sort()` on an array that is already sorted, or can be trivially reversed, is a waste of O(n log n) operations. JavaScript's `.filter()` method preserves the original array order. If the source data is pre-sorted, the filtered result remains sorted in that same order.]
 **Action:** [Skip sorting entirely if the data is already in the desired order (e.g., "newest first"). If the opposite order is needed (e.g., "oldest first"), use the O(n) `.reverse()` method instead of re-evaluating the sort criteria.]
+
+## 2024-05-18 - [RegExp Instantiation in Render Loops]
+**Learning:** [Instantiating a `new RegExp()` inside a mapping loop (e.g., `results.map()`) causes redundant object creation and pattern compilation for every item, which is a measurable performance bottleneck.]
+**Action:** [Hoist `new RegExp()` instantiations outside the loop when the pattern (like a search query) remains constant across iterations. Reusing a global regex with `String.prototype.replace()` is safe because `replace()` handles `lastIndex` implicitly.]
