@@ -70,3 +70,13 @@
 **Vulnerability:** User-controlled data (the `dateStr` derived from user clicks on calendar elements, stored in `dataset.date`) was interpolated directly into CSS selectors within `document.querySelector` calls in `events.html`'s `highlightEvent` function.
 **Learning:** Constructing CSS selectors using unescaped user input can lead to Selector Injection. This allows attackers to potentially inject arbitrary selectors or trigger Client-Side Denial of Service (DoS) by crafting complex inputs.
 **Prevention:** Always sanitize and escape user-controlled data using `CSS.escape()` before interpolating it into a CSS selector string.
+
+## 2026-06-15 - [Fix Regression of Reverse Tabnabbing Vulnerability]
+**Vulnerability:** Despite previous efforts, 40 instances of `target="_blank"` were found missing the `rel="noopener noreferrer"` attribute (using only `rel="noopener"` or nothing), leaving the application susceptible to reverse tabnabbing attacks in regression.
+**Learning:** Using `target="_blank"` without proper `rel` attributes can allow newly opened tabs to hijack the original tab's `window.opener` object. Consistent checks are required to ensure `noreferrer` is also included along with `noopener` for maximum cross-browser security.
+**Prevention:** Ensured `rel="noopener noreferrer"` is added to all user-facing `target="_blank"` anchor tags across all HTML files. Consider adding an automated test to enforce this on all future commits.
+
+## 2026-06-15 - [Enhance Privacy on External Links]
+**Vulnerability:** External `target="_blank"` links were missing the `noreferrer` attribute, potentially leaking referral information to third-party domains.
+**Learning:** While `noopener` effectively mitigates reverse tabnabbing vulnerabilities, omitting `noreferrer` can unnecessarily expose user navigation patterns and internal referer data to external sites.
+**Prevention:** Ensured `rel="noopener noreferrer"` is consistently applied to all user-facing `target="_blank"` anchor tags linking to external resources to strengthen privacy and defense-in-depth.
