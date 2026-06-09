@@ -333,14 +333,19 @@
                     return;
                 }
                 
+                // ⚡ Bolt: Hoist RegExp instantiation outside of the map loop to prevent redundant compilations
+                let regex = null;
+                if (query) {
+                    const escapedQuery = escapeHTML(query);
+                    const safeQuery = escapedQuery.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); // Escape regex control characters
+                    regex = new RegExp(`(${safeQuery})`, 'gi');
+                }
+
                 resultsContainer.innerHTML = results.map(item => {
                     // Create a snippet and highlight the query term
                     let snippet = item.content.substring(0, 150) + '...';
                     snippet = escapeHTML(snippet);
-                    if (query) {
-                        const escapedQuery = escapeHTML(query);
-                        const safeQuery = escapedQuery.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); // Escape regex control characters
-                        const regex = new RegExp(`(${safeQuery})`, 'gi');
+                    if (regex) {
                         snippet = snippet.replace(regex, `<mark class="bg-yellow-200">$1</mark>`);
                     }
 
