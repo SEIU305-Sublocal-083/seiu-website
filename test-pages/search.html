@@ -333,15 +333,20 @@
                     return;
                 }
                 
+                // ⚡ Bolt: Hoist RegExp instantiation outside the mapping loop to avoid redundant object creation and pattern compilation
+                let highlightRegex = null;
+                if (query) {
+                    const escapedQuery = escapeHTML(query);
+                    const safeQuery = escapedQuery.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); // Escape regex control characters
+                    highlightRegex = new RegExp(`(${safeQuery})`, 'gi');
+                }
+
                 resultsContainer.innerHTML = results.map(item => {
                     // Create a snippet and highlight the query term
                     let snippet = item.content.substring(0, 150) + '...';
                     snippet = escapeHTML(snippet);
-                    if (query) {
-                        const escapedQuery = escapeHTML(query);
-                        const safeQuery = escapedQuery.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); // Escape regex control characters
-                        const regex = new RegExp(`(${safeQuery})`, 'gi');
-                        snippet = snippet.replace(regex, `<mark class="bg-yellow-200">$1</mark>`);
+                    if (highlightRegex) {
+                        snippet = snippet.replace(highlightRegex, `<mark class="bg-yellow-200">$1</mark>`);
                     }
 
                     return `
