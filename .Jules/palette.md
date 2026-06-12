@@ -18,3 +18,6 @@ Critical UX/accessibility learnings only.
 ## 2026-05-18 - [Add visual and semantic loading states]
 **Learning:** Plain text loading indicators (like "Loading...") can feel unresponsive and lack proper semantic meaning for assistive technologies. Replacing them with an animated visual spinner and a `role="status"` wrapper ensures both sighted and screen-reader users understand the system is processing information.
 **Action:** Always use a visual indicator (like a spinner) accompanied by semantic `role="status"` and visually hidden text for asynchronous loading states.
+## 2026-06-11 - [Add empty state for initial search screen]
+**Learning:** Initial search screens often present users with a blank slate that can feel uninviting or confusing. A plain text prompt like "Type to search" lacks visual hierarchy and polish.
+**Action:** Replace plain text search prompts with a visually distinct empty state component. This should include a relevant icon (like a magnifying glass or search symbol), a clear, bold heading ("Search the site"), and supportive descriptive text guiding the user on what they can search for. This reduces cognitive load and makes the search interface feel more approachable and professional.
