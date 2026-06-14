@@ -35,3 +35,7 @@
 ## 2024-05-18 - [RegExp Instantiation in Loops]
 **Learning:** [Instantiating `new RegExp()` inside rendering loops (like `Array.prototype.map()`) when the pattern is constant causes redundant pattern compilation and object creation on every iteration, harming performance. Furthermore, it's safe to hoist global RegExp instances (e.g., with the 'g' or 'gi' flag) outside of rendering loops and reuse them with `String.prototype.replace()`, because `replace()` automatically ignores and resets the regex's `lastIndex` property, preventing state leakage across loop iterations.]
 **Action:** [Always hoist `new RegExp()` instantiations outside the loop when the pattern (such as a search query) remains constant.]
+
+## 2026-05-18 - [Substring Grouping for ISO-8601 Strings]
+**Learning:** [Grouping large arrays of objects by date (e.g., grouping events by month) by parsing `new Date()` and applying `Intl.DateTimeFormat` on every single item is a massive O(N) performance anti-pattern. Because ISO-8601 strings (YYYY-MM-DD) natively encode the group key (YYYY-MM) via a simple substring, we can extract the group key directly without any date parsing.]
+**Action:** [When grouping data by a time period derived from ISO-8601 strings, extract the group key via substring (e.g., `date.substring(0, 7)`) instead of instantiating `new Date()`. Apply date formatting (`Intl.DateTimeFormat.format()`) only once per unique group to reduce O(N) formatting operations to O(1) per group.]
