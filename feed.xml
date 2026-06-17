@@ -5,7 +5,7 @@
     <link>https://www.local083.org</link>
     <description>Combined news and event updates from SEIU Local 503 at Oregon State University.</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 21 May 2026 05:02:08 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 17 Jun 2026 16:04:12 GMT</lastBuildDate>
     <atom:link href="https://www.local083.org/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>[Event] Rally June 30 at McNary Field</title>
@@ -14,6 +14,22 @@
       <description>Join coworkers at McNary Field for food, lawn games, and a strong show of unity. Management is offering no raises or COLA for four years, and members are showing up for real raises and a fair contract. | Date: 2026-06-30 | Time: 12:00 PM - 1:00 PM | Location: McNary Field</description>
       <pubDate>Tue, 30 Jun 2026 00:00:00 GMT</pubDate>
       <category>Rally</category>
+    </item>
+    <item>
+      <title>[Event] OSU CAT Meeting</title>
+      <link>https://www.local083.org/events/2026-06-22-OSU-CAT-Meeting.html</link>
+      <guid isPermaLink="false">event:2026-06-22:OSU CAT Meeting:combined</guid>
+      <description>Join SEIU Local 083 for the OSU Contract Action Team meeting on Zoom at 6 p.m. Pacific time. | Date: 2026-06-22 | Time: 6:00 PM PT | Location: Online via Zoom</description>
+      <pubDate>Mon, 22 Jun 2026 00:00:00 GMT</pubDate>
+      <category>Zoom Meeting</category>
+    </item>
+    <item>
+      <title>[Event] OSU June Membership Meeting</title>
+      <link>https://www.local083.org/events/2026-06-18-OSU-June-Membership-Meeting.html</link>
+      <guid isPermaLink="false">event:2026-06-18:OSU June Membership Meeting:combined</guid>
+      <description>Join SEIU Local 083 for the OSU June membership meeting on Zoom at noon Pacific time. | Date: 2026-06-18 | Time: 12:00 PM PT | Location: Online via Zoom</description>
+      <pubDate>Thu, 18 Jun 2026 00:00:00 GMT</pubDate>
+      <category>Zoom Meeting</category>
     </item>
     <item>
       <title>[Event] Purple Up Day (SOU)</title>

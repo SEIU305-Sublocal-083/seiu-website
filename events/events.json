@@ -52,6 +52,28 @@
     "calendar_link": "/events/ical/2026-05-21-Membership-Meeting.ics"
   },
   {
+    "date": "2026-06-18",
+    "time": "12:00 PM PT",
+    "title": "OSU June Membership Meeting",
+    "description": "Join SEIU Local 083 for the OSU June membership meeting on Zoom at noon Pacific time.",
+    "type": "Zoom Meeting",
+    "url": "/events/2026-06-18-OSU-June-Membership-Meeting.html",
+    "featured": false,
+    "location_detail": "Online via Zoom",
+    "calendar_link": "/events/ical/2026-06-18-OSU-June-Membership-Meeting.ics"
+  },
+  {
+    "date": "2026-06-22",
+    "time": "6:00 PM PT",
+    "title": "OSU CAT Meeting",
+    "description": "Join SEIU Local 083 for the OSU Contract Action Team meeting on Zoom at 6 p.m. Pacific time.",
+    "type": "Zoom Meeting",
+    "url": "/events/2026-06-22-OSU-CAT-Meeting.html",
+    "featured": false,
+    "location_detail": "Online via Zoom",
+    "calendar_link": "/events/ical/2026-06-22-OSU-CAT-Meeting.ics"
+  },
+  {
     "date": "2026-02-12",
     "time": "1:15 PM",
     "title": "Bargaining Zoom Observation",
