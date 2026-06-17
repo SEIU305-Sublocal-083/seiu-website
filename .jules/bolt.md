@@ -35,3 +35,7 @@
 ## 2024-05-18 - [RegExp Instantiation in Loops]
 **Learning:** [Instantiating `new RegExp()` inside rendering loops (like `Array.prototype.map()`) when the pattern is constant causes redundant pattern compilation and object creation on every iteration, harming performance. Furthermore, it's safe to hoist global RegExp instances (e.g., with the 'g' or 'gi' flag) outside of rendering loops and reuse them with `String.prototype.replace()`, because `replace()` automatically ignores and resets the regex's `lastIndex` property, preventing state leakage across loop iterations.]
 **Action:** [Always hoist `new RegExp()` instantiations outside the loop when the pattern (such as a search query) remains constant.]
+
+## 2026-05-18 - [Safe Date Parsing Memoization]
+**Learning:** [When filtering or sorting objects by date strings, avoid naive lexicographical string comparison unless the format is strictly guaranteed to be zero-padded ISO-8601. For safer loop performance optimization, memoize the parsing function by caching primitive Unix timestamps (`date.getTime()`) and returning `new Date(cachedTime)`. Never cache mutable `Date` object references to avoid shared state corruption.]
+**Action:** [Memoize date parsing by caching primitive timestamps and returning fresh Date objects to avoid overhead while ensuring state safety.]
