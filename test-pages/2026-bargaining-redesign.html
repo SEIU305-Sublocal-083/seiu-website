@@ -1113,10 +1113,19 @@
                 return str;
             };
 
+            // ⚡ Bolt: Memoize expensive date parsing as primitive timestamps to prevent redundant parsing overhead in filter/sort loops while remaining safe against mutable Date side effects
+            const parseLocalDateCache = new Map();
             const parseLocalDate = (value) => {
                 if (!value) return null;
+                if (parseLocalDateCache.has(value)) {
+                    const cachedTime = parseLocalDateCache.get(value);
+                    return cachedTime === null ? null : new Date(cachedTime);
+                }
                 const parsed = new Date(`${value}T00:00:00`);
-                return Number.isNaN(parsed.getTime()) ? null : parsed;
+                const time = parsed.getTime();
+                const result = Number.isNaN(time) ? null : time;
+                parseLocalDateCache.set(value, result);
+                return result === null ? null : new Date(result);
             };
 
             // ⚡ Bolt: Cache Intl.DateTimeFormat objects to drastically reduce instantiation overhead
