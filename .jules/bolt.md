@@ -35,3 +35,6 @@
 ## 2024-05-18 - [RegExp Instantiation in Loops]
 **Learning:** [Instantiating `new RegExp()` inside rendering loops (like `Array.prototype.map()`) when the pattern is constant causes redundant pattern compilation and object creation on every iteration, harming performance. Furthermore, it's safe to hoist global RegExp instances (e.g., with the 'g' or 'gi' flag) outside of rendering loops and reuse them with `String.prototype.replace()`, because `replace()` automatically ignores and resets the regex's `lastIndex` property, preventing state leakage across loop iterations.]
 **Action:** [Always hoist `new RegExp()` instantiations outside the loop when the pattern (such as a search query) remains constant.]
+## 2026-05-18 - [Optimizing Date Grouping via Substring]
+**Learning:** [Grouping collections of date-stamped objects (like events) by instantiating `new Date()` and calling `Intl.DateTimeFormat` on every single object is an O(N) performance bottleneck.]
+**Action:** [Extract the group key using string slicing (e.g. `event.date.substring(0, 7)`) instead of `new Date()`. Apply the expensive date formatting operations only once per unique group when rendering to reduce O(N) date operations to O(1) per group.]
