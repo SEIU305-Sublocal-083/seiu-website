@@ -533,14 +533,18 @@
                 const monthYearFormatter = new Intl.DateTimeFormat('default', { month: 'long', year: 'numeric' });
 
                 const groupedByMonth = events.reduce((acc, event) => {
+                    // ⚡ Bolt: Group by substring YYYY-MM first to avoid expensive formatting operations for every item
+                    const ym = event.date.substring(0, 7);
+                    if (!acc[ym]) acc[ym] = [];
                     event.parsedDate = new Date(event.date.replace(/-/g, '/'));
-                    const monthYear = monthYearFormatter.format(event.parsedDate);
-                    if (!acc[monthYear]) acc[monthYear] = [];
-                    acc[monthYear].push(event);
+                    acc[ym].push(event);
                     return acc;
                 }, {});
 
-                pastEventsContainer.innerHTML = Object.entries(groupedByMonth).map(([monthYear, monthEvents]) => {
+                pastEventsContainer.innerHTML = Object.entries(groupedByMonth).map(([ym, monthEvents]) => {
+                    // ⚡ Bolt: Parse one arbitrary date from the group to format the monthYear label just once per group
+                    const groupDate = new Date(ym.replace('-', '/') + '/01');
+                    const monthYear = monthYearFormatter.format(groupDate);
                     const eventListItems = monthEvents.map(event => `
                         <li class="py-2">
                             <strong>${event.parsedDate.getDate()}:</strong> ${escapeHTML(event.title)}
