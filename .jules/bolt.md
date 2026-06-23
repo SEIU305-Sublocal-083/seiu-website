@@ -35,3 +35,7 @@
 ## 2024-05-18 - [RegExp Instantiation in Loops]
 **Learning:** [Instantiating `new RegExp()` inside rendering loops (like `Array.prototype.map()`) when the pattern is constant causes redundant pattern compilation and object creation on every iteration, harming performance. Furthermore, it's safe to hoist global RegExp instances (e.g., with the 'g' or 'gi' flag) outside of rendering loops and reuse them with `String.prototype.replace()`, because `replace()` automatically ignores and resets the regex's `lastIndex` property, preventing state leakage across loop iterations.]
 **Action:** [Always hoist `new RegExp()` instantiations outside the loop when the pattern (such as a search query) remains constant.]
+
+## 2026-06-23 - [Grouping by Time Period Optimization]
+**Learning:** [When grouping data by a time period (like months or years) derived from ISO-8601 strings, parsing a `new Date()` and formatting each item individually to find the group key is an expensive O(N) operation. It's much faster to extract the group key using string substrings (e.g., `date.substring(0, 7)`) and apply date formatting only once per unique group (e.g., O(1) per group).]
+**Action:** [To optimize grouping by a time period derived from ISO-8601 strings, extract the group key via substring rather than parsing and formatting each item. Apply date formatting only once per unique group to reduce O(N) date operations to O(1) per group.]
