@@ -35,3 +35,7 @@
 ## 2024-05-18 - [RegExp Instantiation in Loops]
 **Learning:** [Instantiating `new RegExp()` inside rendering loops (like `Array.prototype.map()`) when the pattern is constant causes redundant pattern compilation and object creation on every iteration, harming performance. Furthermore, it's safe to hoist global RegExp instances (e.g., with the 'g' or 'gi' flag) outside of rendering loops and reuse them with `String.prototype.replace()`, because `replace()` automatically ignores and resets the regex's `lastIndex` property, preventing state leakage across loop iterations.]
 **Action:** [Always hoist `new RegExp()` instantiations outside the loop when the pattern (such as a search query) remains constant.]
+
+## 2024-05-18 - [Date Grouping Performance]
+**Learning:** [Instantiating `new Date()` inside loops (like `events.reduce` or array mapping) just to group elements by month/year via `Intl.DateTimeFormat` causes extreme performance overhead, scaling O(N) with the dataset size. Zero-padded ISO-8601 strings (like `YYYY-MM-DD`) allow fast grouping purely by string manipulation.]
+**Action:** [Use `string.substring(0, 7)` to extract the `YYYY-MM` group key directly from ISO-8601 strings, forming the groups first. Then map over the group keys to instantiate `new Date()` and format the month-year string via `Intl.DateTimeFormat` only once per group, reducing operations from O(N) items to O(M) groups. Extract days directly via substring instead of invoking `getDate()`.]
