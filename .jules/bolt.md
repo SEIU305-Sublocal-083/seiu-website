@@ -35,3 +35,7 @@
 ## 2024-05-18 - [RegExp Instantiation in Loops]
 **Learning:** [Instantiating `new RegExp()` inside rendering loops (like `Array.prototype.map()`) when the pattern is constant causes redundant pattern compilation and object creation on every iteration, harming performance. Furthermore, it's safe to hoist global RegExp instances (e.g., with the 'g' or 'gi' flag) outside of rendering loops and reuse them with `String.prototype.replace()`, because `replace()` automatically ignores and resets the regex's `lastIndex` property, preventing state leakage across loop iterations.]
 **Action:** [Always hoist `new RegExp()` instantiations outside the loop when the pattern (such as a search query) remains constant.]
+
+## 2026-05-18 - [Optimized Grouping via Substring]
+**Learning:** [To optimize operations on zero-padded ISO-8601 date strings, avoid instantiating `new Date()` inside loops. Extracting grouping keys via substring (e.g., `date.substring(0, 7)`) reduces date formatting operations from O(N) to O(1) per group. Likewise, extracting specific date components directly using substrings (e.g., `parseInt(date.substring(8, 10), 10)` for the day) avoids the overhead of calling methods on a Date object.]
+**Action:** [Use substring extraction for grouping and extracting date components when dates are guaranteed to be zero-padded ISO-8601 strings, falling back to `new Date()` parsing only for complex formatting.]
