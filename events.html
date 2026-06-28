@@ -533,20 +533,26 @@
                 const monthYearFormatter = new Intl.DateTimeFormat('default', { month: 'long', year: 'numeric' });
 
                 const groupedByMonth = events.reduce((acc, event) => {
-                    event.parsedDate = new Date(event.date.replace(/-/g, '/'));
-                    const monthYear = monthYearFormatter.format(event.parsedDate);
-                    if (!acc[monthYear]) acc[monthYear] = [];
-                    acc[monthYear].push(event);
+                    // ⚡ Bolt: Group by YYYY-MM substring to avoid new Date() and formatting per item
+                    const groupKey = event.date.substring(0, 7);
+                    if (!acc[groupKey]) acc[groupKey] = [];
+                    acc[groupKey].push(event);
                     return acc;
                 }, {});
 
-                pastEventsContainer.innerHTML = Object.entries(groupedByMonth).map(([monthYear, monthEvents]) => {
-                    const eventListItems = monthEvents.map(event => `
+                pastEventsContainer.innerHTML = Object.entries(groupedByMonth).map(([groupKey, monthEvents]) => {
+                    // ⚡ Bolt: Format the date only once per group instead of once per item
+                    const parsedDate = new Date(groupKey.replace(/-/g, '/') + '/01');
+                    const monthYear = monthYearFormatter.format(parsedDate);
+
+                    const eventListItems = monthEvents.map(event => {
+                        const day = parseInt(event.date.substring(8, 10), 10);
+                        return `
                         <li class="py-2">
-                            <strong>${event.parsedDate.getDate()}:</strong> ${escapeHTML(event.title)}
+                            <strong>${day}:</strong> ${escapeHTML(event.title)}
                             ${event.url !== '#' ? `<a href="${escapeHTML(sanitizeUrl(event.url))}" class="font-semibold text-brand-purple hover:underline ml-2" data-ph-event="event_click" data-ph-label="${escapeHTML(event.title)}" data-ph-metadata='{"section":"past"}'>View Details</a>` : ''}
                         </li>
-                    `).join('');
+                    `}).join('');
 
                     return `
                         <details class="bg-white rounded-xl border border-border-color group transition-shadow duration-300 open:shadow-md">
