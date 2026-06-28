@@ -18,3 +18,6 @@ Critical UX/accessibility learnings only.
 ## 2026-05-18 - [Add visual and semantic loading states]
 **Learning:** Plain text loading indicators (like "Loading...") can feel unresponsive and lack proper semantic meaning for assistive technologies. Replacing them with an animated visual spinner and a `role="status"` wrapper ensures both sighted and screen-reader users understand the system is processing information.
 **Action:** Always use a visual indicator (like a spinner) accompanied by semantic `role="status"` and visually hidden text for asynchronous loading states.
+## 2026-06-25 - [Add `role="status"` to empty states for accessibility]
+**Learning:** When a list is filtered or searched and returns no results, the resulting "empty state" container is dynamically added to the page. Screen readers might not announce this change, leaving users confused. Adding `role="status"` to the empty state container ensures screen readers automatically announce the state change when it is dynamically rendered.
+**Action:** Always add `role="status"` to dynamically rendered empty state containers (e.g., "No articles found", "No upcoming events") to ensure the state change is announced to assistive technologies.
