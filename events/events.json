@@ -174,6 +174,17 @@
     "location_detail": "Southern Oregon University"
   },
   {
+    "date": "2026-06-29",
+    "time": "5:00 PM - 7:00 PM",
+    "title": "Sign-Making Party for the McNary Field Rally",
+    "description": "Drop by Westminster House on Monroe to help make direct, readable signs before Tuesday's McNary Field rally. Bring a coworker, bring an idea, or just show up for 20 minutes.",
+    "type": "Sign-Making Party",
+    "url": "/events/2026-06-29-Sign-Making-Party.html",
+    "featured": true,
+    "location_detail": "Westminster House on Monroe",
+    "calendar_link": "/events/ical/2026-06-29-Sign-Making-Party.ics"
+  },
+  {
     "date": "2026-06-30",
     "time": "12:00 PM - 1:00 PM",
     "title": "Rally June 30 at McNary Field",

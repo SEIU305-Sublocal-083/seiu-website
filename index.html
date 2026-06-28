@@ -232,25 +232,25 @@
         <div class="container mx-auto px-6 py-16 md:py-24">
             <div class="flex flex-col lg:flex-row items-center gap-12">
                 <div class="lg:w-3/5 text-center lg:text-left">
-                    <div class="inline-flex items-center px-4 py-2 rounded-full bg-brand-purple-light text-brand-purple-dark text-sm font-semibold mb-4">Tuesday, June 30, noon to 1 p.m.</div>
-                    <h1 class="text-4xl md:text-6xl font-bold leading-tight">Stand together at McNary Field</h1>
-                    <p class="mt-4 text-lg md:text-xl text-text-secondary max-w-2xl mx-auto lg:mx-0">Management is offering no raises or COLA for four years. Join coworkers for food, lawn games, and a visible show that OSU workers are ready to fight for a fair contract.</p>
+                    <div class="inline-flex items-center px-4 py-2 rounded-full bg-brand-purple-light text-brand-purple-dark text-sm font-semibold mb-4">Monday signs. Tuesday rally.</div>
+                    <h1 class="text-4xl md:text-6xl font-bold leading-tight">Make signs Monday. Rally Tuesday.</h1>
+                    <p class="mt-4 text-lg md:text-xl text-text-secondary max-w-2xl mx-auto lg:mx-0">Drop by Westminster House on Monroe Monday from 5 to 7 p.m. to help make signs, then join coworkers Tuesday at McNary Field for a visible show that OSU workers are ready to fight for a fair contract.</p>
                     <div class="mt-8 flex flex-col sm:flex-row sm:items-center gap-4 justify-center lg:justify-start">
-                        <a href="/rally" class="btn btn-primary w-full sm:w-auto" data-ph-event="cta_click" data-ph-label="Homepage Hero Rally Signup">Sign Up for the Rally</a>
-                        <a href="/events/2026-06-30-Rally-at-McNary-Field.html" class="btn btn-secondary w-full sm:w-auto" data-ph-event="cta_click" data-ph-label="Homepage Hero Rally Details">View Rally Details</a>
+                        <a href="/events/2026-06-29-Sign-Making-Party.html" class="btn btn-primary w-full sm:w-auto" data-ph-event="cta_click" data-ph-label="Homepage Hero Sign Making Details">Sign-Making Details</a>
+                        <a href="/rally" class="btn btn-secondary w-full sm:w-auto" data-ph-event="cta_click" data-ph-label="Homepage Hero Rally Signup">Sign Up for the Rally</a>
                     </div>
                     <dl class="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-3 text-left">
                         <div class="rounded-lg border border-border-color bg-brand-light p-4">
                             <dt class="text-sm font-bold uppercase tracking-wide text-brand-purple">When</dt>
-                            <dd class="mt-1 text-text-primary font-semibold">June 30, noon to 1 p.m.</dd>
+                            <dd class="mt-1 text-text-primary font-semibold">June 29, 5 to 7 p.m.</dd>
                         </div>
                         <div class="rounded-lg border border-border-color bg-brand-light p-4">
                             <dt class="text-sm font-bold uppercase tracking-wide text-brand-purple">Where</dt>
-                            <dd class="mt-1 text-text-primary font-semibold">McNary Field</dd>
+                            <dd class="mt-1 text-text-primary font-semibold">Westminster House on Monroe</dd>
                         </div>
                         <div class="rounded-lg border border-border-color bg-brand-light p-4">
                             <dt class="text-sm font-bold uppercase tracking-wide text-brand-purple">Bring</dt>
-                            <dd class="mt-1 text-text-primary font-semibold">Purple and one coworker</dd>
+                            <dd class="mt-1 text-text-primary font-semibold">A coworker or a sign idea</dd>
                         </div>
                     </dl>
                 </div>
@@ -266,10 +266,10 @@
             <div class="w-full bg-white rounded-xl border border-border-color p-6 md:p-8">
                 <p class="text-sm font-bold uppercase tracking-wide text-brand-purple">Why this matters right now</p>
                 <h2 class="mt-2 text-3xl font-bold text-brand-purple-dark">Management's offer is still no raises or COLA for four years.</h2>
-                <p class="mt-3 text-text-secondary">Every signup helps us plan food, turnout, and outreach. If you already signed up, ask one coworker to sign up and come with you.</p>
+                <p class="mt-3 text-text-secondary">Before Tuesday's rally, we need direct, readable signs. Drop by Monday for 20 minutes or stay the whole time.</p>
                 <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-3">
-                    <a href="/rally" class="btn btn-primary text-center" data-ph-event="cta_click" data-ph-label="Promo Rally Signup">Sign Up for Rally</a>
-                    <a href="/events/2026-06-30-Rally-at-McNary-Field.html" class="btn btn-secondary text-center" data-ph-event="cta_click" data-ph-label="Promo Rally Details">View Rally Details</a>
+                    <a href="/events/2026-06-29-Sign-Making-Party.html" class="btn btn-primary text-center" data-ph-event="cta_click" data-ph-label="Promo Sign Making Details">Make Signs Monday</a>
+                    <a href="/rally" class="btn btn-secondary text-center" data-ph-event="cta_click" data-ph-label="Promo Rally Signup">Sign Up for Rally</a>
                     <a href="/2026-bargaining/index.html" class="btn btn-outline text-center" data-ph-event="cta_click" data-ph-label="Promo View Bargaining Hub">Read the Bargaining Hub</a>
                 </div>
             </div>
@@ -547,9 +547,10 @@
             const loadUpcomingEvents = async () => {
                 const eventsContainer = document.getElementById('upcoming-events-container');
                 const featuredBargainingTitle = 'Bargaining Zoom Observation';
+                const signMakingEventUrl = '/events/2026-06-29-Sign-Making-Party.html';
                 const rallyEventUrl = '/events/2026-06-30-Rally-at-McNary-Field.html';
                 try {
-                    const response = await fetch('/events/events.json?v=2026-06-30-rally');
+                    const response = await fetch('/events/events.json?v=2026-06-29-sign-making');
                     if (!response.ok) throw new Error('Network response was not ok');
                     const events = await response.json();
 
@@ -559,11 +560,15 @@
                     const upcomingEvents = events
                         .filter(event => event.date >= todayString)
                         .sort((a, b) => {
+                            const aIsSignMaking = a.url === signMakingEventUrl;
+                            const bIsSignMaking = b.url === signMakingEventUrl;
                             const aIsRally = a.url === rallyEventUrl;
                             const bIsRally = b.url === rallyEventUrl;
                             const aIsFeaturedBargaining = a.title === featuredBargainingTitle;
                             const bIsFeaturedBargaining = b.title === featuredBargainingTitle;
 
+                            if (aIsSignMaking && !bIsSignMaking) return -1;
+                            if (!aIsSignMaking && bIsSignMaking) return 1;
                             if (aIsRally && !bIsRally) return -1;
                             if (!aIsRally && bIsRally) return 1;
                             if (aIsFeaturedBargaining && !bIsFeaturedBargaining) return -1;
@@ -589,7 +594,9 @@
                     if (upcomingEvents.length > 0) {
                         eventsContainer.innerHTML = upcomingEvents.map(event => {
                             const formattedDate = event.formattedDateShort;
+                            const isSignMaking = event.url === signMakingEventUrl;
                             const isRally = event.url === rallyEventUrl;
+                            const isFeaturedAction = isSignMaking || isRally;
 
                             let timeHtml = '';
                             if (event.time) {
@@ -601,16 +608,16 @@
                             }
 
                             return `
-                                <div class="bg-white rounded-xl ${isRally ? 'border-2 border-brand-purple shadow-xl' : 'border border-border-color'} overflow-hidden flex flex-col">
+                                <div class="bg-white rounded-xl ${isFeaturedAction ? 'border-2 border-brand-purple shadow-xl' : 'border border-border-color'} overflow-hidden flex flex-col">
                                     <div class="p-6 flex-grow">
                                         <div class="flex items-center justify-between mb-4">
-                                            <div class="${isRally ? 'bg-brand-purple text-white' : 'bg-brand-purple-light text-brand-purple-dark'} font-bold rounded-full px-3 py-1 text-sm">${escapeHTML(isRally ? 'Featured Rally' : event.type)}</div>
+                                            <div class="${isFeaturedAction ? 'bg-brand-purple text-white' : 'bg-brand-purple-light text-brand-purple-dark'} font-bold rounded-full px-3 py-1 text-sm">${escapeHTML(isSignMaking ? 'Sign Making' : (isRally ? 'Featured Rally' : event.type))}</div>
                                             ${timeHtml}
                                         </div>
                                         <h3 class="font-bold text-2xl mb-2">${escapeHTML(event.title)}</h3>
                                         <p class="text-text-secondary">${escapeHTML(event.description)}</p>
                                     </div>
-                                    <div class="${isRally ? 'bg-brand-purple-light' : 'bg-gray-50'} border-t border-border-color p-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+                                    <div class="${isFeaturedAction ? 'bg-brand-purple-light' : 'bg-gray-50'} border-t border-border-color p-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
                                         <div class="font-bold text-text-primary">${escapeHTML(formattedDate)}</div>
                                         <div class="flex items-center gap-4">
                                             ${isRally ? '<a href="/rally" class="text-brand-purple-dark font-bold hover:underline" data-ph-event="cta_click" data-ph-label="Home Event Rally Signup">Sign Up</a>' : ''}

@@ -357,7 +357,7 @@
             // --- Main Function to Load and Render All Event Data ---
             async function loadEvents() {
                 try {
-                    const response = await fetch('events/events.json?v=2026-06-22-meetings');
+                    const response = await fetch('events/events.json?v=2026-06-29-sign-making');
                     if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
                     const allEvents = await response.json();
 
