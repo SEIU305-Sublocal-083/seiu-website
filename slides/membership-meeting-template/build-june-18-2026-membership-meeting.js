@@ -231,6 +231,20 @@ function addPill(slide, text, x, y, w, opts = {}) {
   });
 }
 
+function addSourceLine(slide, text, opts = {}) {
+  slide.addText(text, {
+    x: opts.x || layout.marginX,
+    y: opts.y || 6.86,
+    w: opts.w || layout.contentW,
+    h: opts.h || 0.16,
+    fontFace: theme.bodyFont,
+    fontSize: opts.fontSize || 8.4,
+    color: opts.color || theme.muted,
+    margin: 0,
+    fit: "shrink",
+  });
+}
+
 function addBulletList(slide, items, box, opts = {}) {
   const fontSize = opts.fontSize || 18;
   const runs = items.map((item, index) => ({
@@ -361,12 +375,16 @@ function titleSlide(pptx) {
     color: "E9D5FF",
     margin: 0,
   });
-  ["Thursday, June 18", "Noon to 1 p.m.", "Online via Zoom"].forEach((detail, i) => {
-    addPill(slide, detail, 0.82 + i * 1.78, 4.76, 1.64, {
+  [
+    ["Thursday, June 18", 0.82, 1.58],
+    ["Noon to 1 p.m.", 2.55, 1.48],
+    ["MU 211 or Zoom", 4.18, 1.82],
+  ].forEach(([detail, x, w]) => {
+    addPill(slide, detail, x, 4.76, w, {
       fill: theme.white,
       lineColor: theme.white,
       color: theme.purpleDark,
-      fontSize: 11,
+      fontSize: 10.6,
       h: 0.52,
     });
   });
@@ -571,38 +589,196 @@ function layoffRightsSlide(pptx) {
   const slide = pptx.addSlide();
   addBackground(slide);
   addHeader(slide, 5, "Layoff rights");
-  addTitle(slide, "Layoff rights are contract rights", "Members should not face rumors, notices, or displacement questions alone.", { subtitleSize: 18 });
-  addCard(slide, 0.9, 2.68, 4.82, 3.3, { fill: theme.white, lineColor: theme.borderSoft, shadow: false });
-  addLabel(slide, "IF YOU HEAR A RUMOR OR RECEIVE NOTICE", 1.25, 2.98, 3.6, { fontSize: 9.5 });
-  addNumberedAction(slide, 1, "Contact our union.", 1.25, 3.42, 3.5);
-  addNumberedAction(slide, 2, "Talk with a steward.", 1.25, 4.02, 3.5);
-  addNumberedAction(slide, 3, "Keep records and dates.", 1.25, 4.62, 3.5);
-  addNumberedAction(slide, 4, "Do not navigate it alone.", 1.25, 5.22, 3.5);
-  addCard(slide, 6.26, 2.68, 5.56, 3.3, { fill: theme.purplePale, lineColor: theme.purpleLight, shadow: false });
-  slide.addText("Why this belongs in the rally frame", {
-    x: 6.62,
-    y: 3.05,
-    w: 4.62,
-    h: 0.26,
-    fontFace: theme.headFont,
-    fontSize: 24,
-    bold: true,
-    color: theme.purpleDark,
-    margin: 0,
+  addTitle(slide, "Layoff rights are contract rights", "The CBA gives members notice, choices, placement rights, and recall rights. The clock moves fast.", { subtitleSize: 17.2 });
+
+  const anchors = [
+    ["Written notice", "30 calendar days before layoff; 15 only if beyond Employer control.", "Art. 44 Sec. 1"],
+    ["Five work days", "After notice, choose the full process or direct layoff/recall.", "Art. 44 Sec. 3(A)"],
+    ["Placement first", "Vacant jobs come before bumping; employee must be position-qualified.", "Art. 44 Secs. 3(E), 3(F)"],
+    ["Recall rights", "Recall lists use classification, employment category, geography, and seniority.", "Art. 44 Secs. 9-10"],
+  ];
+  anchors.forEach(([title, body, cite], index) => {
+    const x = 0.9 + (index % 2) * 5.52;
+    const y = 2.88 + Math.floor(index / 2) * 1.36;
+    addCard(slide, x, y, 5.05, 1.08, {
+      fill: index === 0 ? theme.purplePale : theme.white,
+      lineColor: index === 0 ? theme.purpleLight : theme.borderSoft,
+      shadow: false,
+    });
+    slide.addText(cite, {
+      x: x + 0.25,
+      y: y + 0.16,
+      w: 1.42,
+      h: 0.14,
+      fontFace: theme.bodyFont,
+      fontSize: 8.8,
+      bold: true,
+      color: theme.purpleMid,
+      margin: 0,
+    });
+    slide.addText(title, {
+      x: x + 0.25,
+      y: y + 0.39,
+      w: 1.7,
+      h: 0.22,
+      fontFace: theme.headFont,
+      fontSize: 20.2,
+      bold: true,
+      color: theme.purpleDark,
+      margin: 0,
+      fit: "shrink",
+    });
+    slide.addText(body, {
+      x: x + 2.08,
+      y: y + 0.24,
+      w: 2.55,
+      h: 0.46,
+      fontFace: theme.bodyFont,
+      fontSize: 12.5,
+      color: theme.text,
+      margin: 0,
+      fit: "shrink",
+    });
   });
-  slide.addText("Layoff language, timelines, bumping rights, and enforcement matter because job security is not automatic. Members protect it by knowing our rights and showing up together.", {
-    x: 6.62,
-    y: 3.72,
-    w: 4.58,
-    h: 1.26,
+
+  addCard(slide, 0.9, 5.82, 10.57, 0.54, { fill: theme.purpleDark, lineColor: theme.purpleDark, shadow: false });
+  slide.addText("If you receive a notice: contact a steward immediately, keep the notice, and track every deadline.", {
+    x: 1.18,
+    y: 5.99,
+    w: 10.0,
+    h: 0.16,
     fontFace: theme.bodyFont,
-    fontSize: 18,
+    fontSize: 14.7,
+    bold: true,
+    color: theme.white,
+    align: "center",
+    margin: 0,
+    fit: "shrink",
+  });
+  addSourceLine(slide, "Source: SEIU/Oregon Public Universities CBA 2022-2026, Article 44 - Layoff, Secs. 1, 3(A), 3(E), 3(F), 9-10.");
+  addFooter(slide);
+  finalize(slide, pptx);
+}
+
+function layoffProcessSlide(pptx) {
+  const slide = pptx.addSlide();
+  addBackground(slide);
+  addHeader(slide, 6, "Layoff process");
+  addTitle(slide, "After notice: the short version", "The process is not automatic protection. Members have to answer quickly and use the contract.", { subtitleSize: 17.2 });
+
+  const steps = [
+    ["1", "Notice", "Written notice + rights.", "Art. 44 Sec. 1"],
+    ["2", "Choose", "Five work days to elect the path.", "Art. 44 Sec. 3(A)"],
+    ["3", "Vacancies", "Same class, same range, then lower range.", "Art. 44 Sec. 3(E)(1)"],
+    ["4", "Bumping", "Lower seniority only; must be qualified.", "Art. 44 Secs. 3(E)(2), 3(F)"],
+    ["5", "Recall", "Seniority order; one refusal allowed.", "Art. 44 Sec. 10"],
+  ];
+
+  steps.forEach(([num, title, body, cite], index) => {
+    const x = 0.75 + index * 2.45;
+    addCard(slide, x, 2.72, 2.04, 2.28, {
+      fill: index === 0 || index === steps.length - 1 ? theme.purplePale : theme.white,
+      lineColor: index === 0 || index === steps.length - 1 ? theme.purpleLight : theme.borderSoft,
+      shadow: false,
+    });
+    slide.addShape("ellipse", {
+      x: x + 0.18,
+      y: 2.96,
+      w: 0.42,
+      h: 0.42,
+      line: { color: theme.purpleMid, transparency: 100 },
+      fill: { color: theme.purpleMid },
+    });
+    slide.addText(num, {
+      x: x + 0.18,
+      y: 3.09,
+      w: 0.42,
+      h: 0.12,
+      fontFace: theme.bodyFont,
+      fontSize: 10.2,
+      bold: true,
+      color: theme.white,
+      align: "center",
+      margin: 0,
+    });
+    slide.addText(title, {
+      x: x + 0.72,
+      y: 3.02,
+      w: 1.08,
+      h: 0.22,
+      fontFace: theme.headFont,
+      fontSize: 18.8,
+      bold: true,
+      color: theme.purpleDark,
+      margin: 0,
+      fit: "shrink",
+    });
+    slide.addText(body, {
+      x: x + 0.22,
+      y: 3.72,
+      w: 1.58,
+      h: 0.44,
+      fontFace: theme.bodyFont,
+      fontSize: 12.4,
+      color: theme.text,
+      margin: 0,
+      fit: "shrink",
+    });
+    slide.addText(cite, {
+      x: x + 0.22,
+      y: 4.53,
+      w: 1.58,
+      h: 0.14,
+      fontFace: theme.bodyFont,
+      fontSize: 7.8,
+      bold: true,
+      color: theme.purpleMid,
+      margin: 0,
+      fit: "shrink",
+    });
+    if (index < steps.length - 1) {
+      slide.addText(">", {
+        x: x + 2.1,
+        y: 3.55,
+        w: 0.25,
+        h: 0.28,
+        fontFace: theme.bodyFont,
+        fontSize: 22,
+        bold: true,
+        color: theme.purpleMid,
+        align: "center",
+        margin: 0,
+      });
+    }
+  });
+
+  addCard(slide, 0.9, 5.55, 5.16, 0.72, { fill: theme.amberLight, lineColor: "FCD34D", shadow: false });
+  slide.addText("Lack of funds: Union/HR meet on alternatives if requested.", {
+    x: 1.18,
+    y: 5.78,
+    w: 4.6,
+    h: 0.18,
+    fontFace: theme.bodyFont,
+    fontSize: 13.4,
     bold: true,
     color: theme.text,
     margin: 0,
     fit: "shrink",
   });
-  addPill(slide, "083stewards@seiu503.org", 7.05, 5.34, 3.58, { fill: theme.white, lineColor: theme.white, fontSize: 13, h: 0.5 });
+  addCard(slide, 6.38, 5.55, 5.44, 0.72, { fill: theme.amberLight, lineColor: "FCD34D", shadow: false });
+  slide.addText("Lack of work over 15 days triggers Article 44.", {
+    x: 6.68,
+    y: 5.78,
+    w: 4.88,
+    h: 0.18,
+    fontFace: theme.bodyFont,
+    fontSize: 13.4,
+    bold: true,
+    color: theme.text,
+    margin: 0,
+    fit: "shrink",
+  });
+  addSourceLine(slide, "Sources: CBA Art. 44 Secs. 1, 3(A), 3(E), 3(F), 10-11; Art. 50 Sec. 12.");
   addFooter(slide);
   finalize(slide, pptx);
 }
@@ -610,7 +786,7 @@ function layoffRightsSlide(pptx) {
 function officeSlide(pptx) {
   const slide = pptx.addSlide();
   addBackground(slide);
-  addHeader(slide, 6, "Local 083 office");
+  addHeader(slide, 7, "Local 083 office");
   addTitle(slide, "We have a new office", "This is organizing capacity: a place for questions, planning, outreach, and member follow-up.", { subtitleSize: 18 });
   addCard(slide, 0.9, 2.8, 10.9, 2.95, { fill: theme.white, lineColor: theme.borderSoft, shadow: false });
   const uses = [
@@ -654,7 +830,7 @@ function officeSlide(pptx) {
 function legislativeSlide(pptx) {
   const slide = pptx.addSlide();
   addBackground(slide);
-  addHeader(slide, 7, "Legislative outreach");
+  addHeader(slide, 8, "Legislative outreach");
   addTitle(slide, "Members need to talk with lawmakers", "We are looking for members to meet with Oregon House and Senate members before the rally.", { subtitleSize: 18 });
   addCard(slide, 0.9, 2.72, 5.2, 3.28, { fill: theme.purplePale, lineColor: theme.purpleLight, shadow: false });
   slide.addText("You do not need to be a policy expert.", {
@@ -823,7 +999,7 @@ function rallyCtaSlide(pptx) {
 function commitmentsSlide(pptx) {
   const slide = pptx.addSlide();
   addBackground(slide);
-  addHeader(slide, 10, "Commitments");
+  addHeader(slide, 11, "Commitments");
   addTitle(slide, "Before you log off", "Pick the next step you can take before June 30.", { subtitleSize: 18 });
   const actions = [
     "Sign up for the June 30 rally.",
@@ -897,6 +1073,7 @@ async function main() {
   rallyFrameSlide(pptx);
   bargainingSlide(pptx);
   layoffRightsSlide(pptx);
+  layoffProcessSlide(pptx);
   officeSlide(pptx);
   legislativeSlide(pptx);
   signMakingSlide(pptx);
