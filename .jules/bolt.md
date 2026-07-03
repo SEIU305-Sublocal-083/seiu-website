@@ -35,3 +35,7 @@
 ## 2024-05-18 - [RegExp Instantiation in Loops]
 **Learning:** [Instantiating `new RegExp()` inside rendering loops (like `Array.prototype.map()`) when the pattern is constant causes redundant pattern compilation and object creation on every iteration, harming performance. Furthermore, it's safe to hoist global RegExp instances (e.g., with the 'g' or 'gi' flag) outside of rendering loops and reuse them with `String.prototype.replace()`, because `replace()` automatically ignores and resets the regex's `lastIndex` property, preventing state leakage across loop iterations.]
 **Action:** [Always hoist `new RegExp()` instantiations outside the loop when the pattern (such as a search query) remains constant.]
+
+## 2026-07-03 - [Date Parsing in Render Loops]
+**Learning:** [Instantiating `new Date()` within render loops (e.g. `reduce` and `map`) for grouping by date and parsing days is extremely expensive and causes overhead. It increases the rendering time considerably.]
+**Action:** [Extract grouping keys and specific date components (e.g., month/year, day) via string operations like `substring` instead of full date parsing to reduce these operations from O(N) to O(1) per group.]
