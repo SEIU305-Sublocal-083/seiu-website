@@ -426,7 +426,7 @@
                 }
 
                 // ⚡ Bolt: Cache Intl.DateTimeFormat objects to drastically reduce instantiation overhead
-                // ⚡ Bolt: Format dates only for the sliced items to avoid expensive operations on hidden entries
+                // ⚡ Bolt: Reduce date formatting from O(N) to O(1) per group by using substring to group items.
                 const monthShortFormatter = new Intl.DateTimeFormat('en-US', { month: 'short' });
 
                 upcomingEventsContainer.innerHTML = events.map(event => {
@@ -483,7 +483,7 @@
                 if (moreEventsSection) moreEventsSection.classList.remove('hidden');
 
                 // ⚡ Bolt: Cache Intl.DateTimeFormat objects to drastically reduce instantiation overhead
-                // ⚡ Bolt: Format dates only for the sliced items to avoid expensive operations on hidden entries
+                // ⚡ Bolt: Reduce date formatting from O(N) to O(1) per group by using substring to group items.
                 const dateLongFormatter = new Intl.DateTimeFormat('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
 
                 stackedEventsContainer.innerHTML = events.map(event => {
@@ -529,24 +529,26 @@
                 }
 
                 // ⚡ Bolt: Cache Intl.DateTimeFormat objects to drastically reduce instantiation overhead
-                // ⚡ Bolt: Format dates only for the sliced items to avoid expensive operations on hidden entries
+                // ⚡ Bolt: Reduce date formatting from O(N) to O(1) per group by using substring to group items.
                 const monthYearFormatter = new Intl.DateTimeFormat('default', { month: 'long', year: 'numeric' });
 
-                const groupedByMonth = events.reduce((acc, event) => {
-                    event.parsedDate = new Date(event.date.replace(/-/g, '/'));
-                    const monthYear = monthYearFormatter.format(event.parsedDate);
-                    if (!acc[monthYear]) acc[monthYear] = [];
-                    acc[monthYear].push(event);
+                const groupedByMonthKey = events.reduce((acc, event) => {
+                    const monthKey = event.date.substring(0, 7); // YYYY-MM
+                    if (!acc[monthKey]) acc[monthKey] = [];
+                    acc[monthKey].push(event);
                     return acc;
                 }, {});
 
-                pastEventsContainer.innerHTML = Object.entries(groupedByMonth).map(([monthYear, monthEvents]) => {
-                    const eventListItems = monthEvents.map(event => `
+                pastEventsContainer.innerHTML = Object.entries(groupedByMonthKey).map(([monthKey, monthEvents]) => {
+                    const monthYear = monthYearFormatter.format(new Date(monthKey.replace(/-/g, '/') + '/01'));
+                    const eventListItems = monthEvents.map(event => {
+                        const day = parseInt(event.date.substring(8, 10), 10);
+                        return `
                         <li class="py-2">
-                            <strong>${event.parsedDate.getDate()}:</strong> ${escapeHTML(event.title)}
+                            <strong>${day}:</strong> ${escapeHTML(event.title)}
                             ${event.url !== '#' ? `<a href="${escapeHTML(sanitizeUrl(event.url))}" class="font-semibold text-brand-purple hover:underline ml-2" data-ph-event="event_click" data-ph-label="${escapeHTML(event.title)}" data-ph-metadata='{"section":"past"}'>View Details</a>` : ''}
                         </li>
-                    `).join('');
+                    `}).join('');
 
                     return `
                         <details class="bg-white rounded-xl border border-border-color group transition-shadow duration-300 open:shadow-md">

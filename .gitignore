@@ -3,3 +3,5 @@ images/.DS_Store
 server.log
 node_modules/
 test-pages/workday-transition/training-feedback-and-reporting.html
+__pycache__/
+*.pyc
