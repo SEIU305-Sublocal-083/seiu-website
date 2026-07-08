@@ -196,6 +196,27 @@
     "calendar_link": "/events/ical/2026-06-30-Rally-at-McNary-Field.ics"
   },
   {
+    "date": "2026-07-16",
+    "time": "12:00 PM - 1:00 PM",
+    "title": "General Membership Meeting",
+    "description": "Join us Thursday, July 16 at noon in Memorial Union room 215. Lunch is provided, and we will talk through the new phase of bargaining, member readiness, and how higher ed works because we work. Zoom details are coming shortly.",
+    "type": "Membership Meeting",
+    "url": "/events/2026-07-16-General-Membership-Meeting.html",
+    "featured": true,
+    "location_detail": "Memorial Union room 215",
+    "calendar_link": "/events/ical/2026-07-16-General-Membership-Meeting.ics"
+  },
+  {
+    "date": "2026-07-20",
+    "time": "Evening, details coming soon",
+    "title": "CAT Meeting",
+    "description": "Join our Contract Action Team meeting on Monday, July 20 in the evening for workplace updates and action coordination. Time and Zoom details are coming shortly.",
+    "type": "CAT Meeting",
+    "url": "/events/2026-07-20-CAT-Meeting.html",
+    "featured": false,
+    "location_detail": "Details coming soon"
+  },
+  {
     "date": "2025-10-01",
     "time": "6:00 PM",
     "title": "CAT Meeting",
@@ -508,22 +529,22 @@
   },
   {
     "date": "2025-08-14",
-    "time": "TBD",
+    "time": "Time not posted",
     "title": "Sub Local Leadership Meeting",
     "description": "A meeting with the leadership of our Sub Local.",
     "type": "Meeting",
     "url": "#",
     "featured": false,
-    "location_detail": "TBD"
+    "location_detail": "Location not posted"
   },
   {
     "date": "2025-08-06",
-    "time": "TBD",
+    "time": "Time not posted",
     "title": "CAT Meeting",
     "description": "A C.A.T. meeting focusing on current campaign events.",
     "type": "Meeting",
     "url": "#",
     "featured": false,
-    "location_detail": "TBD"
+    "location_detail": "Location not posted"
   }
 ]

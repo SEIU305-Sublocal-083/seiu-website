@@ -5,13 +5,13 @@
     <link>https://www.local083.org</link>
     <description>Upcoming events from SEIU Local 503 at Oregon State University.</description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 28 Jun 2026 02:13:44 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 08 Jul 2026 18:37:57 GMT</lastBuildDate>
     <atom:link href="https://www.local083.org/events/rss.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>CAT Meeting</title>
       <link>https://www.local083.org/#</link>
       <guid isPermaLink="false">event:2025-08-06:CAT Meeting</guid>
-      <description>A C.A.T. meeting focusing on current campaign events. | Date: 2025-08-06 | Time: TBD | Location: TBD</description>
+      <description>A C.A.T. meeting focusing on current campaign events. | Date: 2025-08-06 | Time: Time not posted | Location: Location not posted</description>
       <pubDate>Wed, 06 Aug 2025 00:00:00 GMT</pubDate>
       <category>Meeting</category>
     </item>
@@ -19,7 +19,7 @@
       <title>Sub Local Leadership Meeting</title>
       <link>https://www.local083.org/#</link>
       <guid isPermaLink="false">event:2025-08-14:Sub Local Leadership Meeting</guid>
-      <description>A meeting with the leadership of our Sub Local. | Date: 2025-08-14 | Time: TBD | Location: TBD</description>
+      <description>A meeting with the leadership of our Sub Local. | Date: 2025-08-14 | Time: Time not posted | Location: Location not posted</description>
       <pubDate>Thu, 14 Aug 2025 00:00:00 GMT</pubDate>
       <category>Meeting</category>
     </item>
@@ -422,6 +422,22 @@
       <description>Join coworkers at McNary Field for food, lawn games, and a strong show of unity. Management is offering no raises or COLA for four years, and members are showing up for real raises and a fair contract. | Date: 2026-06-30 | Time: 12:00 PM - 1:00 PM | Location: McNary Field</description>
       <pubDate>Tue, 30 Jun 2026 00:00:00 GMT</pubDate>
       <category>Rally</category>
+    </item>
+    <item>
+      <title>General Membership Meeting</title>
+      <link>https://www.local083.org/events/2026-07-16-General-Membership-Meeting.html</link>
+      <guid isPermaLink="false">event:2026-07-16:General Membership Meeting</guid>
+      <description>Join us Thursday, July 16 at noon in Memorial Union room 215. Lunch is provided, and we will talk through the new phase of bargaining, member readiness, and how higher ed works because we work. Zoom details are coming shortly. | Date: 2026-07-16 | Time: 12:00 PM - 1:00 PM | Location: Memorial Union room 215</description>
+      <pubDate>Thu, 16 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Membership Meeting</category>
+    </item>
+    <item>
+      <title>CAT Meeting</title>
+      <link>https://www.local083.org/events/2026-07-20-CAT-Meeting.html</link>
+      <guid isPermaLink="false">event:2026-07-20:CAT Meeting</guid>
+      <description>Join our Contract Action Team meeting on Monday, July 20 in the evening for workplace updates and action coordination. Time and Zoom details are coming shortly. | Date: 2026-07-20 | Time: Evening, details coming soon | Location: Details coming soon</description>
+      <pubDate>Mon, 20 Jul 2026 00:00:00 GMT</pubDate>
+      <category>CAT Meeting</category>
     </item>
   </channel>
 </rss>

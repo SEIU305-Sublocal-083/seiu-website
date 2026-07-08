@@ -2,4 +2,5 @@ images/.DS_Store
 .DS_Store
 server.log
 node_modules/
+site-quality-report.md
 test-pages/workday-transition/training-feedback-and-reporting.html

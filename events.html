@@ -357,7 +357,7 @@
             // --- Main Function to Load and Render All Event Data ---
             async function loadEvents() {
                 try {
-                    const response = await fetch('events/events.json?v=2026-06-29-sign-making');
+                    const response = await fetch('events/events.json?v=2026-07-16-membership');
                     if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
                     const allEvents = await response.json();
 
@@ -433,13 +433,10 @@
                     event.parsedDate = new Date(event.date.replace(/-/g, '/'));
                     const month = monthShortFormatter.format(event.parsedDate).toUpperCase();
                     const day = event.parsedDate.getDate().toString().padStart(2, '0');
-                    const isRally = event.url === '/events/2026-06-30-Rally-at-McNary-Field.html';
-                    const featuredClass = isRally ? 'border-4 border-brand-purple shadow-2xl ring-4 ring-violet-100' : (event.featured ? 'border-2 border-brand-purple shadow-lg' : 'border border-border-color');
+                    const featuredClass = event.featured ? 'border-2 border-brand-purple shadow-lg' : 'border border-border-color';
+                    const eventId = sanitizeUrl(event.url).split('/').pop().replace(/\.html$/, '').toLowerCase();
                     
-                    let detailsHtml = `<div class="mt-4 flex flex-wrap items-center gap-4"><a href="${escapeHTML(sanitizeUrl(event.url))}" class="font-semibold text-brand-purple hover:underline" data-ph-event="event_click" data-ph-label="${escapeHTML(event.title)}" data-ph-metadata='{"section":"upcoming"}'>View Details &rarr;</a>`;
-                    if (isRally) {
-                        detailsHtml += `<a href="/rally" class="inline-flex items-center justify-center rounded-lg px-4 py-2 text-sm font-bold shadow-md transition" style="background-color: var(--brand-purple); color: #ffffff;" data-ph-event="cta_click" data-ph-label="Events Rally Signup">Sign Up</a>`;
-                    }
+                    let detailsHtml = `<div class="mt-4 flex flex-wrap items-center gap-4"><a href="${escapeHTML(sanitizeUrl(event.url))}" class="font-semibold text-brand-purple hover:underline" data-ph-event="event_details_click" data-ph-label="${escapeHTML(event.title)}" data-ph-metadata='{"section":"upcoming","event_id":"${escapeHTML(eventId)}"}'>View Details &rarr;</a>`;
                     if (event.calendar_link) {
                         detailsHtml += `<a href="${escapeHTML(sanitizeUrl(event.calendar_link))}" download class="btn btn-outline !py-2 !px-4 text-sm">Add to Calendar</a>`;
                     }
@@ -458,7 +455,6 @@
                                 <p class="text-4xl font-bold text-brand-purple-dark">${day}</p>
                             </div>
                             <div class="flex-grow w-full">
-                                ${isRally ? '<p class="inline-flex items-center rounded-full bg-brand-purple text-white px-3 py-1 text-sm font-bold mb-3">Featured action: sign up now</p>' : ''}
                                 <div class="flex flex-col sm:flex-row justify-between items-start mb-2">
                                     <h3 class="text-2xl font-bold mb-2 sm:mb-0">${escapeHTML(event.title)}</h3>
                                     <div class="bg-brand-purple-light text-brand-purple-dark font-bold rounded-full px-3 py-1 text-sm whitespace-nowrap self-start">${escapeHTML(event.type)}</div>
@@ -503,7 +499,7 @@
                                      <p class="font-semibold text-text-secondary">${escapeHTML(formattedDate)}</p>
                                 </div>
                                 <div class="flex items-center gap-4">
-                                    <a href="${escapeHTML(sanitizeUrl(event.url))}" class="btn btn-outline" data-ph-event="event_click" data-ph-label="${escapeHTML(event.title)}" data-ph-metadata='{"section":"stacked"}'>View Details &rarr;</a>
+                                    <a href="${escapeHTML(sanitizeUrl(event.url))}" class="btn btn-outline" data-ph-event="event_details_click" data-ph-label="${escapeHTML(event.title)}" data-ph-metadata='{"section":"stacked","event_id":"${escapeHTML(sanitizeUrl(event.url).split('/').pop().replace(/\.html$/, '').toLowerCase())}"}'>View Details &rarr;</a>
                                     ${calendarButton}
                                 </div>
                             </div>
@@ -544,7 +540,7 @@
                     const eventListItems = monthEvents.map(event => `
                         <li class="py-2">
                             <strong>${event.parsedDate.getDate()}:</strong> ${escapeHTML(event.title)}
-                            ${event.url !== '#' ? `<a href="${escapeHTML(sanitizeUrl(event.url))}" class="font-semibold text-brand-purple hover:underline ml-2" data-ph-event="event_click" data-ph-label="${escapeHTML(event.title)}" data-ph-metadata='{"section":"past"}'>View Details</a>` : ''}
+                            ${event.url !== '#' ? `<a href="${escapeHTML(sanitizeUrl(event.url))}" class="font-semibold text-brand-purple hover:underline ml-2" data-ph-event="event_details_click" data-ph-label="${escapeHTML(event.title)}" data-ph-metadata='{"section":"past","event_id":"${escapeHTML(sanitizeUrl(event.url).split('/').pop().replace(/\.html$/, '').toLowerCase())}"}'>View Details</a>` : ''}
                         </li>
                     `).join('');
 
