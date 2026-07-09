@@ -7,6 +7,34 @@
     "homepagePromo": "hell-no-president-email",
     "actionPageDefault": "hell-no-president-email"
   },
+  "emailActions": {
+    "osu-president": {
+      "recipient": "pres.office@oregonstate.edu",
+      "subjects": [
+        "OSU staff deserve a fair contract",
+        "0% COLAs are not acceptable",
+        "Respect classified staff at OSU",
+        "A fair contract cannot wait",
+        "Protect OSU staff rights",
+        "We reject 19 years to the top step",
+        "Higher education works because staff work",
+        "OSU should not balance budgets on staff backs",
+        "Pay OSU classified staff enough to live on",
+        "Protect layoff and contracting-out rights",
+        "OSU staff need real raises and real protections",
+        "Invest in the people who keep OSU running",
+        "A 19-year step path is not progress",
+        "Staff deserve respect at the bargaining table",
+        "Settle a fair contract for OSU staff",
+        "No takeaways in the next OSU contract",
+        "Honor the rights workers built",
+        "Do not make staff pay for management's budget choices",
+        "OSU needs a contract that respects its workers",
+        "HELL, NO to 0% COLAs and takeaways"
+      ],
+      "body": "President Murthy,\n\nI am writing as a supporter of Oregon State classified staff. I am asking OSU to settle a fair contract that respects the people who keep our campuses clean, safe, running, and serving students.\n\nPlease reject an offer that provides no cost-of-living increases for four years, would stretch the step system to 19 years from step 1 to step 10, and rolls back layoff and contracting-out protections. OSU staff deserve a contract that pays enough to live on and protects the rights workers have built over decades.\n\nSincerely,\n[Your name]\n[Your OSU role or connection]"
+    }
+  },
   "actions": {
     "hell-no-president-email": {
       "slug": "hell-no-president-email",
@@ -43,7 +71,8 @@
         {
           "id": "primary",
           "label": "Email Your President",
-          "href": "https://www2.seiu503.org/e/171302/iq8xOjQ-HUCUbZBZ-L-vUw2/33yqdw/900266549/h/5N7D7nF4BHa5UelfsIRgFur6GeYAn2azdwSGb6IJmN4",
+          "href": "mailto:pres.office@oregonstate.edu",
+          "emailAction": "osu-president",
           "style": "primary",
           "analytics": {
             "event": "take_action_click",

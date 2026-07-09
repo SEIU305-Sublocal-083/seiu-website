@@ -115,6 +115,10 @@
     const isBargainingHub = (raw) => /\/2026-bargaining\/(?:index\.html)?$/i.test(parseUrl(raw)?.pathname || raw || '');
     const isStewardMailto = (raw) => /^mailto:083stewards@seiu503\.org/i.test(raw || '');
     const isEventDetails = (raw) => /^\/events\/.+\.html$/i.test(parseUrl(raw)?.pathname || raw || '');
+    const mailtoRecipient = (raw) => {
+        const match = /^mailto:([^?]+)/i.exec(raw || '');
+        return match ? decodeURIComponent(match[1]) : '';
+    };
 
     const normalizedEventName = (name, rawTarget) => {
         if (isMemberSignup(rawTarget)) return 'member_signup_click';
@@ -144,7 +148,9 @@
 
         if (eventName === 'take_action_click') {
             props.action_type = props.action_type || 'president_email';
-            props.action_destination_domain = 'www2.seiu503.org';
+            const recipient = mailtoRecipient(rawTarget);
+            props.action_channel = recipient ? 'email' : 'web_form';
+            props.action_destination_domain = recipient.split('@')[1] || 'www2.seiu503.org';
         }
 
         if (eventName === 'steward_contact_click') {
