@@ -1,0 +1,35 @@
+{
+  "viewport": "1440x1200",
+  "pages": [
+    {
+      "file": "home.png",
+      "path": "/",
+      "title": "SEIU Local 503 - Oregon State University",
+      "h1": "Tell university presidents: HELL, NO!"
+    },
+    {
+      "file": "action.png",
+      "path": "/action/",
+      "title": "Email University Presidents: HELL, NO! - SEIU Local 503, OSU",
+      "h1": "Tell university presidents: HELL, NO!"
+    },
+    {
+      "file": "news.png",
+      "path": "/news.html",
+      "title": "News - SEIU Local 503, OSU",
+      "h1": "News & Updates"
+    },
+    {
+      "file": "latest-bargaining-update.png",
+      "path": "/news/2026-07-09-latest-bargaining-update.html",
+      "title": "Latest Bargaining Update: Universities Offer 0% COLAs and a 19-Year Step Path - SEIU Local 503, OSU",
+      "h1": "Latest Bargaining Update: Universities Offer 0% COLAs and a 19-Year Step Path"
+    },
+    {
+      "file": "tell-universities-hell-no.png",
+      "path": "/news/2026-07-09-tell-universities-hell-no.html",
+      "title": "Universities Continue to Disrespect Staff: Tell Them HELL, NO! - SEIU Local 503, OSU",
+      "h1": "Universities Continue to Disrespect Staff: Tell Them HELL, NO!"
+    }
+  ]
+}

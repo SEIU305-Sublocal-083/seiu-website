@@ -111,6 +111,7 @@
 
     const isCatSignup = (raw) => /seiu503\.tfaforms\.net\/759/i.test(raw || '');
     const isMemberSignup = (raw) => /seiu503signup\.org/i.test(raw || '');
+    const isTakeAction = (raw) => /www2\.seiu503\.org\/e\/171302\//i.test(raw || '');
     const isBargainingHub = (raw) => /\/2026-bargaining\/(?:index\.html)?$/i.test(parseUrl(raw)?.pathname || raw || '');
     const isStewardMailto = (raw) => /^mailto:083stewards@seiu503\.org/i.test(raw || '');
     const isEventDetails = (raw) => /^\/events\/.+\.html$/i.test(parseUrl(raw)?.pathname || raw || '');
@@ -118,6 +119,7 @@
     const normalizedEventName = (name, rawTarget) => {
         if (isMemberSignup(rawTarget)) return 'member_signup_click';
         if (isCatSignup(rawTarget)) return 'cat_signup_click';
+        if (isTakeAction(rawTarget)) return 'take_action_click';
         if (isBargainingHub(rawTarget)) return 'bargaining_hub_click';
         if (isStewardMailto(rawTarget)) return 'steward_contact_click';
         if (name === 'event_click') return 'event_details_click';
@@ -138,6 +140,11 @@
         if (eventName === 'cat_signup_click') {
             props.signup_type = props.signup_type || 'cat';
             props.signup_destination_domain = 'seiu503.tfaforms.net';
+        }
+
+        if (eventName === 'take_action_click') {
+            props.action_type = props.action_type || 'president_email';
+            props.action_destination_domain = 'www2.seiu503.org';
         }
 
         if (eventName === 'steward_contact_click') {

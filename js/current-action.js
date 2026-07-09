@@ -1,5 +1,5 @@
 (function () {
-    const DATA_URL = '/data/current-action.json?v=2026-07-08';
+    const DATA_URL = '/data/current-action.json?v=2026-07-09';
 
     const safeText = (value) => String(value || '');
 

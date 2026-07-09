@@ -1,13 +1,95 @@
 {
   "schema": "local083-current-action-v1",
-  "updatedAt": "2026-07-08",
-  "defaultAction": "membership-july-16",
+  "updatedAt": "2026-07-09",
+  "defaultAction": "hell-no-president-email",
   "slots": {
-    "homepageHero": "membership-july-16",
-    "homepagePromo": "membership-july-16",
-    "actionPageDefault": "membership-july-16"
+    "homepageHero": "hell-no-president-email",
+    "homepagePromo": "hell-no-president-email",
+    "actionPageDefault": "hell-no-president-email"
   },
   "actions": {
+    "hell-no-president-email": {
+      "slug": "hell-no-president-email",
+      "type": "bargaining_action",
+      "visibility": {
+        "from": "2026-07-09T00:00:00-07:00",
+        "until": "2026-07-31T23:59:59-07:00"
+      },
+      "eyebrow": "Bargaining action",
+      "headline": "Tell university presidents: HELL, NO!",
+      "summary": "Five months into bargaining and after the contract's expiration, university management's latest offer still includes 0% COLAs, a 19-year step path, and proposals to roll back rights workers built over decades.",
+      "promoEyebrow": "Management's latest offer",
+      "promoHeadline": "0% COLAs. A 19-year step path. Rights on the line.",
+      "promoBody": "Many classified workers make less than $40,000 a year while administrators earn salaries over $200,000. Send a message now: we will not accept an offer that balances budgets on workers' backs.",
+      "image": {
+        "src": "/images/2026-bargaining-zoom-backgrounds.webp",
+        "alt": "A purple background with silhouettes of raised fists and campus mascots, featuring the Higher Education Bargaining 2026 message."
+      },
+      "details": [
+        {
+          "label": "COLAs",
+          "value": "Management's latest offer keeps COLAs at 0% for four years"
+        },
+        {
+          "label": "Steps",
+          "value": "The proposed step structure takes 19 years from step 1 to step 10"
+        },
+        {
+          "label": "Rights",
+          "value": "Layoff and contracting-out protections are on the line"
+        }
+      ],
+      "ctas": [
+        {
+          "id": "primary",
+          "label": "Email Your President",
+          "href": "https://www2.seiu503.org/e/171302/iq8xOjQ-HUCUbZBZ-L-vUw2/33yqdw/900266549/h/5N7D7nF4BHa5UelfsIRgFur6GeYAn2azdwSGb6IJmN4",
+          "style": "primary",
+          "analytics": {
+            "event": "take_action_click",
+            "label": "Homepage Hero Hell No Email Action",
+            "metadata": {
+              "action_type": "president_email",
+              "placement": "homepage_hero",
+              "action_slug": "hell-no-president-email"
+            }
+          }
+        },
+        {
+          "id": "secondary",
+          "label": "Read Latest Bargaining Update",
+          "href": "/news/2026-07-09-latest-bargaining-update.html",
+          "style": "secondary",
+          "analytics": {
+            "event": "news_article_click",
+            "label": "Homepage Latest Bargaining Update",
+            "metadata": {
+              "placement": "homepage_hero",
+              "action_slug": "hell-no-president-email"
+            }
+          }
+        },
+        {
+          "id": "tertiary",
+          "label": "Read the Bargaining Hub",
+          "href": "/2026-bargaining/index.html",
+          "style": "outline",
+          "analytics": {
+            "event": "bargaining_hub_click",
+            "label": "Homepage Bargaining Hub",
+            "metadata": {
+              "placement": "homepage_promo",
+              "action_slug": "hell-no-president-email"
+            }
+          }
+        }
+      ],
+      "actionPage": {
+        "headline": "Tell university presidents: HELL, NO!",
+        "body": "University management's latest offer would provide no COLAs for four years, make it take 19 years to advance from step 1 to step 10, and roll back layoff and contracting-out rights. Classified staff keep campuses clean, safe, running, and serving students. Our message is clear: respect our work and pay enough to live on.",
+        "nextStep": "Email your president, then ask a coworker to join you."
+      }
+    },
     "membership-july-16": {
       "slug": "membership-july-16",
       "type": "membership_meeting",
