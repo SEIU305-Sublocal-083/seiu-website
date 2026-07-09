@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//SEIU Local 503 at OSU//Local083 Events//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:20260716-general-membership-meeting@local083.org
+DTSTAMP:20260708T170000Z
+DTSTART:20260716T190000Z
+DTEND:20260716T200000Z
+SUMMARY:General Membership Meeting
+DESCRIPTION:Join SEIU Local 083 at noon in Memorial Union room 215. Lunch is provided. We will talk through the new phase of bargaining\, member readiness\, and how higher ed works because we work. Zoom details are coming shortly.
+LOCATION:Memorial Union room 215\, Oregon State University
+URL:https://www.local083.org/events/2026-07-16-General-Membership-Meeting.html
+END:VEVENT
+END:VCALENDAR

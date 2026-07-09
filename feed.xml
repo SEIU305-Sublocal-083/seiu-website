@@ -5,8 +5,44 @@
     <link>https://www.local083.org</link>
     <description>Combined news and event updates from SEIU Local 503 at Oregon State University.</description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 28 Jun 2026 02:13:44 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 09 Jul 2026 18:53:53 GMT</lastBuildDate>
     <atom:link href="https://www.local083.org/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>[Event] CAT Meeting</title>
+      <link>https://www.local083.org/events/2026-07-20-CAT-Meeting.html</link>
+      <guid isPermaLink="false">event:2026-07-20:CAT Meeting:combined</guid>
+      <description>Join our Contract Action Team meeting on Monday, July 20 in the evening for workplace updates and action coordination. Time and Zoom details are coming shortly. | Date: 2026-07-20 | Time: Evening, details coming soon | Location: Details coming soon</description>
+      <pubDate>Mon, 20 Jul 2026 00:00:00 GMT</pubDate>
+      <category>CAT Meeting</category>
+    </item>
+    <item>
+      <title>[Event] General Membership Meeting</title>
+      <link>https://www.local083.org/events/2026-07-16-General-Membership-Meeting.html</link>
+      <guid isPermaLink="false">event:2026-07-16:General Membership Meeting:combined</guid>
+      <description>Join us Thursday, July 16 at noon in Memorial Union room 215. Lunch is provided, and we will talk through the new phase of bargaining, member readiness, and how higher ed works because we work. Zoom details are coming shortly. | Date: 2026-07-16 | Time: 12:00 PM - 1:00 PM | Location: Memorial Union room 215</description>
+      <pubDate>Thu, 16 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Membership Meeting</category>
+    </item>
+    <item>
+      <title>[News] Latest Bargaining Update: Universities Offer 0% COLAs and a 19-Year Step Path</title>
+      <link>https://www.local083.org/news/2026-07-09-latest-bargaining-update.html</link>
+      <guid isPermaLink="false">https://www.local083.org/news/2026-07-09-latest-bargaining-update.html#news</guid>
+      <description>University management's latest offer includes no COLAs over four years, a 19-year step path, and proposals to roll back staff rights.</description>
+      <pubDate>Thu, 09 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Bargaining</category>
+      <category>Update</category>
+      <category>2026 Bargaining</category>
+    </item>
+    <item>
+      <title>[News] Universities Continue to Disrespect Staff: Tell Them HELL, NO!</title>
+      <link>https://www.local083.org/news/2026-07-09-tell-universities-hell-no.html</link>
+      <guid isPermaLink="false">https://www.local083.org/news/2026-07-09-tell-universities-hell-no.html#news</guid>
+      <description>Email your university president about management's offer of 0% COLAs, a 19-year step path, and rollbacks to staff rights.</description>
+      <pubDate>Thu, 09 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Bargaining</category>
+      <category>Action</category>
+      <category>2026 Bargaining</category>
+    </item>
     <item>
       <title>[Event] Rally June 30 at McNary Field</title>
       <link>https://www.local083.org/events/2026-06-30-Rally-at-McNary-Field.html</link>
@@ -519,7 +555,7 @@
       <title>[Event] Sub Local Leadership Meeting</title>
       <link>https://www.local083.org/#</link>
       <guid isPermaLink="false">event:2025-08-14:Sub Local Leadership Meeting:combined</guid>
-      <description>A meeting with the leadership of our Sub Local. | Date: 2025-08-14 | Time: TBD | Location: TBD</description>
+      <description>A meeting with the leadership of our Sub Local. | Date: 2025-08-14 | Time: Time not posted | Location: Location not posted</description>
       <pubDate>Thu, 14 Aug 2025 00:00:00 GMT</pubDate>
       <category>Meeting</category>
     </item>
@@ -527,7 +563,7 @@
       <title>[Event] CAT Meeting</title>
       <link>https://www.local083.org/#</link>
       <guid isPermaLink="false">event:2025-08-06:CAT Meeting:combined</guid>
-      <description>A C.A.T. meeting focusing on current campaign events. | Date: 2025-08-06 | Time: TBD | Location: TBD</description>
+      <description>A C.A.T. meeting focusing on current campaign events. | Date: 2025-08-06 | Time: Time not posted | Location: Location not posted</description>
       <pubDate>Wed, 06 Aug 2025 00:00:00 GMT</pubDate>
       <category>Meeting</category>
     </item>

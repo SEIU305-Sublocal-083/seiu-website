@@ -8,7 +8,7 @@ import json
 import re
 import sys
 from dataclasses import dataclass
-from datetime import UTC, datetime
+from datetime import datetime, timezone
 from html.parser import HTMLParser
 from pathlib import Path
 from typing import Iterable
@@ -30,11 +30,11 @@ EXCLUDED_HTML_PATTERNS = (
 
 # Keep this list narrow to avoid noisy false positives.
 PLACEHOLDER_PATTERNS = (
-    re.compile(r"\\blorem ipsum\\b", re.IGNORECASE),
-    re.compile(r"\\bTODO\\b"),
-    re.compile(r"\\bTBD\\b"),
-    re.compile(r"\\bplaceholder\\b", re.IGNORECASE),
-    re.compile(r"\\[\\s*insert[^\\]]*\\]", re.IGNORECASE),
+    re.compile(r"\blorem ipsum\b", re.IGNORECASE),
+    re.compile(r"\bTODO\b"),
+    re.compile(r"\bTBD\b"),
+    re.compile(r"\bplaceholder\s+(?:image|content|copy|text)\b", re.IGNORECASE),
+    re.compile(r"\[\s*insert[^\]]*\]", re.IGNORECASE),
 )
 
 REQUIRED_NEWS_FIELDS = ("title", "description", "url", "image", "alt", "publishedAt")
@@ -215,7 +215,7 @@ def check_news_json() -> list[Issue]:
     issues: list[Issue] = []
     path = ROOT / "news" / "news.json"
     data = json.loads(path.read_text(encoding="utf-8"))
-    today = datetime.now(UTC).date()
+    today = datetime.now(timezone.utc).date()
 
     for idx, item in enumerate(data):
         source = f"news/news.json[{idx}]"
@@ -295,7 +295,7 @@ def write_report(path: Path, issues: list[Issue]) -> None:
     lines = [
         "# Site Quality Report",
         "",
-        f"Generated: {datetime.now(UTC).isoformat().replace('+00:00', 'Z')}",
+        f"Generated: {datetime.now(timezone.utc).isoformat().replace('+00:00', 'Z')}",
         "",
         f"- Errors: {len(errors)}",
         f"- Warnings: {len(warnings)}",

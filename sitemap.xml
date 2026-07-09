@@ -64,22 +64,10 @@
     <loc>https://www.local083.org/news.html</loc>
   </url>
   <url>
-    <loc>https://www.local083.org/slides/membership-meeting-template/node_modules/@mapbox/node-pre-gyp/lib/util/nw-pre-gyp/index.html</loc>
-  </url>
-  <url>
-    <loc>https://www.local083.org/slides/membership-meeting-template/node_modules/tslib/tslib.es6.html</loc>
-  </url>
-  <url>
-    <loc>https://www.local083.org/slides/membership-meeting-template/node_modules/tslib/tslib.html</loc>
-  </url>
-  <url>
-    <loc>https://www.local083.org/slides/membership-meeting-template/node_modules/mhchemparser/test/test-esm.html</loc>
-  </url>
-  <url>
-    <loc>https://www.local083.org/slides/membership-meeting-template/node_modules/mhchemparser/test/test-dist.html</loc>
-  </url>
-  <url>
     <loc>https://www.local083.org/resources.html</loc>
+  </url>
+  <url>
+    <loc>https://www.local083.org/action/index.html</loc>
   </url>
   <url>
     <loc>https://www.local083.org/mayday/index.html</loc>
@@ -118,10 +106,16 @@
     <loc>https://www.local083.org/news/2025-10-01-bargaining-survey-live.html</loc>
   </url>
   <url>
+    <loc>https://www.local083.org/news/2026-07-09-tell-universities-hell-no.html</loc>
+  </url>
+  <url>
     <loc>https://www.local083.org/news/2026-04-21-new-sublocal-083-leadership-team.html</loc>
   </url>
   <url>
     <loc>https://www.local083.org/news/2025-12-15-fighting-for-higher-education.html</loc>
+  </url>
+  <url>
+    <loc>https://www.local083.org/news/2026-07-09-latest-bargaining-update.html</loc>
   </url>
   <url>
     <loc>https://www.local083.org/news/2026-01-09-kickoff.html</loc>
@@ -166,6 +160,108 @@
     <loc>https://www.local083.org/marketing/2025-10-23-Bowling-Slide.html</loc>
   </url>
   <url>
+    <loc>https://www.local083.org/marketing/july-26/index.html</loc>
+  </url>
+  <url>
+    <loc>https://www.local083.org/marketing/july-26/website/2026-07-20-Exec-Meeting.html</loc>
+  </url>
+  <url>
+    <loc>https://www.local083.org/marketing/july-26/website/2026-07-28-what-osu-workers-told-us-about-workday.html</loc>
+  </url>
+  <url>
+    <loc>https://www.local083.org/marketing/july-26/website/2026-07-24-fair-contract-osu-classified-workers.html</loc>
+  </url>
+  <url>
+    <loc>https://www.local083.org/marketing/july-26/website/2026-07-10-meet-a-local-083-leader.html</loc>
+  </url>
+  <url>
+    <loc>https://www.local083.org/marketing/july-26/website/2026-07-02-contract-expiration-explainer.html</loc>
+  </url>
+  <url>
+    <loc>https://www.local083.org/marketing/july-26/website/2026-07-09-no-steps-no-cola-real-paychecks.html</loc>
+  </url>
+  <url>
+    <loc>https://www.local083.org/marketing/july-26/website/2026-07-31-what-to-watch-in-august.html</loc>
+  </url>
+  <url>
+    <loc>https://www.local083.org/marketing/july-26/website/2026-07-16-Membership-Meeting.html</loc>
+  </url>
+  <url>
+    <loc>https://www.local083.org/marketing/july-26/website/2026-07-22-statewide-cat-recap.html</loc>
+  </url>
+  <url>
+    <loc>https://www.local083.org/marketing/july-26/website/2026-07-24-meet-a-local-083-leader.html</loc>
+  </url>
+  <url>
+    <loc>https://www.local083.org/marketing/july-26/website/2026-07-15-meet-a-local-083-leader.html</loc>
+  </url>
+  <url>
+    <loc>https://www.local083.org/marketing/july-26/website/2026-07-30-member-story-issue-spotlight.html</loc>
+  </url>
+  <url>
+    <loc>https://www.local083.org/marketing/july-26/website/2026-07-27-bargaining-status.html</loc>
+  </url>
+  <url>
+    <loc>https://www.local083.org/marketing/july-26/website/2026-07-29-meet-a-local-083-leader.html</loc>
+  </url>
+  <url>
+    <loc>https://www.local083.org/marketing/july-26/website/2026-07-01-rally-recap.html</loc>
+  </url>
+  <url>
+    <loc>https://www.local083.org/marketing/july-26/website/2026-07-07-workday-go-live-osu-classified-workers.html</loc>
+  </url>
+  <url>
+    <loc>https://www.local083.org/marketing/july-26/website/2026-07-17-what-is-cat-statewide-meeting.html</loc>
+  </url>
+  <url>
+    <loc>https://www.local083.org/marketing/july-26/website/2026-07-04-public-workers-collective-action-freedom-at-work.html</loc>
+  </url>
+  <url>
+    <loc>https://www.local083.org/marketing/july-26/website/2026-07-08-workday-from-your-job.html</loc>
+  </url>
+  <url>
+    <loc>https://www.local083.org/marketing/july-26/website/2026-07-18-Statewide-CAT-Meeting.html</loc>
+  </url>
+  <url>
+    <loc>https://www.local083.org/marketing/july-26/website/2026-07-03-meet-local-083-new-organizer.html</loc>
+  </url>
+  <url>
+    <loc>https://www.local083.org/marketing/july-26/website/2026-07-23-local-083-leaders-next.html</loc>
+  </url>
+  <url>
+    <loc>https://www.local083.org/marketing/july-26/website/2026-07-13-bring-bargaining-questions-july-16-membership-meeting.html</loc>
+  </url>
+  <url>
+    <loc>https://www.local083.org/marketing/july-26/website/2026-07-15-workday-early-themes.html</loc>
+  </url>
+  <url>
+    <loc>https://www.local083.org/marketing/july-26/website/2026-07-20-membership-meeting-recap.html</loc>
+  </url>
+  <url>
+    <loc>https://www.local083.org/marketing/july-26/website/2026-07-06-workday-bargaining-member-questions.html</loc>
+  </url>
+  <url>
+    <loc>https://www.local083.org/marketing/july-26/email/2026-07-21-Weekly-Bargaining-Update.html</loc>
+  </url>
+  <url>
+    <loc>https://www.local083.org/marketing/july-26/email/2026-07-01-Rally-Recap.html</loc>
+  </url>
+  <url>
+    <loc>https://www.local083.org/marketing/july-26/email/2026-07-14-Membership-Meeting-Invite.html</loc>
+  </url>
+  <url>
+    <loc>https://www.local083.org/marketing/july-26/email/2026-07-16-Membership-Meeting-Day-Of.html</loc>
+  </url>
+  <url>
+    <loc>https://www.local083.org/marketing/july-26/email/2026-07-30-Monthly-Wrap.html</loc>
+  </url>
+  <url>
+    <loc>https://www.local083.org/marketing/july-26/email/2026-07-17-Statewide-CAT-Targeted.html</loc>
+  </url>
+  <url>
+    <loc>https://www.local083.org/marketing/july-26/email/2026-07-07-Workday-Feeler.html</loc>
+  </url>
+  <url>
     <loc>https://www.local083.org/marketing/email/2026-03-23-New-Employee-Orientation-A.html</loc>
   </url>
   <url>
@@ -205,10 +301,16 @@
     <loc>https://www.local083.org/marketing/email/2026-03-11-Facilities-Membership-Meeting.html</loc>
   </url>
   <url>
+    <loc>https://www.local083.org/marketing/email/2026-05-28-Bargaining-Observation-Today.html</loc>
+  </url>
+  <url>
     <loc>https://www.local083.org/marketing/email/2026-05-21-Membership-Meeting-Invite-Draft.html</loc>
   </url>
   <url>
     <loc>https://www.local083.org/marketing/email/2026-04-01-Membership-Meeting-B.html</loc>
+  </url>
+  <url>
+    <loc>https://www.local083.org/marketing/email/2026-06-17-Membership-Meeting-Tomorrow.html</loc>
   </url>
   <url>
     <loc>https://www.local083.org/marketing/email/2026-05-15-UO-Bargaining-Rally.html</loc>
@@ -217,16 +319,25 @@
     <loc>https://www.local083.org/marketing/email/2026-06-30-June-30-Rally-Today.html</loc>
   </url>
   <url>
+    <loc>https://www.local083.org/marketing/email/2026-06-24-June-30-Rally-Final-Push.html</loc>
+  </url>
+  <url>
     <loc>https://www.local083.org/marketing/email/2026-06-29-June-30-Rally-Tomorrow.html</loc>
   </url>
   <url>
     <loc>https://www.local083.org/marketing/email/2026-05-20-Membership-Meeting-Reminder.html</loc>
   </url>
   <url>
+    <loc>https://www.local083.org/marketing/email/2026-06-18-Membership-Meeting-Day-Of.html</loc>
+  </url>
+  <url>
     <loc>https://www.local083.org/marketing/email/2026-04-01-Membership-Meeting-A-Announcement.html</loc>
   </url>
   <url>
     <loc>https://www.local083.org/marketing/email/2026-03-31-Rally-Signup-Confirm.html</loc>
+  </url>
+  <url>
+    <loc>https://www.local083.org/marketing/email/2026-06-26-June-29-Sign-Making-Party.html</loc>
   </url>
   <url>
     <loc>https://www.local083.org/marketing/email/2026-07-01-June-30-Rally-Thank-You-Draft.html</loc>
@@ -244,7 +355,13 @@
     <loc>https://www.local083.org/marketing/email/2026-03-20-Bargaining-Observation.html</loc>
   </url>
   <url>
+    <loc>https://www.local083.org/marketing/email/2026-06-30-rally-content-plan-summary.html</loc>
+  </url>
+  <url>
     <loc>https://www.local083.org/marketing/email/2026-04-27-CAT-Meeting-Reminder.html</loc>
+  </url>
+  <url>
+    <loc>https://www.local083.org/marketing/email/2026-06-29-June-29-Sign-Making-Reminder.html</loc>
   </url>
   <url>
     <loc>https://www.local083.org/marketing/email/2026-05-21-June-30-Rally-Announcement.html</loc>
@@ -310,12 +427,6 @@
     <loc>https://www.local083.org/events/2026-05-21-Membership-Meeting.html</loc>
   </url>
   <url>
-    <loc>https://www.local083.org/events/2026-06-18-OSU-June-Membership-Meeting.html</loc>
-  </url>
-  <url>
-    <loc>https://www.local083.org/events/2026-06-22-OSU-CAT-Meeting.html</loc>
-  </url>
-  <url>
     <loc>https://www.local083.org/events/2026-01-15-Membership-Meeting.html</loc>
   </url>
   <url>
@@ -340,6 +451,9 @@
     <loc>https://www.local083.org/events/2025-09-13-Bargaining-Conference.html</loc>
   </url>
   <url>
+    <loc>https://www.local083.org/events/2026-06-18-OSU-June-Membership-Meeting.html</loc>
+  </url>
+  <url>
     <loc>https://www.local083.org/events/2025-09-03-New-Employee-Orientation.html</loc>
   </url>
   <url>
@@ -347,6 +461,9 @@
   </url>
   <url>
     <loc>https://www.local083.org/events/2025-10-30-Stewards-Meeting.html</loc>
+  </url>
+  <url>
+    <loc>https://www.local083.org/events/2026-07-16-General-Membership-Meeting.html</loc>
   </url>
   <url>
     <loc>https://www.local083.org/events/2026-03-31-Rally-at-OSU.html</loc>
@@ -397,6 +514,9 @@
     <loc>https://www.local083.org/events/2025-10-01-CAT-Meeting.html</loc>
   </url>
   <url>
+    <loc>https://www.local083.org/events/2026-06-29-Sign-Making-Party.html</loc>
+  </url>
+  <url>
     <loc>https://www.local083.org/events/2025-10-16-Membership-Meeting.html</loc>
   </url>
   <url>
@@ -427,6 +547,12 @@
     <loc>https://www.local083.org/events/2025-09-10-CAT-Meeting.html</loc>
   </url>
   <url>
+    <loc>https://www.local083.org/events/2026-07-20-CAT-Meeting.html</loc>
+  </url>
+  <url>
+    <loc>https://www.local083.org/events/2026-06-22-OSU-CAT-Meeting.html</loc>
+  </url>
+  <url>
     <loc>https://www.local083.org/events/2025-08-28-Steward-Meeting.html</loc>
   </url>
   <url>
@@ -440,9 +566,6 @@
   </url>
   <url>
     <loc>https://www.local083.org/events/2026-06-30-Rally-at-McNary-Field.html</loc>
-  </url>
-  <url>
-    <loc>https://www.local083.org/events/2026-06-29-Sign-Making-Party.html</loc>
   </url>
   <url>
     <loc>https://www.local083.org/events/2026-02-05-CAT-Meeting.html</loc>

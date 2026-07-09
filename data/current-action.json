@@ -1,0 +1,260 @@
+{
+  "schema": "local083-current-action-v1",
+  "updatedAt": "2026-07-09",
+  "defaultAction": "hell-no-president-email",
+  "slots": {
+    "homepageHero": "hell-no-president-email",
+    "homepagePromo": "hell-no-president-email",
+    "actionPageDefault": "hell-no-president-email"
+  },
+  "actions": {
+    "hell-no-president-email": {
+      "slug": "hell-no-president-email",
+      "type": "bargaining_action",
+      "visibility": {
+        "from": "2026-07-09T00:00:00-07:00",
+        "until": "2026-07-31T23:59:59-07:00"
+      },
+      "eyebrow": "Bargaining action",
+      "headline": "Tell university presidents: HELL, NO!",
+      "summary": "Five months into bargaining and after the contract's expiration, university management's latest offer still includes 0% COLAs, a 19-year step path, and proposals to roll back rights workers built over decades.",
+      "promoEyebrow": "Management's latest offer",
+      "promoHeadline": "0% COLAs. A 19-year step path. Rights on the line.",
+      "promoBody": "Many classified workers make less than $40,000 a year while administrators earn salaries over $200,000. Send a message now: we will not accept an offer that balances budgets on workers' backs.",
+      "image": {
+        "src": "/images/2026-bargaining-zoom-backgrounds.webp",
+        "alt": "A purple background with silhouettes of raised fists and campus mascots, featuring the Higher Education Bargaining 2026 message."
+      },
+      "details": [
+        {
+          "label": "COLAs",
+          "value": "Management's latest offer keeps COLAs at 0% for four years"
+        },
+        {
+          "label": "Steps",
+          "value": "The proposed step structure takes 19 years from step 1 to step 10"
+        },
+        {
+          "label": "Rights",
+          "value": "Layoff and contracting-out protections are on the line"
+        }
+      ],
+      "ctas": [
+        {
+          "id": "primary",
+          "label": "Email Your President",
+          "href": "https://www2.seiu503.org/e/171302/iq8xOjQ-HUCUbZBZ-L-vUw2/33yqdw/900266549/h/5N7D7nF4BHa5UelfsIRgFur6GeYAn2azdwSGb6IJmN4",
+          "style": "primary",
+          "analytics": {
+            "event": "take_action_click",
+            "label": "Homepage Hero Hell No Email Action",
+            "metadata": {
+              "action_type": "president_email",
+              "placement": "homepage_hero",
+              "action_slug": "hell-no-president-email"
+            }
+          }
+        },
+        {
+          "id": "secondary",
+          "label": "Read Latest Bargaining Update",
+          "href": "/news/2026-07-09-latest-bargaining-update.html",
+          "style": "secondary",
+          "analytics": {
+            "event": "news_article_click",
+            "label": "Homepage Latest Bargaining Update",
+            "metadata": {
+              "placement": "homepage_hero",
+              "action_slug": "hell-no-president-email"
+            }
+          }
+        },
+        {
+          "id": "tertiary",
+          "label": "Read the Bargaining Hub",
+          "href": "/2026-bargaining/index.html",
+          "style": "outline",
+          "analytics": {
+            "event": "bargaining_hub_click",
+            "label": "Homepage Bargaining Hub",
+            "metadata": {
+              "placement": "homepage_promo",
+              "action_slug": "hell-no-president-email"
+            }
+          }
+        }
+      ],
+      "actionPage": {
+        "headline": "Tell university presidents: HELL, NO!",
+        "body": "University management's latest offer would provide no COLAs for four years, make it take 19 years to advance from step 1 to step 10, and roll back layoff and contracting-out rights. Classified staff keep campuses clean, safe, running, and serving students. Our message is clear: respect our work and pay enough to live on.",
+        "nextStep": "Email your president, then ask a coworker to join you."
+      }
+    },
+    "membership-july-16": {
+      "slug": "membership-july-16",
+      "type": "membership_meeting",
+      "visibility": {
+        "from": "2026-07-08T00:00:00-07:00",
+        "until": "2026-07-17T23:59:59-07:00"
+      },
+      "eyebrow": "Confidential bargaining phase",
+      "headline": "Membership meeting Thursday, July 16",
+      "summary": "We are in a new phase of bargaining. Table details are confidential for now, but our public job is clear: higher ed works because we work, and we need members ready to move together.",
+      "promoEyebrow": "Why this matters right now",
+      "promoHeadline": "Higher ed works because we work.",
+      "promoBody": "Join us at noon in Memorial Union room 215. Lunch is provided, Zoom details are coming shortly, and we will talk through how members can show OSU and higher ed that our power is disciplined, organized, and visible.",
+      "image": {
+        "src": "/images/2026-bargaining-zoom-backgrounds.webp",
+        "alt": "A purple background with silhouettes of raised fists and campus mascots, featuring the Higher Education Bargaining 2026 message."
+      },
+      "details": [
+        {
+          "label": "When",
+          "value": "Thursday, July 16, noon to 1 p.m."
+        },
+        {
+          "label": "Where",
+          "value": "Memorial Union room 215"
+        },
+        {
+          "label": "Bring",
+          "value": "A coworker and your questions"
+        }
+      ],
+      "ctas": [
+        {
+          "id": "primary",
+          "label": "View Meeting Details",
+          "href": "/events/2026-07-16-General-Membership-Meeting.html",
+          "style": "primary",
+          "analytics": {
+            "event": "event_details_click",
+            "label": "Homepage Hero Membership Meeting Details",
+            "metadata": {
+              "event_id": "2026-07-16-general-membership-meeting",
+              "placement": "homepage_hero",
+              "action_slug": "membership-july-16"
+            }
+          }
+        },
+        {
+          "id": "secondary",
+          "label": "Join the CAT",
+          "href": "https://seiu503.tfaforms.net/759",
+          "style": "secondary",
+          "analytics": {
+            "event": "cat_signup_click",
+            "label": "Homepage Hero CAT Signup",
+            "metadata": {
+              "signup_type": "cat",
+              "placement": "homepage_hero",
+              "action_slug": "membership-july-16"
+            }
+          }
+        },
+        {
+          "id": "tertiary",
+          "label": "Read the Bargaining Hub",
+          "href": "/2026-bargaining/index.html",
+          "style": "outline",
+          "analytics": {
+            "event": "bargaining_hub_click",
+            "label": "Homepage Bargaining Hub",
+            "metadata": {
+              "placement": "homepage_promo",
+              "action_slug": "membership-july-16"
+            }
+          }
+        }
+      ],
+      "actionPage": {
+        "headline": "Show up for the July 16 membership meeting",
+        "body": "The bargaining team is in confidential negotiations, so the details from the table stay internal for now. What we can do publicly is build member readiness: attend the meeting, bring a coworker, join the CAT, and be ready to show OSU that higher ed workers are organized.",
+        "nextStep": "After the membership meeting, the CAT meets Monday evening, July 20, to coordinate coworker outreach and next steps."
+      }
+    },
+    "cat-july-20": {
+      "slug": "cat-july-20",
+      "type": "cat_meeting",
+      "visibility": {
+        "from": "2026-07-18T00:00:00-07:00",
+        "until": "2026-07-21T23:59:59-07:00"
+      },
+      "eyebrow": "Next organizing step",
+      "headline": "CAT meeting Monday evening, July 20",
+      "summary": "Join the Contract Action Team meeting to coordinate coworker outreach and keep our worksites moving together.",
+      "promoEyebrow": "After the membership meeting",
+      "promoHeadline": "Help carry the update back to your worksite.",
+      "promoBody": "The CAT meeting is where members turn updates into coworker conversations and visible action. Time and Zoom details are coming shortly.",
+      "image": {
+        "src": "/images/card.webp",
+        "alt": "SEIU Local 503 at Oregon State University card graphic."
+      },
+      "details": [
+        {
+          "label": "When",
+          "value": "Monday evening, July 20"
+        },
+        {
+          "label": "Where",
+          "value": "Details coming soon"
+        },
+        {
+          "label": "Focus",
+          "value": "Coworker outreach and action coordination"
+        }
+      ],
+      "ctas": [
+        {
+          "id": "primary",
+          "label": "View CAT Details",
+          "href": "/events/2026-07-20-CAT-Meeting.html",
+          "style": "primary",
+          "analytics": {
+            "event": "event_details_click",
+            "label": "CAT Meeting Details",
+            "metadata": {
+              "event_id": "2026-07-20-cat-meeting",
+              "placement": "action_page",
+              "action_slug": "cat-july-20"
+            }
+          }
+        }
+      ],
+      "actionPage": {
+        "headline": "Help carry the update back to your worksite",
+        "body": "CAT members share updates, listen to coworkers, and help turn member readiness into visible workplace power.",
+        "nextStep": "Invite one coworker who wants to help but has not joined CAT yet."
+      }
+    }
+  },
+  "fallback": {
+    "eyebrow": "Current action",
+    "headline": "Check the latest Local 083 updates",
+    "summary": "We are updating the current action page. Visit the events calendar for the latest meeting information.",
+    "promoEyebrow": "Stay connected",
+    "promoHeadline": "Find the next meeting or action.",
+    "promoBody": "When a new action is ready, this page will point you to it.",
+    "details": [
+      {
+        "label": "Next step",
+        "value": "Check events"
+      }
+    ],
+    "ctas": [
+      {
+        "id": "primary",
+        "label": "View Events",
+        "href": "/events.html",
+        "style": "primary",
+        "analytics": {
+          "event": "event_details_click",
+          "label": "Fallback Events",
+          "metadata": {
+            "placement": "current_action_fallback"
+          }
+        }
+      }
+    ]
+  }
+}

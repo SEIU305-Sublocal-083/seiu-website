@@ -84,6 +84,89 @@
 
     const textFor = (el) => (el?.dataset?.phLabel || el?.getAttribute?.('aria-label') || el?.textContent || '').trim();
 
+    const parseUrl = (raw) => {
+        try {
+            return new URL(raw || '', window.location.href);
+        } catch (error) {
+            return null;
+        }
+    };
+
+    const cleanTargetUrl = (raw) => {
+        if (!raw || raw.startsWith('mailto:') || raw.startsWith('tel:')) return undefined;
+        const parsed = parseUrl(raw);
+        if (!parsed) return raw;
+        parsed.search = '';
+        parsed.hash = '';
+        return parsed.origin === window.location.origin ? parsed.pathname : parsed.toString();
+    };
+
+    const fileNameFromUrl = (raw) => {
+        const parsed = parseUrl(raw);
+        const pathname = parsed ? parsed.pathname : raw;
+        return (pathname || '').split('/').filter(Boolean).pop() || '';
+    };
+
+    const eventIdFromUrl = (raw) => fileNameFromUrl(raw).replace(/\.html$/i, '').toLowerCase();
+
+    const isCatSignup = (raw) => /seiu503\.tfaforms\.net\/759/i.test(raw || '');
+    const isMemberSignup = (raw) => /seiu503signup\.org/i.test(raw || '');
+    const isTakeAction = (raw) => /www2\.seiu503\.org\/e\/171302\//i.test(raw || '');
+    const isBargainingHub = (raw) => /\/2026-bargaining\/(?:index\.html)?$/i.test(parseUrl(raw)?.pathname || raw || '');
+    const isStewardMailto = (raw) => /^mailto:083stewards@seiu503\.org/i.test(raw || '');
+    const isEventDetails = (raw) => /^\/events\/.+\.html$/i.test(parseUrl(raw)?.pathname || raw || '');
+
+    const normalizedEventName = (name, rawTarget) => {
+        if (isMemberSignup(rawTarget)) return 'member_signup_click';
+        if (isCatSignup(rawTarget)) return 'cat_signup_click';
+        if (isTakeAction(rawTarget)) return 'take_action_click';
+        if (isBargainingHub(rawTarget)) return 'bargaining_hub_click';
+        if (isStewardMailto(rawTarget)) return 'steward_contact_click';
+        if (name === 'event_click') return 'event_details_click';
+        if (name === 'file_download') return 'file_download_click';
+        if (name === 'cta_click' && isEventDetails(rawTarget)) return 'event_details_click';
+        return name;
+    };
+
+    const clickProps = (eventName, rawTarget, label, metadata = {}, legacyEventName = null) => {
+        const props = { label, target_url: cleanTargetUrl(rawTarget), ...metadata };
+        if (legacyEventName && legacyEventName !== eventName) props.legacy_event_name = legacyEventName;
+
+        if (eventName === 'member_signup_click') {
+            props.signup_type = props.signup_type || 'member';
+            props.signup_destination_domain = 'seiu503signup.org';
+        }
+
+        if (eventName === 'cat_signup_click') {
+            props.signup_type = props.signup_type || 'cat';
+            props.signup_destination_domain = 'seiu503.tfaforms.net';
+        }
+
+        if (eventName === 'take_action_click') {
+            props.action_type = props.action_type || 'president_email';
+            props.action_destination_domain = 'www2.seiu503.org';
+        }
+
+        if (eventName === 'steward_contact_click') {
+            props.label = props.label && props.label.includes('@') ? 'Steward email' : props.label;
+            props.contact_role = 'steward';
+            props.contact_channel = 'email';
+            delete props.target_url;
+        }
+
+        if (eventName === 'file_download_click') {
+            const fileName = fileNameFromUrl(rawTarget);
+            props.file_name = fileName;
+            props.file_type = (fileName.split('.').pop() || '').toLowerCase();
+        }
+
+        if (eventName === 'event_details_click') {
+            props.event_id = props.event_id || eventIdFromUrl(rawTarget);
+        }
+
+        return props;
+    };
+
     document.addEventListener('click', (event) => {
         const target = event.target.closest('a, button');
         if (!target) return;
@@ -93,11 +176,9 @@
 
         if (target.dataset.phEvent) {
             const metadata = parseMetadata(target.dataset.phMetadata);
-            window.phCapture(target.dataset.phEvent, {
-                label: textFor(target),
-                target_url: url || href,
-                ...metadata
-            });
+            const rawEventName = target.dataset.phEvent;
+            const eventName = normalizedEventName(rawEventName, url || href);
+            window.phCapture(eventName, clickProps(eventName, url || href, textFor(target), metadata, rawEventName));
             return;
         }
 
@@ -109,22 +190,29 @@
         const isNav = !!target.closest('header') || !!target.closest('#mobile-menu');
 
         if (isNav) {
-            window.phCapture('nav_click', { label, target_url: url || href });
+            window.phCapture('nav_click', { label, target_url: cleanTargetUrl(url || href) });
             return;
         }
 
         if (isMailto || isTel) {
-            window.phCapture('contact_click', { channel: isMailto ? 'email' : 'phone', target: url || href });
+            const eventName = normalizedEventName('contact_click', url || href);
+            window.phCapture(eventName, clickProps(eventName, url || href, label, { channel: isMailto ? 'email' : 'phone' }, eventName === 'contact_click' ? null : 'contact_click'));
             return;
         }
 
         if (isDownload) {
-            window.phCapture('file_download', { label, target_url: url || href });
+            window.phCapture('file_download_click', clickProps('file_download_click', url || href, label));
+            return;
+        }
+
+        if (isEventDetails(url || href)) {
+            window.phCapture('event_details_click', clickProps('event_details_click', url || href, label));
             return;
         }
 
         if (isExternal) {
-            window.phCapture('outbound_click', { label, target_url: url });
+            const eventName = normalizedEventName('outbound_click', url || href);
+            window.phCapture(eventName, clickProps(eventName, url || href, label, {}, eventName === 'outbound_click' ? null : 'outbound_click'));
             return;
         }
     });
