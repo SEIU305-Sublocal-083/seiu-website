@@ -1,5 +1,5 @@
 (function () {
-    const DATA_URL = '/data/current-action.json?v=2026-07-09';
+    const DATA_URL = '/data/current-action.json?v=2026-07-09-email-hotfix';
 
     const safeText = (value) => String(value || '');
 
@@ -41,6 +41,51 @@
         if (analytics.metadata) element.dataset.phMetadata = JSON.stringify(analytics.metadata);
     };
 
+    const randomIndex = (count) => {
+        if (count <= 1) return 0;
+        if (window.crypto?.getRandomValues) {
+            const value = new Uint32Array(1);
+            window.crypto.getRandomValues(value);
+            return value[0] % count;
+        }
+        return Math.floor(Math.random() * count);
+    };
+
+    const mailtoFor = (emailAction, subject) => {
+        const recipient = safeText(emailAction?.recipient);
+        if (!recipient) return '#';
+        const params = new URLSearchParams();
+        if (subject) params.set('subject', subject);
+        if (emailAction?.body) params.set('body', emailAction.body);
+        return `mailto:${recipient}?${params.toString()}`;
+    };
+
+    const configureEmailActions = (payload) => {
+        document.querySelectorAll('[data-email-action]').forEach(element => {
+            const emailAction = payload?.emailActions?.[element.dataset.emailAction];
+            const subjects = emailAction?.subjects || [];
+            if (!emailAction?.recipient || !subjects.length) return;
+
+            const subjectIndex = randomIndex(subjects.length);
+            element.setAttribute('href', mailtoFor(emailAction, subjects[subjectIndex]));
+            element.removeAttribute('target');
+            element.removeAttribute('rel');
+            element.dataset.emailSubjectVariant = String(subjectIndex + 1);
+
+            if (element.dataset.phMetadata) {
+                try {
+                    const metadata = JSON.parse(element.dataset.phMetadata);
+                    element.dataset.phMetadata = JSON.stringify({
+                        ...metadata,
+                        email_subject_variant: subjectIndex + 1
+                    });
+                } catch (error) {
+                    // Leave malformed analytics metadata untouched.
+                }
+            }
+        });
+    };
+
     const setCta = (selector, cta) => {
         document.querySelectorAll(selector).forEach(element => {
             if (!cta) {
@@ -52,6 +97,13 @@
             element.textContent = safeText(cta.label);
             element.setAttribute('href', safeText(cta.href || '#'));
             applyAnalytics(element, cta);
+
+            if (cta.emailAction) {
+                element.dataset.emailAction = safeText(cta.emailAction);
+            } else {
+                delete element.dataset.emailAction;
+                delete element.dataset.emailSubjectVariant;
+            }
 
             if (/^https?:\/\//i.test(cta.href || '')) {
                 element.setAttribute('target', '_blank');
@@ -141,6 +193,7 @@
             const payload = await response.json();
             renderHomepage(getAction(payload, 'homepageHero'));
             renderActionPage(chooseActionForPage(payload));
+            configureEmailActions(payload);
         } catch (error) {
             if (window.location.search.includes('action_debug=1')) {
                 console.warn('[current-action]', error);
