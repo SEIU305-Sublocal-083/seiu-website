@@ -70,7 +70,7 @@
       "ctas": [
         {
           "id": "primary",
-          "label": "Email Your President",
+          "label": "Email Our President",
           "href": "mailto:pres.office@oregonstate.edu",
           "emailAction": "osu-president",
           "style": "primary",
@@ -116,7 +116,7 @@
       "actionPage": {
         "headline": "Tell university presidents: HELL, NO!",
         "body": "University management's latest offer would provide no COLAs for four years, make it take 19 years to advance from step 1 to step 10, and roll back layoff and contracting-out rights. Classified staff keep campuses clean, safe, running, and serving students. Our message is clear: respect our work and pay enough to live on.",
-        "nextStep": "Email your president, then ask a coworker to join you."
+        "nextStep": "Email our president, then ask a coworker to join you."
       }
     },
     "membership-july-16": {
