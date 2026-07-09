@@ -54,10 +54,10 @@
     const mailtoFor = (emailAction, subject) => {
         const recipient = safeText(emailAction?.recipient);
         if (!recipient) return '#';
-        const params = new URLSearchParams();
-        if (subject) params.set('subject', subject);
-        if (emailAction?.body) params.set('body', emailAction.body);
-        return `mailto:${recipient}?${params.toString()}`;
+        const params = [];
+        if (subject) params.push(`subject=${encodeURIComponent(subject)}`);
+        if (emailAction?.body) params.push(`body=${encodeURIComponent(emailAction.body)}`);
+        return `mailto:${recipient}?${params.join('&')}`;
     };
 
     const configureEmailActions = (payload) => {
