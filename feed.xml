@@ -5,7 +5,7 @@
     <link>https://www.local083.org</link>
     <description>Combined news and event updates from SEIU Local 503 at Oregon State University.</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 09 Jul 2026 22:15:35 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 10 Jul 2026 16:28:33 GMT</lastBuildDate>
     <atom:link href="https://www.local083.org/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>[Event] CAT Meeting</title>
@@ -270,6 +270,16 @@
       <description>Come to our Contact Action Team Meeting to get information to spread in your area! | Date: 2026-02-05 | Time: 6:30 PM | Location: Online via Zoom</description>
       <pubDate>Thu, 05 Feb 2026 00:00:00 GMT</pubDate>
       <category>Zoom Meeting</category>
+    </item>
+    <item>
+      <title>[News] Confirmed 2026 higher education bargaining dates</title>
+      <link>https://www.local083.org/news/2026-02-04-upcoming-bargaining-events.html</link>
+      <guid isPermaLink="false">https://www.local083.org/news/2026-02-04-upcoming-bargaining-events.html#news</guid>
+      <description>Confirmed 2026 bargaining dates and key member actions for higher education bargaining.</description>
+      <pubDate>Wed, 04 Feb 2026 00:00:00 GMT</pubDate>
+      <category>Bargaining</category>
+      <category>Events</category>
+      <category>2026 Bargaining</category>
     </item>
     <item>
       <title>[News] Show Up on Zoom: Use a 2026 Bargaining Background</title>
