@@ -281,10 +281,10 @@
                     </summary>
                     <div class="mt-4 space-y-4">
                         <div>
-                            <label for="current-pay" class="block text-sm font-medium text-text-secondary mb-2">Enter your current hourly or monthly pay:</label>
+                            <label for="current-pay" class="block text-sm font-medium text-text-secondary mb-2">Enter your current hourly or monthly pay: <span class="text-red-500" aria-hidden="true">*</span></label>
                             <div class="relative">
                                 <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-text-secondary" aria-hidden="true">$</span>
-                                <input type="number" id="current-pay" name="current-pay" class="pl-7 pr-4 py-2 w-full max-w-xs border bg-white border-border-color rounded-md shadow-sm focus:ring-brand-purple focus:border-brand-purple" placeholder="e.g., 20.50" min="0" step="0.01" inputmode="decimal">
+                                <input type="number" id="current-pay" name="current-pay" class="pl-7 pr-4 py-2 w-full max-w-xs border bg-white border-border-color rounded-md shadow-sm focus:ring-brand-purple focus:border-brand-purple" placeholder="e.g., 20.50" min="0" step="0.01" inputmode="decimal" required aria-required="true">
                             </div>
                         </div>
                         <div class="space-y-2 text-base">
