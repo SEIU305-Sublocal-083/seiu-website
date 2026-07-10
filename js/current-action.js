@@ -3,6 +3,16 @@
 
     const safeText = (value) => String(value || '');
 
+
+    const sanitizeUrl = (url) => {
+        if (!url) return '#';
+        const str = String(url).trim();
+        const lower = str.toLowerCase();
+        if (lower.startsWith('javascript:') || lower.startsWith('data:')) return '#';
+        return str;
+    };
+
+
     const isVisible = (action, now = new Date()) => {
         const visibility = action && action.visibility;
         if (!visibility) return true;
@@ -95,7 +105,7 @@
 
             element.classList.remove('hidden');
             element.textContent = safeText(cta.label);
-            element.setAttribute('href', safeText(cta.href || '#'));
+            element.setAttribute('href', safeText(sanitizeUrl(cta.href || '#')));
             applyAnalytics(element, cta);
 
             if (cta.emailAction) {

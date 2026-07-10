@@ -70,3 +70,8 @@
 **Vulnerability:** User-controlled data (the `dateStr` derived from user clicks on calendar elements, stored in `dataset.date`) was interpolated directly into CSS selectors within `document.querySelector` calls in `events.html`'s `highlightEvent` function.
 **Learning:** Constructing CSS selectors using unescaped user input can lead to Selector Injection. This allows attackers to potentially inject arbitrary selectors or trigger Client-Side Denial of Service (DoS) by crafting complex inputs.
 **Prevention:** Always sanitize and escape user-controlled data using `CSS.escape()` before interpolating it into a CSS selector string.
+
+## 2026-07-09 - [DOM-based XSS via javascript: URIs in current-action.js]
+**Vulnerability:** User-controlled URLs (like `cta.href`) were interpolated into the `href` attribute of CTA buttons in `js/current-action.js` via `element.setAttribute('href', safeText(cta.href || '#'))`. This does not sanitize the URL scheme, allowing `javascript:` or `data:` URIs to execute if the data source contains malicious links.
+**Learning:** We continue to see the pattern where strings injected into critical attributes like `href` or `src` via JavaScript DOM manipulation (`setAttribute` or `.innerHTML`) are susceptible to XSS if not explicitly sanitized. Simply ensuring it's a string via `safeText` is insufficient.
+**Prevention:** Always ensure a `sanitizeUrl` function is defined and applied to all user-controlled URLs before they are passed into `setAttribute('href', ...)` or interpolated into HTML string templates. I added the sanitization directly into `setCta` in `current-action.js`.
