@@ -18,7 +18,7 @@
         "Protect OSU staff rights",
         "We reject 19 years to the top step",
         "Higher education works because staff work",
-        "OSU should not balance budgets on staff backs",
+        "OSU should not balance budgets on workers’ backs",
         "Pay OSU classified staff enough to live on",
         "Protect layoff and contracting-out rights",
         "OSU staff need real raises and real protections",
@@ -70,7 +70,7 @@
       "ctas": [
         {
           "id": "primary",
-          "label": "Email Our President",
+          "label": "Email OSU President Murthy",
           "href": "mailto:pres.office@oregonstate.edu",
           "emailAction": "osu-president",
           "style": "primary",
@@ -115,7 +115,7 @@
       ],
       "actionPage": {
         "headline": "Take action with our union: Tell OSU HELL NO!",
-        "body": "Our collective power comes from members showing up. Management's latest offer includes no COLAs for four years, a 19-year path from step 1 to step 10, and proposed rollbacks to our layoff and contracting-out rights. Email our president today and demand a contract that respects our work. Every email shows OSU that members and supporters are paying attention.",
+        "body": "Our collective power comes from members showing up. Management's latest offer includes no COLAs for four years, a 19-year path from step 1 to step 10, and proposed rollbacks to our layoff and contracting-out rights. Email OSU President Jayathi Murthy today and demand a contract that respects our work. Every email shows OSU that members and supporters are paying attention.",
         "nextStep": "Send your email now, then ask one coworker to stand with us today."
       }
     },
