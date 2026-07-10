@@ -501,11 +501,11 @@
     "date": "2025-09-03",
     "time": "11:45 AM - 12:15 PM",
     "title": "New Employee Orientation",
-    "description": "Welcome new members! Learn about your union, your rights, and how to get involved.",
-    "type": "In Person",
+    "description": "New OSU employees can attend this Zoom orientation on paid time to learn about our union, workplace rights and member resources.",
+    "type": "Orientation",
     "url": "/events/2025-09-03-New-Employee-Orientation.html",
     "featured": false,
-    "location_detail": "OSU Campus (Room shared in orientation details)"
+    "location_detail": "Online via Zoom"
   },
   {
     "date": "2025-08-28",
