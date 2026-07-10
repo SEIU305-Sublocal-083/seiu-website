@@ -5,7 +5,7 @@
     <link>https://www.local083.org</link>
     <description>Combined news and event updates from SEIU Local 503 at Oregon State University.</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 10 Jul 2026 17:17:27 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 10 Jul 2026 17:39:53 GMT</lastBuildDate>
     <atom:link href="https://www.local083.org/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>[Event] CAT Meeting</title>
@@ -19,9 +19,19 @@
       <title>[Event] General Membership Meeting</title>
       <link>https://www.local083.org/events/2026-07-16-General-Membership-Meeting.html</link>
       <guid isPermaLink="false">event:2026-07-16:General Membership Meeting:combined</guid>
-      <description>Join us Thursday, July 16 at noon in Memorial Union room 215. Lunch is provided, and we will talk through the new phase of bargaining, member readiness, and how higher ed works because we work. Zoom details are coming shortly. | Date: 2026-07-16 | Time: 12:00 PM - 1:00 PM | Location: Memorial Union room 215</description>
+      <description>Join us Thursday, July 16, at noon in Memorial Union room 215. The Memorial Union double-booked our usual MU 211 room and found this alternate space. TOGO'S sandwiches will be provided. We will talk through the new phase of bargaining, member readiness, and how higher ed works because we work. Zoom details are coming shortly. | Date: 2026-07-16 | Time: 12:00 PM - 1:00 PM | Location: Memorial Union room 215</description>
       <pubDate>Thu, 16 Jul 2026 00:00:00 GMT</pubDate>
       <category>Membership Meeting</category>
+    </item>
+    <item>
+      <title>[News] July 16 membership meeting moved to MU 215</title>
+      <link>https://www.local083.org/news/2026-07-10-membership-meeting-room-change.html</link>
+      <guid isPermaLink="false">https://www.local083.org/news/2026-07-10-membership-meeting-room-change.html#news</guid>
+      <description>The July 16 Local 083 membership meeting has moved from MU 211 to MU 215 after a double-booking. Join us at noon for TOGO'S sandwiches.</description>
+      <pubDate>Fri, 10 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Events</category>
+      <category>Membership Meetings</category>
+      <category>Update</category>
     </item>
     <item>
       <title>[News] Our union bargaining update: 0% COLAs and a 19-year step path</title>
