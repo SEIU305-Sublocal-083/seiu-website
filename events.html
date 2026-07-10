@@ -529,17 +529,21 @@
                 const monthYearFormatter = new Intl.DateTimeFormat('default', { month: 'long', year: 'numeric' });
 
                 const groupedByMonth = events.reduce((acc, event) => {
-                    event.parsedDate = new Date(event.date.replace(/-/g, '/'));
-                    const monthYear = monthYearFormatter.format(event.parsedDate);
-                    if (!acc[monthYear]) acc[monthYear] = [];
-                    acc[monthYear].push(event);
+                    // ⚡ Bolt: Extract YYYY-MM directly from string to avoid parsing new Date() per event
+                    const yearMonth = event.date.substring(0, 7);
+                    if (!acc[yearMonth]) acc[yearMonth] = [];
+                    acc[yearMonth].push(event);
                     return acc;
                 }, {});
 
-                pastEventsContainer.innerHTML = Object.entries(groupedByMonth).map(([monthYear, monthEvents]) => {
+                pastEventsContainer.innerHTML = Object.entries(groupedByMonth).map(([yearMonth, monthEvents]) => {
+                    // ⚡ Bolt: Format the month group label once per group instead of once per event
+                    const monthYearDate = new Date(yearMonth.replace('-', '/') + '/01');
+                    const monthYear = monthYearFormatter.format(monthYearDate);
+
                     const eventListItems = monthEvents.map(event => `
                         <li class="py-2">
-                            <strong>${event.parsedDate.getDate()}:</strong> ${escapeHTML(event.title)}
+                            <strong>${parseInt(event.date.substring(8, 10), 10)}:</strong> ${escapeHTML(event.title)}
                             ${event.url !== '#' ? `<a href="${escapeHTML(sanitizeUrl(event.url))}" class="font-semibold text-brand-purple hover:underline ml-2" data-ph-event="event_details_click" data-ph-label="${escapeHTML(event.title)}" data-ph-metadata='{"section":"past","event_id":"${escapeHTML(sanitizeUrl(event.url).split('/').pop().replace(/\.html$/, '').toLowerCase())}"}'>View Details</a>` : ''}
                         </li>
                     `).join('');
