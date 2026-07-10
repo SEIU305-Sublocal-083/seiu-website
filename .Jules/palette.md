@@ -21,3 +21,6 @@ Critical UX/accessibility learnings only.
 ## 2026-06-11 - [Add empty state for initial search screen]
 **Learning:** Initial search screens often present users with a blank slate that can feel uninviting or confusing. A plain text prompt like "Type to search" lacks visual hierarchy and polish.
 **Action:** Replace plain text search prompts with a visually distinct empty state component. This should include a relevant icon (like a magnifying glass or search symbol), a clear, bold heading ("Search the site"), and supportive descriptive text guiding the user on what they can search for. This reduces cognitive load and makes the search interface feel more approachable and professional.
+## 2026-05-18 - [Add required indicators to critical inputs]
+**Learning:** Users and screen readers need clear indicators for mandatory fields, even outside of traditional <form> submissions (e.g., calculator inputs). Relying on implicit requirement degrades UX and accessibility.
+**Action:** Always add `required` and `aria-required="true"` attributes to essential <input> elements, and pair them with a visual indicator (like a red * with `aria-hidden="true"`) in the associated <label>.
