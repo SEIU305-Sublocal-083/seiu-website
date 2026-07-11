@@ -75,3 +75,8 @@
 **Vulnerability:** Instances of target="_blank" were found missing the rel="noreferrer" attribute for external links, leaving the application susceptible to referral information leakage via the Referer header.
 **Learning:** Using target="_blank" for external cross-origin links without the rel="noreferrer" attribute causes the site to leak the referring page's URL to the external, potentially untrusted site.
 **Prevention:** Ensured rel="noopener noreferrer" is added to all user-facing external anchor tags that open in a new tab.
+
+## 2026-07-21 - [DOM-based XSS via javascript: URIs in current-action.js]
+**Vulnerability:** User-controlled URLs from the dynamic current action data payload (`cta.href`) were injected into `href` attributes via `setAttribute` without sanitizing the URL scheme in `js/current-action.js`.
+**Learning:** External data payloads (even when originating from internal CMS sources) can contain `javascript:` URIs. Using standard HTML escaping or default string manipulation (`safeText`) does not prevent execution of these URIs when injected into `href` attributes. Client-side rendering functions must implement protocol sanitization.
+**Prevention:** Ensured a robust `sanitizeUrl` function is defined and applied to all `cta.href` insertions to block `javascript:` and `data:` schemes before they are set as `href` attributes.
