@@ -24,3 +24,6 @@ Critical UX/accessibility learnings only.
 ## 2026-05-18 - [Add required indicators to critical inputs]
 **Learning:** Users and screen readers need clear indicators for mandatory fields, even outside of traditional <form> submissions (e.g., calculator inputs). Relying on implicit requirement degrades UX and accessibility.
 **Action:** Always add `required` and `aria-required="true"` attributes to essential <input> elements, and pair them with a visual indicator (like a red * with `aria-hidden="true"`) in the associated <label>.
+## 2026-07-12 - [Add `role="status"` to dynamically rendered empty states]
+**Learning:** When JavaScript dynamically replaces content with an empty state (e.g., "No results found"), screen readers may not automatically announce this change to the user, leaving them unaware that their search or filter action completed but yielded nothing.
+**Action:** Always add `role="status"` to the container elements of dynamically rendered empty states (like zero search results or empty lists) to ensure the change is announced as a polite live region by assistive technologies.
