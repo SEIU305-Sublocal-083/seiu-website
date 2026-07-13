@@ -33,6 +33,10 @@ class SyncSiteShellTests(unittest.TestCase):
         self.assertIn('<link rel="stylesheet" href="/styles/tailwind.css">', updated)
         self.assertIn('<link rel="stylesheet" href="/styles/site-shell.css">', updated)
         self.assertIn('<a href="/news.html" class="text-brand-purple font-bold" aria-current="page">News</a>', updated)
+        self.assertIn(
+            '<a href="/news.html" class="block text-center py-3 px-6 text-lg text-brand-purple bg-brand-purple-light font-bold" aria-current="page">News</a>',
+            updated,
+        )
         self.assertIn("<article><header><h1>Article title</h1></header><p>Body copy</p></article>", updated)
         self.assertIn('href="/privacy.html#analytics-controls">Tracking settings</a>', updated)
         self.assertIn("data-site-shell-menu-state-script", updated)
