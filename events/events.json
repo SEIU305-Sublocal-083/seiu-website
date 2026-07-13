@@ -1,9 +1,11 @@
-[
+{
+  "asOf": "2026-07-12",
+  "events": [
   {
     "date": "2025-10-22",
     "time": "12:00 PM - 1:00 PM",
-    "title": "Contact Action Team (CAT) Meeting",
-    "description": "Our SEIU Local 083 Contact Action Team meeting ran on Zoom from 12:00–1:00 PM. We discussed what was happening in bargaining and how we communicated with coworkers across all campuses to support our bargaining team.",
+    "title": "Contract Action Team (CAT) Meeting",
+    "description": "Our SEIU Local 083 Contract Action Team meeting ran on Zoom from noon to 1 p.m. We discussed what was happening in bargaining and how we communicated with coworkers across all campuses to support our bargaining team.",
     "type": "Zoom Meeting",
     "url": "/events/2025-10-22-CAT-Meeting.html",
     "featured": true,
@@ -199,7 +201,7 @@
     "date": "2026-07-16",
     "time": "12:00 PM - 1:00 PM",
     "title": "General Membership Meeting",
-    "description": "Join us Thursday, July 16 at noon in Memorial Union room 215. Lunch is provided, and we will talk through the new phase of bargaining, member readiness, and how higher ed works because we work. Zoom details are coming shortly.",
+    "description": "Join us Thursday, July 16, at noon in Memorial Union room 215. The Memorial Union double-booked our usual MU 211 room and found this alternate space. TOGO'S sandwiches will be provided. We will talk through the new phase of bargaining, member readiness, and how higher ed works because we work. Zoom details are coming shortly.",
     "type": "Membership Meeting",
     "url": "/events/2026-07-16-General-Membership-Meeting.html",
     "featured": true,
@@ -459,9 +461,9 @@
   {
     "date": "2025-09-13",
     "time": "8:00 AM - 4:00 PM",
-    "title": "Bargaining Confrence",
+    "title": "Bargaining Conference",
     "description": "Volunteer with us at our union booth! We'll be connecting with colleagues and building community at this campus-wide event.",
-    "type": "Confrence",
+    "type": "Conference",
     "url": "/events/2025-09-13-Bargaining-Conference.html",
     "featured": false,
     "location_detail": "Roth's Event Center"
@@ -526,25 +528,6 @@
     "url": "/events/2025-08-21-Membership-Meeting.html",
     "featured": false,
     "location_detail": "Hybrid (Zoom and in-person)"
-  },
-  {
-    "date": "2025-08-14",
-    "time": "Time not posted",
-    "title": "Sub Local Leadership Meeting",
-    "description": "A meeting with the leadership of our Sub Local.",
-    "type": "Meeting",
-    "url": "#",
-    "featured": false,
-    "location_detail": "Location not posted"
-  },
-  {
-    "date": "2025-08-06",
-    "time": "Time not posted",
-    "title": "CAT Meeting",
-    "description": "A C.A.T. meeting focusing on current campaign events.",
-    "type": "Meeting",
-    "url": "#",
-    "featured": false,
-    "location_detail": "Location not posted"
   }
-]
+  ]
+}

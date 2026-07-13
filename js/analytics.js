@@ -1,10 +1,16 @@
 (function () {
+    // Some static pages or content-management includes can accidentally load this
+    // file twice. Keep page views and delegated click events single-fire.
+    if (window.__local083AnalyticsLoaded) return;
+    window.__local083AnalyticsLoaded = true;
+
     const POSTHOG_KEY = 'phc_777ihTsY1YRlyHhK42ADhcXGvS5rUFr5Zz8TfJvjOtf';
     const API_HOST = 'https://us.i.posthog.com';
     const debug = window.location.search.includes('ph_debug=1');
 
     const dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack || '').toString().toLowerCase();
     const isDNT = dnt === '1' || dnt === 'yes';
+    const isGPC = navigator.globalPrivacyControl === true;
     const isOptOut = localStorage.getItem('ph_opt_out') === '1';
 
     const log = (...args) => {
@@ -20,6 +26,10 @@
     };
 
     window.phOptIn = function () {
+        if (isDNT || isGPC) {
+            alert('Your browser privacy signal keeps analytics disabled. Change that browser setting first if you want to opt in.');
+            return;
+        }
         localStorage.removeItem('ph_opt_out');
         if (window.posthog?.opt_in_capturing) {
             window.posthog.opt_in_capturing();
@@ -29,8 +39,8 @@
     };
 
     // Respect Do Not Track or manual opt-out
-    if (isDNT || isOptOut) {
-        log('PostHog disabled', { isDNT, isOptOut });
+    if (isDNT || isGPC || isOptOut) {
+        log('PostHog disabled', { isDNT, isGPC, isOptOut });
         window.phCapture = () => {};
         return;
     }
@@ -45,14 +55,12 @@
 
     posthog.init(POSTHOG_KEY, {
         api_host: API_HOST,
-        autocapture: true,
-        capture_pageview: true,
-        capture_pageleave: true,
-        session_recording: {
-            sampling_rate: 0.1,
-            mask_all_inputs: true
-        },
-        disable_session_recording: false
+        autocapture: false,
+        capture_pageview: false,
+        capture_pageleave: false,
+        disable_session_recording: true,
+        person_profiles: 'never',
+        persistence: 'localStorage'
     });
 
     if (debug && typeof posthog.debug === 'function') {
@@ -63,7 +71,9 @@
         const parts = window.location.pathname.split('/').filter(Boolean);
         const site_section = parts[0] || 'home';
         return {
-            page_url: window.location.href,
+            // Search terms and email/action query parameters can be sensitive.
+            // Analytics only needs the path-level location.
+            page_url: `${window.location.origin}${window.location.pathname}`,
             page_title: document.title,
             site_section,
             environment: 'prod'
@@ -76,6 +86,8 @@
         posthog.capture(name, payload);
         log('capture', name, payload);
     };
+
+    window.phCapture('page_view');
 
     const parseMetadata = (raw) => {
         if (!raw) return {};

@@ -1,19 +1,15 @@
-name: Generate RSS Feeds
+name: Publish Scheduled News
 
 on:
-  push:
-    paths:
-      - "news/news.json"
-      - "events/events.json"
-      - "scripts/generate_rss.py"
-      - ".github/workflows/rss-feeds.yml"
+  schedule:
+    - cron: "11 * * * *"
   workflow_dispatch:
 
 permissions:
   contents: write
 
 jobs:
-  build-rss:
+  publish:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -24,17 +20,17 @@ jobs:
         with:
           python-version: "3.x"
 
-      - name: Generate RSS files
-        run: python scripts/generate_rss.py
+      - name: Publish news due in Oregon local time
+        run: python3 scripts/publish_scheduled_news.py
 
-      - name: Commit updated RSS files
+      - name: Commit published content
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add feed.xml news/rss.xml events/rss.xml
+          git add -A -- ':(glob)**/*.html' news/news.json news/rss.xml events/rss.xml feed.xml sitemap.xml robots.txt styles/tailwind.css site-quality-report.md
           if git diff --cached --quiet; then
-            echo "No feed changes to commit."
+            echo "No scheduled news was due."
             exit 0
           fi
-          git commit -m "chore: update RSS feeds"
+          git commit -m "chore: publish scheduled news"
           git push

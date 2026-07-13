@@ -378,15 +378,19 @@ Production pages must include complete metadata and structured data.
 1. Update content index files where applicable:
    - `events/events.json` for events
    - `news/news.json` for news
-2. Regenerate sitemap and update robots entry if needed:
-   - `bash ./generate_sitemap.sh`
-3. Run quality checks:
+2. Rebuild all deterministic static output:
+   - `python3 scripts/build_site.py`
+   - Commit the JSON/content change and its generated HTML, RSS, sitemap, shared-shell and CSS output in the same human commit.
+3. Verify there is no generated-file drift:
+   - `python3 scripts/build_site.py --check`
+   - GitHub Actions runs this same check and fails on stale output; it does not create a follow-up bot commit.
+4. Run quality checks:
    - `python scripts/site_quality_check.py --strict-placeholders`
-4. Confirm RSS automation expectations:
-   - changes to `events/events.json` or `news/news.json` trigger `.github/workflows/rss-feeds.yml` to update:
-     - `events/rss.xml`
-     - `news/rss.xml`
-     - `feed.xml`
+   - `python scripts/accessibility_audit.py`
+   - `python scripts/link_audit.py`
+   - `python scripts/shell_consistency_audit.py`
+5. Scheduled news is the automation exception:
+   - `.github/workflows/publish-scheduled-news.yml` promotes due stories, runs the same build and quality checks, and commits the status change with all generated outputs together.
 
 ## 10) Content Lifecycle
 

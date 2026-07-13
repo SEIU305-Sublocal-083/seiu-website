@@ -2,24 +2,26 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-    <!-- 
-      SEARCH ENGINE REDIRECT: 
-      This is the most important line. 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, follow">
+    <!--
+      SEARCH ENGINE REDIRECT:
+      This is the most important line.
       - "content="0;..." means the redirect happens immediately (0 seconds).
       - "url=..." is the destination. CHANGE THIS to the path of your new page.
     -->
     <meta http-equiv="refresh" content="0; url=/events/2025-09-09-Executive-Team-Meeting.html">
 
-    <!-- 
-      CANONICAL LINK: 
-      This tells search engines like Google that the new page is the "official" version. 
+    <!--
+      CANONICAL LINK:
+      This tells search engines like Google that the new page is the "official" version.
       This is very important for SEO. CHANGE THIS to the full URL of your new page.
     -->
 <title>Page Has Moved</title>
-    <style>html{visibility:hidden;}html.tw-ready{visibility:visible;}</style>
-    <script src="https://cdn.tailwindcss.com" onload="document.documentElement.classList.add('tw-ready')"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Lora:wght@400;500;700&display=swap" rel="stylesheet">
-    <style>
+    <link rel="stylesheet" href="/styles/tailwind.css">
+    <link rel="stylesheet" href="/styles/fonts.css">
+        <link rel="stylesheet" href="/styles/site-shell.css">
+<style>
         body { font-family: 'Inter', sans-serif; }
         h1 { font-family: 'Lora', serif; }
     </style>
@@ -75,14 +77,125 @@
     <!-- SEO META END -->
     <script src="/js/analytics.js" defer></script>
 </head>
-<body class="bg-gray-100 flex items-center justify-center h-screen">
+<body class="bg-gray-100 flex items-center justify-center h-screen" data-site-shell-added>
     <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:bg-white focus:text-brand-purple-dark focus:px-4 focus:py-2 focus:rounded focus:shadow-lg">Skip to content</a>
-<div class="text-center p-8 bg-white shadow-lg rounded-lg" id="main-content">
+
+    <!-- SITE SHELL: HEADER START -->
+    <header class="bg-white/80 backdrop-blur-lg border-b border-border-color sticky top-0 z-50" data-site-shell-header>
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center" aria-label="Primary navigation">
+            <a href="/index.html" class="flex items-center space-x-2">
+                <span class="text-2xl font-bold text-brand-purple-dark">SEIU 503</span>
+                <span class="text-lg text-text-secondary hidden md:block">| Oregon State University</span>
+            </a>
+            <div class="hidden lg:flex space-x-8">
+                <a href="/about.html" class="text-text-secondary hover:text-brand-purple transition-colors">About</a>
+                <a href="/events.html" class="text-brand-purple font-bold" aria-current="page">Events</a>
+                <a href="/news.html" class="text-text-secondary hover:text-brand-purple transition-colors">News</a>
+                <a href="/resources.html" class="text-text-secondary hover:text-brand-purple transition-colors">Resources &amp; Rights</a>
+                <a href="/leadership.html" class="text-text-secondary hover:text-brand-purple transition-colors">Leadership</a>
+                <a href="/contact.html" class="text-text-secondary hover:text-brand-purple transition-colors">Contact</a>
+            </div>
+            <button type="button" id="mobile-menu-button" class="lg:hidden text-text-secondary hover:text-brand-purple" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false" onclick="siteShellToggleMenu(this)">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+        <div id="mobile-menu" class="hidden lg:hidden absolute top-full left-0 w-full bg-white border-t border-border-color shadow-lg" role="navigation" aria-label="Mobile navigation">
+            <a href="/about.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">About</a>
+            <a href="/events.html" class="block text-center py-3 px-6 text-lg text-brand-purple bg-brand-purple-light font-semibold" aria-current="page">Events</a>
+            <a href="/news.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">News</a>
+            <a href="/resources.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Resources &amp; Rights</a>
+            <a href="/leadership.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Leadership</a>
+            <a href="/contact.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Contact</a>
+        </div>
+    </header>
+    <script data-site-shell-menu-state-script>
+        (() => {
+            const button = document.getElementById('mobile-menu-button');
+            const menu = document.getElementById('mobile-menu');
+            if (!button || !menu) return;
+            const canonicalIcon = button.innerHTML;
+
+            window.siteShellSyncMenuState = () => {
+                const isOpen = menu.classList.contains('is-open') || !menu.classList.contains('hidden');
+                button.setAttribute('aria-expanded', String(isOpen));
+                button.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+                if (button.innerHTML !== canonicalIcon) button.innerHTML = canonicalIcon;
+            };
+
+            new MutationObserver(window.siteShellSyncMenuState).observe(menu, {
+                attributes: true,
+                attributeFilter: ['class']
+            });
+            document.addEventListener('keydown', (event) => {
+                if (event.key !== 'Escape' || button.getAttribute('aria-expanded') !== 'true') return;
+                menu.classList.add('hidden');
+                menu.classList.remove('is-open');
+                window.siteShellSyncMenuState();
+                button.focus();
+            });
+            window.siteShellSyncMenuState();
+        })();
+
+        function siteShellToggleMenu(button) {
+            const menu = document.getElementById('mobile-menu');
+            if (!menu) return;
+            menu.classList.toggle('hidden');
+            if (window.siteShellSyncMenuState) window.siteShellSyncMenuState();
+        }
+    </script>
+<!-- SITE SHELL: HEADER END -->
+
+    <main class="text-center p-8 bg-white shadow-lg rounded-lg" id="main-content">
         <h1 class="text-3xl font-bold text-gray-800 mb-4">This event has been rescheduled.</h1>
         <p class="text-gray-600">You are being automatically redirected to the new page.</p>
         <p class="mt-4 text-sm text-gray-500">
             If you are not redirected, <a href="/events/2025-09-09-Executive-Team-Meeting.html" class="text-purple-600 hover:underline">view the Sept. 9 Executive Team Meeting</a>.
         </p>
-    </div>
+    </main>
+
+    <!-- SITE SHELL: FOOTER START -->
+    <footer class="bg-gray-100 pt-12 pb-8 text-text-primary border-t border-gray-200" data-site-shell-footer>
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="md:col-span-2 lg:col-span-1">
+                    <div class="flex items-center mb-4">
+                        <img src="/images/logo.png" alt="SEIU 503 logo" class="h-12 w-12 mr-3 bg-white p-1 rounded" width="48" height="48" loading="lazy" decoding="async">
+                        <div><h3 class="text-xl font-bold">SEIU Local 503</h3><p class="text-text-secondary text-sm">Oregon State University</p></div>
+                    </div>
+                    <p class="text-text-secondary leading-relaxed">Our member-led union represents classified staff at Oregon State University. Together, we bargain fair contracts, defend our rights and build power at work.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase">Quick links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="/about.html" class="text-text-secondary hover:text-brand-purple transition-colors">About our union</a></li>
+                        <li><a href="/events.html" class="text-text-secondary hover:text-brand-purple transition-colors">Events</a></li>
+                        <li><a href="/news.html" class="text-text-secondary hover:text-brand-purple transition-colors">News</a></li>
+                        <li><a href="/leadership.html" class="text-text-secondary hover:text-brand-purple transition-colors">Leadership</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase"><a href="/resources.html" class="hover:text-brand-purple transition-colors">Resources</a></h4>
+                    <ul class="space-y-3">
+                        <li><a href="/resources.html" class="text-text-secondary hover:text-brand-purple transition-colors">Resources &amp; Rights</a></li>
+                        <li><a href="/resources/seiu_cba_2022-2026.pdf" class="text-text-secondary hover:text-brand-purple transition-colors">Our Contract (PDF)</a></li>
+                        <li><a href="/resources/stewards.html" class="text-text-secondary hover:text-brand-purple transition-colors">Find a Steward</a></li>
+                        <li><a href="/resources/weingarten-rights.html" class="text-text-secondary hover:text-brand-purple transition-colors">Weingarten Rights</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase"><a href="/contact.html" class="hover:text-brand-purple transition-colors">Contact us</a></h4>
+                    <ul class="space-y-3">
+                        <li><a href="mailto:083execteam@seiu503.org" class="text-text-secondary hover:text-brand-purple transition-colors break-all">083execteam@seiu503.org</a></li>
+                        <li><a href="mailto:083stewards@seiu503.org" class="text-text-secondary hover:text-brand-purple transition-colors break-all">083stewards@seiu503.org</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-10 pt-8 border-t border-gray-300 text-center space-y-2">
+                <p class="text-text-secondary text-sm">&copy; 2026 SEIU Local 503, Local 083. All rights reserved.</p>
+                <p class="text-text-secondary text-xs"><a class="underline hover:text-brand-purple" href="/privacy.html#analytics-controls">Tracking settings</a><span aria-hidden="true"> · </span><a class="underline hover:text-brand-purple" href="/privacy.html">Privacy notice</a></p>
+            </div>
+        </div>
+    </footer>
+<!-- SITE SHELL: FOOTER END -->
 </body>
 </html>

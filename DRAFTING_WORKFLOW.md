@@ -44,22 +44,32 @@ scripts/promote_page.sh test-pages/my-draft.html events 2026-04-12-rally.html
 1. If publishing an event page, update `events/events.json`.
 2. If publishing a news page, update `news/news.json`.
 3. If event has calendar support, add/update corresponding file in `events/ical/` and reference it.
+4. Treat the JSON and generated listings as one change: the source data and rebuilt static files belong in the same commit.
 
 ## Phase 5: Technical Publish Tasks
 Run from repo root:
 
 ```bash
-bash ./generate_sitemap.sh
+python3 scripts/build_site.py
+python3 scripts/build_site.py --check
 python3 scripts/site_quality_check.py --strict-placeholders
+python3 scripts/accessibility_audit.py
+python3 scripts/link_audit.py
+python3 scripts/shell_consistency_audit.py
 ```
 
 Then confirm:
-1. `sitemap.xml` includes the production page and excludes `test-pages/`.
-2. `robots.txt` includes `Sitemap: https://www.local083.org/sitemap.xml`.
-3. If `events/events.json` or `news/news.json` changed, RSS workflow will update:
+1. The build completed and `--check` reports no generated-file drift.
+2. `sitemap.xml` includes the production page and excludes `test-pages/`.
+3. `robots.txt` includes `Sitemap: https://www.local083.org/sitemap.xml`.
+4. If `events/events.json` or `news/news.json` changed, commit its generated output in the same commit:
+   - `index.html`, `events.html`, and/or `news.html`
    - `events/rss.xml`
    - `news/rss.xml`
    - `feed.xml`
+5. If public page paths changed, also commit `sitemap.xml` and `robots.txt`. If the shared shell or Tailwind classes changed, commit the synchronized HTML pages and `styles/tailwind.css`.
+
+GitHub Actions reruns the build and fails if these committed artifacts are stale. It does not repair drift or create a follow-up commit. Scheduled news publishing is the exception: its workflow promotes due stories, runs the same full build and checks, and commits the source/status change with all generated outputs.
 
 ## Phase 6: Final Verification Checklist
 1. Metadata complete:
@@ -77,10 +87,10 @@ Then confirm:
 
 | Page type | Where to draft | Production path | Required data/index updates | Required checks |
 | --- | --- | --- | --- | --- |
-| Event page | `test-pages/` | `events/*.html` | `events/events.json` (+ `events/ical/*.ics` if used) | `generate_sitemap.sh`, `site_quality_check.py --strict-placeholders`, verify RSS trigger if `events.json` changed |
-| News page | `test-pages/` | `news/*.html` | `news/news.json` | `generate_sitemap.sh`, `site_quality_check.py --strict-placeholders`, verify RSS trigger if `news.json` changed |
-| Resource page | `test-pages/` | `resources/*.html` | none by default | `generate_sitemap.sh`, `site_quality_check.py --strict-placeholders` |
-| Top-level page | `test-pages/` | `/[page].html` | none by default | `generate_sitemap.sh`, `site_quality_check.py --strict-placeholders` |
+| Event page | `test-pages/` | `events/*.html` | `events/events.json` (+ `events/ical/*.ics` if used) | `build_site.py`, `build_site.py --check`, quality audits |
+| News page | `test-pages/` | `news/*.html` | `news/news.json` | `build_site.py`, `build_site.py --check`, quality audits |
+| Resource page | `test-pages/` | `resources/*.html` | none by default | `build_site.py`, `build_site.py --check`, quality audits |
+| Top-level page | `test-pages/` | `/[page].html` | none by default | `build_site.py`, `build_site.py --check`, quality audits |
 
 ## Copy Checklist (Union Voice)
 1. Replace language that others our union.

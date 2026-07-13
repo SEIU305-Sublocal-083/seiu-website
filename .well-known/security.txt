@@ -1,0 +1,4 @@
+Contact: mailto:083execteam@seiu503.org?subject=Website%20security%20report
+Canonical: https://www.local083.org/.well-known/security.txt
+Preferred-Languages: en
+Expires: 2027-07-12T23:59:59Z

@@ -3,6 +3,24 @@
 
     const safeText = (value) => String(value || '');
 
+    const safeHref = (value) => {
+        const href = safeText(value).trim();
+        if (/^\/(?!\/)[A-Za-z0-9._~!$&'()*+,;=:@%/?#-]*$/.test(href)) return href;
+        if (/^mailto:[^\s@?]+@[^\s@?]+(?:\?[^\s]*)?$/i.test(href)) return href;
+        try {
+            const url = new URL(href);
+            const allowedHosts = new Set(['www.local083.org', 'local083.org', 'seiu503signup.org', 'seiu503.tfaforms.net', 'www2.seiu503.org']);
+            return url.protocol === 'https:' && allowedHosts.has(url.hostname) ? url.toString() : '#';
+        } catch (error) {
+            return '#';
+        }
+    };
+
+    const safeImageSrc = (value) => {
+        const src = safeText(value).trim();
+        return /^\/images\/[A-Za-z0-9._~%/-]+$/.test(src) ? src : '';
+    };
+
     const isVisible = (action, now = new Date()) => {
         const visibility = action && action.visibility;
         if (!visibility) return true;
@@ -29,8 +47,9 @@
 
     const setImage = (selector, image) => {
         const element = document.querySelector(selector);
-        if (!element || !image?.src) return;
-        element.setAttribute('src', image.src);
+        const src = safeImageSrc(image?.src);
+        if (!element || !src) return;
+        element.setAttribute('src', src);
         if (image.alt) element.setAttribute('alt', image.alt);
     };
 
@@ -95,7 +114,8 @@
 
             element.classList.remove('hidden');
             element.textContent = safeText(cta.label);
-            element.setAttribute('href', safeText(cta.href || '#'));
+            const href = safeHref(cta.href || '#');
+            element.setAttribute('href', href);
             applyAnalytics(element, cta);
 
             if (cta.emailAction) {
@@ -105,7 +125,7 @@
                 delete element.dataset.emailSubjectVariant;
             }
 
-            if (/^https?:\/\//i.test(cta.href || '')) {
+            if (/^https:\/\//i.test(href)) {
                 element.setAttribute('target', '_blank');
                 element.setAttribute('rel', 'noopener noreferrer');
             } else {

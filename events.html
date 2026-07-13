@@ -1,130 +1,49 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Find upcoming events, meetings, and trainings for SEIU Local 503 at Oregon State University.">
-    <meta name="author" content="SEIU Local 503 at OSU">
-    <title>Events - SEIU Local 503, OSU</title>
+    <meta name="description" content="View upcoming Local 083 membership meetings, Contract Action Team meetings, bargaining actions and community events for OSU classified workers.">
+    <meta name="author" content="SEIU Local 503 at Oregon State University">
+    <title>Events Calendar - SEIU Local 503 at Oregon State University</title>
+        <link rel="stylesheet" href="/styles/site-shell.css">
+<style>html{background:#f8fafc;}</style>
+    <link rel="stylesheet" href="/styles/tailwind.css">
     <link rel="icon" href="/images/logo.png" type="image/png">
     <link rel="apple-touch-icon" href="/images/logo.png">
-    <style>html{visibility:hidden;}html.tw-ready{visibility:visible;}</style>
-    <script src="https://cdn.tailwindcss.com" onload="document.documentElement.classList.add('tw-ready')"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Lora:wght@400;500;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --brand-purple-dark: #4C1D95; /* Deep Purple */
-            --brand-purple: #7C3AED;      /* Vibrant Purple */
-            --brand-purple-light: #EDE9FE; /* Lighter Lavender for high contrast */
-            --brand-dark: #111827;         /* Near-black for high contrast text/bg */
-            --brand-light: #F9FAFB;        /* Off-white Background */
-            --text-primary: #1F2937;
-            --text-secondary: #374151;     /* Darker secondary text for better contrast */
-            --border-color: #D1D5DB;
-        }
-
-        html {
-            scroll-padding-top: 80px; /* Offset for sticky header */
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--brand-light);
-            color: var(--text-primary);
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Lora', serif;
-            color: var(--brand-purple-dark);
-        }
-
-        /* Accessibility: Clear focus indicators for all interactive elements */
-        a:focus-visible, button:focus-visible, details:focus-visible, input:focus-visible, textarea:focus-visible, [tabindex="0"]:focus-visible {
-            outline: 3px solid var(--brand-purple);
-            outline-offset: 2px;
-            border-radius: 4px;
-        }
-        
-        .btn {
-            @apply font-bold py-3 px-6 rounded-lg transition-all duration-300 ease-in-out transform hover:scale-105;
-        }
-        .btn-primary {
-            @apply bg-gradient-to-r from-brand-purple to-violet-600 text-white shadow-md hover:shadow-lg;
-        }
-        .btn-secondary {
-            @apply bg-brand-dark text-white hover:bg-black;
-        }
-        .btn-outline {
-             @apply bg-white text-brand-purple border-2 border-brand-purple hover:bg-brand-purple hover:text-white;
-        }
-        
-        /* Calendar Styles */
-        .calendar-day.has-event {
-            background-color: var(--brand-purple-light);
-            color: var(--brand-purple-dark);
-            font-weight: bold;
-            border-radius: 50%;
-        }
-        .calendar-day.is-today {
-            background-color: var(--brand-purple);
-            color: white;
-            border-radius: 50%;
-        }
-        
-        /* Style for highlighting event card */
-        .highlight-event {
-            transition: all 0.3s ease-in-out;
-            box-shadow: 0 0 0 3px var(--brand-purple);
-            transform: scale(1.01);
-        }
-
-        /* Custom Tailwind config for our CSS variables */
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'brand-purple-dark': 'var(--brand-purple-dark)',
-                        'brand-purple': 'var(--brand-purple)',
-                        'brand-purple-light': 'var(--brand-purple-light)',
-                        'brand-dark': 'var(--brand-dark)',
-                        'brand-light': 'var(--brand-light)',
-                        'text-primary': 'var(--text-primary)',
-                        'text-secondary': 'var(--text-secondary)',
-                        'border-color': 'var(--border-color)',
-                    }
-                }
-            }
-        }
-    </style>
-    <!-- SEO META START -->
+<link rel="stylesheet" href="/styles/fonts.css">
     <link rel="canonical" href="https://www.local083.org/events.html">
     <link rel="alternate" type="application/rss+xml" title="SEIU Local 503 Events RSS" href="https://www.local083.org/events/rss.xml">
-    <link rel="alternate" type="application/rss+xml" title="SEIU Local 503 Combined News and Events RSS" href="https://www.local083.org/feed.xml">
+    <link rel="alternate" type="application/rss+xml" title="SEIU Local 503 News and Events RSS" href="https://www.local083.org/feed.xml">
+
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.local083.org/events.html">
-    <meta property="og:title" content="Events - SEIU Local 503, OSU">
-    <meta property="og:description" content="Find upcoming events, meetings, and trainings for SEIU Local 503 at Oregon State University.">
-    <meta property="og:image" content="https://www.local083.org/images/card.webp">
+    <meta property="og:title" content="Events Calendar - SEIU Local 503 at Oregon State University">
+    <meta property="og:description" content="Find upcoming Local 083 meetings, bargaining actions and community events for OSU classified workers.">
+    <meta property="og:image" content="https://www.local083.org/images/2cef7759-042d-4a05-9496-7eefff439a5e-june-30-rally-speaker-and-crowd.webp">
+    <meta property="og:image:alt" content="Local 083 members and supporters gather at an Oregon State University rally">
+    <meta property="og:image:width" content="1800">
+    <meta property="og:image:height" content="1084">
     <meta property="og:site_name" content="SEIU Local 503 at Oregon State University">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://www.local083.org/events.html">
-    <meta name="twitter:title" content="Events - SEIU Local 503, OSU">
-    <meta name="twitter:description" content="Find upcoming events, meetings, and trainings for SEIU Local 503 at Oregon State University.">
-    <meta name="twitter:image" content="https://www.local083.org/images/card.webp">
+    <meta name="twitter:title" content="Events Calendar - SEIU Local 503 at Oregon State University">
+    <meta name="twitter:description" content="Find upcoming Local 083 meetings, bargaining actions and community events for OSU classified workers.">
+    <meta name="twitter:image" content="https://www.local083.org/images/2cef7759-042d-4a05-9496-7eefff439a5e-june-30-rally-speaker-and-crowd.webp">
+    <meta name="twitter:image:alt" content="Local 083 members and supporters gather at an Oregon State University rally">
+
     <script type="application/ld+json">
-{
+    {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "Organization",
       "@id": "https://www.local083.org#organization",
       "name": "SEIU Local 503 at Oregon State University",
+      "alternateName": "Local 083",
       "url": "https://www.local083.org",
-      "logo": "https://www.local083.org/images/logo.png"
+      "logo": "https://www.local083.org/images/logo.png",
+      "email": "083execteam@seiu503.org"
     },
     {
       "@type": "WebSite",
@@ -136,566 +55,1780 @@
       }
     },
     {
-      "@type": "WebPage",
+      "@type": "CollectionPage",
       "@id": "https://www.local083.org/events.html#webpage",
       "url": "https://www.local083.org/events.html",
-      "name": "Events - SEIU Local 503, OSU",
-      "description": "Find upcoming events, meetings, and trainings for SEIU Local 503 at Oregon State University.",
+      "name": "Events Calendar - SEIU Local 503 at Oregon State University",
+      "description": "Upcoming Local 083 meetings, bargaining actions and community events for OSU classified workers.",
       "isPartOf": {
         "@id": "https://www.local083.org#website"
       },
       "about": {
+        "@id": "https://www.local083.org#organization"
+      },
+      "mainEntity": {
+        "@id": "https://www.local083.org/events.html#event-list"
+      }
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://www.local083.org/events.html#event-list",
+      "numberOfItems": 2,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@id": "https://www.local083.org/events/2026-07-16-General-Membership-Meeting.html#event"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@id": "https://www.local083.org/events/2026-07-20-CAT-Meeting.html#event"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "Event",
+      "@id": "https://www.local083.org/events/2026-07-16-General-Membership-Meeting.html#event",
+      "name": "General Membership Meeting",
+      "description": "Join us Thursday, July 16, at noon in Memorial Union room 215. The Memorial Union double-booked our usual MU 211 room and found this alternate space. TOGO'S sandwiches will be provided. We will talk through the new phase of bargaining, member readiness, and how higher ed works because we work. Zoom details are coming shortly.",
+      "startDate": "2026-07-16",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "url": "https://www.local083.org/events/2026-07-16-General-Membership-Meeting.html",
+      "organizer": {
+        "@id": "https://www.local083.org#organization"
+      },
+      "location": {
+        "@type": "Place",
+        "name": "Memorial Union room 215"
+      }
+    },
+    {
+      "@type": "Event",
+      "@id": "https://www.local083.org/events/2026-07-20-CAT-Meeting.html#event",
+      "name": "CAT Meeting",
+      "description": "Join our Contract Action Team meeting on Monday, July 20 in the evening for workplace updates and action coordination. Time and Zoom details are coming shortly.",
+      "startDate": "2026-07-20",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "url": "https://www.local083.org/events/2026-07-20-CAT-Meeting.html",
+      "organizer": {
         "@id": "https://www.local083.org#organization"
       }
     }
   ]
 }
     </script>
-    <!-- SEO META END -->
+
+    <style>
+        :root {
+            --brand-purple-dark: #4c1d95;
+            --brand-purple: #7c3aed;
+            --brand-purple-bright: #7c3aed;
+            --brand-purple-light: #ede9fe;
+            --brand-yellow: #fdb913;
+            --brand-yellow-light: #fff7d6;
+            --brand-dark: #111827;
+            --brand-light: #f9fafb;
+            --text-primary: #1f2937;
+            --text-secondary: #374151;
+            --border-color: #d1d5db;
+        }
+
+        * { box-sizing: border-box; }
+        html { scroll-padding-top: 88px; }
+        [hidden] { display: none !important; }
+
+        body {
+            background: var(--brand-light);
+            color: var(--text-primary);
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            color: var(--brand-purple-dark);
+            font-family: 'Lora', serif;
+        }
+
+        a:focus-visible, button:focus-visible, summary:focus-visible, .calendar-scroll:focus-visible {
+            border-radius: 0.25rem;
+            outline: 3px solid var(--brand-purple);
+            outline-offset: 3px;
+        }
+
+        .bg-brand-purple-light { background-color: var(--brand-purple-light) !important; }
+        .text-brand-purple { color: var(--brand-purple) !important; }
+        .text-brand-purple-dark { color: var(--brand-purple-dark) !important; }
+        .text-text-primary { color: var(--text-primary) !important; }
+        .text-text-secondary { color: var(--text-secondary) !important; }
+        .border-border-color { border-color: var(--border-color) !important; }
+        .hover\:text-brand-purple:hover { color: var(--brand-purple) !important; }
+        .hover\:bg-brand-purple-light:hover { background-color: var(--brand-purple-light) !important; }
+        header .text-brand-purple-dark { color: var(--brand-dark) !important; }
+
+        .page-intro {
+            background: linear-gradient(180deg, #ffffff 0%, var(--brand-light) 100%);
+        }
+
+        .eyebrow {
+            color: var(--brand-purple-bright);
+            display: inline-block;
+            font-size: 0.78rem;
+            font-weight: 800;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+        }
+
+        .events-masthead {
+            align-items: center;
+            border-bottom: 1px solid #ddd6fe;
+            display: grid;
+            gap: 2rem;
+            grid-template-columns: minmax(0, 1fr) 20rem;
+            padding: 0.8rem 0 1rem;
+            position: relative;
+        }
+
+        .masthead-copy {
+            position: relative;
+            z-index: 1;
+        }
+
+        .events-masthead .eyebrow {
+            align-items: center;
+            color: var(--brand-purple-bright);
+            display: inline-flex;
+            gap: 0.48rem;
+        }
+
+        .events-masthead .eyebrow::before {
+            background: var(--brand-yellow);
+            border-radius: 0.18rem;
+            content: '';
+            height: 0.62rem;
+            width: 0.62rem;
+        }
+
+        .events-masthead h1 {
+            color: var(--brand-purple-dark);
+        }
+
+        .events-masthead .intro-copy { color: var(--text-secondary); }
+
+        .month-glance {
+            align-self: center;
+            border-left: 1px solid #ddd6fe;
+            display: grid;
+            gap: 1rem;
+            grid-template-columns: 5.5rem minmax(0, 1fr);
+            padding: 0.1rem 0 0.1rem 1.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .glance-count {
+            align-content: center;
+            border-right: 1px solid #e5e7eb;
+            display: grid;
+            gap: 0.2rem;
+            padding-right: 0.8rem;
+        }
+
+        .glance-count strong {
+            color: var(--brand-purple-dark);
+            font-family: 'Lora', serif;
+            font-size: 2.45rem;
+            line-height: 0.9;
+        }
+
+        .glance-count span {
+            color: var(--text-secondary);
+            font-size: 0.78rem;
+            font-weight: 700;
+            line-height: 1.22;
+        }
+
+        .glance-dates {
+            display: grid;
+            gap: 0.68rem;
+        }
+
+        .glance-date {
+            --glance-accent: #c4b5fd;
+            align-items: center;
+            border-left: 0.2rem solid var(--glance-accent);
+            color: var(--brand-purple-dark);
+            display: grid;
+            gap: 0.52rem;
+            grid-template-columns: 1.75rem minmax(0, 1fr);
+            min-height: 2rem;
+            padding: 0 0 0 0.55rem;
+        }
+
+        .glance-date.membership-meeting { --glance-accent: var(--brand-purple-dark); }
+        .glance-date.zoom-meeting { --glance-accent: #2563eb; }
+        .glance-date.cat-meeting { --glance-accent: var(--brand-yellow); }
+        .glance-date.rally { --glance-accent: #dc2626; }
+        .glance-date.social-event { --glance-accent: #16a34a; }
+
+        .glance-date > strong {
+            font-family: 'Lora', serif;
+            font-size: 1.28rem;
+            line-height: 1;
+            text-align: center;
+        }
+
+        .glance-date-copy { min-width: 0; }
+        .glance-date-copy small { color: #6b7280; display: block; font-size: 0.75rem; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; }
+        .glance-date-copy span { display: block; font-size: 0.75rem; font-weight: 800; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+        .glance-empty { color: var(--text-secondary); font-size: 0.76rem; line-height: 1.45; padding: 0.2rem; }
+        .glance-more { color: var(--brand-purple); font-size: 0.67rem; font-weight: 700; padding: 0.05rem 0.2rem; }
+
+        .calendar-shell {
+            background: #fff;
+            border: 1px solid #ddd6fe;
+            border-radius: 1.4rem;
+            box-shadow: 0 24px 60px rgba(76, 29, 149, 0.12);
+            overflow: hidden;
+        }
+
+        .calendar-toolbar {
+            align-items: center;
+            background: linear-gradient(135deg, #ffffff, #faf8ff);
+            border-bottom: 1px solid #e5e7eb;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: space-between;
+            padding: 1.15rem 1.25rem;
+        }
+
+        .month-controls, .view-controls {
+            align-items: center;
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .month-controls h2 {
+            font-size: clamp(1.4rem, 3vw, 2rem);
+            font-weight: 700;
+            line-height: 1.1;
+            margin: 0 0.35rem;
+            min-width: 10rem;
+            text-align: center;
+        }
+
+        .calendar-control {
+            align-items: center;
+            background: #fff;
+            border: 1px solid #d8d0e9;
+            border-radius: 0.7rem;
+            color: var(--brand-purple-dark);
+            cursor: pointer;
+            display: inline-flex;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.88rem;
+            font-weight: 800;
+            justify-content: center;
+            min-height: 2.55rem;
+            padding: 0.55rem 0.8rem;
+            transition: background 160ms ease, border-color 160ms ease, color 160ms ease;
+        }
+
+        .calendar-control:hover {
+            background: var(--brand-purple-light);
+            border-color: #a78bfa;
+        }
+
+        .calendar-control.square {
+            font-size: 1.35rem;
+            padding: 0;
+            width: 2.55rem;
+        }
+
+        .view-controls {
+            background: var(--brand-purple-light);
+            border-radius: 0.8rem;
+            padding: 0.25rem;
+        }
+
+        .view-controls button {
+            background: transparent;
+            border: 0;
+            border-radius: 0.6rem;
+            color: var(--brand-purple-dark);
+            cursor: pointer;
+            font-size: 0.84rem;
+            font-weight: 800;
+            padding: 0.6rem 0.85rem;
+            transition: background 180ms ease, box-shadow 180ms ease, color 180ms ease;
+        }
+
+        .view-controls button[aria-pressed="true"] {
+            background: var(--brand-purple-dark);
+            box-shadow: 0 3px 10px rgba(76, 29, 149, 0.2);
+            color: #fff;
+        }
+
+        .calendar-layout { display: block; }
+
+        .calendar-main {
+            min-width: 0;
+        }
+
+        .calendar-scroll { overflow-x: auto; }
+
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(7, minmax(7.25rem, 1fr));
+            min-width: 54rem;
+        }
+
+        .calendar-grid .calendar-row { display: contents; }
+
+        .weekday {
+            background: #fafafa;
+            border-bottom: 1px solid #e5e7eb;
+            color: #6b7280;
+            font-size: 0.72rem;
+            font-weight: 800;
+            letter-spacing: 0.1em;
+            padding: 0.75rem 0.65rem;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        .calendar-day {
+            background: #fff;
+            border-bottom: 1px solid #e5e7eb;
+            border-right: 1px solid #e5e7eb;
+            min-height: 8.35rem;
+            padding: 0.62rem;
+            position: relative;
+        }
+
+        .calendar-day:nth-child(7n) { border-right: 0; }
+        .calendar-day.weekend:not(.outside) { background: #fdfcff; }
+        .calendar-day.outside { background: #f8fafc; color: #6b7280; }
+
+        .day-number {
+            align-items: center;
+            border-radius: 999px;
+            display: inline-flex;
+            font-size: 0.82rem;
+            font-weight: 800;
+            height: 1.8rem;
+            justify-content: center;
+            width: 1.8rem;
+        }
+
+        .calendar-day.today .day-number {
+            background: var(--brand-purple-dark);
+            color: #fff;
+        }
+
+        .event-chip {
+            border-radius: 0.58rem;
+            display: block;
+            font-size: 0.71rem;
+            font-weight: 800;
+            line-height: 1.3;
+            margin-top: 0.42rem;
+            padding: 0.5rem 0.55rem;
+            text-decoration: none;
+            transition: transform 160ms ease, box-shadow 160ms ease;
+        }
+
+        .event-chip-title {
+            align-items: flex-start;
+            display: flex;
+            gap: 0.32rem;
+        }
+
+        .event-icon {
+            align-items: center;
+            background: rgba(255, 255, 255, 0.18);
+            border-radius: 0.38rem;
+            display: inline-flex;
+            flex: none;
+            font-size: 0.7rem;
+            height: 1.15rem;
+            justify-content: center;
+            line-height: 1;
+            width: 1.15rem;
+        }
+
+        .event-chip:hover {
+            box-shadow: 0 7px 16px rgba(76, 29, 149, 0.18);
+            transform: translateY(-1px);
+        }
+
+        .event-chip .event-time {
+            display: block;
+            font-size: 0.63rem;
+            letter-spacing: 0.06em;
+            margin-bottom: 0.18rem;
+            opacity: 0.82;
+            text-transform: uppercase;
+        }
+
+        .event-chip.membership-meeting {
+            background: var(--brand-purple-dark);
+            color: #fff;
+        }
+
+        .event-chip.zoom-meeting {
+            background: #1d4ed8;
+            color: #fff;
+        }
+
+        .event-chip.cat-meeting {
+            background: var(--brand-yellow-light);
+            border-left: 4px solid var(--brand-yellow);
+            color: #3b225f;
+        }
+
+        .event-chip.cat-meeting .event-icon,
+        .event-chip.rally .event-icon,
+        .event-chip.social-event .event-icon,
+        .event-chip.default-event .event-icon {
+            background: rgba(255, 255, 255, 0.65);
+        }
+
+        .event-chip.rally {
+            background: #fee2e2;
+            border-left: 4px solid #dc2626;
+            color: #7f1d1d;
+        }
+
+        .event-chip.social-event {
+            background: #dcfce7;
+            border-left: 4px solid #16a34a;
+            color: #14532d;
+        }
+
+        .event-chip.default-event {
+            background: #e0e7ff;
+            border-left: 4px solid #6366f1;
+            color: #312e81;
+        }
+
+        .calendar-note {
+            align-items: center;
+            color: var(--text-secondary);
+            display: flex;
+            flex-wrap: wrap;
+            font-size: 0.78rem;
+            gap: 0.75rem 1.1rem;
+            padding: 0.8rem 1rem 1rem;
+        }
+
+        .legend-item { align-items: center; display: inline-flex; gap: 0.42rem; }
+        .legend-icon {
+            align-items: center;
+            border-radius: 0.4rem;
+            display: inline-flex;
+            font-size: 0.68rem;
+            height: 1.35rem;
+            justify-content: center;
+            line-height: 1;
+            width: 1.35rem;
+        }
+        .legend-membership { background: var(--brand-purple-dark); color: #fff; }
+        .legend-cat { background: var(--brand-yellow); color: #3b225f; }
+        .legend-action { background: #fee2e2; color: #991b1b; }
+        .legend-community { background: #dcfce7; color: #166534; }
+
+        .view-stage {
+            overflow: hidden;
+            transition: height 420ms cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .view-panel {
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 240ms ease, transform 380ms cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .view-stage.is-transitioning { position: relative; }
+
+        .view-stage.is-transitioning .view-panel.from-panel {
+            inset: 0;
+            position: absolute;
+            width: 100%;
+        }
+
+        .view-panel.is-entering {
+            opacity: 0;
+            transform: translateY(0.75rem);
+        }
+
+        .view-panel.is-leaving {
+            opacity: 0;
+            transform: translateY(-0.5rem);
+        }
+
+        .agenda-view { padding: 1.15rem; }
+
+        .agenda-list { display: grid; gap: 0.85rem; }
+
+        .agenda-card {
+            --agenda-accent: var(--brand-purple);
+            --agenda-soft: #f5f3ff;
+            align-items: stretch;
+            background: #fff;
+            border: 1px solid #e5e7eb;
+            border-color: color-mix(in srgb, var(--agenda-accent) 28%, #e5e7eb);
+            border-radius: 1rem;
+            display: grid;
+            grid-template-columns: 6.5rem minmax(0, 1fr) auto;
+            overflow: hidden;
+        }
+
+        .agenda-card.membership-meeting { --agenda-accent: var(--brand-purple); --agenda-soft: #f5f3ff; }
+        .agenda-card.zoom-meeting { --agenda-accent: #2563eb; --agenda-soft: #eff6ff; }
+        .agenda-card.cat-meeting { --agenda-accent: #7a5900; --agenda-soft: #fff8dc; }
+        .agenda-card.rally { --agenda-accent: #dc2626; --agenda-soft: #fff1f2; }
+        .agenda-card.social-event { --agenda-accent: #16a34a; --agenda-soft: #f0fdf4; }
+
+        .agenda-date {
+            background: var(--agenda-soft);
+            display: grid;
+            padding: 1rem;
+            place-content: center;
+            text-align: center;
+        }
+
+        .agenda-date span {
+            color: var(--agenda-accent);
+            font-size: 0.75rem;
+            font-weight: 800;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        .agenda-date strong {
+            color: var(--brand-purple-dark);
+            font-family: 'Lora', serif;
+            font-size: 2.25rem;
+            line-height: 1;
+        }
+
+        .agenda-copy { padding: 1rem 1.15rem; }
+        .agenda-copy h3 { font-size: 1.25rem; margin: 0; }
+        .agenda-copy p { color: var(--text-secondary); font-size: 0.88rem; line-height: 1.55; margin: 0.4rem 0 0; }
+
+        .agenda-type {
+            align-items: center;
+            color: var(--agenda-accent);
+            display: inline-flex;
+            font-size: 0.75rem;
+            font-weight: 800;
+            gap: 0.4rem;
+            letter-spacing: 0.08em;
+            margin-bottom: 0.45rem;
+            text-transform: uppercase;
+        }
+
+        .agenda-type .event-icon {
+            background: var(--agenda-soft);
+            border: 1px solid color-mix(in srgb, var(--agenda-accent) 22%, transparent);
+        }
+
+        .agenda-link {
+            align-items: center;
+            color: var(--brand-purple);
+            display: flex;
+            font-size: 0.85rem;
+            font-weight: 800;
+            padding: 1rem 1.2rem;
+            text-decoration: none;
+        }
+
+        .empty-month {
+            color: var(--text-secondary);
+            padding: 4rem 1rem;
+            text-align: center;
+        }
+
+        .past-panel {
+            background: linear-gradient(135deg, #ffffff 0%, #f7f4ff 100%);
+            border: 1px solid #ddd6fe;
+            border-radius: 1.3rem;
+            box-shadow: 0 16px 40px rgba(76, 29, 149, 0.08);
+            overflow: hidden;
+        }
+
+        .past-intro { padding: 2rem; }
+        .past-intro h2 { color: var(--brand-purple-dark); font-size: clamp(2rem, 4vw, 3rem); line-height: 1.1; margin: 0.5rem 0; }
+        .past-intro p { color: var(--text-secondary); line-height: 1.65; max-width: 52rem; }
+
+        .past-list {
+            border-top: 1px solid #ddd6fe;
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        .past-item {
+            --past-accent: var(--brand-purple);
+            color: var(--text-primary);
+            display: block;
+            min-height: 12rem;
+            padding: 1.35rem;
+            position: relative;
+            text-decoration: none;
+            transition: background 160ms ease, transform 160ms ease;
+        }
+
+        .past-item.past-rally { --past-accent: #dc2626; }
+        .past-item.past-meeting { --past-accent: var(--brand-purple); }
+        .past-item.past-community { --past-accent: #15803d; }
+        .past-item + .past-item { border-left: 1px solid #ddd6fe; }
+        .past-item:hover { background: #fff; transform: translateY(-2px); }
+        .past-item-top { align-items: center; display: flex; gap: 0.6rem; }
+        .past-icon {
+            align-items: center;
+            background: #f5f3ff;
+            background: color-mix(in srgb, var(--past-accent) 10%, #fff);
+            border: 1px solid #ddd6fe;
+            border-color: color-mix(in srgb, var(--past-accent) 22%, #fff);
+            border-radius: 0.55rem;
+            color: var(--past-accent);
+            display: inline-flex;
+            flex: none;
+            height: 1.8rem;
+            justify-content: center;
+            width: 1.8rem;
+        }
+        .past-item time { color: var(--past-accent); font-size: 0.68rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; }
+        .past-item h3 { color: var(--brand-purple-dark); font-size: 1.25rem; line-height: 1.25; margin: 0.8rem 0 0; }
+        .past-item p { color: var(--text-secondary); font-size: 0.83rem; line-height: 1.5; }
+        .past-item .arrow { bottom: 1.2rem; color: var(--past-accent); font-size: 1.2rem; position: absolute; right: 1.2rem; }
+
+        .calendar-help {
+            align-items: center;
+            border-top: 1px solid #e5e7eb;
+            color: var(--text-secondary);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem 1rem;
+            justify-content: space-between;
+            margin-top: 3rem;
+            padding-top: 1.25rem;
+        }
+
+        .calendar-help a { color: var(--brand-purple); font-weight: 800; text-decoration: underline; text-underline-offset: 0.22rem; }
+
+        @media (max-width: 1023px) {
+            .events-masthead { grid-template-columns: minmax(0, 1fr) 16rem; }
+        }
+
+        @media (max-width: 767px) {
+            .events-masthead { grid-template-columns: 1fr; padding: 0.85rem 0 1rem; }
+            .events-masthead::before { display: none; }
+            .month-glance { border-left: 0; border-top: 1px solid #ddd6fe; padding: 0.9rem 0 0; }
+            .glance-dates { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+            .calendar-toolbar { align-items: stretch; }
+            .month-controls, .view-controls { justify-content: center; }
+            .month-controls { flex-wrap: wrap; }
+            .month-controls h2 { order: -1; width: 100%; }
+            .calendar-control.today-control { flex: 1; }
+            .view-controls { width: 100%; }
+            .view-controls button { flex: 1; }
+            .calendar-day { min-height: 7.6rem; }
+            .past-list { grid-template-columns: 1fr; }
+            .past-item { min-height: 10.5rem; }
+            .past-item + .past-item { border-left: 0; border-top: 1px solid #ddd6fe; }
+            .agenda-card { grid-template-columns: 5rem 1fr; }
+            .agenda-link { border-top: 1px solid #e5e7eb; grid-column: 1 / -1; justify-content: flex-end; padding: 0.75rem 1rem; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; }
+        }
+    </style>
     <script src="/js/analytics.js" defer></script>
 </head>
-<body class="bg-brand-light">
-    <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:bg-white focus:text-brand-purple-dark focus:px-4 focus:py-2 focus:rounded focus:shadow-lg">Skip to content</a>
+<body>
+    <noscript><nav aria-label="Primary navigation without JavaScript" class="border-b border-border-color bg-white px-4 py-3 text-center text-sm font-semibold"><a class="mx-2 underline" href="/">Home</a><a class="mx-2 underline" href="/about.html">About</a><a class="mx-2 underline" href="/events.html">Events</a><a class="mx-2 underline" href="/news.html">News</a><a class="mx-2 underline" href="/resources.html">Resources &amp; Rights</a><a class="mx-2 underline" href="/leadership.html">Leadership</a><a class="mx-2 underline" href="/contact.html">Contact</a></nav></noscript>
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[60] focus:bg-white focus:text-brand-purple-dark focus:px-4 focus:py-2 focus:rounded focus:shadow-lg">Skip to content</a>
 
-    <!-- Header -->
-    <header class="bg-white/80 backdrop-blur-lg border-b border-border-color sticky top-0 z-50">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+    <!-- SITE SHELL: HEADER START -->
+    <header class="bg-white/80 backdrop-blur-lg border-b border-border-color sticky top-0 z-50" data-site-shell-header>
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center" aria-label="Primary navigation">
             <a href="/index.html" class="flex items-center space-x-2">
                 <span class="text-2xl font-bold text-brand-purple-dark">SEIU 503</span>
                 <span class="text-lg text-text-secondary hidden md:block">| Oregon State University</span>
             </a>
             <div class="hidden lg:flex space-x-8">
                 <a href="/about.html" class="text-text-secondary hover:text-brand-purple transition-colors">About</a>
-                <a href="/events.html" class="text-brand-purple font-bold">Events</a>
+                <a href="/events.html" class="text-text-secondary hover:text-brand-purple transition-colors">Events</a>
                 <a href="/news.html" class="text-text-secondary hover:text-brand-purple transition-colors">News</a>
-                <a href="/resources.html" class="text-text-secondary hover:text-brand-purple transition-colors">Resources & Rights</a>
+                <a href="/resources.html" class="text-text-secondary hover:text-brand-purple transition-colors">Resources &amp; Rights</a>
                 <a href="/leadership.html" class="text-text-secondary hover:text-brand-purple transition-colors">Leadership</a>
                 <a href="/contact.html" class="text-text-secondary hover:text-brand-purple transition-colors">Contact</a>
             </div>
-            <div class="lg:hidden">
-                <button id="mobile-menu-button" class="text-text-secondary hover:text-brand-purple focus:outline-none" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false">
-                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-                </button>
-            </div>
+            <button type="button" id="mobile-menu-button" class="lg:hidden text-text-secondary hover:text-brand-purple" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
         </nav>
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden lg:hidden absolute top-full left-0 w-full bg-white border-t border-border-color shadow-lg">
+        <div id="mobile-menu" class="hidden lg:hidden absolute top-full left-0 w-full bg-white border-t border-border-color shadow-lg" role="navigation" aria-label="Mobile navigation">
             <a href="/about.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">About</a>
-            <a href="/events.html" class="block text-center py-3 px-6 text-lg text-brand-purple bg-brand-purple-light font-semibold">Events</a>
+            <a href="/events.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Events</a>
             <a href="/news.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">News</a>
-            <a href="/resources.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Resources & Rights</a>
+            <a href="/resources.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Resources &amp; Rights</a>
             <a href="/leadership.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Leadership</a>
             <a href="/contact.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Contact</a>
         </div>
     </header>
+    <script data-site-shell-menu-state-script>
+        (() => {
+            const button = document.getElementById('mobile-menu-button');
+            const menu = document.getElementById('mobile-menu');
+            if (!button || !menu) return;
+            const canonicalIcon = button.innerHTML;
 
-    <!-- Page Header -->
-    <section class="bg-brand-purple-light border-b border-border-color">
-        <div class="container mx-auto px-6 py-16 text-center">
-            <h1 class="text-5xl font-bold">Union Events</h1>
-            <p class="mt-4 text-lg text-text-secondary max-w-3xl mx-auto">Stay informed about upcoming meetings, trainings, and solidarity actions. Get involved and make your voice heard!</p>
+            window.siteShellSyncMenuState = () => {
+                const isOpen = menu.classList.contains('is-open') || !menu.classList.contains('hidden');
+                button.setAttribute('aria-expanded', String(isOpen));
+                button.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+                if (button.innerHTML !== canonicalIcon) button.innerHTML = canonicalIcon;
+            };
+
+            new MutationObserver(window.siteShellSyncMenuState).observe(menu, {
+                attributes: true,
+                attributeFilter: ['class']
+            });
+            document.addEventListener('keydown', (event) => {
+                if (event.key !== 'Escape' || button.getAttribute('aria-expanded') !== 'true') return;
+                menu.classList.add('hidden');
+                menu.classList.remove('is-open');
+                window.siteShellSyncMenuState();
+                button.focus();
+            });
+            window.siteShellSyncMenuState();
+        })();
+    </script>
+<!-- SITE SHELL: HEADER END -->
+
+    <main id="main-content">
+
+    <section class="page-intro">
+        <div class="container mx-auto px-6 pt-5 pb-3 md:pt-6 md:pb-3">
+            <div class="events-masthead">
+                <div class="masthead-copy">
+                    <span class="eyebrow">Local 083 calendar</span>
+                    <h1 class="mt-1 text-4xl md:text-6xl font-bold leading-none">Events</h1>
+                    <p class="intro-copy mt-2 text-base md:text-lg max-w-3xl leading-relaxed">Membership meetings, bargaining actions, trainings and community events for OSU classified workers.</p>
+                </div>
+                <aside class="month-glance" aria-label="Events announced for the displayed month">
+                    <div class="glance-count">
+                        <strong id="intro-count-number">
+2
+</strong>
+                        <span id="intro-count-label">
+events announced<br>in July
+</span>
+                    </div>
+                    <div class="glance-dates" id="intro-date-list">
+                        <div class="glance-date membership-meeting">
+                            <strong>16</strong><div class="glance-date-copy"><small>Thu · July</small><span>◎ Membership Meeting</span></div>
+                        </div>
+                        <div class="glance-date cat-meeting">
+                            <strong>20</strong><div class="glance-date-copy"><small>Mon · July</small><span>⚡ CAT Meeting</span></div>
+                        </div>
+</div>
+                </aside>
+                </div>
         </div>
     </section>
 
-    <main id="main-content" class="container mx-auto px-6 py-16">
-
-        <!-- Calendar and Upcoming Events Section -->
-        <div class="grid lg:grid-cols-3 lg:items-start gap-12 mb-24">
-            <!-- Calendar -->
-            <div class="lg:col-span-1 bg-white p-6 rounded-xl border border-border-color lg:sticky top-28">
-                <div id="calendar-container">
-                    <!-- Calendar will be generated here by JavaScript -->
-                </div>
-            </div>
-
-            <!-- Main Events Column -->
-            <div class="lg:col-span-2">
-                <div id="events-list">
-                    <h2 class="text-4xl font-bold mb-8">Coming Up Soon</h2>
-                    <div id="upcoming-events-container" class="space-y-6">
-                         <!-- Events will be dynamically injected here -->
-                         <div class="flex justify-center py-12 text-brand-purple" role="status">
-                             <svg class="animate-spin h-10 w-10" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                                 <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-                                 <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                             </svg>
-                             <span class="sr-only">Loading events...</span>
-                         </div>
+        <section class="container mx-auto px-6 pt-2 md:pt-3 pb-20 md:pb-28" aria-label="Local 083 events calendar">
+            <div class="calendar-shell">
+                <div class="calendar-toolbar">
+                    <div class="month-controls" aria-label="Calendar month controls">
+                        <button class="calendar-control square" id="previous-month" type="button" aria-label="Previous month">‹</button>
+                        <h2 id="month-label" aria-live="polite">
+July 2026
+</h2>
+                        <button class="calendar-control square" id="next-month" type="button" aria-label="Next month">›</button>
+                        <button class="calendar-control today-control" id="current-month" type="button">This month</button>
+                    </div>
+                    <div class="view-controls" aria-label="Calendar view">
+                        <button id="month-view-button" type="button" aria-controls="month-view" aria-pressed="true">Month</button>
+                        <button id="agenda-view-button" type="button" aria-controls="agenda-view" aria-pressed="false">Agenda</button>
                     </div>
                 </div>
-                
-                <!-- Later This Year Events Section -->
-                <section id="more-events" class="mt-24">
-                    <h2 class="text-4xl font-bold mb-8 pt-12 border-t border-border-color">Later This Year</h2>
-                    <div id="stacked-events-container" class="space-y-6">
-                        <!-- Event cards will be injected here -->
-                        <div class="flex justify-center py-12 text-brand-purple" role="status">
-                            <svg class="animate-spin h-10 w-10" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-                                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                            </svg>
-                            <span class="sr-only">Loading later events...</span>
+
+                <div class="view-stage" id="calendar-view-stage">
+                <div id="month-view" class="view-panel calendar-layout">
+                    <div class="calendar-main">
+                        <div class="calendar-scroll" tabindex="0" aria-label="Scroll the monthly calendar horizontally on small screens">
+                            <div class="calendar-grid" id="calendar-grid" role="grid" aria-labelledby="month-label">
+                                <div class="calendar-row" role="row">
+                                    <div class="weekday" role="columnheader">Sun</div>
+                                    <div class="weekday" role="columnheader">Mon</div>
+                                    <div class="weekday" role="columnheader">Tue</div>
+                                    <div class="weekday" role="columnheader">Wed</div>
+                                    <div class="weekday" role="columnheader">Thu</div>
+                                    <div class="weekday" role="columnheader">Fri</div>
+                                    <div class="weekday" role="columnheader">Sat</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="calendar-note" aria-label="Event type legend">
+                            <span class="legend-item"><span class="legend-icon legend-membership" aria-hidden="true">◎</span>Membership meeting</span>
+                            <span class="legend-item"><span class="legend-icon legend-cat" aria-hidden="true">⚡</span>CAT or organizing</span>
+                            <span class="legend-item"><span class="legend-icon legend-action" aria-hidden="true">✊</span>Action</span>
+                            <span class="legend-item"><span class="legend-icon legend-community" aria-hidden="true">♥</span>Community</span>
                         </div>
                     </div>
-                </section>
-            </div>
-        </div>
-        
-        <!-- Past Events Section -->
-        <section id="past-events">
-            <h2 class="text-4xl font-bold text-center mb-12">Archived Events</h2>
-            <div id="past-events-container" class="max-w-4xl mx-auto space-y-4">
-                <!-- Past events will be dynamically injected here -->
-                <div class="flex justify-center py-12 text-brand-purple" role="status">
-                    <svg class="animate-spin h-10 w-10" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-                        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                    </svg>
-                    <span class="sr-only">Loading past events...</span>
+                </div>
+
+                <div id="agenda-view" class="view-panel agenda-view" aria-hidden="true" inert hidden>
+                    <div class="agenda-list" id="agenda-list">
+                        <article class="agenda-card membership-meeting">
+                            <div class="agenda-date"><span>Thu</span><strong>16</strong></div>
+                            <div class="agenda-copy"><span class="agenda-type"><span class="event-icon" aria-hidden="true">◎</span>Membership Meeting</span><h3>General Membership Meeting</h3><p>Noon–1 p.m. · Memorial Union room 215</p></div>
+                            <a class="agenda-link" href="/events/2026-07-16-General-Membership-Meeting.html" aria-label="View General Membership Meeting details">View event details →</a>
+                        </article>
+                        <article class="agenda-card cat-meeting">
+                            <div class="agenda-date"><span>Mon</span><strong>20</strong></div>
+                            <div class="agenda-copy"><span class="agenda-type"><span class="event-icon" aria-hidden="true">⚡</span>CAT Meeting</span><h3>CAT Meeting</h3><p>Evening · Details coming soon</p></div>
+                            <a class="agenda-link" href="/events/2026-07-20-CAT-Meeting.html" aria-label="View CAT Meeting details">View event details →</a>
+                        </article>
+</div>
+                </div>
                 </div>
             </div>
-        </section>
 
+            <div class="calendar-help">
+                <p>Times and locations can change. Open an event before you go for the latest confirmed details.</p>
+                <p>Calendar question? <a href="mailto:083execteam@seiu503.org?subject=Local%20083%20calendar%20question">Email the Local 083 executive team</a>.</p>
+            </div>
+
+            <section id="past-events" class="mt-8 md:mt-12 past-panel" aria-labelledby="past-events-heading">
+                <div class="past-intro">
+                    <span class="eyebrow">Past events</span>
+                    <h2 id="past-events-heading">Meetings, actions and gatherings from our archive</h2>
+                    <p>Browse earlier Local 083 events, from workplace meetings and bargaining actions to the community gatherings that help members build relationships.</p>
+                </div>
+                <div class="past-list">
+                    <a class="past-item past-rally" href="/events/2026-06-30-Rally-at-McNary-Field.html">
+                        <div class="past-item-top"><span class="past-icon" aria-hidden="true">✊</span><time datetime="2026-06-30">June 30, 2026 · Rally</time></div>
+                        <h3>Rally at McNary Field</h3>
+                        <p>Members and supporters rallied for real raises and a fair contract.</p>
+                        <span class="arrow" aria-hidden="true">→</span>
+                    </a>
+                    <a class="past-item past-meeting" href="/events/2026-06-18-OSU-June-Membership-Meeting.html">
+                        <div class="past-item-top"><span class="past-icon" aria-hidden="true">◎</span><time datetime="2026-06-18">June 18, 2026 · Meeting</time></div>
+                        <h3>June Membership Meeting</h3>
+                        <p>Members gathered online for Local 083 updates and discussion.</p>
+                        <span class="arrow" aria-hidden="true">→</span>
+                    </a>
+                    <a class="past-item past-community" href="/events/2025-10-23-Bowling.html">
+                        <div class="past-item-top"><span class="past-icon" aria-hidden="true">♥</span><time datetime="2025-10-23">Oct. 23, 2025 · Community</time></div>
+                        <h3>Member and Family Bowling Night</h3>
+                        <p>Members and their families shared bowling, food and community.</p>
+                        <span class="arrow" aria-hidden="true">→</span>
+                    </a>
+                </div>
+            </section>
+
+        </section>
     </main>
 
-                    <footer class="bg-gray-100 pt-12 pb-8 text-text-primary">
+    <!-- SITE SHELL: FOOTER START -->
+    <footer class="bg-gray-100 pt-12 pb-8 text-text-primary border-t border-gray-200" data-site-shell-footer>
         <div class="container mx-auto px-6">
-            <div class="mt-10 pt-8 border-t border-gray-700 text-center">
-            </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Column 1: About the Union -->
                 <div class="md:col-span-2 lg:col-span-1">
                     <div class="flex items-center mb-4">
-                        <img src="/images/logo.png" alt="SEIU 503 Logo" class="h-12 w-12 mr-3 bg-white p-1 rounded">
-                        <div>
-                            <h3 class="text-xl font-bold">SEIU Local 503</h3>
-                            <p class="text-text-secondary text-sm">Oregon State University</p>
-                        </div>
+                        <img src="/images/logo.png" alt="SEIU 503 logo" class="h-12 w-12 mr-3 bg-white p-1 rounded" width="48" height="48" loading="lazy" decoding="async">
+                        <div><h3 class="text-xl font-bold">SEIU Local 503</h3><p class="text-text-secondary text-sm">Oregon State University</p></div>
                     </div>
-                    <p class="text-text-secondary leading-relaxed">Representing the classified employees of Oregon State University. We fight for fair contracts, defend workplace rights, and build a united community.</p>
+                    <p class="text-text-secondary leading-relaxed">Our member-led union represents classified staff at Oregon State University. Together, we bargain fair contracts, defend our rights and build power at work.</p>
                 </div>
-    
-                <!-- Column 2: Quick Links -->
                 <div>
-                    <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase">Quick Links</h4>
+                    <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase">Quick links</h4>
                     <ul class="space-y-3">
-                        <li><a href="/about.html" class="text-text-secondary hover:text-brand-purple transition-colors">About Us</a></li>
+                        <li><a href="/about.html" class="text-text-secondary hover:text-brand-purple transition-colors">About our union</a></li>
                         <li><a href="/events.html" class="text-text-secondary hover:text-brand-purple transition-colors">Events</a></li>
                         <li><a href="/news.html" class="text-text-secondary hover:text-brand-purple transition-colors">News</a></li>
                         <li><a href="/leadership.html" class="text-text-secondary hover:text-brand-purple transition-colors">Leadership</a></li>
                     </ul>
                 </div>
-    
-                <!-- Column 3: Resources -->
                 <div>
                     <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase"><a href="/resources.html" class="hover:text-brand-purple transition-colors">Resources</a></h4>
                     <ul class="space-y-3">
-                        <li><a href="/resources.html" class="text-text-secondary hover:text-brand-purple transition-colors">Resources & Rights</a></li>
+                        <li><a href="/resources.html" class="text-text-secondary hover:text-brand-purple transition-colors">Resources &amp; Rights</a></li>
                         <li><a href="/resources/seiu_cba_2022-2026.pdf" class="text-text-secondary hover:text-brand-purple transition-colors">Our Contract (PDF)</a></li>
                         <li><a href="/resources/stewards.html" class="text-text-secondary hover:text-brand-purple transition-colors">Find a Steward</a></li>
                         <li><a href="/resources/weingarten-rights.html" class="text-text-secondary hover:text-brand-purple transition-colors">Weingarten Rights</a></li>
                     </ul>
                 </div>
-    
-                <!-- Column 4: Contact -->
                 <div>
-                    <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase"><a href="/contact.html" class="hover:text-brand-purple transition-colors">Contact Us</a></h4>
-                     <ul class="space-y-3 text-text-secondary">
-                        <li class="flex items-start">
-                            <span class="mr-2 mt-1">✉️</span> <!-- Mail icon -->
-                            <a href="mailto:083execteam@seiu503.org" class="hover:text-brand-purple transition-colors">083execteam@seiu503.org</a>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="mr-2 mt-1">✉️</span> <!-- Mail icon -->
-                            <a href="mailto:083stewards@seiu503.org" class="hover:text-brand-purple transition-colors">083stewards@seiu503.org</a>
-                        </li>
+                    <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase"><a href="/contact.html" class="hover:text-brand-purple transition-colors">Contact us</a></h4>
+                    <ul class="space-y-3">
+                        <li><a href="mailto:083execteam@seiu503.org" class="text-text-secondary hover:text-brand-purple transition-colors break-all">083execteam@seiu503.org</a></li>
+                        <li><a href="mailto:083stewards@seiu503.org" class="text-text-secondary hover:text-brand-purple transition-colors break-all">083stewards@seiu503.org</a></li>
                     </ul>
                 </div>
             </div>
-    
-            <!-- Bottom Bar -->
-            <div class="mt-10 pt-8 border-t border-gray-700 text-center space-y-2">
-                <p class="text-text-secondary text-sm">&copy; 2026 SEIU Local 503, Sublocal 083. All rights reserved.</p>
-                <p class="text-text-secondary text-xs">
-                    <a href="#" class="underline hover:text-brand-purple" onclick="event.preventDefault(); (localStorage.getItem('ph_opt_out') === '1' ? phOptIn() : phOptOut());">
-                        Privacy settings
-                    </a>
-                </p>
+            <div class="mt-10 pt-8 border-t border-gray-300 text-center space-y-2">
+                <p class="text-text-secondary text-sm">&copy; 2026 SEIU Local 503, Local 083. All rights reserved.</p>
+                <p class="text-text-secondary text-xs"><a class="underline hover:text-brand-purple" href="/privacy.html#analytics-controls">Tracking settings</a><span aria-hidden="true"> · </span><a class="underline hover:text-brand-purple" href="/privacy.html">Privacy notice</a></p>
             </div>
         </div>
     </footer>
+<!-- SITE SHELL: FOOTER END -->
 
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const safeCapture = (name, props = {}) => {
-                if (typeof window.phCapture === 'function') window.phCapture(name, props);
-            };
+        const fallbackEvents = [
+          {
+            "date": "2025-10-22",
+            "time": "12:00 PM - 1:00 PM",
+            "title": "Contract Action Team (CAT) Meeting",
+            "description": "Our SEIU Local 083 Contract Action Team meeting ran on Zoom from noon to 1 p.m. We discussed what was happening in bargaining and how we communicated with coworkers across all campuses to support our bargaining team.",
+            "type": "Zoom Meeting",
+            "url": "/events/2025-10-22-CAT-Meeting.html",
+            "featured": true,
+            "location_detail": "Online via Zoom"
+          },
+          {
+            "date": "2026-03-31",
+            "time": "12:00 PM - 1:00 PM",
+            "title": "Rally at OSU",
+            "description": "Members joined at the MU Quad to show OSU that classified staff were united for a fair contract while bargaining happened on campus that day. Members wore purple and brought coworkers.",
+            "type": "Rally",
+            "url": "/events/2026-03-31-Rally-at-OSU.html",
+            "featured": true,
+            "location_detail": "MU Quad (OSU Memorial Union)",
+            "calendar_link": "/events/ical/2026-03-31-Rally-at-OSU.ics"
+          },
+          {
+            "date": "2026-04-01",
+            "time": "11:45 AM - 12:15 PM",
+            "title": "New Employee Orientation",
+            "description": "Employees within their first two months at OSU can attend this 30-minute Zoom orientation on paid time to learn about our union, workplace rights, and member resources.",
+            "type": "Orientation",
+            "url": "/events/2026-04-01-New-Employee-Orientation.html",
+            "featured": false,
+            "location_detail": "Online via Zoom"
+          },
+          {
+            "date": "2026-04-16",
+            "time": "12:00 PM - 1:00 PM",
+            "title": "Membership Meeting",
+            "description": "Join SEIU Local 083 for our next membership meeting in MU 211. RSVP through the new form so we can plan food, track in-person and virtual attendance, and send the calendar invite.",
+            "type": "Membership Meeting",
+            "url": "/events/2026-04-16-Membership-Meeting.html",
+            "featured": false,
+            "location_detail": "MU 211"
+          },
+          {
+            "date": "2026-05-21",
+            "time": "12:00 PM - 1:00 PM",
+            "title": "Membership Meeting",
+            "description": "Join SEIU Local 083 for a bargaining update membership meeting in Memorial Union room 211 or on Zoom. We will talk through where bargaining stands, what is at stake, and how members are preparing to fight back together.",
+            "type": "Membership Meeting",
+            "url": "/events/2026-05-21-Membership-Meeting.html",
+            "featured": true,
+            "location_detail": "Memorial Union room 211 or Zoom",
+            "calendar_link": "/events/ical/2026-05-21-Membership-Meeting.ics"
+          },
+          {
+            "date": "2026-06-18",
+            "time": "12:00 PM PT",
+            "title": "OSU June Membership Meeting",
+            "description": "Join SEIU Local 083 for the OSU June membership meeting on Zoom at noon Pacific time.",
+            "type": "Zoom Meeting",
+            "url": "/events/2026-06-18-OSU-June-Membership-Meeting.html",
+            "featured": false,
+            "location_detail": "Online via Zoom",
+            "calendar_link": "/events/ical/2026-06-18-OSU-June-Membership-Meeting.ics"
+          },
+          {
+            "date": "2026-06-22",
+            "time": "6:00 PM PT",
+            "title": "OSU CAT Meeting",
+            "description": "Join SEIU Local 083 for the OSU Contract Action Team meeting on Zoom at 6 p.m. Pacific time.",
+            "type": "Zoom Meeting",
+            "url": "/events/2026-06-22-OSU-CAT-Meeting.html",
+            "featured": false,
+            "location_detail": "Online via Zoom",
+            "calendar_link": "/events/ical/2026-06-22-OSU-CAT-Meeting.ics"
+          },
+          {
+            "date": "2026-02-12",
+            "time": "1:15 PM",
+            "title": "Bargaining Zoom Observation",
+            "description": "This bargaining observation was originally scheduled for 10:00 AM. Around 9:00 AM, management changed it to 1:15 PM. Please stay muted for the full session to protect bargaining privilege. Anyone joining after 1:20 PM will be removed.",
+            "type": "Zoom Observation",
+            "url": "/events/2026-02-12-Bargaining-Zoom-Observation.html",
+            "featured": true,
+            "location_detail": "Online via Zoom"
+          },
+          {
+            "date": "2026-02-12",
+            "time": "All Day",
+            "title": "Purple Up Day (UO)",
+            "description": "Members wore purple to show solidarity while bargaining happened at University of Oregon. Dates: February 12–13.",
+            "type": "Purple Up Day",
+            "url": "/news/2026-02-04-upcoming-bargaining-events.html",
+            "featured": false,
+            "location_detail": "University of Oregon"
+          },
+          {
+            "date": "2026-03-05",
+            "time": "All Day",
+            "title": "Purple Up Day (WOU)",
+            "description": "Members wore purple to show solidarity while bargaining happened at Western Oregon University. Dates: March 5–6.",
+            "type": "Purple Up Day",
+            "url": "/news/2026-02-04-upcoming-bargaining-events.html",
+            "featured": false,
+            "location_detail": "Western Oregon University"
+          },
+          {
+            "date": "2026-03-19",
+            "time": "All Day",
+            "title": "Purple Up Day (PSU)",
+            "description": "Members wore purple to show solidarity while bargaining happened at Portland State University. Dates: March 19–20.",
+            "type": "Purple Up Day",
+            "url": "/news/2026-02-04-upcoming-bargaining-events.html",
+            "featured": false,
+            "location_detail": "Portland State University"
+          },
+          {
+            "date": "2026-03-30",
+            "time": "All Day",
+            "title": "OSU Bargaining Sessions (Corvallis) - Day 1",
+            "description": "In-person bargaining sessions at OSU Corvallis. Day 1 of 2.",
+            "type": "Bargaining Session",
+            "url": "/news/2026-02-04-upcoming-bargaining-events.html",
+            "featured": false,
+            "location_detail": "OSU Corvallis"
+          },
+          {
+            "date": "2026-03-31",
+            "time": "All Day",
+            "title": "OSU Bargaining Sessions (Corvallis) - Day 2",
+            "description": "In-person bargaining sessions at OSU Corvallis. Day 2 of 2.",
+            "type": "Bargaining Session",
+            "url": "/news/2026-02-04-upcoming-bargaining-events.html",
+            "featured": false,
+            "location_detail": "OSU Corvallis"
+          },
+          {
+            "date": "2026-04-23",
+            "time": "All Day",
+            "title": "OSU Bargaining Sessions (Cascades)",
+            "description": "In-person bargaining sessions at OSU–Cascades. Dates: April 23–24.",
+            "type": "Bargaining Session",
+            "url": "/news/2026-02-04-upcoming-bargaining-events.html",
+            "featured": false,
+            "location_detail": "OSU–Cascades (Bend)"
+          },
+          {
+            "date": "2026-05-01",
+            "time": "12:00 PM - 2:00 PM",
+            "title": "International Workers' Day",
+            "description": "May 1 International Workers' Day celebrates Day Without an Immigrant with rallies across Oregon. SEIU 503 is supporting the PCUN-hosted Salem event and Portland-area actions, with transportation from Portland and Eugene. Register to get updates on the option that works best for you.",
+            "type": "Rally",
+            "url": "/mayday",
+            "featured": true,
+            "location_detail": "Salem, Oregon and Portland-area actions"
+          },
+          {
+            "date": "2026-05-14",
+            "time": "All Day",
+            "title": "Purple Up Day (UO)",
+            "description": "Members wore purple to show solidarity while bargaining happened at University of Oregon. Dates: May 14–15.",
+            "type": "Purple Up Day",
+            "url": "/news/2026-02-04-upcoming-bargaining-events.html",
+            "featured": false,
+            "location_detail": "University of Oregon"
+          },
+          {
+            "date": "2026-05-28",
+            "time": "All Day",
+            "title": "Purple Up Day (SOU)",
+            "description": "Members wore purple to show solidarity while bargaining happened at Southern Oregon University. Dates: May 28–29.",
+            "type": "Purple Up Day",
+            "url": "/news/2026-02-04-upcoming-bargaining-events.html",
+            "featured": false,
+            "location_detail": "Southern Oregon University"
+          },
+          {
+            "date": "2026-06-29",
+            "time": "5:00 PM - 7:00 PM",
+            "title": "Sign-Making Party for the McNary Field Rally",
+            "description": "Drop by Westminster House on Monroe to help make direct, readable signs before Tuesday's McNary Field rally. Bring a coworker, bring an idea, or just show up for 20 minutes.",
+            "type": "Sign-Making Party",
+            "url": "/events/2026-06-29-Sign-Making-Party.html",
+            "featured": true,
+            "location_detail": "Westminster House on Monroe",
+            "calendar_link": "/events/ical/2026-06-29-Sign-Making-Party.ics"
+          },
+          {
+            "date": "2026-06-30",
+            "time": "12:00 PM - 1:00 PM",
+            "title": "Rally June 30 at McNary Field",
+            "description": "Join coworkers at McNary Field for food, lawn games, and a strong show of unity. Management is offering no raises and no cost-of-living adjustment for four years, and members are showing up for real raises and a fair contract.",
+            "type": "Rally",
+            "url": "/events/2026-06-30-Rally-at-McNary-Field.html",
+            "featured": true,
+            "location_detail": "McNary Field",
+            "calendar_link": "/events/ical/2026-06-30-Rally-at-McNary-Field.ics"
+          },
+          {
+            "date": "2026-07-16",
+            "time": "12:00 PM - 1:00 PM",
+            "title": "General Membership Meeting",
+            "description": "Join us Thursday, July 16, at noon in Memorial Union room 215. The Memorial Union double-booked our usual MU 211 room and found this alternate space. TOGO'S sandwiches will be provided. We will talk through the new phase of bargaining, member readiness, and how higher ed works because we work. Zoom details are coming shortly.",
+            "type": "Membership Meeting",
+            "url": "/events/2026-07-16-General-Membership-Meeting.html",
+            "featured": true,
+            "location_detail": "Memorial Union room 215",
+            "calendar_link": "/events/ical/2026-07-16-General-Membership-Meeting.ics"
+          },
+          {
+            "date": "2026-07-20",
+            "time": "Evening, details coming soon",
+            "title": "CAT Meeting",
+            "description": "Join our Contract Action Team meeting on Monday, July 20 in the evening for workplace updates and action coordination. Time and Zoom details are coming shortly.",
+            "type": "CAT Meeting",
+            "url": "/events/2026-07-20-CAT-Meeting.html",
+            "featured": false,
+            "location_detail": "Details coming soon"
+          },
+          {
+            "date": "2025-10-01",
+            "time": "6:30 PM",
+            "title": "CAT Meeting",
+            "description": "Join our Contract Action Team meeting for bargaining updates and information to share with coworkers in your work area.",
+            "type": "Zoom Meeting",
+            "url": "/events/2025-10-01-CAT-Meeting.html",
+            "featured": false,
+            "location_detail": "Online via Zoom"
+          },
+          {
+            "date": "2025-11-05",
+            "time": "6:30 PM",
+            "title": "CAT Meeting",
+            "description": "Join our Contract Action Team meeting for bargaining updates and information to share with coworkers in your work area.",
+            "type": "Zoom Meeting",
+            "url": "/events/2025-11-05-CAT-Meeting.html",
+            "featured": false,
+            "location_detail": "Online via Zoom"
+          },
+          {
+            "date": "2025-12-03",
+            "time": "6:30 PM",
+            "title": "CAT Meeting",
+            "description": "Join our Contract Action Team meeting for bargaining updates and information to share with coworkers in your work area.",
+            "type": "Zoom Meeting",
+            "url": "/events/2025-12-03-CAT-Meeting.html",
+            "featured": false,
+            "location_detail": "Online via Zoom"
+          },
+          {
+            "date": "2026-01-07",
+            "time": "6:30 PM",
+            "title": "CAT Meeting",
+            "description": "Join our Contract Action Team meeting for bargaining updates and information to share with coworkers in your work area.",
+            "type": "Zoom Meeting",
+            "url": "/events/2026-01-07-CAT-Meeting.html",
+            "featured": false,
+            "location_detail": "Online via Zoom"
+          },
+          {
+            "date": "2026-02-05",
+            "time": "6:00 PM",
+            "title": "CAT Meeting",
+            "description": "Join our Contract Action Team meeting for bargaining updates and information to share with coworkers in your work area.",
+            "type": "Zoom Meeting",
+            "url": "/events/2026-02-05-CAT-Meeting.html",
+            "featured": false,
+            "location_detail": "Online via Zoom"
+          },
+          {
+            "date": "2026-03-10",
+            "time": "7:00 PM - 8:00 PM",
+            "title": "CAT Meeting",
+            "description": "Join our Contract Action Team meeting for bargaining updates and information to share with coworkers in your work area.",
+            "type": "Zoom Meeting",
+            "url": "/events/2026-03-10-CAT-Meeting.html",
+            "featured": false,
+            "location_detail": "Online via Zoom"
+          },
+          {
+            "date": "2025-10-09",
+            "time": "6:00 PM",
+            "title": "Executive Team Meeting",
+            "description": "Regularly scheduled meeting for the Local 083 Executive Team.",
+            "type": "Zoom Meeting",
+            "url": "/events/2025-10-09-Executive-Team-Meeting.html",
+            "featured": false,
+            "location_detail": "Online via Zoom"
+          },
+          {
+            "date": "2025-11-13",
+            "time": "6:00 PM",
+            "title": "Executive Team Meeting",
+            "description": "Regularly scheduled meeting for the Local 083 Executive Team.",
+            "type": "Zoom Meeting",
+            "url": "/events/2025-11-13-Executive-Team-Meeting.html",
+            "featured": false,
+            "location_detail": "Online via Zoom"
+          },
+          {
+            "date": "2025-12-11",
+            "time": "6:00 PM",
+            "title": "Executive Team Meeting",
+            "description": "Regularly scheduled meeting for the Local 083 Executive Team.",
+            "type": "Zoom Meeting",
+            "url": "/events/2025-12-11-Executive-Team-Meeting.html",
+            "featured": false,
+            "location_detail": "Online via Zoom"
+          },
+          {
+            "date": "2026-01-08",
+            "time": "6:00 PM",
+            "title": "Executive Team Meeting",
+            "description": "Regularly scheduled meeting for the Local 083 Executive Team.",
+            "type": "Zoom Meeting",
+            "url": "/events/2026-01-08-Executive-Team-Meeting.html",
+            "featured": false,
+            "location_detail": "Online via Zoom"
+          },
+          {
+            "date": "2026-02-12",
+            "time": "6:00 PM",
+            "title": "Executive Team Meeting",
+            "description": "Regularly scheduled meeting for the Local 083 Executive Team.",
+            "type": "Zoom Meeting",
+            "url": "/events/2026-02-12-Executive-Team-Meeting.html",
+            "featured": false,
+            "location_detail": "Online via Zoom"
+          },
+          {
+            "date": "2025-10-16",
+            "time": "12:00 PM - 1:00 PM",
+            "title": "Membership Meeting",
+            "description": "Monthly meeting with updates on bargaining, events, and more.",
+            "type": "Zoom Meeting",
+            "url": "/events/2025-10-16-Membership-Meeting.html",
+            "featured": false,
+            "location_detail": "Online via Zoom"
+          },
+          {
+            "date": "2025-11-20",
+            "time": "12:00 PM - 1:00 PM",
+            "title": "Membership Meeting",
+            "description": "Monthly meeting with updates on bargaining, events, and more.",
+            "type": "Zoom Meeting",
+            "url": "/events/2025-11-20-Membership-Meeting.html",
+            "featured": false,
+            "location_detail": "Online via Zoom"
+          },
+          {
+            "date": "2025-12-18",
+            "time": "12:00 PM - 1:00 PM",
+            "title": "Membership Meeting",
+            "description": "Monthly meeting with updates on bargaining, events, and more.",
+            "type": "Zoom Meeting",
+            "url": "/events/2025-12-18-Membership-Meeting.html",
+            "featured": false,
+            "location_detail": "Online via Zoom"
+          },
+          {
+            "date": "2026-01-15",
+            "time": "12:00 PM - 1:00 PM",
+            "title": "Membership Meeting",
+            "description": "Monthly meeting with updates on bargaining, events, and more.",
+            "type": "Zoom Meeting",
+            "url": "/events/2026-01-15-Membership-Meeting.html",
+            "featured": false,
+            "location_detail": "Online via Zoom"
+          },
+          {
+            "date": "2026-02-19",
+            "time": "12:00 PM - 1:00 PM",
+            "title": "Membership Meeting",
+            "description": "Monthly meeting with updates on bargaining, events, and more.",
+            "type": "Zoom Meeting",
+            "url": "/events/2026-02-19-Membership-Meeting.html",
+            "featured": false,
+            "location_detail": "Online via Zoom"
+          },
+          {
+            "date": "2026-03-11",
+            "time": "11:00 AM - 1:00 PM",
+            "title": "Facilities Membership Update and Petition",
+            "description": "Join our union for a Facilities Membership Update and Petition with workplace updates, a chance to sign in support of a coworker, pizza, and time to connect with coworkers across Facilities. Members can drop in during their lunch window.",
+            "type": "Membership Meeting",
+            "url": "/events/2026-03-11-Facilities-Membership-Meeting.html",
+            "featured": false,
+            "location_detail": "Western Shops (WnS), Room 200"
+          },
+          {
+            "date": "2025-10-30",
+            "time": "6:00 PM",
+            "title": "Stewards Meeting",
+            "description": "A monthly meeting for current stewards to connect, share information, and build skills.",
+            "type": "Online Meeting",
+            "url": "/events/2025-10-30-Stewards-Meeting.html",
+            "featured": false,
+            "location_detail": "Online via Zoom"
+          },
+          {
+            "date": "2025-11-27",
+            "time": "6:00 PM",
+            "title": "Stewards Meeting",
+            "description": "A monthly meeting for current stewards to connect, share information, and build skills.",
+            "type": "Online Meeting",
+            "url": "/events/2025-11-27-Stewards-Meeting.html",
+            "featured": false,
+            "location_detail": "Online via Zoom"
+          },
+          {
+            "date": "2026-01-29",
+            "time": "6:00 PM",
+            "title": "Stewards Meeting",
+            "description": "A monthly meeting for current stewards to connect, share information, and build skills.",
+            "type": "Online Meeting",
+            "url": "/events/2026-01-29-Stewards-Meeting.html",
+            "featured": false,
+            "location_detail": "Online via Zoom"
+          },
+          {
+            "date": "2026-02-26",
+            "time": "6:00 PM",
+            "title": "Stewards Meeting",
+            "description": "A monthly meeting for current stewards to connect, share information, and build skills.",
+            "type": "Online Meeting",
+            "url": "/events/2026-02-26-Stewards-Meeting.html",
+            "featured": false,
+            "location_detail": "Online via Zoom"
+          },
+          {
+            "date": "2025-09-16",
+            "time": "10:00 AM - 2:00 PM",
+            "title": "University Day at PRAx",
+            "description": "Volunteer with us at our union booth! We'll be connecting with colleagues and building community at this campus-wide event.",
+            "type": "Volunteer",
+            "url": "/events/2025-09-16-University-Day.html",
+            "featured": false,
+            "location_detail": "Patricia Reser Center (PRAx)"
+          },
+          {
+            "date": "2025-09-17",
+            "time": "6:30 PM - 7:30 PM",
+            "title": "Communications Team Kick-off Meeting",
+            "description": "Welcome to the first-ever SEIU Local 083 Communications Team! This initial meeting launched our strategic focus on social media, physical media like zines, and narrative storytelling to build member power in bargaining.",
+            "type": "Volunteer",
+            "url": "/events/2025-09-17-Comms-Meeting.html",
+            "featured": false,
+            "location_detail": "Online via Zoom"
+          },
+          {
+            "date": "2025-09-10",
+            "time": "6:30 PM",
+            "title": "CAT Meeting",
+            "description": "Join our Contract Action Team meeting for bargaining updates and information to share with coworkers in your work area.",
+            "type": "Zoom Meeting",
+            "url": "/events/2025-09-10-CAT-Meeting.html",
+            "featured": false,
+            "location_detail": "Online via Zoom"
+          },
+          {
+            "date": "2025-09-13",
+            "time": "8:00 AM - 4:00 PM",
+            "title": "Bargaining Conference",
+            "description": "Volunteer with us at our union booth! We'll be connecting with colleagues and building community at this campus-wide event.",
+            "type": "Conference",
+            "url": "/events/2025-09-13-Bargaining-Conference.html",
+            "featured": false,
+            "location_detail": "Roth's Event Center"
+          },
+          {
+            "date": "2025-10-23",
+            "time": "6:00 PM - 8:00 PM",
+            "title": "Member & Family Bowling Night",
+            "description": "Members and their families gathered at Lanes & Games for bowling, food and community.",
+            "type": "Social Event",
+            "url": "/events/2025-10-23-Bowling.html",
+            "featured": true,
+            "location_detail": "Lanes & Games, MU Basement",
+            "calendar_link": "/events/ical/2025-10-23-Bowling.ics"
+          },
+          {
+            "date": "2025-09-09",
+            "time": "6:00 PM - 8:00 PM",
+            "title": "Executive Team Meeting",
+            "description": "Regularly scheduled meeting for the Local 083 Executive Team.",
+            "type": "Zoom Meeting",
+            "url": "/events/2025-09-09-Executive-Team-Meeting.html",
+            "featured": false,
+            "location_detail": "Online via Zoom"
+          },
+          {
+            "date": "2025-09-03",
+            "time": "6:30 PM - 8:00 PM",
+            "title": "CAT Meeting",
+            "description": "Contract Action Team meeting to plan and coordinate actions to support bargaining.",
+            "type": "Zoom Meeting",
+            "url": "/events/2025-09-03-CAT-Meeting.html",
+            "featured": false,
+            "location_detail": "Online via Zoom"
+          },
+          {
+            "date": "2025-09-03",
+            "time": "11:45 AM - 12:15 PM",
+            "title": "New Employee Orientation",
+            "description": "New OSU employees can attend this Zoom orientation on paid time to learn about our union, workplace rights and member resources.",
+            "type": "Orientation",
+            "url": "/events/2025-09-03-New-Employee-Orientation.html",
+            "featured": false,
+            "location_detail": "Online via Zoom"
+          },
+          {
+            "date": "2025-08-28",
+            "time": "6:00 PM - 7:30 PM",
+            "title": "Steward Meeting",
+            "description": "A monthly meeting for current stewards to connect, share information, and build skills.",
+            "type": "Online Meeting",
+            "url": "/events/2025-08-28-Steward-Meeting.html",
+            "featured": false,
+            "location_detail": "Online via Zoom"
+          },
+          {
+            "date": "2025-08-21",
+            "time": "12:00 PM - 1:00 PM",
+            "title": "Membership Meeting",
+            "description": "Monthly meeting with updates on bargaining, events, and more. Lunch provided!",
+            "type": "Hybrid",
+            "url": "/events/2025-08-21-Membership-Meeting.html",
+            "featured": false,
+            "location_detail": "Hybrid (Zoom and in-person)"
+          }
+        ];
 
-            const escapeHTML = window.Sentinel && window.Sentinel.escapeHTML
-                ? window.Sentinel.escapeHTML
-                : (str) => String(str || '').replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
+        const monthLabel = document.getElementById('month-label');
+        const calendarGrid = document.getElementById('calendar-grid');
+        const agendaList = document.getElementById('agenda-list');
+        const introCountNumber = document.getElementById('intro-count-number');
+        const introCountLabel = document.getElementById('intro-count-label');
+        const introDateList = document.getElementById('intro-date-list');
+        const monthView = document.getElementById('month-view');
+        const agendaView = document.getElementById('agenda-view');
+        const viewStage = document.getElementById('calendar-view-stage');
+        const monthViewButton = document.getElementById('month-view-button');
+        const agendaViewButton = document.getElementById('agenda-view-button');
+        const reduceViewMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+        const runtimeToday = new Date();
+        const defaultMonth = new Date(runtimeToday.getFullYear(), runtimeToday.getMonth(), 1);
+        let activeMonth = new Date(defaultMonth);
+        let activeCalendarView = 'month';
+        let calendarEvents = fallbackEvents;
 
-            const sanitizeUrl = (url) => {
-                if (window.Sentinel && typeof window.Sentinel.sanitizeUrl === 'function') {
-                    return window.Sentinel.sanitizeUrl(url);
-                }
-                if (!url) return '#';
-                const str = String(url).trim();
-                const lower = str.toLowerCase();
-                if (lower.startsWith('javascript:') || lower.startsWith('data:')) return '#';
-                return str;
-            };
+        const escapeHtml = (value = '') => String(value)
+            .replaceAll('&', '&amp;')
+            .replaceAll('<', '&lt;')
+            .replaceAll('>', '&gt;')
+            .replaceAll('"', '&quot;')
+            .replaceAll("'", '&#039;');
 
-            // --- Global Variables ---
-            const calendarContainer = document.getElementById('calendar-container');
-            const upcomingEventsContainer = document.getElementById('upcoming-events-container');
-            const stackedEventsContainer = document.getElementById('stacked-events-container');
-            const pastEventsContainer = document.getElementById('past-events-container');
-            let currentDate = new Date();
-            let eventsForCalendar = {};
+        const safeEventUrl = (value = '') => {
+            const url = String(value).trim();
+            return /^\/(?!\/)[A-Za-z0-9._~!$&'()*+,;=:@%/?#-]*$/.test(url) ? url : '#';
+        };
 
-            // --- Main Function to Load and Render All Event Data ---
-            async function loadEvents() {
-                try {
-                    const response = await fetch('events/events.json?v=2026-07-16-membership');
-                    if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-                    const allEvents = await response.json();
+        const eventClass = (type = '') => {
+            const normalized = type.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+            return ['membership-meeting', 'zoom-meeting', 'cat-meeting', 'rally', 'social-event'].includes(normalized)
+                ? normalized
+                : 'default-event';
+        };
 
-                    processAndRenderEvents(allEvents);
-                    const today = new Date();
-                    const todayString = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
-                    safeCapture('events_loaded', {
-                        upcoming_count: allEvents.filter(e => e.date >= todayString).length,
-                        past_count: allEvents.filter(e => e.date < todayString).length
-                    });
-                } catch (error) {
-                    console.error('Error fetching or processing events:', error);
-                    if(upcomingEventsContainer) upcomingEventsContainer.innerHTML = '<p class="text-center text-red-500 col-span-full">Could not load events. Please try again later.</p>';
-                }
+        const eventIcon = (type = '') => ({
+            'membership-meeting': '◎',
+            'zoom-meeting': '▣',
+            'cat-meeting': '⚡',
+            'rally': '✊',
+            'social-event': '♥',
+            'default-event': '•'
+        })[eventClass(type)];
+
+        const shortTime = (time = '') => {
+            if (time.startsWith('12:00 PM')) return 'Noon';
+            if (time.toLowerCase().startsWith('evening')) return 'Evening · Details coming soon';
+            return time.replace(' PT', '');
+        };
+
+        const agendaMeta = (event) => {
+            const rawTime = event.time || '';
+            const location = event.location_detail || 'Details coming soon';
+            const time = rawTime === '12:00 PM - 1:00 PM'
+                ? 'Noon–1 p.m.'
+                : rawTime.toLowerCase().startsWith('evening')
+                    ? 'Evening'
+                    : rawTime.replace(' PT', '');
+
+            if (time === 'Evening' && location.toLowerCase().includes('details coming soon')) {
+                return 'Evening · Details coming soon';
             }
-            
-            function processAndRenderEvents(allEvents) {
-                const today = new Date();
-                const todayString = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
 
-                const thirtyDaysFromNow = new Date(today);
-                thirtyDaysFromNow.setDate(today.getDate() + 30);
-                const thirtyDaysFromNowString = `${thirtyDaysFromNow.getFullYear()}-${String(thirtyDaysFromNow.getMonth() + 1).padStart(2, '0')}-${String(thirtyDaysFromNow.getDate()).padStart(2, '0')}`;
+            return `${time} · ${location}`;
+        };
 
-                const allUpcomingEvents = allEvents
-                    .filter(event => event.date >= todayString)
-                    // ⚡ Bolt: Use fast string comparison instead of new Date() in sort loop (~25x faster)
-                    .sort((a, b) => a.date > b.date ? 1 : (a.date < b.date ? -1 : 0));
+        const eventsForMonth = (year, month) => calendarEvents
+            .filter((event) => {
+                const [eventYear, eventMonth] = event.date.split('-').map(Number);
+                return eventYear === year && eventMonth === month + 1;
+            })
+            .sort((a, b) => a.date.localeCompare(b.date));
 
-                const displayNowEvents = allUpcomingEvents.filter(event => {
-                    return event.featured || event.date <= thirtyDaysFromNowString;
-                });
+        const eventChips = (events) => events.map((event) => `
+            <a class="event-chip ${eventClass(event.type)}" href="${escapeHtml(safeEventUrl(event.url))}" aria-label="${escapeHtml(event.title)}, ${escapeHtml(shortTime(event.time))}">
+                <span class="event-time">${escapeHtml(shortTime(event.time))}</span>
+                <span class="event-chip-title"><span class="event-icon" aria-hidden="true">${eventIcon(event.type)}</span><span>${escapeHtml(event.title)}</span></span>
+            </a>
+        `).join('');
 
-                const stackedFutureEvents = allUpcomingEvents.filter(event => {
-                    return !event.featured && event.date > thirtyDaysFromNowString;
-                });
+        const renderCalendar = () => {
+            const year = activeMonth.getFullYear();
+            const month = activeMonth.getMonth();
+            const label = activeMonth.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+            const firstWeekday = new Date(year, month, 1).getDay();
+            const daysInMonth = new Date(year, month + 1, 0).getDate();
+            const daysInPreviousMonth = new Date(year, month, 0).getDate();
+            const totalCells = Math.ceil((firstWeekday + daysInMonth) / 7) * 7;
+            const currentEvents = eventsForMonth(year, month);
+            const dayCells = [];
 
-                const pastEvents = allEvents
-                    .filter(event => event.date < todayString)
-                    // ⚡ Bolt: Use fast string comparison instead of new Date() in sort loop (~25x faster)
-                    .sort((a, b) => a.date < b.date ? 1 : (a.date > b.date ? -1 : 0));
+            for (let cell = 0; cell < totalCells; cell += 1) {
+                const monthDay = cell - firstWeekday + 1;
+                let displayDay = monthDay;
+                let cellDate = new Date(year, month, monthDay);
+                let outside = false;
 
-                renderUpcomingEvents(displayNowEvents);
-                renderStackedEvents(stackedFutureEvents);
-                renderPastEvents(pastEvents);
-                
-                eventsForCalendar = createCalendarEventObject(allEvents);
-                generateCalendar(currentDate.getMonth(), currentDate.getFullYear());
-            }
-
-            // --- Rendering Functions ---
-            function renderUpcomingEvents(events) {
-                if (!upcomingEventsContainer) return;
-                if (events.length === 0) {
-                    upcomingEventsContainer.innerHTML = `
-                        <div class="col-span-full flex flex-col items-center justify-center py-16 bg-white rounded-xl border border-border-color border-dashed">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-gray-400 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                            </svg>
-                            <h3 class="text-xl font-bold text-brand-purple-dark mb-2">No upcoming events</h3>
-                            <p class="text-text-secondary mb-6 text-center max-w-md">There are no events scheduled for the next 30 days.</p>
-                            <a href="#past-events" class="inline-block px-6 py-3 border-2 border-brand-purple text-brand-purple font-bold rounded-lg hover:bg-brand-purple hover:text-white transition-colors">View Past Events</a>
-                        </div>
-                    `;
-                    return;
+                if (monthDay < 1) {
+                    displayDay = daysInPreviousMonth + monthDay;
+                    cellDate = new Date(year, month - 1, displayDay);
+                    outside = true;
+                } else if (monthDay > daysInMonth) {
+                    displayDay = monthDay - daysInMonth;
+                    cellDate = new Date(year, month + 1, displayDay);
+                    outside = true;
                 }
 
-                // ⚡ Bolt: Cache Intl.DateTimeFormat objects to drastically reduce instantiation overhead
-                // ⚡ Bolt: Format dates only for the sliced items to avoid expensive operations on hidden entries
-                const monthShortFormatter = new Intl.DateTimeFormat('en-US', { month: 'short' });
+                const dateKey = [
+                    cellDate.getFullYear(),
+                    String(cellDate.getMonth() + 1).padStart(2, '0'),
+                    String(cellDate.getDate()).padStart(2, '0')
+                ].join('-');
+                const isToday = !outside
+                    && cellDate.getFullYear() === runtimeToday.getFullYear()
+                    && cellDate.getMonth() === runtimeToday.getMonth()
+                    && cellDate.getDate() === runtimeToday.getDate();
+                const isWeekend = cellDate.getDay() === 0 || cellDate.getDay() === 6;
+                const dayEvents = outside ? [] : currentEvents.filter((event) => event.date === dateKey);
+                const fullDate = cellDate.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' });
 
-                upcomingEventsContainer.innerHTML = events.map(event => {
-                    event.parsedDate = new Date(event.date.replace(/-/g, '/'));
-                    const month = monthShortFormatter.format(event.parsedDate).toUpperCase();
-                    const day = event.parsedDate.getDate().toString().padStart(2, '0');
-                    const featuredClass = event.featured ? 'border-2 border-brand-purple shadow-lg' : 'border border-border-color';
-                    const eventId = sanitizeUrl(event.url).split('/').pop().replace(/\.html$/, '').toLowerCase();
-                    
-                    let detailsHtml = `<div class="mt-4 flex flex-wrap items-center gap-4"><a href="${escapeHTML(sanitizeUrl(event.url))}" class="font-semibold text-brand-purple hover:underline" data-ph-event="event_details_click" data-ph-label="${escapeHTML(event.title)}" data-ph-metadata='{"section":"upcoming","event_id":"${escapeHTML(eventId)}"}'>View Details &rarr;</a>`;
-                    if (event.calendar_link) {
-                        detailsHtml += `<a href="${escapeHTML(sanitizeUrl(event.calendar_link))}" download class="btn btn-outline !py-2 !px-4 text-sm">Add to Calendar</a>`;
-                    }
-                    detailsHtml += '</div>';
+                dayCells.push(`
+                    <div class="calendar-day${outside ? ' outside' : ''}${isToday ? ' today' : ''}${isWeekend ? ' weekend' : ''}" role="gridcell" aria-label="${escapeHtml(fullDate)}${dayEvents.length ? `, ${dayEvents.length} event${dayEvents.length === 1 ? '' : 's'}` : ''}">
+                        <span class="day-number">${displayDay}</span>
+                        ${eventChips(dayEvents)}
+                    </div>
+                `);
+            }
 
-                    if (event.location_detail && event.time) {
-                        detailsHtml = `<p class="text-text-secondary mt-2">${escapeHTML(event.time)} | ${escapeHTML(event.location_detail)}</p>${detailsHtml}`;
-                    } else if (event.time) {
-                         detailsHtml = `<p class="text-text-secondary mt-2">${escapeHTML(event.time)}</p>${detailsHtml}`;
-                    }
+            const calendarRows = [];
+            for (let index = 0; index < dayCells.length; index += 7) {
+                calendarRows.push(`<div class="calendar-row" role="row">${dayCells.slice(index, index + 7).join('')}</div>`);
+            }
 
+            monthLabel.textContent = label;
+            calendarGrid.innerHTML = `
+                <div class="calendar-row" role="row">
+                    <div class="weekday" role="columnheader">Sun</div>
+                    <div class="weekday" role="columnheader">Mon</div>
+                    <div class="weekday" role="columnheader">Tue</div>
+                    <div class="weekday" role="columnheader">Wed</div>
+                    <div class="weekday" role="columnheader">Thu</div>
+                    <div class="weekday" role="columnheader">Fri</div>
+                    <div class="weekday" role="columnheader">Sat</div>
+                </div>
+                ${calendarRows.join('')}
+            `;
+
+            const monthName = activeMonth.toLocaleDateString('en-US', { month: 'long' });
+            introCountNumber.textContent = String(currentEvents.length);
+            introCountLabel.textContent = `${currentEvents.length === 1 ? 'event' : 'events'} announced in ${monthName}`;
+
+            if (currentEvents.length) {
+                const visibleEvents = currentEvents.slice(0, 2);
+                const remainingEvents = currentEvents.length - visibleEvents.length;
+                introDateList.innerHTML = visibleEvents.map((event) => {
+                    const eventDate = new Date(`${event.date}T12:00:00`);
+                    const weekday = eventDate.toLocaleDateString('en-US', { weekday: 'short' });
                     return `
-                        <div id="event-${escapeHTML(event.date)}" class="bg-white p-6 rounded-xl ${featuredClass} flex flex-col md:flex-row gap-6 items-start">
-                            <div class="flex-shrink-0 text-center w-full md:w-20">
-                                <p class="text-brand-purple font-bold text-lg">${month}</p>
-                                <p class="text-4xl font-bold text-brand-purple-dark">${day}</p>
-                            </div>
-                            <div class="flex-grow w-full">
-                                <div class="flex flex-col sm:flex-row justify-between items-start mb-2">
-                                    <h3 class="text-2xl font-bold mb-2 sm:mb-0">${escapeHTML(event.title)}</h3>
-                                    <div class="bg-brand-purple-light text-brand-purple-dark font-bold rounded-full px-3 py-1 text-sm whitespace-nowrap self-start">${escapeHTML(event.type)}</div>
-                                </div>
-                                <p class="text-text-secondary">${escapeHTML(event.description)}</p>
-                                ${detailsHtml}
+                        <div class="glance-date ${eventClass(event.type)}">
+                            <strong>${eventDate.getDate()}</strong>
+                            <div class="glance-date-copy">
+                                <small>${escapeHtml(weekday)} · ${escapeHtml(monthName)}</small>
+                                <span>${eventIcon(event.type)} ${escapeHtml(event.type || event.title)}</span>
                             </div>
                         </div>
                     `;
-                }).join('');
+                }).join('') + (remainingEvents > 0 ? `<span class="glance-more">+${remainingEvents} more in the calendar</span>` : '');
+            } else {
+                introDateList.innerHTML = '<span class="glance-empty">No dates have been announced for this month yet.</span>';
+            }
+            renderAgenda(currentEvents);
+        };
+
+        const renderAgenda = (events) => {
+            if (!events.length) {
+                agendaList.innerHTML = '<p class="empty-month">No Local 083 events are currently listed for this month. Check back as dates are confirmed.</p>';
+                return;
             }
 
-            function renderStackedEvents(events) {
-                if (!stackedEventsContainer) return;
-                const moreEventsSection = document.getElementById('more-events');
-
-                if (events.length === 0) {
-                    if (moreEventsSection) moreEventsSection.classList.add('hidden');
-                    return;
-                }
-                
-                if (moreEventsSection) moreEventsSection.classList.remove('hidden');
-
-                // ⚡ Bolt: Cache Intl.DateTimeFormat objects to drastically reduce instantiation overhead
-                // ⚡ Bolt: Format dates only for the sliced items to avoid expensive operations on hidden entries
-                const dateLongFormatter = new Intl.DateTimeFormat('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
-
-                stackedEventsContainer.innerHTML = events.map(event => {
-                    event.parsedDate = new Date(event.date.replace(/-/g, '/'));
-                    const formattedDate = dateLongFormatter.format(event.parsedDate);
-
-                    let calendarButton = '';
-                    if (event.calendar_link) {
-                        calendarButton = `<a href="${escapeHTML(sanitizeUrl(event.calendar_link))}" download class="btn btn-outline !py-2 !px-4 text-sm">Add to Calendar</a>`;
-                    }
-
-                    return `
-                        <div id="event-${escapeHTML(event.date)}" class="bg-white p-6 rounded-xl border border-border-color shadow-md transition-shadow duration-300 hover:shadow-xl focus-within:shadow-xl">
-                            <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
-                                <div class="text-center sm:text-left">
-                                     <h3 class="text-2xl font-bold text-brand-purple-dark">${escapeHTML(event.title)}</h3>
-                                     <p class="font-semibold text-text-secondary">${escapeHTML(formattedDate)}</p>
-                                </div>
-                                <div class="flex items-center gap-4">
-                                    <a href="${escapeHTML(sanitizeUrl(event.url))}" class="btn btn-outline" data-ph-event="event_details_click" data-ph-label="${escapeHTML(event.title)}" data-ph-metadata='{"section":"stacked","event_id":"${escapeHTML(sanitizeUrl(event.url).split('/').pop().replace(/\.html$/, '').toLowerCase())}"}'>View Details &rarr;</a>
-                                    ${calendarButton}
-                                </div>
-                            </div>
+            agendaList.innerHTML = events.map((event) => {
+                const date = new Date(`${event.date}T12:00:00`);
+                const weekday = date.toLocaleDateString('en-US', { weekday: 'short' });
+                const day = date.getDate();
+                const theme = eventClass(event.type);
+                return `
+                    <article class="agenda-card ${theme}">
+                        <div class="agenda-date"><span>${escapeHtml(weekday)}</span><strong>${day}</strong></div>
+                        <div class="agenda-copy">
+                            <span class="agenda-type"><span class="event-icon" aria-hidden="true">${eventIcon(event.type)}</span>${escapeHtml(event.type || 'Local 083 event')}</span>
+                            <h3>${escapeHtml(event.title)}</h3>
+                            <p>${escapeHtml(agendaMeta(event))}</p>
                         </div>
-                    `;
-                }).join('');
+                        <a class="agenda-link" href="${escapeHtml(safeEventUrl(event.url))}" aria-label="View ${escapeHtml(event.title)} details">View event details →</a>
+                    </article>
+                `;
+            }).join('');
+        };
+
+        const setView = (view) => {
+            if (view === activeCalendarView || viewStage.classList.contains('is-transitioning')) return;
+
+            const showMonth = view === 'month';
+            const fromPanel = activeCalendarView === 'month' ? monthView : agendaView;
+            const toPanel = showMonth ? monthView : agendaView;
+
+            monthViewButton.setAttribute('aria-pressed', String(showMonth));
+            agendaViewButton.setAttribute('aria-pressed', String(!showMonth));
+            activeCalendarView = view;
+
+            if (reduceViewMotion.matches) {
+                fromPanel.hidden = true;
+                fromPanel.setAttribute('aria-hidden', 'true');
+                fromPanel.inert = true;
+                toPanel.hidden = false;
+                toPanel.setAttribute('aria-hidden', 'false');
+                toPanel.inert = false;
+                return;
             }
 
+            const startHeight = fromPanel.offsetHeight;
+            viewStage.style.height = `${startHeight}px`;
+            viewStage.classList.add('is-transitioning');
+            fromPanel.classList.add('from-panel');
+            toPanel.hidden = false;
+            toPanel.classList.add('is-entering');
+            toPanel.setAttribute('aria-hidden', 'false');
+            toPanel.inert = false;
+            fromPanel.setAttribute('aria-hidden', 'true');
+            fromPanel.inert = true;
+            const endHeight = toPanel.offsetHeight;
 
-            function renderPastEvents(events) {
-                if (!pastEventsContainer) return;
-                if (events.length === 0) {
-                    pastEventsContainer.innerHTML = `
-                        <div class="col-span-full flex flex-col items-center justify-center py-12 px-6 bg-white rounded-xl border border-border-color border-dashed">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-gray-400 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                            </svg>
-                            <h3 class="text-xl font-bold text-brand-purple-dark mb-2">No archived events</h3>
-                            <p class="text-text-secondary text-center max-w-md">There are no archived events available at this time.</p>
-                        </div>
-                    `;
-                    return;
-                }
-
-                // ⚡ Bolt: Cache Intl.DateTimeFormat objects to drastically reduce instantiation overhead
-                // ⚡ Bolt: Format dates only for the sliced items to avoid expensive operations on hidden entries
-                const monthYearFormatter = new Intl.DateTimeFormat('default', { month: 'long', year: 'numeric' });
-
-                const groupedByMonth = events.reduce((acc, event) => {
-                    // ⚡ Bolt: Extract YYYY-MM directly from string to avoid parsing new Date() per event
-                    const yearMonth = event.date.substring(0, 7);
-                    if (!acc[yearMonth]) acc[yearMonth] = [];
-                    acc[yearMonth].push(event);
-                    return acc;
-                }, {});
-
-                pastEventsContainer.innerHTML = Object.entries(groupedByMonth).map(([yearMonth, monthEvents]) => {
-                    // ⚡ Bolt: Format the month group label once per group instead of once per event
-                    const monthYearDate = new Date(yearMonth.replace('-', '/') + '/01');
-                    const monthYear = monthYearFormatter.format(monthYearDate);
-
-                    const eventListItems = monthEvents.map(event => `
-                        <li class="py-2">
-                            <strong>${parseInt(event.date.substring(8, 10), 10)}:</strong> ${escapeHTML(event.title)}
-                            ${event.url !== '#' ? `<a href="${escapeHTML(sanitizeUrl(event.url))}" class="font-semibold text-brand-purple hover:underline ml-2" data-ph-event="event_details_click" data-ph-label="${escapeHTML(event.title)}" data-ph-metadata='{"section":"past","event_id":"${escapeHTML(sanitizeUrl(event.url).split('/').pop().replace(/\.html$/, '').toLowerCase())}"}'>View Details</a>` : ''}
-                        </li>
-                    `).join('');
-
-                    return `
-                        <details class="bg-white rounded-xl border border-border-color group transition-shadow duration-300 open:shadow-md">
-                            <summary class="font-semibold text-lg cursor-pointer flex justify-between items-center p-6 transition-colors group-hover:bg-gray-50">
-                                <span>${escapeHTML(monthYear)}</span>
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-brand-purple transform group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-                                </svg>
-                            </summary>
-                            <div class="p-6 pt-0 text-text-secondary border-t border-border-color">
-                                <ul class="divide-y divide-border-color">
-                                    ${eventListItems}
-                                </ul>
-                            </div>
-                        </details>
-                    `;
-                }).join('');
-            }
-
-            function createCalendarEventObject(allEvents) {
-                return allEvents.reduce((acc, event) => {
-                    const month = parseInt(event.date.substring(5, 7), 10) - 1;
-                    const day = parseInt(event.date.substring(8, 10), 10);
-                    if (!acc[month]) acc[month] = [];
-                    if (!acc[month].includes(day)) acc[month].push(day);
-                    return acc;
-                }, {});
-            }
-
-            // --- Calendar Generation ---
-            // ⚡ Bolt: Cache Intl.DateTimeFormat objects to drastically reduce instantiation overhead
-            const calendarMonthFormatter = new Intl.DateTimeFormat('default', { month: 'long' });
-
-            function generateCalendar(month, year) {
-                if (!calendarContainer) return;
-                calendarContainer.innerHTML = '';
-                const today = new Date();
-                const firstDay = new Date(year, month, 1);
-                const lastDay = new Date(year, month + 1, 0);
-                const daysInMonth = lastDay.getDate();
-                const startingDay = firstDay.getDay();
-
-                const monthName = calendarMonthFormatter.format(firstDay);
-
-                let html = `
-                    <div class="text-center">
-                        <div class="flex justify-between items-center mb-4">
-                            <button id="prev-month" aria-label="Previous month" class="p-2 rounded-full hover:bg-gray-100">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
-                            </button>
-                            <h3 class="text-2xl font-bold">${monthName} ${year}</h3>
-                            <button id="next-month" aria-label="Next month" class="p-2 rounded-full hover:bg-gray-100">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-                            </button>
-                        </div>
-                        <div class="grid grid-cols-7 gap-2 text-center text-sm text-text-secondary font-semibold">
-                            <div>S</div><div>M</div><div>T</div><div>W</div><div>T</div><div>F</div><div>S</div>
-                        </div>
-                        <div class="grid grid-cols-7 gap-2 mt-2">`;
-                
-                for (let i = 0; i < startingDay; i++) html += `<div></div>`;
-
-                for (let i = 1; i <= daysInMonth; i++) {
-                    let dayClasses = 'calendar-day w-9 h-9 flex items-center justify-center rounded-full';
-                    let dayAttributes = '';
-                    if (i === today.getDate() && month === today.getMonth() && year === today.getFullYear()) {
-                        dayClasses += ' is-today';
-                    } 
-                    if (eventsForCalendar[month] && eventsForCalendar[month].includes(i)) {
-                         dayClasses += ' has-event cursor-pointer hover:bg-violet-200 transition-colors';
-                         const dateStr = `${year}-${String(month + 1).padStart(2, '0')}-${String(i).padStart(2, '0')}`;
-                         dayAttributes = `data-date="${dateStr}" role="button" tabindex="0" aria-label="View events for ${monthName} ${i}"`;
-                    }
-                    html += `<div class="${dayClasses}" ${dayAttributes}>${i}</div>`;
-                }
-
-                html += `</div></div>`;
-                calendarContainer.innerHTML = html;
-
-                document.getElementById('prev-month').addEventListener('click', () => {
-                    currentDate.setMonth(currentDate.getMonth() - 1);
-                    safeCapture('events_calendar_month_change', { month: currentDate.getMonth() + 1, year: currentDate.getFullYear() });
-                    generateCalendar(currentDate.getMonth(), currentDate.getFullYear());
-                });
-                document.getElementById('next-month').addEventListener('click', () => {
-                    currentDate.setMonth(currentDate.getMonth() + 1);
-                    safeCapture('events_calendar_month_change', { month: currentDate.getMonth() + 1, year: currentDate.getFullYear() });
-                    generateCalendar(currentDate.getMonth(), currentDate.getFullYear());
-                });
-            }
-
-            // --- Interactive Calendar Logic ---
-            function highlightEvent(dateStr) {
-                document.querySelectorAll('.highlight-event').forEach(el => el.classList.remove('highlight-event'));
-
-                const safeDateStr = CSS.escape(dateStr);
-                let targetEvent = document.querySelector(`#upcoming-events-container #event-${safeDateStr}`);
-                if (!targetEvent) {
-                    targetEvent = document.querySelector(`#stacked-events-container #event-${safeDateStr}`);
-                }
-
-                if (targetEvent) {
-                    targetEvent.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                    targetEvent.classList.add('highlight-event');
-                    setTimeout(() => {
-                        targetEvent.classList.remove('highlight-event');
-                    }, 2500);
-                }
-            }
-
-            calendarContainer.addEventListener('click', (e) => {
-                const dayEl = e.target.closest('.calendar-day');
-                if (dayEl && dayEl.dataset.date) {
-                    highlightEvent(dayEl.dataset.date);
-                    safeCapture('events_calendar_day_click', { date: dayEl.dataset.date });
-                }
+            requestAnimationFrame(() => {
+                viewStage.style.height = `${endHeight}px`;
+                fromPanel.classList.add('is-leaving');
+                toPanel.classList.remove('is-entering');
             });
 
-            calendarContainer.addEventListener('keydown', (e) => {
-                if (e.key === 'Enter' || e.key === ' ') {
-                    const dayEl = e.target.closest('.calendar-day');
-                    if (dayEl && dayEl.dataset.date) {
-                        e.preventDefault();
-                        highlightEvent(dayEl.dataset.date);
-                        safeCapture('events_calendar_day_click', { date: dayEl.dataset.date });
-                    }
+            window.setTimeout(() => {
+                fromPanel.hidden = true;
+                fromPanel.classList.remove('from-panel', 'is-leaving');
+                toPanel.classList.remove('is-entering');
+                viewStage.classList.remove('is-transitioning');
+                viewStage.style.height = 'auto';
+            }, 430);
+        };
+
+        document.getElementById('previous-month').addEventListener('click', () => {
+            activeMonth = new Date(activeMonth.getFullYear(), activeMonth.getMonth() - 1, 1);
+            renderCalendar();
+        });
+
+        document.getElementById('next-month').addEventListener('click', () => {
+            activeMonth = new Date(activeMonth.getFullYear(), activeMonth.getMonth() + 1, 1);
+            renderCalendar();
+        });
+
+        document.getElementById('current-month').addEventListener('click', () => {
+            activeMonth = new Date(defaultMonth);
+            renderCalendar();
+        });
+
+        monthViewButton.addEventListener('click', () => setView('month'));
+        agendaViewButton.addEventListener('click', () => setView('agenda'));
+
+        renderCalendar();
+
+        fetch('/events/events.json')
+            .then((response) => {
+                if (!response.ok) throw new Error(`Events request failed with ${response.status}`);
+                return response.json();
+            })
+            .then((payload) => {
+                const events = Array.isArray(payload) ? payload : payload.events;
+                if (Array.isArray(events)) {
+                    calendarEvents = events.filter((event) => event.date && event.title && event.url);
+                    renderCalendar();
                 }
+            })
+            .catch(() => {
+                calendarEvents = fallbackEvents;
             });
 
-            // --- Mobile Menu Toggle ---
-            const mobileMenuButton = document.getElementById('mobile-menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
-            const navLinks = document.querySelectorAll('#mobile-menu a');
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
 
-            mobileMenuButton.addEventListener('click', () => {
-                const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
-                mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
-                mobileMenu.classList.toggle('hidden');
+        mobileMenuButton.addEventListener('click', () => {
+            const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+            mobileMenuButton.setAttribute('aria-expanded', String(!isExpanded));
+            mobileMenuButton.setAttribute('aria-label', isExpanded ? 'Open menu' : 'Close menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        document.querySelectorAll('#mobile-menu a').forEach((link) => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenuButton.setAttribute('aria-expanded', 'false');
+                mobileMenuButton.setAttribute('aria-label', 'Open menu');
             });
+        });
 
-            navLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    mobileMenu.classList.add('hidden');
-                    mobileMenuButton.setAttribute('aria-expanded', 'false');
-                });
-            });
-
-            // --- Initial Load ---
-            loadEvents();
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape' && mobileMenuButton.getAttribute('aria-expanded') === 'true') {
+                mobileMenu.classList.add('hidden');
+                mobileMenuButton.setAttribute('aria-expanded', 'false');
+                mobileMenuButton.setAttribute('aria-label', 'Open menu');
+                mobileMenuButton.focus();
+            }
         });
     </script>
 </body>

@@ -5,14 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Test pages and NEO resources for Local 083, SEIU 503 at Oregon State University.">
     <meta name="author" content="SEIU Local 503 at OSU">
+    <meta name="robots" content="noindex, nofollow">
     <title>Test Pages - Local 083</title>
-    <style>html{visibility:hidden;}html.tw-ready{visibility:visible;}</style>
-    <script src="https://cdn.tailwindcss.com" onload="document.documentElement.classList.add('tw-ready')"></script>
+    <link rel="stylesheet" href="/styles/tailwind.css">
     <link rel="icon" href="/images/logo.png" type="image/png">
     <link rel="apple-touch-icon" href="/images/logo.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Lora:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles/fonts.css">
     <style>
         :root {
             --brand-purple-dark: #4C1D95;
@@ -58,22 +56,7 @@
              @apply bg-white text-brand-purple border-2 border-brand-purple hover:bg-brand-purple hover:text-white;
         }
 
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'brand-purple-dark': 'var(--brand-purple-dark)',
-                        'brand-purple': 'var(--brand-purple)',
-                        'brand-purple-light': 'var(--brand-purple-light)',
-                        'brand-dark': 'var(--brand-dark)',
-                        'brand-light': 'var(--brand-light)',
-                        'text-primary': 'var(--text-primary)',
-                        'text-secondary': 'var(--text-secondary)',
-                        'border-color': 'var(--border-color)',
-                    }
-                }
-            }
-        }
+
     </style>
     <link rel="canonical" href="https://www.local083.org/test-pages.html">
     <meta property="og:type" content="website">
@@ -134,10 +117,6 @@
             <h2 class="text-3xl font-bold">NEO and SEO spin-offs</h2>
             <p class="mt-2 text-sm text-text-secondary">Review draft content - not final/public.</p>
             <div class="mt-6 grid md:grid-cols-2 gap-6">
-                <a href="/test-pages/2026-bargaining-redesign.html" class="block bg-gray-50 rounded-xl border border-border-color p-6 hover:shadow-md transition-shadow">
-                    <h3 class="text-xl font-bold">2026 Bargaining Redesign</h3>
-                    <p class="mt-2 text-text-secondary">Staged campaign hub redesign matching the SEIU bargaining mockup with hero, feature grid, updates, dates, and action panel.</p>
-                </a>
                 <a href="/test-pages/local083-welcome.html" class="block bg-gray-50 rounded-xl border border-border-color p-6 hover:shadow-md transition-shadow">
                     <h3 class="text-xl font-bold">Welcome Hub</h3>
                     <p class="mt-2 text-text-secondary">Evergreen onboarding entrypoint with links to welcome resources and the personalized NEO guide.</p>
@@ -178,7 +157,7 @@
                 <!-- Column 1: About the Union -->
                 <div class="md:col-span-2 lg:col-span-1">
                     <div class="flex items-center mb-4">
-                        <img src="/images/logo.png" alt="SEIU 503 Logo" class="h-12 w-12 mr-3 bg-white p-1 rounded">
+                        <img src="/images/logo.png" alt="SEIU 503 Logo" class="h-12 w-12 mr-3 bg-white p-1 rounded" width="48" height="48">
                         <div>
                             <h3 class="text-xl font-bold">SEIU Local 503</h3>
                             <p class="text-text-secondary text-sm">Oregon State University</p>
@@ -186,7 +165,7 @@
                     </div>
                     <p class="text-text-secondary leading-relaxed">Representing the classified employees of Oregon State University. We fight for fair contracts, defend workplace rights, and build a united community.</p>
                 </div>
-    
+
                 <!-- Column 2: Quick Links -->
                 <div>
                     <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase">Quick Links</h4>
@@ -197,7 +176,7 @@
                         <li><a href="/leadership.html" class="text-text-secondary hover:text-brand-purple transition-colors">Leadership</a></li>
                     </ul>
                 </div>
-    
+
                 <!-- Column 3: Resources -->
                 <div>
                     <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase"><a href="/resources.html" class="hover:text-brand-purple transition-colors">Resources</a></h4>
@@ -208,7 +187,7 @@
                         <li><a href="/resources/weingarten-rights.html" class="text-text-secondary hover:text-brand-purple transition-colors">Weingarten Rights</a></li>
                     </ul>
                 </div>
-    
+
                 <!-- Column 4: Contact -->
                 <div>
                     <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase"><a href="/contact.html" class="hover:text-brand-purple transition-colors">Contact Us</a></h4>
@@ -224,7 +203,7 @@
                     </ul>
                 </div>
             </div>
-    
+
             <!-- Bottom Bar -->
             <div class="mt-10 pt-8 border-t border-gray-700 text-center space-y-2">
                 <p class="text-text-secondary text-sm">&copy; 2026 SEIU Local 503, Sublocal 083. All rights reserved.</p>

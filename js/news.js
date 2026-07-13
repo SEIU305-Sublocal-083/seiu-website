@@ -51,14 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const status = getArticleStatus(article);
         const publishedAt = article.publishedAt || article.createdAt;
 
-        if (status === 'draft' || status === 'review') {
-            return false;
-        }
-
-        if (status === 'scheduled') {
-            // ⚡ Bolt: Use string comparison for dates instead of parsing new Date() (~50x faster)
-            return Boolean(publishedAt) && publishedAt <= todayString;
-        }
+        if (status !== 'published') return false;
 
         // ⚡ Bolt: Use string comparison for dates instead of parsing new Date() (~50x faster)
         return !publishedAt || publishedAt <= todayString;

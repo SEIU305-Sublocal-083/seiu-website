@@ -1,10 +1,16 @@
 # SEIU Local 503 @ OSU Website
 
-This repository contains the source code for the SEIU Local 503 at Oregon State University website. The site is built with HTML, Tailwind CSS, and a small amount of JavaScript to dynamically load events and news from JSON files.
+This repository contains the source code for the SEIU Local 503 at Oregon State University website. It is a static HTML site with Tailwind CSS and small, progressively enhanced JavaScript features. News and event data live in JSON; a lightweight build command writes crawlable HTML fallbacks, RSS feeds, structured data, the shared public-page shell, the sitemap, and compiled CSS.
 
 ## How it Works
 
-The website uses a simple, flat-file structure. There is no complex build process or static site generator. Content is managed by editing HTML files and JSON data.
+The website uses a simple, flat-file structure. There is no application server or framework. Content is managed by editing HTML files and JSON data, then running one deterministic build command:
+
+```bash
+python3 scripts/build_site.py
+```
+
+The generated files are committed to the repository so the deployed site stays fully static and works even when JavaScript is unavailable. The same command also synchronizes the canonical header and footer across every public page. GitHub Actions reruns the build and fails if committed output has drifted from its sources.
 
 ### Key Directories
 
@@ -32,7 +38,7 @@ To add a new event, you need to do three things:
 2.  **Create an iCalendar (`.ics`) file** in the `/events/ical` directory. This allows users to add the event to their calendar.
 3.  **Add an entry to `events/events.json`**.
 
-The `index.html` and `events.html` pages will automatically display upcoming events based on the data in `events.json`.
+The build updates the event listings on `index.html` and `events.html`, their static fallbacks and structured data from `events.json`. Browser JavaScript can then enhance those committed fallbacks.
 
 #### 1. Event Naming Convention
 
@@ -60,22 +66,29 @@ To make an "Add to Calendar" link for your event, follow these steps:
 
 #### 3. `events.json` Structure
 
-Each event in `events.json` is an object with the following properties:
+`events.json` has an explicit editorial snapshot date and an array of event objects:
 
 ```json
 {
-  "date": "YYYY-MM-DD",
-  "time": "HH:MM AM/PM",
-  "title": "Event Title",
-  "description": "A brief description of the event.",
-  "type": "Event Type (e.g., Meeting, Social)",
-  "url": "/events/YYYY-MM-DD-short-title.html",
-  "featured": false,
-  "location_detail": "Location of the event",
-  "calendar_link": "/events/ical/YYYY-MM-DD-short-title.ics"
+  "asOf": "YYYY-MM-DD",
+  "events": [
+    {
+      "date": "YYYY-MM-DD",
+      "time": "HH:MM AM/PM",
+      "title": "Event Title",
+      "description": "A brief description of the event.",
+      "type": "Event Type (e.g., Meeting, Social)",
+      "url": "/events/YYYY-MM-DD-short-title.html",
+      "featured": false,
+      "location_detail": "Location of the event",
+      "calendar_link": "/events/ical/YYYY-MM-DD-short-title.ics"
+    }
+  ]
 }
 ```
 
+*   `asOf`: The date the committed calendar snapshot should consider current. Advance it when publishing calendar changes so the static homepage and events page surface the nearest relevant announced events. Keeping this value in the data file makes builds repeatable on every machine.
+*   `events`: The complete array of event records.
 *   `date`: The date of the event in `YYYY-MM-DD` format.
 *   `time`: The time of the event.
 *   `title`: The title of the event.
@@ -134,6 +147,30 @@ Each news item in `news.json` is an object with the following properties:
 *   `updatedAt`: The date the story was last updated in `YYYY-MM-DD` format.
 *   `featured`: Set to `true` to highlight the news story.
 
+### Rebuild generated files
+
+After changing `events/events.json`, `news/news.json`, a public page, or Tailwind classes, run:
+
+```bash
+python3 scripts/build_site.py
+```
+
+Commit the source change and generated output in the **same human commit**. Depending on the change, generated output can include:
+
+* Public HTML pages when the shared header or footer changes
+* `index.html`, `events.html`, and `news.html` when JSON-driven listings change
+* `events/rss.xml`, `news/rss.xml`, and `feed.xml`
+* `sitemap.xml` and `robots.txt`
+* `styles/tailwind.css`
+
+Before opening a pull request, verify there is no build drift:
+
+```bash
+python3 scripts/build_site.py --check
+```
+
+The check rebuilds the site and fails when rebuilding would change a generated file. CI starts from the committed version and runs the same check; it does not make a follow-up bot commit.
+
 ## Drafting and Publishing Workflow
 
 Use the draft-first workflow documented in `/DRAFTING_WORKFLOW.md`.
@@ -147,10 +184,11 @@ Templates now live in `/templates/` (subfolders for events, news, minutes, marke
 3. Update index/data files when applicable:
    *   Events: `events/events.json`
    *   News: `news/news.json`
-4. Run required publish checks:
+4. Build the static site and run required publish checks:
 
 ```bash
-bash ./generate_sitemap.sh
+python3 scripts/build_site.py
+python3 scripts/build_site.py --check
 python3 scripts/site_quality_check.py --strict-placeholders
 ```
 
@@ -170,15 +208,7 @@ Use the helper to move a finished draft out of `test-pages/` and get reminders:
 scripts/promote_page.sh test-pages/my-draft.html events 2026-04-12-rally.html
 ```
 
-### Feed automation expectations
-
-If `events/events.json` or `news/news.json` changes, the workflow `.github/workflows/rss-feeds.yml` regenerates and commits:
-
-*   `events/rss.xml`
-*   `news/rss.xml`
-*   `feed.xml`
-
-## RSS Feeds (Automated)
+## RSS Feeds
 
 This site publishes RSS feeds for news and events:
 
@@ -196,16 +226,9 @@ This site publishes RSS feeds for news and events:
     *   `events/rss.xml`
     *   `feed.xml`
 
-### GitHub Action automation
+RSS is part of `python3 scripts/build_site.py`. Commit feed changes alongside the JSON that produced them. The site-quality workflow verifies that those generated files are current instead of creating a second bot-authored commit.
 
-The workflow `.github/workflows/rss-feeds.yml` runs on pushes that change:
-
-*   `news/news.json`
-*   `events/events.json`
-*   `scripts/generate_rss.py`
-*   `.github/workflows/rss-feeds.yml`
-
-When feed output changes, the action commits updated feed files back to the branch automatically.
+Scheduled news is the one automated publishing exception: `.github/workflows/publish-scheduled-news.yml` promotes due stories to `published`, removes `noindex`, runs the same full site build and quality check, and commits all resulting files together.
 
 ## Wayback Machine Archiving (Automated)
 
