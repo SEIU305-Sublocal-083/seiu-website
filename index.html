@@ -574,7 +574,7 @@
                         year: 'numeric'
                     });
                     upcomingEvents.forEach(event => {
-                        event.parsedDate = new Date(event.date.replace(/-/g, '/'));
+                        event.parsedDate = new Date(event.date + 'T00:00:00');
                         event.formattedDateShort = dateShortFormatter.format(event.parsedDate);
                     });
 
@@ -647,7 +647,7 @@
                     // ⚡ Bolt: Format dates only for the sliced items to avoid expensive operations on hidden entries
                     const newsDateFormatter = new Intl.DateTimeFormat('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
                     sortedNews.forEach(item => {
-                        item.formattedPublishedAt = newsDateFormatter.format(new Date(item.publishedAt.replace(/-/g, '/')));
+                        item.formattedPublishedAt = newsDateFormatter.format(new Date(item.publishedAt + 'T00:00:00'));
                     });
                     
                     if (sortedNews.length > 0) {
