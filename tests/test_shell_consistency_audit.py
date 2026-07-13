@@ -13,7 +13,9 @@ CANONICAL_PAGE = '''<!doctype html><html><body>
 <header><nav aria-label="Primary navigation"><a href="/">SEIU 503</a>
 <a href="/about.html">About</a><a href="/events.html">Events</a><a href="/news.html">News</a>
 <a href="/resources.html">Resources &amp; Rights</a><a href="/leadership.html">Leadership</a><a href="/contact.html">Contact</a>
-</nav></header><main><h1>Page</h1></main>
+</nav><div aria-label="Mobile navigation"><a href="/about.html">About</a><a href="/events.html">Events</a><a href="/news.html">News</a>
+<a href="/resources.html">Resources &amp; Rights</a><a href="/leadership.html">Leadership</a><a href="/contact.html">Contact</a></div>
+</header><main><h1>Page</h1></main>
 <footer><p>SEIU Local 503 — Oregon State University</p>
 <a href="/resources.html">Resources &amp; Rights</a><a href="/contact.html">Contact us</a>
 <a href="mailto:083execteam@seiu503.org">Executive</a><a href="mailto:083stewards@seiu503.org">Stewards</a>
@@ -57,6 +59,23 @@ class ShellAuditTests(unittest.TestCase):
                 [message for message in messages if "mobile-menu state script" in message],
                 ["Expected exactly one canonical mobile-menu state script; found 2"],
             )
+
+    def test_requires_bold_current_link_in_desktop_and_mobile_navigation(self):
+        with TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            page = root / "about.html"
+            marked = CANONICAL_PAGE.replace(
+                '<a href="/about.html">About</a>',
+                '<a href="/about.html" class="font-bold" aria-current="page">About</a>',
+                1,
+            ).replace(
+                '<a href="/about.html">About</a>',
+                '<a href="/about.html" class="font-semibold" aria-current="page">About</a>',
+                1,
+            )
+            page.write_text(marked, encoding="utf-8")
+            messages = [finding.message for finding in shell.audit_page(page, root)]
+            self.assertIn("Mobile current navigation link is not bold: /about.html", messages)
 
 
 if __name__ == "__main__":

@@ -69,7 +69,7 @@ def nav_link(label: str, href: str, key: str, active: str | None, *, mobile: boo
     if mobile:
         classes = (
             "block text-center py-3 px-6 text-lg text-brand-purple "
-            "bg-brand-purple-light font-semibold"
+            "bg-brand-purple-light font-bold"
             if current
             else "block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light"
         )
