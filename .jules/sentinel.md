@@ -75,3 +75,8 @@
 **Vulnerability:** Instances of target="_blank" were found missing the rel="noreferrer" attribute for external links, leaving the application susceptible to referral information leakage via the Referer header.
 **Learning:** Using target="_blank" for external cross-origin links without the rel="noreferrer" attribute causes the site to leak the referring page's URL to the external, potentially untrusted site.
 **Prevention:** Ensured rel="noopener noreferrer" is added to all user-facing external anchor tags that open in a new tab.
+
+## 2026-07-13 - [DOM-based XSS via javascript: URIs in Current Action payload]
+**Vulnerability:** User-controlled URLs (`cta.href`) derived from the `current-action.json` payload were injected directly into `href` attributes in `js/current-action.js` without any scheme sanitization, posing a risk of executing `javascript:` or `data:` URIs.
+**Learning:** External data payloads (even when originating from first-party JSON sources like `current-action.json`) should never be blindly trusted when creating dynamic DOM elements, especially when setting attributes like `href`. The earlier implementation of `window.Sentinel.sanitizeUrl()` needed to be applied consistently, even in non-template contexts like `setAttribute`.
+**Prevention:** Ensured the `sanitizeUrl` helper was defined locally in `js/current-action.js` (falling back to `window.Sentinel.sanitizeUrl` if available) and explicitly applied it to any `href` values dynamically assigned via `setAttribute()`.
