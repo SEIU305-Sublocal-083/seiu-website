@@ -24,3 +24,7 @@ Critical UX/accessibility learnings only.
 ## 2026-05-18 - [Add required indicators to critical inputs]
 **Learning:** Users and screen readers need clear indicators for mandatory fields, even outside of traditional <form> submissions (e.g., calculator inputs). Relying on implicit requirement degrades UX and accessibility.
 **Action:** Always add `required` and `aria-required="true"` attributes to essential <input> elements, and pair them with a visual indicator (like a red * with `aria-hidden="true"`) in the associated <label>.
+
+## 2026-07-13 - [Add role="status" to empty states]
+**Learning:** When dynamically rendering empty UI states (e.g., 'No articles found'), screen readers do not automatically announce the state change without a semantic role. Adding `role="status"` ensures the screen reader announces the empty state.
+**Action:** Always include the `role="status"` attribute on dynamically rendered empty state container elements so screen readers announce the state change.
