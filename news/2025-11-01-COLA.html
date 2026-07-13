@@ -3,18 +3,18 @@
 <head>
 <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- 
+    <!--
       - SEO FIX 1: Title Tag
       - Your old title was long and buried the lead.
-      - This new one is shorter, punchier, and front-loads the key info: "3% Raise" and "Bargaining Survey". 
+      - This new one is shorter, punchier, and front-loads the key info: "3% Raise" and "Bargaining Survey".
       - This is better for search engine result pages (SERPs).
     -->
     <title>3% COLA Raise (Nov 1, 2025) & Bargaining Survey | SEIU 503, OSU</title>
-    
+
     <!-- SEO Meta Tags --><meta name="description" content="Victory! Your 3% union-won COLA arrives Nov 1, 2025. See the full breakdown of our contract wins and take the crucial 2025 bargaining survey now.">
-    <!-- 
+    <!--
       - SEO FIX 2: Removed Keywords Tag
-      - The <meta name="keywords"> tag is obsolete. Google hasn't used it for ranking in over a decade. 
+      - The <meta name="keywords"> tag is obsolete. Google hasn't used it for ranking in over a decade.
       - It's just clutter. Don't waste your time on it. Focus on the title, description, and content.
     -->
     <meta name="author" content="SEIU Local 503 at OSU">
@@ -32,13 +32,11 @@
 <!-- Favicons --><link rel="icon" href="/images/logo.png" type="image/png">
     <link rel="apple-touch-icon" href="/images/logo.png">
 
-    <!-- Fonts and Styles --><style>html{visibility:hidden;}html.tw-ready{visibility:visible;}</style>
-    <script data-cfasync="false" src="https://cdn.tailwindcss.com" onload="document.documentElement.classList.add('tw-ready')"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Lora:wght@400;500;700&display=swap" rel="stylesheet">
-    <!-- Chart.js Library --><script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <style>
+    <!-- Fonts and Styles --><link rel="stylesheet" href="/styles/tailwind.css">
+<link rel="stylesheet" href="/styles/fonts.css">
+    <!-- Chart.js Library --><script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.1/dist/chart.umd.min.js" integrity="sha384-jb8JQMbMoBUzgWatfe6COACi2ljcDdZQ2OxczGA3bGNeWe+6DChMTBJemed7ZnvJ" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="/styles/site-shell.css">
+<style>
         :root {
             --brand-purple-dark: #4C1D95; /* Deep Purple */
             --brand-purple: #7C3AED;      /* Vibrant Purple */
@@ -82,24 +80,9 @@
         }
 
         /* Custom Tailwind config for our CSS variables */
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'brand-purple-dark': 'var(--brand-purple-dark)',
-                        'brand-purple': 'var(--brand-purple)',
-                        'brand-purple-light': 'var(--brand-purple-light)',
-                        'brand-dark': 'var(--brand-dark)',
-                        'brand-light': 'var(--brand-light)',
-                        'text-primary': 'var(--text-primary)',
-                        'text-secondary': 'var(--text-secondary)',
-                        'border-color': 'var(--border-color)',
-                    }
-                }
-            }
-        }
+
     </style>
-    
+
     <!-- JSON-LD Structured Data for Google --><script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -200,35 +183,63 @@
 <body class="bg-brand-light">
     <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:bg-white focus:text-brand-purple-dark focus:px-4 focus:py-2 focus:rounded focus:shadow-lg">Skip to content</a>
 
-    <!-- Header --><header class="bg-white/80 backdrop-blur-lg border-b border-border-color sticky top-0 z-50">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+    <!-- Header --><!-- SITE SHELL: HEADER START -->
+    <header class="bg-white/80 backdrop-blur-lg border-b border-border-color sticky top-0 z-50" data-site-shell-header>
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center" aria-label="Primary navigation">
             <a href="/index.html" class="flex items-center space-x-2">
-                <span class="text-2xl font-bold text-gray-900">SEIU 503</span>
+                <span class="text-2xl font-bold text-brand-purple-dark">SEIU 503</span>
                 <span class="text-lg text-text-secondary hidden md:block">| Oregon State University</span>
             </a>
             <div class="hidden lg:flex space-x-8">
                 <a href="/about.html" class="text-text-secondary hover:text-brand-purple transition-colors">About</a>
                 <a href="/events.html" class="text-text-secondary hover:text-brand-purple transition-colors">Events</a>
-                <a href="/news.html" class="text-brand-purple font-bold">News</a>
-                <a href="/resources.html" class="text-text-secondary hover:text-brand-purple transition-colors">Resources & Rights</a>
+                <a href="/news.html" class="text-brand-purple font-bold" aria-current="page">News</a>
+                <a href="/resources.html" class="text-text-secondary hover:text-brand-purple transition-colors">Resources &amp; Rights</a>
                 <a href="/leadership.html" class="text-text-secondary hover:text-brand-purple transition-colors">Leadership</a>
                 <a href="/contact.html" class="text-text-secondary hover:text-brand-purple transition-colors">Contact</a>
             </div>
-            <div class="lg:hidden">
-                <button id="mobile-menu-button" class="text-text-secondary hover:text-brand-purple focus:outline-none" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
-                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-                </button>
-            </div>
+            <button type="button" id="mobile-menu-button" class="lg:hidden text-text-secondary hover:text-brand-purple" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
         </nav>
-        <!-- Mobile Menu --><div id="mobile-menu" class="hidden lg:hidden absolute top-full left-0 w-full bg-white border-t border-border-color shadow-lg">
+        <div id="mobile-menu" class="hidden lg:hidden absolute top-full left-0 w-full bg-white border-t border-border-color shadow-lg" role="navigation" aria-label="Mobile navigation">
             <a href="/about.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">About</a>
             <a href="/events.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Events</a>
-            <a href="/news.html" class="block text-center py-3 px-6 text-lg text-brand-purple bg-brand-purple-light font-semibold">News</a>
-            <a href="/resources.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Resources & Rights</a>
+            <a href="/news.html" class="block text-center py-3 px-6 text-lg text-brand-purple bg-brand-purple-light font-semibold" aria-current="page">News</a>
+            <a href="/resources.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Resources &amp; Rights</a>
             <a href="/leadership.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Leadership</a>
             <a href="/contact.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Contact</a>
         </div>
     </header>
+    <script data-site-shell-menu-state-script>
+        (() => {
+            const button = document.getElementById('mobile-menu-button');
+            const menu = document.getElementById('mobile-menu');
+            if (!button || !menu) return;
+            const canonicalIcon = button.innerHTML;
+
+            window.siteShellSyncMenuState = () => {
+                const isOpen = menu.classList.contains('is-open') || !menu.classList.contains('hidden');
+                button.setAttribute('aria-expanded', String(isOpen));
+                button.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+                if (button.innerHTML !== canonicalIcon) button.innerHTML = canonicalIcon;
+            };
+
+            new MutationObserver(window.siteShellSyncMenuState).observe(menu, {
+                attributes: true,
+                attributeFilter: ['class']
+            });
+            document.addEventListener('keydown', (event) => {
+                if (event.key !== 'Escape' || button.getAttribute('aria-expanded') !== 'true') return;
+                menu.classList.add('hidden');
+                menu.classList.remove('is-open');
+                window.siteShellSyncMenuState();
+                button.focus();
+            });
+            window.siteShellSyncMenuState();
+        })();
+    </script>
+<!-- SITE SHELL: HEADER END -->
 
     <main id="main-content" class="container mx-auto px-6 py-16">
         <article class="max-w-4xl mx-auto bg-white p-8 md:p-12 rounded-xl border border-border-color shadow-sm">
@@ -255,9 +266,9 @@
 
             <!-- Article Body --><div class="prose max-w-none text-text-secondary text-lg leading-relaxed space-y-6">
                 <p>Get ready for another increase in your paycheck! The last cost-of-living adjustment (COLA) that we won together in our current contract takes effect on <strong>November 1, 2025</strong>. All classified staff will see a <strong>3% raise</strong>.</p>
-                
+
                 <p>This is a big win and a direct result of our collective action and solidarity. Let's take a moment to look at what we've accomplished together with this contract, which has resulted in a cumulative compounded raise of nearly 16%!</p>
-                
+
                 <!-- Chart.js Canvas --><div class="w-full h-96 bg-slate-50 p-4 rounded-lg my-8">
                     <canvas id="colaChart" aria-label="A bar chart showing cumulative COLA increases over time" role="img"></canvas>
                 </div>
@@ -302,10 +313,10 @@
                     <h3 class="text-2xl font-bold !mt-0 !mb-2 text-brand-purple-dark">Shape Our Next Contract: Take the Bargaining Survey!</h3>
                     <p class="text-text-secondary">As we celebrate this win, we must prepare for the next round of negotiations. It is crucial that we hear from you!</p>
                     <p class="text-text-secondary">Please check your inbox for an email with the title <strong class="text-brand-purple-dark">"It's time for your 2025 Higher Ed Bargaining Survey"</strong> from <strong class="text-brand-purple-dark">alert@seiu503.org</strong>. Your confidential feedback will directly shape our priorities.</p>
-                    
+
                     <!-- New "Missing Email" CTA --><div class="border-t border-violet-300 pt-4 mt-4 text-center">
                         <p class="text-text-secondary mb-4">Can't find the email? Let us know so we can help!</p>
-                        <a href="mailto:083execteam@seiu503.org,083cat@seiu503.org?subject=Missing%202025%20Bargaining%20Survey%20Link&body=Hello%20Sublocal%20083%20leadership,%0A%0AI%20am%20writing%20because%20I%20have%20not%20yet%20received%20the%202025%20Higher%20Ed%20Bargaining%20Survey%20email%20from%20alert@seiu503.org.%0A%0APlease%20send%20the%20survey%20link%20to%20this%20email%20address%20so%20I%20can%20provide%20my%20input%20for%20the%20upcoming%20contract%20negotiations.%0A%0AThank%20you,%0A%0A[Your%20First%20and%20Last%20Name]" class="btn btn-primary">
+                        <a href="mailto:083execteam@seiu503.org,083cat@seiu503.org?subject=Missing%202025%20Bargaining%20Survey%20Link&amp;body=Hello%20Sublocal%20083%20leadership,%0A%0AI%20am%20writing%20because%20I%20have%20not%20yet%20received%20the%202025%20Higher%20Ed%20Bargaining%20Survey%20email%20from%20alert@seiu503.org.%0A%0APlease%20send%20the%20survey%20link%20to%20this%20email%20address%20so%20I%20can%20provide%20my%20input%20for%20the%20upcoming%20contract%20negotiations.%0A%0AThank%20you,%0A%0A[Your%20First%20and%20Last%20Name]" class="btn btn-primary">
                             Email Us to Get the Survey
                         </a>
                     </div>
@@ -327,72 +338,50 @@
     </main>
 
     <!-- Footer -->
-                <footer class="bg-gray-100 pt-12 pb-8 text-text-primary">
+                <!-- SITE SHELL: FOOTER START -->
+    <footer class="bg-gray-100 pt-12 pb-8 text-text-primary border-t border-gray-200" data-site-shell-footer>
         <div class="container mx-auto px-6">
-            <div class="mt-10 pt-8 border-t border-gray-700 text-center">
-            </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Column 1: About the Union -->
                 <div class="md:col-span-2 lg:col-span-1">
                     <div class="flex items-center mb-4">
-                        <img src="/images/logo.png" alt="SEIU 503 Logo" class="h-12 w-12 mr-3 bg-white p-1 rounded">
-                        <div>
-                            <h3 class="text-xl font-bold">SEIU Local 503</h3>
-                            <p class="text-text-secondary text-sm">Oregon State University</p>
-                        </div>
+                        <img src="/images/logo.png" alt="SEIU 503 logo" class="h-12 w-12 mr-3 bg-white p-1 rounded" width="48" height="48" loading="lazy" decoding="async">
+                        <div><h3 class="text-xl font-bold">SEIU Local 503</h3><p class="text-text-secondary text-sm">Oregon State University</p></div>
                     </div>
-                    <p class="text-text-secondary leading-relaxed">Representing the classified employees of Oregon State University. We fight for fair contracts, defend workplace rights, and build a united community.</p>
+                    <p class="text-text-secondary leading-relaxed">Our member-led union represents classified staff at Oregon State University. Together, we bargain fair contracts, defend our rights and build power at work.</p>
                 </div>
-    
-                <!-- Column 2: Quick Links -->
                 <div>
-                    <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase">Quick Links</h4>
+                    <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase">Quick links</h4>
                     <ul class="space-y-3">
-                        <li><a href="/about.html" class="text-text-secondary hover:text-brand-purple transition-colors">About Us</a></li>
+                        <li><a href="/about.html" class="text-text-secondary hover:text-brand-purple transition-colors">About our union</a></li>
                         <li><a href="/events.html" class="text-text-secondary hover:text-brand-purple transition-colors">Events</a></li>
                         <li><a href="/news.html" class="text-text-secondary hover:text-brand-purple transition-colors">News</a></li>
                         <li><a href="/leadership.html" class="text-text-secondary hover:text-brand-purple transition-colors">Leadership</a></li>
                     </ul>
                 </div>
-    
-                <!-- Column 3: Resources -->
                 <div>
                     <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase"><a href="/resources.html" class="hover:text-brand-purple transition-colors">Resources</a></h4>
                     <ul class="space-y-3">
-                        <li><a href="/resources.html" class="text-text-secondary hover:text-brand-purple transition-colors">Resources & Rights</a></li>
+                        <li><a href="/resources.html" class="text-text-secondary hover:text-brand-purple transition-colors">Resources &amp; Rights</a></li>
                         <li><a href="/resources/seiu_cba_2022-2026.pdf" class="text-text-secondary hover:text-brand-purple transition-colors">Our Contract (PDF)</a></li>
                         <li><a href="/resources/stewards.html" class="text-text-secondary hover:text-brand-purple transition-colors">Find a Steward</a></li>
                         <li><a href="/resources/weingarten-rights.html" class="text-text-secondary hover:text-brand-purple transition-colors">Weingarten Rights</a></li>
                     </ul>
                 </div>
-    
-                <!-- Column 4: Contact -->
                 <div>
-                    <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase"><a href="/contact.html" class="hover:text-brand-purple transition-colors">Contact Us</a></h4>
-                     <ul class="space-y-3 text-text-secondary">
-                        <li class="flex items-start">
-                            <span class="mr-2 mt-1">✉️</span> <!-- Mail icon -->
-                            <a href="mailto:083execteam@seiu503.org" class="hover:text-brand-purple transition-colors">083execteam@seiu503.org</a>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="mr-2 mt-1">✉️</span> <!-- Mail icon -->
-                            <a href="mailto:083stewards@seiu503.org" class="hover:text-brand-purple transition-colors">083stewards@seiu503.org</a>
-                        </li>
+                    <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase"><a href="/contact.html" class="hover:text-brand-purple transition-colors">Contact us</a></h4>
+                    <ul class="space-y-3">
+                        <li><a href="mailto:083execteam@seiu503.org" class="text-text-secondary hover:text-brand-purple transition-colors break-all">083execteam@seiu503.org</a></li>
+                        <li><a href="mailto:083stewards@seiu503.org" class="text-text-secondary hover:text-brand-purple transition-colors break-all">083stewards@seiu503.org</a></li>
                     </ul>
                 </div>
             </div>
-    
-            <!-- Bottom Bar -->
-            <div class="mt-10 pt-8 border-t border-gray-700 text-center space-y-2">
-                <p class="text-text-secondary text-sm">&copy; 2026 SEIU Local 503, Sublocal 083. All rights reserved.</p>
-                <p class="text-text-secondary text-xs">
-                    <a href="#" class="underline hover:text-brand-purple" onclick="event.preventDefault(); (localStorage.getItem('ph_opt_out') === '1' ? phOptIn() : phOptOut());">
-                        Privacy settings
-                    </a>
-                </p>
+            <div class="mt-10 pt-8 border-t border-gray-300 text-center space-y-2">
+                <p class="text-text-secondary text-sm">&copy; 2026 SEIU Local 503, Local 083. All rights reserved.</p>
+                <p class="text-text-secondary text-xs"><a class="underline hover:text-brand-purple" href="/privacy.html#analytics-controls">Tracking settings</a><span aria-hidden="true"> · </span><a class="underline hover:text-brand-purple" href="/privacy.html">Privacy notice</a></p>
             </div>
         </div>
     </footer>
+<!-- SITE SHELL: FOOTER END -->
 
     <script>
         // --- Mobile Menu Toggle ---
@@ -417,9 +406,9 @@
         // --- Chart.js Graph ---
         document.addEventListener('DOMContentLoaded', () => {
             const ctx = document.getElementById('colaChart').getContext('2d');
-            
+
             const gradient = ctx.createLinearGradient(0, 0, 0, 400);
-            gradient.addColorStop(0, '#8B5CF6');   
+            gradient.addColorStop(0, '#8B5CF6');
             gradient.addColorStop(1, '#4C1D95');
 
             const chartData = {

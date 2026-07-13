@@ -1,7 +1,15 @@
 User-agent: *
+Disallow: /test-pages/
 Disallow: /bargaining/
 Disallow: /private/
 Disallow: /test-pages/workday-transition/
+Disallow: /marketing/
+Disallow: /review-images/
+Disallow: /tmp/
+Disallow: /jules-scratch/
+Disallow: /slides/
+Disallow: /templates/
+Disallow: /welcome/
 
 User-agent: YandexBot
 Disallow: /

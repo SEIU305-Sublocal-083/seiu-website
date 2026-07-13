@@ -13,20 +13,12 @@ from html.parser import HTMLParser
 from pathlib import Path
 from typing import Iterable
 from urllib.parse import urlparse
+from zoneinfo import ZoneInfo
+
+from public_pages import public_html_paths
 
 ROOT = Path(__file__).resolve().parent.parent
-
-PUBLIC_HTML_GLOBS = ["*.html", "news/*.html", "events/*.html", "resources/*.html", "2026-bargaining/*.html"]
-
-EXCLUDED_HTML_PATTERNS = (
-    "test-pages/",
-    "jules-scratch/",
-    "/template.html",
-    "redirect-time-change-template.html",
-    "news/ba-template.html",
-    "news/spotlight-template.html",
-    "marketing/",
-)
+OREGON_TZ = ZoneInfo("America/Los_Angeles")
 
 # Keep this list narrow to avoid noisy false positives.
 PLACEHOLDER_PATTERNS = (
@@ -77,18 +69,8 @@ def parse_args() -> argparse.Namespace:
     return parser.parse_args()
 
 
-def is_excluded_html(path: Path) -> bool:
-    value = path.as_posix()
-    return any(pattern in value for pattern in EXCLUDED_HTML_PATTERNS)
-
-
 def collect_public_html() -> list[Path]:
-    pages: set[Path] = set()
-    for pattern in PUBLIC_HTML_GLOBS:
-        for candidate in ROOT.glob(pattern):
-            if candidate.is_file() and not is_excluded_html(candidate.relative_to(ROOT)):
-                pages.add(candidate)
-    return sorted(pages)
+    return public_html_paths(ROOT, include_404=True)
 
 
 def is_ignorable_url(url: str) -> bool:
@@ -146,6 +128,16 @@ def check_html_links(pages: list[Path]) -> list[Issue]:
         parser.feed(page.read_text(encoding="utf-8"))
 
         for link in parser.links:
+            if link == "#":
+                issues.append(
+                    Issue(
+                        level="ERROR",
+                        source=rel,
+                        message="Nonfunctional placeholder link: #",
+                    )
+                )
+                continue
+
             if is_ignorable_url(link):
                 continue
 
@@ -215,7 +207,7 @@ def check_news_json() -> list[Issue]:
     issues: list[Issue] = []
     path = ROOT / "news" / "news.json"
     data = json.loads(path.read_text(encoding="utf-8"))
-    today = datetime.now(timezone.utc).date()
+    today = datetime.now(OREGON_TZ).date()
 
     for idx, item in enumerate(data):
         source = f"news/news.json[{idx}]"
@@ -266,9 +258,21 @@ def check_events_json() -> list[Issue]:
     issues: list[Issue] = []
     path = ROOT / "events" / "events.json"
     data = json.loads(path.read_text(encoding="utf-8"))
+    if not isinstance(data, dict):
+        return [Issue("ERROR", "events/events.json", "Expected an object with `asOf` and `events`")]
+    as_of = data.get("asOf")
+    if not isinstance(as_of, str) or not is_valid_date(as_of):
+        issues.append(Issue("ERROR", "events/events.json", "`asOf` must use YYYY-MM-DD"))
+    events = data.get("events")
+    if not isinstance(events, list):
+        issues.append(Issue("ERROR", "events/events.json", "`events` must be an array"))
+        return issues
 
-    for idx, item in enumerate(data):
-        source = f"events/events.json[{idx}]"
+    for idx, item in enumerate(events):
+        source = f"events/events.json.events[{idx}]"
+        if not isinstance(item, dict):
+            issues.append(Issue("ERROR", source, "Event entry must be an object"))
+            continue
         issues.extend(require_fields(item, REQUIRED_EVENT_FIELDS, source))
 
         date_value = item.get("date", "")

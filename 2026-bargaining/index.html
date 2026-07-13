@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="The 2026 Bargaining Hub for SEIU Local 503 at OSU. Management is proposing no step increases, no COLAs, higher healthcare costs, and fewer contract protections.">
+    <meta name="description" content="Follow our 2026 OSU contract campaign. Get bargaining updates, see what management's proposals mean for us and take action with Local 083.">
     <meta name="author" content="SEIU Local 503 at OSU">
 
     <!-- Open Graph / Facebook -->
@@ -16,15 +16,13 @@
 
 
 
-<title>2026 Bargaining Hub - SEIU Local 503 at OSU</title>
-    <style>html{visibility:hidden;}html.tw-ready{visibility:visible;}</style>
-    <script src="https://cdn.tailwindcss.com" onload="document.documentElement.classList.add('tw-ready')"></script>
+<title>2026 OSU Classified Staff Bargaining Updates | Local 083</title>
+    <link rel="stylesheet" href="/styles/tailwind.css">
     <link rel="icon" href="/images/logo.png" type="image/png">
     <link rel="apple-touch-icon" href="/images/logo.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Lora:wght@400;500;700&display=swap" rel="stylesheet">
-    <style>
+<link rel="stylesheet" href="/styles/fonts.css">
+        <link rel="stylesheet" href="/styles/site-shell.css">
+<style>
         :root {
             --brand-purple-dark: #4C1D95; /* Deep Purple */
             --brand-purple: #7C3AED;      /* Vibrant Purple */
@@ -37,7 +35,7 @@
         }
 
         html {
-            scroll-padding-top: 80px; /* Offset for sticky header */
+            scroll-padding-top: 124px; /* Offset for both sticky navigation bars */
         }
 
         body {
@@ -59,7 +57,7 @@
             outline-offset: 2px;
             border-radius: 4px;
         }
-        
+
         .btn {
             display: inline-flex;
             align-items: center;
@@ -101,24 +99,6 @@
             color: #ffffff;
         }
 
-        /* Custom Tailwind config for our CSS variables */
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'brand-purple-dark': 'var(--brand-purple-dark)',
-                        'brand-purple': 'var(--brand-purple)',
-                        'brand-purple-light': 'var(--brand-purple-light)',
-                        'brand-dark': 'var(--brand-dark)',
-                        'brand-light': 'var(--brand-light)',
-                        'text-primary': 'var(--text-primary)',
-                        'text-secondary': 'var(--text-secondary)',
-                        'border-color': 'var(--border-color)',
-                    }
-                }
-            }
-        }
-
         .bg-brand-purple-dark { background-color: var(--brand-purple-dark) !important; }
         .bg-brand-purple { background-color: var(--brand-purple) !important; }
         .bg-brand-purple-light { background-color: var(--brand-purple-light) !important; }
@@ -149,20 +129,283 @@
         .participate-link:hover {
             color: var(--brand-purple);
         }
+
+        .campaign-hero {
+            background:
+                radial-gradient(circle at 85% 14%, rgba(253, 185, 19, 0.24), transparent 27rem),
+                linear-gradient(135deg, #ffffff 0%, #f8f5ff 64%, #ffffff 100%);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .hero-photo-wrap {
+            isolation: isolate;
+            padding-bottom: 1.4rem;
+            position: relative;
+        }
+
+        .hero-photo-wrap::before {
+            background: linear-gradient(145deg, #facc15, #f59e0b);
+            border-radius: 1.5rem;
+            box-shadow: 0 22px 60px rgba(76, 29, 149, 0.2);
+            content: '';
+            inset: -1rem 1rem 2.2rem -1rem;
+            position: absolute;
+            transform: rotate(-3deg);
+            z-index: -1;
+        }
+
+        .hero-photo-wrap img {
+            border: 5px solid #ffffff;
+            border-radius: 1.25rem;
+            box-shadow: 0 24px 55px rgba(31, 14, 65, 0.24);
+            height: 100%;
+            max-height: 31rem;
+            object-fit: cover;
+            position: relative;
+            transform: rotate(1.25deg);
+            transform-origin: center;
+            transition: transform 400ms ease;
+            width: 100%;
+        }
+
+        .hero-photo-wrap:hover img {
+            transform: translateY(-4px) rotate(0.4deg);
+        }
+
+        .photo-credit {
+            background: rgba(255, 255, 255, 0.96);
+            border: 1px solid rgba(124, 58, 237, 0.16);
+            border-radius: 0.75rem;
+            bottom: 0;
+            box-shadow: 0 12px 30px rgba(17, 24, 39, 0.15);
+            color: var(--text-secondary);
+            font-size: 0.78rem;
+            font-weight: 600;
+            left: 1.2rem;
+            line-height: 1.4;
+            margin: 0;
+            max-width: calc(100% - 2.4rem);
+            padding: 0.65rem 0.85rem;
+            position: absolute;
+            transform: rotate(-0.35deg);
+            z-index: 2;
+        }
+
+        .eyebrow {
+            color: var(--brand-purple);
+            display: block;
+            font-size: 0.75rem;
+            font-weight: 800;
+            letter-spacing: 0.14em;
+            margin-bottom: 0.6rem;
+            text-transform: uppercase;
+        }
+
+        .updated-pill {
+            align-items: center;
+            background: #ffffff;
+            border: 1px solid #ddd6fe;
+            border-radius: 999px;
+            color: var(--brand-purple-dark);
+            display: inline-flex;
+            font-size: 0.82rem;
+            font-weight: 800;
+            gap: 0.5rem;
+            padding: 0.45rem 0.75rem;
+        }
+
+        .updated-pill::before {
+            background: #16a34a;
+            border-radius: 999px;
+            content: '';
+            height: 0.55rem;
+            width: 0.55rem;
+        }
+
+        .quick-nav {
+            -webkit-backdrop-filter: blur(16px);
+            backdrop-filter: blur(16px);
+            background: rgba(255, 255, 255, 0.8);
+            border-bottom: 1px solid var(--border-color);
+            border-top: 1px solid rgba(209, 213, 219, 0.75);
+            box-shadow: 0 8px 22px rgba(17, 24, 39, 0.04);
+            overflow-x: auto;
+            position: sticky;
+            scrollbar-width: none;
+            top: 64px;
+            z-index: 40;
+        }
+
+        .quick-nav::-webkit-scrollbar { display: none; }
+
+        .quick-nav a {
+            color: var(--text-secondary);
+            flex: 0 0 auto;
+            font-size: 0.88rem;
+            font-weight: 800;
+            padding: 1rem 0.9rem;
+            white-space: nowrap;
+        }
+
+        .quick-nav a:hover { color: var(--brand-purple); }
+
+        .status-panel {
+            background: linear-gradient(135deg, #3b0f78, #5b21b6 62%, #4c1d95);
+            border-radius: 1.5rem;
+            box-shadow: 0 22px 55px rgba(76, 29, 149, 0.2);
+            color: #ffffff;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .status-panel::after {
+            border: 5rem solid rgba(255, 255, 255, 0.05);
+            border-radius: 999px;
+            content: '';
+            height: 22rem;
+            position: absolute;
+            right: -9rem;
+            top: -9rem;
+            width: 22rem;
+        }
+
+        .status-panel h2, .status-panel h3 { color: #ffffff; }
+
+        .status-stat {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 1rem;
+            min-height: 9rem;
+            padding: 1.25rem;
+        }
+
+        .status-stat strong {
+            color: #fdb913;
+            display: block;
+            font-family: 'Lora', serif;
+            font-size: clamp(1.9rem, 3vw, 2.7rem);
+            line-height: 1;
+            margin-bottom: 0.7rem;
+        }
+
+        .impact-card, .content-card {
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            border-radius: 1rem;
+            box-shadow: 0 8px 24px rgba(17, 24, 39, 0.05);
+        }
+
+        .impact-card {
+            border-top: 5px solid var(--brand-purple);
+            padding: 1.5rem;
+        }
+
+        .impact-card .number {
+            color: var(--brand-purple-dark);
+            font-family: 'Lora', serif;
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        .action-band {
+            align-items: center;
+            background: #fdb913;
+            border: 1px solid #e1a000;
+            border-radius: 1.25rem;
+            display: grid;
+            gap: 1.5rem;
+            grid-template-columns: minmax(0, 1fr) auto;
+            padding: 1.6rem;
+        }
+
+        .timeline-item {
+            border-left: 3px solid #ddd6fe;
+            padding: 0 0 2rem 1.6rem;
+            position: relative;
+        }
+
+        .timeline-item::before {
+            background: #ffffff;
+            border: 4px solid var(--brand-purple);
+            border-radius: 999px;
+            content: '';
+            height: 1rem;
+            left: -0.58rem;
+            position: absolute;
+            top: 0.25rem;
+            width: 1rem;
+        }
+
+        .timeline-item.current::before { background: #fdb913; }
+        .timeline-item:last-child { border-left-color: transparent; }
+
+        .source-note {
+            background: #f9fafb;
+            border-left: 4px solid var(--brand-purple);
+            border-radius: 0.5rem;
+            color: var(--text-secondary);
+            font-size: 0.88rem;
+            padding: 0.85rem 1rem;
+        }
+
+        .section-heading {
+            display: grid;
+            gap: 0.65rem;
+            margin-bottom: 2rem;
+            max-width: 50rem;
+        }
+
+        #current-status,
+        #worker-impact,
+        #take-action,
+        #timeline,
+        #updates,
+        #how-it-works,
+        #questions {
+            scroll-margin-top: 124px;
+        }
+
+        @media (max-width: 767px) {
+            .quick-nav { top: 64px; }
+            .action-band { grid-template-columns: 1fr; }
+            .action-band .btn { width: 100%; }
+            .hero-photo-wrap img { max-height: 23rem; }
+            .photo-credit {
+                bottom: -0.25rem;
+                font-size: 0.72rem;
+                left: 0.75rem;
+                max-width: calc(100% - 1.5rem);
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+            .hero-photo-wrap { transform: none; }
+        }
     </style>
     <!-- SEO META START -->
     <link rel="canonical" href="https://www.local083.org/2026-bargaining/index.html">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.local083.org/2026-bargaining/index.html">
-    <meta property="og:title" content="2026 Bargaining Hub - SEIU Local 503 at OSU">
-    <meta property="og:description" content="The 2026 Bargaining Hub for SEIU Local 503 at OSU. Management is proposing no step increases, no COLAs, higher healthcare costs, and fewer contract protections.">
+    <meta property="og:title" content="2026 OSU Classified Staff Bargaining Updates | Local 083">
+    <meta property="og:description" content="Follow our 2026 OSU contract campaign. Get bargaining updates, see what management's proposals mean for us and take action with Local 083.">
     <meta property="og:image" content="https://www.local083.org/images/card.webp">
+    <meta property="og:image:alt" content="SEIU Local 503 at Oregon State University">
+    <meta property="og:image:width" content="1280">
+    <meta property="og:image:height" content="720">
     <meta property="og:site_name" content="SEIU Local 503 at Oregon State University">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://www.local083.org/2026-bargaining/index.html">
-    <meta name="twitter:title" content="2026 Bargaining Hub - SEIU Local 503 at OSU">
-    <meta name="twitter:description" content="The 2026 Bargaining Hub for SEIU Local 503 at OSU. Management is proposing no step increases, no COLAs, higher healthcare costs, and fewer contract protections.">
+    <meta name="twitter:title" content="2026 OSU Classified Staff Bargaining Updates | Local 083">
+    <meta name="twitter:description" content="Follow our 2026 OSU contract campaign. Get bargaining updates, see what management's proposals mean for us and take action with Local 083.">
     <meta name="twitter:image" content="https://www.local083.org/images/card.webp">
+    <meta name="twitter:image:alt" content="SEIU Local 503 at Oregon State University">
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -187,8 +430,8 @@
       "@type": "WebPage",
       "@id": "https://www.local083.org/2026-bargaining/index.html#webpage",
       "url": "https://www.local083.org/2026-bargaining/index.html",
-      "name": "2026 Bargaining Hub - SEIU Local 503 at OSU",
-      "description": "The 2026 Bargaining Hub for SEIU Local 503 at OSU. Management is proposing no step increases, no COLAs, higher healthcare costs, and fewer contract protections.",
+      "name": "2026 OSU Classified Staff Bargaining Updates | Local 083",
+      "description": "Follow our 2026 OSU contract campaign. Get bargaining updates, see what management's proposals mean for us and take action with Local 083.",
       "isPartOf": {
         "@id": "https://www.local083.org#website"
       },
@@ -201,13 +444,16 @@
     </script>
     <!-- SEO META END -->
     <script src="/js/analytics.js" defer></script>
+    <script src="/js/current-action.js?v=2026-07-09-email-encoding-hotfix" defer></script>
 </head>
 <body class="bg-brand-light">
+    <noscript><nav aria-label="Primary navigation without JavaScript" class="border-b border-border-color bg-white px-4 py-3 text-center text-sm font-semibold"><a class="mx-2 underline" href="/">Home</a><a class="mx-2 underline" href="/about.html">About</a><a class="mx-2 underline" href="/events.html">Events</a><a class="mx-2 underline" href="/news.html">News</a><a class="mx-2 underline" href="/resources.html">Resources &amp; Rights</a><a class="mx-2 underline" href="/leadership.html">Leadership</a><a class="mx-2 underline" href="/contact.html">Contact</a></nav></noscript>
     <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:bg-white focus:text-brand-purple-dark focus:px-4 focus:py-2 focus:rounded focus:shadow-lg">Skip to content</a>
 
     <!-- Header -->
-    <header class="bg-white/80 backdrop-blur-lg border-b border-border-color sticky top-0 z-50">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+    <!-- SITE SHELL: HEADER START -->
+    <header class="bg-white/80 backdrop-blur-lg border-b border-border-color sticky top-0 z-50" data-site-shell-header>
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center" aria-label="Primary navigation">
             <a href="/index.html" class="flex items-center space-x-2">
                 <span class="text-2xl font-bold text-brand-purple-dark">SEIU 503</span>
                 <span class="text-lg text-text-secondary hidden md:block">| Oregon State University</span>
@@ -216,563 +462,307 @@
                 <a href="/about.html" class="text-text-secondary hover:text-brand-purple transition-colors">About</a>
                 <a href="/events.html" class="text-text-secondary hover:text-brand-purple transition-colors">Events</a>
                 <a href="/news.html" class="text-text-secondary hover:text-brand-purple transition-colors">News</a>
-                <a href="/resources.html" class="text-text-secondary hover:text-brand-purple transition-colors">Resources & Rights</a>
+                <a href="/resources.html" class="text-text-secondary hover:text-brand-purple transition-colors">Resources &amp; Rights</a>
                 <a href="/leadership.html" class="text-text-secondary hover:text-brand-purple transition-colors">Leadership</a>
                 <a href="/contact.html" class="text-text-secondary hover:text-brand-purple transition-colors">Contact</a>
             </div>
-            <div class="lg:hidden">
-                <button id="mobile-menu-button" class="text-text-secondary hover:text-brand-purple focus:outline-none" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false">
-                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-                </button>
-            </div>
+            <button type="button" id="mobile-menu-button" class="lg:hidden text-text-secondary hover:text-brand-purple" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
         </nav>
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden lg:hidden absolute top-full left-0 w-full bg-white border-t border-border-color shadow-lg">
+        <div id="mobile-menu" class="hidden lg:hidden absolute top-full left-0 w-full bg-white border-t border-border-color shadow-lg" role="navigation" aria-label="Mobile navigation">
             <a href="/about.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">About</a>
             <a href="/events.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Events</a>
             <a href="/news.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">News</a>
-            <a href="/resources.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Resources & Rights</a>
+            <a href="/resources.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Resources &amp; Rights</a>
             <a href="/leadership.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Leadership</a>
             <a href="/contact.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Contact</a>
         </div>
     </header>
+    <script data-site-shell-menu-state-script>
+        (() => {
+            const button = document.getElementById('mobile-menu-button');
+            const menu = document.getElementById('mobile-menu');
+            if (!button || !menu) return;
+            const canonicalIcon = button.innerHTML;
 
-    <!-- Hero -->
-    <section class="bg-white">
-        <div class="container mx-auto px-6 py-20 md:py-24 flex flex-col lg:flex-row items-center gap-12">
-            <div class="lg:w-3/5 text-center lg:text-left">
-                <div class="inline-flex items-center px-4 py-2 rounded-full bg-brand-purple-light text-brand-purple-dark text-sm font-semibold mb-4">Urgent Bargaining Update</div>
-                <h1 class="text-4xl md:text-6xl font-bold leading-tight">Management is proposing no wage increases for 4 years</h1>
-                <p class="mt-4 text-xl md:text-2xl font-bold text-brand-purple-dark max-w-3xl">No step increases. No COLAs. Higher healthcare costs. Fewer layoff protections.</p>
-                <p class="mt-4 text-lg md:text-xl text-text-secondary max-w-2xl">The universities put a takeaway offer on the table while workers face rising costs. Our union is fighting for real raises, protected benefits, and contract rights we can enforce.</p>
-                <div class="mt-8 flex flex-col sm:flex-row sm:items-center gap-4 justify-center lg:justify-start">
-                    <a href="https://seiu503.tfaforms.net/759" class="btn btn-primary w-full sm:w-auto" target="_blank" rel="noopener noreferrer" data-ph-event="cat_signup_click" data-ph-label="Bargaining Hero CAT Signup" data-ph-metadata='{"signup_type":"cat","placement":"bargaining_hero"}'>Join the CAT</a>
-                    <a href="https://seiu503signup.org" class="btn btn-secondary w-full sm:w-auto" target="_blank" rel="noopener noreferrer" data-ph-event="member_signup_click" data-ph-label="Bargaining Hero Member Signup" data-ph-metadata='{"signup_type":"member","placement":"bargaining_hero"}'>Become a Member</a>
-                    <a href="/2026-bargaining/Higher-Ed-They-Say-We-Say-Flyer.pdf" class="btn btn-outline w-full sm:w-auto" target="_blank" rel="noopener" data-ph-event="file_download_click" data-ph-label="Bargaining Flyer Download" data-ph-metadata='{"file_type":"pdf","placement":"bargaining_hero"}'>Open the Flyer</a>
+            window.siteShellSyncMenuState = () => {
+                const isOpen = menu.classList.contains('is-open') || !menu.classList.contains('hidden');
+                button.setAttribute('aria-expanded', String(isOpen));
+                button.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+                if (button.innerHTML !== canonicalIcon) button.innerHTML = canonicalIcon;
+            };
+
+            new MutationObserver(window.siteShellSyncMenuState).observe(menu, {
+                attributes: true,
+                attributeFilter: ['class']
+            });
+            document.addEventListener('keydown', (event) => {
+                if (event.key !== 'Escape' || button.getAttribute('aria-expanded') !== 'true') return;
+                menu.classList.add('hidden');
+                menu.classList.remove('is-open');
+                window.siteShellSyncMenuState();
+                button.focus();
+            });
+            window.siteShellSyncMenuState();
+        })();
+    </script>
+<!-- SITE SHELL: HEADER END -->
+
+    <main id="main-content">
+
+    <section class="campaign-hero">
+        <div class="container mx-auto px-6 py-14 md:py-20">
+            <div class="grid lg:grid-cols-[1.08fr_0.92fr] gap-12 lg:gap-16 items-center">
+                <div>
+                    <span class="updated-pill">Updated July 9, 2026</span>
+                    <span class="eyebrow mt-6">SEIU Local 503 · Local 083 at Oregon State University</span>
+                    <h1 class="text-4xl md:text-6xl font-bold leading-[1.04] max-w-4xl">2026 OSU Classified Staff Bargaining</h1>
+                    <p class="mt-6 text-xl md:text-2xl text-text-primary font-semibold max-w-3xl">Get the latest contract updates, see what management's proposals mean for us and take action with our union.</p>
+                    <p class="mt-4 text-lg text-text-secondary max-w-2xl leading-relaxed">Our previous contract expired June 30. Our bargaining team is still at the table for the classified staff who keep OSU running.</p>
+                    <div class="mt-8 flex flex-col sm:flex-row gap-3">
+                        <a href="#current-status" class="btn btn-primary">See where bargaining stands</a>
+                        <a href="#take-action" class="btn btn-outline">Take action</a>
+                    </div>
                 </div>
-            </div>
-            <div class="lg:w-2/5 flex justify-center">
-                <img src="/resources/zoom-backgrounds/2026-bargaining/SEIU-503-Bargaining-2026-Protest-Landscape.png" alt="Zoom background with SEIU members rallying and signs reading 'SEIU Proud' and 'Justice Demands Fair Wages' alongside the 2026 bargaining logo." class="rounded-2xl shadow-2xl" decoding="async" width="4000" height="2250">
+                <div class="hero-photo-wrap">
+                    <img src="/images/6090cf48-3b5b-4b5a-8c72-fc4a9902cedd-june-30-rally-fair-pay-today-960w.webp" srcset="/images/6090cf48-3b5b-4b5a-8c72-fc4a9902cedd-june-30-rally-fair-pay-today-480w.webp 480w, /images/6090cf48-3b5b-4b5a-8c72-fc4a9902cedd-june-30-rally-fair-pay-today-960w.webp 960w, /images/6090cf48-3b5b-4b5a-8c72-fc4a9902cedd-june-30-rally-fair-pay-today-1440w.webp 1440w" sizes="(max-width: 1023px) calc(100vw - 3rem), 46vw" alt="A Local 083 member and child carry an SEIU Fair Pay Today sign during the June 30 rally" width="1800" height="1188" decoding="async" fetchpriority="high">
+                    <p class="photo-credit">June 30 rally at McNary Field · Photo by Sylv Sharp, SEIU 503</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <main id="main-content" class="container mx-auto px-6 py-16">
+    <nav class="quick-nav" aria-label="Bargaining page sections">
+        <div class="container mx-auto px-4 flex min-w-max md:min-w-0 md:justify-center">
+            <a href="#current-status">Current status</a>
+            <a href="#worker-impact">What it means</a>
+            <a href="#take-action">Take action</a>
+            <a href="#timeline">Timeline</a>
+            <a href="#updates">Updates</a>
+            <a href="#how-it-works">How it works</a>
+            <a href="#questions">Questions</a>
+        </div>
+    </nav>
 
-        <section class="mb-20">
-            <div class="bg-brand-purple-dark text-white rounded-2xl p-6 md:p-10 shadow-2xl">
-                <div class="max-w-4xl">
-                    <p class="text-sm font-bold uppercase tracking-wide text-brand-purple-light">Right now at the table</p>
-                    <h2 class="mt-2 text-4xl md:text-5xl font-bold text-white">They say takeaways. We say fair contract.</h2>
-                    <p class="mt-4 text-lg md:text-xl text-brand-purple-light">Management is trying to freeze wages, shift costs, and weaken protections. Our union is proposing raises, benefits security, and stronger rights for classified staff.</p>
-                </div>
-                <div class="grid lg:grid-cols-2 gap-6 mt-8">
-                    <article class="bg-white text-text-primary rounded-xl p-6 md:p-8 border-4 border-red-600">
-                        <p class="text-sm font-bold uppercase tracking-wide text-red-700">Management's offer</p>
-                        <h3 class="mt-2 text-3xl font-bold text-red-800">No raises for four years</h3>
-                        <ul class="mt-5 space-y-3 text-text-secondary">
-                            <li><strong class="text-text-primary">No step increases and no COLAs</strong> for four years.</li>
-                            <li>Change overtime calculations so workers earn less.</li>
-                            <li>Shift healthcare costs onto workers by changing how plans qualify for the 97/3 premium share.</li>
-                            <li>Require a doctor's note after 3 consecutive sick days instead of 7.</li>
-                            <li>Cap bereavement leave at 8 days per year and let management require documentation of death.</li>
-                            <li>Complicate annual vacation cash-out rules.</li>
-                            <li>Eliminate layoff protections, including bumping rights during layoffs.</li>
-                            <li>Weaken contracting-out protections by removing feasibility studies from the contract.</li>
-                        </ul>
-                    </article>
-                    <article class="bg-white text-text-primary rounded-xl p-6 md:p-8 border-4 border-brand-purple">
-                        <p class="text-sm font-bold uppercase tracking-wide text-brand-purple">Our union's proposals</p>
-                        <h3 class="mt-2 text-3xl font-bold">Real raises and real protections</h3>
-                        <ul class="mt-5 space-y-3 text-text-secondary">
-                            <li><strong class="text-text-primary">July 1, 2026:</strong> Consumer Price Index (CPI) + 3%, with at least 4% total.</li>
-                            <li><strong class="text-text-primary">July 1, 2027:</strong> CPI + 2%, with at least 4% total.</li>
-                            <li>Increase the longevity premium by an additional 1% for every 5 years of service.</li>
-                            <li>Pilot a 32-hour workweek.</li>
-                            <li>Maintain healthcare benefits and add pay-schedule options for Public Employees’ Benefit Board (PEBB) coverage during the academic year.</li>
-                            <li>Win union orientations for new employees in their first 30 days.</li>
-                            <li>Add job protections and training when work is eliminated by AI, plus transparency around computer monitoring.</li>
-                            <li>Strengthen equity, discrimination, adverse-weather, gear, immigrant, and data protections.</li>
-                        </ul>
-                    </article>
-                </div>
-                <div class="mt-8 flex flex-col sm:flex-row gap-4">
-                    <a href="/2026-bargaining/Higher-Ed-They-Say-We-Say-Flyer.pdf" class="btn btn-outline w-full sm:w-auto text-center" target="_blank" rel="noopener" data-ph-event="file_download_click" data-ph-label="Bargaining Bilingual Flyer Download" data-ph-metadata='{"file_type":"pdf","placement":"bargaining_comparison"}'>Download the Bilingual Flyer</a>
-                    <a href="https://seiu503.tfaforms.net/759" class="btn btn-secondary w-full sm:w-auto text-center" target="_blank" rel="noopener noreferrer" data-ph-event="cat_signup_click" data-ph-label="Bargaining Comparison CAT Signup" data-ph-metadata='{"signup_type":"cat","placement":"bargaining_comparison"}'>Join the Contract Action Team</a>
+    <div class="container mx-auto px-5 sm:px-6 py-14 md:py-20">
+        <section id="current-status" class="mb-20 md:mb-28" aria-labelledby="current-status-heading">
+            <div class="status-panel p-6 sm:p-8 md:p-12">
+                <div class="relative z-10">
+                    <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
+                        <div class="max-w-4xl">
+                            <p class="text-sm font-extrabold uppercase tracking-[0.15em] text-purple-200">At the table now</p>
+                            <h2 id="current-status-heading" class="mt-3 text-3xl md:text-5xl font-bold leading-tight">0% COLAs. A 19-year step path. Rights on the line.</h2>
+                            <p class="mt-5 text-lg md:text-xl text-purple-100 leading-relaxed">Management's latest offer does not include cost-of-living increases over four years. It would also slow movement through the wage scale and weaken protections our members built over decades.</p>
+                        </div>
+                        <p class="text-sm text-purple-100 lg:text-right shrink-0"><strong class="text-white">Status:</strong> Bargaining continues<br><strong class="text-white">Report date:</strong> July 9, 2026</p>
+                    </div>
+
+                    <div class="grid md:grid-cols-3 gap-4 mt-8">
+                        <div class="status-stat"><strong>0%</strong><span class="font-bold">COLAs across the proposed four-year agreement</span></div>
+                        <div class="status-stat"><strong>19 years</strong><span class="font-bold">Proposed path from step 1 to step 10</span></div>
+                        <div class="status-stat"><strong>Our rights</strong><span class="font-bold">Layoff and contracting-out protections remain at risk</span></div>
+                    </div>
+
+                    <div class="mt-8 flex flex-col sm:flex-row gap-3">
+                        <a href="mailto:pres.office@oregonstate.edu" class="btn bg-yellow-400 text-brand-purple-dark hover:bg-yellow-300" data-email-action="osu-president" data-ph-event="take_action_click" data-ph-label="Bargaining President Email">Email OSU President Murthy</a>
+                        <a href="/news/2026-07-09-latest-bargaining-update.html" class="btn bg-white text-brand-purple-dark hover:bg-purple-50">Read our July 9 bargaining report</a>
+                    </div>
+                    <p class="mt-6 text-sm text-purple-100">Source: Our bargaining team's July 9, 2026, report. We will update this summary when management makes a new proposal.</p>
                 </div>
             </div>
         </section>
 
-        <section class="mb-20">
-            <h2 class="text-4xl font-bold text-center mb-10">What We’re Fighting For</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="bg-white p-6 rounded-xl border border-border-color">
-                    <h3 class="text-xl font-bold mb-2">Economics</h3>
-                    <p class="text-text-secondary">Raises that beat a four-year wage freeze: CPI-linked increases, step movement, and stronger longevity pay.</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl border border-border-color">
-                    <h3 class="text-xl font-bold mb-2">Union Power</h3>
-                    <p class="text-text-secondary">New employee orientations, stronger communication, and member power at every worksite.</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl border border-border-color">
-                    <h3 class="text-xl font-bold mb-2">Benefits</h3>
-                    <p class="text-text-secondary">Protect affordable healthcare, defend leave, and stop management from shifting more costs onto workers.</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl border border-border-color">
-                    <h3 class="text-xl font-bold mb-2">Worker Protections</h3>
-                    <p class="text-text-secondary">Keep layoff rights, strengthen equity language, protect immigrant workers and data, and address AI-driven job changes.</p>
-                </div>
+        <section id="worker-impact" class="mb-20 md:mb-28" aria-labelledby="worker-impact-heading">
+            <div class="section-heading">
+                <span class="eyebrow">What this means for you</span>
+                <h2 id="worker-impact-heading" class="text-3xl md:text-5xl font-bold">The proposal in plain language</h2>
+                <p class="text-lg text-text-secondary">These issues affect our pay, career progression and security on the job.</p>
             </div>
+            <div class="grid md:grid-cols-3 gap-5">
+                <article class="impact-card">
+                    <p class="number">Your paycheck</p>
+                    <h3 class="text-xl font-bold mt-3">No cost-of-living increase</h3>
+                    <p class="mt-3 text-text-secondary leading-relaxed">Under management's proposal, the wage scale would receive no cost-of-living increase during the four-year agreement.</p>
+                </article>
+                <article class="impact-card">
+                    <p class="number">Your steps</p>
+                    <h3 class="text-xl font-bold mt-3">A much slower wage path</h3>
+                    <p class="mt-3 text-text-secondary leading-relaxed">Management's proposed structure would take 19 years to move from step 1 to step 10.</p>
+                </article>
+                <article class="impact-card">
+                    <p class="number">Your rights</p>
+                    <h3 class="text-xl font-bold mt-3">Less security during change</h3>
+                    <p class="mt-3 text-text-secondary leading-relaxed">Management's proposed changes would weaken our negotiated protections involving layoffs and contracting out bargaining-unit work.</p>
+                </article>
+            </div>
+            <div class="source-note mt-5"><strong>Why the wording matters:</strong> These are management proposals—not an adopted contract. Our bargaining team will keep members updated as proposals change.</div>
         </section>
 
-        <section class="mb-20">
-            <div class="text-center mb-10">
-                <h2 class="text-4xl font-bold">Bargaining Timeline</h2>
-                <p class="mt-3 text-text-secondary">This roadmap showed where we were in the campaign and what came next.</p>
+        <section id="take-action" class="mb-20 md:mb-28" aria-labelledby="action-heading">
+            <div class="action-band">
+                <div>
+                    <span class="eyebrow !text-brand-purple-dark">Current bargaining action</span>
+                    <h2 id="action-heading" class="text-3xl md:text-4xl font-bold">Tell OSU: We deserve a fair contract</h2>
+                    <p class="mt-3 text-text-primary max-w-3xl">Ask President Murthy to reject an offer with zero percent COLAs, a 19-year step path and rollbacks to our workplace protections.</p>
+                </div>
+                <a href="mailto:pres.office@oregonstate.edu" class="btn bg-brand-purple-dark text-white hover:bg-purple-900" data-email-action="osu-president" data-ph-event="take_action_click" data-ph-label="Bargaining Action Email">Email President Murthy</a>
             </div>
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="bg-white p-6 rounded-xl border border-border-color">
-                    <p class="text-sm font-semibold text-brand-purple mb-2">Phase 1</p>
-                    <h3 class="text-xl font-bold mb-2">Survey &amp; Priorities</h3>
-                    <p class="text-text-secondary">Gather member input and set top priorities for bargaining.</p>
-                    <p class="text-sm text-text-secondary mt-3">Completed: Winter 2025–2026</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl border border-border-color">
-                    <p class="text-sm font-semibold text-brand-purple mb-2">Phase 2</p>
-                    <h3 class="text-xl font-bold mb-2">Proposal Development</h3>
-                    <p class="text-text-secondary">Draft proposals, caucus, and align bargaining strategy.</p>
-                    <p class="text-sm text-text-secondary mt-3">Completed: Early 2026</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl border border-border-color">
-                    <p class="text-sm font-semibold text-brand-purple mb-2">Phase 3</p>
-                    <h3 class="text-xl font-bold mb-2">Open Bargaining</h3>
-                    <p class="text-text-secondary">Live sessions with updates, Q&amp;A, and member turnout.</p>
-                    <p class="text-sm text-text-secondary mt-3">Started: February 12–13 at U of O</p>
-                    <p class="text-sm text-text-secondary mt-3">Phase window: Spring 2026</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl border border-border-color">
-                    <p class="text-sm font-semibold text-brand-purple mb-2">Phase 4</p>
-                    <h3 class="text-xl font-bold mb-2">Tentative Agreement</h3>
-                    <p class="text-text-secondary">Finalize a deal and move to member ratification.</p>
-                    <p class="text-sm text-text-secondary mt-3">Sub-step: Member authorization if needed</p>
-                    <p class="text-sm text-text-secondary mt-3">Next: Member updates as bargaining develops</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="mb-20">
-            <div class="text-center mb-10">
-                <h2 class="text-4xl font-bold">How Bargaining Works</h2>
-                <p class="mt-3 text-text-secondary">A quick walkthrough of the process from member input to a new contract.</p>
-            </div>
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="bg-white p-6 rounded-xl border border-border-color">
-                    <h3 class="text-xl font-bold mb-2">1. Member Priorities</h3>
-                    <p class="text-text-secondary">Members identify the issues that matter most through surveys and meetings.</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl border border-border-color">
-                    <h3 class="text-xl font-bold mb-2">2. Proposal Building</h3>
-                    <p class="text-text-secondary">The bargaining team turns priorities into proposals and a strategy.</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl border border-border-color">
-                    <h3 class="text-xl font-bold mb-2">3. Open Sessions</h3>
-                    <p class="text-text-secondary">Bargaining happens at the table with member observers and updates.</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl border border-border-color">
-                    <h3 class="text-xl font-bold mb-2">4. Strike Vote</h3>
-                    <p class="text-text-secondary">Members vote on whether to authorize a strike if needed to win a fair contract.</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl border border-border-color">
-                    <h3 class="text-xl font-bold mb-2">5. Ratification</h3>
-                    <p class="text-text-secondary">Members vote to accept or reject the tentative agreement.</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="mb-20">
-            <div class="text-center mb-10">
-                <h2 class="text-4xl font-bold">Ways to Participate Now</h2>
-                <p class="mt-3 text-text-secondary">Every action builds power at the table. Pick a few and invite a coworker.</p>
-            </div>
-            <div class="participate-columns columns-1 md:columns-2 lg:columns-3">
-                <details class="bg-white rounded-xl border border-border-color group overflow-hidden transition-all duration-300 open:shadow-lg open:border-brand-purple break-inside-avoid mb-6">
-                    <summary class="font-semibold text-lg cursor-pointer flex justify-between items-center p-6 transition-colors group-hover:bg-gray-50 group-open:bg-brand-purple-light">
-                        <span>Talk to Your Coworkers</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-brand-purple transform group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
-                    </summary>
-                    <div class="p-6 pt-0 text-text-secondary">
-                        <p>Share priorities, answer questions, and build unity across your department.</p>
-                        <p class="mt-3">Ask: “What’s the top issue you want to see in the next contract?”</p>
-                    </div>
-                </details>
-                <details class="bg-white rounded-xl border border-border-color group overflow-hidden transition-all duration-300 open:shadow-lg open:border-brand-purple break-inside-avoid mb-6">
-                    <summary class="font-semibold text-lg cursor-pointer flex justify-between items-center p-6 transition-colors group-hover:bg-gray-50 group-open:bg-brand-purple-light">
-                        <span>Join Our Contract Action Team</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-brand-purple transform group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
-                    </summary>
-                    <div class="p-6 pt-0 text-text-secondary">
-                        <p>Become a Contract Action Team (CAT) member and help organize coworkers at your worksite.</p>
-                        <p class="mt-3">CAT members share bargaining updates, listen to coworkers, identify workplace issues, and help coworkers take action together.</p>
-                        <p class="mt-3"><a href="https://seiu503.tfaforms.net/759" class="participate-link" target="_blank" rel="noopener noreferrer" data-ph-event="cat_signup_click" data-ph-label="Bargaining Participate CAT Signup" data-ph-metadata='{"signup_type":"cat","placement":"ways_to_participate"}'>Sign up to join the CAT.</a></p>
-                    </div>
-                </details>
-                <details class="bg-white rounded-xl border border-border-color group overflow-hidden transition-all duration-300 open:shadow-lg open:border-brand-purple break-inside-avoid mb-6">
-                    <summary class="font-semibold text-lg cursor-pointer flex justify-between items-center p-6 transition-colors group-hover:bg-gray-50 group-open:bg-brand-purple-light">
-                        <span>Read Your Email</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-brand-purple transform group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
-                    </summary>
-                    <div class="p-6 pt-0 text-text-secondary">
-                        <p>Open bargaining updates and bring questions to the next session.</p>
-                        <p class="mt-3">Share key updates with coworkers who missed them.</p>
-                        <p class="mt-3">To join or update our email list, email <a href="mailto:083execteam@seiu503.org" class="participate-link">083execteam@seiu503.org</a>.</p>
-                    </div>
-                </details>
-                <details class="bg-white rounded-xl border border-border-color group overflow-hidden transition-all duration-300 open:shadow-lg open:border-brand-purple break-inside-avoid mb-6">
-                    <summary class="font-semibold text-lg cursor-pointer flex justify-between items-center p-6 transition-colors group-hover:bg-gray-50 group-open:bg-brand-purple-light">
-                        <span>Purple Up on Purple Days</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-brand-purple transform group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
-                    </summary>
-                    <div class="p-6 pt-0 text-text-secondary">
-                        <p>Wear purple to show campus-wide support for a fair contract.</p>
-                        <p class="mt-3">Invite your team to coordinate and snap a photo.</p>
-                    </div>
-                </details>
-                <details class="bg-white rounded-xl border border-border-color group overflow-hidden transition-all duration-300 open:shadow-lg open:border-brand-purple break-inside-avoid mb-6">
-                    <summary class="font-semibold text-lg cursor-pointer flex justify-between items-center p-6 transition-colors group-hover:bg-gray-50 group-open:bg-brand-purple-light">
-                        <span>Host a Unity Break</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-brand-purple transform group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
-                    </summary>
-                    <div class="p-6 pt-0 text-text-secondary">
-                        <p>Bring coworkers together for a short break to build unity and share updates.</p>
-                        <p class="mt-3">Host it in your department and invite someone new.</p>
-                        <p class="mt-3">To get a T-shirt or schedule a unity break, email <a href="mailto:083execteam@seiu503.org" class="participate-link">083execteam@seiu503.org</a>.</p>
-                    </div>
-                </details>
-                <details class="bg-white rounded-xl border border-border-color group overflow-hidden transition-all duration-300 open:shadow-lg open:border-brand-purple break-inside-avoid mb-6">
-                    <summary class="font-semibold text-lg cursor-pointer flex justify-between items-center p-6 transition-colors group-hover:bg-gray-50 group-open:bg-brand-purple-light">
-                        <span>Show Up at Rallies</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-brand-purple transform group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
-                    </summary>
-                    <div class="p-6 pt-0 text-text-secondary">
-                        <p>Bring energy and solidarity to actions that move the table.</p>
-                        <p class="mt-3">Carpool and bring a coworker who hasn’t been yet.</p>
-                        <p class="mt-3">Reach out to <a href="mailto:083execteam@seiu503.org" class="participate-link">083execteam@seiu503.org</a> to schedule a bargaining watch party at your worksite.</p>
-                    </div>
-                </details>
-                <details class="bg-white rounded-xl border border-border-color group overflow-hidden transition-all duration-300 open:shadow-lg open:border-brand-purple break-inside-avoid mb-6">
-                    <summary class="font-semibold text-lg cursor-pointer flex justify-between items-center p-6 transition-colors group-hover:bg-gray-50 group-open:bg-brand-purple-light">
-                        <span>Watch Bargaining</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-brand-purple transform group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
-                    </summary>
-                    <div class="p-6 pt-0 text-text-secondary">
-                        <p>Attend sessions when you can to keep the process open and member-led.</p>
-                        <p class="mt-3">Track how proposals move and share summaries with coworkers.</p>
-                    </div>
-                </details>
-                <details class="bg-white rounded-xl border border-border-color group overflow-hidden transition-all duration-300 open:shadow-lg open:border-brand-purple break-inside-avoid mb-6">
-                    <summary class="font-semibold text-lg cursor-pointer flex justify-between items-center p-6 transition-colors group-hover:bg-gray-50 group-open:bg-brand-purple-light">
-                        <span>Sign the Petitions</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-brand-purple transform group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
-                    </summary>
-                    <div class="p-6 pt-0 text-text-secondary">
-                        <p>Add your name and share petitions with coworkers.</p>
-                        <p class="mt-3">Ask a coworker to sign right after you do.</p>
-                    </div>
-                </details>
-                <details class="bg-white rounded-xl border border-border-color group overflow-hidden transition-all duration-300 open:shadow-lg open:border-brand-purple break-inside-avoid mb-6">
-                    <summary class="font-semibold text-lg cursor-pointer flex justify-between items-center p-6 transition-colors group-hover:bg-gray-50 group-open:bg-brand-purple-light">
-                        <span>Bring Everyone You Can</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-brand-purple transform group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
-                    </summary>
-                    <div class="p-6 pt-0 text-text-secondary">
-                        <p>Invite coworkers to rallies and actions to show our collective strength.</p>
-                        <p class="mt-3">A bigger turnout sends a clear message to OSU.</p>
-                    </div>
-                </details>
-            </div>
-        </section>
-
-        <section class="mb-20">
-            <div class="text-center mb-10">
-                <h2 class="text-4xl font-bold">Meet Your Bargaining Team!</h2>
-                <p class="mt-3 text-text-secondary">Member leaders representing classified staff across Oregon higher education.</p>
-            </div>
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="bg-white p-6 rounded-xl border border-border-color">
-                    <h3 class="text-xl font-bold mb-1">Jo Hickerson</h3>
-                    <p class="text-text-secondary">Chair · EOU</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl border border-border-color">
-                    <h3 class="text-xl font-bold mb-1">Damien Manassa</h3>
-                    <p class="text-text-secondary">OSU</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl border border-border-color">
-                    <h3 class="text-xl font-bold mb-1">Jamie Baker</h3>
-                    <p class="text-text-secondary">EOU</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl border border-border-color">
-                    <h3 class="text-xl font-bold mb-1">Darryn Stevens</h3>
-                    <p class="text-text-secondary">OIT</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl border border-border-color">
-                    <h3 class="text-xl font-bold mb-1">Colleen Martin-Low</h3>
-                    <p class="text-text-secondary">SOU</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl border border-border-color">
-                    <h3 class="text-xl font-bold mb-1">Rieley Umphress</h3>
-                    <p class="text-text-secondary">UO</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl border border-border-color">
-                    <h3 class="text-xl font-bold mb-1">Ashley Wase</h3>
-                    <p class="text-text-secondary">PSU</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl border border-border-color">
-                    <h3 class="text-xl font-bold mb-1">Mark Decker</h3>
-                    <p class="text-text-secondary">WOU</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="mb-20">
-            <div class="text-center mb-10">
-                <h2 class="text-4xl font-bold">Bargaining Events</h2>
-                <p class="mt-3 text-text-secondary">Here are the confirmed bargaining session dates and key actions.</p>
-            </div>
-            <div class="mb-10">
-                <div class="bg-brand-purple-light text-brand-purple-dark rounded-2xl p-6 md:p-8 shadow-xl border border-border-color flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-                    <div>
-                        <p class="text-sm font-semibold uppercase tracking-wide text-brand-purple">Featured Rally</p>
-                        <h3 class="text-3xl font-bold mt-1">UO Bargaining Rally — Friday, May 15, 2026</h3>
-                        <p class="mt-2 text-text-secondary">EMU Amphitheater · Noon-1:00 PM. Transportation is available from OSU; the shuttle leaves Reser Stadium at 10:30 AM.</p>
-                    </div>
-                    <div class="flex flex-col sm:flex-row gap-3">
-                        <a href="https://events.blackthorn.io/en/61YqfV6/g/htR8nfQySM/may-rally-at-uo-5a6WRf3lEiX/overview" class="btn btn-secondary w-full sm:w-auto" target="_blank" rel="noopener noreferrer">Register for Rally</a>
-                        <a href="https://forms.office.com/pages/responsepage.aspx?id=MZMXYTkvsU-7KsfN-dhFUmF4AmAy__VEneAmfoloJV9UMUkzOFpXRlVCNkhaTkM1TlJYTUo4T0JKUS4u&amp;route=shorturl" class="btn btn-outline w-full sm:w-auto" target="_blank" rel="noopener noreferrer">Sign Up for Transportation</a>
-                    </div>
-                </div>
-            </div>
-            <div class="mb-10">
-                <div class="bg-white text-brand-purple-dark rounded-2xl p-6 md:p-8 shadow-xl border border-border-color flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-                    <div>
-                        <p class="text-sm font-semibold uppercase tracking-wide text-brand-purple">Past Rally</p>
-                        <h3 class="text-3xl font-bold mt-1">Rally at OSU — Tuesday, March 31, 2026</h3>
-                        <p class="mt-2 text-text-secondary">MU Quad · 12:00–1:00 PM. Bargaining happened at OSU that day, and members showed up in purple with coworkers.</p>
-                    </div>
-                    <div class="flex flex-col sm:flex-row gap-3">
-                        <a href="/events/2026-03-31-Rally-at-OSU.html" class="btn btn-secondary w-full sm:w-auto">View Rally Details</a>
-                        <a href="/events/ical/2026-03-31-Rally-at-OSU.ics" download class="btn btn-outline w-full sm:w-auto">Add to Calendar</a>
-                    </div>
-                </div>
-            </div>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="bg-white rounded-xl border border-border-color p-6">
-                    <p class="text-sm font-semibold text-brand-purple mb-2">May 28–29</p>
-                    <h3 class="text-2xl font-bold mb-2">SOU Bargaining</h3>
-                    <p class="text-text-secondary">In-person bargaining sessions at Southern Oregon University.</p>
-                </div>
-                <div class="bg-white rounded-xl border border-border-color p-6">
-                    <p class="text-sm font-semibold text-brand-purple mb-2">May 14–15</p>
-                    <h3 class="text-2xl font-bold mb-2">UO Bargaining</h3>
-                    <p class="text-text-secondary">In-person bargaining sessions at University of Oregon.</p>
-                </div>
-                <div class="bg-white rounded-xl border border-border-color p-6">
-                    <p class="text-sm font-semibold text-brand-purple mb-2">April 23–24</p>
-                    <h3 class="text-2xl font-bold mb-2">OSU Bargaining (Cascades)</h3>
-                    <p class="text-text-secondary">In-person bargaining sessions at OSU–Cascades in Bend.</p>
-                </div>
-                <div class="bg-white rounded-xl border border-border-color p-6">
-                    <p class="text-sm font-semibold text-brand-purple mb-2">March 30–31</p>
-                    <h3 class="text-2xl font-bold mb-2">OSU Bargaining (Corvallis)</h3>
-                    <p class="text-text-secondary">In-person bargaining sessions at OSU Corvallis.</p>
-                </div>
-                <div class="bg-white rounded-xl border border-border-color p-6">
-                    <p class="text-sm font-semibold text-brand-purple mb-2">March 19–20</p>
-                    <h3 class="text-2xl font-bold mb-2">PSU Bargaining</h3>
-                    <p class="text-text-secondary">In-person bargaining sessions at Portland State University.</p>
-                </div>
-                <div class="bg-white rounded-xl border border-border-color p-6">
-                    <p class="text-sm font-semibold text-brand-purple mb-2">March 5–6</p>
-                    <h3 class="text-2xl font-bold mb-2">WOU Bargaining</h3>
-                    <p class="text-text-secondary">In-person bargaining sessions at Western Oregon University.</p>
-                </div>
-                <div class="bg-white rounded-xl border border-border-color p-6">
-                    <p class="text-sm font-semibold text-brand-purple mb-2">February 12–13</p>
-                    <h3 class="text-2xl font-bold mb-2">UO Bargaining</h3>
-                    <p class="text-text-secondary">In-person bargaining sessions at University of Oregon.</p>
-                </div>
-            </div>
-            <div class="mt-8 text-center">
-                <a href="/news/2026-02-04-upcoming-bargaining-events.html" class="btn btn-outline">See Event Updates</a>
-            </div>
-        </section>
-
-        <section class="mb-20">
-            <h2 class="text-4xl font-bold text-center mb-10">Member Resources</h2>
-            <div class="grid md:grid-cols-2 xl:grid-cols-4 gap-8">
-                <a href="/resources/zoom-backgrounds.html" class="block bg-white p-6 rounded-xl border border-border-color hover:shadow-xl hover:border-brand-purple transition-all duration-300 hover:-translate-y-1">
-                    <h3 class="font-bold text-xl">Zoom Backgrounds</h3>
-                    <p class="text-text-secondary mt-1">Show unity in bargaining sessions and member meetings.</p>
+            <div class="grid sm:grid-cols-3 gap-4 mt-5">
+                <a href="https://seiu503.tfaforms.net/759" class="content-card p-5 group">
+                    <span class="eyebrow">Organize</span><h3 class="text-xl font-bold group-hover:underline">Join the Contract Action Team</h3><p class="mt-2 text-sm text-text-secondary">Help connect coworkers and coordinate actions.</p>
                 </a>
-                <a href="/news/2026-02-04-zoom-backgrounds.html" class="block bg-white p-6 rounded-xl border border-border-color hover:shadow-xl hover:border-brand-purple transition-all duration-300 hover:-translate-y-1">
-                    <h3 class="font-bold text-xl">Why Backgrounds Matter</h3>
-                    <p class="text-text-secondary mt-1">Short explainer on solidarity, privacy, and focus.</p>
+                <a href="https://seiu503signup.org" class="content-card p-5 group">
+                    <span class="eyebrow">Build power</span><h3 class="text-xl font-bold group-hover:underline">Become a Member</h3><p class="mt-2 text-sm text-text-secondary">Become a full member to have a voice and a vote.</p>
                 </a>
-                <a href="/resources/seiu_cba_2022-2026.pdf" class="block bg-white p-6 rounded-xl border border-border-color hover:shadow-xl hover:border-brand-purple transition-all duration-300 hover:-translate-y-1">
-                    <h3 class="font-bold text-xl">Current Contract (PDF)</h3>
-                    <p class="text-text-secondary mt-1">Review the existing agreement as we prepare the new one.</p>
-                </a>
-                <a href="/news/2026-05-07-economics-they-say-we-say.html" class="block bg-white p-6 rounded-xl border border-border-color hover:shadow-xl hover:border-brand-purple transition-all duration-300 hover:-translate-y-1">
-                    <h3 class="font-bold text-xl">Economics: They Say / We Say</h3>
-                    <p class="text-text-secondary mt-1">See the update on economics proposals and open the flyer for members.</p>
-                </a>
-                <a href="/2026-bargaining/Higher-Ed-They-Say-We-Say-Flyer.pdf" class="block bg-white p-6 rounded-xl border border-border-color hover:shadow-xl hover:border-brand-purple transition-all duration-300 hover:-translate-y-1" target="_blank" rel="noopener">
-                    <h3 class="font-bold text-xl">They Say / We Say Flyer</h3>
-                    <p class="text-text-secondary mt-1">Open the bargaining flyer on economics proposals to share with coworkers.</p>
-                </a>
-                <a href="/news/2026-04-16-membership-meeting-update.html" class="block bg-white p-6 rounded-xl border border-border-color hover:shadow-xl hover:border-brand-purple transition-all duration-300 hover:-translate-y-1">
-                    <h3 class="font-bold text-xl">April 16 Bargaining Update</h3>
-                    <p class="text-text-secondary mt-1">Read the bargaining recap and slide text from the April 16 membership meeting.</p>
+                <a href="/resources/zoom-backgrounds.html" class="content-card p-5 group">
+                    <span class="eyebrow">Show support</span><h3 class="text-xl font-bold group-hover:underline">Use a bargaining background</h3><p class="mt-2 text-sm text-text-secondary">Make our solidarity visible in online meetings.</p>
                 </a>
             </div>
         </section>
 
-        <section class="mb-20">
-            <h2 class="text-4xl font-bold text-center mb-10">FAQ</h2>
-            <div class="max-w-4xl mx-auto space-y-4">
-                <details class="bg-white rounded-xl border border-border-color group overflow-hidden transition-all duration-300 open:shadow-lg open:border-brand-purple">
-                    <summary class="font-semibold text-lg cursor-pointer flex justify-between items-center p-6 transition-colors group-hover:bg-gray-50 group-open:bg-brand-purple-light">
-                        <span>When did bargaining sessions start?</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-brand-purple transform group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
-                    </summary>
-                    <div class="p-6 pt-0 text-text-secondary">
-                        <p>Open bargaining started February 12–13 at UO.</p>
+        <section id="timeline" class="mb-20 md:mb-28" aria-labelledby="timeline-heading">
+            <div class="grid lg:grid-cols-[1.12fr_0.88fr] gap-8 lg:gap-12 items-start">
+                <div>
+                    <div class="section-heading">
+                        <span class="eyebrow">Where we are</span>
+                        <h2 id="timeline-heading" class="text-3xl md:text-5xl font-bold">Bargaining timeline</h2>
+                        <p class="text-lg text-text-secondary">See what changed at the table, when it changed and what comes next for our union.</p>
                     </div>
-                </details>
-                <details class="bg-white rounded-xl border border-border-color group overflow-hidden transition-all duration-300 open:shadow-lg open:border-brand-purple">
-                    <summary class="font-semibold text-lg cursor-pointer flex justify-between items-center p-6 transition-colors group-hover:bg-gray-50 group-open:bg-brand-purple-light">
-                        <span>How do I get the Zoom link?</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-brand-purple transform group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
-                    </summary>
-                    <div class="p-6 pt-0 text-text-secondary">
-                        <p>Zoom links are shared by email when observation details are available.</p>
+                    <div class="content-card p-6 md:p-8">
+                        <article class="timeline-item">
+                            <p class="eyebrow">February 2026</p><h3 class="text-2xl font-bold">Open bargaining begins</h3><p class="mt-2 text-text-secondary">Members began observing sessions and receiving reports from our bargaining team.</p>
+                        </article>
+                        <article class="timeline-item">
+                            <p class="eyebrow">June 30, 2026</p><h3 class="text-2xl font-bold">Our previous contract expires</h3><p class="mt-2 text-text-secondary">More than 140 members and supporters rallied at McNary Field and marched to Kerr Administration Building.</p>
+                        </article>
+                        <article class="timeline-item current">
+                            <p class="eyebrow">July 8–9, 2026 · Current</p><h3 class="text-2xl font-bold">Our bargaining team reports the latest offer</h3><p class="mt-2 text-text-secondary">Our bargaining team reported zero percent COLAs, a 19-year step path and proposed rollbacks to our rights.</p>
+                        </article>
+                        <article class="timeline-item">
+                            <p class="eyebrow">What comes next</p><h3 class="text-2xl font-bold">Bargaining and member action continue</h3><p class="mt-2 text-text-secondary">We will add updates here as proposals, sessions or tentative agreements develop.</p>
+                        </article>
                     </div>
-                </details>
-                <details class="bg-white rounded-xl border border-border-color group overflow-hidden transition-all duration-300 open:shadow-lg open:border-brand-purple">
-                    <summary class="font-semibold text-lg cursor-pointer flex justify-between items-center p-6 transition-colors group-hover:bg-gray-50 group-open:bg-brand-purple-light">
-                        <span>How can I participate if I can’t attend live?</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-brand-purple transform group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
-                    </summary>
-                    <div class="p-6 pt-0 text-text-secondary">
-                        <p>We shared recaps and action items after each session. Members could also connect with a steward to share input.</p>
+                </div>
+
+                <aside class="content-card overflow-hidden" aria-labelledby="next-event-heading">
+                    <img src="/images/154a6213-be1c-4fa9-9308-2622a3b2b9a3-june-30-rally-turnout-wide-view.webp" alt="Local 083 members and supporters gathered at McNary Field" class="w-full aspect-[16/8] object-cover" loading="lazy" decoding="async" width="1800" height="709">
+                    <div class="p-6 md:p-8">
+                        <span class="eyebrow">Next member meeting</span>
+                        <h2 id="next-event-heading" class="text-3xl font-bold">General Membership Meeting</h2>
+                        <dl class="mt-5 grid gap-3 text-text-secondary">
+                            <div><dt class="font-bold text-text-primary">When</dt><dd>Thursday, July 16 at noon</dd></div>
+                            <div><dt class="font-bold text-text-primary">Where</dt><dd>Memorial Union, room 215</dd></div>
+                            <div><dt class="font-bold text-text-primary">Why attend</dt><dd>Hear our latest bargaining update, ask questions and prepare for the next phase.</dd></div>
+                        </dl>
+                        <a href="/events/2026-07-16-General-Membership-Meeting.html" class="btn btn-primary mt-6 w-full">View membership meeting details</a>
                     </div>
-                </details>
-                <details class="bg-white rounded-xl border border-border-color group overflow-hidden transition-all duration-300 open:shadow-lg open:border-brand-purple">
-                    <summary class="font-semibold text-lg cursor-pointer flex justify-between items-center p-6 transition-colors group-hover:bg-gray-50 group-open:bg-brand-purple-light">
-                        <span>Do I need to be a member to attend?</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-brand-purple transform group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
-                    </summary>
-                    <div class="p-6 pt-0 text-text-secondary">
-                        <p>All classified staff are encouraged to stay informed. Membership gives you voting rights and a direct voice in decisions.</p>
-                    </div>
-                </details>
-                <details class="bg-white rounded-xl border border-border-color group overflow-hidden transition-all duration-300 open:shadow-lg open:border-brand-purple">
-                    <summary class="font-semibold text-lg cursor-pointer flex justify-between items-center p-6 transition-colors group-hover:bg-gray-50 group-open:bg-brand-purple-light">
-                        <span>Where do I get updates and reminders?</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-brand-purple transform group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
-                    </summary>
-                    <div class="p-6 pt-0 text-text-secondary">
-                        <p>We posted updates on the News page and emailed members. Members could also email leadership to be added to reminders.</p>
-                    </div>
-                </details>
-                <details class="bg-white rounded-xl border border-border-color group overflow-hidden transition-all duration-300 open:shadow-lg open:border-brand-purple">
-                    <summary class="font-semibold text-lg cursor-pointer flex justify-between items-center p-6 transition-colors group-hover:bg-gray-50 group-open:bg-brand-purple-light">
-                        <span>How can I help right now?</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-brand-purple transform group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
-                    </summary>
-                    <div class="p-6 pt-0 text-text-secondary">
-                        <p>Use a bargaining Zoom background, attend sessions when possible, and encourage coworkers to join and participate.</p>
-                    </div>
-                </details>
+                </aside>
             </div>
         </section>
 
-        <section class="bg-brand-purple-light p-8 md:p-12 rounded-xl border border-border-color text-center">
-            <h2 class="text-3xl font-bold text-brand-purple-dark mb-4">Stay Connected</h2>
-            <p class="text-text-secondary max-w-3xl mx-auto mb-6">Needed reminders and session changes? The News page carried live updates throughout bargaining.</p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="/news.html" class="btn btn-outline">View News Updates</a>
+        <section id="updates" class="mb-20 md:mb-28" aria-labelledby="updates-heading">
+            <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-8">
+                <div class="section-heading !mb-0">
+                    <span class="eyebrow">From our bargaining team</span>
+                    <h2 id="updates-heading" class="text-3xl md:text-5xl font-bold">Latest bargaining updates</h2>
+                </div>
+                <a href="/news.html?tag=Bargaining" class="font-bold text-brand-purple hover:underline">View all bargaining news →</a>
+            </div>
+            <div class="grid lg:grid-cols-[1.1fr_0.9fr] gap-5">
+                <article class="content-card overflow-hidden group">
+                    <img src="/images/2026-bargaining-zoom-backgrounds.webp" alt="Purple 2026 higher education bargaining graphic" class="w-full aspect-[16/7] object-cover" loading="lazy" decoding="async" width="1200" height="675">
+                    <div class="p-6 md:p-8"><p class="eyebrow">July 9 · Bargaining update</p><h3 class="text-2xl md:text-3xl font-bold">Our bargaining update: 0% COLAs and a 19-year step path</h3><p class="mt-3 text-text-secondary">Our bargaining team explains management's latest economic offer and the protections still at issue.</p><a href="/news/2026-07-09-latest-bargaining-update.html" class="mt-5 inline-block font-bold text-brand-purple group-hover:underline">Read our bargaining update →</a></div>
+                </article>
+                <div class="grid gap-5">
+                    <article class="content-card p-6 group"><p class="eyebrow">July 9 · Take action</p><h3 class="text-2xl font-bold">Management's offer? We say HELL NO!</h3><p class="mt-3 text-text-secondary">Email OSU leadership and ask for a contract that respects classified staff.</p><a href="/news/2026-07-09-tell-universities-hell-no.html" class="mt-4 inline-block font-bold text-brand-purple group-hover:underline">Read and take action →</a></article>
+                </div>
             </div>
         </section>
 
+        <section id="how-it-works" class="mb-20 md:mb-28" aria-labelledby="process-heading">
+            <div class="section-heading">
+                <span class="eyebrow">New to bargaining?</span>
+                <h2 id="process-heading" class="text-3xl md:text-5xl font-bold">How a new contract is won</h2>
+                <p class="text-lg text-text-secondary">New to bargaining? Start here to see how members set priorities, build power and vote on a tentative agreement.</p>
+            </div>
+            <ol class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+                <li class="content-card p-6"><p class="number text-4xl font-extrabold text-brand-purple">1</p><h3 class="text-xl font-bold mt-3">Members set priorities</h3><p class="mt-2 text-text-secondary">We identify what needs to change through surveys, meetings and workplace conversations.</p></li>
+                <li class="content-card p-6"><p class="number text-4xl font-extrabold text-brand-purple">2</p><h3 class="text-xl font-bold mt-3">Proposals go to the table</h3><p class="mt-2 text-text-secondary">Our bargaining team and management exchange proposals on contract language and economics.</p></li>
+                <li class="content-card p-6"><p class="number text-4xl font-extrabold text-brand-purple">3</p><h3 class="text-xl font-bold mt-3">Members build power</h3><p class="mt-2 text-text-secondary">We talk with coworkers, show up together and take action to strengthen our position at the table.</p></li>
+                <li class="content-card p-6"><p class="number text-4xl font-extrabold text-brand-purple">4</p><h3 class="text-xl font-bold mt-3">Members vote</h3><p class="mt-2 text-text-secondary">Members decide whether to ratify a tentative agreement reached at the table.</p></li>
+            </ol>
+        </section>
+
+        <section id="questions" class="mb-8" aria-labelledby="questions-heading">
+            <div class="grid lg:grid-cols-[0.78fr_1.22fr] gap-8 lg:gap-12">
+                <div>
+                    <span class="eyebrow">Common questions</span>
+                    <h2 id="questions-heading" class="text-3xl md:text-5xl font-bold">Bargaining FAQ</h2>
+                    <p class="mt-4 text-lg text-text-secondary">Clear answers for members and coworkers following contract negotiations for the first time.</p>
+                    <div class="content-card p-6 mt-7">
+                        <h3 class="text-2xl font-bold">Still have a question?</h3>
+                        <p class="mt-3 text-text-secondary">Email our executive team or bring your question to our next membership meeting.</p>
+                        <a href="mailto:083execteam@seiu503.org" class="font-bold text-brand-purple hover:underline mt-4 inline-block">Email the executive team →</a>
+                    </div>
+                </div>
+                <div class="grid gap-4">
+                    <details class="content-card group overflow-hidden"><summary class="cursor-pointer p-5 md:p-6 font-bold text-lg flex justify-between gap-4"><span>What happens after a contract expires?</span><span aria-hidden="true">+</span></summary><div class="px-5 pb-5 md:px-6 md:pb-6 text-text-secondary">Bargaining can continue after a contract expires. Our bargaining team will report developments and explain any changes that affect members.</div></details>
+                    <details class="content-card group overflow-hidden"><summary class="cursor-pointer p-5 md:p-6 font-bold text-lg flex justify-between gap-4"><span>What is a COLA?</span><span aria-hidden="true">+</span></summary><div class="px-5 pb-5 md:px-6 md:pb-6 text-text-secondary">A cost-of-living adjustment is a general wage increase intended to help pay keep pace with changing living costs.</div></details>
+                    <details class="content-card group overflow-hidden"><summary class="cursor-pointer p-5 md:p-6 font-bold text-lg flex justify-between gap-4"><span>What is the difference between a COLA and a step?</span><span aria-hidden="true">+</span></summary><div class="px-5 pb-5 md:px-6 md:pb-6 text-text-secondary">A COLA changes the wage scale for covered workers. A step increase moves an eligible worker along that scale based on the contract's progression rules.</div></details>
+                    <details class="content-card group overflow-hidden"><summary class="cursor-pointer p-5 md:p-6 font-bold text-lg flex justify-between gap-4"><span>Who votes on a tentative agreement?</span><span aria-hidden="true">+</span></summary><div class="px-5 pb-5 md:px-6 md:pb-6 text-text-secondary">Members vote on whether to ratify a tentative agreement. Become a full member to have a voice and a vote.</div></details>
+                    <details class="content-card group overflow-hidden"><summary class="cursor-pointer p-5 md:p-6 font-bold text-lg flex justify-between gap-4"><span>Where can I read our 2022-2026 contract?</span><span aria-hidden="true">+</span></summary><div class="px-5 pb-5 md:px-6 md:pb-6 text-text-secondary"><a href="/resources/seiu_cba_2022-2026.pdf" class="font-bold text-brand-purple underline">Open our 2022-2026 collective bargaining agreement (PDF).</a></div></details>
+                </div>
+            </div>
+        </section>
+    </div>
     </main>
 
     <!-- Footer -->
-                <footer class="bg-gray-100 pt-12 pb-8 text-text-primary">
+                <!-- SITE SHELL: FOOTER START -->
+    <footer class="bg-gray-100 pt-12 pb-8 text-text-primary border-t border-gray-200" data-site-shell-footer>
         <div class="container mx-auto px-6">
-            <div class="mt-10 pt-8 border-t border-gray-700 text-center">
-            </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Column 1: About the Union -->
                 <div class="md:col-span-2 lg:col-span-1">
                     <div class="flex items-center mb-4">
-                        <img src="/images/logo.png" alt="SEIU 503 Logo" class="h-12 w-12 mr-3 bg-white p-1 rounded">
-                        <div>
-                            <h3 class="text-xl font-bold">SEIU Local 503</h3>
-                            <p class="text-text-secondary text-sm">Oregon State University</p>
-                        </div>
+                        <img src="/images/logo.png" alt="SEIU 503 logo" class="h-12 w-12 mr-3 bg-white p-1 rounded" width="48" height="48" loading="lazy" decoding="async">
+                        <div><h3 class="text-xl font-bold">SEIU Local 503</h3><p class="text-text-secondary text-sm">Oregon State University</p></div>
                     </div>
-                    <p class="text-text-secondary leading-relaxed">Representing the classified employees of Oregon State University. We fight for fair contracts, defend workplace rights, and build a united community.</p>
+                    <p class="text-text-secondary leading-relaxed">Our member-led union represents classified staff at Oregon State University. Together, we bargain fair contracts, defend our rights and build power at work.</p>
                 </div>
-    
-                <!-- Column 2: Quick Links -->
                 <div>
-                    <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase">Quick Links</h4>
+                    <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase">Quick links</h4>
                     <ul class="space-y-3">
-                        <li><a href="/about.html" class="text-text-secondary hover:text-brand-purple transition-colors">About Us</a></li>
+                        <li><a href="/about.html" class="text-text-secondary hover:text-brand-purple transition-colors">About our union</a></li>
                         <li><a href="/events.html" class="text-text-secondary hover:text-brand-purple transition-colors">Events</a></li>
                         <li><a href="/news.html" class="text-text-secondary hover:text-brand-purple transition-colors">News</a></li>
                         <li><a href="/leadership.html" class="text-text-secondary hover:text-brand-purple transition-colors">Leadership</a></li>
                     </ul>
                 </div>
-    
-                <!-- Column 3: Resources -->
                 <div>
                     <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase"><a href="/resources.html" class="hover:text-brand-purple transition-colors">Resources</a></h4>
                     <ul class="space-y-3">
-                        <li><a href="/resources.html" class="text-text-secondary hover:text-brand-purple transition-colors">Resources & Rights</a></li>
+                        <li><a href="/resources.html" class="text-text-secondary hover:text-brand-purple transition-colors">Resources &amp; Rights</a></li>
                         <li><a href="/resources/seiu_cba_2022-2026.pdf" class="text-text-secondary hover:text-brand-purple transition-colors">Our Contract (PDF)</a></li>
                         <li><a href="/resources/stewards.html" class="text-text-secondary hover:text-brand-purple transition-colors">Find a Steward</a></li>
                         <li><a href="/resources/weingarten-rights.html" class="text-text-secondary hover:text-brand-purple transition-colors">Weingarten Rights</a></li>
                     </ul>
                 </div>
-    
-                <!-- Column 4: Contact -->
                 <div>
-                    <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase"><a href="/contact.html" class="hover:text-brand-purple transition-colors">Contact Us</a></h4>
-                     <ul class="space-y-3 text-text-secondary">
-                        <li class="flex items-start">
-                            <span class="mr-2 mt-1">✉️</span> <!-- Mail icon -->
-                            <a href="mailto:083execteam@seiu503.org" class="hover:text-brand-purple transition-colors">083execteam@seiu503.org</a>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="mr-2 mt-1">✉️</span> <!-- Mail icon -->
-                            <a href="mailto:083stewards@seiu503.org" class="hover:text-brand-purple transition-colors">083stewards@seiu503.org</a>
-                        </li>
+                    <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase"><a href="/contact.html" class="hover:text-brand-purple transition-colors">Contact us</a></h4>
+                    <ul class="space-y-3">
+                        <li><a href="mailto:083execteam@seiu503.org" class="text-text-secondary hover:text-brand-purple transition-colors break-all">083execteam@seiu503.org</a></li>
+                        <li><a href="mailto:083stewards@seiu503.org" class="text-text-secondary hover:text-brand-purple transition-colors break-all">083stewards@seiu503.org</a></li>
                     </ul>
                 </div>
             </div>
-    
-            <!-- Bottom Bar -->
-            <div class="mt-10 pt-8 border-t border-gray-700 text-center space-y-2">
-                <p class="text-text-secondary text-sm">&copy; 2026 SEIU Local 503, Sublocal 083. All rights reserved.</p>
-                <p class="text-text-secondary text-xs">
-                    <a href="#" class="underline hover:text-brand-purple" onclick="event.preventDefault(); (localStorage.getItem('ph_opt_out') === '1' ? phOptIn() : phOptOut());">
-                        Privacy settings
-                    </a>
-                </p>
+            <div class="mt-10 pt-8 border-t border-gray-300 text-center space-y-2">
+                <p class="text-text-secondary text-sm">&copy; 2026 SEIU Local 503, Local 083. All rights reserved.</p>
+                <p class="text-text-secondary text-xs"><a class="underline hover:text-brand-purple" href="/privacy.html#analytics-controls">Tracking settings</a><span aria-hidden="true"> · </span><a class="underline hover:text-brand-purple" href="/privacy.html">Privacy notice</a></p>
             </div>
         </div>
     </footer>
+<!-- SITE SHELL: FOOTER END -->
 
     <script>
         // --- Mobile Menu Toggle ---
@@ -792,6 +782,14 @@
                 mobileMenu.classList.add('hidden');
                 mobileMenuButton.setAttribute('aria-expanded', 'false');
             });
+        });
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape' && mobileMenuButton.getAttribute('aria-expanded') === 'true') {
+                mobileMenu.classList.add('hidden');
+                mobileMenuButton.setAttribute('aria-expanded', 'false');
+                mobileMenuButton.focus();
+            }
         });
     </script>
 </body>

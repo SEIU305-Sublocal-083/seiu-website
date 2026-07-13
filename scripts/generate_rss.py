@@ -7,6 +7,7 @@ from pathlib import Path
 from typing import List, Optional
 import xml.etree.ElementTree as ET
 from xml.dom import minidom
+from zoneinfo import ZoneInfo
 
 
 BASE_URL = "https://www.local083.org"
@@ -19,6 +20,7 @@ COMBINED_RSS_PATH = ROOT / "feed.xml"
 
 ATOM_NS = "http://www.w3.org/2005/Atom"
 ET.register_namespace("atom", ATOM_NS)
+OREGON_TZ = ZoneInfo("America/Los_Angeles")
 
 
 def absolute_url(path: str) -> str:
@@ -31,10 +33,12 @@ def absolute_url(path: str) -> str:
 
 def parse_date(value: Optional[str]) -> datetime:
     if not value:
-        return datetime.now(timezone.utc)
+        return datetime(1970, 1, 1, tzinfo=timezone.utc)
     value = value.strip()
     if len(value) == 10:
-        return datetime.strptime(value, "%Y-%m-%d").replace(tzinfo=timezone.utc)
+        # Editorial dates are Oregon dates. Treating date-only values as UTC
+        # would expose scheduled stories at 4 or 5 p.m. Pacific the day before.
+        return datetime.strptime(value, "%Y-%m-%d").replace(tzinfo=OREGON_TZ).astimezone(timezone.utc)
     return datetime.fromisoformat(value.replace("Z", "+00:00")).astimezone(timezone.utc)
 
 
@@ -44,17 +48,13 @@ def get_article_status(article: dict) -> str:
 
 
 def is_public_news_article(article: dict, now: Optional[datetime] = None) -> bool:
-    now = now or datetime.now(timezone.utc)
     status = get_article_status(article)
     published_at = parse_date(article.get("publishedAt") or article.get("createdAt"))
-
-    if status in {"draft", "review"}:
-        return False
-
-    if status == "scheduled":
-        return published_at <= now
-
-    return published_at <= now
+    # Scheduled publishing promotes due stories to `published` in a separate
+    # workflow. Requiring that explicit state keeps feed generation deterministic
+    # and prevents a scheduled page from appearing before its noindex tag is
+    # removed.
+    return status == "published" and published_at != datetime(1970, 1, 1, tzinfo=timezone.utc)
 
 
 def to_rfc2822(value: datetime) -> str:
@@ -103,7 +103,8 @@ def build_feed(
     ET.SubElement(channel, "link").text = BASE_URL
     ET.SubElement(channel, "description").text = description
     ET.SubElement(channel, "language").text = "en-us"
-    ET.SubElement(channel, "lastBuildDate").text = to_rfc2822(datetime.now(timezone.utc))
+    latest_item_date = max((item["pub_date"] for item in items), default=datetime(1970, 1, 1, tzinfo=timezone.utc))
+    ET.SubElement(channel, "lastBuildDate").text = to_rfc2822(latest_item_date)
 
     atom_link = ET.SubElement(channel, f"{{{ATOM_NS}}}link")
     atom_link.set("href", absolute_url(self_path))
@@ -173,6 +174,12 @@ def build_event_items(events_data: List[dict]) -> List[dict]:
     return items
 
 
+def event_entries(payload: object) -> List[dict]:
+    if not isinstance(payload, dict) or not isinstance(payload.get("events"), list):
+        raise ValueError("events/events.json must contain an object with an `events` array")
+    return payload["events"]
+
+
 def build_combined_items(news_items: List[dict], event_items: List[dict]) -> List[dict]:
     combined: List[dict] = []
     for item in news_items:
@@ -203,7 +210,7 @@ def write_xml(path: Path, xml_root: ET.Element) -> None:
 
 def main() -> None:
     news_data = json.loads(NEWS_JSON_PATH.read_text(encoding="utf-8"))
-    events_data = json.loads(EVENTS_JSON_PATH.read_text(encoding="utf-8"))
+    events_data = event_entries(json.loads(EVENTS_JSON_PATH.read_text(encoding="utf-8")))
 
     news_items = build_news_items(news_data)
     event_items = build_event_items(events_data)

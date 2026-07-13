@@ -3,24 +3,28 @@ name: Site Quality Checks
 on:
   pull_request:
     paths:
-      - "*.html"
-      - "news/**"
-      - "events/**"
-      - "resources/**"
-      - "2026-bargaining/**"
+      - "**/*.html"
+      - "**/*.json"
+      - "**/*.xml"
       - "images/**"
-      - "scripts/site_quality_check.py"
-      - ".github/workflows/site-quality.yml"
+      - "styles/**"
+      - "tailwind.config.cjs"
+      - "scripts/**"
+      - "tests/**"
+      - "generate_sitemap.sh"
+      - ".github/workflows/**"
   push:
     paths:
-      - "*.html"
-      - "news/**"
-      - "events/**"
-      - "resources/**"
-      - "2026-bargaining/**"
+      - "**/*.html"
+      - "**/*.json"
+      - "**/*.xml"
       - "images/**"
-      - "scripts/site_quality_check.py"
-      - ".github/workflows/site-quality.yml"
+      - "styles/**"
+      - "tailwind.config.cjs"
+      - "scripts/**"
+      - "tests/**"
+      - "generate_sitemap.sh"
+      - ".github/workflows/**"
   schedule:
     - cron: "0 13 * * *"
   workflow_dispatch:
@@ -40,12 +44,31 @@ jobs:
         with:
           python-version: "3.x"
 
+      - name: Run generator unit tests
+        run: python3 -m unittest discover -s tests -v
+
+      - name: Verify generated site files are current
+        run: python3 scripts/build_site.py --check
+
       - name: Run site quality checks
-        run: python scripts/site_quality_check.py --report site-quality-report.md
+        run: python scripts/site_quality_check.py --strict-placeholders --report site-quality-report.md
+
+      - name: Run static accessibility checks
+        run: python scripts/accessibility_audit.py --report accessibility-report.md
+
+      - name: Audit links and downloadable actions
+        run: python scripts/link_audit.py --report link-audit-report.md
+
+      - name: Audit the shared public header and footer
+        run: python scripts/shell_consistency_audit.py --report shell-consistency-report.md
 
       - name: Upload report artifact
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: site-quality-report
-          path: site-quality-report.md
+          path: |
+            site-quality-report.md
+            accessibility-report.md
+            link-audit-report.md
+            shell-consistency-report.md

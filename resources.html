@@ -1,401 +1,449 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Access your contract, know your rights, and find important forms and resources for SEIU Local 503 members at OSU.">
-    <meta name="author" content="SEIU Local 503 at OSU">
-    <title>Resources & Rights - SEIU Local 503, OSU</title>
-    <style>html{visibility:hidden;}html.tw-ready{visibility:visible;}</style>
-    <script src="https://cdn.tailwindcss.com" onload="document.documentElement.classList.add('tw-ready')"></script>
+    <meta name="description" content="Find the OSU classified staff contract, union stewards, Weingarten rights, layoff guidance and member resources from SEIU Local 503, Local 083.">
+    <title>Resources &amp; Rights - SEIU Local 503 at Oregon State University</title>
     <link rel="icon" href="/images/logo.png" type="image/png">
     <link rel="apple-touch-icon" href="/images/logo.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Lora:wght@400;500;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --brand-purple-dark: #4C1D95; /* Deep Purple */
-            --brand-purple: #7C3AED;      /* Vibrant Purple */
-            --brand-purple-light: #EDE9FE; /* Lighter Lavender for high contrast */
-            --brand-dark: #111827;         /* Near-black for high contrast text/bg */
-            --brand-light: #F9FAFB;        /* Off-white Background */
-            --text-primary: #1F2937;
-            --text-secondary: #374151;     /* Darker secondary text for better contrast */
-            --border-color: #D1D5DB;
-        }
-
-        html {
-            scroll-padding-top: 80px; /* Offset for sticky header */
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--brand-light);
-            color: var(--text-primary);
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Lora', serif;
-            color: var(--brand-purple-dark);
-        }
-
-        /* Accessibility: Clear focus indicators for all interactive elements */
-        a:focus-visible, button:focus-visible, details:focus-visible, input:focus-visible, textarea:focus-visible {
-            outline: 3px solid var(--brand-purple);
-            outline-offset: 2px;
-            border-radius: 4px;
-        }
-        
-        .btn {
-            @apply font-bold py-3 px-6 rounded-lg transition-all duration-300 ease-in-out transform hover:scale-105;
-        }
-        .btn-primary {
-            @apply bg-gradient-to-r from-brand-purple to-violet-600 text-white shadow-md hover:shadow-lg;
-        }
-        .btn-secondary {
-            @apply bg-brand-dark text-white hover:bg-black;
-        }
-        .btn-outline {
-             @apply bg-white text-brand-purple border-2 border-brand-purple hover:bg-brand-purple hover:text-white;
-        }
-
-        /* Custom Tailwind config for our CSS variables */
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'brand-purple-dark': 'var(--brand-purple-dark)',
-                        'brand-purple': 'var(--brand-purple)',
-                        'brand-purple-light': 'var(--brand-purple-light)',
-                        'brand-dark': 'var(--brand-dark)',
-                        'brand-light': 'var(--brand-light)',
-                        'text-primary': 'var(--text-primary)',
-                        'text-secondary': 'var(--text-secondary)',
-                        'border-color': 'var(--border-color)',
-                    }
-                }
-            }
-        }
-    </style>
-    <!-- SEO META START -->
+<link rel="stylesheet" href="/styles/fonts.css">
     <link rel="canonical" href="https://www.local083.org/resources.html">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.local083.org/resources.html">
-    <meta property="og:title" content="Resources &amp; Rights - SEIU Local 503, OSU">
-    <meta property="og:description" content="Access your contract, know your rights, and find important forms and resources for SEIU Local 503 members at OSU.">
+    <meta property="og:title" content="Resources &amp; Rights - SEIU Local 503 at Oregon State University">
+    <meta property="og:description" content="Contract guidance, workplace rights and practical help for OSU classified workers.">
     <meta property="og:image" content="https://www.local083.org/images/card.webp">
+    <meta property="og:image:alt" content="SEIU Local 503 at Oregon State University">
+    <meta property="og:image:width" content="1280">
+    <meta property="og:image:height" content="720">
     <meta property="og:site_name" content="SEIU Local 503 at Oregon State University">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://www.local083.org/resources.html">
-    <meta name="twitter:title" content="Resources &amp; Rights - SEIU Local 503, OSU">
-    <meta name="twitter:description" content="Access your contract, know your rights, and find important forms and resources for SEIU Local 503 members at OSU.">
+    <meta name="twitter:title" content="Resources &amp; Rights - SEIU Local 503 at Oregon State University">
+    <meta name="twitter:description" content="Contract guidance, workplace rights and practical help for OSU classified workers.">
     <meta name="twitter:image" content="https://www.local083.org/images/card.webp">
+    <meta name="twitter:image:alt" content="SEIU Local 503 at Oregon State University">
+        <link rel="stylesheet" href="/styles/tailwind.css">
+    <link rel="stylesheet" href="/styles/site-shell.css">
+<style>
+        :root {
+            --purple-950: #34106f;
+            --purple-900: #4c1d95;
+            --purple-700: #7c3aed;
+            --purple-600: #7c3aed;
+            --purple-200: #ddd6fe;
+            --purple-100: #ede9fe;
+            --purple-50: #f7f4ff;
+            --gold: #fdb913;
+            --gold-soft: #fff7d6;
+            --ink: #1f2937;
+            --muted: #374151;
+            --line: #d1d5db;
+            --paper: #f9fafb;
+            --white: #fff;
+        }
+
+        * { box-sizing: border-box; }
+        html { scroll-behavior: smooth; scroll-padding-top: 8rem; }
+        body { background: var(--paper); color: var(--ink); font-family: 'Inter', sans-serif; margin: 0; -webkit-font-smoothing: antialiased; }
+        h1, h2, h3 { color: var(--purple-900); font-family: 'Lora', serif; }
+        a, button, input { font: inherit; }
+        a:focus-visible, button:focus-visible, input:focus-visible, summary:focus-visible { outline: 3px solid var(--purple-600); outline-offset: 3px; }
+        .container { margin-inline: auto; max-width: 74rem; padding-inline: 1.5rem; width: 100%; }
+        .sr-only { height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; clip: rect(0, 0, 0, 0); white-space: nowrap; }
+        .skip-link:focus { background: #fff; clip: auto; height: auto; left: 1rem; margin: 0; padding: 0.75rem 1rem; position: fixed; top: 1rem; width: auto; z-index: 100; }
+        .eyebrow { color: var(--purple-600); display: block; font-size: 0.7rem; font-weight: 800; letter-spacing: 0.11em; text-transform: uppercase; }
+
+        .site-header { -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px); background: rgba(255, 255, 255, 0.84); border-bottom: 1px solid rgba(209, 213, 219, 0.8); position: sticky; top: 0; z-index: 50; }
+        .site-nav { align-items: center; display: flex; justify-content: space-between; min-height: 4.5rem; }
+        .brand { align-items: baseline; color: var(--ink); display: flex; gap: 0.42rem; text-decoration: none; }
+        .brand strong { font-size: 1.25rem; }
+        .brand span { color: var(--muted); font-size: 0.875rem; }
+        .desktop-nav { align-items: center; display: flex; gap: 2rem; }
+        .desktop-nav a { color: var(--muted); font-size: 0.875rem; text-decoration: none; }
+        .desktop-nav a:hover, .desktop-nav a[aria-current="page"] { color: var(--purple-700); font-weight: 800; }
+        .mobile-menu-button { background: transparent; border: 0; color: var(--purple-900); display: none; font-size: 1.4rem; min-height: 2.75rem; min-width: 2.75rem; }
+        .mobile-menu { background: #fff; border-top: 1px solid var(--line); display: none; padding: 0.5rem 1.5rem 1rem; }
+        .mobile-menu.is-open { display: grid; }
+        .mobile-menu a { color: var(--muted); padding: 0.7rem 0; text-decoration: none; }
+
+        .resource-intro { background: radial-gradient(circle at 88% 8%, rgba(255, 191, 24, 0.12), transparent 24rem), linear-gradient(180deg, #fff, #faf9ff); border-bottom: 1px solid var(--line); padding-block: 2.8rem 2.65rem; }
+        .intro-grid { align-items: center; display: grid; gap: 2rem; grid-template-columns: minmax(0, 1.5fr) minmax(16rem, 0.5fr); }
+        .resource-intro h1 { font-size: clamp(2.5rem, 4.4vw, 3.85rem); letter-spacing: -0.035em; line-height: 1.02; margin: 0.65rem 0 0; max-width: 50rem; }
+        .resource-intro p { color: var(--muted); font-size: clamp(1rem, 1.5vw, 1.15rem); line-height: 1.65; margin: 1rem 0 0; max-width: 45rem; }
+        .help-note { background: var(--purple-950); border-radius: 1.1rem; color: #fff; justify-self: end; max-width: 20rem; padding: 1.35rem; }
+        .help-note .eyebrow { color: #fde68a; }
+        .help-note strong { display: block; font-family: 'Lora', serif; font-size: 1.35rem; margin-top: 0.45rem; }
+        .help-note p { color: #ddd6fe; font-size: 0.82rem; line-height: 1.5; margin: 0.55rem 0 0; }
+        .help-note a { color: #fff; display: inline-block; font-size: 0.8rem; font-weight: 800; margin-top: 0.9rem; text-underline-offset: 0.2rem; }
+        .section-nav { -webkit-backdrop-filter: blur(13px); backdrop-filter: blur(13px); background: rgba(255, 255, 255, 0.84); border-bottom: 1px solid var(--line); position: sticky; top: 4.5rem; z-index: 40; }
+        .section-nav-inner { display: flex; gap: 1.5rem; overflow-x: auto; padding-block: 0.72rem; scrollbar-width: none; }
+        .section-nav-inner::-webkit-scrollbar { display: none; }
+        .section-nav a { color: var(--muted); flex: none; font-size: 0.72rem; font-weight: 800; text-decoration: none; }
+        .section-nav a:hover { color: var(--purple-700); }
+
+        .section-heading { align-items: end; display: flex; gap: 2rem; justify-content: space-between; margin-bottom: 1.4rem; }
+        .section-heading h2 { font-size: clamp(2rem, 4vw, 3.2rem); line-height: 1.05; margin: 0.4rem 0 0; }
+        .section-heading p { color: var(--muted); line-height: 1.6; margin: 0; max-width: 35rem; }
+        .rights-section { padding-block: 4.7rem; }
+        .rights-layout { display: grid; gap: 1.2rem; grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr); }
+        .rights-feature { background: linear-gradient(145deg, var(--purple-950), var(--purple-700)); border-radius: 1.2rem; color: #fff; display: flex; flex-direction: column; min-height: 28rem; overflow: hidden; padding: 2rem; position: relative; }
+        .rights-feature::after { border: 3rem solid rgba(255, 255, 255, 0.05); border-radius: 50%; content: ''; height: 14rem; position: absolute; right: -7rem; top: -8rem; width: 14rem; }
+        .rights-feature .eyebrow { color: #fde68a; }
+        .rights-feature h2 { color: #fff; font-size: clamp(2rem, 4vw, 3.3rem); line-height: 1.05; margin: 0.65rem 0 0; max-width: 30rem; }
+        .rights-feature > p { color: #e9e3ff; line-height: 1.65; margin-top: 1rem; max-width: 34rem; }
+        .rights-words { background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 0.85rem; font-family: 'Lora', serif; font-size: 1.15rem; line-height: 1.55; margin-top: auto; padding: 1.1rem; }
+        .rights-feature a { color: #fde68a; font-size: 0.8rem; font-weight: 800; margin-top: 1rem; text-underline-offset: 0.2rem; }
+        .rights-stack { display: grid; gap: 0.9rem; }
+        .right-card { background: #fff; border: 1px solid #ddd6e8; border-radius: 1rem; display: grid; gap: 1rem; grid-template-columns: auto minmax(0, 1fr) auto; padding: 1.1rem; text-decoration: none; }
+        .right-card:hover { border-color: #b9a7d1; }
+        .right-icon { align-items: center; background: var(--purple-50); border: 1px solid #e5ddef; border-radius: 0.65rem; color: var(--purple-900); display: flex; font-size: 1rem; font-weight: 800; height: 2.7rem; justify-content: center; width: 2.7rem; }
+        .right-card h3 { font-family: 'Inter', sans-serif; font-size: 1rem; margin: 0; }
+        .right-card p { color: var(--muted); font-size: 0.78rem; line-height: 1.5; margin: 0.35rem 0 0; }
+        .right-card > span:last-child { align-self: center; color: var(--purple-700); font-weight: 800; }
+
+        .library-section { padding-block: 4.8rem; }
+        .library-controls { -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); background: rgba(255, 255, 255, 0.9); border: 1px solid #ddd6e8; border-radius: 1rem; margin-bottom: 1.2rem; padding: 0.9rem; position: sticky; top: 7.35rem; z-index: 30; }
+        .library-control-row { align-items: center; display: grid; gap: 0.8rem; grid-template-columns: minmax(15rem, 1fr) auto; }
+        .library-search { position: relative; }
+        .library-search::before { color: var(--purple-700); content: '⌕'; font-size: 1.35rem; left: 0.75rem; position: absolute; top: 50%; transform: translateY(-50%); }
+        .library-search input { border: 1px solid #cfc7de; border-radius: 0.7rem; min-height: 2.8rem; padding: 0.6rem 0.8rem 0.6rem 2.4rem; width: 100%; }
+        .library-status { color: var(--muted); font-size: 0.72rem; font-weight: 800; white-space: nowrap; }
+        .filter-row { border-top: 1px solid #e5e7eb; display: flex; flex-wrap: wrap; gap: 0.45rem; margin-top: 0.75rem; padding-top: 0.75rem; }
+        .filter-button { background: #f3f4f6; border: 1px solid transparent; border-radius: 999px; color: var(--muted); font-size: 0.7rem; font-weight: 800; padding: 0.45rem 0.65rem; }
+        .filter-button[aria-pressed="true"] { background: var(--purple-900); color: #fff; }
+        .resource-grid { display: grid; gap: 0.9rem; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+        .resource-card { background: #fff; border: 1px solid #ddd6e8; border-radius: 1rem; color: inherit; display: flex; flex-direction: column; min-height: 13rem; padding: 1.1rem; text-decoration: none; transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease; }
+        .resource-card:hover { border-color: #b9a7d1; box-shadow: 0 12px 28px rgba(76, 29, 149, 0.08); transform: translateY(-2px); }
+        .resource-card[hidden] { display: none; }
+        .resource-type { align-items: center; color: var(--purple-700); display: flex; font-size: 0.65rem; font-weight: 800; gap: 0.42rem; letter-spacing: 0.07em; text-transform: uppercase; }
+        .resource-type::before { background: var(--gold); border-radius: 50%; content: ''; height: 0.45rem; width: 0.45rem; }
+        .resource-card h3 { font-size: 1.25rem; line-height: 1.2; margin: 0.8rem 0 0; }
+        .resource-card p { color: var(--muted); font-size: 0.8rem; line-height: 1.55; margin: 0.55rem 0 0; }
+        .resource-card .card-link { color: var(--purple-700); font-size: 0.74rem; font-weight: 800; margin-top: auto; padding-top: 1rem; }
+        .empty-state { background: #fff; border: 1px dashed #c4b5fd; border-radius: 1rem; color: var(--muted); display: none; grid-column: 1 / -1; padding: 2.5rem; text-align: center; }
+        .empty-state.is-visible { display: block; }
+
+        .site-footer { background: #f0f1f4; border-top: 1px solid var(--line); padding-block: 3rem 2rem; }
+        .footer-grid { display: grid; gap: 2rem; grid-template-columns: 1.15fr repeat(3, 0.75fr); }
+        .footer-brand { align-items: center; display: flex; gap: 0.75rem; }
+        .footer-brand img { background: #fff; border-radius: 0.35rem; height: 3rem; padding: 0.25rem; width: 3rem; }
+        .footer-brand h3 { font-size: 1.2rem; margin: 0; }
+        .footer-brand p { color: var(--muted); font-size: 0.78rem; margin: 0.15rem 0 0; }
+        .footer-copy { color: var(--muted); font-size: 0.87rem; line-height: 1.6; }
+        .site-footer h4 { color: var(--purple-900); font-size: 0.82rem; letter-spacing: 0.08em; margin: 0 0 0.9rem; text-transform: uppercase; }
+        .site-footer ul { list-style: none; margin: 0; padding: 0; }
+        .site-footer li + li { margin-top: 0.65rem; }
+        .site-footer a { color: var(--muted); font-size: 0.86rem; text-decoration: none; }
+        .site-footer a:hover { color: var(--purple-700); }
+        .footer-bottom { border-top: 1px solid #d1d5db; color: var(--muted); font-size: 0.75rem; margin-top: 2.5rem; padding-top: 1.5rem; text-align: center; }
+
+        @media (max-width: 980px) {
+            .intro-grid, .rights-layout { grid-template-columns: 1fr; }
+            .help-note { justify-self: start; max-width: 42rem; }
+            .resource-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        }
+
+        @media (max-width: 760px) {
+            .desktop-nav { display: none; }
+            .mobile-menu-button { display: inline-grid; place-items: center; }
+            .brand span { display: none; }
+            .resource-intro { padding-block: 2.6rem 2.3rem; }
+            .section-heading { align-items: start; flex-direction: column; gap: 0.75rem; }
+            .library-controls { position: static; }
+            .library-control-row { grid-template-columns: 1fr; }
+            .library-status { white-space: normal; }
+            .footer-grid { grid-template-columns: repeat(2, 1fr); }
+            .footer-about { grid-column: 1 / -1; }
+        }
+
+        @media (max-width: 520px) {
+            .container { padding-inline: 1rem; }
+            .resource-grid { grid-template-columns: 1fr; }
+            .resource-intro h1 { font-size: 2.65rem; }
+            .rights-feature { padding: 1.35rem; }
+            .footer-grid { grid-template-columns: 1fr; }
+            .footer-about { grid-column: auto; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after { scroll-behavior: auto !important; transition-duration: 0.01ms !important; }
+        }
+    </style>
     <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
     {
-      "@type": "Organization",
-      "@id": "https://www.local083.org#organization",
-      "name": "SEIU Local 503 at Oregon State University",
-      "url": "https://www.local083.org",
-      "logo": "https://www.local083.org/images/logo.png"
-    },
-    {
-      "@type": "WebSite",
-      "@id": "https://www.local083.org#website",
-      "name": "SEIU Local 503 at Oregon State University",
-      "url": "https://www.local083.org",
-      "publisher": {
-        "@id": "https://www.local083.org#organization"
-      }
-    },
-    {
-      "@type": "WebPage",
-      "@id": "https://www.local083.org/resources.html#webpage",
-      "url": "https://www.local083.org/resources.html",
-      "name": "Resources & Rights - SEIU Local 503, OSU",
-      "description": "Access your contract, know your rights, and find important forms and resources for SEIU Local 503 members at OSU.",
-      "isPartOf": {
-        "@id": "https://www.local083.org#website"
-      },
-      "about": {
-        "@id": "https://www.local083.org#organization"
-      }
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://www.local083.org#organization",
+          "name": "SEIU Local 503 at Oregon State University",
+          "alternateName": "Local 083",
+          "url": "https://www.local083.org",
+          "logo": "https://www.local083.org/images/logo.png",
+          "email": "083execteam@seiu503.org"
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.local083.org#website",
+          "name": "SEIU Local 503 at Oregon State University",
+          "url": "https://www.local083.org",
+          "publisher": {"@id": "https://www.local083.org#organization"}
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://www.local083.org/resources.html#webpage",
+          "name": "Resources & Rights - SEIU Local 503 at Oregon State University",
+          "url": "https://www.local083.org/resources.html",
+          "description": "Find the OSU classified staff contract, union stewards, Weingarten rights, layoff guidance and member resources from SEIU Local 503, Local 083.",
+          "isPartOf": {"@id": "https://www.local083.org#website"},
+          "about": {"@id": "https://www.local083.org#organization"}
+        }
+      ]
     }
-  ]
-}
     </script>
-    <!-- SEO META END -->
     <script src="/js/analytics.js" defer></script>
 </head>
-<body class="bg-brand-light">
-    <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:bg-white focus:text-brand-purple-dark focus:px-4 focus:py-2 focus:rounded focus:shadow-lg">Skip to content</a>
+<body>
+    <noscript><nav aria-label="Primary navigation without JavaScript" class="border-b border-border-color bg-white px-4 py-3 text-center text-sm font-semibold"><a class="mx-2 underline" href="/">Home</a><a class="mx-2 underline" href="/about.html">About</a><a class="mx-2 underline" href="/events.html">Events</a><a class="mx-2 underline" href="/news.html">News</a><a class="mx-2 underline" href="/resources.html">Resources &amp; Rights</a><a class="mx-2 underline" href="/leadership.html">Leadership</a><a class="mx-2 underline" href="/contact.html">Contact</a></nav></noscript>
+    <a href="#main-content" class="skip-link sr-only">Skip to content</a>
 
-    <!-- Header -->
-    <header class="bg-white/80 backdrop-blur-lg border-b border-border-color sticky top-0 z-50">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="index.html" class="flex items-center space-x-2">
+    <!-- SITE SHELL: HEADER START -->
+    <header class="bg-white/80 backdrop-blur-lg border-b border-border-color sticky top-0 z-50" data-site-shell-header>
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center" aria-label="Primary navigation">
+            <a href="/index.html" class="flex items-center space-x-2">
                 <span class="text-2xl font-bold text-brand-purple-dark">SEIU 503</span>
                 <span class="text-lg text-text-secondary hidden md:block">| Oregon State University</span>
             </a>
             <div class="hidden lg:flex space-x-8">
-                <a href="about.html" class="text-text-secondary hover:text-brand-purple transition-colors">About</a>
-                <a href="events.html" class="text-text-secondary hover:text-brand-purple transition-colors">Events</a>
-                <a href="news.html" class="text-text-secondary hover:text-brand-purple transition-colors">News</a>
-                <a href="resources.html" class="text-brand-purple font-bold">Resources & Rights</a>
-                <a href="leadership.html" class="text-text-secondary hover:text-brand-purple transition-colors">Leadership</a>
-                <a href="contact.html" class="text-text-secondary hover:text-brand-purple transition-colors">Contact</a>
+                <a href="/about.html" class="text-text-secondary hover:text-brand-purple transition-colors">About</a>
+                <a href="/events.html" class="text-text-secondary hover:text-brand-purple transition-colors">Events</a>
+                <a href="/news.html" class="text-text-secondary hover:text-brand-purple transition-colors">News</a>
+                <a href="/resources.html" class="text-text-secondary hover:text-brand-purple transition-colors">Resources &amp; Rights</a>
+                <a href="/leadership.html" class="text-text-secondary hover:text-brand-purple transition-colors">Leadership</a>
+                <a href="/contact.html" class="text-text-secondary hover:text-brand-purple transition-colors">Contact</a>
             </div>
-            <div class="lg:hidden">
-                <button id="mobile-menu-button" class="text-text-secondary hover:text-brand-purple focus:outline-none" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false">
-                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-                </button>
-            </div>
+            <button type="button" id="mobile-menu-button" class="lg:hidden text-text-secondary hover:text-brand-purple" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
         </nav>
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden lg:hidden absolute top-full left-0 w-full bg-white border-t border-border-color shadow-lg">
-            <a href="about.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">About</a>
-            <a href="events.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Events</a>
-            <a href="news.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">News</a>
-            <a href="resources.html" class="block text-center py-3 px-6 text-lg text-brand-purple bg-brand-purple-light font-semibold">Resources & Rights</a>
-            <a href="leadership.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Leadership</a>
-            <a href="contact.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Contact</a>
+        <div id="mobile-menu" class="hidden lg:hidden absolute top-full left-0 w-full bg-white border-t border-border-color shadow-lg" role="navigation" aria-label="Mobile navigation">
+            <a href="/about.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">About</a>
+            <a href="/events.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Events</a>
+            <a href="/news.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">News</a>
+            <a href="/resources.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Resources &amp; Rights</a>
+            <a href="/leadership.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Leadership</a>
+            <a href="/contact.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Contact</a>
         </div>
     </header>
+    <script data-site-shell-menu-state-script>
+        (() => {
+            const button = document.getElementById('mobile-menu-button');
+            const menu = document.getElementById('mobile-menu');
+            if (!button || !menu) return;
+            const canonicalIcon = button.innerHTML;
 
-    <!-- Page Header -->
-    <section class="bg-brand-purple-light border-b border-border-color">
-        <div class="container mx-auto px-6 py-16 text-center">
-            <h1 class="text-5xl font-bold">Resources & Rights</h1>
-            <p class="mt-4 text-lg text-text-secondary max-w-3xl mx-auto">Know your contract, know your rights. Everything you need to be an informed and active member.</p>
-        </div>
-    </section>
+            window.siteShellSyncMenuState = () => {
+                const isOpen = menu.classList.contains('is-open') || !menu.classList.contains('hidden');
+                button.setAttribute('aria-expanded', String(isOpen));
+                button.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+                if (button.innerHTML !== canonicalIcon) button.innerHTML = canonicalIcon;
+            };
 
-    <main id="main-content" class="container mx-auto px-6 py-16">
+            new MutationObserver(window.siteShellSyncMenuState).observe(menu, {
+                attributes: true,
+                attributeFilter: ['class']
+            });
+            document.addEventListener('keydown', (event) => {
+                if (event.key !== 'Escape' || button.getAttribute('aria-expanded') !== 'true') return;
+                menu.classList.add('hidden');
+                menu.classList.remove('is-open');
+                window.siteShellSyncMenuState();
+                button.focus();
+            });
+            window.siteShellSyncMenuState();
+        })();
+    </script>
+<!-- SITE SHELL: HEADER END -->
 
-        <!-- Know Your Contract Section -->
-        <section id="contract" class="mb-16">
-            <div class="bg-white p-8 md:p-12 rounded-xl border-2 border-brand-purple text-center">
-                <h2 class="text-4xl font-bold mb-4">Know Your Contract</h2>
-                <p class="text-text-secondary text-lg max-w-3xl mx-auto mb-6">Our Collective Bargaining Agreement (CBA) is the most important document defining our rights, wages, and working conditions at OSU. All members should be familiar with it.</p>
-                <a href="/resources/seiu_cba_2022-2026.pdf" target="_blank" class="btn btn-primary" rel="noopener noreferrer">View the Full Contract (PDF)</a>
-                <p class="text-sm text-text-secondary mt-4">(Note: This links to our website's PDF copy of the CBA.)</p>
-            </div>
-        </section>
-
-        <!-- Your Rights at Work Section -->
-        <section id="rights" class="mb-16">
-            <h2 class="text-4xl font-bold mb-8 text-center">Your Rights at Work</h2>
-            <div class="grid md:grid-cols-2 gap-8">
-                <!-- Weingarten Rights Card -->
-                <div class="bg-white p-8 rounded-xl border border-border-color">
-                    <h3 class="text-2xl font-bold mb-3">Weingarten Rights</h3>
-                    <p class="text-text-secondary mb-4">You have the right to union representation during any investigatory interview that could lead to discipline. If your supervisor calls you into a meeting, ask if it could lead to discipline. If the answer is yes, you have the right to say:</p>
-                    <p class="text-brand-purple-dark bg-brand-purple-light p-4 rounded-lg">"I request union representation. I refuse to answer questions until my union representative is present."</p>
-                    <a href="/resources/weingarten-rights.html" class="font-semibold text-brand-purple hover:underline">Learn More about Weingarten Rights &rarr;</a>
+    <main id="main-content">
+        <section class="resource-intro">
+            <div class="container intro-grid">
+                <div>
+                    <span class="eyebrow">For Oregon State classified staff</span>
+                    <h1>Resources &amp; Rights</h1>
+                    <p>Start with what is happening at work, then open the guide, contract or steward contact you need.</p>
+                    <p style="font-size:.78rem;font-weight:700;margin-top:.75rem">Rights and resource links reviewed July 12, 2026.</p>
                 </div>
-                <!-- Grievance Procedure Card -->
-                <div class="bg-white p-8 rounded-xl border border-border-color">
-                    <h3 class="text-2xl font-bold mb-3">Grievance Procedure</h3>
-                    <p class="text-text-secondary mb-4">If you believe management has violated the contract, you have the right to file a grievance. The first step is always to talk to your union steward. They are trained to help you navigate the process.</p>
-                    <a href="mailto:083stewards@seiu503.org" class="font-semibold text-brand-purple hover:underline">Contact a Steward &rarr;</a>
+                <aside class="help-note" aria-label="Steward help">
+                    <span class="eyebrow">Need help with a specific situation?</span>
+                    <strong>Talk with a union steward.</strong>
+                    <p>A steward can help identify relevant contract language and the appropriate next step.</p>
+                    <a href="mailto:083stewards@seiu503.org?subject=Workplace%20question">Email 083stewards@seiu503.org →</a>
+                </aside>
+            </div>
+        </section>
+
+        <nav class="section-nav" aria-label="Resources page sections">
+            <div class="container section-nav-inner"><a href="#start-here">Start with your situation</a><a href="#library">Browse every resource</a></div>
+        </nav>
+
+        <section class="rights-section container" id="start-here" aria-labelledby="start-heading">
+            <div class="section-heading">
+                <div><span class="eyebrow">Start with what is happening</span><h2 id="start-heading">Choose the situation that fits.</h2></div>
+                <p>Deadlines can be short. Save written notices and relevant records, and involve a steward early when a situation is urgent or unclear.</p>
+            </div>
+            <div class="rights-layout">
+                <article class="rights-feature" aria-labelledby="meeting-rights-heading">
+                    <span class="eyebrow">If a meeting could lead to discipline</span>
+                    <h2 id="meeting-rights-heading">You can request union representation.</h2>
+                    <p>Ask whether the meeting could lead to discipline. If it could, clearly request a union representative and wait for representation before answering questions.</p>
+                    <div class="rights-words">“I request union representation. I choose not to answer questions until my union representative is present.”</div>
+                    <a href="/resources/weingarten-rights.html">Read the complete Weingarten rights guide →</a>
+                </article>
+                <div class="rights-stack">
+                    <a class="right-card" href="/resources/layoff-workflow.html"><span class="right-icon" aria-hidden="true">!</span><div><h3>I received a layoff notice</h3><p>Save the notice. Review the workflow and contact a steward promptly because deadlines may be short.</p></div><span aria-hidden="true">→</span></a>
+                    <a class="right-card" href="/resources/elr-contacted-you-playbook.html"><span class="right-icon" aria-hidden="true">!</span><div><h3>Employee and Labor Relations contacted me</h3><p>Understand the process, slow the conversation down and involve your union early.</p></div><span aria-hidden="true">→</span></a>
+                    <a class="right-card" href="/resources/stewards.html"><span class="right-icon" aria-hidden="true">◎</span><div><h3>I have a contract or workplace concern</h3><p>Write down what happened, preserve relevant records and speak with a steward.</p></div><span aria-hidden="true">→</span></a>
+                    <a class="right-card" href="/resources/seiu_cba_2022-2026.pdf"><span class="right-icon" aria-hidden="true">§</span><div><h3>I need our union contract</h3><p>Open the complete 2022-2026 OSU classified staff collective bargaining agreement.</p></div><span aria-hidden="true">→</span></a>
                 </div>
             </div>
         </section>
 
-        <!--
-        Oregon Rights Guides (Draft) Section (commented out)
-        <section id="oregon-rights-guides" class="mb-16">
-            <div class="text-center mb-8">
-                <h2 class="text-4xl font-bold">Oregon Agency Rights Guides</h2>
-                <p class="mt-3 text-text-secondary max-w-3xl mx-auto">Internal draft pages for SEO buildout and member education. Content should be reviewed by steward leadership before final publication.</p>
+        <section class="library-section container" id="library" aria-labelledby="library-heading">
+            <div class="section-heading">
+                <div><span class="eyebrow">Every guide and document</span><h2 id="library-heading">Resource library</h2></div>
+                <p>Search by the words you would use, or filter by the kind of help you need.</p>
             </div>
-            <div class="grid md:grid-cols-2 gap-8">
-                <a href="/resources/oregon-elr-rights.html" class="block bg-white p-8 rounded-xl border border-border-color hover:shadow-xl hover:border-brand-purple transition-all duration-300 hover:-translate-y-1">
-                    <span class="inline-block bg-amber-100 text-amber-900 text-xs font-semibold uppercase tracking-wide px-2 py-1 rounded">Draft</span>
-                    <h3 class="text-2xl font-bold mt-4 mb-2">Oregon ELR Rights Guide</h3>
-                    <p class="text-text-secondary mb-3">How Employee and Labor Relations processes work and when to involve your steward.</p>
-                    <p class="text-sm text-text-secondary">Last updated: <time datetime="2026-02-10">February 10, 2026</time></p>
-                </a>
-                <a href="/resources/oregon-erb-rights.html" class="block bg-white p-8 rounded-xl border border-border-color hover:shadow-xl hover:border-brand-purple transition-all duration-300 hover:-translate-y-1">
-                    <span class="inline-block bg-amber-100 text-amber-900 text-xs font-semibold uppercase tracking-wide px-2 py-1 rounded">Draft</span>
-                    <h3 class="text-2xl font-bold mt-4 mb-2">Oregon ERB Guide</h3>
-                    <p class="text-text-secondary mb-3">Employment Relations Board basics, ULP context, and filing links.</p>
-                    <p class="text-sm text-text-secondary">Last updated: <time datetime="2026-02-10">February 10, 2026</time></p>
-                </a>
-                <a href="/resources/oregon-boli-rights.html" class="block bg-white p-8 rounded-xl border border-border-color hover:shadow-xl hover:border-brand-purple transition-all duration-300 hover:-translate-y-1">
-                    <span class="inline-block bg-amber-100 text-amber-900 text-xs font-semibold uppercase tracking-wide px-2 py-1 rounded">Draft</span>
-                    <h3 class="text-2xl font-bold mt-4 mb-2">Oregon BOLI Worker Rights</h3>
-                    <p class="text-text-secondary mb-3">Wage and hour rights, anti-discrimination protections, and complaint pathways.</p>
-                    <p class="text-sm text-text-secondary">Last updated: <time datetime="2026-02-10">February 10, 2026</time></p>
-                </a>
-                <a href="/resources/ors-244-ethics-guide.html" class="block bg-white p-8 rounded-xl border border-border-color hover:shadow-xl hover:border-brand-purple transition-all duration-300 hover:-translate-y-1">
-                    <span class="inline-block bg-amber-100 text-amber-900 text-xs font-semibold uppercase tracking-wide px-2 py-1 rounded">Draft</span>
-                    <h3 class="text-2xl font-bold mt-4 mb-2">ORS 244 Ethics Guide</h3>
-                    <p class="text-text-secondary mb-3">What government ethics law covers, and how it differs from labor-rights enforcement.</p>
-                    <p class="text-sm text-text-secondary">Last updated: <time datetime="2026-02-10">February 10, 2026</time></p>
-                </a>
-                <a href="/resources/elr-contacted-you-playbook.html" class="block bg-white p-8 rounded-xl border border-border-color hover:shadow-xl hover:border-brand-purple transition-all duration-300 hover:-translate-y-1">
-                    <span class="inline-block bg-amber-100 text-amber-900 text-xs font-semibold uppercase tracking-wide px-2 py-1 rounded">Draft</span>
-                    <h3 class="text-2xl font-bold mt-4 mb-2">ELR Contacted You Playbook</h3>
-                    <p class="text-text-secondary mb-3">Immediate scripts, checklists, and timeline steps when ELR reaches out.</p>
-                    <p class="text-sm text-text-secondary">Last updated: <time datetime="2026-02-10">February 10, 2026</time></p>
-                </a>
-                <a href="/resources/corvallis-civic-action.html" class="block bg-white p-8 rounded-xl border border-border-color hover:shadow-xl hover:border-brand-purple transition-all duration-300 hover:-translate-y-1">
-                    <span class="inline-block bg-amber-100 text-amber-900 text-xs font-semibold uppercase tracking-wide px-2 py-1 rounded">Draft</span>
-                    <h3 class="text-2xl font-bold mt-4 mb-2">Corvallis Civic Action Guide</h3>
-                    <p class="text-text-secondary mb-3">Nonpartisan guide to finding officials and advocating for worker priorities.</p>
-                    <p class="text-sm text-text-secondary">Last updated: <time datetime="2026-02-10">February 10, 2026</time></p>
-                </a>
+            <div class="library-controls">
+                <div class="library-control-row">
+                    <div class="library-search"><label class="sr-only" for="library-search">Search resource library</label><input id="library-search" type="search" placeholder="Search resources" autocomplete="off"></div>
+                    <span class="library-status" id="library-status" aria-live="polite">Showing 11 resources</span>
+                </div>
+                <div class="filter-row" aria-label="Filter resources">
+                    <button class="filter-button" type="button" data-category="all" aria-pressed="true">All</button>
+                    <button class="filter-button" type="button" data-category="rights" aria-pressed="false">Workplace rights</button>
+                    <button class="filter-button" type="button" data-category="representation" aria-pressed="false">Steward help</button>
+                    <button class="filter-button" type="button" data-category="contract" aria-pressed="false">Contract &amp; governance</button>
+                    <button class="filter-button" type="button" data-category="tools" aria-pressed="false">Member tools</button>
+                </div>
             </div>
-        </section>
-        -->
+            <div class="resource-grid" id="resource-grid">
+                <a class="resource-card" data-category="rights" data-search="meeting discipline investigation representation weingarten rights" href="/resources/weingarten-rights.html"><span class="resource-type">Workplace rights</span><h3>Weingarten Rights</h3><p>What to do when a workplace meeting could lead to discipline.</p><span class="card-link">Read the guide →</span></a>
+                <a class="resource-card" data-category="rights representation" data-search="layoff notice workplace change displacement election deadline steward" href="/resources/layoff-workflow.html"><span class="resource-type">Time-sensitive guide</span><h3>Layoff and Workplace-Change Workflow</h3><p>A worker-centered checklist grounded in the posted contract.</p><span class="card-link">Open the workflow →</span></a>
+                <a class="resource-card" data-category="representation" data-search="steward contact help representative grievance questions" href="/resources/stewards.html"><span class="resource-type">Steward help</span><h3>Find a Union Steward</h3><p>Connect with a trained Local 083 coworker for workplace support.</p><span class="card-link">Find your steward →</span></a>
+                <a class="resource-card" data-category="contract" data-search="collective bargaining agreement cba contract wages benefits leave pdf" href="/resources/seiu_cba_2022-2026.pdf"><span class="resource-type">Contract</span><h3>2022-2026 Collective Bargaining Agreement</h3><p>The complete OSU classified staff union contract in PDF format.</p><span class="card-link">Open the PDF →</span></a>
+                <a class="resource-card" data-category="rights" data-search="employee labor relations elr contacted investigation meeting playbook" href="/resources/elr-contacted-you-playbook.html"><span class="resource-type">Workplace rights</span><h3>ELR Contacted You Playbook</h3><p>Practical steps for responding and involving your union.</p><span class="card-link">Read the playbook →</span></a>
+                <a class="resource-card" data-category="rights" data-search="hardship leave donation medical family absence benefits" href="/resources/hardship-leave.html"><span class="resource-type">Leave and benefits</span><h3>Hardship Leave Guide</h3><p>Background and guidance for workers with hardship leave questions.</p><span class="card-link">Read the guide →</span></a>
+                <a class="resource-card" data-category="contract" data-search="bylaws governance elections officers local rules" href="/resources/bylaws.html"><span class="resource-type">Union governance</span><h3>Local 083 Bylaws</h3><p>How our local is structured and how member-led decisions are made.</p><span class="card-link">Read the bylaws →</span></a>
+                <a class="resource-card" data-category="tools" data-search="zoom teams background bargaining solidarity download" href="/resources/zoom-backgrounds.html"><span class="resource-type">Member tool</span><h3>Bargaining Backgrounds</h3><p>Download Local 083 Zoom and Teams backgrounds.</p><span class="card-link">Browse backgrounds →</span></a>
+                <a class="resource-card" data-category="tools" data-search="salary pay wages report osu classified compensation" href="https://hr.oregonstate.edu/employees/administrators-supervisors/classification-compensation/salary-reports"><span class="resource-type">OSU information</span><h3>OSU Salary Reports</h3><p>Review salary information published by Oregon State University.</p><span class="card-link">Visit OSU →</span></a>
+                <a class="resource-card" data-category="tools" data-search="member benefits discounts seiu advantages" href="https://www.seiumb.com"><span class="resource-type">Member benefit</span><h3>SEIU Member Benefits</h3><p>Explore benefit and discount programs available to SEIU members.</p><span class="card-link">Explore benefits →</span></a>
+                <a class="resource-card" data-category="tools" data-search="costco membership bonus new member" href="/resources/costco.html"><span class="resource-type">Member benefit</span><h3>Costco Membership Bonus</h3><p>Information about the current membership promotion.</p><span class="card-link">See the details →</span></a>
+                <div class="empty-state" id="empty-state"><strong>No resources matched that search.</strong><br>Try a broader word or choose “All.”</div>
+            </div>
 
-        <!-- Essential Forms & Documents Section -->
-        <section id="forms" class="mb-16">
-            <h2 class="text-4xl font-bold mb-8 text-center">Essential Forms & Documents</h2>
-            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Form Card 1 -->
-                <a href="#" class="block bg-white p-6 rounded-xl border border-border-color hover:shadow-xl hover:border-brand-purple transition-all duration-300 hover:-translate-y-1">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mb-4 text-brand-purple" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
-                    <h3 class="font-bold text-xl">Grievance Form</h3>
-                    <p class="text-text-secondary mt-1">Download the official form to initiate a grievance.</p>
-                </a>
-                <!-- Form Card 2 -->
-                <a href="https://seiu503signup.org" class="block bg-white p-6 rounded-xl border border-border-color hover:shadow-xl hover:border-brand-purple transition-all duration-300 hover:-translate-y-1">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mb-4 text-brand-purple" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" /></svg>
-                    <h3 class="font-bold text-xl">Membership Application</h3>
-                    <p class="text-text-secondary mt-1">Join us! Become a full member to have a voice and a vote.</p>
-                </a>
-                <!-- Form Card 4 -->
-                <a href="/resources/bylaws.html" class="block bg-white p-6 rounded-xl border border-border-color hover:shadow-xl hover:border-brand-purple transition-all duration-300 hover:-translate-y-1">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mb-4 text-brand-purple" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>
-                    <h3 class="font-bold text-xl">Union Bylaws</h3>
-                    <p class="text-text-secondary mt-1">Read the governing rules of our local union.</p>
-                </a>
-            </div>
         </section>
-
-        <!-- Tools for Members Section -->
-        <section id="tools">
-            <h2 class="text-4xl font-bold mb-8 text-center">Tools for Members</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <a href="https://hr.oregonstate.edu/employees/administrators-supervisors/classification-compensation/salary-reports" class="block bg-white p-6 rounded-xl border border-border-color hover:shadow-xl hover:border-brand-purple transition-all duration-300 hover:-translate-y-1">
-                    <h3 class="font-bold text-xl">Salary Information</h3>
-                    <p class="text-text-secondary mt-1">View the official OSU salary tables for classified staff.</p>
-                </a>
-                <a href="https://hr.oregonstate.edu/employees" class="block bg-white p-6 rounded-xl border border-border-color hover:shadow-xl hover:border-brand-purple transition-all duration-300 hover:-translate-y-1">
-                    <h3 class="font-bold text-xl">University Policies</h3>
-                    <p class="text-text-secondary mt-1">Access relevant OSU Human Resources policies.</p>
-                </a>
-                <a href="https://www.seiumb.com" class="block bg-white p-6 rounded-xl border border-border-color hover:shadow-xl hover:border-brand-purple transition-all duration-300 hover:-translate-y-1">
-                    <h3 class="font-bold text-xl">SEIU Member Benefits</h3>
-                    <p class="text-text-secondary mt-1">Explore discounts and benefits available to all SEIU members.</p>
-                </a>
-                <a href="/resources/costco.html" class="block bg-white p-6 rounded-xl border border-border-color hover:shadow-xl hover:border-brand-purple transition-all duration-300 hover:-translate-y-1">
-                    <h3 class="font-bold text-xl">Costco Membership Bonus</h3>
-                    <p class="text-text-secondary mt-1">Get a Digital Shop Card when you join Costco as a new member.</p>
-                </a>
-                <a href="/resources/zoom-backgrounds.html" class="block bg-white p-6 rounded-xl border border-border-color hover:shadow-xl hover:border-brand-purple transition-all duration-300 hover:-translate-y-1">
-                    <h3 class="font-bold text-xl">Zoom Backgrounds</h3>
-                    <p class="text-text-secondary mt-1">Download SEIU bargaining Zoom backgrounds (desktop + mobile) for upcoming sessions.</p>
-                </a>
-            </div>
-        </section>
-
     </main>
 
-    <!-- Footer -->
-                    <footer class="bg-gray-100 pt-12 pb-8 text-text-primary">
+    <!-- SITE SHELL: FOOTER START -->
+    <footer class="bg-gray-100 pt-12 pb-8 text-text-primary border-t border-gray-200" data-site-shell-footer>
         <div class="container mx-auto px-6">
-            <div class="mt-10 pt-8 border-t border-gray-700 text-center">
-            </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Column 1: About the Union -->
                 <div class="md:col-span-2 lg:col-span-1">
                     <div class="flex items-center mb-4">
-                        <img src="/images/logo.png" alt="SEIU 503 Logo" class="h-12 w-12 mr-3 bg-white p-1 rounded">
-                        <div>
-                            <h3 class="text-xl font-bold">SEIU Local 503</h3>
-                            <p class="text-text-secondary text-sm">Oregon State University</p>
-                        </div>
+                        <img src="/images/logo.png" alt="SEIU 503 logo" class="h-12 w-12 mr-3 bg-white p-1 rounded" width="48" height="48" loading="lazy" decoding="async">
+                        <div><h3 class="text-xl font-bold">SEIU Local 503</h3><p class="text-text-secondary text-sm">Oregon State University</p></div>
                     </div>
-                    <p class="text-text-secondary leading-relaxed">Representing the classified employees of Oregon State University. We fight for fair contracts, defend workplace rights, and build a united community.</p>
+                    <p class="text-text-secondary leading-relaxed">Our member-led union represents classified staff at Oregon State University. Together, we bargain fair contracts, defend our rights and build power at work.</p>
                 </div>
-    
-                <!-- Column 2: Quick Links -->
                 <div>
-                    <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase">Quick Links</h4>
+                    <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase">Quick links</h4>
                     <ul class="space-y-3">
-                        <li><a href="/about.html" class="text-text-secondary hover:text-brand-purple transition-colors">About Us</a></li>
+                        <li><a href="/about.html" class="text-text-secondary hover:text-brand-purple transition-colors">About our union</a></li>
                         <li><a href="/events.html" class="text-text-secondary hover:text-brand-purple transition-colors">Events</a></li>
                         <li><a href="/news.html" class="text-text-secondary hover:text-brand-purple transition-colors">News</a></li>
                         <li><a href="/leadership.html" class="text-text-secondary hover:text-brand-purple transition-colors">Leadership</a></li>
                     </ul>
                 </div>
-    
-                <!-- Column 3: Resources -->
                 <div>
                     <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase"><a href="/resources.html" class="hover:text-brand-purple transition-colors">Resources</a></h4>
                     <ul class="space-y-3">
-                        <li><a href="/resources.html" class="text-text-secondary hover:text-brand-purple transition-colors">Resources & Rights</a></li>
+                        <li><a href="/resources.html" class="text-text-secondary hover:text-brand-purple transition-colors">Resources &amp; Rights</a></li>
                         <li><a href="/resources/seiu_cba_2022-2026.pdf" class="text-text-secondary hover:text-brand-purple transition-colors">Our Contract (PDF)</a></li>
                         <li><a href="/resources/stewards.html" class="text-text-secondary hover:text-brand-purple transition-colors">Find a Steward</a></li>
                         <li><a href="/resources/weingarten-rights.html" class="text-text-secondary hover:text-brand-purple transition-colors">Weingarten Rights</a></li>
                     </ul>
                 </div>
-    
-                <!-- Column 4: Contact -->
                 <div>
-                    <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase"><a href="/contact.html" class="hover:text-brand-purple transition-colors">Contact Us</a></h4>
-                     <ul class="space-y-3 text-text-secondary">
-                        <li class="flex items-start">
-                            <span class="mr-2 mt-1">✉️</span> <!-- Mail icon -->
-                            <a href="mailto:083execteam@seiu503.org" class="hover:text-brand-purple transition-colors">083execteam@seiu503.org</a>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="mr-2 mt-1">✉️</span> <!-- Mail icon -->
-                            <a href="mailto:083stewards@seiu503.org" class="hover:text-brand-purple transition-colors">083stewards@seiu503.org</a>
-                        </li>
+                    <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase"><a href="/contact.html" class="hover:text-brand-purple transition-colors">Contact us</a></h4>
+                    <ul class="space-y-3">
+                        <li><a href="mailto:083execteam@seiu503.org" class="text-text-secondary hover:text-brand-purple transition-colors break-all">083execteam@seiu503.org</a></li>
+                        <li><a href="mailto:083stewards@seiu503.org" class="text-text-secondary hover:text-brand-purple transition-colors break-all">083stewards@seiu503.org</a></li>
                     </ul>
                 </div>
             </div>
-    
-            <!-- Bottom Bar -->
-            <div class="mt-10 pt-8 border-t border-gray-700 text-center space-y-2">
-                <p class="text-text-secondary text-sm">&copy; 2026 SEIU Local 503, Sublocal 083. All rights reserved.</p>
-                <p class="text-text-secondary text-xs">
-                    <a href="#" class="underline hover:text-brand-purple" onclick="event.preventDefault(); (localStorage.getItem('ph_opt_out') === '1' ? phOptIn() : phOptOut());">
-                        Privacy settings
-                    </a>
-                </p>
+            <div class="mt-10 pt-8 border-t border-gray-300 text-center space-y-2">
+                <p class="text-text-secondary text-sm">&copy; 2026 SEIU Local 503, Local 083. All rights reserved.</p>
+                <p class="text-text-secondary text-xs"><a class="underline hover:text-brand-purple" href="/privacy.html#analytics-controls">Tracking settings</a><span aria-hidden="true"> · </span><a class="underline hover:text-brand-purple" href="/privacy.html">Privacy notice</a></p>
             </div>
         </div>
     </footer>
+<!-- SITE SHELL: FOOTER END -->
 
     <script>
-        // --- Mobile Menu Toggle ---
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const menuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
-        const navLinks = document.querySelectorAll('#mobile-menu a');
-
-        mobileMenuButton.addEventListener('click', () => {
-            const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
-            mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
-            mobileMenu.classList.toggle('hidden');
+        menuButton.addEventListener('click', () => {
+            const open = mobileMenu.classList.toggle('is-open');
+            menuButton.setAttribute('aria-expanded', String(open));
+            menuButton.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+            menuButton.textContent = open ? '×' : '☰';
+        });
+        mobileMenu.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => {
+            mobileMenu.classList.remove('is-open');
+            menuButton.setAttribute('aria-expanded', 'false');
+            menuButton.setAttribute('aria-label', 'Open menu');
+            menuButton.textContent = '☰';
+        }));
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape' && menuButton.getAttribute('aria-expanded') === 'true') {
+                mobileMenu.classList.remove('is-open');
+                menuButton.setAttribute('aria-expanded', 'false');
+                menuButton.setAttribute('aria-label', 'Open menu');
+                menuButton.textContent = '☰';
+                menuButton.focus();
+            }
         });
 
-        // Close mobile menu when a link is clicked
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-                mobileMenuButton.setAttribute('aria-expanded', 'false');
+        const librarySearch = document.getElementById('library-search');
+        const cards = [...document.querySelectorAll('.resource-card')];
+        const filters = [...document.querySelectorAll('.filter-button')];
+        const status = document.getElementById('library-status');
+        const empty = document.getElementById('empty-state');
+        let category = 'all';
+
+        const renderResources = () => {
+            const term = librarySearch.value.trim().toLowerCase();
+            let shown = 0;
+            cards.forEach((card) => {
+                const categories = card.dataset.category.split(' ');
+                const searchable = `${card.dataset.search} ${card.textContent}`.toLowerCase();
+                const visible = (category === 'all' || categories.includes(category)) && (!term || searchable.includes(term));
+                card.hidden = !visible;
+                if (visible) shown += 1;
             });
-        });
+            status.textContent = `Showing ${shown} of ${cards.length} resources`;
+            empty.classList.toggle('is-visible', shown === 0);
+        };
+
+        librarySearch.addEventListener('input', renderResources);
+        filters.forEach((button) => button.addEventListener('click', () => {
+            category = button.dataset.category;
+            filters.forEach((item) => item.setAttribute('aria-pressed', String(item === button)));
+            renderResources();
+        }));
     </script>
 </body>
 </html>

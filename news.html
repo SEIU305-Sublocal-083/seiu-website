@@ -1,130 +1,46 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="The latest news, updates, and press releases from SEIU Local 503 at Oregon State University.">
-    <meta name="author" content="SEIU Local 503 at OSU">
-    <title>News - SEIU Local 503, OSU</title>
+    <meta name="description" content="Read the latest bargaining reports, workplace updates, member actions and community news from SEIU Local 503, Local 083 at Oregon State University.">
+    <meta name="author" content="SEIU Local 503 at Oregon State University">
+    <title>News and Updates - SEIU Local 503 at Oregon State University</title>
     <link rel="icon" href="/images/logo.png" type="image/png">
     <link rel="apple-touch-icon" href="/images/logo.png">
-    <style>html{visibility:hidden;}html.tw-ready{visibility:visible;}</style>
-    <script data-cfasync="false" src="https://cdn.tailwindcss.com" onload="document.documentElement.classList.add('tw-ready')"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Lora:wght@400;500;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --brand-purple-dark: #4C1D95; /* Deep Purple */
-            --brand-purple: #7C3AED;      /* Vibrant Purple */
-            --brand-purple-light: #EDE9FE; /* Lighter Lavender for high contrast */
-            --brand-dark: #111827;         /* Near-black for high contrast text/bg */
-            --brand-light: #F9FAFB;        /* Off-white Background */
-            --text-primary: #1F2937;
-            --text-secondary: #374151;     /* Darker secondary text for better contrast */
-            --border-color: #D1D5DB;
-        }
-
-        html {
-            scroll-padding-top: 80px; /* Offset for sticky header */
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--brand-light);
-            color: var(--text-primary);
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Lora', serif;
-            color: var(--brand-purple-dark);
-        }
-
-        /* Accessibility: Clear focus indicators for all interactive elements */
-        a:focus-visible, button:focus-visible, details:focus-visible, input:focus-visible, textarea:focus-visible {
-            outline: 3px solid var(--brand-purple);
-            outline-offset: 2px;
-            border-radius: 4px;
-        }
-        
-        .btn {
-            @apply font-bold py-3 px-6 rounded-lg transition-all duration-300 ease-in-out transform hover:scale-105;
-        }
-        .btn-primary {
-            @apply bg-gradient-to-r from-brand-purple to-violet-600 text-white shadow-md hover:shadow-lg;
-        }
-        .btn-secondary {
-            @apply bg-brand-dark text-white hover:bg-black;
-        }
-        .btn-outline {
-             @apply bg-white text-brand-purple border-2 border-brand-purple hover:bg-brand-purple hover:text-white;
-        }
-
-        .tag-button {
-            background-color: #E5E7EB; /* light grey */
-            color: #374151; /* dark grey */
-        }
-
-        .tag-button:hover:not(.active) {
-            background-color: #D1D5DB; /* gray-300 */
-            color: #374151;
-        }
-
-        .tag-button.active {
-            background-color: var(--brand-purple);
-            color: white;
-        }
-
-        details[open] > summary {
-            background-color: var(--brand-purple);
-            color: white;
-        }
-
-        /* Custom Tailwind config for our CSS variables */
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'brand-purple-dark': 'var(--brand-purple-dark)',
-                        'brand-purple': 'var(--brand-purple)',
-                        'brand-purple-light': 'var(--brand-purple-light)',
-                        'brand-dark': 'var(--brand-dark)',
-                        'brand-light': 'var(--brand-light)',
-                        'text-primary': 'var(--text-primary)',
-                        'text-secondary': 'var(--text-secondary)',
-                        'border-color': 'var(--border-color)',
-                    }
-                }
-            }
-        }
-    </style>
-    <!-- SEO META START -->
+<link rel="stylesheet" href="/styles/fonts.css">
     <link rel="canonical" href="https://www.local083.org/news.html">
     <link rel="alternate" type="application/rss+xml" title="SEIU Local 503 News RSS" href="https://www.local083.org/news/rss.xml">
-    <link rel="alternate" type="application/rss+xml" title="SEIU Local 503 Combined News and Events RSS" href="https://www.local083.org/feed.xml">
+    <link rel="alternate" type="application/rss+xml" title="SEIU Local 503 News and Events RSS" href="https://www.local083.org/feed.xml">
+
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.local083.org/news.html">
-    <meta property="og:title" content="News - SEIU Local 503, OSU">
-    <meta property="og:description" content="The latest news, updates, and press releases from SEIU Local 503 at Oregon State University.">
-    <meta property="og:image" content="https://www.local083.org/images/card.webp">
+    <meta property="og:title" content="News and Updates - SEIU Local 503 at Oregon State University">
+    <meta property="og:description" content="Bargaining reports, workplace updates, member actions and community news from Local 083 at Oregon State University.">
+    <meta property="og:image" content="https://www.local083.org/images/2cef7759-042d-4a05-9496-7eefff439a5e-june-30-rally-speaker-and-crowd.webp">
+    <meta property="og:image:alt" content="Local 083 members and supporters gather at an Oregon State University rally">
+    <meta property="og:image:width" content="1800">
+    <meta property="og:image:height" content="1084">
     <meta property="og:site_name" content="SEIU Local 503 at Oregon State University">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://www.local083.org/news.html">
-    <meta name="twitter:title" content="News - SEIU Local 503, OSU">
-    <meta name="twitter:description" content="The latest news, updates, and press releases from SEIU Local 503 at Oregon State University.">
-    <meta name="twitter:image" content="https://www.local083.org/images/card.webp">
+    <meta name="twitter:title" content="News and Updates - SEIU Local 503 at Oregon State University">
+    <meta name="twitter:description" content="Bargaining reports, workplace updates, member actions and community news from Local 083 at Oregon State University.">
+    <meta name="twitter:image" content="https://www.local083.org/images/2cef7759-042d-4a05-9496-7eefff439a5e-june-30-rally-speaker-and-crowd.webp">
+    <meta name="twitter:image:alt" content="Local 083 members and supporters gather at an Oregon State University rally">
+
     <script type="application/ld+json">
-{
+    {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "Organization",
       "@id": "https://www.local083.org#organization",
       "name": "SEIU Local 503 at Oregon State University",
+      "alternateName": "Local 083",
       "url": "https://www.local083.org",
-      "logo": "https://www.local083.org/images/logo.png"
+      "logo": "https://www.local083.org/images/logo.png",
+      "email": "083execteam@seiu503.org"
     },
     {
       "@type": "WebSite",
@@ -136,193 +52,1254 @@
       }
     },
     {
-      "@type": "WebPage",
+      "@type": "CollectionPage",
       "@id": "https://www.local083.org/news.html#webpage",
       "url": "https://www.local083.org/news.html",
-      "name": "News - SEIU Local 503, OSU",
-      "description": "The latest news, updates, and press releases from SEIU Local 503 at Oregon State University.",
+      "name": "News and Updates - SEIU Local 503 at Oregon State University",
+      "description": "Bargaining reports, workplace updates, member actions and community news from Local 083 at Oregon State University.",
       "isPartOf": {
         "@id": "https://www.local083.org#website"
       },
       "about": {
         "@id": "https://www.local083.org#organization"
+      },
+      "mainEntity": {
+        "@id": "https://www.local083.org/news.html#news-list"
       }
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://www.local083.org/news.html#news-list",
+      "numberOfItems": 8,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "url": "https://www.local083.org/news/2026-07-10-membership-meeting-room-change.html",
+          "name": "July 16 membership meeting moved to MU 215"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "url": "https://www.local083.org/news/2026-07-09-latest-bargaining-update.html",
+          "name": "Our union bargaining update: 0% COLAs and a 19-year step path"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "url": "https://www.local083.org/news/2026-07-09-tell-universities-hell-no.html",
+          "name": "Management's disrespectful offer? We say HELL NO!"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "url": "https://www.local083.org/news/2026-05-07-economics-they-say-we-say.html",
+          "name": "Economics They Say / We Say"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "url": "https://www.local083.org/news/2026-04-21-new-sublocal-083-leadership-team.html",
+          "name": "Introducing our new Local 083 leadership team"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "url": "https://www.local083.org/news/2026-04-16-membership-meeting-update.html",
+          "name": "April 16 Bargaining Update"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "url": "https://www.local083.org/news/2026-02-12-bargaining-observation-time-change.html",
+          "name": "Bargaining Observation Time Update: 10:00 AM Moved to 1:15 PM"
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "url": "https://www.local083.org/news/2026-02-04-zoom-backgrounds.html",
+          "name": "Show Up on Zoom: Use a 2026 Bargaining Background"
+        }
+      ]
     }
   ]
 }
     </script>
-    <!-- SEO META END -->
+
+        <link rel="stylesheet" href="/styles/tailwind.css">
+    <link rel="stylesheet" href="/styles/site-shell.css">
+<style>
+        :root {
+            --brand-purple-dark: #4c1d95;
+            --brand-purple: #7c3aed;
+            --brand-purple-bright: #7c3aed;
+            --brand-purple-light: #ede9fe;
+            --brand-yellow: #fdb913;
+            --brand-yellow-light: #fff7d6;
+            --brand-dark: #111827;
+            --brand-light: #f9fafb;
+            --text-primary: #1f2937;
+            --text-secondary: #374151;
+            --border-color: #d1d5db;
+        }
+
+        * { box-sizing: border-box; }
+        html { scroll-padding-top: 5.5rem; }
+
+        body {
+            background: var(--brand-light);
+            color: var(--text-primary);
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            color: var(--brand-purple-dark);
+            font-family: 'Lora', serif;
+        }
+
+        img { display: block; max-width: 100%; }
+        button, input, select { font: inherit; }
+        button { cursor: pointer; }
+
+        a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible {
+            border-radius: 0.25rem;
+            outline: 3px solid var(--brand-purple);
+            outline-offset: 3px;
+        }
+
+        .container { margin-inline: auto; max-width: 80rem; padding-inline: 1.5rem; width: 100%; }
+        .sr-only { clip: rect(0, 0, 0, 0); clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; white-space: nowrap; width: 1px; }
+        .skip-link:focus { clip: auto; clip-path: none; height: auto; left: 1rem; padding: 0.65rem 0.9rem; top: 1rem; width: auto; }
+        .skip-link { background: #fff; color: var(--brand-purple-dark); font-weight: 800; position: fixed; z-index: 100; }
+
+        .site-header {
+            -webkit-backdrop-filter: blur(14px);
+            backdrop-filter: blur(14px);
+            background: rgba(255, 255, 255, 0.84);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 50;
+        }
+
+        .site-nav { align-items: center; display: flex; justify-content: space-between; min-height: 4.5rem; }
+        .brand { align-items: center; color: var(--brand-dark); display: flex; gap: 0.5rem; text-decoration: none; }
+        .brand strong { font-size: 1.25rem; }
+        .brand span { color: var(--text-secondary); font-size: 0.875rem; }
+        .desktop-nav { align-items: center; display: flex; gap: 2rem; }
+        .desktop-nav a { color: var(--text-secondary); font-size: 0.875rem; text-decoration: none; transition: color 160ms ease; }
+        .desktop-nav a:hover { color: var(--brand-purple); }
+        .desktop-nav a[aria-current="page"] { color: var(--brand-purple); font-weight: 800; }
+        .mobile-menu-button { background: transparent; border: 0; color: var(--text-secondary); display: none; font-size: 1.5rem; height: 2.75rem; width: 2.75rem; }
+        .mobile-menu { background: #fff; border-top: 1px solid #e5e7eb; box-shadow: 0 14px 25px rgba(17, 24, 39, 0.12); display: none; left: 0; position: absolute; right: 0; top: 100%; }
+        .mobile-menu.is-open { display: block; }
+        .mobile-menu a { color: var(--text-secondary); display: block; padding: 0.85rem 1.5rem; text-align: center; text-decoration: none; }
+        .mobile-menu a[aria-current="page"] { background: var(--brand-purple-light); color: var(--brand-purple); font-weight: 800; }
+
+        .news-intro {
+            background:
+                radial-gradient(circle at 88% 28%, rgba(253, 185, 19, 0.13), transparent 15rem),
+                linear-gradient(145deg, #ffffff 0%, #faf8ff 100%);
+            border-bottom: 1px solid #ddd6fe;
+        }
+
+        .news-masthead {
+            align-items: end;
+            display: grid;
+            gap: 2rem;
+            grid-template-columns: minmax(0, 1fr) auto;
+            padding-block: 2.35rem 2rem;
+        }
+
+        .eyebrow {
+            align-items: center;
+            color: var(--brand-purple-bright);
+            display: inline-flex;
+            font-size: 0.75rem;
+            font-weight: 800;
+            gap: 0.5rem;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+        }
+
+        .eyebrow::before { background: var(--brand-yellow); border-radius: 0.2rem; content: ''; height: 0.62rem; width: 0.62rem; }
+        .news-masthead h1 { font-size: clamp(2.8rem, 6vw, 5rem); line-height: 0.98; margin: 0.35rem 0 0; }
+        .news-deck { color: var(--text-secondary); font-size: clamp(1rem, 1.6vw, 1.16rem); line-height: 1.65; margin: 0.9rem 0 0; max-width: 50rem; }
+
+        .desk-meta { border-left: 1px solid #ddd6fe; color: var(--text-secondary); display: grid; font-size: 0.78rem; gap: 0.55rem; min-width: 12rem; padding-left: 1.25rem; }
+        .desk-meta strong { color: var(--brand-purple-dark); font-size: 0.82rem; text-transform: uppercase; }
+        .desk-meta a { color: var(--brand-purple); font-weight: 800; text-underline-offset: 0.2rem; }
+
+        .news-flash {
+            align-items: center;
+            background: var(--brand-yellow-light);
+            border: 1px solid #f5d66f;
+            border-radius: 0.9rem;
+            display: grid;
+            gap: 0.8rem;
+            grid-template-columns: auto minmax(0, 1fr) auto;
+            margin-top: 1.25rem;
+            min-height: 3.6rem;
+            padding: 0.7rem 0.85rem;
+        }
+
+        .flash-label { background: var(--brand-yellow); border-radius: 999px; color: #4d3600; font-size: 0.67rem; font-weight: 800; letter-spacing: 0.08em; padding: 0.36rem 0.55rem; text-transform: uppercase; }
+        .flash-copy { color: #4d3600; font-size: 0.88rem; line-height: 1.4; }
+        .flash-copy strong { color: var(--brand-purple-dark); }
+        .flash-date { color: #765d19; font-size: 0.72rem; font-weight: 700; white-space: nowrap; }
+        .news-flash a { color: inherit; display: contents; text-decoration: none; }
+
+        .top-stories { display: grid; gap: 1.15rem; grid-template-columns: minmax(0, 1.7fr) minmax(18rem, 0.72fr); margin-top: 1.15rem; }
+
+        .lead-story {
+            background: #fff;
+            border: 1px solid #d8d0e9;
+            border-radius: 1.25rem;
+            box-shadow: 0 18px 45px rgba(76, 29, 149, 0.1);
+            display: grid;
+            grid-template-columns: 1.08fr 0.92fr;
+            min-height: 27rem;
+            overflow: hidden;
+        }
+
+        .lead-image-wrap { background: var(--brand-yellow); min-height: 100%; overflow: hidden; position: relative; }
+        .lead-image-wrap img { height: 100%; object-fit: cover; transition: transform 420ms cubic-bezier(0.22, 1, 0.36, 1); width: 100%; }
+        .lead-story:hover .lead-image-wrap img { transform: scale(1.035); }
+        .lead-image-wrap::after { background: linear-gradient(180deg, transparent 62%, rgba(17, 24, 39, 0.46)); bottom: 0; content: ''; left: 0; position: absolute; right: 0; top: 0; }
+        .photo-credit { bottom: 0.8rem; color: #fff; font-size: 0.66rem; font-weight: 700; left: 0.9rem; position: absolute; z-index: 1; }
+
+        .lead-copy { align-content: center; display: grid; padding: 2rem; }
+        .story-kicker { align-items: center; color: var(--brand-purple-bright); display: flex; flex-wrap: wrap; font-size: 0.69rem; font-weight: 800; gap: 0.5rem; letter-spacing: 0.09em; text-transform: uppercase; }
+        .story-kicker time { color: #6b7280; }
+        .lead-copy h2 { font-size: clamp(1.8rem, 3.1vw, 2.8rem); line-height: 1.08; margin: 0.8rem 0 0; }
+        .lead-copy p { color: var(--text-secondary); line-height: 1.65; margin: 1rem 0 0; }
+        .story-link { align-items: center; color: var(--brand-purple); display: inline-flex; font-size: 0.86rem; font-weight: 800; gap: 0.4rem; margin-top: 1.25rem; text-decoration: none; }
+        .story-link span { transition: transform 160ms ease; }
+        .story-link:hover span { transform: translateX(0.22rem); }
+
+        .latest-rail { align-self: stretch; background: #fff; border: 1px solid #d8d0e9; border-radius: 1.25rem; display: grid; grid-template-rows: auto minmax(0, 1fr) auto; height: 100%; min-height: 0; overflow: hidden; }
+        .latest-heading { align-items: baseline; border-bottom: 1px solid #e5e7eb; display: flex; justify-content: space-between; padding: 1.15rem 1.2rem; }
+        .latest-heading h2 { font-size: 1.45rem; margin: 0; }
+        .latest-heading span { color: #6b7280; font-size: 0.7rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; }
+        .latest-list { display: grid; min-height: 0; overflow-y: auto; overscroll-behavior: contain; scrollbar-color: #c4b5fd transparent; scrollbar-width: thin; }
+        .latest-list::-webkit-scrollbar { width: 0.42rem; }
+        .latest-list::-webkit-scrollbar-thumb { background: #c4b5fd; border: 0.1rem solid #fff; border-radius: 999px; }
+        .latest-list:focus-visible { outline: 3px solid var(--brand-purple); outline-offset: -3px; }
+        .latest-item { align-items: center; color: inherit; display: grid; gap: 0.68rem; grid-template-columns: 3.15rem minmax(0, 1fr) auto; padding: 0.78rem 0.9rem; text-decoration: none; transition: background 160ms ease; }
+        .latest-item + .latest-item { border-top: 1px solid #e5e7eb; }
+        .latest-item:hover { background: #faf8ff; }
+        .latest-thumb { background: #ede9fe; border-radius: 0.58rem; height: 3.15rem; overflow: hidden; position: relative; width: 3.15rem; }
+        .latest-thumb img { height: 100%; object-fit: cover; transition: transform 220ms ease; width: 100%; }
+        .latest-item:hover .latest-thumb img { transform: scale(1.06); }
+        .latest-icon { align-items: center; background: rgba(255, 255, 255, 0.94); border: 1px solid #ddd6fe; border-radius: 0.3rem; bottom: 0.16rem; box-shadow: 0 1px 4px rgba(17, 24, 39, 0.16); color: var(--brand-purple-dark); display: flex; font-family: 'Inter', sans-serif; font-size: 0.53rem; font-weight: 900; height: 1.02rem; justify-content: center; line-height: 1; position: absolute; right: 0.16rem; width: 1.02rem; }
+        .latest-icon-events { color: #15803d; }
+        .latest-icon-action { color: #b91c1c; }
+        .latest-icon-leadership { color: #1d4ed8; }
+        .latest-icon-update { color: #9a6700; }
+        .latest-icon-contract { color: #5b21b6; }
+        .latest-copy { min-width: 0; }
+        .latest-date { color: var(--brand-purple-bright); display: block; font-size: 0.64rem; font-weight: 800; letter-spacing: 0.06em; line-height: 1.3; margin-bottom: 0.2rem; text-transform: uppercase; }
+        .latest-title { color: var(--brand-purple-dark); font-family: 'Lora', serif; font-size: 0.94rem; font-weight: 700; line-height: 1.27; }
+        .latest-arrow { color: var(--brand-purple); font-weight: 800; transition: transform 160ms ease; }
+        .latest-item:hover .latest-arrow { transform: translateX(0.2rem); }
+        .latest-scroll-cue { align-items: center; background: linear-gradient(180deg, rgba(250, 248, 255, 0.88), #faf8ff); border-top: 1px solid #e5e7eb; color: #6b7280; display: flex; font-size: 0.65rem; font-weight: 800; justify-content: space-between; letter-spacing: 0.07em; padding: 0.52rem 1rem; text-transform: uppercase; }
+        .latest-scroll-cue span:last-child { color: var(--brand-purple); font-size: 0.9rem; }
+
+        .news-explorer { padding-block: 4.5rem 5rem; }
+        .section-heading { display: grid; gap: 1rem; grid-template-columns: minmax(0, 1fr) auto; margin-bottom: 1.5rem; }
+        .section-heading h2 { font-size: clamp(2rem, 4vw, 3.25rem); line-height: 1.08; margin: 0.35rem 0 0; }
+        .section-heading p { color: var(--text-secondary); line-height: 1.6; margin: 0.65rem 0 0; max-width: 44rem; }
+        .results-status { align-self: end; color: var(--text-secondary); font-size: 0.78rem; font-weight: 700; padding-bottom: 0.35rem; }
+
+        .news-controls {
+            -webkit-backdrop-filter: blur(12px);
+            backdrop-filter: blur(12px);
+            background: rgba(255, 255, 255, 0.92);
+            border: 1px solid #d8d0e9;
+            border-radius: 1.05rem;
+            box-shadow: 0 12px 32px rgba(76, 29, 149, 0.07);
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+        }
+
+        .control-row { align-items: end; display: grid; gap: 0.8rem; grid-template-columns: minmax(15rem, 1fr) auto; }
+        .control-group label { color: var(--text-secondary); display: block; font-size: 0.68rem; font-weight: 800; letter-spacing: 0.08em; margin-bottom: 0.4rem; text-transform: uppercase; }
+        .search-wrap { position: relative; }
+        .search-wrap::before { color: var(--brand-purple); content: '⌕'; font-size: 1.45rem; left: 0.8rem; line-height: 1; position: absolute; top: 50%; transform: translateY(-50%); }
+        .search-input, .sort-select { background: #fff; border: 1px solid #cfc7de; border-radius: 0.72rem; color: var(--text-primary); min-height: 2.85rem; width: 100%; }
+        .search-input { padding: 0.65rem 0.9rem 0.65rem 2.6rem; }
+        .sort-select { min-width: 9.5rem; padding: 0.65rem 2.2rem 0.65rem 0.8rem; }
+
+        .topic-filters { align-items: center; border-top: 1px solid #e5e7eb; display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.9rem; padding-top: 0.9rem; }
+        .filter-label { color: #6b7280; font-size: 0.69rem; font-weight: 800; letter-spacing: 0.08em; margin-right: 0.2rem; text-transform: uppercase; }
+        .topic-button { background: #f3f4f6; border: 1px solid transparent; border-radius: 999px; color: var(--text-secondary); font-size: 0.74rem; font-weight: 800; padding: 0.5rem 0.72rem; transition: background 160ms ease, color 160ms ease, transform 160ms ease; }
+        .topic-button:hover { background: var(--brand-purple-light); color: var(--brand-purple-dark); transform: translateY(-1px); }
+        .topic-button[aria-pressed="true"] { background: var(--brand-purple-dark); color: #fff; }
+        .clear-filters { background: transparent; border: 0; color: var(--brand-purple); display: none; font-size: 0.74rem; font-weight: 800; margin-left: auto; text-decoration: underline; text-underline-offset: 0.2rem; }
+        .clear-filters.is-visible { display: inline-block; }
+
+        .stories-grid { display: grid; gap: 1.15rem; grid-template-columns: repeat(12, minmax(0, 1fr)); }
+        .story-card { --story-accent: var(--brand-purple); animation: story-enter 340ms both; background: #fff; border: 1px solid #ddd6e8; border-radius: 1.05rem; display: flex; flex-direction: column; grid-column: span 4; min-width: 0; overflow: hidden; position: relative; transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease; }
+        .story-card:hover { border-color: #c4b5d9; box-shadow: 0 15px 35px rgba(76, 29, 149, 0.11); transform: translateY(-3px); }
+        .story-card::before { background: linear-gradient(90deg, var(--brand-purple-dark), var(--brand-purple-bright)); content: ''; height: 0.22rem; left: 0; position: absolute; right: 0; top: 0; z-index: 2; }
+        .story-card.is-wide { display: grid; grid-column: span 8; grid-template-columns: 1.05fr 0.95fr; }
+        .story-image-link { background: #ede9fe; display: block; overflow: hidden; }
+        .story-image { aspect-ratio: 16 / 10; height: auto; object-fit: cover; transition: transform 320ms ease; width: 100%; }
+        .story-card:hover .story-image { transform: scale(1.025); }
+        .story-card.is-wide .story-image-link, .story-card.is-wide .story-image { height: 100%; }
+        .story-card.is-wide .story-image { aspect-ratio: auto; }
+        .story-body { display: flex; flex: 1; flex-direction: column; padding: 1.15rem; }
+        .story-meta { align-items: center; color: #6b7280; display: flex; flex-wrap: wrap; font-size: 0.67rem; font-weight: 700; gap: 0.5rem; }
+        .story-topic { background: #f3effa; border: 1px solid #e5ddef; border-radius: 999px; color: var(--brand-purple-dark); font-size: 0.62rem; font-weight: 800; letter-spacing: 0.07em; padding: 0.28rem 0.48rem; text-transform: uppercase; }
+        .story-body h3 { font-size: 1.32rem; line-height: 1.2; margin: 0.65rem 0 0; }
+        .story-body h3 a { color: inherit; text-decoration: none; }
+        .story-body h3 a:hover { color: var(--brand-purple); }
+        .story-description { color: var(--text-secondary); font-size: 0.86rem; line-height: 1.6; margin: 0.7rem 0 0; }
+        .story-footer { align-items: end; display: flex; gap: 0.7rem; justify-content: space-between; margin-top: auto; padding-top: 1rem; }
+        .story-author { color: #6b7280; font-size: 0.67rem; line-height: 1.4; }
+        .story-read { color: var(--brand-purple); flex: none; font-size: 0.76rem; font-weight: 800; text-decoration: none; }
+
+        .load-more-wrap { display: flex; justify-content: center; padding-top: 1.8rem; }
+        .load-more { background: #fff; border: 2px solid var(--brand-purple); border-radius: 0.75rem; color: var(--brand-purple); display: inline-flex; font-size: 0.84rem; font-weight: 800; padding: 0.7rem 1.1rem; }
+        .load-more:hover { background: var(--brand-purple); color: #fff; }
+        .empty-state { background: #fff; border: 1px dashed #c4b5fd; border-radius: 1rem; color: var(--text-secondary); grid-column: 1 / -1; padding: 3rem 1.5rem; text-align: center; }
+        .empty-state h3 { font-size: 1.5rem; margin: 0 0 0.6rem; }
+
+        .news-paths { background: linear-gradient(135deg, #4c1d95, #6d28d9); border-radius: 1.2rem; color: #fff; display: grid; gap: 1rem; grid-template-columns: 1.15fr repeat(3, 0.75fr); margin-top: 4.5rem; overflow: hidden; padding: 1.4rem; }
+        .news-paths h2 { color: #fff; font-size: 1.65rem; margin: 0.35rem 0 0; }
+        .news-paths p { color: #ddd6fe; font-size: 0.84rem; line-height: 1.55; }
+        .path-intro { padding: 0.55rem; }
+        .path-intro .eyebrow { color: #fde68a; }
+        .path-card { background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.18); border-radius: 0.85rem; color: #fff; display: block; padding: 1rem; text-decoration: none; transition: background 160ms ease, transform 160ms ease; }
+        .path-card:hover { background: rgba(255, 255, 255, 0.16); transform: translateY(-2px); }
+        .path-card strong { display: block; font-family: 'Lora', serif; font-size: 1.08rem; }
+        .path-card span { color: #fde68a; display: block; font-size: 0.74rem; font-weight: 800; margin-top: 0.8rem; }
+
+        .site-footer { background: #f3f4f6; border-top: 1px solid #e5e7eb; padding-block: 3rem 2rem; }
+        .footer-grid { display: grid; gap: 2rem; grid-template-columns: 1.15fr repeat(3, 0.75fr); }
+        .footer-brand { align-items: center; display: flex; gap: 0.75rem; }
+        .footer-brand img { background: #fff; border-radius: 0.35rem; height: 3rem; padding: 0.25rem; width: 3rem; }
+        .footer-brand h3 { font-size: 1.2rem; margin: 0; }
+        .footer-brand p { color: var(--text-secondary); font-size: 0.78rem; margin: 0.15rem 0 0; }
+        .footer-copy { color: var(--text-secondary); font-size: 0.87rem; line-height: 1.6; }
+        .site-footer h4 { font-family: 'Inter', sans-serif; font-size: 0.82rem; letter-spacing: 0.08em; margin: 0 0 0.9rem; text-transform: uppercase; }
+        .site-footer ul { list-style: none; margin: 0; padding: 0; }
+        .site-footer li + li { margin-top: 0.65rem; }
+        .site-footer a { color: var(--text-secondary); font-size: 0.86rem; text-decoration: none; }
+        .site-footer a:hover { color: var(--brand-purple); }
+        .footer-bottom { border-top: 1px solid #d1d5db; color: var(--text-secondary); font-size: 0.75rem; margin-top: 2.5rem; padding-top: 1.5rem; text-align: center; }
+
+        @keyframes story-enter {
+            from { opacity: 0; transform: translateY(0.65rem); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 1050px) {
+            .top-stories { grid-template-columns: 1fr; }
+            .latest-rail { height: 24rem; }
+            .story-card { grid-column: span 6; }
+            .story-card.is-wide { grid-column: span 12; }
+            .news-paths { grid-template-columns: repeat(3, 1fr); }
+            .path-intro { grid-column: 1 / -1; }
+        }
+
+        @media (max-width: 800px) {
+            .desktop-nav { display: none; }
+            .mobile-menu-button { display: inline-grid; place-items: center; }
+            .brand span { display: none; }
+            .news-masthead { align-items: start; grid-template-columns: 1fr; }
+            .desk-meta { border-left: 0; border-top: 1px solid #ddd6fe; grid-template-columns: 1fr auto; padding-left: 0; padding-top: 0.8rem; }
+            .news-flash { grid-template-columns: auto minmax(0, 1fr); }
+            .flash-date { grid-column: 2; }
+            .lead-story { grid-template-columns: 1fr; }
+            .lead-image-wrap { min-height: 18rem; }
+            .control-row { grid-template-columns: 1fr 1fr; }
+            .control-group.search-group { grid-column: 1 / -1; }
+            .story-card, .story-card.is-wide { grid-column: span 12; }
+            .story-card.is-wide { display: flex; }
+            .story-card.is-wide .story-image-link, .story-card.is-wide .story-image { height: auto; }
+            .story-card.is-wide .story-image { aspect-ratio: 16 / 10; }
+            .news-paths { grid-template-columns: 1fr; }
+            .path-intro { grid-column: auto; }
+            .footer-grid { grid-template-columns: repeat(2, 1fr); }
+            .footer-about { grid-column: 1 / -1; }
+        }
+
+        @media (max-width: 540px) {
+            .container { padding-inline: 1rem; }
+            .news-masthead { padding-block: 1.65rem 1.35rem; }
+            .news-flash { align-items: start; grid-template-columns: 1fr; }
+            .flash-date { grid-column: auto; }
+            .lead-copy { padding: 1.35rem; }
+            .lead-image-wrap { min-height: 14rem; }
+            .news-explorer { padding-block: 3rem 4rem; }
+            .section-heading { grid-template-columns: 1fr; }
+            .results-status { padding: 0; }
+            .control-row { grid-template-columns: 1fr; }
+            .control-group.search-group { grid-column: auto; }
+            .topic-filters { align-items: stretch; }
+            .filter-label { width: 100%; }
+            .clear-filters { margin-left: 0; }
+            .footer-grid { grid-template-columns: 1fr; }
+            .footer-about { grid-column: auto; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after { animation-duration: 0.01ms !important; scroll-behavior: auto !important; transition-duration: 0.01ms !important; }
+        }
+    </style>
     <script src="/js/analytics.js" defer></script>
 </head>
-<body class="bg-brand-light">
-    <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:bg-white focus:text-brand-purple-dark focus:px-4 focus:py-2 focus:rounded focus:shadow-lg">Skip to content</a>
+<body>
+    <noscript><nav aria-label="Primary navigation without JavaScript" class="border-b border-border-color bg-white px-4 py-3 text-center text-sm font-semibold"><a class="mx-2 underline" href="/">Home</a><a class="mx-2 underline" href="/about.html">About</a><a class="mx-2 underline" href="/events.html">Events</a><a class="mx-2 underline" href="/news.html">News</a><a class="mx-2 underline" href="/resources.html">Resources &amp; Rights</a><a class="mx-2 underline" href="/leadership.html">Leadership</a><a class="mx-2 underline" href="/contact.html">Contact</a></nav></noscript>
+    <a href="#main-content" class="skip-link sr-only">Skip to content</a>
 
-    <header class="bg-white/80 backdrop-blur-lg border-b border-border-color sticky top-0 z-50">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="index.html" class="flex items-center space-x-2">
-                <span class="text-2xl font-bold text-gray-900">SEIU 503</span>
+    <!-- SITE SHELL: HEADER START -->
+    <header class="bg-white/80 backdrop-blur-lg border-b border-border-color sticky top-0 z-50" data-site-shell-header>
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center" aria-label="Primary navigation">
+            <a href="/index.html" class="flex items-center space-x-2">
+                <span class="text-2xl font-bold text-brand-purple-dark">SEIU 503</span>
                 <span class="text-lg text-text-secondary hidden md:block">| Oregon State University</span>
             </a>
             <div class="hidden lg:flex space-x-8">
-                <a href="about.html" class="text-text-secondary hover:text-brand-purple transition-colors">About</a>
-                <a href="events.html" class="text-text-secondary hover:text-brand-purple transition-colors">Events</a>
-                <a href="news.html" class="text-brand-purple font-bold">News</a>
-                <a href="resources.html" class="text-text-secondary hover:text-brand-purple transition-colors">Resources & Rights</a>
-                <a href="leadership.html" class="text-text-secondary hover:text-brand-purple transition-colors">Leadership</a>
-                <a href="contact.html" class="text-text-secondary hover:text-brand-purple transition-colors">Contact</a>
+                <a href="/about.html" class="text-text-secondary hover:text-brand-purple transition-colors">About</a>
+                <a href="/events.html" class="text-text-secondary hover:text-brand-purple transition-colors">Events</a>
+                <a href="/news.html" class="text-text-secondary hover:text-brand-purple transition-colors">News</a>
+                <a href="/resources.html" class="text-text-secondary hover:text-brand-purple transition-colors">Resources &amp; Rights</a>
+                <a href="/leadership.html" class="text-text-secondary hover:text-brand-purple transition-colors">Leadership</a>
+                <a href="/contact.html" class="text-text-secondary hover:text-brand-purple transition-colors">Contact</a>
             </div>
-            <div class="lg:hidden">
-                <button id="mobile-menu-button" class="text-text-secondary hover:text-brand-purple focus:outline-none" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false">
-                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-                </button>
-            </div>
+            <button type="button" id="mobile-menu-button" class="lg:hidden text-text-secondary hover:text-brand-purple" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
         </nav>
-        <div id="mobile-menu" class="hidden lg:hidden absolute top-full left-0 w-full bg-white border-t border-border-color shadow-lg">
-            <a href="about.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">About</a>
-            <a href="events.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Events</a>
-            <a href="news.html" class="block text-center py-3 px-6 text-lg text-brand-purple bg-brand-purple-light font-semibold">News</a>
-            <a href="resources.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Resources & Rights</a>
-            <a href="leadership.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Leadership</a>
-            <a href="contact.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Contact</a>
+        <div id="mobile-menu" class="hidden lg:hidden absolute top-full left-0 w-full bg-white border-t border-border-color shadow-lg" role="navigation" aria-label="Mobile navigation">
+            <a href="/about.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">About</a>
+            <a href="/events.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Events</a>
+            <a href="/news.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">News</a>
+            <a href="/resources.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Resources &amp; Rights</a>
+            <a href="/leadership.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Leadership</a>
+            <a href="/contact.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Contact</a>
         </div>
     </header>
+    <script data-site-shell-menu-state-script>
+        (() => {
+            const button = document.getElementById('mobile-menu-button');
+            const menu = document.getElementById('mobile-menu');
+            if (!button || !menu) return;
+            const canonicalIcon = button.innerHTML;
 
-    <section class="bg-brand-purple-light border-b border-border-color">
-        <div class="container mx-auto px-6 py-16 text-center">
-            <h1 class="text-5xl font-bold">News & Updates</h1>
-            <p class="mt-4 text-lg text-text-secondary max-w-3xl mx-auto">The latest news on bargaining, workplace rights, and member actions from across the OSU campus.</p>
+            window.siteShellSyncMenuState = () => {
+                const isOpen = menu.classList.contains('is-open') || !menu.classList.contains('hidden');
+                button.setAttribute('aria-expanded', String(isOpen));
+                button.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+                if (button.innerHTML !== canonicalIcon) button.innerHTML = canonicalIcon;
+            };
+
+            new MutationObserver(window.siteShellSyncMenuState).observe(menu, {
+                attributes: true,
+                attributeFilter: ['class']
+            });
+            document.addEventListener('keydown', (event) => {
+                if (event.key !== 'Escape' || button.getAttribute('aria-expanded') !== 'true') return;
+                menu.classList.add('hidden');
+                menu.classList.remove('is-open');
+                window.siteShellSyncMenuState();
+                button.focus();
+            });
+            window.siteShellSyncMenuState();
+        })();
+    </script>
+<!-- SITE SHELL: HEADER END -->
+
+    <main id="main-content">
+
+    <section class="news-intro">
+        <div class="container news-masthead">
+            <div>
+                <span class="eyebrow">Local 083 newsroom</span>
+                <h1>News &amp; Updates</h1>
+                <p class="news-deck">What OSU classified workers need to know—verified bargaining reports, workplace updates, member actions and stories from our union community.</p>
+            </div>
+            <div class="desk-meta">
+                <strong>Worker-led reporting</strong>
+                <span>Updated as stories are published</span>
+                <a href="/news/rss.xml">Follow the RSS feed →</a>
+            </div>
         </div>
     </section>
 
-    <main id="main-content" class="container mx-auto px-6 py-16">
-        <section id="featured-article-section" class="mb-16">
-            <!-- Featured article will be injected here -->
+        <section class="container" aria-label="Top Local 083 stories">
+            <div id="news-flash" class="news-flash">
+                <span class="flash-label">Meeting update</span>
+                <a href="/news/2026-07-10-membership-meeting-room-change.html">
+                    <span class="flash-copy"><strong>July 16 membership meeting moved to MU 215</strong> The July 16 Local 083 membership meeting has moved from MU 211 to MU 215 after a double-booking. Join us at noon for TOGO&#x27;S sandwiches.</span>
+                    <time class="flash-date" datetime="2026-07-10">Jul 10, 2026</time>
+                </a>
+</div>
+
+            <div class="top-stories">
+                <!-- NEWS_LEAD_START -->
+                <article class="lead-story" id="lead-story">
+                    <a class="lead-image-wrap" href="/news/2026-07-09-latest-bargaining-update.html">
+                        <img src="/images/2026-bargaining-zoom-backgrounds.webp" alt="Purple 2026 higher education bargaining graphic with raised fists and campus mascots" width="1200" height="675" fetchpriority="high">
+                    </a>
+                    <div class="lead-copy">
+                        <div class="story-kicker"><span>Lead story · Bargaining</span><time datetime="2026-07-09">July 9, 2026</time></div>
+                        <h2>Our union bargaining update: 0% COLAs and a 19-year step path</h2>
+                        <p>Our bargaining team reports that management&#x27;s latest offer includes zero percent COLAs over four years, a 19-year step path and proposed rollbacks to member rights.</p>
+                        <a class="story-link" href="/news/2026-07-09-latest-bargaining-update.html">Read the story <span aria-hidden="true">→</span></a>
+                    </div>
+</article>
+                <!-- NEWS_LEAD_END -->
+
+                <aside class="latest-rail" aria-labelledby="latest-heading">
+                    <div class="latest-heading"><h2 id="latest-heading">Latest</h2><span id="latest-count">
+8 recent stories
+</span></div>
+                    <div class="latest-list" id="latest-list" tabindex="0" aria-label="Eight latest Local 083 stories">
+                        <a class="latest-item" href="/news/2026-07-10-membership-meeting-room-change.html">
+                            <span class="latest-thumb"><img src="/images/card-192.webp" alt="" width="96" height="96" loading="lazy"><span class="latest-icon latest-icon-events" aria-hidden="true">◫</span></span>
+                            <span class="latest-copy"><time class="latest-date" datetime="2026-07-10">Jul 10, 2026</time><span class="latest-title">July 16 membership meeting moved to MU 215</span></span>
+                            <span class="latest-arrow" aria-hidden="true">→</span>
+                        </a>
+                        <a class="latest-item" href="/news/2026-07-09-latest-bargaining-update.html">
+                            <span class="latest-thumb"><img src="/images/2026-bargaining-zoom-backgrounds-192.webp" alt="" width="96" height="96" loading="lazy"><span class="latest-icon latest-icon-contract" aria-hidden="true">⇄</span></span>
+                            <span class="latest-copy"><time class="latest-date" datetime="2026-07-09">Jul 9, 2026</time><span class="latest-title">Our union bargaining update: 0% COLAs and a 19-year step path</span></span>
+                            <span class="latest-arrow" aria-hidden="true">→</span>
+                        </a>
+                        <a class="latest-item" href="/news/2026-07-09-tell-universities-hell-no.html">
+                            <span class="latest-thumb"><img src="/images/2026-bargaining-zoom-backgrounds-192.webp" alt="" width="96" height="96" loading="lazy"><span class="latest-icon latest-icon-action" aria-hidden="true">✦</span></span>
+                            <span class="latest-copy"><time class="latest-date" datetime="2026-07-09">Jul 9, 2026</time><span class="latest-title">Management&#x27;s disrespectful offer? We say HELL NO!</span></span>
+                            <span class="latest-arrow" aria-hidden="true">→</span>
+                        </a>
+                        <a class="latest-item" href="/news/2026-05-07-economics-they-say-we-say.html">
+                            <span class="latest-thumb"><img src="/images/card-192.webp" alt="" width="96" height="96" loading="lazy"><span class="latest-icon latest-icon-contract" aria-hidden="true">⇄</span></span>
+                            <span class="latest-copy"><time class="latest-date" datetime="2026-05-07">May 7, 2026</time><span class="latest-title">Economics They Say / We Say</span></span>
+                            <span class="latest-arrow" aria-hidden="true">→</span>
+                        </a>
+                        <a class="latest-item" href="/news/2026-04-21-new-sublocal-083-leadership-team.html">
+                            <span class="latest-thumb"><img src="/images/card-192.webp" alt="" width="96" height="96" loading="lazy"><span class="latest-icon latest-icon-leadership" aria-hidden="true">★</span></span>
+                            <span class="latest-copy"><time class="latest-date" datetime="2026-04-21">Apr 21, 2026</time><span class="latest-title">Introducing our new Local 083 leadership team</span></span>
+                            <span class="latest-arrow" aria-hidden="true">→</span>
+                        </a>
+                        <a class="latest-item" href="/news/2026-04-16-membership-meeting-update.html">
+                            <span class="latest-thumb"><img src="/images/83a4a1c4-4d9a-482a-8ad9-a3e73c338df3-wngr-barg-update-192.webp" alt="" width="96" height="96" loading="lazy"><span class="latest-icon latest-icon-contract" aria-hidden="true">⇄</span></span>
+                            <span class="latest-copy"><time class="latest-date" datetime="2026-04-16">Apr 16, 2026</time><span class="latest-title">April 16 Bargaining Update</span></span>
+                            <span class="latest-arrow" aria-hidden="true">→</span>
+                        </a>
+                        <a class="latest-item" href="/news/2026-02-12-bargaining-observation-time-change.html">
+                            <span class="latest-thumb"><img src="/images/2026-bargaining-zoom-backgrounds-192.webp" alt="" width="96" height="96" loading="lazy"><span class="latest-icon latest-icon-contract" aria-hidden="true">⇄</span></span>
+                            <span class="latest-copy"><time class="latest-date" datetime="2026-02-12">Feb 12, 2026</time><span class="latest-title">Bargaining Observation Time Update: 10:00 AM Moved to 1:15 PM</span></span>
+                            <span class="latest-arrow" aria-hidden="true">→</span>
+                        </a>
+                        <a class="latest-item" href="/news/2026-02-04-zoom-backgrounds.html">
+                            <span class="latest-thumb"><img src="/images/2026-bargaining-zoom-backgrounds-192.webp" alt="" width="96" height="96" loading="lazy"><span class="latest-icon latest-icon-action" aria-hidden="true">✦</span></span>
+                            <span class="latest-copy"><time class="latest-date" datetime="2026-02-04">Feb 4, 2026</time><span class="latest-title">Show Up on Zoom: Use a 2026 Bargaining Background</span></span>
+                            <span class="latest-arrow" aria-hidden="true">→</span>
+                        </a>
+</div>
+                    <div class="latest-scroll-cue" aria-hidden="true"><span>Scroll for more</span><span>↓</span></div>
+                </aside>
+            </div>
         </section>
 
-        <section id="news-controls" class="mb-12">
-            <div class="max-w-4xl mx-auto">
-                <div class="flex flex-col md:flex-row gap-6 items-end">
-                    <div class="flex-grow w-full">
-                        <label for="search-input" class="block text-sm font-medium text-text-secondary mb-2">Search News</label>
-                        <input type="search" id="search-input" placeholder="Enter keywords..." class="w-full px-4 py-2 border border-border-color rounded-lg focus:ring-2 focus:ring-brand-purple focus:border-transparent transition">
+        <section class="news-explorer container" aria-labelledby="all-stories-heading">
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow">Explore the archive</span>
+                    <h2 id="all-stories-heading">All stories</h2>
+                    <p>Search the archive or narrow it by topic. The newest verified updates appear first.</p>
+                </div>
+                <p class="results-status" id="results-status" aria-live="polite">
+Showing 7 of 14 stories
+</p>
+            </div>
+
+            <div class="news-controls" aria-label="Search and filter news">
+                <div class="control-row">
+                    <div class="control-group search-group">
+                        <label for="news-search">Search news</label>
+                        <div class="search-wrap"><input class="search-input" id="news-search" type="search" placeholder="Try “COLA,” “meeting” or “contract”" autocomplete="off"></div>
                     </div>
-                    <div class="flex-shrink-0">
-                        <label for="sort-select" class="block text-sm font-medium text-text-secondary mb-2">Sort By</label>
-                        <select id="sort-select" class="w-full md:w-auto px-4 py-2 border border-border-color rounded-lg focus:ring-2 focus:ring-brand-purple focus:border-transparent transition">
-                            <option value="newest">Newest First</option>
-                            <option value="oldest">Oldest First</option>
+                    <div class="control-group">
+                        <label for="news-sort">Sort</label>
+                        <select class="sort-select" id="news-sort">
+                            <option value="newest">Newest first</option>
+                            <option value="oldest">Oldest first</option>
                         </select>
                     </div>
                 </div>
-                <div id="tag-filters" class="mt-6">
-                    <h3 class="text-lg font-semibold mb-3 text-text-secondary">Filter by Category</h3>
-                    <div id="tags-container" class="flex flex-wrap gap-3 items-center">
-                        </div>
+                <div class="topic-filters" id="topic-filters" aria-label="Filter stories by topic">
+                    <span class="filter-label">Topics</span>
+                    <button class="topic-button" type="button" data-topic="All" aria-pressed="true">All</button>
+                    <button class="topic-button" type="button" data-topic="Bargaining" aria-pressed="false">Bargaining</button>
+                    <button class="topic-button" type="button" data-topic="Events" aria-pressed="false">Events</button>
+                    <button class="topic-button" type="button" data-topic="Action" aria-pressed="false">Actions</button>
+                    <button class="topic-button" type="button" data-topic="Update" aria-pressed="false">Updates</button>
+                    <button class="topic-button" type="button" data-topic="Contract" aria-pressed="false">Contract</button>
+                    <button class="clear-filters" id="clear-filters" type="button">Clear filters</button>
                 </div>
             </div>
-        </section>
 
-        <section id="articles-section">
-            <div id="articles-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="col-span-full flex justify-center py-12 text-brand-purple" role="status">
-                        <svg class="animate-spin h-10 w-10" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-                            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                        </svg>
-                        <span class="sr-only">Loading news articles...</span>
+            <div class="stories-grid" id="stories-grid">
+                <article class="story-card theme-events is-wide">
+                    <a class="story-image-link" href="/news/2026-07-10-membership-meeting-room-change.html"><img class="story-image" src="/images/card.webp" alt="SEIU Local 503 at Oregon State University card graphic" width="1200" height="675" loading="lazy"></a>
+                    <div class="story-body">
+                        <div class="story-meta"><span class="story-topic">Events</span><time datetime="2026-07-10">July 10, 2026</time></div>
+                        <h3><a href="/news/2026-07-10-membership-meeting-room-change.html">July 16 membership meeting moved to MU 215</a></h3>
+                        <p class="story-description">The July 16 Local 083 membership meeting has moved from MU 211 to MU 215 after a double-booking. Join us at noon for TOGO&#x27;S sandwiches.</p>
+                        <div class="story-footer"><span class="story-author">Jax SN Johnson</span><a class="story-read" href="/news/2026-07-10-membership-meeting-room-change.html" aria-label="Read July 16 membership meeting moved to MU 215">Read the story →</a></div>
                     </div>
-                </div>
+                </article>
+                <article class="story-card theme-action">
+                    <a class="story-image-link" href="/news/2026-07-09-tell-universities-hell-no.html"><img class="story-image" src="/images/2026-bargaining-zoom-backgrounds.webp" alt="Purple 2026 higher education bargaining graphic with raised fists and campus mascots" width="1200" height="675" loading="lazy"></a>
+                    <div class="story-body">
+                        <div class="story-meta"><span class="story-topic">Bargaining</span><time datetime="2026-07-09">July 9, 2026</time></div>
+                        <h3><a href="/news/2026-07-09-tell-universities-hell-no.html">Management&#x27;s disrespectful offer? We say HELL NO!</a></h3>
+                        <p class="story-description">Stand with our coworkers and email OSU President Jayathi Murthy: Reject zero percent COLAs, a 19-year step path and rollbacks to our rights.</p>
+                        <div class="story-footer"><span class="story-author">SEIU Local 503, Local 083</span><a class="story-read" href="/news/2026-07-09-tell-universities-hell-no.html" aria-label="Read Management&#x27;s disrespectful offer? We say HELL NO!">Read the story →</a></div>
+                    </div>
+                </article>
+                <article class="story-card">
+                    <a class="story-image-link" href="/news/2026-05-07-economics-they-say-we-say.html"><img class="story-image" src="/images/card.webp" alt="SEIU Local 503 at Oregon State University card graphic" width="1200" height="675" loading="lazy"></a>
+                    <div class="story-body">
+                        <div class="story-meta"><span class="story-topic">Bargaining</span><time datetime="2026-05-07">May 7, 2026</time></div>
+                        <h3><a href="/news/2026-05-07-economics-they-say-we-say.html">Economics They Say / We Say</a></h3>
+                        <p class="story-description">Management said it would provide economics proposals, but failed to bring them when expected. SEIU put our proposals forward for members to review and share.</p>
+                        <div class="story-footer"><span class="story-author">SEIU Local 503, Local 083</span><a class="story-read" href="/news/2026-05-07-economics-they-say-we-say.html" aria-label="Read Economics They Say / We Say">Read the story →</a></div>
+                    </div>
+                </article>
+                <article class="story-card theme-leadership">
+                    <a class="story-image-link" href="/news/2026-04-21-new-sublocal-083-leadership-team.html"><img class="story-image" src="/images/card.webp" alt="SEIU Local 503 at Oregon State University card graphic" width="1200" height="675" loading="lazy"></a>
+                    <div class="story-body">
+                        <div class="story-meta"><span class="story-topic">Leadership</span><time datetime="2026-04-21">April 21, 2026</time></div>
+                        <h3><a href="/news/2026-04-21-new-sublocal-083-leadership-team.html">Introducing our new Local 083 leadership team</a></h3>
+                        <p class="story-description">SEIU Local 503, Local 083 introduces its new executive leadership team and authorized steward roster in a memo sent to OSU Employee and Labor Relations.</p>
+                        <div class="story-footer"><span class="story-author">Jax SN Johnson</span><a class="story-read" href="/news/2026-04-21-new-sublocal-083-leadership-team.html" aria-label="Read Introducing our new Local 083 leadership team">Read the story →</a></div>
+                    </div>
+                </article>
+                <article class="story-card theme-update">
+                    <a class="story-image-link" href="/news/2026-04-16-membership-meeting-update.html"><img class="story-image" src="/images/83a4a1c4-4d9a-482a-8ad9-a3e73c338df3-wngr-barg-update.webp" alt="Purple 2026 higher education bargaining graphic" width="1200" height="675" loading="lazy"></a>
+                    <div class="story-body">
+                        <div class="story-meta"><span class="story-topic">Bargaining</span><time datetime="2026-04-16">April 16, 2026</time></div>
+                        <h3><a href="/news/2026-04-16-membership-meeting-update.html">April 16 Bargaining Update</a></h3>
+                        <p class="story-description">Read the bargaining-only April 16 membership meeting update, including bargaining timeline notes and next steps from the slide deck.</p>
+                        <div class="story-footer"><span class="story-author">SEIU Local 503, Local 083</span><a class="story-read" href="/news/2026-04-16-membership-meeting-update.html" aria-label="Read April 16 Bargaining Update">Read the story →</a></div>
+                    </div>
+                </article>
+                <article class="story-card theme-update">
+                    <a class="story-image-link" href="/news/2026-02-12-bargaining-observation-time-change.html"><img class="story-image" src="/images/2026-bargaining-zoom-backgrounds.webp" alt="Purple 2026 higher education bargaining graphic" width="1200" height="675" loading="lazy"></a>
+                    <div class="story-body">
+                        <div class="story-meta"><span class="story-topic">Bargaining</span><time datetime="2026-02-12">February 12, 2026</time></div>
+                        <h3><a href="/news/2026-02-12-bargaining-observation-time-change.html">Bargaining Observation Time Update: 10:00 AM Moved to 1:15 PM</a></h3>
+                        <p class="story-description">The bargaining observation was originally scheduled for 10:00 AM. Around 9:00 AM, management changed it to 1:15 PM. We are sending email updates and have updated the website.</p>
+                        <div class="story-footer"><span class="story-author">SEIU Local 503, Local 083</span><a class="story-read" href="/news/2026-02-12-bargaining-observation-time-change.html" aria-label="Read Bargaining Observation Time Update: 10:00 AM Moved to 1:15 PM">Read the story →</a></div>
+                    </div>
+                </article>
+                <article class="story-card theme-action">
+                    <a class="story-image-link" href="/news/2026-02-04-zoom-backgrounds.html"><img class="story-image" src="/images/2026-bargaining-zoom-backgrounds.webp" alt="A purple background with silhouettes of raised fists. In the center is an illustrated cluster of Oregon university mascots including a duck, beaver, viking, and owl. Text reads &quot;Higher Education Bargaining 2026: Together in Solidarity.&quot;" width="1200" height="675" loading="lazy"></a>
+                    <div class="story-body">
+                        <div class="story-meta"><span class="story-topic">Bargaining</span><time datetime="2026-02-04">February 4, 2026</time></div>
+                        <h3><a href="/news/2026-02-04-zoom-backgrounds.html">Show Up on Zoom: Use a 2026 Bargaining Background</a></h3>
+                        <p class="story-description">A shared Zoom background is a simple way to show solidarity in bargaining sessions, protect privacy, and keep the focus on our contract. Download the 2026 pack here.</p>
+                        <div class="story-footer"><span class="story-author">SEIU Local 503, Local 083</span><a class="story-read" href="/news/2026-02-04-zoom-backgrounds.html" aria-label="Read Show Up on Zoom: Use a 2026 Bargaining Background">Read the story →</a></div>
+                    </div>
+                </article>
+</div>
+            <div class="load-more-wrap"><button class="load-more" id="load-more" type="button">Show more stories</button></div>
+
+            <section class="news-paths" aria-labelledby="news-paths-heading">
+                <div class="path-intro"><span class="eyebrow">Keep exploring</span><h2 id="news-paths-heading">Start with what you need today.</h2><p>News connects to the tools, dates and background workers use most.</p></div>
+                <a class="path-card" href="/2026-bargaining/index.html"><strong>Bargaining hub</strong><span>Current status →</span></a>
+                <a class="path-card" href="/events.html"><strong>Event calendar</strong><span>Upcoming dates →</span></a>
+                <a class="path-card" href="/resources.html"><strong>Rights &amp; resources</strong><span>Worker guides →</span></a>
+            </section>
         </section>
     </main>
 
-                <footer class="bg-gray-100 pt-12 pb-8 text-text-primary">
+    <!-- SITE SHELL: FOOTER START -->
+    <footer class="bg-gray-100 pt-12 pb-8 text-text-primary border-t border-gray-200" data-site-shell-footer>
         <div class="container mx-auto px-6">
-            <div class="mt-10 pt-8 border-t border-gray-700 text-center">
-            </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Column 1: About the Union -->
                 <div class="md:col-span-2 lg:col-span-1">
                     <div class="flex items-center mb-4">
-                        <img src="/images/logo.png" alt="SEIU 503 Logo" class="h-12 w-12 mr-3 bg-white p-1 rounded">
-                        <div>
-                            <h3 class="text-xl font-bold">SEIU Local 503</h3>
-                            <p class="text-text-secondary text-sm">Oregon State University</p>
-                        </div>
+                        <img src="/images/logo.png" alt="SEIU 503 logo" class="h-12 w-12 mr-3 bg-white p-1 rounded" width="48" height="48" loading="lazy" decoding="async">
+                        <div><h3 class="text-xl font-bold">SEIU Local 503</h3><p class="text-text-secondary text-sm">Oregon State University</p></div>
                     </div>
-                    <p class="text-text-secondary leading-relaxed">Representing the classified employees of Oregon State University. We fight for fair contracts, defend workplace rights, and build a united community.</p>
+                    <p class="text-text-secondary leading-relaxed">Our member-led union represents classified staff at Oregon State University. Together, we bargain fair contracts, defend our rights and build power at work.</p>
                 </div>
-    
-                <!-- Column 2: Quick Links -->
                 <div>
-                    <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase">Quick Links</h4>
+                    <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase">Quick links</h4>
                     <ul class="space-y-3">
-                        <li><a href="/about.html" class="text-text-secondary hover:text-brand-purple transition-colors">About Us</a></li>
+                        <li><a href="/about.html" class="text-text-secondary hover:text-brand-purple transition-colors">About our union</a></li>
                         <li><a href="/events.html" class="text-text-secondary hover:text-brand-purple transition-colors">Events</a></li>
                         <li><a href="/news.html" class="text-text-secondary hover:text-brand-purple transition-colors">News</a></li>
                         <li><a href="/leadership.html" class="text-text-secondary hover:text-brand-purple transition-colors">Leadership</a></li>
                     </ul>
                 </div>
-    
-                <!-- Column 3: Resources -->
                 <div>
                     <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase"><a href="/resources.html" class="hover:text-brand-purple transition-colors">Resources</a></h4>
                     <ul class="space-y-3">
-                        <li><a href="/resources.html" class="text-text-secondary hover:text-brand-purple transition-colors">Resources & Rights</a></li>
+                        <li><a href="/resources.html" class="text-text-secondary hover:text-brand-purple transition-colors">Resources &amp; Rights</a></li>
                         <li><a href="/resources/seiu_cba_2022-2026.pdf" class="text-text-secondary hover:text-brand-purple transition-colors">Our Contract (PDF)</a></li>
                         <li><a href="/resources/stewards.html" class="text-text-secondary hover:text-brand-purple transition-colors">Find a Steward</a></li>
                         <li><a href="/resources/weingarten-rights.html" class="text-text-secondary hover:text-brand-purple transition-colors">Weingarten Rights</a></li>
                     </ul>
                 </div>
-    
-                <!-- Column 4: Contact -->
                 <div>
-                    <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase"><a href="/contact.html" class="hover:text-brand-purple transition-colors">Contact Us</a></h4>
-                     <ul class="space-y-3 text-text-secondary">
-                        <li class="flex items-start">
-                            <span class="mr-2 mt-1">✉️</span> <!-- Mail icon -->
-                            <a href="mailto:083execteam@seiu503.org" class="hover:text-brand-purple transition-colors">083execteam@seiu503.org</a>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="mr-2 mt-1">✉️</span> <!-- Mail icon -->
-                            <a href="mailto:083stewards@seiu503.org" class="hover:text-brand-purple transition-colors">083stewards@seiu503.org</a>
-                        </li>
+                    <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase"><a href="/contact.html" class="hover:text-brand-purple transition-colors">Contact us</a></h4>
+                    <ul class="space-y-3">
+                        <li><a href="mailto:083execteam@seiu503.org" class="text-text-secondary hover:text-brand-purple transition-colors break-all">083execteam@seiu503.org</a></li>
+                        <li><a href="mailto:083stewards@seiu503.org" class="text-text-secondary hover:text-brand-purple transition-colors break-all">083stewards@seiu503.org</a></li>
                     </ul>
                 </div>
             </div>
-    
-            <!-- Bottom Bar -->
-            <div class="mt-10 pt-8 border-t border-gray-700 text-center space-y-2">
-                <p class="text-text-secondary text-sm">&copy; 2026 SEIU Local 503, Sublocal 083. All rights reserved.</p>
-                <p class="text-text-secondary text-xs">
-                    <a href="#" class="underline hover:text-brand-purple" onclick="event.preventDefault(); (localStorage.getItem('ph_opt_out') === '1' ? phOptIn() : phOptOut());">
-                        Privacy settings
-                    </a>
-                </p>
+            <div class="mt-10 pt-8 border-t border-gray-300 text-center space-y-2">
+                <p class="text-text-secondary text-sm">&copy; 2026 SEIU Local 503, Local 083. All rights reserved.</p>
+                <p class="text-text-secondary text-xs"><a class="underline hover:text-brand-purple" href="/privacy.html#analytics-controls">Tracking settings</a><span aria-hidden="true"> · </span><a class="underline hover:text-brand-purple" href="/privacy.html">Privacy notice</a></p>
             </div>
         </div>
     </footer>
+<!-- SITE SHELL: FOOTER END -->
 
     <script>
-        // --- Mobile Menu Toggle ---
+        const fallbackNews = [
+          {
+            "title": "July 16 membership meeting moved to MU 215",
+            "description": "The July 16 Local 083 membership meeting has moved from MU 211 to MU 215 after a double-booking. Join us at noon for TOGO'S sandwiches.",
+            "url": "/news/2026-07-10-membership-meeting-room-change.html",
+            "image": "/images/card.webp",
+            "alt": "SEIU Local 503 at Oregon State University card graphic",
+            "tags": [
+              "Events",
+              "Membership Meetings",
+              "Update"
+            ],
+            "author": {
+              "name": "Jax SN Johnson",
+              "title": "President, SEIU Local 503, Local 083"
+            },
+            "publishedAt": "2026-07-10",
+            "createdAt": "2026-07-10",
+            "updatedAt": "2026-07-10",
+            "featured": false
+          },
+          {
+            "title": "Our union bargaining update: 0% COLAs and a 19-year step path",
+            "description": "Our bargaining team reports that management's latest offer includes zero percent COLAs over four years, a 19-year step path and proposed rollbacks to member rights.",
+            "url": "/news/2026-07-09-latest-bargaining-update.html",
+            "image": "/images/2026-bargaining-zoom-backgrounds.webp",
+            "alt": "Purple 2026 higher education bargaining graphic with raised fists and campus mascots",
+            "tags": [
+              "Bargaining",
+              "Update",
+              "2026 Bargaining"
+            ],
+            "author": {
+              "name": "SEIU 503 Marketing and Bargaining Team",
+              "title": "Marketing and Bargaining Team"
+            },
+            "publishedAt": "2026-07-09",
+            "createdAt": "2026-07-09",
+            "updatedAt": "2026-07-09",
+            "featured": false
+          },
+          {
+            "title": "Management's disrespectful offer? We say HELL NO!",
+            "description": "Stand with our coworkers and email OSU President Jayathi Murthy: Reject zero percent COLAs, a 19-year step path and rollbacks to our rights.",
+            "url": "/news/2026-07-09-tell-universities-hell-no.html",
+            "image": "/images/2026-bargaining-zoom-backgrounds.webp",
+            "alt": "Purple 2026 higher education bargaining graphic with raised fists and campus mascots",
+            "tags": [
+              "Bargaining",
+              "Action",
+              "2026 Bargaining"
+            ],
+            "author": {
+              "name": "SEIU Local 503, Local 083",
+              "title": "Union Leadership"
+            },
+            "publishedAt": "2026-07-09",
+            "createdAt": "2026-07-09",
+            "updatedAt": "2026-07-09",
+            "featured": false
+          },
+          {
+            "title": "Economics They Say / We Say",
+            "description": "Management said it would provide economics proposals, but failed to bring them when expected. SEIU put our proposals forward for members to review and share.",
+            "url": "/news/2026-05-07-economics-they-say-we-say.html",
+            "image": "/images/card.webp",
+            "alt": "SEIU Local 503 at Oregon State University card graphic",
+            "tags": [
+              "Bargaining",
+              "Economics"
+            ],
+            "author": {
+              "name": "SEIU Local 503, Local 083",
+              "title": "Union Leadership"
+            },
+            "publishedAt": "2026-05-07",
+            "createdAt": "2026-05-07",
+            "updatedAt": "2026-05-07",
+            "featured": false
+          },
+          {
+            "title": "Introducing our new Local 083 leadership team",
+            "description": "SEIU Local 503, Local 083 introduces its new executive leadership team and authorized steward roster in a memo sent to OSU Employee and Labor Relations.",
+            "url": "/news/2026-04-21-new-sublocal-083-leadership-team.html",
+            "image": "/images/card.webp",
+            "alt": "SEIU Local 503 at Oregon State University card graphic",
+            "tags": [
+              "Leadership",
+              "Update"
+            ],
+            "author": {
+              "name": "Jax SN Johnson",
+              "title": "President & Comms Chair, SEIU Local 503, Local 083"
+            },
+            "publishedAt": "2026-04-21",
+            "createdAt": "2026-04-21",
+            "updatedAt": "2026-04-21",
+            "featured": false
+          },
+          {
+            "title": "April 16 Bargaining Update",
+            "description": "Read the bargaining-only April 16 membership meeting update, including bargaining timeline notes and next steps from the slide deck.",
+            "url": "/news/2026-04-16-membership-meeting-update.html",
+            "image": "/images/83a4a1c4-4d9a-482a-8ad9-a3e73c338df3-wngr-barg-update.webp",
+            "alt": "Purple 2026 higher education bargaining graphic",
+            "tags": [
+              "Bargaining",
+              "Update"
+            ],
+            "author": {
+              "name": "SEIU Local 503, Local 083",
+              "title": "Union Leadership"
+            },
+            "publishedAt": "2026-04-16",
+            "createdAt": "2026-04-16",
+            "updatedAt": "2026-04-16",
+            "featured": false
+          },
+          {
+            "title": "Bargaining Observation Time Update: 10:00 AM Moved to 1:15 PM",
+            "description": "The bargaining observation was originally scheduled for 10:00 AM. Around 9:00 AM, management changed it to 1:15 PM. We are sending email updates and have updated the website.",
+            "url": "/news/2026-02-12-bargaining-observation-time-change.html",
+            "image": "/images/2026-bargaining-zoom-backgrounds.webp",
+            "alt": "Purple 2026 higher education bargaining graphic",
+            "tags": [
+              "Bargaining",
+              "Update"
+            ],
+            "author": {
+              "name": "SEIU Local 503, Local 083",
+              "title": "Union Leadership"
+            },
+            "publishedAt": "2026-02-12",
+            "createdAt": "2026-02-12",
+            "updatedAt": "2026-02-12",
+            "featured": false
+          },
+          {
+            "title": "Show Up on Zoom: Use a 2026 Bargaining Background",
+            "description": "A shared Zoom background is a simple way to show solidarity in bargaining sessions, protect privacy, and keep the focus on our contract. Download the 2026 pack here.",
+            "url": "/news/2026-02-04-zoom-backgrounds.html",
+            "image": "/images/2026-bargaining-zoom-backgrounds.webp",
+            "alt": "A purple background with silhouettes of raised fists. In the center is an illustrated cluster of Oregon university mascots including a duck, beaver, viking, and owl. Text reads \"Higher Education Bargaining 2026: Together in Solidarity.\"",
+            "tags": [
+              "Bargaining",
+              "Action"
+            ],
+            "author": {
+              "name": "SEIU Local 503, Local 083",
+              "title": "Union Leadership"
+            },
+            "publishedAt": "2026-02-04",
+            "createdAt": "2026-02-04",
+            "updatedAt": "2026-02-11",
+            "featured": false
+          },
+          {
+            "title": "2026 Kickoff: Why This Year Matters",
+            "description": "Join the fight for a fair contract. Recap of the Fighting for Higher Ed survey and the path to COLA and benefits. Attend the Jan 15 meeting.",
+            "url": "/news/2026-01-09-kickoff.html",
+            "image": "/images/b568a7b5-d177-4336-af4c-beb1f8e16315-winter-mu-2026-kickoff.webp",
+            "alt": "A vibrant sunrise over the Memorial Union building, featuring a gradient orange sky, distant mountains, and silhouette trees on a clear and cold winter morning.",
+            "tags": [
+              "Bargaining",
+              "Contract"
+            ],
+            "author": {
+              "name": "SEIU Local 503, Local 083",
+              "title": "Union Leadership"
+            },
+            "publishedAt": "2026-01-09",
+            "createdAt": "2026-01-08",
+            "updatedAt": "2026-01-09",
+            "featured": false
+          },
+          {
+            "title": "Fighting for Higher Education",
+            "description": "Join classified workers at Oregon’s Public Universities in the fight for fair wages, benefit protections, and union power. Sign the petition today!",
+            "url": "/news/2025-12-15-fighting-for-higher-education.html",
+            "image": "/images/452eb3b6-e72b-43ec-9698-bde681a4df9f-Fighting-for-Higher-Education-Banner.webp",
+            "alt": "Graphic with text 'Bargaining Update' and SEIU 503 logo",
+            "tags": [
+              "Bargaining",
+              "Action"
+            ],
+            "author": {
+              "name": "SEIU Local 503, Local 083",
+              "title": "Union Leadership"
+            },
+            "publishedAt": "2025-12-15",
+            "createdAt": "2025-12-15",
+            "updatedAt": "2025-12-15",
+            "featured": false
+          },
+          {
+            "title": "Your Voice, Our Contract: Bargaining Survey Reminder",
+            "description": "An update from the bargaining committee on the contract survey and the importance of members taking part.",
+            "url": "/news/2025-11-03-bargaining-survey-update.html",
+            "image": "/images/01d4b1b3-b65e-4614-9618-4eeba50f6407-Barg-Update.webp",
+            "alt": "Graphic with text 'Bargaining Update' and SEIU 503 logo",
+            "tags": [
+              "Bargaining",
+              "Contract"
+            ],
+            "author": {
+              "name": "Jax SN Johnson",
+              "title": "083 Communications Chair"
+            },
+            "publishedAt": "2025-11-03",
+            "createdAt": "2025-11-03",
+            "updatedAt": "2025-11-03",
+            "featured": false
+          },
+          {
+            "title": "Union Power Delivers",
+            "description": "Victory! Your 3% union-won COLA arrives Nov 1, 2025. See the full breakdown of our last contract's wins and take the crucial 2025 bargaining survey now so we can win again!",
+            "url": "/news/2025-11-01-COLA.html",
+            "image": "/images/54af20ff-cd31-4c1e-96b9-2907c2687a77-NOV-FALL-COLA.webp",
+            "alt": "Graphic text announcing 'November Fall COLA'",
+            "tags": [
+              "Update",
+              "Contract"
+            ],
+            "author": {
+              "name": "Jax SN Johnson",
+              "title": "083 Communications Chair"
+            },
+            "publishedAt": "2025-11-01",
+            "createdAt": "2025-11-01",
+            "updatedAt": "2025-11-01",
+            "featured": false
+          },
+          {
+            "title": "Bowling Night Was a Striking Success!",
+            "description": "A fun-filled bowling night brought our union members together for an evening of strikes, spares, and solidarity.",
+            "url": "/news/2025-10-27-bowling-striking-success.html",
+            "image": "/images/70197688-ecfb-482c-890e-6902b235e21e-2025-10-23-Kary-Bowling.webp",
+            "alt": "A union member rolls an orange bowling ball at the OSU bowling alley",
+            "tags": [
+              "Events",
+              "Membership Meetings"
+            ],
+            "author": {
+              "name": "Jax SN Johnson",
+              "title": "083 Communications Chair"
+            },
+            "publishedAt": "2025-10-27",
+            "createdAt": "2025-10-27",
+            "updatedAt": "2025-10-27",
+            "featured": false
+          },
+          {
+            "title": "Make Your Voice Heard! The 2026 Bargaining Survey is Here!",
+            "description": "The SEIU 503 bargaining survey for the 2026 contract is now open. Share your priorities and help shape our negotiations with OSU management.",
+            "url": "/news/2025-10-01-bargaining-survey-live.html",
+            "image": "/images/989fb357-b161-4ae0-a2b0-3b0ca7808420-seiu-salem.jpg",
+            "alt": "SEIU members holding purple signs and marching in a large group",
+            "tags": [
+              "Bargaining",
+              "Contract"
+            ],
+            "author": {
+              "name": "Jax SN Johnson",
+              "title": "083 Communications Chair"
+            },
+            "publishedAt": "2025-10-01",
+            "createdAt": "2025-10-01",
+            "updatedAt": "2025-10-01"
+          },
+          {
+            "title": "Ice Cream Social Was a Sweet Success!",
+            "description": "Our August 2025 ice cream social brought members together and strengthened our union community.",
+            "url": "/news/2025-08-22-Icecream.html",
+            "image": "/images/719dac94-a776-4f31-b327-08861bd991d5-icecream.webp",
+            "alt": "Union members gathering outdoors for an ice cream social event",
+            "tags": [
+              "Events",
+              "Membership Meetings"
+            ],
+            "author": {
+              "name": "Jax SN Johnson",
+              "title": "083 Communications Chair"
+            },
+            "publishedAt": "2025-08-22",
+            "createdAt": "2025-08-22",
+            "updatedAt": "2025-08-22"
+          }
+        ];
+
+        const elements = {
+            flash: document.getElementById('news-flash'),
+            lead: document.getElementById('lead-story'),
+            latest: document.getElementById('latest-list'),
+            latestCount: document.getElementById('latest-count'),
+            grid: document.getElementById('stories-grid'),
+            search: document.getElementById('news-search'),
+            sort: document.getElementById('news-sort'),
+            status: document.getElementById('results-status'),
+            loadMore: document.getElementById('load-more'),
+            clear: document.getElementById('clear-filters')
+        };
+
+        const state = { articles: [], search: '', topic: 'All', sort: 'newest', limit: 7, leadUrl: '' };
+        const oregonDateParts = new Intl.DateTimeFormat('en-US', {
+            timeZone: 'America/Los_Angeles', year: 'numeric', month: '2-digit', day: '2-digit'
+        }).formatToParts(new Date()).reduce((parts, part) => {
+            if (part.type !== 'literal') parts[part.type] = part.value;
+            return parts;
+        }, {});
+        const todayString = `${oregonDateParts.year}-${oregonDateParts.month}-${oregonDateParts.day}`;
+        const dateFormat = new Intl.DateTimeFormat('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+        const longDateFormat = new Intl.DateTimeFormat('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+
+        const escapeHtml = (value = '') => String(value)
+            .replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;').replaceAll("'", '&#039;');
+
+        const safeUrl = (value = '') => {
+            const url = String(value).trim();
+            return /^(javascript|data):/i.test(url) ? '#' : url;
+        };
+
+        const formatDate = (date, long = false) => (long ? longDateFormat : dateFormat).format(new Date(`${date}T12:00:00`));
+        const primaryTopic = (article) => article.tags?.[0] || 'Update';
+
+        const themeClass = (article) => {
+            const tags = article.tags || [];
+            if (tags.includes('Events') || tags.includes('Membership Meetings')) return 'theme-events';
+            if (tags.includes('Action') || tags.includes('Rally')) return 'theme-action';
+            if (tags.includes('Leadership')) return 'theme-leadership';
+            if (tags.includes('Update')) return 'theme-update';
+            return '';
+        };
+
+        const latestIcon = (article) => {
+            const tags = article.tags || [];
+            if (tags.includes('Events') || tags.includes('Membership Meetings')) return { symbol: '◫', className: 'latest-icon-events' };
+            if (tags.includes('Action') || tags.includes('Rally')) return { symbol: '✦', className: 'latest-icon-action' };
+            if (tags.includes('Leadership')) return { symbol: '★', className: 'latest-icon-leadership' };
+            if (tags.includes('Contract') || tags.includes('Benefits') || tags.includes('Economics') || tags.includes('Bargaining')) return { symbol: '⇄', className: 'latest-icon-contract' };
+            if (tags.includes('Update')) return { symbol: '!', className: 'latest-icon-update' };
+            return { symbol: '•', className: '' };
+        };
+
+        const isPublic = (article) => {
+            const status = article.status || 'published';
+            if (status !== 'published') return false;
+            return !article.publishedAt || article.publishedAt <= todayString;
+        };
+
+        const photoCredit = (article) => article.url.includes('mcnary-field-rally-recap') ? 'Photo by Sylv Sharp, SEIU 503' : '';
+
+        const responsiveImage = (rawUrl) => {
+            const url = safeUrl(rawUrl || '/images/card.webp');
+            if (url === '/images/2cef7759-042d-4a05-9496-7eefff439a5e-june-30-rally-speaker-and-crowd.webp') {
+                return {
+                    src: '/images/2cef7759-042d-4a05-9496-7eefff439a5e-june-30-rally-speaker-and-crowd-960w.webp',
+                    srcset: '/images/2cef7759-042d-4a05-9496-7eefff439a5e-june-30-rally-speaker-and-crowd-480w.webp 480w, /images/2cef7759-042d-4a05-9496-7eefff439a5e-june-30-rally-speaker-and-crowd-960w.webp 960w, /images/2cef7759-042d-4a05-9496-7eefff439a5e-june-30-rally-speaker-and-crowd-1440w.webp 1440w',
+                    width: 1800,
+                    height: 1084
+                };
+            }
+            return { src: url, srcset: '', width: 1200, height: 675 };
+        };
+
+        const thumbnailUrl = (rawUrl) => {
+            const url = safeUrl(rawUrl || '/images/card.webp');
+            const thumbnails = {
+                '/images/card.webp': '/images/card-192.webp',
+                '/images/2026-bargaining-zoom-backgrounds.webp': '/images/2026-bargaining-zoom-backgrounds-192.webp',
+                '/images/3cd44f56-3666-4fa5-82ac-4bf3b8b00c0d-june-30-rally-speaker-with-camera.webp': '/images/3cd44f56-3666-4fa5-82ac-4bf3b8b00c0d-june-30-rally-speaker-with-camera-192.webp',
+                '/images/83a4a1c4-4d9a-482a-8ad9-a3e73c338df3-wngr-barg-update.webp': '/images/83a4a1c4-4d9a-482a-8ad9-a3e73c338df3-wngr-barg-update-192.webp',
+                '/images/2cef7759-042d-4a05-9496-7eefff439a5e-june-30-rally-speaker-and-crowd.webp': '/images/2cef7759-042d-4a05-9496-7eefff439a5e-june-30-rally-speaker-and-crowd-192.webp'
+            };
+            return thumbnails[url] || url;
+        };
+
+        const renderTopStories = () => {
+            const featured = state.articles.find((article) => article.featured)
+                || state.articles.find((article) => article.image && !article.image.endsWith('/card.webp'))
+                || state.articles[0];
+            if (!featured) return;
+            state.leadUrl = featured.url;
+
+            const flash = state.articles.find((article) => article.tags?.includes('Events') && article.tags?.includes('Update')) || state.articles[0];
+            if (flash) {
+                elements.flash.innerHTML = `
+                    <span class="flash-label">${flash.tags?.includes('Events') ? 'Meeting update' : 'Latest update'}</span>
+                    <a href="${escapeHtml(safeUrl(flash.url))}">
+                        <span class="flash-copy"><strong>${escapeHtml(flash.title)}</strong> ${escapeHtml(flash.description)}</span>
+                        <time class="flash-date" datetime="${escapeHtml(flash.publishedAt)}">${escapeHtml(formatDate(flash.publishedAt))}</time>
+                    </a>`;
+            }
+
+            const credit = photoCredit(featured);
+            const leadImage = responsiveImage(featured.image);
+            elements.lead.innerHTML = `
+                <a class="lead-image-wrap" href="${escapeHtml(safeUrl(featured.url))}">
+                    <img src="${escapeHtml(leadImage.src)}"${leadImage.srcset ? ` srcset="${escapeHtml(leadImage.srcset)}" sizes="(max-width: 767px) calc(100vw - 2rem), 55vw"` : ''} alt="${escapeHtml(featured.alt || featured.title)}" width="${leadImage.width}" height="${leadImage.height}" fetchpriority="high">
+                    ${credit ? `<span class="photo-credit">${escapeHtml(credit)}</span>` : ''}
+                </a>
+                <div class="lead-copy">
+                    <div class="story-kicker"><span>Lead story · ${escapeHtml(primaryTopic(featured))}</span><time datetime="${escapeHtml(featured.publishedAt)}">${escapeHtml(formatDate(featured.publishedAt, true))}</time></div>
+                    <h2>${escapeHtml(featured.title)}</h2>
+                    <p>${escapeHtml(featured.description)}</p>
+                    <a class="story-link" href="${escapeHtml(safeUrl(featured.url))}">Read the story <span aria-hidden="true">→</span></a>
+                </div>`;
+
+            const latest = state.articles.slice(0, 8);
+            elements.latestCount.textContent = `${latest.length} recent ${latest.length === 1 ? 'story' : 'stories'}`;
+            elements.latest.setAttribute('aria-label', `${latest.length} latest Local 083 ${latest.length === 1 ? 'story' : 'stories'}`);
+            elements.latest.innerHTML = latest.map((article) => {
+                const icon = latestIcon(article);
+                return `<a class="latest-item" href="${escapeHtml(safeUrl(article.url))}">
+                    <span class="latest-thumb"><img src="${escapeHtml(thumbnailUrl(article.image))}" alt="" width="96" height="96" loading="lazy"><span class="latest-icon ${icon.className}" aria-hidden="true">${icon.symbol}</span></span>
+                    <span class="latest-copy"><time class="latest-date" datetime="${escapeHtml(article.publishedAt)}">${escapeHtml(formatDate(article.publishedAt))}</time><span class="latest-title">${escapeHtml(article.title)}</span></span>
+                    <span class="latest-arrow" aria-hidden="true">→</span>
+                </a>`;
+            }).join('');
+        };
+
+        const filteredStories = () => {
+            const hasFilter = state.search || state.topic !== 'All';
+            let articles = state.articles.filter((article) => hasFilter || article.url !== state.leadUrl);
+
+            if (state.search) {
+                const term = state.search.toLowerCase();
+                articles = articles.filter((article) => [article.title, article.description, ...(article.tags || []), article.author?.name]
+                    .filter(Boolean).join(' ').toLowerCase().includes(term));
+            }
+
+            if (state.topic !== 'All') articles = articles.filter((article) => article.tags?.includes(state.topic));
+            if (state.sort === 'oldest') articles = [...articles].reverse();
+            return articles;
+        };
+
+        const storyCard = (article, index) => {
+            const wide = index === 0 ? ' is-wide' : '';
+            const cardImage = responsiveImage(article.image);
+            return `<article class="story-card ${themeClass(article)}${wide}" style="animation-delay:${Math.min(index * 45, 270)}ms">
+                <a class="story-image-link" href="${escapeHtml(safeUrl(article.url))}"><img class="story-image" src="${escapeHtml(cardImage.src)}"${cardImage.srcset ? ` srcset="${escapeHtml(cardImage.srcset)}" sizes="(max-width: 767px) calc(100vw - 2rem), 50vw"` : ''} alt="${escapeHtml(article.alt || article.title)}" width="${cardImage.width}" height="${cardImage.height}" loading="lazy"></a>
+                <div class="story-body">
+                    <div class="story-meta"><span class="story-topic">${escapeHtml(primaryTopic(article))}</span><time datetime="${escapeHtml(article.publishedAt)}">${escapeHtml(formatDate(article.publishedAt, true))}</time></div>
+                    <h3><a href="${escapeHtml(safeUrl(article.url))}">${escapeHtml(article.title)}</a></h3>
+                    <p class="story-description">${escapeHtml(article.description)}</p>
+                    <div class="story-footer"><span class="story-author">${escapeHtml(article.author?.name || 'SEIU Local 503, Local 083')}</span><a class="story-read" href="${escapeHtml(safeUrl(article.url))}" aria-label="Read ${escapeHtml(article.title)}">Read the story →</a></div>
+                </div>
+            </article>`;
+        };
+
+        const updateUrl = () => {
+            const url = new URL(window.location.href);
+            state.topic === 'All' ? url.searchParams.delete('tag') : url.searchParams.set('tag', state.topic);
+            state.search ? url.searchParams.set('q', state.search) : url.searchParams.delete('q');
+            window.history.replaceState({}, '', `${url.pathname}${url.search}`);
+        };
+
+        const renderStories = () => {
+            const articles = filteredStories();
+            const visible = articles.slice(0, state.limit);
+            if (!visible.length) {
+                elements.grid.innerHTML = '<div class="empty-state"><h3>No stories found</h3><p>Try another search term or clear the topic filter.</p></div>';
+            } else {
+                elements.grid.innerHTML = visible.map(storyCard).join('');
+            }
+
+            const shown = Math.min(visible.length, articles.length);
+            elements.status.textContent = articles.length ? `Showing ${shown} of ${articles.length} ${articles.length === 1 ? 'story' : 'stories'}` : 'No matching stories';
+            elements.loadMore.hidden = visible.length >= articles.length;
+            elements.clear.classList.toggle('is-visible', Boolean(state.search || state.topic !== 'All'));
+            document.querySelectorAll('.topic-button').forEach((button) => button.setAttribute('aria-pressed', String(button.dataset.topic === state.topic)));
+        };
+
+        const initialize = (articles) => {
+            state.articles = articles.filter(isPublic).sort((a, b) => b.publishedAt.localeCompare(a.publishedAt));
+            const params = new URLSearchParams(window.location.search);
+            const requestedTopic = params.get('tag');
+            const validTopics = ['All', 'Bargaining', 'Events', 'Action', 'Update', 'Contract'];
+            state.topic = validTopics.find((topic) => topic.toLowerCase() === String(requestedTopic || '').toLowerCase()) || 'All';
+            state.search = params.get('q') || '';
+            elements.search.value = state.search;
+            renderTopStories();
+            renderStories();
+        };
+
+        document.querySelectorAll('.topic-button').forEach((button) => button.addEventListener('click', () => {
+            state.topic = button.dataset.topic;
+            state.limit = 7;
+            updateUrl();
+            renderStories();
+        }));
+
+        elements.search.addEventListener('input', () => {
+            state.search = elements.search.value.trim();
+            state.limit = 7;
+            updateUrl();
+            renderStories();
+        });
+
+        elements.sort.addEventListener('change', () => { state.sort = elements.sort.value; state.limit = 7; renderStories(); });
+        elements.loadMore.addEventListener('click', () => { state.limit += 6; renderStories(); });
+        elements.clear.addEventListener('click', () => { state.search = ''; state.topic = 'All'; state.limit = 7; elements.search.value = ''; updateUrl(); renderStories(); });
+
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
-        const navLinks = document.querySelectorAll('#mobile-menu a');
-
         mobileMenuButton.addEventListener('click', () => {
-            const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
-            mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
-            mobileMenu.classList.toggle('hidden');
+            const isOpen = mobileMenu.classList.toggle('is-open');
+            mobileMenuButton.setAttribute('aria-expanded', String(isOpen));
+            mobileMenuButton.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+            mobileMenuButton.textContent = isOpen ? '×' : '☰';
         });
+        mobileMenu.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => {
+            mobileMenu.classList.remove('is-open');
+            mobileMenuButton.setAttribute('aria-expanded', 'false');
+            mobileMenuButton.setAttribute('aria-label', 'Open menu');
+            mobileMenuButton.textContent = '☰';
+        }));
 
-        // Close mobile menu when a link is clicked
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape' && mobileMenuButton.getAttribute('aria-expanded') === 'true') {
+                mobileMenu.classList.remove('is-open');
                 mobileMenuButton.setAttribute('aria-expanded', 'false');
-            });
+                mobileMenuButton.setAttribute('aria-label', 'Open menu');
+                mobileMenuButton.textContent = '☰';
+                mobileMenuButton.focus();
+            }
         });
-    </script>
 
-    <script src="js/news.js" defer></script>
+        fetch('/news/news.json')
+            .then((response) => {
+                if (!response.ok) throw new Error(`News request failed with ${response.status}`);
+                return response.json();
+            })
+            .then((articles) => initialize(Array.isArray(articles) ? articles : fallbackNews))
+            .catch(() => initialize(fallbackNews));
+    </script>
 </body>
 </html>

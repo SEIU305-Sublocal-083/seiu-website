@@ -1,310 +1,297 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contact SEIU Local 503 at Oregon State University. Find our address, phone number, email, and a contact form.">
-    <meta name="author" content="SEIU Local 503 at OSU">
-    <title>Contact Us - SEIU Local 503, OSU</title>
-    <style>html{visibility:hidden;}html.tw-ready{visibility:visible;}</style>
-    <script src="https://cdn.tailwindcss.com" onload="document.documentElement.classList.add('tw-ready')"></script>
+    <meta name="description" content="Contact SEIU Local 503, Local 083 at Oregon State University for workplace representation, union business, membership questions and public inquiries.">
+    <title>Contact Local 083 - SEIU Local 503 at Oregon State University</title>
     <link rel="icon" href="/images/logo.png" type="image/png">
     <link rel="apple-touch-icon" href="/images/logo.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Lora:wght@400;500;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --brand-purple-dark: #4C1D95; /* Deep Purple */
-            --brand-purple: #7C3AED;      /* Vibrant Purple */
-            --brand-purple-light: #EDE9FE; /* Lighter Lavender for high contrast */
-            --brand-dark: #111827;         /* Near-black for high contrast text/bg */
-            --brand-light: #F9FAFB;        /* Off-white Background */
-            --text-primary: #1F2937;
-            --text-secondary: #374151;     /* Darker secondary text for better contrast */
-            --border-color: #D1D5DB;
-        }
-
-        html {
-            scroll-padding-top: 80px; /* Offset for sticky header */
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--brand-light);
-            color: var(--text-primary);
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Lora', serif;
-            color: var(--brand-purple-dark);
-        }
-
-        /* Accessibility: Clear focus indicators for all interactive elements */
-        a:focus-visible, button:focus-visible, details:focus-visible, input:focus-visible, textarea:focus-visible {
-            outline: 3px solid var(--brand-purple);
-            outline-offset: 2px;
-            border-radius: 4px;
-        }
-        
-        .btn {
-            @apply font-bold py-3 px-6 rounded-lg transition-all duration-300 ease-in-out transform hover:scale-105;
-        }
-        .btn-primary {
-            @apply bg-gradient-to-r from-brand-purple to-violet-600 text-white shadow-md hover:shadow-lg;
-        }
-        .btn-secondary {
-            @apply bg-brand-dark text-white hover:bg-black;
-        }
-        .btn-outline {
-             @apply bg-white text-brand-purple border-2 border-brand-purple hover:bg-brand-purple hover:text-white;
-        }
-
-        /* Custom Tailwind config for our CSS variables */
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'brand-purple-dark': 'var(--brand-purple-dark)',
-                        'brand-purple': 'var(--brand-purple)',
-                        'brand-purple-light': 'var(--brand-purple-light)',
-                        'brand-dark': 'var(--brand-dark)',
-                        'brand-light': 'var(--brand-light)',
-                        'text-primary': 'var(--text-primary)',
-                        'text-secondary': 'var(--text-secondary)',
-                        'border-color': 'var(--border-color)',
-                    }
-                }
-            }
-        }
-    </style>
-    <!-- SEO META START -->
+<link rel="stylesheet" href="/styles/fonts.css">
     <link rel="canonical" href="https://www.local083.org/contact.html">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.local083.org/contact.html">
-    <meta property="og:title" content="Contact Us - SEIU Local 503, OSU">
-    <meta property="og:description" content="Contact SEIU Local 503 at Oregon State University. Find our address, phone number, email, and a contact form.">
+    <meta property="og:title" content="Contact Local 083 - SEIU Local 503 at Oregon State University">
+    <meta property="og:description" content="Find the right Local 083 contact for workplace help, union business, membership and public inquiries.">
     <meta property="og:image" content="https://www.local083.org/images/card.webp">
+    <meta property="og:image:alt" content="SEIU Local 503 at Oregon State University">
+    <meta property="og:image:width" content="1280">
+    <meta property="og:image:height" content="720">
     <meta property="og:site_name" content="SEIU Local 503 at Oregon State University">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://www.local083.org/contact.html">
-    <meta name="twitter:title" content="Contact Us - SEIU Local 503, OSU">
-    <meta name="twitter:description" content="Contact SEIU Local 503 at Oregon State University. Find our address, phone number, email, and a contact form.">
+    <meta name="twitter:title" content="Contact Local 083 - SEIU Local 503 at Oregon State University">
+    <meta name="twitter:description" content="Find the right Local 083 contact for workplace help, union business, membership and public inquiries.">
     <meta name="twitter:image" content="https://www.local083.org/images/card.webp">
+    <meta name="twitter:image:alt" content="SEIU Local 503 at Oregon State University">
+        <link rel="stylesheet" href="/styles/tailwind.css">
+    <link rel="stylesheet" href="/styles/site-shell.css">
+<style>
+        :root { --purple-950:#34106f; --purple-900:#4c1d95; --purple-700:#7c3aed; --purple-600:#7c3aed; --purple-200:#ddd6fe; --purple-100:#ede9fe; --purple-50:#f7f4ff; --gold:#fdb913; --gold-soft:#fff7d6; --ink:#1f2937; --muted:#374151; --line:#d1d5db; --paper:#f9fafb; --white:#fff; }
+        * { box-sizing: border-box; }
+        html { scroll-behavior: smooth; scroll-padding-top: 8rem; }
+        body { background: var(--paper); color: var(--ink); font-family: 'Inter', sans-serif; margin: 0; -webkit-font-smoothing: antialiased; }
+        h1, h2, h3 { color: var(--purple-900); font-family: 'Lora', serif; }
+        a, button { font: inherit; }
+        a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px solid var(--purple-600); outline-offset: 3px; }
+        .container { margin-inline: auto; max-width: 74rem; padding-inline: 1.5rem; width: 100%; }
+        .sr-only { clip: rect(0,0,0,0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; white-space: nowrap; width: 1px; }
+        .skip-link:focus { background:#fff; clip:auto; height:auto; left:1rem; margin:0; padding:.75rem 1rem; position:fixed; top:1rem; width:auto; z-index:100; }
+        .eyebrow { color:var(--purple-600); display:block; font-size:.7rem; font-weight:800; letter-spacing:.11em; text-transform:uppercase; }
+
+        .site-header { -webkit-backdrop-filter:blur(16px); backdrop-filter:blur(16px); background:rgba(255,255,255,.84); border-bottom:1px solid rgba(209,213,219,.8); position:sticky; top:0; z-index:50; }
+        .site-nav { align-items:center; display:flex; justify-content:space-between; min-height:4.5rem; }
+        .brand { align-items:baseline; color:var(--ink); display:flex; gap:.42rem; text-decoration:none; }
+        .brand strong { font-size:1.25rem; }
+        .brand span { color:var(--muted); font-size:.875rem; }
+        .desktop-nav { align-items:center; display:flex; gap:2rem; }
+        .desktop-nav a { color:var(--muted); font-size:.875rem; text-decoration:none; }
+        .desktop-nav a:hover, .desktop-nav a[aria-current="page"] { color:var(--purple-700); font-weight:800; }
+        .mobile-menu-button { background:transparent; border:0; color:var(--purple-900); display:none; font-size:1.4rem; min-height:2.75rem; min-width:2.75rem; }
+        .mobile-menu { background:#fff; border-top:1px solid var(--line); display:none; padding:.5rem 1.5rem 1rem; }
+        .mobile-menu.is-open { display:grid; }
+        .mobile-menu a { color:var(--muted); padding:.7rem 0; text-decoration:none; }
+
+        .contact-intro { background:radial-gradient(circle at 82% 10%, rgba(255,191,24,.15), transparent 22rem), linear-gradient(180deg,#fff,#faf9ff); border-bottom:1px solid var(--line); padding-block:3.4rem 3rem; }
+        .intro-layout { align-items:end; display:grid; gap:2rem; grid-template-columns:minmax(0,1.25fr) minmax(17rem,.55fr); }
+        .contact-intro h1 { font-size:clamp(2.8rem,5.5vw,4.8rem); letter-spacing:-.04em; line-height:.99; margin:.65rem 0 0; }
+        .contact-intro p { color:var(--muted); font-size:1.05rem; line-height:1.65; margin:1rem 0 0; max-width:46rem; }
+        .best-way { background:var(--purple-950); border-radius:1rem; color:#fff; padding:1.25rem; }
+        .best-way .eyebrow { color:#fde68a; }
+        .best-way strong { display:block; font-family:'Lora',serif; font-size:1.3rem; margin-top:.45rem; }
+        .best-way p { color:#ddd6fe; font-size:.78rem; line-height:1.5; margin:.5rem 0 0; }
+
+        .route-section { padding-block:4.4rem; }
+        .section-heading { display:grid; gap:.75rem; margin-bottom:1.4rem; }
+        .section-heading h2 { font-size:clamp(2.1rem,4vw,3.2rem); line-height:1.05; margin:.4rem 0 0; }
+        .section-heading p { color:var(--muted); line-height:1.6; margin:0; max-width:48rem; }
+        .route-grid { display:grid; gap:1rem; grid-template-columns:repeat(2,minmax(0,1fr)); }
+        .route-card { background:#fff; border:1px solid #ddd6e8; border-radius:1.1rem; display:grid; gap:1.1rem; grid-template-columns:auto minmax(0,1fr); min-height:15.5rem; padding:1.35rem; position:relative; }
+        .route-card.primary { background:linear-gradient(145deg,var(--purple-950),var(--purple-700)); border:0; color:#fff; }
+        .route-card.membership { background:var(--gold-soft); border-color:#efd36c; }
+        .route-icon { align-items:center; background:var(--purple-100); border:1px solid #ddd6fe; border-radius:.7rem; color:var(--purple-900); display:flex; font-size:1rem; font-weight:900; height:3rem; justify-content:center; width:3rem; }
+        .primary .route-icon { background:rgba(255,255,255,.12); border-color:rgba(255,255,255,.2); color:#fff; }
+        .membership .route-icon { background:#fff3b8; border-color:#efd36c; color:#735300; }
+        .route-copy { display:flex; flex-direction:column; min-width:0; }
+        .route-card .eyebrow { font-size:.64rem; }
+        .primary .eyebrow { color:#fde68a; }
+        .route-card h3 { font-size:1.65rem; line-height:1.15; margin:.45rem 0 0; }
+        .primary h2 { color:#fff; }
+        .route-card p { color:var(--muted); font-size:.82rem; line-height:1.55; margin:.6rem 0 0; }
+        .primary p { color:#e9e3ff; }
+        .route-email { color:var(--purple-700); display:inline-block; font-size:.82rem; font-weight:800; margin-top:auto; overflow-wrap:anywhere; padding-top:1rem; text-underline-offset:.2rem; }
+        .primary .route-email { color:#fde68a; }
+        .membership .route-email { color:var(--purple-900); }
+        .route-detail { color:#6b7280; display:block; font-size:.68rem; line-height:1.45; margin-top:.5rem; }
+        .primary .route-detail { color:#ddd6fe; }
+
+        .urgent-section { background:var(--purple-950); color:#fff; }
+        .urgent-inner { align-items:center; display:grid; gap:1.7rem; grid-template-columns:auto minmax(0,1fr) auto; padding-block:1.5rem; }
+        .urgent-badge { background:var(--gold); border-radius:999px; color:#4d3600; font-size:.67rem; font-weight:900; letter-spacing:.08em; padding:.48rem .68rem; text-transform:uppercase; }
+        .urgent-inner h2 { color:#fff; font-family:'Inter',sans-serif; font-size:1.1rem; margin:0; }
+        .urgent-inner p { color:#ddd6fe; font-size:.78rem; line-height:1.5; margin:.35rem 0 0; }
+        .urgent-links { display:flex; flex-wrap:wrap; gap:.6rem; }
+        .button { align-items:center; border:2px solid transparent; border-radius:.7rem; display:inline-flex; font-size:.75rem; font-weight:800; justify-content:center; min-height:2.7rem; padding:.6rem .85rem; text-decoration:none; }
+        .button-gold { background:var(--gold); color:var(--purple-950); }
+        .button-light { border-color:rgba(255,255,255,.65); color:#fff; }
+
+        .prepare-section { background:#fff; border-bottom:1px solid var(--line); padding-block:4.5rem; }
+        .prepare-layout { display:grid; gap:2rem; grid-template-columns:minmax(16rem,.55fr) minmax(0,1fr); }
+        .prepare-copy h2 { font-size:clamp(2rem,4vw,3rem); margin:.5rem 0 0; }
+        .prepare-copy p { color:var(--muted); line-height:1.65; }
+        .checklist { border:1px solid #ddd6e8; border-radius:1rem; overflow:hidden; }
+        .check-row { align-items:start; display:grid; gap:1rem; grid-template-columns:2.2rem minmax(0,1fr); padding:1rem; }
+        .check-row + .check-row { border-top:1px solid #e5e7eb; }
+        .check-row:nth-child(even) { background:#faf9ff; }
+        .check-number { align-items:center; background:var(--purple-100); border-radius:.55rem; color:var(--purple-900); display:flex; font-family:'Lora',serif; font-weight:700; height:2.2rem; justify-content:center; width:2.2rem; }
+        .check-row strong { color:var(--purple-900); display:block; font-size:.86rem; }
+        .check-row span:last-child { color:var(--muted); display:block; font-size:.78rem; line-height:1.5; margin-top:.3rem; }
+        .privacy-note { background:var(--gold-soft); border:1px solid #efd36c; border-radius:.85rem; color:#5f5120; font-size:.76rem; line-height:1.55; margin-top:1rem; padding:.9rem; }
+
+        .site-footer { background:#f0f1f4; border-top:1px solid var(--line); padding-block:3rem 2rem; }
+        .footer-grid { display:grid; gap:2rem; grid-template-columns:1.15fr repeat(3,.75fr); }
+        .footer-brand { align-items:center; display:flex; gap:.75rem; }
+        .footer-brand img { background:#fff; border-radius:.35rem; height:3rem; padding:.25rem; width:3rem; }
+        .footer-brand h3 { font-size:1.2rem; margin:0; }
+        .footer-brand p { color:var(--muted); font-size:.78rem; margin:.15rem 0 0; }
+        .footer-copy { color:var(--muted); font-size:.87rem; line-height:1.6; }
+        .site-footer h4 { color:var(--purple-900); font-size:.82rem; letter-spacing:.08em; margin:0 0 .9rem; text-transform:uppercase; }
+        .site-footer ul { list-style:none; margin:0; padding:0; }
+        .site-footer li + li { margin-top:.65rem; }
+        .site-footer a { color:var(--muted); font-size:.86rem; text-decoration:none; }
+        .site-footer a:hover { color:var(--purple-700); }
+        .footer-bottom { border-top:1px solid #d1d5db; color:var(--muted); font-size:.75rem; margin-top:2.5rem; padding-top:1.5rem; text-align:center; }
+
+        @media (max-width:900px) { .intro-layout,.prepare-layout { grid-template-columns:1fr; } .best-way { max-width:35rem; } .urgent-inner { grid-template-columns:auto minmax(0,1fr); } .urgent-links { grid-column:1 / -1; } }
+        @media (max-width:800px) { .desktop-nav { display:none; } .mobile-menu-button { display:inline-grid; place-items:center; } .brand span { display:none; } .contact-intro { padding-block:2.7rem; } .route-grid { grid-template-columns:1fr; } .urgent-inner { grid-template-columns:1fr; } .urgent-links { grid-column:auto; } .footer-grid { grid-template-columns:repeat(2,1fr); } .footer-about { grid-column:1 / -1; } }
+        @media (max-width:520px) { .container { padding-inline:1rem; } .contact-intro h1 { font-size:2.7rem; } .route-card { grid-template-columns:1fr; padding:1.1rem; } .footer-grid { grid-template-columns:1fr; } .footer-about { grid-column:auto; } }
+        @media (prefers-reduced-motion:reduce) { *,*::before,*::after { scroll-behavior:auto !important; transition-duration:.01ms !important; } }
+    </style>
     <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
     {
-      "@type": "Organization",
-      "@id": "https://www.local083.org#organization",
-      "name": "SEIU Local 503 at Oregon State University",
-      "url": "https://www.local083.org",
-      "logo": "https://www.local083.org/images/logo.png"
-    },
-    {
-      "@type": "WebSite",
-      "@id": "https://www.local083.org#website",
-      "name": "SEIU Local 503 at Oregon State University",
-      "url": "https://www.local083.org",
-      "publisher": {
-        "@id": "https://www.local083.org#organization"
-      }
-    },
-    {
-      "@type": "WebPage",
-      "@id": "https://www.local083.org/contact.html#webpage",
-      "url": "https://www.local083.org/contact.html",
-      "name": "Contact Us - SEIU Local 503, OSU",
-      "description": "Contact SEIU Local 503 at Oregon State University. Find our address, phone number, email, and a contact form.",
-      "isPartOf": {
-        "@id": "https://www.local083.org#website"
-      },
-      "about": {
-        "@id": "https://www.local083.org#organization"
-      }
+      "@context":"https://schema.org",
+      "@graph":[
+        {"@type":"Organization","@id":"https://www.local083.org#organization","name":"SEIU Local 503 at Oregon State University","alternateName":"Local 083","url":"https://www.local083.org","logo":"https://www.local083.org/images/logo.png","email":"083execteam@seiu503.org","contactPoint":[
+          {"@type":"ContactPoint","contactType":"workplace representation","email":"083stewards@seiu503.org"},
+          {"@type":"ContactPoint","contactType":"executive leadership and public inquiries","email":"083execteam@seiu503.org"}
+        ]},
+        {"@type":"WebSite","@id":"https://www.local083.org#website","name":"SEIU Local 503 at Oregon State University","url":"https://www.local083.org","publisher":{"@id":"https://www.local083.org#organization"}},
+        {"@type":"ContactPage","@id":"https://www.local083.org/contact.html#webpage","name":"Contact SEIU Local 503, Local 083 at Oregon State University","url":"https://www.local083.org/contact.html","description":"Contact Local 083 for workplace representation, union business, membership questions and public inquiries.","isPartOf":{"@id":"https://www.local083.org#website"},"about":{"@id":"https://www.local083.org#organization"}}
+      ]
     }
-  ]
-}
     </script>
-    <!-- SEO META END -->
     <script src="/js/analytics.js" defer></script>
 </head>
-<body class="bg-brand-light">
-    <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:bg-white focus:text-brand-purple-dark focus:px-4 focus:py-2 focus:rounded focus:shadow-lg">Skip to content</a>
-
-    <!-- Header -->
-    <header class="bg-white/80 backdrop-blur-lg border-b border-border-color sticky top-0 z-50">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="index.html" class="flex items-center space-x-2">
+<body>
+    <noscript><nav aria-label="Primary navigation without JavaScript" class="border-b border-border-color bg-white px-4 py-3 text-center text-sm font-semibold"><a class="mx-2 underline" href="/">Home</a><a class="mx-2 underline" href="/about.html">About</a><a class="mx-2 underline" href="/events.html">Events</a><a class="mx-2 underline" href="/news.html">News</a><a class="mx-2 underline" href="/resources.html">Resources &amp; Rights</a><a class="mx-2 underline" href="/leadership.html">Leadership</a><a class="mx-2 underline" href="/contact.html">Contact</a></nav></noscript>
+    <a href="#main-content" class="skip-link sr-only">Skip to content</a>
+    <!-- SITE SHELL: HEADER START -->
+    <header class="bg-white/80 backdrop-blur-lg border-b border-border-color sticky top-0 z-50" data-site-shell-header>
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center" aria-label="Primary navigation">
+            <a href="/index.html" class="flex items-center space-x-2">
                 <span class="text-2xl font-bold text-brand-purple-dark">SEIU 503</span>
                 <span class="text-lg text-text-secondary hidden md:block">| Oregon State University</span>
             </a>
             <div class="hidden lg:flex space-x-8">
-                <a href="about.html" class="text-text-secondary hover:text-brand-purple transition-colors">About</a>
-                <a href="events.html" class="text-text-secondary hover:text-brand-purple transition-colors">Events</a>
-                <a href="news.html" class="text-text-secondary hover:text-brand-purple transition-colors">News</a>
-                <a href="resources.html" class="text-text-secondary hover:text-brand-purple transition-colors">Resources & Rights</a>
-                <a href="leadership.html" class="text-text-secondary hover:text-brand-purple transition-colors">Leadership</a>
-                <a href="contact.html" class="text-brand-purple font-bold">Contact</a>
+                <a href="/about.html" class="text-text-secondary hover:text-brand-purple transition-colors">About</a>
+                <a href="/events.html" class="text-text-secondary hover:text-brand-purple transition-colors">Events</a>
+                <a href="/news.html" class="text-text-secondary hover:text-brand-purple transition-colors">News</a>
+                <a href="/resources.html" class="text-text-secondary hover:text-brand-purple transition-colors">Resources &amp; Rights</a>
+                <a href="/leadership.html" class="text-text-secondary hover:text-brand-purple transition-colors">Leadership</a>
+                <a href="/contact.html" class="text-brand-purple font-bold" aria-current="page">Contact</a>
             </div>
-            <div class="lg:hidden">
-                <button id="mobile-menu-button" class="text-text-secondary hover:text-brand-purple focus:outline-none" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false">
-                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-                </button>
-            </div>
+            <button type="button" id="mobile-menu-button" class="lg:hidden text-text-secondary hover:text-brand-purple" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
         </nav>
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden lg:hidden absolute top-full left-0 w-full bg-white border-t border-border-color shadow-lg">
-            <a href="about.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">About</a>
-            <a href="events.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Events</a>
-            <a href="news.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">News</a>
-            <a href="resources.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Resources & Rights</a>
-            <a href="leadership.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Leadership</a>
-            <a href="contact.html" class="block text-center py-3 px-6 text-lg text-brand-purple bg-brand-purple-light font-semibold">Contact</a>
+        <div id="mobile-menu" class="hidden lg:hidden absolute top-full left-0 w-full bg-white border-t border-border-color shadow-lg" role="navigation" aria-label="Mobile navigation">
+            <a href="/about.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">About</a>
+            <a href="/events.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Events</a>
+            <a href="/news.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">News</a>
+            <a href="/resources.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Resources &amp; Rights</a>
+            <a href="/leadership.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Leadership</a>
+            <a href="/contact.html" class="block text-center py-3 px-6 text-lg text-brand-purple bg-brand-purple-light font-semibold" aria-current="page">Contact</a>
         </div>
     </header>
+    <script data-site-shell-menu-state-script>
+        (() => {
+            const button = document.getElementById('mobile-menu-button');
+            const menu = document.getElementById('mobile-menu');
+            if (!button || !menu) return;
+            const canonicalIcon = button.innerHTML;
 
-    <!-- Page Header -->
-    <section class="bg-brand-purple-light border-b border-border-color">
-        <div class="container mx-auto px-6 py-16 text-center">
-            <h1 class="text-5xl font-bold">Contact Us</h1>
-            <p class="mt-4 text-lg text-text-secondary max-w-3xl mx-auto">Have a question or need support? We're here to help. Reach out and a union representative will get back to you shortly.</p>
-        </div>
-    </section>
+            window.siteShellSyncMenuState = () => {
+                const isOpen = menu.classList.contains('is-open') || !menu.classList.contains('hidden');
+                button.setAttribute('aria-expanded', String(isOpen));
+                button.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+                if (button.innerHTML !== canonicalIcon) button.innerHTML = canonicalIcon;
+            };
 
-    <main id="main-content" class="container mx-auto px-6 py-16">
-        <div class="max-w-3xl mx-auto">
-            <!-- Left Column: Contact Info -->
-            <div class="bg-white p-8 md:p-12 rounded-xl border border-border-color h-full">
-                <h2 class="text-4xl font-bold mb-6 text-center">Get In Touch</h2>
-                <div class="space-y-6 text-lg">
-                    <div class="flex items-start">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 mr-4 text-brand-purple flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
-                        <div>
-                            <h3 class="font-bold">General Inquiries</h3>
-                            <a href="mailto:osu-info@seiu503.org" class="text-brand-purple hover:underline">osu-info@seiu503.org</a>
-                        </div>
-                    </div>
-                     <div class="flex items-start">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 mr-4 text-brand-purple flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
-                        <div>
-                            <h3 class="font-bold">Email Leadership</h3>
-                            <a href="mailto:083execteam@seiu503.org" class="text-brand-purple hover:underline">083execteam@seiu503.org</a>
-                        </div>
-                    </div>
-                     <div class="flex items-start">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 mr-4 text-brand-purple flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
-                        <div>
-                            <h3 class="font-bold">Email Stewards</h3>
-                            <a href="mailto:083stewards@seiu503.org" class="text-brand-purple hover:underline" data-ph-event="steward_contact_click" data-ph-label="Contact Page Steward Email">083stewards@seiu503.org</a>
-                        </div>
-                    </div>
-                    <div class="flex items-start">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 mr-4 text-brand-purple flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
-                        <div>
-                            <h3 class="font-bold">Call Us</h3>
-                            <p class="text-text-secondary">coming soon</p>
-                        </div>
-                    </div>
-                     <div class="flex items-start">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 mr-4 text-brand-purple flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                        <div>
-                            <h3 class="font-bold">Office Hours</h3>
-                            <p class="text-text-secondary">Monday - Friday: 9:00 AM - 5:00 PM</p>
-                        </div>
-                    </div>
-                </div>
+            new MutationObserver(window.siteShellSyncMenuState).observe(menu, {
+                attributes: true,
+                attributeFilter: ['class']
+            });
+            document.addEventListener('keydown', (event) => {
+                if (event.key !== 'Escape' || button.getAttribute('aria-expanded') !== 'true') return;
+                menu.classList.add('hidden');
+                menu.classList.remove('is-open');
+                window.siteShellSyncMenuState();
+                button.focus();
+            });
+            window.siteShellSyncMenuState();
+        })();
+    </script>
+<!-- SITE SHELL: HEADER END -->
+
+    <main id="main-content">
+        <section class="contact-intro">
+            <div class="container intro-layout"><div><span class="eyebrow">SEIU Local 503 · Local 083</span><h1>Contact our union.</h1><p>Choose the team that best matches your question. Contact our steward team for workplace help or our executive team for Local 083 business and public inquiries.</p><p style="font-size:.78rem;font-weight:700;margin-top:.75rem">Contact information reviewed July 12, 2026.</p></div><aside class="best-way"><span class="eyebrow">Best way to reach Local 083</span><strong>Email our shared teams.</strong><p>For mail: Adams Hall, Room 109, Corvallis, OR 97331.</p></aside></div>
+        </section>
+
+        <section class="route-section container" aria-labelledby="route-heading">
+            <div class="section-heading"><span class="eyebrow">Start with the reason you are writing</span><h2 id="route-heading">Where should your message go?</h2><p>If you are unsure, send your question to the steward team for a workplace issue or the executive team for Local 083 business.</p></div>
+            <div class="route-grid">
+                <article class="route-card primary"><span class="route-icon" aria-hidden="true">◎</span><div class="route-copy"><span class="eyebrow">Workplace help</span><h3>Union steward team</h3><p>Use this address for representation, contract questions, disciplinary meetings, grievances, layoffs and other workplace concerns.</p><a class="route-email" href="mailto:083stewards@seiu503.org?subject=Workplace%20support">083stewards@seiu503.org →</a><span class="route-detail">Include any deadline in the subject line.</span></div></article>
+                <article class="route-card"><span class="route-icon" aria-hidden="true">◇</span><div class="route-copy"><span class="eyebrow">Local 083 business</span><h3>Executive leadership</h3><p>Use this address for governance, membership meetings, finances, partnerships and official Local 083 questions.</p><a class="route-email" href="mailto:083execteam@seiu503.org?subject=Local%20083%20question">083execteam@seiu503.org →</a><span class="route-detail">Messages are routed through the shared executive team address.</span></div></article>
+                <article class="route-card"><span class="route-icon" aria-hidden="true">“</span><div class="route-copy"><span class="eyebrow">Media and public</span><h3>Public inquiry</h3><p>Requests for comment, public information and questions about Local 083 positions or activities go to executive leadership.</p><a class="route-email" href="mailto:083execteam@seiu503.org?subject=Public%20inquiry">Send a public inquiry →</a><span class="route-detail">Identify your organization and deadline when applicable.</span></div></article>
+                <article class="route-card membership"><span class="route-icon" aria-hidden="true">+</span><div class="route-copy"><span class="eyebrow">Membership</span><h3>Join or get involved</h3><p>Use the secure SEIU membership application to join. Existing members can contact executive leadership with membership questions.</p><a class="route-email" href="https://seiu503signup.org/">Become a Member →</a><span class="route-detail">For a Local 083 membership question, email the executive team.</span></div></article>
             </div>
-        </div>
+        </section>
+
+        <section class="urgent-section" aria-labelledby="urgent-heading"><div class="container urgent-inner"><span class="urgent-badge">Time-sensitive?</span><div><h2 id="urgent-heading">Called into a meeting or given a layoff notice?</h2><p>Review the relevant worker guide, save your documents and contact a steward promptly.</p></div><div class="urgent-links"><a class="button button-gold" href="/resources/weingarten-rights.html">Meeting rights</a><a class="button button-light" href="/resources/layoff-workflow.html">Layoff workflow</a><a class="button button-light" href="mailto:083stewards@seiu503.org?subject=Urgent%20workplace%20issue">Contact a Steward</a></div></div></section>
+
+        <section class="prepare-section" aria-labelledby="prepare-heading"><div class="container prepare-layout"><div class="prepare-copy"><span class="eyebrow">Help us understand what happened</span><h2 id="prepare-heading">What to include in your first message</h2><p>You do not need to identify the correct contract article or solve the problem before reaching out. A short, factual summary is enough to begin.</p><div class="privacy-note"><strong>Protect sensitive information:</strong> Do not include Social Security numbers, passwords or unnecessary medical details in an initial email. You may use a personal email address if you prefer to keep correspondence outside university systems.</div></div><div class="checklist"><div class="check-row"><span class="check-number">1</span><div><strong>Your name and work location</strong><span>Include a personal phone number or email if that is the best way to reach you.</span></div></div><div class="check-row"><span class="check-number">2</span><div><strong>A short description</strong><span>Explain what happened, who was involved and what help you are requesting.</span></div></div><div class="check-row"><span class="check-number">3</span><div><strong>Important dates or deadlines</strong><span>Put an upcoming meeting, response date or other urgent deadline in the subject line.</span></div></div><div class="check-row"><span class="check-number">4</span><div><strong>Relevant documents</strong><span>Preserve emails, notices, schedules and your own dated notes. Share only what is needed initially.</span></div></div></div></div></section>
+
     </main>
 
-                    <footer class="bg-gray-100 pt-12 pb-8 text-text-primary">
+    <!-- SITE SHELL: FOOTER START -->
+    <footer class="bg-gray-100 pt-12 pb-8 text-text-primary border-t border-gray-200" data-site-shell-footer>
         <div class="container mx-auto px-6">
-            <div class="mt-10 pt-8 border-t border-gray-700 text-center">
-            </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Column 1: About the Union -->
                 <div class="md:col-span-2 lg:col-span-1">
                     <div class="flex items-center mb-4">
-                        <img src="/images/logo.png" alt="SEIU 503 Logo" class="h-12 w-12 mr-3 bg-white p-1 rounded">
-                        <div>
-                            <h3 class="text-xl font-bold">SEIU Local 503</h3>
-                            <p class="text-text-secondary text-sm">Oregon State University</p>
-                        </div>
+                        <img src="/images/logo.png" alt="SEIU 503 logo" class="h-12 w-12 mr-3 bg-white p-1 rounded" width="48" height="48" loading="lazy" decoding="async">
+                        <div><h3 class="text-xl font-bold">SEIU Local 503</h3><p class="text-text-secondary text-sm">Oregon State University</p></div>
                     </div>
-                    <p class="text-text-secondary leading-relaxed">Representing the classified employees of Oregon State University. We fight for fair contracts, defend workplace rights, and build a united community.</p>
+                    <p class="text-text-secondary leading-relaxed">Our member-led union represents classified staff at Oregon State University. Together, we bargain fair contracts, defend our rights and build power at work.</p>
                 </div>
-    
-                <!-- Column 2: Quick Links -->
                 <div>
-                    <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase">Quick Links</h4>
+                    <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase">Quick links</h4>
                     <ul class="space-y-3">
-                        <li><a href="/about.html" class="text-text-secondary hover:text-brand-purple transition-colors">About Us</a></li>
+                        <li><a href="/about.html" class="text-text-secondary hover:text-brand-purple transition-colors">About our union</a></li>
                         <li><a href="/events.html" class="text-text-secondary hover:text-brand-purple transition-colors">Events</a></li>
                         <li><a href="/news.html" class="text-text-secondary hover:text-brand-purple transition-colors">News</a></li>
                         <li><a href="/leadership.html" class="text-text-secondary hover:text-brand-purple transition-colors">Leadership</a></li>
                     </ul>
                 </div>
-    
-                <!-- Column 3: Resources -->
                 <div>
                     <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase"><a href="/resources.html" class="hover:text-brand-purple transition-colors">Resources</a></h4>
                     <ul class="space-y-3">
-                        <li><a href="/resources.html" class="text-text-secondary hover:text-brand-purple transition-colors">Resources & Rights</a></li>
+                        <li><a href="/resources.html" class="text-text-secondary hover:text-brand-purple transition-colors">Resources &amp; Rights</a></li>
                         <li><a href="/resources/seiu_cba_2022-2026.pdf" class="text-text-secondary hover:text-brand-purple transition-colors">Our Contract (PDF)</a></li>
                         <li><a href="/resources/stewards.html" class="text-text-secondary hover:text-brand-purple transition-colors">Find a Steward</a></li>
                         <li><a href="/resources/weingarten-rights.html" class="text-text-secondary hover:text-brand-purple transition-colors">Weingarten Rights</a></li>
                     </ul>
                 </div>
-    
-                <!-- Column 4: Contact -->
                 <div>
-                    <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase"><a href="/contact.html" class="hover:text-brand-purple transition-colors">Contact Us</a></h4>
-                     <ul class="space-y-3 text-text-secondary">
-                        <li class="flex items-start">
-                            <span class="mr-2 mt-1">✉️</span> <!-- Mail icon -->
-                            <a href="mailto:083execteam@seiu503.org" class="hover:text-brand-purple transition-colors">083execteam@seiu503.org</a>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="mr-2 mt-1">✉️</span> <!-- Mail icon -->
-                            <a href="mailto:083stewards@seiu503.org" class="hover:text-brand-purple transition-colors">083stewards@seiu503.org</a>
-                        </li>
+                    <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase"><a href="/contact.html" class="hover:text-brand-purple transition-colors">Contact us</a></h4>
+                    <ul class="space-y-3">
+                        <li><a href="mailto:083execteam@seiu503.org" class="text-text-secondary hover:text-brand-purple transition-colors break-all">083execteam@seiu503.org</a></li>
+                        <li><a href="mailto:083stewards@seiu503.org" class="text-text-secondary hover:text-brand-purple transition-colors break-all">083stewards@seiu503.org</a></li>
                     </ul>
                 </div>
             </div>
-    
-            <!-- Bottom Bar -->
-            <div class="mt-10 pt-8 border-t border-gray-700 text-center space-y-2">
-                <p class="text-text-secondary text-sm">&copy; 2026 SEIU Local 503, Sublocal 083. All rights reserved.</p>
-                <p class="text-text-secondary text-xs">
-                    <a href="#" class="underline hover:text-brand-purple" onclick="event.preventDefault(); (localStorage.getItem('ph_opt_out') === '1' ? phOptIn() : phOptOut());">
-                        Privacy settings
-                    </a>
-                </p>
+            <div class="mt-10 pt-8 border-t border-gray-300 text-center space-y-2">
+                <p class="text-text-secondary text-sm">&copy; 2026 SEIU Local 503, Local 083. All rights reserved.</p>
+                <p class="text-text-secondary text-xs"><a class="underline hover:text-brand-purple" href="/privacy.html#analytics-controls">Tracking settings</a><span aria-hidden="true"> · </span><a class="underline hover:text-brand-purple" href="/privacy.html">Privacy notice</a></p>
             </div>
         </div>
     </footer>
+<!-- SITE SHELL: FOOTER END -->
 
     <script>
-        // --- Mobile Menu Toggle ---
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const menuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
-        const navLinks = document.querySelectorAll('#mobile-menu a');
-
-        mobileMenuButton.addEventListener('click', () => {
-            const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
-            mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
-            mobileMenu.classList.toggle('hidden');
+        menuButton.addEventListener('click', () => {
+            const open = mobileMenu.classList.toggle('is-open');
+            menuButton.setAttribute('aria-expanded', String(open));
+            menuButton.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+            menuButton.textContent = open ? '×' : '☰';
         });
-
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-                mobileMenuButton.setAttribute('aria-expanded', 'false');
-            });
+        mobileMenu.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => {
+            mobileMenu.classList.remove('is-open');
+            menuButton.setAttribute('aria-expanded', 'false');
+            menuButton.setAttribute('aria-label', 'Open menu');
+            menuButton.textContent = '☰';
+        }));
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape' && menuButton.getAttribute('aria-expanded') === 'true') {
+                mobileMenu.classList.remove('is-open');
+                menuButton.setAttribute('aria-expanded', 'false');
+                menuButton.setAttribute('aria-label', 'Open menu');
+                menuButton.textContent = '☰';
+                menuButton.focus();
+            }
         });
     </script>
 </body>

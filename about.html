@@ -1,473 +1,1105 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Learn about the mission, values, and work of SEIU Local 503 at Oregon State University.">
-    <meta name="author" content="SEIU Local 503 at OSU">
-    <title>About Us - SEIU Local 503, OSU</title>
-    <style>html{visibility:hidden;}html.tw-ready{visibility:visible;}</style>
-    <script src="https://cdn.tailwindcss.com" onload="document.documentElement.classList.add('tw-ready')"></script>
+    <meta name="description" content="Meet the 1,454 classified staff who make up SEIU Local 503, Local 083 at Oregon State University. Learn what our member-led union does and how to take part.">
+    <meta name="author" content="SEIU Local 503 at Oregon State University">
+    <title>About Our Union - SEIU Local 503 at Oregon State University</title>
+    <link rel="stylesheet" href="/styles/tailwind.css">
     <link rel="icon" href="/images/logo.png" type="image/png">
     <link rel="apple-touch-icon" href="/images/logo.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Lora:wght@400;500;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --brand-purple-dark: #4C1D95; /* Deep Purple */
-            --brand-purple: #7C3AED;      /* Vibrant Purple */
-            --brand-purple-light: #EDE9FE; /* Lighter Lavender for high contrast */
-            --brand-dark: #111827;         /* Near-black for high contrast text/bg */
-            --brand-light: #F9FAFB;        /* Off-white Background */
-            --text-primary: #1F2937;
-            --text-secondary: #374151;     /* Darker secondary text for better contrast */
-            --border-color: #D1D5DB;
-        }
-
-        html {
-            scroll-padding-top: 80px; /* Offset for sticky header */
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--brand-light);
-            color: var(--text-primary);
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Lora', serif;
-            color: var(--brand-purple-dark);
-        }
-
-        /* Accessibility: Clear focus indicators for all interactive elements */
-        a:focus-visible, button:focus-visible, details:focus-visible, input:focus-visible, textarea:focus-visible {
-            outline: 3px solid var(--brand-purple);
-            outline-offset: 2px;
-            border-radius: 4px;
-        }
-        
-        .btn {
-            @apply font-bold py-3 px-6 rounded-lg transition-all duration-300 ease-in-out transform hover:scale-105;
-        }
-        .btn-primary {
-            @apply bg-gradient-to-r from-brand-purple to-violet-600 text-white shadow-md hover:shadow-lg;
-        }
-        .btn-secondary {
-            @apply bg-brand-dark text-white hover:bg-black;
-        }
-        .btn-outline {
-             @apply bg-white text-brand-purple border-2 border-brand-purple hover:bg-brand-purple hover:text-white;
-        }
-
-        /* Custom Tailwind config for our CSS variables */
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'brand-purple-dark': 'var(--brand-purple-dark)',
-                        'brand-purple': 'var(--brand-purple)',
-                        'brand-purple-light': 'var(--brand-purple-light)',
-                        'brand-dark': 'var(--brand-dark)',
-                        'brand-light': 'var(--brand-light)',
-                        'text-primary': 'var(--text-primary)',
-                        'text-secondary': 'var(--text-secondary)',
-                        'border-color': 'var(--border-color)',
-                    }
-                }
-            }
-        }
-    </style>
-    <!-- SEO META START -->
+<link rel="stylesheet" href="/styles/fonts.css">
     <link rel="canonical" href="https://www.local083.org/about.html">
+
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.local083.org/about.html">
-    <meta property="og:title" content="About Us - SEIU Local 503, OSU">
-    <meta property="og:description" content="Learn about the mission, values, and work of SEIU Local 503 at Oregon State University.">
-    <meta property="og:image" content="https://www.local083.org/images/card.webp">
+    <meta property="og:title" content="About Our Union - SEIU Local 503 at Oregon State University">
+    <meta property="og:description" content="Meet the 1,454 classified staff who make up our member-led union at Oregon State University and learn how to take part.">
+    <meta property="og:image" content="https://www.local083.org/images/dbf26276-2e27-4c5f-9fc9-1257dcb65baf-june-30-rally-workers-chanting.webp">
+    <meta property="og:image:alt" content="Local 083 members and supporters rally together at Oregon State University">
+    <meta property="og:image:width" content="1800">
+    <meta property="og:image:height" content="1395">
     <meta property="og:site_name" content="SEIU Local 503 at Oregon State University">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://www.local083.org/about.html">
-    <meta name="twitter:title" content="About Us - SEIU Local 503, OSU">
-    <meta name="twitter:description" content="Learn about the mission, values, and work of SEIU Local 503 at Oregon State University.">
-    <meta name="twitter:image" content="https://www.local083.org/images/card.webp">
+    <meta name="twitter:title" content="About Our Union - SEIU Local 503 at Oregon State University">
+    <meta name="twitter:description" content="Meet the 1,454 classified staff who make up our member-led union at Oregon State University and learn how to take part.">
+    <meta name="twitter:image" content="https://www.local083.org/images/dbf26276-2e27-4c5f-9fc9-1257dcb65baf-june-30-rally-workers-chanting.webp">
+    <meta name="twitter:image:alt" content="Local 083 members and supporters rally together at Oregon State University">
+
     <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
     {
-      "@type": "Organization",
-      "@id": "https://www.local083.org#organization",
-      "name": "SEIU Local 503 at Oregon State University",
-      "url": "https://www.local083.org",
-      "logo": "https://www.local083.org/images/logo.png"
-    },
-    {
-      "@type": "WebSite",
-      "@id": "https://www.local083.org#website",
-      "name": "SEIU Local 503 at Oregon State University",
-      "url": "https://www.local083.org",
-      "publisher": {
-        "@id": "https://www.local083.org#organization"
-      }
-    },
-    {
-      "@type": "WebPage",
-      "@id": "https://www.local083.org/about.html#webpage",
-      "url": "https://www.local083.org/about.html",
-      "name": "About Us - SEIU Local 503, OSU",
-      "description": "Learn about the mission, values, and work of SEIU Local 503 at Oregon State University.",
-      "isPartOf": {
-        "@id": "https://www.local083.org#website"
-      },
-      "about": {
-        "@id": "https://www.local083.org#organization"
-      }
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://www.local083.org#organization",
+          "name": "SEIU Local 503 at Oregon State University",
+          "alternateName": "Local 083",
+          "url": "https://www.local083.org",
+          "logo": "https://www.local083.org/images/logo.png",
+          "email": "083execteam@seiu503.org",
+          "description": "A member-led union representing classified staff at Oregon State University."
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.local083.org#website",
+          "name": "SEIU Local 503 at Oregon State University",
+          "url": "https://www.local083.org",
+          "publisher": {"@id": "https://www.local083.org#organization"}
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://www.local083.org/about.html#webpage",
+          "url": "https://www.local083.org/about.html",
+          "name": "About Our Union - SEIU Local 503 at Oregon State University",
+          "description": "Meet the 1,454 classified staff who make up SEIU Local 503, Local 083 at Oregon State University. Learn what our member-led union does and how to take part.",
+          "isPartOf": {"@id": "https://www.local083.org#website"},
+          "about": {"@id": "https://www.local083.org#organization"}
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://www.local083.org/about.html#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Who does Local 083 represent at OSU?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Local 083 represents classified staff across Oregon State University, including administrative staff, food service workers, custodians, IT professionals, researchers, tradespeople and many other coworkers who keep OSU running."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What is the difference between being represented and being a member?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Workers in our bargaining unit are covered by our contract. Full members also have a direct vote in contract ratification and union elections and can take a fuller role in setting priorities and building our union."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What does a union steward do?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Stewards are trained coworkers who help members understand the contract, prepare for workplace meetings and address concerns with management."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How are decisions made in Local 083?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Members shape priorities through workplace conversations, surveys, meetings and votes. Members elect local leaders and vote on tentative agreements."
+              }
+            }
+          ]
+        }
+      ]
     }
-  ]
-}
     </script>
-    <!-- SEO META END -->
+
+        <link rel="stylesheet" href="/styles/site-shell.css">
+<style>
+        :root {
+            --brand-purple-dark: #4c1d95;
+            --brand-purple: #7c3aed;
+            --brand-purple-bright: #7c3aed;
+            --brand-purple-light: #ede9fe;
+            --brand-yellow: #fdb913;
+            --brand-dark: #111827;
+            --brand-light: #f9fafb;
+            --text-primary: #1f2937;
+            --text-secondary: #374151;
+            --border-color: #d1d5db;
+        }
+
+        * { box-sizing: border-box; }
+
+        html { scroll-padding-top: 126px; }
+
+        body {
+            background: var(--brand-light);
+            color: var(--text-primary);
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            margin: 0;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            color: var(--brand-purple-dark);
+            font-family: 'Lora', serif;
+        }
+
+        a:focus-visible, button:focus-visible, summary:focus-visible {
+            border-radius: 0.25rem;
+            outline: 3px solid var(--brand-purple);
+            outline-offset: 3px;
+        }
+
+        .bg-brand-purple-light { background-color: var(--brand-purple-light) !important; }
+        .text-brand-purple { color: var(--brand-purple) !important; }
+        .text-brand-purple-dark { color: var(--brand-purple-dark) !important; }
+        .text-text-primary { color: var(--text-primary) !important; }
+        .text-text-secondary { color: var(--text-secondary) !important; }
+        .border-border-color { border-color: var(--border-color) !important; }
+        .hover\:text-brand-purple:hover { color: var(--brand-purple) !important; }
+        .hover\:bg-brand-purple-light:hover { background-color: var(--brand-purple-light) !important; }
+        header .text-brand-purple-dark { color: var(--brand-dark) !important; }
+
+        .about-intro {
+            background: linear-gradient(135deg, #ffffff 0%, #faf8ff 100%);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .formal-photo {
+            border-radius: 1.15rem;
+            box-shadow: 0 18px 45px rgba(31, 14, 65, 0.14);
+            margin: 0;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .formal-photo img {
+            height: 29rem;
+            object-fit: cover;
+            object-position: center;
+            width: 100%;
+        }
+
+        .formal-photo figcaption {
+            -webkit-backdrop-filter: blur(8px);
+            backdrop-filter: blur(8px);
+            background: rgba(17, 24, 39, 0.84);
+            border-radius: 0.65rem;
+            bottom: 0.8rem;
+            color: #ffffff;
+            font-size: 0.76rem;
+            font-weight: 700;
+            left: 0.8rem;
+            line-height: 1.45;
+            max-width: calc(100% - 1.6rem);
+            padding: 0.65rem 0.8rem;
+            position: absolute;
+        }
+
+        .intro-stat-grid {
+            display: grid;
+            gap: 0.8rem;
+            grid-template-columns: 1fr 1fr;
+            margin-top: 1.6rem;
+        }
+
+        .intro-stat {
+            background: #ffffff;
+            border: 1px solid #ddd6fe;
+            border-radius: 0.9rem;
+            padding: 1rem 1.15rem;
+        }
+
+        .intro-stat strong {
+            color: var(--brand-purple-dark);
+            display: block;
+            font-family: 'Lora', serif;
+            font-size: clamp(2.3rem, 5vw, 3.6rem);
+            line-height: 1;
+        }
+
+        .intro-stat span {
+            color: var(--text-secondary);
+            display: block;
+            font-size: 0.88rem;
+            font-weight: 700;
+            line-height: 1.4;
+            margin-top: 0.45rem;
+        }
+
+        .eyebrow {
+            color: var(--brand-purple-bright);
+            display: block;
+            font-size: 0.75rem;
+            font-weight: 800;
+            letter-spacing: 0.14em;
+            margin-bottom: 0.7rem;
+            text-transform: uppercase;
+        }
+
+        .button {
+            align-items: center;
+            border: 2px solid transparent;
+            border-radius: 0.7rem;
+            display: inline-flex;
+            font-size: 0.95rem;
+            font-weight: 800;
+            justify-content: center;
+            min-height: 3.2rem;
+            padding: 0.75rem 1.25rem;
+            text-decoration: none;
+            transition: box-shadow 180ms ease, transform 180ms ease, background-color 180ms ease;
+        }
+
+        .button:hover {
+            box-shadow: 0 12px 25px rgba(76, 29, 149, 0.18);
+            transform: translateY(-2px);
+        }
+
+        .button-primary {
+            background: linear-gradient(135deg, var(--brand-purple-bright), #5b21b6);
+            color: #fff;
+        }
+
+        .button-outline {
+            background: rgba(255, 255, 255, 0.88);
+            border-color: var(--brand-purple-bright);
+            color: var(--brand-purple-dark);
+        }
+
+        .button-light {
+            background: #fff;
+            color: var(--brand-purple-dark);
+        }
+
+        .button-yellow {
+            background: var(--brand-yellow);
+            color: var(--brand-purple-dark);
+        }
+
+        .coverage-strip {
+            background: var(--brand-purple-dark);
+            color: #ffffff;
+            overflow: hidden;
+        }
+
+        .coverage-strip-inner {
+            align-items: center;
+            display: flex;
+            gap: 0.9rem;
+            padding-bottom: 0.75rem;
+            padding-top: 0.75rem;
+        }
+
+        .coverage-label {
+            color: var(--brand-yellow);
+            font-size: 0.7rem;
+            font-weight: 800;
+            letter-spacing: 0.12em;
+            padding: 0.75rem 0.6rem 0.75rem 0;
+            white-space: nowrap;
+            text-transform: uppercase;
+        }
+
+        .jobs-viewport {
+            flex: 1 1 auto;
+            min-width: 0;
+            overflow: hidden;
+            -webkit-mask-image: linear-gradient(to right, transparent, #000 1.5rem, #000 calc(100% - 1.5rem), transparent);
+            mask-image: linear-gradient(to right, transparent, #000 1.5rem, #000 calc(100% - 1.5rem), transparent);
+        }
+
+        .jobs-track {
+            display: flex;
+            transform: translate3d(0, 0, 0);
+            width: max-content;
+            will-change: transform;
+        }
+
+        .jobs-group {
+            display: flex;
+            flex: 0 0 auto;
+            gap: 0.6rem;
+            list-style: none;
+            margin: 0;
+            padding: 0 0.6rem 0 0;
+        }
+
+        .job-title {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 999px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            padding: 0.65rem 0.75rem;
+            text-align: center;
+            white-space: nowrap;
+        }
+
+        .quick-nav {
+            -webkit-backdrop-filter: blur(16px);
+            backdrop-filter: blur(16px);
+            background: rgba(255, 255, 255, 0.8);
+            border-bottom: 1px solid var(--border-color);
+            box-shadow: 0 8px 22px rgba(17, 24, 39, 0.04);
+            overflow-x: auto;
+            position: sticky;
+            scrollbar-width: none;
+            top: 65px;
+            z-index: 40;
+        }
+
+        .quick-nav::-webkit-scrollbar { display: none; }
+
+        .quick-nav a {
+            color: var(--text-secondary);
+            flex: 0 0 auto;
+            font-size: 0.86rem;
+            font-weight: 800;
+            padding: 0.95rem 0.9rem;
+            white-space: nowrap;
+        }
+
+        .quick-nav a:hover { color: var(--brand-purple); }
+
+        .section-heading {
+            display: grid;
+            gap: 0.75rem;
+            margin-bottom: 2.25rem;
+            max-width: 50rem;
+        }
+
+        .content-card {
+            background: #fff;
+            border: 1px solid #e5e7eb;
+            border-radius: 1.1rem;
+            box-shadow: 0 10px 28px rgba(17, 24, 39, 0.05);
+        }
+
+        .work-list {
+            border-bottom: 1px solid #d8d2e4;
+            border-top: 1px solid #d8d2e4;
+        }
+
+        .work-list-item {
+            align-items: center;
+            display: grid;
+            gap: 1.5rem;
+            grid-template-columns: 3.5rem minmax(12rem, 0.72fr) 1.28fr;
+            padding: 1.35rem 0;
+        }
+
+        .work-list-item + .work-list-item { border-top: 1px solid #d8d2e4; }
+
+        .work-list-number {
+            color: var(--brand-purple-bright);
+            font-family: 'Lora', serif;
+            font-size: 1.55rem;
+            font-weight: 700;
+        }
+
+        .work-list-item h3 {
+            font-size: clamp(1.35rem, 2.4vw, 2rem);
+            margin: 0;
+        }
+
+        .work-list-item p {
+            color: var(--text-secondary);
+            line-height: 1.65;
+            margin: 0;
+        }
+
+        .photo-grid {
+            display: grid;
+            gap: 0.8rem;
+            grid-template-columns: 1.2fr 0.8fr;
+            grid-template-rows: repeat(2, 13rem);
+        }
+
+        .photo-grid figure {
+            border-radius: 1rem;
+            margin: 0;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .photo-grid figure:first-child { grid-row: 1 / 3; }
+
+        .photo-grid img {
+            height: 100%;
+            object-fit: cover;
+            transition: transform 400ms ease;
+            width: 100%;
+        }
+
+        .photo-grid figure:hover img { transform: scale(1.025); }
+
+        .photo-grid figcaption {
+            background: linear-gradient(transparent, rgba(17, 24, 39, 0.85));
+            bottom: 0;
+            color: #fff;
+            font-size: 0.75rem;
+            font-weight: 700;
+            left: 0;
+            padding: 2.5rem 0.8rem 0.65rem;
+            position: absolute;
+            right: 0;
+        }
+
+        .membership-split {
+            display: grid;
+            gap: 1.2rem;
+            grid-template-columns: 0.82fr 1.18fr;
+        }
+
+        .membership-column {
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 1.15rem;
+            box-shadow: 0 10px 28px rgba(17, 24, 39, 0.05);
+            display: flex;
+            flex-direction: column;
+            padding: clamp(1.5rem, 4vw, 2.6rem);
+        }
+
+        .membership-column.member-feature {
+            background: linear-gradient(135deg, #4c1d95, #6d28d9);
+            border-color: transparent;
+            box-shadow: 0 18px 42px rgba(76, 29, 149, 0.22);
+            color: #ffffff;
+            padding: clamp(1.8rem, 4.5vw, 3.15rem);
+        }
+
+        .member-feature h3 { color: #ffffff; }
+        .member-feature .eyebrow { color: #ddd6fe; }
+        .member-feature > p { color: #ede9fe; line-height: 1.65; }
+
+        .membership-column ul {
+            flex: 1 1 auto;
+            margin: 1rem 0 0;
+            padding-left: 0;
+        }
+
+        .membership-column li {
+            color: var(--text-secondary);
+            list-style: none;
+            margin-top: 0.7rem;
+            padding-left: 1.6rem;
+            position: relative;
+        }
+
+        .membership-column li::before {
+            color: var(--brand-purple-bright);
+            content: '✓';
+            font-weight: 900;
+            left: 0;
+            position: absolute;
+        }
+
+        .member-feature li { color: #f5f3ff; }
+        .member-feature li::before { color: var(--brand-yellow); }
+
+        .membership-column .button {
+            margin-top: 1.75rem;
+            width: 100%;
+        }
+
+        .member-join-button {
+            font-size: 1.05rem;
+            margin-top: 2rem !important;
+            min-height: 3.8rem;
+        }
+
+        details {
+            background: #fff;
+            border: 1px solid #e5e7eb;
+            border-radius: 0.85rem;
+            overflow: hidden;
+        }
+
+        details + details { margin-top: 0.7rem; }
+
+        summary {
+            align-items: center;
+            color: var(--brand-dark);
+            cursor: pointer;
+            display: flex;
+            font-weight: 800;
+            justify-content: space-between;
+            list-style: none;
+            padding: 1rem 1.15rem;
+        }
+
+        summary::-webkit-details-marker { display: none; }
+        summary::after { color: var(--brand-purple-bright); content: '+'; font-size: 1.4rem; }
+        details[open] summary::after { content: '−'; }
+        details p { color: var(--text-secondary); line-height: 1.7; padding: 0 1.15rem 1.15rem; }
+
+        .final-cta {
+            background:
+                radial-gradient(circle at 92% 20%, rgba(253, 185, 19, 0.3), transparent 17rem),
+                linear-gradient(135deg, #42127e, #6d28d9);
+            border-radius: 1.5rem;
+            color: #fff;
+            overflow: hidden;
+            padding: 2rem;
+        }
+
+        .final-cta h2 { color: #fff; }
+
+        #who-we-are, #what-we-do, #community, #membership, #questions {
+            scroll-margin-top: 124px;
+        }
+
+        @media (max-width: 767px) {
+            .formal-photo img { height: 21rem; }
+            .intro-stat-grid { grid-template-columns: 1fr; }
+            .coverage-strip-inner { gap: 0.45rem; padding-left: 1rem; padding-right: 1rem; }
+            .coverage-label { padding-right: 0.25rem; }
+            .work-list-item { align-items: start; gap: 0.65rem; grid-template-columns: 2.5rem 1fr; }
+            .work-list-item p { grid-column: 2; }
+            .photo-grid { grid-template-columns: 1fr; grid-template-rows: repeat(3, 15rem); }
+            .photo-grid figure:first-child { grid-row: auto; }
+            .membership-split { grid-template-columns: 1fr; }
+            .button { width: 100%; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; }
+            .jobs-viewport {
+                -webkit-mask-image: none;
+                mask-image: none;
+                overflow-x: auto;
+                scrollbar-width: thin;
+            }
+            .jobs-track [aria-hidden="true"] { display: none; }
+        }
+    </style>
     <script src="/js/analytics.js" defer></script>
 </head>
-<body class="bg-brand-light">
-    <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:bg-white focus:text-brand-purple-dark focus:px-4 focus:py-2 focus:rounded focus:shadow-lg">Skip to content</a>
+<body>
+    <noscript><nav aria-label="Primary navigation without JavaScript" class="border-b border-border-color bg-white px-4 py-3 text-center text-sm font-semibold"><a class="mx-2 underline" href="/">Home</a><a class="mx-2 underline" href="/about.html">About</a><a class="mx-2 underline" href="/events.html">Events</a><a class="mx-2 underline" href="/news.html">News</a><a class="mx-2 underline" href="/resources.html">Resources &amp; Rights</a><a class="mx-2 underline" href="/leadership.html">Leadership</a><a class="mx-2 underline" href="/contact.html">Contact</a></nav></noscript>
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[60] focus:bg-white focus:text-brand-purple-dark focus:px-4 focus:py-2 focus:rounded focus:shadow-lg">Skip to content</a>
 
-    <!-- Header -->
-    <header class="bg-white/80 backdrop-blur-lg border-b border-border-color sticky top-0 z-50">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="index.html" class="flex items-center space-x-2">
+    <!-- SITE SHELL: HEADER START -->
+    <header class="bg-white/80 backdrop-blur-lg border-b border-border-color sticky top-0 z-50" data-site-shell-header>
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center" aria-label="Primary navigation">
+            <a href="/index.html" class="flex items-center space-x-2">
                 <span class="text-2xl font-bold text-brand-purple-dark">SEIU 503</span>
                 <span class="text-lg text-text-secondary hidden md:block">| Oregon State University</span>
             </a>
             <div class="hidden lg:flex space-x-8">
-                <a href="about.html" class="text-brand-purple font-bold">About</a>
-                <a href="events.html" class="text-text-secondary hover:text-brand-purple transition-colors">Events</a>
-                <a href="news.html" class="text-text-secondary hover:text-brand-purple transition-colors">News</a>
-                <a href="resources.html" class="text-text-secondary hover:text-brand-purple transition-colors">Resources & Rights</a>
-                <a href="leadership.html" class="text-text-secondary hover:text-brand-purple transition-colors">Leadership</a>
-                <a href="contact.html" class="text-text-secondary hover:text-brand-purple transition-colors">Contact</a>
+                <a href="/about.html" class="text-brand-purple font-bold" aria-current="page">About</a>
+                <a href="/events.html" class="text-text-secondary hover:text-brand-purple transition-colors">Events</a>
+                <a href="/news.html" class="text-text-secondary hover:text-brand-purple transition-colors">News</a>
+                <a href="/resources.html" class="text-text-secondary hover:text-brand-purple transition-colors">Resources &amp; Rights</a>
+                <a href="/leadership.html" class="text-text-secondary hover:text-brand-purple transition-colors">Leadership</a>
+                <a href="/contact.html" class="text-text-secondary hover:text-brand-purple transition-colors">Contact</a>
             </div>
-            <div class="lg:hidden">
-                <button id="mobile-menu-button" class="text-text-secondary hover:text-brand-purple focus:outline-none" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false">
-                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-                </button>
-            </div>
+            <button type="button" id="mobile-menu-button" class="lg:hidden text-text-secondary hover:text-brand-purple" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
         </nav>
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden lg:hidden absolute top-full left-0 w-full bg-white border-t border-border-color shadow-lg">
-            <a href="about.html" class="block text-center py-3 px-6 text-lg text-brand-purple bg-brand-purple-light font-semibold">About</a>
-            <a href="events.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Events</a>
-            <a href="news.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">News</a>
-            <a href="resources.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Resources & Rights</a>
-            <a href="leadership.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Leadership</a>
-            <a href="contact.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Contact</a>
+        <div id="mobile-menu" class="hidden lg:hidden absolute top-full left-0 w-full bg-white border-t border-border-color shadow-lg" role="navigation" aria-label="Mobile navigation">
+            <a href="/about.html" class="block text-center py-3 px-6 text-lg text-brand-purple bg-brand-purple-light font-semibold" aria-current="page">About</a>
+            <a href="/events.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Events</a>
+            <a href="/news.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">News</a>
+            <a href="/resources.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Resources &amp; Rights</a>
+            <a href="/leadership.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Leadership</a>
+            <a href="/contact.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Contact</a>
         </div>
     </header>
+    <script data-site-shell-menu-state-script>
+        (() => {
+            const button = document.getElementById('mobile-menu-button');
+            const menu = document.getElementById('mobile-menu');
+            if (!button || !menu) return;
+            const canonicalIcon = button.innerHTML;
 
-    <!-- Page Header -->
-    <section class="bg-brand-purple-light border-b border-border-color">
-        <div class="container mx-auto px-6 py-16 text-center">
-            <h1 class="text-5xl font-bold">About Our Union</h1>
-            <p class="mt-4 text-lg text-text-secondary max-w-3xl mx-auto">Learn more about our mission, our history, and our commitment to the classified staff of Oregon State University.</p>
+            window.siteShellSyncMenuState = () => {
+                const isOpen = menu.classList.contains('is-open') || !menu.classList.contains('hidden');
+                button.setAttribute('aria-expanded', String(isOpen));
+                button.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+                if (button.innerHTML !== canonicalIcon) button.innerHTML = canonicalIcon;
+            };
+
+            new MutationObserver(window.siteShellSyncMenuState).observe(menu, {
+                attributes: true,
+                attributeFilter: ['class']
+            });
+            document.addEventListener('keydown', (event) => {
+                if (event.key !== 'Escape' || button.getAttribute('aria-expanded') !== 'true') return;
+                menu.classList.add('hidden');
+                menu.classList.remove('is-open');
+                window.siteShellSyncMenuState();
+                button.focus();
+            });
+            window.siteShellSyncMenuState();
+        })();
+    </script>
+<!-- SITE SHELL: HEADER END -->
+
+    <main id="main-content">
+
+    <section class="about-intro">
+        <div class="container mx-auto px-6 py-12 md:py-16">
+            <div class="grid lg:grid-cols-[0.94fr_1.06fr] gap-10 lg:gap-16 items-center">
+                <figure class="formal-photo">
+                    <img src="/images/aed6b098-46aa-453b-9b26-23b6388a6f20-june-30-rally-crowd-with-seiu-signs-960w.webp" srcset="/images/aed6b098-46aa-453b-9b26-23b6388a6f20-june-30-rally-crowd-with-seiu-signs-480w.webp 480w, /images/aed6b098-46aa-453b-9b26-23b6388a6f20-june-30-rally-crowd-with-seiu-signs-960w.webp 960w, /images/aed6b098-46aa-453b-9b26-23b6388a6f20-june-30-rally-crowd-with-seiu-signs-1440w.webp 1440w" sizes="(max-width: 1023px) calc(100vw - 3rem), 46vw" alt="Local 083 members and supporters gather with SEIU signs at McNary Field" width="1800" height="1150" decoding="async" fetchpriority="high">
+                    <figcaption>June 30 rally · Photo by Sylv Sharp, SEIU 503</figcaption>
+                </figure>
+                <div>
+                    <span class="eyebrow">About Local 083</span>
+                    <h1 class="text-4xl md:text-6xl font-bold leading-[1.04] max-w-4xl">SEIU Local 503 at Oregon State University</h1>
+                    <p class="mt-5 text-xl text-text-primary font-semibold max-w-3xl">Local 083 is our union for classified staff at Oregon State University.</p>
+                    <p class="mt-3 text-lg text-text-secondary max-w-2xl leading-relaxed">We represent coworkers who support students, research and public service in every Oregon county. As part of SEIU Local 503, we bargain fair contracts, defend workplace rights and set our priorities together at OSU.</p>
+                    <div class="intro-stat-grid" aria-label="Local 083 at a glance">
+                        <div class="intro-stat"><strong>1,454</strong><span>represented OSU workers</span></div>
+                        <div class="intro-stat"><strong>36</strong><span>Oregon counties represented</span></div>
+                    </div>
+                    <p class="mt-3 text-sm text-text-secondary">Source: <a href="https://hr.oregonstate.edu/employees/administrators-supervisors/classification-compensation/salary-reports" class="text-brand-purple font-bold underline underline-offset-2">Oregon State University salary report, updated July 2026</a>.</p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <main id="main-content" class="container mx-auto px-6 py-16 space-y-24">
-
-        <!-- Who We Are Section -->
-        <section id="who-we-are">
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
-                <div class="order-2 lg:order-1">
-                    <h2 class="text-4xl font-bold mb-6">Who We Are</h2>
-                    <p class="text-text-secondary leading-relaxed text-lg mb-4">SEIU Local 503, Sub-local 083, is our union for classified staff at Oregon State University. We are the thousands of dedicated employees who make this university work. Our members work not only on the main campus in Corvallis but also at the Hatfield Marine Science Center in Newport, the Portland Center, and in OSU's extension offices in every county across Oregon. We are administrative assistants, IT professionals, custodians, groundskeepers, food service workers, lab technicians, and so much more. We work in every college, department, and building, providing the essential services that support students, faculty, and research.</p>
-                    <p class="text-text-secondary leading-relaxed text-lg">Our members are the backbone of OSU, and together, we advocate for the respect, fair pay, and safe working conditions that all university employees deserve.</p>
+    <section class="coverage-strip" aria-label="OSU classified jobs represented by Local 083">
+        <div class="container mx-auto px-6 coverage-strip-inner">
+            <span class="coverage-label">We are</span>
+            <div class="jobs-viewport" tabindex="0" aria-label="Scrolling list of active OSU classified job titles. Hover or focus to pause.">
+                <div class="jobs-track">
+                    <ul class="jobs-group">
+                        <li class="job-title">Able Mariner</li>
+                        <li class="job-title">Accountant 1</li>
+                        <li class="job-title">Accountant 2</li>
+                        <li class="job-title">Accounting Technician</li>
+                        <li class="job-title">Administrative Program Assistant</li>
+                        <li class="job-title">Administrative Program Specialist</li>
+                        <li class="job-title">Analyst Programmer</li>
+                        <li class="job-title">Archivist</li>
+                        <li class="job-title">Athletic Equipment Coordinator</li>
+                        <li class="job-title">Auto Mechanic 2</li>
+                        <li class="job-title">Baker</li>
+                        <li class="job-title">Bio Science Research Tech 1</li>
+                        <li class="job-title">Bio Science Research Tech 2</li>
+                        <li class="job-title">Bio Science Research Tech 3</li>
+                        <li class="job-title">Bio Science Research Worker</li>
+                        <li class="job-title">Buyer 2</li>
+                        <li class="job-title">Buyer 3</li>
+                        <li class="job-title">Carpenter</li>
+                        <li class="job-title">Cashier 2</li>
+                        <li class="job-title">Chemist 1</li>
+                        <li class="job-title">Chemist 3</li>
+                        <li class="job-title">Co-Generation Engineer</li>
+                        <li class="job-title">Cook 1</li>
+                        <li class="job-title">Cook 2</li>
+                        <li class="job-title">Custodial Services Coordinator</li>
+                        <li class="job-title">Custodian</li>
+                        <li class="job-title">Development Engineer</li>
+                        <li class="job-title">Early Childhood Assistant</li>
+                        <li class="job-title">Early Childhood Associate Teacher</li>
+                        <li class="job-title">Education Program Assistant 1</li>
+                        <li class="job-title">Education Program Assistant 2</li>
+                        <li class="job-title">Education Project Assistant</li>
+                        <li class="job-title">Electrical/Control System Tech</li>
+                        <li class="job-title">Environmental Health and Safety Professional 2</li>
+                        <li class="job-title">Environmental Health and Safety Professional 3</li>
+                        <li class="job-title">Equipment Systems Specialist</li>
+                        <li class="job-title">Executive Support Specialist 1</li>
+                        <li class="job-title">Executive Support Specialist 2</li>
+                        <li class="job-title">Facilities Engineer 2</li>
+                        <li class="job-title">Facilities Engineer 3</li>
+                        <li class="job-title">Fiscal Coordinator 1</li>
+                        <li class="job-title">Fiscal Coordinator 2</li>
+                        <li class="job-title">Food Service Coordinator</li>
+                        <li class="job-title">Food Service Worker 1</li>
+                        <li class="job-title">Food Service Worker 2</li>
+                        <li class="job-title">Food Service Worker 3</li>
+                        <li class="job-title">General Maintenance Mechanic</li>
+                        <li class="job-title">Grants/Contracts Coordinator</li>
+                        <li class="job-title">Grants/Contracts Technician</li>
+                        <li class="job-title">Graphic Designer</li>
+                        <li class="job-title">Grounds Maintenance Worker 2</li>
+                        <li class="job-title">HVAC Control Technician</li>
+                        <li class="job-title">Information Technology Consultant</li>
+                        <li class="job-title">Instrument Technologist-Mech</li>
+                        <li class="job-title">Laboratory Animal Technician 1</li>
+                        <li class="job-title">Laboratory Animal Technician 2</li>
+                        <li class="job-title">Laboratory Assistant</li>
+                        <li class="job-title">Laboratory Technician 1</li>
+                        <li class="job-title">Laboratory Technician 2</li>
+                        <li class="job-title">Laundry Worker</li>
+                        <li class="job-title">Library Technician 2</li>
+                        <li class="job-title">Library Technician 3</li>
+                        <li class="job-title">Locksmith</li>
+                        <li class="job-title">Machinist</li>
+                        <li class="job-title">Maintenance Laborer Coordinator</li>
+                        <li class="job-title">Management Analyst 2</li>
+                        <li class="job-title">Medical Aide</li>
+                        <li class="job-title">Medical Lab Technologist</li>
+                        <li class="job-title">Medical Laboratory Tech 2</li>
+                        <li class="job-title">Microbiologist 1</li>
+                        <li class="job-title">Microbiologist 2</li>
+                        <li class="job-title">Microbiologist 3</li>
+                        <li class="job-title">Mid-Level Medical Practitioner</li>
+                        <li class="job-title">Museum Assistant</li>
+                        <li class="job-title">Nuclear Reactor Operator</li>
+                        <li class="job-title">Office Assistant</li>
+                        <li class="job-title">Office Specialist 1</li>
+                        <li class="job-title">Office Specialist 2</li>
+                        <li class="job-title">Operating Systems/Network Analyst</li>
+                        <li class="job-title">Ordinary Mariner</li>
+                        <li class="job-title">Painter</li>
+                        <li class="job-title">Parking Services Representative</li>
+                        <li class="job-title">Pharmacy Technician 2</li>
+                        <li class="job-title">Pipe and Steam Fitter</li>
+                        <li class="job-title">Plasterer</li>
+                        <li class="job-title">Plumber</li>
+                        <li class="job-title">Print Services Technician</li>
+                        <li class="job-title">Program Representative 1</li>
+                        <li class="job-title">Program Representative 2</li>
+                        <li class="job-title">Program Technician 1</li>
+                        <li class="job-title">Program Technician 2</li>
+                        <li class="job-title">Project Coordinator</li>
+                        <li class="job-title">Property Specialist 2</li>
+                        <li class="job-title">Property Specialist 3</li>
+                        <li class="job-title">Public Information Assistant</li>
+                        <li class="job-title">Public Information Representative 1</li>
+                        <li class="job-title">Public Information Representative 2</li>
+                        <li class="job-title">Purchasing Analyst 1</li>
+                        <li class="job-title">Purchasing Analyst 2</li>
+                        <li class="job-title">Purchasing Analyst 3</li>
+                        <li class="job-title">Radiation Protection Technologist 2</li>
+                        <li class="job-title">Radiation Protection Technologist 3</li>
+                        <li class="job-title">Refrigeration Mechanic</li>
+                        <li class="job-title">Registered Nurse 1</li>
+                        <li class="job-title">Registered Nurse 2</li>
+                        <li class="job-title">Research Analyst 1</li>
+                        <li class="job-title">Research Analyst 2</li>
+                        <li class="job-title">Research Analyst 3</li>
+                        <li class="job-title">Research Analyst 4</li>
+                        <li class="job-title">Science Lab Preparator</li>
+                        <li class="job-title">Science Storekeeper</li>
+                        <li class="job-title">Scientific Instrument Tech 1</li>
+                        <li class="job-title">Seed Analyst 1</li>
+                        <li class="job-title">Seed Analyst 2</li>
+                        <li class="job-title">Seed Certification Aide</li>
+                        <li class="job-title">Senior Graphic Designer</li>
+                        <li class="job-title">Senior Nuclear Reactor Operator</li>
+                        <li class="job-title">Ship’s 1st Assistant Engineer</li>
+                        <li class="job-title">Stage Production Coordinator</li>
+                        <li class="job-title">Teaching Assistant</li>
+                        <li class="job-title">Trades/Maintenance Coordinator</li>
+                        <li class="job-title">Trades/Maintenance Worker 1</li>
+                        <li class="job-title">Trades/Maintenance Worker 2</li>
+                        <li class="job-title">Training Specialist</li>
+                        <li class="job-title">Transporter</li>
+                        <li class="job-title">University Development Project Coordinator 1</li>
+                        <li class="job-title">Veterinary Assistant</li>
+                        <li class="job-title">Veterinary Central Services Technician</li>
+                        <li class="job-title">Veterinary Technician 2</li>
+                        <li class="job-title">Veterinary Technician 3</li>
+                        <li class="job-title">Videographer 1</li>
+                        <li class="job-title">Warehouse Coordinator</li>
+                        <li class="job-title">Warehouse Worker</li>
+                    </ul>
                 </div>
-                <div class="order-1 lg:order-2">
-                    <!-- ⚡ Bolt: Add loading="lazy" to defer offscreen images -->
-                    <img src="/images/8672a150-f638-4ad4-ba19-72ab754f74b8-homepage.webp" alt="SEIU 503 members rallying with signs" class="rounded-xl shadow-lg w-full h-auto object-cover" decoding="async" loading="lazy" width="1280" height="720">
-                </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Our Mission Section -->
-        <section id="mission">
-            <div class="bg-white p-8 md:p-12 rounded-xl border border-border-color text-center">
-                <h2 class="text-4xl font-bold mb-6">Our Mission</h2>
-                <p class="text-text-secondary leading-relaxed text-xl max-w-4xl mx-auto">
-                    To empower Oregon State University's classified employees by negotiating for fair contracts, defending our workplace rights, and fostering a united community to ensure a just and equitable environment for all.
-                </p>
-            </div>
-        </section>
+    <nav class="quick-nav" aria-label="About page sections">
+        <div class="container mx-auto px-4 flex min-w-max md:min-w-0 md:justify-center">
+            <a href="#who-we-are">Who we are</a>
+            <a href="#what-we-do">What we do</a>
+            <a href="#community">Community</a>
+            <a href="#membership">Membership</a>
+            <a href="#questions">Questions</a>
+        </div>
+    </nav>
 
-        <!-- What We Do Section -->
-        <section id="what-we-do">
-            <div class="bg-white p-8 md:p-12 rounded-xl border border-border-color">
-                <h2 class="text-4xl font-bold text-center mb-12">What We Do</h2>
-                <div class="grid md:grid-cols-3 gap-8 text-center">
-                    <div>
-                        <div class="flex justify-center mb-4">
-                            <span class="bg-brand-purple-light p-4 rounded-full">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-brand-purple" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
-                            </span>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-2">Defend Your Rights</h3>
-                        <p class="text-text-secondary">We ensure management respects our contract and protects members from unfair treatment through our trained steward network and legal support.</p>
-                    </div>
-                    <div>
-                        <div class="flex justify-center mb-4">
-                            <span class="bg-brand-purple-light p-4 rounded-full">
-                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-brand-purple" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">            <path stroke-linecap="round" stroke-linejoin="round" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" />
-                                </svg>
-                            </span>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-2">Negotiate Strong Contracts</h3>
-                        <p class="text-text-secondary">We bargain collectively for fair wages, affordable healthcare, a secure retirement, and safe working conditions for all classified staff.</p>
-                    </div>
-                    <div>
-                        <div class="flex justify-center mb-4">
-                            <span class="bg-brand-purple-light p-4 rounded-full">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-brand-purple" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
-                            </span>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-2">Build Worker Power</h3>
-                        <p class="text-text-secondary">Through organizing and collective action, we build the power necessary to make OSU a more just and equitable place for everyone. Our power is in our numbers and solidarity.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Our History Section -->
-        <section id="history">
-             <div class="bg-white p-8 md:p-12 rounded-xl border border-border-color">
-                <h2 class="text-4xl font-bold text-center mb-6">Our History</h2>
-                <p class="text-text-secondary leading-relaxed text-lg max-w-4xl mx-auto">For decades, SEIU Local 503 has been a powerful force for working people at Oregon State University and across the state. Our local at OSU was formed by a group of dedicated classified employees who understood that by uniting, they could win the pay, benefits, and respect they deserved. Through years of organizing, contract negotiations, and collective action, we've secured vital protections and improvements that have lifted up thousands of workers and their families. Our history is a testament to the power of solidarity, and we continue to build on that legacy every day.</p>
-            </div>
-        </section>
-
-        <!-- Our Values Section -->
-        <section id="values" class="bg-white p-8 md:p-12 rounded-xl border border-border-color">
-            <h2 class="text-4xl font-bold text-center mb-12">Our Core Values</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+    <div class="container mx-auto px-5 sm:px-6 py-14 md:py-20">
+        <section id="who-we-are" class="mb-20 md:mb-28" aria-labelledby="who-we-are-heading">
+            <div class="grid lg:grid-cols-[1.05fr_0.95fr] gap-10 lg:gap-16 items-center">
                 <div>
-                    <h3 class="text-2xl font-bold mb-2">Solidarity</h3>
-                    <p class="text-text-secondary">We believe that we are stronger together. An injury to one is an injury to all.</p>
+                    <span class="eyebrow">Is this my union?</span>
+                    <h2 id="who-we-are-heading" class="text-3xl md:text-5xl font-bold leading-tight">Local 083 represents classified staff across OSU.</h2>
+                    <p class="mt-5 text-lg text-text-secondary leading-relaxed">If your position is in the classified bargaining unit, Local 083 negotiates and enforces the contract that covers your work. We work in offices, kitchens, labs, shops, residence halls, classrooms, farms, forests and extension offices throughout Oregon.</p>
+                    <div class="mt-7 flex flex-col sm:flex-row gap-3">
+                        <a href="/resources/seiu_cba_2022-2026.pdf" class="button button-primary">Open Our Contract (PDF)</a>
+                        <a href="mailto:083stewards@seiu503.org?subject=Is%20my%20position%20represented%20by%20Local%20083%3F" class="button button-outline">Contact a Steward</a>
+                    </div>
                 </div>
-                <div>
-                    <h3 class="text-2xl font-bold mb-2">Equity</h3>
-                    <p class="text-text-secondary">We are committed to fighting for fairness and justice for all workers, regardless of background.</p>
-                </div>
-                <div>
-                    <h3 class="text-2xl font-bold mb-2">Democracy</h3>
-                    <p class="text-text-secondary">Our union is run by its members. Every member has a voice and a vote in our direction.</p>
-                </div>
-                <div>
-                    <h3 class="text-2xl font-bold mb-2">Integrity</h3>
-                    <p class="text-text-secondary">We operate with transparency and are accountable to our membership in all that we do.</p>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Our Structure Section -->
-        <section id="structure">
-            <div class="bg-white p-8 md:p-12 rounded-xl border border-border-color">
-                <h2 class="text-4xl font-bold text-center mb-6">Our Structure</h2>
-                <p class="text-text-secondary leading-relaxed text-lg max-w-4xl mx-auto">We are a member-led, democratic organization with a structure that empowers workers at every level. Our local at OSU, <strong>Sub-local 083</strong>, is part of the statewide <strong>SEIU Local 503</strong>, which represents over 72,000 public and non-profit workers across Oregon. SEIU 503 is, in turn, a part of the <strong>Service Employees International Union (SEIU)</strong>, an organization of 2 million members united to improve lives and the services we provide in Canada, the United States, and Puerto Rico. This structure connects our local efforts at OSU to a powerful statewide and international movement for worker justice.</p>
+                <aside class="bg-yellow-50 border border-yellow-200 rounded-xl p-6 sm:p-8" aria-label="What connects Local 083 members">
+                    <p class="eyebrow">What connects us</p>
+                    <h3 class="text-2xl md:text-3xl font-bold">We do different work. We negotiate one contract.</h3>
+                    <p class="mt-4 text-text-secondary leading-relaxed">Our collective bargaining agreement sets enforceable standards for wages, benefits, job security, leave, workplace processes and more.</p>
+                    <div class="mt-6 bg-violet-50 rounded-lg p-4">
+                        <p class="font-bold text-brand-purple-dark">A contract is only as strong as our ability to enforce it and improve it together.</p>
+                    </div>
+                </aside>
             </div>
         </section>
 
-        <!-- FAQ Section -->
-        <section id="faq">
-            <h2 class="text-4xl font-bold text-center mb-12">Frequently Asked Questions</h2>
-            <div class="max-w-3xl mx-auto space-y-4">
-                <details class="bg-white rounded-xl border border-border-color group overflow-hidden transition-all duration-300">
-                    <summary class="font-semibold text-lg cursor-pointer flex justify-between items-center p-6 transition-colors group-hover:bg-gray-50">
-                        <span>What is a Union?</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-brand-purple transform group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-                        </svg>
-                    </summary>
-                    <div class="p-6 pt-0 text-text-secondary">
-                        <p>A union is a democratic organization of employees in a workplace who join together to have a collective voice and improve their working conditions. By uniting, we have the power to negotiate a legally binding contract with our employer that covers things like wages, benefits, workplace safety, and job security. Instead of individuals having to negotiate on their own, we bargain as a group, giving us much more strength.</p>
-                    </div>
-                </details>
-                <details class="bg-white rounded-xl border border-border-color group overflow-hidden transition-all duration-300">
-                    <summary class="font-semibold text-lg cursor-pointer flex justify-between items-center p-6 transition-colors group-hover:bg-gray-50">
-                        <span>What is the difference between a Member and a Non-member?</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-brand-purple transform group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-                        </svg>
-                    </summary>
-                    <div class="p-6 pt-0 text-text-secondary">
-                        <p>All classified employees are covered by the benefits and protections of the contract our union negotiates, whether they are a member or not. However, our union is a democracy, and only <strong>members</strong> have a direct voice. Members have the exclusive right to vote on the contract, elect our leadership and bargaining team, and run for office. Becoming a member is a choice to actively participate and have a say in our collective future. Our power to win strong contracts comes from high membership, which shows management that we are united.</p>
-                    </div>
-                </details>
-                <details class="bg-white rounded-xl border border-border-color group overflow-hidden transition-all duration-300">
-                    <summary class="font-semibold text-lg cursor-pointer flex justify-between items-center p-6 transition-colors group-hover:bg-gray-50">
-                        <span>How are dues collected and used?</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-brand-purple transform group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-                        </svg>
-                    </summary>
-                    <div class="p-6 pt-0 text-text-secondary">
-                        <p>Union dues are an investment in our collective power and are automatically deducted from members' paychecks. They fund everything we need to win strong contracts and defend our rights. This includes the cost of skilled negotiators, legal support for grievances, organizing resources, training for volunteer stewards, and communications to keep everyone informed.</p>
-                    </div>
-                </details>
-                <details class="bg-white rounded-xl border border-border-color group overflow-hidden transition-all duration-300">
-                    <summary class="font-semibold text-lg cursor-pointer flex justify-between items-center p-6 transition-colors group-hover:bg-gray-50">
-                        <span>I have questions but am a Non-member, can I still get answers and help?</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-brand-purple transform group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-                        </svg>
-                    </summary>
-                    <div class="p-6 pt-0 text-text-secondary">
-                        <p>Absolutely. We believe in the rights and dignity of all workers. If you have questions about your rights at work, our contract, or what our union does, please reach out. We are happy to provide information and help you understand the benefits of joining your coworkers to build a stronger workplace for everyone.</p>
-                    </div>
-                </details>
-                <details class="bg-white rounded-xl border border-border-color group overflow-hidden transition-all duration-300">
-                    <summary class="font-semibold text-lg cursor-pointer flex justify-between items-center p-6 transition-colors group-hover:bg-gray-50">
-                        <span>Who runs our union?</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-brand-purple transform group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-                        </svg>
-                    </summary>
-                    <div class="p-6 pt-0 text-text-secondary">
-                        <p>Our union is a democracy run by its members. We elect our own leaders from among our coworkers here at OSU. These elected officers, who you can see on our <a href="leadership.html" class="text-brand-purple hover:underline">Leadership Page</a>, volunteer their time to run the local, lead negotiations, and represent our collective interests. Major decisions, like approving a contract or changing our bylaws, are made by a vote of the membership.</p>
-                    </div>
-                </details>
-                <details class="bg-white rounded-xl border border-border-color group overflow-hidden transition-all duration-300">
-                    <summary class="font-semibold text-lg cursor-pointer flex justify-between items-center p-6 transition-colors group-hover:bg-gray-50">
-                        <span>How does our union decide what to negotiate for?</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-brand-purple transform group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-                        </svg>
-                    </summary>
-                    <div class="p-6 pt-0 text-text-secondary">
-                        <p>Our bargaining priorities come directly from the members. Before contract negotiations begin, we conduct a comprehensive bargaining survey where all members can share their priorities and concerns. This feedback is used by our democratically elected bargaining team to develop our official proposals. We also hold meetings to discuss and refine these priorities. The final contract must then be approved by a vote of the members.</p>
-                    </div>
-                </details>
-                <details class="bg-white rounded-xl border border-border-color group overflow-hidden transition-all duration-300">
-                    <summary class="font-semibold text-lg cursor-pointer flex justify-between items-center p-6 transition-colors group-hover:bg-gray-50">
-                        <span>What are my rights in a disciplinary meeting?</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-brand-purple transform group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-                        </svg>
-                    </summary>
-                    <div class="p-6 pt-0 text-text-secondary">
-                        <p>You have the right to union representation in any investigatory interview with management that you reasonably believe could lead to discipline. These are called your <a href="/resources/weingarten-rights.html" class="text-brand-purple hover:underline">"Weingarten Rights."</a> You must clearly state that you want a steward present, as management is not required to inform you of this right.</p>
-                    </div>
-                </details>
-                <details class="bg-white rounded-xl border border-border-color group overflow-hidden transition-all duration-300">
-                    <summary class="font-semibold text-lg cursor-pointer flex justify-between items-center p-6 transition-colors group-hover:bg-gray-50">
-                        <span>How can I get more involved in our union?</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-brand-purple transform group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-                        </svg>
-                    </summary>
-                    <div class="p-6 pt-0 text-text-secondary">
-                        <p>There are many ways to get involved! Attending membership meetings is a great first step. You can also volunteer for a committee, help with events, or talk to your coworkers about becoming members. For those who want to take on a larger role, you can become a trained union steward to represent your colleagues. Check our <a href="events.html" class="text-brand-purple hover:underline">Events page</a> for upcoming meetings and opportunities.</p>
-                    </div>
-                </details>
+        <section id="what-we-do" class="mb-20 md:mb-28" aria-labelledby="what-we-do-heading">
+            <div class="section-heading">
+                <span class="eyebrow">What our union makes possible</span>
+                <h2 id="what-we-do-heading" class="text-3xl md:text-5xl font-bold leading-tight">We solve workplace problems together.</h2>
+                <p class="text-lg text-text-secondary leading-relaxed">Members share information, support coworkers and act together on the issues that matter.</p>
+            </div>
+            <div class="work-list">
+                <article class="work-list-item">
+                    <span class="work-list-number">01</span>
+                    <h3>Bargain fair contracts</h3>
+                    <p>We negotiate together for fair pay, benefits, job security and working conditions.</p>
+                </article>
+                <article class="work-list-item">
+                    <span class="work-list-number">02</span>
+                    <h3>Defend our rights</h3>
+                    <p>Our trained stewards help coworkers understand the contract and address workplace concerns.</p>
+                </article>
+                <article class="work-list-item">
+                    <span class="work-list-number">03</span>
+                    <h3>Organize for change</h3>
+                    <p>We turn individual concerns into shared priorities and coordinated action.</p>
+                </article>
+                <article class="work-list-item">
+                    <span class="work-list-number">04</span>
+                    <h3>Connect across Oregon</h3>
+                    <p>We build relationships across worksites, job types and all 36 Oregon counties.</p>
+                </article>
+            </div>
+            <aside class="content-card mt-8 p-6 sm:p-8 grid md:grid-cols-[1fr_auto] gap-6 items-center" aria-labelledby="member-led-heading">
+                <div>
+                    <span class="eyebrow">Member-led</span>
+                    <h3 id="member-led-heading" class="text-2xl md:text-3xl font-bold">Our union is what we build together.</h3>
+                    <p class="mt-3 text-text-secondary leading-relaxed">Members identify workplace problems, choose priorities, elect leaders and vote on tentative agreements.</p>
+                </div>
+                <a href="/leadership.html" class="button button-outline">Meet our elected leaders</a>
+            </aside>
+        </section>
+
+        <section id="community" class="mb-20 md:mb-28" aria-labelledby="community-heading">
+            <div class="grid lg:grid-cols-[0.88fr_1.12fr] gap-10 lg:gap-16 items-center">
+                <div>
+                    <span class="eyebrow">A union is a community</span>
+                    <h2 id="community-heading" class="text-3xl md:text-5xl font-bold leading-tight">Relationships are how we become stronger.</h2>
+                    <p class="mt-5 text-lg text-text-secondary leading-relaxed">At work, at meetings and at community events, relationships help us recognize shared problems and stand up for one another.</p>
+                    <a href="/events.html" class="button button-outline mt-6">See upcoming events</a>
+                </div>
+                <div class="photo-grid" aria-label="Local 083 members in community">
+                    <figure>
+                        <img src="/images/8672a150-f638-4ad4-ba19-72ab754f74b8-homepage-480w.webp" srcset="/images/8672a150-f638-4ad4-ba19-72ab754f74b8-homepage-480w.webp 480w, /images/8672a150-f638-4ad4-ba19-72ab754f74b8-homepage-960w.webp 960w" sizes="(max-width: 767px) 100vw, 34vw" alt="Local 083 members rally on campus with signs calling for fair pay and respect" width="1280" height="720" loading="lazy" decoding="async">
+                        <figcaption>Members rally together on campus</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="/images/719dac94-a776-4f31-b327-08861bd991d5-icecream-480w.webp" srcset="/images/719dac94-a776-4f31-b327-08861bd991d5-icecream-480w.webp 480w, /images/719dac94-a776-4f31-b327-08861bd991d5-icecream-900w.webp 900w" sizes="(max-width: 767px) 100vw, 34vw" alt="Local 083 members gather outdoors for a solidarity ice cream social" width="900" height="500" loading="lazy" decoding="async">
+                        <figcaption>August 2025 solidarity ice cream social</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="/images/70197688-ecfb-482c-890e-6902b235e21e-2025-10-23-Kary-Bowling-480w.webp" srcset="/images/70197688-ecfb-482c-890e-6902b235e21e-2025-10-23-Kary-Bowling-480w.webp 480w, /images/70197688-ecfb-482c-890e-6902b235e21e-2025-10-23-Kary-Bowling-960w.webp 960w" sizes="(max-width: 767px) 100vw, 34vw" alt="A Local 083 member rolls an orange bowling ball at the OSU bowling alley" width="5091" height="2864" loading="lazy" decoding="async">
+                        <figcaption>October 2025 member and family bowling night</figcaption>
+                    </figure>
+                </div>
             </div>
         </section>
 
-        <!-- Get Involved Section -->
-        <section id="involved" class="text-center bg-brand-purple-light py-16 rounded-xl">
-            <div class="container mx-auto px-6">
-                <h2 class="text-4xl font-bold text-brand-purple-dark mb-4">Ready to Join Us?</h2>
-                <p class="text-text-secondary max-w-2xl mx-auto mb-8 text-lg">Our strength is our members. Join our union to build a better Oregon State University for all classified staff. Your voice and participation are critical to our success.</p>
-                <a href="https://seiu503signup.org" class="btn btn-primary">Become a Member Today</a>
+        <section id="membership" class="mb-20 md:mb-28" aria-labelledby="membership-heading">
+            <div class="section-heading mx-auto text-center">
+                <span class="eyebrow">Representation and membership</span>
+                <h2 id="membership-heading" class="text-3xl md:text-5xl font-bold leading-tight">Your contract covers your job. Membership gives you a vote.</h2>
+                <p class="text-lg text-text-secondary leading-relaxed">Every worker in our bargaining unit benefits from the protections members have won. Joining gives you a direct voice in the decisions that shape our union.</p>
+            </div>
+            <div class="membership-split max-w-6xl mx-auto">
+                <article class="membership-column">
+                    <span class="eyebrow">If your job is represented</span>
+                    <h3 class="text-2xl font-bold">Our contract protects your work.</h3>
+                    <ul>
+                        <li>Negotiated wages and benefits</li>
+                        <li>Workplace processes management must follow</li>
+                        <li>Access to union representation and steward support</li>
+                    </ul>
+                    <a href="/resources.html" class="button button-outline mt-6">Explore your rights</a>
+                </article>
+                <article class="membership-column member-feature">
+                    <span class="eyebrow">Become a Member</span>
+                    <h3 class="text-3xl md:text-4xl font-bold">Your voice should help decide what happens next.</h3>
+                    <p class="mt-4">Full membership gives you a vote and a direct role in setting the priorities our union carries forward.</p>
+                    <ul>
+                        <li>Vote on tentative contracts and local elections</li>
+                        <li>Help set bargaining and workplace priorities</li>
+                        <li>Organize with coworkers to build more power</li>
+                    </ul>
+                    <a href="https://seiu503signup.org/" class="button button-yellow member-join-button mt-7">Become a Member</a>
+                </article>
             </div>
         </section>
 
+        <section id="questions" class="mb-20 md:mb-28" aria-labelledby="questions-heading">
+            <div class="grid lg:grid-cols-[0.78fr_1.22fr] gap-10 lg:gap-16">
+                <div>
+                    <span class="eyebrow">Common questions</span>
+                    <h2 id="questions-heading" class="text-3xl md:text-5xl font-bold leading-tight">About Local 083</h2>
+                    <p class="mt-5 text-lg text-text-secondary leading-relaxed">Still unsure where to start? Our stewards can help you understand your rights and find the right next step.</p>
+                    <a href="mailto:083stewards@seiu503.org" class="button button-outline mt-6">Email our stewards</a>
+                </div>
+                <div>
+                    <details>
+                        <summary>Who does Local 083 represent at OSU?</summary>
+                        <p>Local 083 represents classified staff across Oregon State University, including administrative staff, food service workers, custodians, IT professionals, researchers, tradespeople and many other coworkers who keep OSU running.</p>
+                    </details>
+                    <details>
+                        <summary>What is the difference between being represented and being a member?</summary>
+                        <p>Workers in our bargaining unit are covered by our contract. Full members also have a direct vote in contract ratification and union elections and can take a fuller role in setting priorities and building our union.</p>
+                    </details>
+                    <details>
+                        <summary>What does a union steward do?</summary>
+                        <p>Stewards are trained coworkers who help members understand the contract, prepare for workplace meetings and address concerns with management.</p>
+                    </details>
+                    <details>
+                        <summary>How are decisions made in Local 083?</summary>
+                        <p>Members shape priorities through workplace conversations, surveys, meetings and votes. Members elect local leaders and vote on tentative agreements.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <section class="final-cta" aria-labelledby="final-cta-heading">
+            <div class="grid md:grid-cols-[1fr_auto] gap-8 items-center">
+                <div>
+                    <span class="text-sm font-extrabold uppercase tracking-[0.15em] text-purple-200">Your workplace. Your voice. Our union.</span>
+                    <h2 id="final-cta-heading" class="mt-3 text-3xl md:text-5xl font-bold leading-tight">Help shape what we win next.</h2>
+                    <p class="mt-4 text-lg text-purple-100 max-w-2xl leading-relaxed">Join, get workplace help or meet coworkers at an upcoming event.</p>
+                </div>
+                <div class="flex flex-col gap-3 min-w-[13rem]">
+                    <a href="https://seiu503signup.org/" class="button button-yellow">Become a Member</a>
+                    <a href="/resources/stewards.html" class="button button-light">Find a Steward</a>
+                    <a href="/events.html" class="button button-light">View Events</a>
+                </div>
+            </div>
+        </section>
+    </div>
     </main>
 
-                    <footer class="bg-gray-100 pt-12 pb-8 text-text-primary">
+    <!-- SITE SHELL: FOOTER START -->
+    <footer class="bg-gray-100 pt-12 pb-8 text-text-primary border-t border-gray-200" data-site-shell-footer>
         <div class="container mx-auto px-6">
-            <div class="mt-10 pt-8 border-t border-gray-700 text-center">
-            </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Column 1: About the Union -->
                 <div class="md:col-span-2 lg:col-span-1">
                     <div class="flex items-center mb-4">
-                        <img src="/images/logo.png" alt="SEIU 503 Logo" class="h-12 w-12 mr-3 bg-white p-1 rounded">
-                        <div>
-                            <h3 class="text-xl font-bold">SEIU Local 503</h3>
-                            <p class="text-text-secondary text-sm">Oregon State University</p>
-                        </div>
+                        <img src="/images/logo.png" alt="SEIU 503 logo" class="h-12 w-12 mr-3 bg-white p-1 rounded" width="48" height="48" loading="lazy" decoding="async">
+                        <div><h3 class="text-xl font-bold">SEIU Local 503</h3><p class="text-text-secondary text-sm">Oregon State University</p></div>
                     </div>
-                    <p class="text-text-secondary leading-relaxed">Representing the classified employees of Oregon State University. We fight for fair contracts, defend workplace rights, and build a united community.</p>
+                    <p class="text-text-secondary leading-relaxed">Our member-led union represents classified staff at Oregon State University. Together, we bargain fair contracts, defend our rights and build power at work.</p>
                 </div>
-    
-                <!-- Column 2: Quick Links -->
                 <div>
-                    <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase">Quick Links</h4>
+                    <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase">Quick links</h4>
                     <ul class="space-y-3">
-                        <li><a href="/about.html" class="text-text-secondary hover:text-brand-purple transition-colors">About Us</a></li>
+                        <li><a href="/about.html" class="text-text-secondary hover:text-brand-purple transition-colors">About our union</a></li>
                         <li><a href="/events.html" class="text-text-secondary hover:text-brand-purple transition-colors">Events</a></li>
                         <li><a href="/news.html" class="text-text-secondary hover:text-brand-purple transition-colors">News</a></li>
                         <li><a href="/leadership.html" class="text-text-secondary hover:text-brand-purple transition-colors">Leadership</a></li>
                     </ul>
                 </div>
-    
-                <!-- Column 3: Resources -->
                 <div>
                     <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase"><a href="/resources.html" class="hover:text-brand-purple transition-colors">Resources</a></h4>
                     <ul class="space-y-3">
-                        <li><a href="/resources.html" class="text-text-secondary hover:text-brand-purple transition-colors">Resources & Rights</a></li>
+                        <li><a href="/resources.html" class="text-text-secondary hover:text-brand-purple transition-colors">Resources &amp; Rights</a></li>
                         <li><a href="/resources/seiu_cba_2022-2026.pdf" class="text-text-secondary hover:text-brand-purple transition-colors">Our Contract (PDF)</a></li>
                         <li><a href="/resources/stewards.html" class="text-text-secondary hover:text-brand-purple transition-colors">Find a Steward</a></li>
                         <li><a href="/resources/weingarten-rights.html" class="text-text-secondary hover:text-brand-purple transition-colors">Weingarten Rights</a></li>
                     </ul>
                 </div>
-    
-                <!-- Column 4: Contact -->
                 <div>
-                    <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase"><a href="/contact.html" class="hover:text-brand-purple transition-colors">Contact Us</a></h4>
-                     <ul class="space-y-3 text-text-secondary">
-                        <li class="flex items-start">
-                            <span class="mr-2 mt-1">✉️</span> <!-- Mail icon -->
-                            <a href="mailto:083execteam@seiu503.org" class="hover:text-brand-purple transition-colors">083execteam@seiu503.org</a>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="mr-2 mt-1">✉️</span> <!-- Mail icon -->
-                            <a href="mailto:083stewards@seiu503.org" class="hover:text-brand-purple transition-colors">083stewards@seiu503.org</a>
-                        </li>
+                    <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase"><a href="/contact.html" class="hover:text-brand-purple transition-colors">Contact us</a></h4>
+                    <ul class="space-y-3">
+                        <li><a href="mailto:083execteam@seiu503.org" class="text-text-secondary hover:text-brand-purple transition-colors break-all">083execteam@seiu503.org</a></li>
+                        <li><a href="mailto:083stewards@seiu503.org" class="text-text-secondary hover:text-brand-purple transition-colors break-all">083stewards@seiu503.org</a></li>
                     </ul>
                 </div>
             </div>
-    
-            <!-- Bottom Bar -->
-            <div class="mt-10 pt-8 border-t border-gray-700 text-center space-y-2">
-                <p class="text-text-secondary text-sm">&copy; 2026 SEIU Local 503, Sublocal 083. All rights reserved.</p>
-                <p class="text-text-secondary text-xs">
-                    <a href="#" class="underline hover:text-brand-purple" onclick="event.preventDefault(); (localStorage.getItem('ph_opt_out') === '1' ? phOptIn() : phOptOut());">
-                        Privacy settings
-                    </a>
-                </p>
+            <div class="mt-10 pt-8 border-t border-gray-300 text-center space-y-2">
+                <p class="text-text-secondary text-sm">&copy; 2026 SEIU Local 503, Local 083. All rights reserved.</p>
+                <p class="text-text-secondary text-xs"><a class="underline hover:text-brand-purple" href="/privacy.html#analytics-controls">Tracking settings</a><span aria-hidden="true"> · </span><a class="underline hover:text-brand-purple" href="/privacy.html">Privacy notice</a></p>
             </div>
         </div>
     </footer>
+<!-- SITE SHELL: FOOTER END -->
 
     <script>
-        // --- Mobile Menu Toggle ---
+        const jobsTrack = document.querySelector('.jobs-track');
+        const jobsGroup = document.querySelector('.jobs-group');
+        const jobsViewport = document.querySelector('.jobs-viewport');
+        const reduceTickerMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+        if (jobsTrack && jobsGroup && jobsViewport && !reduceTickerMotion.matches) {
+            const repeatedJobs = jobsGroup.cloneNode(true);
+            repeatedJobs.setAttribute('aria-hidden', 'true');
+            jobsTrack.appendChild(repeatedJobs);
+
+            const cruiseSpeed = 26;
+            const easingRate = 1.55;
+            let currentSpeed = cruiseSpeed;
+            let targetSpeed = cruiseSpeed;
+            let offset = 0;
+            let loopWidth = jobsGroup.getBoundingClientRect().width;
+            let previousTime = performance.now();
+            let tickerVisible = true;
+
+            const refreshTickerWidth = () => {
+                loopWidth = jobsGroup.getBoundingClientRect().width;
+                if (loopWidth > 0) offset %= loopWidth;
+            };
+
+            const setTickerTarget = (speed) => {
+                targetSpeed = speed;
+            };
+
+            const moveTicker = (time) => {
+                if (document.hidden || !tickerVisible) {
+                    previousTime = time;
+                    requestAnimationFrame(moveTicker);
+                    return;
+                }
+                const elapsed = Math.min((time - previousTime) / 1000, 0.05);
+                previousTime = time;
+                const easingAmount = 1 - Math.exp(-easingRate * elapsed);
+                currentSpeed += (targetSpeed - currentSpeed) * easingAmount;
+                offset -= currentSpeed * elapsed;
+
+                if (loopWidth > 0 && offset <= -loopWidth) offset += loopWidth;
+                jobsTrack.style.transform = `translate3d(${offset}px, 0, 0)`;
+                requestAnimationFrame(moveTicker);
+            };
+
+            jobsViewport.addEventListener('pointerenter', () => setTickerTarget(0));
+            jobsViewport.addEventListener('pointerleave', () => setTickerTarget(cruiseSpeed));
+            jobsViewport.addEventListener('focusin', () => setTickerTarget(0));
+            jobsViewport.addEventListener('focusout', (event) => {
+                if (!jobsViewport.contains(event.relatedTarget)) setTickerTarget(cruiseSpeed);
+            });
+
+            window.addEventListener('resize', refreshTickerWidth, { passive: true });
+            if ('IntersectionObserver' in window) {
+                new IntersectionObserver(([entry]) => { tickerVisible = entry.isIntersecting; }, { rootMargin: '100px' }).observe(jobsViewport);
+            }
+            document.addEventListener('visibilitychange', () => { previousTime = performance.now(); });
+            if (document.fonts && document.fonts.ready) document.fonts.ready.then(refreshTickerWidth);
+            requestAnimationFrame(moveTicker);
+        }
+
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
-        const navLinks = document.querySelectorAll('#mobile-menu a');
 
         mobileMenuButton.addEventListener('click', () => {
             const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
-            mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
+            mobileMenuButton.setAttribute('aria-expanded', String(!isExpanded));
+            mobileMenuButton.setAttribute('aria-label', isExpanded ? 'Open menu' : 'Close menu');
             mobileMenu.classList.toggle('hidden');
         });
 
-        navLinks.forEach(link => {
+        document.querySelectorAll('#mobile-menu a').forEach((link) => {
             link.addEventListener('click', () => {
                 mobileMenu.classList.add('hidden');
                 mobileMenuButton.setAttribute('aria-expanded', 'false');
+                mobileMenuButton.setAttribute('aria-label', 'Open menu');
             });
+        });
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape' && mobileMenuButton.getAttribute('aria-expanded') === 'true') {
+                mobileMenu.classList.add('hidden');
+                mobileMenuButton.setAttribute('aria-expanded', 'false');
+                mobileMenuButton.setAttribute('aria-label', 'Open menu');
+                mobileMenuButton.focus();
+            }
         });
     </script>
 </body>

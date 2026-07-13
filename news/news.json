@@ -1,5 +1,26 @@
 [
   {
+    "status": "scheduled",
+    "title": "More than 140 rally at Oregon State for fair classified staff contract",
+    "description": "More than 140 members and supporters rallied at McNary Field and marched to Kerr Administration Building on June 30, the day our previous contract expired.",
+    "url": "/news/2026-07-01-mcnary-field-rally-recap.html",
+    "image": "/images/2cef7759-042d-4a05-9496-7eefff439a5e-june-30-rally-speaker-and-crowd.webp",
+    "alt": "OSU bargaining delegate Damien Manassa addresses Local 083 members and supporters holding SEIU signs at McNary Field",
+    "tags": [
+      "Bargaining",
+      "Rally",
+      "2026 Bargaining"
+    ],
+    "author": {
+      "name": "SEIU Local 503, Local 083",
+      "title": "Local 083"
+    },
+    "publishedAt": "2026-07-13",
+    "createdAt": "2026-07-13",
+    "updatedAt": "2026-07-13",
+    "featured": true
+  },
+  {
     "title": "July 16 membership meeting moved to MU 215",
     "description": "The July 16 Local 083 membership meeting has moved from MU 211 to MU 215 after a double-booking. Join us at noon for TOGO'S sandwiches.",
     "url": "/news/2026-07-10-membership-meeting-room-change.html",
@@ -12,7 +33,7 @@
     ],
     "author": {
       "name": "Jax SN Johnson",
-      "title": "President, SEIU Local 503 Sublocal 083"
+      "title": "President, SEIU Local 503, Local 083"
     },
     "publishedAt": "2026-07-10",
     "createdAt": "2026-07-10",
@@ -21,7 +42,7 @@
   },
   {
     "title": "Our union bargaining update: 0% COLAs and a 19-year step path",
-    "description": "Our bargaining team reports on management's latest offer: 0% COLAs over four years, a 19-year step path, and proposed rollbacks to member rights.",
+    "description": "Our bargaining team reports that management's latest offer includes zero percent COLAs over four years, a 19-year step path and proposed rollbacks to member rights.",
     "url": "/news/2026-07-09-latest-bargaining-update.html",
     "image": "/images/2026-bargaining-zoom-backgrounds.webp",
     "alt": "Purple 2026 higher education bargaining graphic with raised fists and campus mascots",
@@ -37,11 +58,11 @@
     "publishedAt": "2026-07-09",
     "createdAt": "2026-07-09",
     "updatedAt": "2026-07-09",
-    "featured": true
+    "featured": false
   },
   {
     "title": "Management's disrespectful offer? We say HELL NO!",
-    "description": "Stand with our coworkers and email OSU President Jayathi Murthy: reject 0% COLAs, a 19-year step path, and rollbacks to our rights.",
+    "description": "Stand with our coworkers and email OSU President Jayathi Murthy: Reject zero percent COLAs, a 19-year step path and rollbacks to our rights.",
     "url": "/news/2026-07-09-tell-universities-hell-no.html",
     "image": "/images/2026-bargaining-zoom-backgrounds.webp",
     "alt": "Purple 2026 higher education bargaining graphic with raised fists and campus mascots",
@@ -51,7 +72,7 @@
       "2026 Bargaining"
     ],
     "author": {
-      "name": "SEIU 503 Sublocal 083",
+      "name": "SEIU Local 503, Local 083",
       "title": "Union Leadership"
     },
     "publishedAt": "2026-07-09",
@@ -70,7 +91,7 @@
       "Economics"
     ],
     "author": {
-      "name": "SEIU 503 Sublocal 083",
+      "name": "SEIU Local 503, Local 083",
       "title": "Union Leadership"
     },
     "publishedAt": "2026-05-07",
@@ -79,8 +100,8 @@
     "featured": false
   },
   {
-    "title": "Introducing Our New Sublocal 083 Leadership Team",
-    "description": "SEIU 503 Sublocal 083 introduces its new executive leadership team and authorized steward roster in a memo sent to OSU Employee and Labor Relations.",
+    "title": "Introducing our new Local 083 leadership team",
+    "description": "SEIU Local 503, Local 083 introduces its new executive leadership team and authorized steward roster in a memo sent to OSU Employee and Labor Relations.",
     "url": "/news/2026-04-21-new-sublocal-083-leadership-team.html",
     "image": "/images/card.webp",
     "alt": "SEIU Local 503 at Oregon State University card graphic",
@@ -90,7 +111,7 @@
     ],
     "author": {
       "name": "Jax SN Johnson",
-      "title": "President & Comms Chair, SEIU 503 Sublocal 083"
+      "title": "President & Comms Chair, SEIU Local 503, Local 083"
     },
     "publishedAt": "2026-04-21",
     "createdAt": "2026-04-21",
@@ -108,7 +129,7 @@
       "Update"
     ],
     "author": {
-      "name": "SEIU 503 Sublocal 083",
+      "name": "SEIU Local 503, Local 083",
       "title": "Union Leadership"
     },
     "publishedAt": "2026-04-16",
@@ -127,7 +148,7 @@
       "Update"
     ],
     "author": {
-      "name": "SEIU 503 Sublocal 083",
+      "name": "SEIU Local 503, Local 083",
       "title": "Union Leadership"
     },
     "publishedAt": "2026-02-12",
@@ -146,7 +167,7 @@
       "Contract"
     ],
     "author": {
-      "name": "SEIU 503 Sublocal 083",
+      "name": "SEIU Local 503, Local 083",
       "title": "Union Leadership"
     },
     "publishedAt": "2026-01-09",
@@ -165,7 +186,7 @@
       "Action"
     ],
     "author": {
-      "name": "SEIU 503 Sublocal 083",
+      "name": "SEIU Local 503, Local 083",
       "title": "Union Leadership"
     },
     "publishedAt": "2026-02-04",
@@ -184,7 +205,7 @@
       "Action"
     ],
     "author": {
-      "name": "SEIU 503 Sublocal 083",
+      "name": "SEIU Local 503, Local 083",
       "title": "Union Leadership"
     },
     "publishedAt": "2025-12-15",
@@ -194,7 +215,7 @@
   },
   {
     "title": "Your Voice, Our Contract: Bargaining Survey Reminder",
-    "description": "An update from the bargaining committee on the contract survey and the importance of member participation.",
+    "description": "An update from the bargaining committee on the contract survey and the importance of members taking part.",
     "url": "/news/2025-11-03-bargaining-survey-update.html",
     "image": "/images/01d4b1b3-b65e-4614-9618-4eeba50f6407-Barg-Update.webp",
     "alt": "Graphic with text 'Bargaining Update' and SEIU 503 logo",
@@ -296,7 +317,7 @@
       "Benefits"
     ],
     "author": {
-      "name": "SEIU 503 Sublocal 083",
+      "name": "SEIU Local 503, Local 083",
       "title": "Union Leadership"
     },
     "status": "review",
