@@ -35,7 +35,3 @@
 ## 2024-05-18 - [RegExp Instantiation in Loops]
 **Learning:** [Instantiating `new RegExp()` inside rendering loops (like `Array.prototype.map()`) when the pattern is constant causes redundant pattern compilation and object creation on every iteration, harming performance. Furthermore, it's safe to hoist global RegExp instances (e.g., with the 'g' or 'gi' flag) outside of rendering loops and reuse them with `String.prototype.replace()`, because `replace()` automatically ignores and resets the regex's `lastIndex` property, preventing state leakage across loop iterations.]
 **Action:** [Always hoist `new RegExp()` instantiations outside the loop when the pattern (such as a search query) remains constant.]
-
-## 2024-05-18 - [Optimized Event Grouping by Month]
-**Learning:** [Grouping elements by a time period (like months) by creating a `new Date()` and formatting it via `Intl.DateTimeFormat` for each item is an O(N) performance bottleneck. ISO-8601 strings can be grouped much more efficiently by extracting the substring key directly (e.g. `YYYY-MM`).]
-**Action:** [Use `event.date.substring(0, 7)` to group events, and only format the month string once per unique group key, reducing expensive date operations from O(N) to O(1) per group.]
