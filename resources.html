@@ -341,7 +341,7 @@
                 <a class="resource-card" data-category="tools" data-search="salary pay wages report osu classified compensation" href="https://hr.oregonstate.edu/employees/administrators-supervisors/classification-compensation/salary-reports"><span class="resource-type">OSU information</span><h3>OSU Salary Reports</h3><p>Review salary information published by Oregon State University.</p><span class="card-link">Visit OSU →</span></a>
                 <a class="resource-card" data-category="tools" data-search="member benefits discounts seiu advantages" href="https://www.seiumb.com"><span class="resource-type">Member benefit</span><h3>SEIU Member Benefits</h3><p>Explore benefit and discount programs available to SEIU members.</p><span class="card-link">Explore benefits →</span></a>
                 <a class="resource-card" data-category="tools" data-search="costco membership bonus new member" href="/resources/costco.html"><span class="resource-type">Member benefit</span><h3>Costco Membership Bonus</h3><p>Information about the current membership promotion.</p><span class="card-link">See the details →</span></a>
-                <div class="empty-state" id="empty-state"><strong>No resources matched that search.</strong><br>Try a broader word or choose “All.”</div>
+                <div class="empty-state" id="empty-state" role="status"><strong>No resources matched that search.</strong><br>Try a broader word or choose “All.”<br><button id="reset-library-btn" class="filter-button" style="margin-top: 1rem;">Clear Search &amp; Filters</button></div>
             </div>
 
         </section>
@@ -444,6 +444,16 @@
             filters.forEach((item) => item.setAttribute('aria-pressed', String(item === button)));
             renderResources();
         }));
+
+        const resetLibraryBtn = document.getElementById('reset-library-btn');
+        if (resetLibraryBtn) {
+            resetLibraryBtn.addEventListener('click', () => {
+                librarySearch.value = '';
+                category = 'all';
+                filters.forEach((item) => item.setAttribute('aria-pressed', String(item.dataset.category === 'all')));
+                renderResources();
+            });
+        }
     </script>
 </body>
 </html>
