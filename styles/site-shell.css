@@ -26,6 +26,18 @@
     display: block !important;
 }
 
+/*
+ * Page layouts use different container widths, so the shared navigation must
+ * not inherit the page-local `.container` maximum. Keep its alignment stable
+ * as visitors move between top-level pages.
+ */
+[data-site-shell-header] > nav[aria-label="Primary navigation"] {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 80rem;
+    margin-inline: auto;
+}
+
 body[data-site-shell-added] {
     display: grid !important;
     grid-template-rows: auto 1fr auto;
