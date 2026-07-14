@@ -24,3 +24,6 @@ Critical UX/accessibility learnings only.
 ## 2026-05-18 - [Add required indicators to critical inputs]
 **Learning:** Users and screen readers need clear indicators for mandatory fields, even outside of traditional <form> submissions (e.g., calculator inputs). Relying on implicit requirement degrades UX and accessibility.
 **Action:** Always add `required` and `aria-required="true"` attributes to essential <input> elements, and pair them with a visual indicator (like a red * with `aria-hidden="true"`) in the associated <label>.
+## 2026-07-14 - [Add clear button to empty states]
+**Learning:** When dynamically generating empty UI states for lists/searches (like the resource library), providing an actionable button (e.g., "Clear Search & Filters") directly inside the empty state allows users to quickly reset their context without needing to hunt for the original controls. Coupling this with `role="status"` ensures screen readers announce the empty result.
+**Action:** Always include a reset button and `role="status"` on dynamically rendered empty states for filtered lists to improve recovery and accessibility.
