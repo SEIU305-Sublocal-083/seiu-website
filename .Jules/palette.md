@@ -27,3 +27,6 @@ Critical UX/accessibility learnings only.
 ## 2026-07-14 - [Add clear button to empty states]
 **Learning:** When dynamically generating empty UI states for lists/searches (like the resource library), providing an actionable button (e.g., "Clear Search & Filters") directly inside the empty state allows users to quickly reset their context without needing to hunt for the original controls. Coupling this with `role="status"` ensures screen readers announce the empty result.
 **Action:** Always include a reset button and `role="status"` on dynamically rendered empty states for filtered lists to improve recovery and accessibility.
+## 2026-07-15 - [Visually distinctive empty states]
+**Learning:** Using generic plain text for empty UI states (like zero search results or empty lists) is poor UX. Replacing them with a visually distinct component comprising an SVG icon, descriptive text, and a clear call-to-action button, while also adding the ARIA `role="status"`, improves both user recovery and screen reader accessibility.
+**Action:** Always prefer rich, accessible empty state components with clear actions over plain text.
