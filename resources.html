@@ -70,7 +70,7 @@
 
         .resource-intro { background: radial-gradient(circle at 88% 8%, rgba(255, 191, 24, 0.12), transparent 24rem), linear-gradient(180deg, #fff, #faf9ff); border-bottom: 1px solid var(--line); padding-block: 2.8rem 2.65rem; }
         .intro-grid { align-items: center; display: grid; gap: 2rem; grid-template-columns: minmax(0, 1.5fr) minmax(16rem, 0.5fr); }
-        .resource-intro h1 { font-size: clamp(2.5rem, 4.4vw, 3.85rem); letter-spacing: -0.035em; line-height: 1.02; margin: 0.65rem 0 0; max-width: 50rem; }
+        .resource-intro h1 { margin: 0.65rem 0 0; max-width: 50rem; }
         .resource-intro p { color: var(--muted); font-size: clamp(1rem, 1.5vw, 1.15rem); line-height: 1.65; margin: 1rem 0 0; max-width: 45rem; }
         .help-note { background: var(--purple-950); border-radius: 1.1rem; color: #fff; justify-self: end; max-width: 20rem; padding: 1.35rem; }
         .help-note .eyebrow { color: #fde68a; }
@@ -161,7 +161,6 @@
         @media (max-width: 520px) {
             .container { padding-inline: 1rem; }
             .resource-grid { grid-template-columns: 1fr; }
-            .resource-intro h1 { font-size: 2.65rem; }
             .rights-feature { padding: 1.35rem; }
             .footer-grid { grid-template-columns: 1fr; }
             .footer-about { grid-column: auto; }
@@ -272,7 +271,7 @@
             <div class="container intro-grid">
                 <div>
                     <span class="eyebrow">For Oregon State classified staff</span>
-                    <h1>Resources &amp; Rights</h1>
+                    <h1 class="text-4xl md:text-6xl font-bold leading-[1.04] tracking-tight">Resources &amp; Rights</h1>
                     <p>Start with what is happening at work, then open the guide, contract or steward contact you need.</p>
                     <p style="font-size:.78rem;font-weight:700;margin-top:.75rem">Rights and resource links reviewed July 12, 2026.</p>
                 </div>

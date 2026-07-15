@@ -27,6 +27,11 @@ class SyncSiteShellTests(unittest.TestCase):
         self.assertIn("--brand-purple: #7c3aed", styles)
         self.assertIn("--text-secondary: #374151", styles)
         self.assertIn("font-family: 'Inter'", styles)
+        self.assertIn(
+            '[data-site-shell-header] > nav[aria-label="Primary navigation"]',
+            styles,
+        )
+        self.assertIn("max-width: 80rem", styles)
 
     def test_replaces_shell_but_preserves_article_header_and_body(self):
         updated = shell.sync_source(PAGE, "news/story.html")

@@ -54,7 +54,7 @@
 
         .contact-intro { background:radial-gradient(circle at 82% 10%, rgba(255,191,24,.15), transparent 22rem), linear-gradient(180deg,#fff,#faf9ff); border-bottom:1px solid var(--line); padding-block:3.4rem 3rem; }
         .intro-layout { align-items:end; display:grid; gap:2rem; grid-template-columns:minmax(0,1.25fr) minmax(17rem,.55fr); }
-        .contact-intro h1 { font-size:clamp(2.8rem,5.5vw,4.8rem); letter-spacing:-.04em; line-height:.99; margin:.65rem 0 0; }
+        .contact-intro h1 { margin:.65rem 0 0; }
         .contact-intro p { color:var(--muted); font-size:1.05rem; line-height:1.65; margin:1rem 0 0; max-width:46rem; }
         .best-way { background:var(--purple-950); border-radius:1rem; color:#fff; padding:1.25rem; }
         .best-way .eyebrow { color:#fde68a; }
@@ -124,7 +124,7 @@
 
         @media (max-width:900px) { .intro-layout,.prepare-layout { grid-template-columns:1fr; } .best-way { max-width:35rem; } .urgent-inner { grid-template-columns:auto minmax(0,1fr); } .urgent-links { grid-column:1 / -1; } }
         @media (max-width:800px) { .desktop-nav { display:none; } .mobile-menu-button { display:inline-grid; place-items:center; } .brand span { display:none; } .contact-intro { padding-block:2.7rem; } .route-grid { grid-template-columns:1fr; } .urgent-inner { grid-template-columns:1fr; } .urgent-links { grid-column:auto; } .footer-grid { grid-template-columns:repeat(2,1fr); } .footer-about { grid-column:1 / -1; } }
-        @media (max-width:520px) { .container { padding-inline:1rem; } .contact-intro h1 { font-size:2.7rem; } .route-card { grid-template-columns:1fr; padding:1.1rem; } .footer-grid { grid-template-columns:1fr; } .footer-about { grid-column:auto; } }
+        @media (max-width:520px) { .container { padding-inline:1rem; } .route-card { grid-template-columns:1fr; padding:1.1rem; } .footer-grid { grid-template-columns:1fr; } .footer-about { grid-column:auto; } }
         @media (prefers-reduced-motion:reduce) { *,*::before,*::after { scroll-behavior:auto !important; transition-duration:.01ms !important; } }
     </style>
     <script type="application/ld+json">
@@ -205,7 +205,7 @@
 
     <main id="main-content">
         <section class="contact-intro">
-            <div class="container intro-layout"><div><span class="eyebrow">SEIU Local 503 · Local 083</span><h1>Contact our union.</h1><p>Choose the team that best matches your question. Contact our steward team for workplace help or our executive team for Local 083 business and public inquiries.</p><p style="font-size:.78rem;font-weight:700;margin-top:.75rem">Contact information reviewed July 12, 2026.</p></div><aside class="best-way"><span class="eyebrow">Best way to reach Local 083</span><strong>Email our shared teams.</strong><p>For mail: Adams Hall, Room 109, Corvallis, OR 97331.</p></aside></div>
+            <div class="container intro-layout"><div><span class="eyebrow">SEIU Local 503 · Local 083</span><h1 class="text-4xl md:text-6xl font-bold leading-[1.04] tracking-tight">Contact our union.</h1><p>Choose the team that best matches your question. Contact our steward team for workplace help or our executive team for Local 083 business and public inquiries.</p><p style="font-size:.78rem;font-weight:700;margin-top:.75rem">Contact information reviewed July 12, 2026.</p></div><aside class="best-way"><span class="eyebrow">Best way to reach Local 083</span><strong>Email our shared teams.</strong><p>For mail: Adams Hall, Room 109, Corvallis, OR 97331.</p></aside></div>
         </section>
 
         <section class="route-section container" aria-labelledby="route-heading">

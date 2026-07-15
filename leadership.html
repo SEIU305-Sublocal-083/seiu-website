@@ -69,7 +69,7 @@
 
         .leadership-intro { background: radial-gradient(circle at 80% 14%, rgba(255, 191, 24, 0.14), transparent 22rem), linear-gradient(180deg, #fff, #faf9ff); border-bottom: 1px solid var(--line); padding-block: 3.4rem; }
         .intro-layout { align-items: center; display: grid; gap: 2.4rem; grid-template-columns: minmax(0, 1.2fr) minmax(20rem, 0.8fr); }
-        .leadership-intro h1 { font-size: clamp(2.8rem, 5.5vw, 4.8rem); letter-spacing: -0.04em; line-height: 0.99; margin: 0.65rem 0 0; }
+        .leadership-intro h1 { margin: 0.65rem 0 0; }
         .leadership-intro p { color: var(--muted); font-size: 1.05rem; line-height: 1.65; margin: 1rem 0 0; max-width: 44rem; }
         .contact-router { background: #fff; border: 1px solid #ddd6e8; border-radius: 1.1rem; box-shadow: 0 14px 35px rgba(76, 29, 149, 0.08); overflow: hidden; }
         .router-heading { background: var(--purple-950); color: #fff; padding: 0.9rem 1rem; }
@@ -201,7 +201,6 @@
         }
         @media (max-width: 520px) {
             .container { padding-inline: 1rem; }
-            .leadership-intro h1 { font-size: 2.7rem; }
             .president-copy, .steward-panel { padding: 1.35rem; }
             .footer-grid { grid-template-columns: 1fr; }
             .footer-about { grid-column: auto; }
@@ -291,7 +290,7 @@
     <main id="main-content">
         <section class="leadership-intro">
             <div class="container intro-layout">
-                <div><span class="eyebrow">SEIU Local 503 · Local 083</span><h1>Member-led at Oregon State.</h1><p>Meet the coworkers elected or appointed to conduct Local 083 business, enforce our contract and help members take part in our union.</p></div>
+                <div><span class="eyebrow">SEIU Local 503 · Local 083</span><h1 class="text-4xl md:text-6xl font-bold leading-[1.04] tracking-tight">Member-led at Oregon State.</h1><p>Meet the coworkers elected or appointed to conduct Local 083 business, enforce our contract and help members take part in our union.</p></div>
                 <aside class="contact-router" aria-labelledby="router-heading">
                     <div class="router-heading"><strong id="router-heading">Who should I contact?</strong></div>
                     <a class="router-link" href="mailto:083stewards@seiu503.org?subject=Workplace%20support"><span class="router-icon" aria-hidden="true">◎</span><span><strong>Workplace problem or representation</strong><span>Contact the steward team</span></span><span class="router-arrow" aria-hidden="true">→</span></a>
