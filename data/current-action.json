@@ -1,6 +1,6 @@
 {
   "schema": "local083-current-action-v1",
-  "updatedAt": "2026-07-09",
+  "updatedAt": "2026-07-16",
   "defaultAction": "hell-no-president-email",
   "slots": {
     "homepageHero": "hell-no-president-email",
@@ -10,6 +10,7 @@
   "emailActions": {
     "osu-president": {
       "recipient": "pres.office@oregonstate.edu",
+      "cc": "trustees@oregonstate.edu",
       "subjects": [
         "OSU staff deserve a fair contract",
         "0% COLAs are not acceptable",
@@ -32,7 +33,7 @@
         "OSU needs a contract that respects its workers",
         "HELL, NO to 0% COLAs and takeaways"
       ],
-      "body": "President Murthy,\n\nI am writing in support of Oregon State classified staff and our union. I am asking OSU to settle a fair contract that respects the members and coworkers who keep our campuses clean, safe, running, and serving students.\n\nPlease reject an offer that provides no cost-of-living increases for four years, would stretch the step system to 19 years from step 1 to step 10, and rolls back layoff and contracting-out protections. OSU classified workers deserve a contract that pays enough to live on and protects the rights our union has built over decades.\n\nSincerely,\n[Your name]\n[Your OSU role or connection]"
+      "body": "President Murthy and Members of the OSU Board of Trustees,\n\nI am writing in support of Oregon State classified staff and our union. I am asking OSU to settle a fair contract that respects the members and coworkers who keep our campuses clean, safe, running, and serving students.\n\nPlease reject an offer that provides no cost-of-living increases for four years, would stretch the step system to 19 years from step 1 to step 10, and rolls back layoff and contracting-out protections. OSU classified workers deserve a contract that pays enough to live on and protects the rights our union has built over decades.\n\nSincerely,\n[Your name]\n[Your OSU role or connection]"
     }
   },
   "actions": {
@@ -70,8 +71,8 @@
       "ctas": [
         {
           "id": "primary",
-          "label": "Email OSU President Murthy",
-          "href": "mailto:pres.office@oregonstate.edu",
+          "label": "Email President & OSU Trustees",
+          "href": "mailto:pres.office@oregonstate.edu?cc=trustees@oregonstate.edu",
           "emailAction": "osu-president",
           "style": "primary",
           "analytics": {
@@ -115,7 +116,7 @@
       ],
       "actionPage": {
         "headline": "Take action with our union: Tell OSU HELL NO!",
-        "body": "Our collective power comes from members showing up. Management's latest offer includes no COLAs for four years, a 19-year path from step 1 to step 10, and proposed rollbacks to our layoff and contracting-out rights. Email OSU President Jayathi Murthy today and demand a contract that respects our work. Every email shows OSU that members and supporters are paying attention.",
+        "body": "Our collective power comes from members showing up. Management's latest offer includes no COLAs for four years, a 19-year path from step 1 to step 10, and proposed rollbacks to our layoff and contracting-out rights. Email OSU President Jayathi Murthy and the Board of Trustees today and demand a contract that respects our work. Every email shows OSU that members and supporters are paying attention.",
         "nextStep": "Send your email now, then ask one coworker to stand with us today."
       }
     },

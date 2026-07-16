@@ -1,3 +1,4 @@
+import json
 import unittest
 from pathlib import Path
 
@@ -26,6 +27,27 @@ class RuntimeDataContractTests(unittest.TestCase):
         self.assertIn("payload.events", calendar)
         self.assertIn("Array.isArray(events)", index)
         self.assertIn("Array.isArray(events)", calendar)
+
+    def test_current_email_action_copies_osu_trustees(self):
+        payload = json.loads(self.source("data/current-action.json"))
+        email_action = payload["emailActions"]["osu-president"]
+
+        self.assertEqual(email_action["recipient"], "pres.office@oregonstate.edu")
+        self.assertEqual(email_action["cc"], "trustees@oregonstate.edu")
+        self.assertIn("Members of the OSU Board of Trustees", email_action["body"])
+        self.assertIn("cc=${encodeURIComponent(cc)}", self.source("js/current-action.js"))
+
+        fallback_pages = (
+            "index.html",
+            "action/index.html",
+            "2026-bargaining/index.html",
+            "news/2026-07-09-latest-bargaining-update.html",
+            "news/2026-07-09-tell-universities-hell-no.html",
+        )
+        fallback_href = "mailto:pres.office@oregonstate.edu?cc=trustees@oregonstate.edu"
+        for page in fallback_pages:
+            with self.subTest(page=page):
+                self.assertIn(fallback_href, self.source(page))
 
 
 if __name__ == "__main__":

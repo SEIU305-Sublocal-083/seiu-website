@@ -1,5 +1,5 @@
 (function () {
-    const DATA_URL = '/data/current-action.json?v=2026-07-09-email-encoding-hotfix';
+    const DATA_URL = '/data/current-action.json?v=2026-07-16-trustees-email';
 
     const safeText = (value) => String(value || '');
 
@@ -74,6 +74,8 @@
         const recipient = safeText(emailAction?.recipient);
         if (!recipient) return '#';
         const params = [];
+        const cc = safeText(emailAction?.cc).trim();
+        if (cc) params.push(`cc=${encodeURIComponent(cc)}`);
         if (subject) params.push(`subject=${encodeURIComponent(subject)}`);
         if (emailAction?.body) params.push(`body=${encodeURIComponent(emailAction.body)}`);
         return `mailto:${recipient}?${params.join('&')}`;
