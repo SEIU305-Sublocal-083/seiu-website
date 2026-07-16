@@ -1,6 +1,6 @@
 # Static Accessibility Report
 
-- Pages checked: 101
+- Pages checked: 102
 - Errors: 0
 - Warnings: 0
 

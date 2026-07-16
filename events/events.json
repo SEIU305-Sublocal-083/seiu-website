@@ -1,5 +1,5 @@
 {
-  "asOf": "2026-07-12",
+  "asOf": "2026-07-16",
   "events": [
   {
     "date": "2025-10-22",
@@ -207,6 +207,17 @@
     "featured": true,
     "location_detail": "Memorial Union room 215",
     "calendar_link": "/events/ical/2026-07-16-General-Membership-Meeting.ics"
+  },
+  {
+    "date": "2026-07-18",
+    "time": "9:00 AM - 1:00 PM",
+    "title": "Sublocal CAT Meeting",
+    "description": "Join SEIU Local 083 for our Sublocal Contract Action Team meeting to coordinate coworker outreach and prepare the next round of workplace action.",
+    "type": "CAT Meeting",
+    "url": "/events/2026-07-18-Sublocal-CAT-Meeting.html",
+    "featured": true,
+    "location_detail": "Learning Innovation Center (LInC), room number to be announced",
+    "calendar_link": "/events/ical/2026-07-18-Sublocal-CAT-Meeting.ics"
   },
   {
     "date": "2026-07-20",

@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//SEIU Local 503 at OSU//Local083 Events//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:20260718-sublocal-cat-meeting@local083.org
+DTSTAMP:20260716T162747Z
+DTSTART:20260718T160000Z
+DTEND:20260718T200000Z
+SUMMARY:Sublocal CAT Meeting
+DESCRIPTION:Join SEIU Local 083 for our Sublocal Contract Action Team meeting from 9 a.m. to 1 p.m. We will coordinate coworker outreach and prepare the next round of workplace action. The LInC room number will be announced as soon as it is confirmed.
+LOCATION:Learning Innovation Center (LInC)\, room number to be announced\, Oregon State University
+URL:https://www.local083.org/events/2026-07-18-Sublocal-CAT-Meeting.html
+END:VEVENT
+END:VCALENDAR
