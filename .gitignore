@@ -2,6 +2,7 @@ images/.DS_Store
 .DS_Store
 server.log
 node_modules/
+.pnpm-store/
 site-quality-report.md
 test-pages/workday-transition/training-feedback-and-reporting.html
 __pycache__/
