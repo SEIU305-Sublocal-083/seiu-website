@@ -1,0 +1,39 @@
+{
+  "generatedAt": "2026-07-17",
+  "viewports": {
+    "desktop": "1440 x 1000",
+    "mobile": "390 x 844"
+  },
+  "captures": [
+    {
+      "page": "Homepage",
+      "path": "/index.html",
+      "desktop": "homepage-desktop.jpg",
+      "mobile": "homepage-mobile.jpg"
+    },
+    {
+      "page": "News and Updates",
+      "path": "/news.html",
+      "desktop": "news-desktop.jpg",
+      "mobile": "news-mobile.jpg"
+    },
+    {
+      "page": "Three member actions article",
+      "path": "/news/2026-07-09-tell-universities-hell-no.html",
+      "desktop": "member-actions-desktop.jpg",
+      "mobile": "member-actions-mobile.jpg"
+    },
+    {
+      "page": "Current action landing page",
+      "path": "/action/index.html",
+      "desktop": "current-action-desktop.jpg",
+      "mobile": "current-action-mobile.jpg"
+    },
+    {
+      "page": "McNary Field rally story",
+      "path": "/news/2026-07-01-mcnary-field-rally-recap.html",
+      "desktop": "rally-story-desktop.jpg",
+      "mobile": "rally-story-mobile.jpg"
+    }
+  ]
+}
