@@ -33,7 +33,7 @@
         "OSU needs a contract that respects its workers",
         "HELL, NO to 0% COLAs and takeaways"
       ],
-      "body": "President Murthy and Members of the OSU Board of Trustees,\n\nI am writing in support of Oregon State classified staff and our union. I am asking OSU to settle a fair contract that respects the members and coworkers who keep our campuses clean, safe, running, and serving students.\n\nPlease reject an offer that provides no cost-of-living increases for four years, would stretch the step system to 19 years from step 1 to step 10, and rolls back layoff and contracting-out protections. OSU classified workers deserve a contract that pays enough to live on and protects the rights our union has built over decades.\n\nSincerely,\n[Your name]\n[Your OSU role or connection]"
+      "body": "President Murthy and Members of the OSU Board of Trustees,\n\nI am writing in support of Oregon State classified staff and our union. I am asking OSU to settle a fair contract that respects the members and coworkers who keep our campuses clean, safe, running, and serving students.\n\nPlease reject an offer that provides no cost-of-living increases for four years, would stretch the step system to 19 years from Step 1 to Step 10, and rolls back layoff and contracting-out protections. OSU classified workers deserve a contract that pays enough to live on and protects the rights our union has built over decades.\n\nSincerely,\n[Your name]\n[Your OSU role or connection]"
     }
   },
   "actions": {
@@ -45,41 +45,39 @@
         "until": "2026-07-31T23:59:59-07:00"
       },
       "eyebrow": "Current bargaining action",
-      "headline": "Management's disrespectful offer? We say HELL NO!",
-      "summary": "Our union has spent five months bargaining for a fair contract. Management's latest offer still includes zero percent COLAs, a 19-year step path and proposed rollbacks to rights our members built over decades.",
-      "promoEyebrow": "Our latest bargaining action",
-      "promoHeadline": "0% COLAs. A 19-year step path. Rights on the line.",
-      "promoBody": "OSU's latest salary report shows many represented workers earn less than $40,000, while some administrators earn more than $200,000. Send a message now: We will not accept an offer that balances budgets on our backs.",
+      "headline": "Take 3 actions with our union for a fair contract",
+      "summary": "Oregon State University management is stalling. Email OSU leadership today, sign the strike pledge when it arrives and build our union with one coworker conversation.",
+      "promoEyebrow": "Our three-action plan",
+      "promoHeadline": "One email. One pledge. One conversation.",
+      "promoBody": "Each action builds our power and shows OSU that classified staff are informed, organized and ready to stand with one another.",
       "image": {
         "src": "/images/2026-bargaining-zoom-backgrounds.webp",
         "alt": "A purple background with silhouettes of raised fists and campus mascots, featuring the Higher Education Bargaining 2026 message."
       },
       "details": [
         {
-          "label": "COLAs",
-          "value": "Management's latest offer keeps COLAs at zero percent for four years"
+          "label": "Today",
+          "value": "Email OSU leadership and demand a fair contract"
         },
         {
-          "label": "Steps",
-          "value": "The proposed step structure takes 19 years from step 1 to step 10"
+          "label": "Next week",
+          "value": "Read and sign our union's strike pledge"
         },
         {
-          "label": "Rights",
-          "value": "Layoff and contracting-out protections are on the line"
+          "label": "Starting now",
+          "value": "Become a member or ask one coworker to join"
         }
       ],
       "ctas": [
         {
           "id": "primary",
-          "label": "Email President & OSU Trustees",
-          "href": "mailto:pres.office@oregonstate.edu?cc=trustees@oregonstate.edu",
-          "emailAction": "osu-president",
+          "label": "Take 3 actions for a fair contract",
+          "href": "/news/2026-07-09-tell-universities-hell-no.html",
           "style": "primary",
           "analytics": {
-            "event": "take_action_click",
-            "label": "Homepage Hero Hell No Email Action",
+            "event": "action_page_click",
+            "label": "Homepage Three Actions Hub",
             "metadata": {
-              "action_type": "president_email",
               "placement": "homepage_hero",
               "action_slug": "hell-no-president-email"
             }
@@ -115,9 +113,9 @@
         }
       ],
       "actionPage": {
-        "headline": "Take action with our union: Tell OSU HELL NO!",
-        "body": "Our collective power comes from members showing up. Management's latest offer includes no COLAs for four years, a 19-year path from step 1 to step 10, and proposed rollbacks to our layoff and contracting-out rights. Email OSU President Jayathi Murthy and the Board of Trustees today and demand a contract that respects our work. Every email shows OSU that members and supporters are paying attention.",
-        "nextStep": "Send your email now, then ask one coworker to stand with us today."
+        "headline": "Take 3 actions with our union for a fair contract",
+        "body": "Our collective power comes from members moving together. Email OSU leadership today, sign the strike pledge when it arrives and build our union by becoming a member or asking one coworker to join.",
+        "nextStep": "Start with the email today. The action hub explains every step and will carry the strike pledge link as soon as it is available."
       }
     },
     "membership-july-16": {
