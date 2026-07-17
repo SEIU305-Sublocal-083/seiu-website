@@ -1020,11 +1020,13 @@
                         event.formattedDateShort = dateShortFormatter.format(event.parsedDate);
                     });
 
+                    // ⚡ Bolt: Cache Intl.DateTimeFormat object outside the loop to prevent slow implicit instantiation during toLocaleDateString
+                    const monthShortFormatter = new Intl.DateTimeFormat('en-US', { month: 'short' });
                     if (upcomingEvents.length > 0) {
                         eventsContainer.innerHTML = upcomingEvents.map(event => {
                             const isFeaturedAction = event.featured;
                             const eventId = sanitizeUrl(event.url).split('/').pop().replace(/\.html$/, '').toLowerCase();
-                            const month = event.parsedDate.toLocaleDateString('en-US', { month: 'short' });
+                            const month = monthShortFormatter.format(event.parsedDate);
                             const day = event.parsedDate.getDate();
 
                             let timeHtml = '';
