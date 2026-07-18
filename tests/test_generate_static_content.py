@@ -15,6 +15,41 @@ def graph() -> str:
 
 
 class StaticContentTests(unittest.TestCase):
+    def test_event_schema_requires_confirmed_location_and_preserves_exact_details(self):
+        self.assertIsNone(static.event_schema({
+            "date": "2026-07-20",
+            "title": "CAT Meeting",
+            "url": "/events/cat.html",
+            "location_detail": "Details coming soon",
+        }))
+        self.assertIsNone(static.event_schema({
+            "date": "2026-07-20",
+            "title": "CAT Meeting",
+            "url": "/events/cat.html",
+            "location_detail": "Memorial Union",
+        }))
+
+        schema = static.event_schema({
+            "date": "2026-07-18",
+            "title": "Sublocal CAT Meeting",
+            "url": "/events/cat.html",
+            "location_detail": "Learning Innovation Center",
+            "schema_location_name": "Learning Innovation Center (LInC), Oregon State University",
+            "location_address": {
+                "streetAddress": "165 SW Sackett Place",
+                "addressLocality": "Corvallis",
+                "addressRegion": "OR",
+                "postalCode": "97331",
+                "addressCountry": "US",
+            },
+            "schema_start_date": "2026-07-18T09:00:00-07:00",
+            "schema_end_date": "2026-07-18T13:00:00-07:00",
+        })
+        self.assertEqual(schema["startDate"], "2026-07-18T09:00:00-07:00")
+        self.assertEqual(schema["endDate"], "2026-07-18T13:00:00-07:00")
+        self.assertEqual(schema["location"]["name"], "Learning Innovation Center (LInC), Oregon State University")
+        self.assertEqual(schema["location"]["address"]["addressCountry"], "US")
+
     def test_element_replacement_handles_nested_same_name_tags(self):
         source = '<div id="target"><div>old</div></div><div>after</div>'
         self.assertEqual(

@@ -379,21 +379,36 @@ def update_news_graph(graph: list[dict], news: list[dict]) -> None:
     ]
 
 
-def event_schema(event: dict) -> dict:
+def event_schema(event: dict) -> dict | None:
+    location = event.get("location_detail", "").strip()
+    if (
+        not location
+        or "details coming soon" in location.lower()
+        or not event.get("schema_end_date")
+        or not event.get("location_address")
+    ):
+        return None
+
     url = f"{BASE_URL}{event['url']}"
     schema = {
         "@type": "Event",
         "@id": f"{url}#event",
         "name": event["title"],
         "description": event.get("description", ""),
-        "startDate": event["date"],
+        "startDate": event.get("schema_start_date", event["date"]),
         "eventStatus": "https://schema.org/EventScheduled",
         "url": url,
         "organizer": {"@id": f"{BASE_URL}#organization"},
+        "location": {
+            "@type": "Place",
+            "name": event.get("schema_location_name", location),
+        },
     }
-    location = event.get("location_detail", "")
-    if location and "details coming soon" not in location.lower():
-        schema["location"] = {"@type": "Place", "name": location}
+    schema["endDate"] = event["schema_end_date"]
+    schema["location"]["address"] = {
+        "@type": "PostalAddress",
+        **event["location_address"],
+    }
     return schema
 
 
@@ -403,12 +418,13 @@ def update_events_graph(graph: list[dict], events: list[dict]) -> None:
     if item_list is None:
         item_list = {"@type": "ItemList", "@id": f"{BASE_URL}/events.html#event-list"}
         graph.append(item_list)
-    item_list["numberOfItems"] = len(events)
+    schemas = [schema for event in events if (schema := event_schema(event)) is not None]
+    item_list["numberOfItems"] = len(schemas)
     item_list["itemListElement"] = [
-        {"@type": "ListItem", "position": position, "item": {"@id": f"{BASE_URL}{item['url']}#event"}}
-        for position, item in enumerate(events, 1)
+        {"@type": "ListItem", "position": position, "item": {"@id": schema["@id"]}}
+        for position, schema in enumerate(schemas, 1)
     ]
-    graph.extend(event_schema(event) for event in events)
+    graph.extend(schemas)
 
 
 def update_home_graph(graph: list[dict], news: list[dict], events: list[dict]) -> None:

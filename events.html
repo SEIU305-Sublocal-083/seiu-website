@@ -73,7 +73,7 @@
     {
       "@type": "ItemList",
       "@id": "https://www.local083.org/events.html#event-list",
-      "numberOfItems": 3,
+      "numberOfItems": 2,
       "itemListElement": [
         {
           "@type": "ListItem",
@@ -88,13 +88,6 @@
           "item": {
             "@id": "https://www.local083.org/events/2026-07-18-Sublocal-CAT-Meeting.html#event"
           }
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "item": {
-            "@id": "https://www.local083.org/events/2026-07-20-CAT-Meeting.html#event"
-          }
         }
       ]
     },
@@ -103,7 +96,7 @@
       "@id": "https://www.local083.org/events/2026-07-16-General-Membership-Meeting.html#event",
       "name": "General Membership Meeting",
       "description": "Join us Thursday, July 16, at noon in Memorial Union room 215. The Memorial Union double-booked our usual MU 211 room and found this alternate space. TOGO'S sandwiches will be provided. We will talk through the new phase of bargaining, member readiness, and how higher ed works because we work. Zoom details are coming shortly.",
-      "startDate": "2026-07-16",
+      "startDate": "2026-07-16T12:00:00-07:00",
       "eventStatus": "https://schema.org/EventScheduled",
       "url": "https://www.local083.org/events/2026-07-16-General-Membership-Meeting.html",
       "organizer": {
@@ -111,15 +104,24 @@
       },
       "location": {
         "@type": "Place",
-        "name": "Memorial Union room 215"
-      }
+        "name": "Memorial Union room 215, Oregon State University",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "2501 SW Jefferson Way",
+          "addressLocality": "Corvallis",
+          "addressRegion": "OR",
+          "postalCode": "97331",
+          "addressCountry": "US"
+        }
+      },
+      "endDate": "2026-07-16T13:00:00-07:00"
     },
     {
       "@type": "Event",
       "@id": "https://www.local083.org/events/2026-07-18-Sublocal-CAT-Meeting.html#event",
       "name": "Sublocal CAT Meeting",
       "description": "Join SEIU Local 083 for our Sublocal Contract Action Team meeting to coordinate coworker outreach and prepare the next round of workplace action.",
-      "startDate": "2026-07-18",
+      "startDate": "2026-07-18T09:00:00-07:00",
       "eventStatus": "https://schema.org/EventScheduled",
       "url": "https://www.local083.org/events/2026-07-18-Sublocal-CAT-Meeting.html",
       "organizer": {
@@ -127,20 +129,17 @@
       },
       "location": {
         "@type": "Place",
-        "name": "Learning Innovation Center (LInC), room number to be announced"
-      }
-    },
-    {
-      "@type": "Event",
-      "@id": "https://www.local083.org/events/2026-07-20-CAT-Meeting.html#event",
-      "name": "CAT Meeting",
-      "description": "Join our Contract Action Team meeting on Monday, July 20 in the evening for workplace updates and action coordination. Time and Zoom details are coming shortly.",
-      "startDate": "2026-07-20",
-      "eventStatus": "https://schema.org/EventScheduled",
-      "url": "https://www.local083.org/events/2026-07-20-CAT-Meeting.html",
-      "organizer": {
-        "@id": "https://www.local083.org#organization"
-      }
+        "name": "Learning Innovation Center (LInC), Oregon State University",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "165 SW Sackett Place",
+          "addressLocality": "Corvallis",
+          "addressRegion": "OR",
+          "postalCode": "97331",
+          "addressCountry": "US"
+        }
+      },
+      "endDate": "2026-07-18T13:00:00-07:00"
     }
   ]
 }
@@ -1224,6 +1223,16 @@ July 2026
             "url": "/events/2026-07-16-General-Membership-Meeting.html",
             "featured": true,
             "location_detail": "Memorial Union room 215",
+            "schema_location_name": "Memorial Union room 215, Oregon State University",
+            "location_address": {
+              "streetAddress": "2501 SW Jefferson Way",
+              "addressLocality": "Corvallis",
+              "addressRegion": "OR",
+              "postalCode": "97331",
+              "addressCountry": "US"
+            },
+            "schema_start_date": "2026-07-16T12:00:00-07:00",
+            "schema_end_date": "2026-07-16T13:00:00-07:00",
             "calendar_link": "/events/ical/2026-07-16-General-Membership-Meeting.ics"
           },
           {
@@ -1235,6 +1244,16 @@ July 2026
             "url": "/events/2026-07-18-Sublocal-CAT-Meeting.html",
             "featured": true,
             "location_detail": "Learning Innovation Center (LInC), room number to be announced",
+            "schema_location_name": "Learning Innovation Center (LInC), Oregon State University",
+            "location_address": {
+              "streetAddress": "165 SW Sackett Place",
+              "addressLocality": "Corvallis",
+              "addressRegion": "OR",
+              "postalCode": "97331",
+              "addressCountry": "US"
+            },
+            "schema_start_date": "2026-07-18T09:00:00-07:00",
+            "schema_end_date": "2026-07-18T13:00:00-07:00",
             "calendar_link": "/events/ical/2026-07-18-Sublocal-CAT-Meeting.ics"
           },
           {
