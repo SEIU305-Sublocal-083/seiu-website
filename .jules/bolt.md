@@ -43,3 +43,7 @@
 ## 2024-05-18 - [Date Coercion Performance]
 **Learning:** [When coercing YYYY-MM-DD date strings into Date objects for local timezone formatting, using regex replacement (`new Date(dateString.replace(/-/g, '/'))`) introduces unnecessary regular expression engine overhead.]
 **Action:** [Use string concatenation (`new Date(dateString + 'T00:00:00')`) instead, which is significantly faster while achieving the same timezone-safe coercion.]
+
+## 2024-07-18 - [Date Splitting and Parsing in Filter Loops]
+**Learning:** [Using `split('-').map(Number)` on zero-padded date strings inside a frequently-executed filter loop (like calendar monthly navigation) introduces severe object allocation and parsing overhead across large datasets. Additionally, `localeCompare` is much slower than direct string comparison (`<`, `>`) for simple ISO-8601 sort logic.]
+**Action:** [To extract year/month combinations from guaranteed zero-padded ISO-8601 strings (YYYY-MM-DD), pre-calculate the target prefix outside the loop (`YYYY-MM-`) and use `startsWith()`. When sorting these strings, use standard comparison operators (`a < b`) instead of `localeCompare`.]
