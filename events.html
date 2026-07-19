@@ -1653,12 +1653,13 @@ July 2026
             return `${time} · ${location}`;
         };
 
-        const eventsForMonth = (year, month) => calendarEvents
-            .filter((event) => {
-                const [eventYear, eventMonth] = event.date.split('-').map(Number);
-                return eventYear === year && eventMonth === month + 1;
-            })
-            .sort((a, b) => a.date.localeCompare(b.date));
+        const eventsForMonth = (year, month) => {
+            // ⚡ Bolt: Use fast string prefix matching instead of splitting and parsing every date in the loop
+            const prefix = `${year}-${String(month + 1).padStart(2, '0')}-`;
+            return calendarEvents
+                .filter((event) => event.date.startsWith(prefix))
+                .sort((a, b) => a.date < b.date ? -1 : (a.date > b.date ? 1 : 0));
+        };
 
         const eventChips = (events) => events.map((event) => `
             <a class="event-chip ${eventClass(event.type)}" href="${escapeHtml(safeEventUrl(event.url))}" aria-label="${escapeHtml(event.title)}, ${escapeHtml(shortTime(event.time))}">
