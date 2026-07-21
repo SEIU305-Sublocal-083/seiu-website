@@ -1,5 +1,5 @@
 {
-  "asOf": "2026-07-16",
+  "asOf": "2026-07-21",
   "events": [
   {
     "date": "2025-10-22",
@@ -248,6 +248,16 @@
     "url": "/events/2026-07-20-CAT-Meeting.html",
     "featured": false,
     "location_detail": "Details coming soon"
+  },
+  {
+    "date": "2026-07-21",
+    "time": "4:30 PM PT",
+    "title": "Higher Ed Mediation Update",
+    "description": "Join our SEIU Local 503 Higher Ed Bargaining Team on Zoom for an update on mediation, what the latest developments mean for members and what comes next in bargaining. Please join by 4:35 p.m.; anyone joining after 4:35 p.m. will be removed.",
+    "type": "Zoom Meeting",
+    "url": "/events/2026-07-21-Higher-Ed-Mediation-Update.html",
+    "featured": true,
+    "location_detail": "Online via Zoom"
   },
   {
     "date": "2025-10-01",

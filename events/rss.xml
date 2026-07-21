@@ -5,7 +5,7 @@
     <link>https://www.local083.org</link>
     <description>Upcoming events from SEIU Local 503 at Oregon State University.</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 20 Jul 2026 07:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 21 Jul 2026 07:00:00 GMT</lastBuildDate>
     <atom:link href="https://www.local083.org/events/rss.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>Membership Meeting</title>
@@ -430,6 +430,14 @@
       <description>Join our Contract Action Team meeting on Monday, July 20 in the evening for workplace updates and action coordination. Time and Zoom details are coming shortly. | Date: 2026-07-20 | Time: Evening, details coming soon | Location: Details coming soon</description>
       <pubDate>Mon, 20 Jul 2026 07:00:00 GMT</pubDate>
       <category>CAT Meeting</category>
+    </item>
+    <item>
+      <title>Higher Ed Mediation Update</title>
+      <link>https://www.local083.org/events/2026-07-21-Higher-Ed-Mediation-Update.html</link>
+      <guid isPermaLink="false">event:2026-07-21:Higher Ed Mediation Update</guid>
+      <description>Join our SEIU Local 503 Higher Ed Bargaining Team on Zoom for an update on mediation, what the latest developments mean for members and what comes next in bargaining. Please join by 4:35 p.m.; anyone joining after 4:35 p.m. will be removed. | Date: 2026-07-21 | Time: 4:30 PM PT | Location: Online via Zoom</description>
+      <pubDate>Tue, 21 Jul 2026 07:00:00 GMT</pubDate>
+      <category>Zoom Meeting</category>
     </item>
   </channel>
 </rss>
