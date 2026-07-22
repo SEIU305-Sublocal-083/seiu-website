@@ -38,8 +38,6 @@ class RuntimeDataContractTests(unittest.TestCase):
         self.assertIn("cc=${encodeURIComponent(cc)}", self.source("js/current-action.js"))
 
         fallback_pages = (
-            "index.html",
-            "action/index.html",
             "2026-bargaining/index.html",
             "news/2026-07-09-latest-bargaining-update.html",
             "news/2026-07-09-tell-universities-hell-no.html",
@@ -48,6 +46,19 @@ class RuntimeDataContractTests(unittest.TestCase):
         for page in fallback_pages:
             with self.subTest(page=page):
                 self.assertIn(fallback_href, self.source(page))
+
+    def test_current_action_is_direct_and_distinguishes_pledge_from_vote(self):
+        payload = json.loads(self.source("data/current-action.json"))
+        action = payload["actions"][payload["defaultAction"]]
+
+        self.assertEqual(action["slug"], "higher-ed-strike-pledge")
+        self.assertEqual(action["ctas"][0]["href"], "/pledge")
+        self.assertIn("not a strike-authorization vote", action["actionPage"]["nextStep"])
+        for page in ("index.html", "action/index.html"):
+            with self.subTest(page=page):
+                source = self.source(page)
+                self.assertIn('href="/pledge"', source)
+                self.assertIn("not a strike-authorization vote", source)
 
 
 if __name__ == "__main__":

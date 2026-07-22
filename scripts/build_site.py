@@ -20,6 +20,11 @@ GENERATED_PATHS = [
     "sitemap.xml",
     "robots.txt",
     "styles/tailwind.css",
+    "actions/index.html",
+    "pledge/index.html",
+    "strikeprep/index.html",
+    "strikepay/index.html",
+    "strikehelp/index.html",
 ]
 
 
@@ -57,6 +62,7 @@ def main() -> int:
         run(["python3", "scripts/generate_static_content.py"])
         run(["python3", "scripts/generate_rss.py"])
         run(["python3", "scripts/generate_sitemap.py"])
+        run(["python3", "scripts/generate_short_redirects.py"])
         shell_command = ["python3", "scripts/sync_site_shell.py"]
         if args.check:
             shell_command.append("--check")

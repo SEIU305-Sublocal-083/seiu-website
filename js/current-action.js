@@ -1,5 +1,5 @@
 (function () {
-    const DATA_URL = '/data/current-action.json?v=2026-07-16-trustees-email';
+    const DATA_URL = '/data/current-action.json?v=2026-07-22-strike-pledge';
 
     const safeText = (value) => String(value || '');
 

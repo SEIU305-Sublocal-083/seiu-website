@@ -1,11 +1,11 @@
 {
   "schema": "local083-current-action-v1",
-  "updatedAt": "2026-07-16",
-  "defaultAction": "hell-no-president-email",
+  "updatedAt": "2026-07-22",
+  "defaultAction": "higher-ed-strike-pledge",
   "slots": {
-    "homepageHero": "hell-no-president-email",
-    "homepagePromo": "hell-no-president-email",
-    "actionPageDefault": "hell-no-president-email"
+    "homepageHero": "higher-ed-strike-pledge",
+    "homepagePromo": "higher-ed-strike-pledge",
+    "actionPageDefault": "higher-ed-strike-pledge"
   },
   "emailActions": {
     "osu-president": {
@@ -37,6 +37,88 @@
     }
   },
   "actions": {
+    "higher-ed-strike-pledge": {
+      "slug": "higher-ed-strike-pledge",
+      "type": "bargaining_action",
+      "visibility": {
+        "from": "2026-07-22T00:00:00-07:00",
+        "until": "2026-08-31T23:59:59-07:00"
+      },
+      "eyebrow": "Current bargaining action",
+      "headline": "Sign the Higher Ed strike pledge",
+      "summary": "Management is still at 0% COLA, with major takeaways still on the table. Signing the pledge shows that Higher Ed workers reject this offer and are ready to keep fighting for a fair contract.",
+      "promoEyebrow": "Build the response",
+      "promoHeadline": "Sign once. Ask 10 coworkers.",
+      "promoBody": "A strong response gives our bargaining team a clear measure of worker readiness and shows management that we are organized across all seven universities.",
+      "image": {
+        "src": "/images/2026-bargaining-zoom-backgrounds.webp",
+        "alt": "A purple background with silhouettes of raised fists and campus mascots, featuring the Higher Education Bargaining 2026 message."
+      },
+      "details": [
+        {
+          "label": "What it is",
+          "value": "A way to show our bargaining team and management that workers reject the current offer"
+        },
+        {
+          "label": "What it is not",
+          "value": "The pledge is not a strike-authorization vote"
+        },
+        {
+          "label": "What comes next",
+          "value": "Sign once, then ask 10 coworkers to stand with you"
+        }
+      ],
+      "ctas": [
+        {
+          "id": "primary",
+          "label": "Sign the strike pledge",
+          "href": "/pledge",
+          "style": "primary",
+          "analytics": {
+            "event": "take_action_click",
+            "label": "Sign Higher Ed Strike Pledge",
+            "metadata": {
+              "action_type": "strike_pledge",
+              "placement": "homepage_hero",
+              "action_slug": "higher-ed-strike-pledge"
+            }
+          }
+        },
+        {
+          "id": "secondary",
+          "label": "Prepare and get answers",
+          "href": "/resources/strike-readiness.html",
+          "style": "secondary",
+          "analytics": {
+            "event": "resource_click",
+            "label": "Strike Readiness Hub",
+            "metadata": {
+              "placement": "homepage_hero",
+              "action_slug": "higher-ed-strike-pledge"
+            }
+          }
+        },
+        {
+          "id": "tertiary",
+          "label": "Read the Bargaining Hub",
+          "href": "/2026-bargaining/index.html",
+          "style": "outline",
+          "analytics": {
+            "event": "bargaining_hub_click",
+            "label": "Homepage Bargaining Hub",
+            "metadata": {
+              "placement": "homepage_promo",
+              "action_slug": "higher-ed-strike-pledge"
+            }
+          }
+        }
+      ],
+      "actionPage": {
+        "headline": "Sign the Higher Ed strike pledge",
+        "body": "The pledge tells our bargaining team and management that Higher Ed workers reject 0% COLA and the takeaways still on the table. It helps our union measure readiness and decide how strongly workers are prepared to act together.",
+        "nextStep": "This is not a strike-authorization vote. Sign the pledge, then ask 10 coworkers to sign with you."
+      }
+    },
     "hell-no-president-email": {
       "slug": "hell-no-president-email",
       "type": "bargaining_action",

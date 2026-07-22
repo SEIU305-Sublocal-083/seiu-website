@@ -1,0 +1,32 @@
+[
+  {
+    "slug": "actions",
+    "target": "/action/",
+    "title": "Take Action with Local 083",
+    "description": "Continue to Local 083's current bargaining action for Oregon State University classified workers."
+  },
+  {
+    "slug": "pledge",
+    "target": "https://canvasser-7217.my.site.com/survey/s/surveyvista?su=NaJMuv",
+    "title": "Higher Ed Strike Pledge",
+    "description": "Continue to the official SEIU 503 Higher Education strike pledge."
+  },
+  {
+    "slug": "strikeprep",
+    "target": "/resources/strike-readiness.html",
+    "title": "Strike Readiness Resources",
+    "description": "Continue to Local 083's practical strike-readiness guides for OSU classified staff."
+  },
+  {
+    "slug": "strikepay",
+    "target": "/resources/strike-pay-benefits.html",
+    "title": "Strike Pay and Benefits",
+    "description": "Continue to Local 083's guide to Oregon unemployment, SNAP and benefit planning during a lawful strike."
+  },
+  {
+    "slug": "strikehelp",
+    "target": "/resources/strike-support.html",
+    "title": "Food and Housing Support",
+    "description": "Continue to Local 083's Corvallis and statewide food, housing and immediate-support resource guide."
+  }
+]
