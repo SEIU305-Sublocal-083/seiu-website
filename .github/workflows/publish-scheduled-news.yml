@@ -27,7 +27,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A -- ':(glob)**/*.html' news/news.json news/rss.xml events/rss.xml feed.xml sitemap.xml robots.txt styles/tailwind.css site-quality-report.md
+          git add -A -- ':(glob)**/*.html' news/news.json news/rss.xml events/rss.xml feed.xml sitemap.xml robots.txt styles/tailwind.css
           if git diff --cached --quiet; then
             echo "No scheduled news was due."
             exit 0
