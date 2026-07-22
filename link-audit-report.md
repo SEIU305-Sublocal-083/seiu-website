@@ -1,7 +1,7 @@
 # Link and action audit
 
-- Public pages: 103
-- References checked: 4302
+- Public pages: 104
+- References checked: 4345
 - Findings: 0
 
 No broken internal targets, fragments, PDF signatures, calendar structures, mail recipients or unsafe external new-window links were found.

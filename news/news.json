@@ -1,5 +1,26 @@
 [
   {
+    "status": "scheduled",
+    "title": "We made noise. Management moved on steps.",
+    "description": "Our bargaining team credits worker action with pushing management off its original step position. The movement matters, but 0% COLA and major takeaways remain.",
+    "url": "/news/2026-07-23-worker-pressure-moved-management-on-steps.html",
+    "image": "/images/2026-bargaining-zoom-backgrounds.webp",
+    "alt": "Purple 2026 higher education bargaining graphic with raised fists and campus mascots",
+    "tags": [
+      "Bargaining",
+      "Update",
+      "2026 Bargaining"
+    ],
+    "author": {
+      "name": "SEIU Local 503 at Oregon State University",
+      "title": "Local 083"
+    },
+    "publishedAt": "2026-07-23",
+    "createdAt": "2026-07-21",
+    "updatedAt": "2026-07-23",
+    "featured": true
+  },
+  {
     "status": "published",
     "title": "More than 140 rally at Oregon State for fair classified staff contract",
     "description": "More than 140 members and supporters rallied at McNary Field and marched to Kerr Administration Building on June 30, the day our previous contract expired.",
