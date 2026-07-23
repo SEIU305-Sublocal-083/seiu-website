@@ -43,10 +43,15 @@ class StrikeReadinessClusterTests(unittest.TestCase):
                 self.assertIn("not a strike-authorization vote", source)
 
     def test_high_stakes_pages_show_review_date_and_sources(self):
-        for filename in ("strike-rights-oregon.html", "strike-pay-benefits.html", "strike-support.html"):
+        review_dates = {
+            "strike-rights-oregon.html": "July 22, 2026",
+            "strike-pay-benefits.html": "July 20, 2026",
+            "strike-support.html": "July 22, 2026",
+        }
+        for filename, review_date in review_dates.items():
             source = (ROOT / "resources" / filename).read_text(encoding="utf-8")
             with self.subTest(filename=filename):
-                self.assertIn("July 20, 2026", source)
+                self.assertIn(review_date, source)
                 self.assertIn('class="source-list"', source)
 
     def test_rights_guide_accounts_for_current_contract_extension(self):
@@ -145,12 +150,63 @@ class StrikeReadinessClusterTests(unittest.TestCase):
         self.assertNotIn('border-radius: 999px; color: #4b5563', stylesheet)
         self.assertNotIn("border-top: 4px solid #c4b5fd", stylesheet)
         self.assertIn("border-left: 4px solid var(--brand-purple)", stylesheet)
+        self.assertIn("grid-template-columns: repeat(6, max-content)", stylesheet)
+        self.assertIn("justify-content: space-between", stylesheet)
 
-    def test_county_lookup_contains_all_36_oregon_counties(self):
+    def test_county_lookup_maps_all_36_oregon_counties_to_local_providers(self):
         script = (ROOT / "js" / "strike-county-lookup.js").read_text(encoding="utf-8")
-        match = re.search(r"const counties = \[(.*?)\];", script, flags=re.S)
-        self.assertIsNotNone(match)
-        self.assertEqual(len(re.findall(r"'[A-Za-z ]+'", match.group(1))), 36)
+        agency_match = re.search(r"const agencies = \{(.*?)\n  \};", script, flags=re.S)
+        county_match = re.search(r"const countyAgencies = \{(.*?)\n  \};", script, flags=re.S)
+        self.assertIsNotNone(agency_match)
+        self.assertIsNotNone(county_match)
+
+        agency_keys = set(re.findall(r"^    ([A-Za-z]+): \{", agency_match.group(1), flags=re.M))
+        county_entries = re.findall(
+            r"^    (?:'([^']+)'|([A-Za-z]+)): '([A-Za-z]+)',",
+            county_match.group(1),
+            flags=re.M,
+        )
+        county_names = {quoted or bare for quoted, bare, _ in county_entries}
+        assigned_agencies = {agency for _, _, agency in county_entries}
+        self.assertEqual(len(county_names), 36)
+        self.assertEqual(
+            county_names,
+            {
+                "Baker", "Benton", "Clackamas", "Clatsop", "Columbia", "Coos",
+                "Crook", "Curry", "Deschutes", "Douglas", "Gilliam", "Grant",
+                "Harney", "Hood River", "Jackson", "Jefferson", "Josephine",
+                "Klamath", "Lake", "Lane", "Lincoln", "Linn", "Malheur",
+                "Marion", "Morrow", "Multnomah", "Polk", "Sherman", "Tillamook",
+                "Umatilla", "Union", "Wallowa", "Wasco", "Washington", "Wheeler",
+                "Yamhill",
+            },
+        )
+        self.assertTrue(assigned_agencies.issubset(agency_keys))
+
+        support = (ROOT / "resources" / "strike-support.html").read_text(encoding="utf-8")
+        self.assertIn('id="county-agency-name"', support)
+        self.assertIn('id="county-agency-phone"', support)
+        self.assertIn('id="county-agency-link"', support)
+        self.assertIn("https://www.caporegon.org/find-help", support)
+        self.assertNotIn("https://www.caporegon.org/find-services/", support)
+
+    def test_requested_strike_resource_copy_is_current_and_member_focused(self):
+        hub = (ROOT / "resources" / "strike-readiness.html").read_text(encoding="utf-8")
+        rights = (ROOT / "resources" / "strike-rights-oregon.html").read_text(encoding="utf-8")
+        history = (ROOT / "resources" / "strike-history.html").read_text(encoding="utf-8")
+
+        self.assertNotIn("settle every political question", hub)
+        self.assertIn("Whatever questions you still have about a possible strike", hub)
+
+        self.assertIn("<strong>Information reviewed:</strong> July 22, 2026.", rights)
+        self.assertNotIn("Legal information reviewed", rights)
+        self.assertNotIn("This page is educational, not individual legal advice", rights)
+        self.assertIn('aria-current="step"', rights)
+        self.assertIn("entered mediation on July 21, 2026", rights)
+        self.assertIn("not our classified Higher Ed bargaining unit", rights)
+
+        self.assertNotIn("A famous past victory does not prove", history)
+        self.assertIn("solidarity can move employers", history)
 
     def test_resource_library_lists_cluster(self):
         source = (ROOT / "resources.html").read_text(encoding="utf-8")
