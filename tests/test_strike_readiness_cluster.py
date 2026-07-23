@@ -152,6 +152,8 @@ class StrikeReadinessClusterTests(unittest.TestCase):
         self.assertIn("border-left: 4px solid var(--brand-purple)", stylesheet)
         self.assertIn("grid-template-columns: repeat(6, max-content)", stylesheet)
         self.assertIn("justify-content: space-between", stylesheet)
+        self.assertIn("top: 4.0625rem", stylesheet)
+        self.assertNotIn("top: 4.5rem", stylesheet)
 
     def test_county_lookup_maps_all_36_oregon_counties_to_local_providers(self):
         script = (ROOT / "js" / "strike-county-lookup.js").read_text(encoding="utf-8")

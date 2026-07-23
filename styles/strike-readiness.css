@@ -30,7 +30,7 @@ h1, h2, h3, h4 { color: var(--brand-purple-dark); font-family: "Lora", serif; }
 a:focus-visible, button:focus-visible, select:focus-visible { outline: 3px solid var(--brand-purple); outline-offset: 3px; }
 
 .strike-shell { margin-inline: auto; max-width: 74rem; padding-inline: 1.5rem; width: 100%; }
-.strike-nav-wrap { backdrop-filter: blur(13px); background: rgba(255, 255, 255, .9); border-bottom: 1px solid #e5e7eb; position: sticky; top: 4.5rem; z-index: 40; }
+.strike-nav-wrap { backdrop-filter: blur(13px); background: rgba(255, 255, 255, .9); border-bottom: 1px solid #e5e7eb; position: sticky; top: 4.0625rem; z-index: 40; }
 .strike-nav { display: flex; gap: 1.5rem; overflow-x: auto; padding-block: .72rem; scrollbar-width: none; }
 .strike-nav::-webkit-scrollbar { display: none; }
 .strike-nav a { border-bottom: 2px solid transparent; color: #4b5563; flex: 0 0 auto; font-size: .74rem; font-weight: 800; padding-block: .28rem; text-decoration: none; white-space: nowrap; }
