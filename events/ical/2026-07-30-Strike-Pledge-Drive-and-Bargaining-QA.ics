@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//SEIU Local 503 at OSU//Local083 Events//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:20260730-strike-pledge-drive-bargaining-qa@local083.org
+DTSTAMP:20260724T190000Z
+DTSTART:20260730T190000Z
+DTEND:20260730T200000Z
+SUMMARY:Strike Pledge Drive and Bargaining Q&A
+DESCRIPTION:Join SEIU Local 503 President Johnny Earl and OSU bargaining delegate Damien Manassa for an in-person Q&A about where bargaining stands\, what a strike is and what the Higher Ed strike pledge means. Sign the pledge with coworkers. Lunch will be provided\; menu details are coming soon.
+LOCATION:Memorial Union room 211\, Oregon State University
+URL:https://www.local083.org/events/2026-07-30-Strike-Pledge-Drive-and-Bargaining-QA.html
+END:VEVENT
+END:VCALENDAR
