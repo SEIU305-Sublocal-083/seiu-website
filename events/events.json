@@ -1,5 +1,5 @@
 {
-  "asOf": "2026-07-24",
+  "asOf": "2026-07-27",
   "events": [
   {
     "date": "2025-10-22",
@@ -258,6 +258,18 @@
     "url": "/events/2026-07-21-Higher-Ed-Mediation-Update.html",
     "featured": true,
     "location_detail": "Online via Zoom"
+  },
+  {
+    "date": "2026-07-28",
+    "time": "11:15 AM",
+    "title": "Organizer Meet & Greet at Vet Med",
+    "description": "Vet Med coworkers can stop by to meet Sylvia, our SEIU Local 503 organizer, talk about the workplace, and grab food and union swag.",
+    "type": "Meet & Greet",
+    "url": "/events/2026-07-28-Organizer-Meet-and-Greet-at-Vet-Med.html",
+    "featured": true,
+    "location_detail": "College of Veterinary Medicine",
+    "schema_location_name": "College of Veterinary Medicine, Oregon State University",
+    "schema_start_date": "2026-07-28T11:15:00-07:00"
   },
   {
     "date": "2026-07-30",
