@@ -12,6 +12,12 @@
     "description": "Continue to the official SEIU 503 Higher Education strike pledge."
   },
   {
+    "slug": "presentation",
+    "target": "/presentation/strike-pledge-drive.pptx",
+    "title": "Strike Pledge Drive Presentation",
+    "description": "Download the Local 083 Strike Pledge Drive and bargaining Q&A presentation."
+  },
+  {
     "slug": "strikeprep",
     "target": "/resources/strike-readiness.html",
     "title": "Strike Readiness Resources",
