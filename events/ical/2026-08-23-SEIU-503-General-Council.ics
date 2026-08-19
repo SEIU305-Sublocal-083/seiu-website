@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//SEIU Local 503 at OSU//Local083 Events//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:20260823-seiu-503-general-council@local083.org
+DTSTAMP:20260819T190000Z
+DTSTART:20260823T140000Z
+DTEND:20260823T220000Z
+SUMMARY:General Council: Candidate Speeches & Final Session
+DESCRIPTION:Delegate-only event. Statewide officer candidate speeches begin at 9 a.m. Final governance sessions are scheduled through 3 p.m.
+LOCATION:Oregon Convention Center\, 777 NE Martin Luther King Jr Blvd\, Portland\, OR 97232
+URL:https://www.local083.org/events/2026-08-20-23-SEIU-503-General-Council.html#sunday
+END:VEVENT
+END:VCALENDAR
