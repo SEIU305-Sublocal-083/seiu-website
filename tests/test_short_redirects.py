@@ -34,7 +34,10 @@ class ShortRedirectTests(unittest.TestCase):
                 self.assertIn(f'href="{entry["target"]}"', source)
                 self.assertIn("data-site-shell-header", source)
                 self.assertIn("data-site-shell-footer", source)
-                self.assertIn('class="text-2xl font-bold text-brand-purple-dark">SEIU 503</span>', source)
+                self.assertIn(
+                    'class="site-wordmark text-2xl font-bold text-brand-purple-dark">SEIU 503</span>',
+                    source,
+                )
 
     def test_internal_redirect_targets_exist(self):
         for entry in self.entries:

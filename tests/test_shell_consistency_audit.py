@@ -10,13 +10,14 @@ import shell_consistency_audit as shell  # noqa: E402
 
 
 CANONICAL_PAGE = '''<!doctype html><html><body>
-<header><nav aria-label="Primary navigation"><a href="/">SEIU 503</a>
+<header data-site-shell-header><nav aria-label="Primary navigation"><a href="/"><span class="site-wordmark text-2xl font-bold text-brand-purple-dark">SEIU 503</span></a>
 <a href="/about.html">About</a><a href="/events.html">Events</a><a href="/news.html">News</a>
 <a href="/resources.html">Resources &amp; Rights</a><a href="/leadership.html">Leadership</a><a href="/contact.html">Contact</a>
+<button data-site-shell-menu-owner></button>
 </nav><div aria-label="Mobile navigation"><a href="/about.html">About</a><a href="/events.html">Events</a><a href="/news.html">News</a>
 <a href="/resources.html">Resources &amp; Rights</a><a href="/leadership.html">Leadership</a><a href="/contact.html">Contact</a></div>
 </header><main><h1>Page</h1></main>
-<footer><p>SEIU Local 503 — Oregon State University</p>
+<footer data-site-shell-footer><p>SEIU Local 503 — Oregon State University</p>
 <a href="/resources.html">Resources &amp; Rights</a><a href="/contact.html">Contact us</a>
 <a href="mailto:083execteam@seiu503.org">Executive</a><a href="mailto:083stewards@seiu503.org">Stewards</a>
 <a href="/privacy.html#analytics-controls">Tracking settings</a><a href="/privacy.html">Privacy notice</a></footer>
@@ -68,6 +69,19 @@ class ShellAuditTests(unittest.TestCase):
                 [message for message in messages if "mobile-menu state script" in message],
                 ["Expected exactly one canonical mobile-menu state script; found 2"],
             )
+
+    def test_requires_canonical_wordmark_and_menu_owner(self):
+        with TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            page = root / "index.html"
+            page.write_text(
+                CANONICAL_PAGE.replace("site-wordmark text-2xl font-bold text-brand-purple-dark", "site-wordmark text-2xl font-bold")
+                .replace(" data-site-shell-menu-owner", ""),
+                encoding="utf-8",
+            )
+            messages = [finding.message for finding in shell.audit_page(page, root)]
+            self.assertIn("SEIU 503 wordmark must use text-brand-purple-dark", messages)
+            self.assertIn("Expected exactly one canonical mobile-menu owner; found 0", messages)
 
     def test_requires_bold_current_link_in_desktop_and_mobile_navigation(self):
         with TemporaryDirectory() as tmp:

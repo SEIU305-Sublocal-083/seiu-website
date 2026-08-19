@@ -130,7 +130,7 @@
     <header class="bg-white/80 backdrop-blur-lg border-b border-border-color sticky top-0 z-50" data-site-shell-header>
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center" aria-label="Primary navigation">
             <a href="/index.html" class="flex items-center space-x-2">
-                <span class="text-2xl font-bold text-brand-purple-dark">SEIU 503</span>
+                <span class="site-wordmark text-2xl font-bold text-brand-purple-dark">SEIU 503</span>
                 <span class="text-lg text-text-secondary hidden md:block">| Oregon State University</span>
             </a>
             <div class="hidden lg:flex space-x-8">
@@ -141,7 +141,7 @@
                 <a href="/leadership.html" class="text-text-secondary hover:text-brand-purple transition-colors">Leadership</a>
                 <a href="/contact.html" class="text-text-secondary hover:text-brand-purple transition-colors">Contact</a>
             </div>
-            <button type="button" id="mobile-menu-button" class="lg:hidden text-text-secondary hover:text-brand-purple" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false">
+            <button type="button" id="mobile-menu-button" class="lg:hidden text-text-secondary hover:text-brand-purple" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false" data-site-shell-menu-owner>
                 <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
             </button>
         </nav>
@@ -159,27 +159,30 @@
             const button = document.getElementById('mobile-menu-button');
             const menu = document.getElementById('mobile-menu');
             if (!button || !menu) return;
-            const canonicalIcon = button.innerHTML;
 
-            window.siteShellSyncMenuState = () => {
-                const isOpen = menu.classList.contains('is-open') || !menu.classList.contains('hidden');
-                button.setAttribute('aria-expanded', String(isOpen));
-                button.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
-                if (button.innerHTML !== canonicalIcon) button.innerHTML = canonicalIcon;
+            const setOpen = (open) => {
+                menu.classList.toggle('hidden', !open);
+                menu.classList.remove('is-open');
+                button.setAttribute('aria-expanded', String(open));
+                button.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
             };
 
-            new MutationObserver(window.siteShellSyncMenuState).observe(menu, {
-                attributes: true,
-                attributeFilter: ['class']
-            });
+            button.addEventListener('click', (event) => {
+                event.stopImmediatePropagation();
+                setOpen(button.getAttribute('aria-expanded') !== 'true');
+            }, { capture: true });
+            menu.addEventListener('click', (event) => {
+                if (!event.target.closest('a')) return;
+                event.stopImmediatePropagation();
+                setOpen(false);
+            }, { capture: true });
             document.addEventListener('keydown', (event) => {
                 if (event.key !== 'Escape' || button.getAttribute('aria-expanded') !== 'true') return;
-                menu.classList.add('hidden');
-                menu.classList.remove('is-open');
-                window.siteShellSyncMenuState();
+                event.stopImmediatePropagation();
+                setOpen(false);
                 button.focus();
-            });
-            window.siteShellSyncMenuState();
+            }, { capture: true });
+            setOpen(false);
         })();
     </script>
 <!-- SITE SHELL: HEADER END -->
@@ -217,15 +220,15 @@
                 <h2 class="text-3xl font-bold text-brand-purple-dark">Corvallis Area Contacts (Verified February 10, 2026)</h2>
                 <h3 class="text-2xl font-bold text-brand-purple-dark">City of Corvallis</h3>
                 <ul class="list-disc pl-5 space-y-2">
-                    <li><strong>Mayor and City Council:</strong> <a href="mailto:mayorandcouncil@corvallisoregon.gov">mayorandcouncil@corvallisoregon.gov</a></li>
+                    <li><strong>Mayor and City Council:</strong> <a class="break-all" href="mailto:mayorandcouncil@corvallisoregon.gov">mayorandcouncil@corvallisoregon.gov</a></li>
                     <li><strong>City Hall:</strong> coming soon</li>
                     <li><a href="https://www.corvallisoregon.gov/mc/page/connect-city-council" target="_blank" rel="noopener noreferrer">Official City Council Contact Page</a></li>
                 </ul>
 
                 <h3 class="text-2xl font-bold text-brand-purple-dark">Oregon Legislature</h3>
                 <ul class="list-disc pl-5 space-y-2">
-                    <li><strong>Sen. Sara Gelser Blouin (District 8):</strong> coming soon, <a href="mailto:Sen.SaraGelser@oregonlegislature.gov">Sen.SaraGelser@oregonlegislature.gov</a></li>
-                    <li><strong>Rep. Sarah Finger McDonald (District 16):</strong> coming soon, <a href="mailto:Rep.SarahFingerMcDonald@oregonlegislature.gov">Rep.SarahFingerMcDonald@oregonlegislature.gov</a></li>
+                    <li><strong>Sen. Sara Gelser Blouin (District 8):</strong> coming soon, <a class="break-all" href="mailto:Sen.SaraGelser@oregonlegislature.gov">Sen.SaraGelser@oregonlegislature.gov</a></li>
+                    <li><strong>Rep. Sarah Finger McDonald (District 16):</strong> coming soon, <a class="break-all" href="mailto:Rep.SarahFingerMcDonald@oregonlegislature.gov">Rep.SarahFingerMcDonald@oregonlegislature.gov</a></li>
                     <li><a href="https://www.oregonlegislature.gov/gelser" target="_blank" rel="noopener noreferrer">Sen. Gelser Blouin official page</a></li>
                     <li><a href="https://www.oregonlegislature.gov/mcdonald" target="_blank" rel="noopener noreferrer">Rep. Finger McDonald official page</a></li>
                 </ul>

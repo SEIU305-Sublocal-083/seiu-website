@@ -48,11 +48,25 @@ class ShellParser(HTMLParser):
         self.mobile_link_details: list[dict[str, str]] = []
         self.footer_links: list[tuple[str, str]] = []
         self.footer_text = ""
+        self.has_canonical_header = False
+        self.has_canonical_footer = False
+        self.menu_owner_count = 0
+        self.wordmark_classes: list[set[str]] = []
 
     def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
         values = dict(attrs)
         in_header = "header" in self.stack or tag == "header"
         in_footer = "footer" in self.stack or tag == "footer"
+        if tag == "header" and "data-site-shell-header" in values:
+            self.has_canonical_header = True
+        if tag == "footer" and "data-site-shell-footer" in values:
+            self.has_canonical_footer = True
+        if in_header and tag == "button" and "data-site-shell-menu-owner" in values:
+            self.menu_owner_count += 1
+        if in_header and tag == "span":
+            classes = set(str(values.get("class") or "").split())
+            if "site-wordmark" in classes:
+                self.wordmark_classes.append(classes)
         if in_header and tag == "nav" and values.get("aria-label") == "Primary navigation":
             self.primary_nav_level = len(self.stack)
         if in_header and values.get("aria-label") == "Mobile navigation":
@@ -143,6 +157,15 @@ def audit_page(path: Path, root: Path = ROOT) -> list[Finding]:
     parser.feed(source)
     findings: list[Finding] = []
 
+    if not parser.has_canonical_header:
+        findings.append(Finding(rel, "Missing canonical data-site-shell-header"))
+    if not parser.has_canonical_footer:
+        findings.append(Finding(rel, "Missing canonical data-site-shell-footer"))
+    if parser.menu_owner_count != 1:
+        findings.append(
+            Finding(rel, f"Expected exactly one canonical mobile-menu owner; found {parser.menu_owner_count}")
+        )
+
     menu_script_count = source.count("<script data-site-shell-menu-state-script>")
     if menu_script_count != 1:
         findings.append(
@@ -159,6 +182,10 @@ def audit_page(path: Path, root: Path = ROOT) -> list[Finding]:
         if found_nav != EXPECTED_NAV:
             findings.append(Finding(rel, f"Primary navigation differs from canonical order/targets: {found_nav!r}"))
         findings.extend(active_state_findings(rel, "Desktop", parser.primary_link_details))
+        if len(parser.wordmark_classes) != 1:
+            findings.append(Finding(rel, "Primary navigation is missing the canonical SEIU 503 wordmark"))
+        elif "text-brand-purple-dark" not in parser.wordmark_classes[0]:
+            findings.append(Finding(rel, "SEIU 503 wordmark must use text-brand-purple-dark"))
 
     if not parser.mobile_links:
         findings.append(Finding(rel, "Missing navigation with aria-label=\"Mobile navigation\" inside the header"))

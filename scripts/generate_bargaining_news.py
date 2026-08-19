@@ -326,7 +326,7 @@ def build(*, update_index: bool = False) -> list[Path]:
         path = ROOT / article["url"].lstrip("/")
         path.parent.mkdir(parents=True, exist_ok=True)
         relative_path = path.relative_to(ROOT).as_posix()
-        header = render_header(relative_path, needs_menu_script=True)
+        header = render_header(relative_path)
         footer = render_footer(relative_path)
         path.write_text(render_page(payload, update, language, article, alternate, header, footer), encoding="utf-8")
         written.append(path)

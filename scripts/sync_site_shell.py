@@ -46,12 +46,6 @@ TAILWIND_LINK_RE = re.compile(
 SHELL_STYLES_LINK_RE = re.compile(
     r"<link\b[^>]*href=[\"']/styles/site-shell\.css[\"'][^>]*>", re.IGNORECASE
 )
-MOBILE_HANDLER_RE = re.compile(
-    r"(?:mobileMenuButton|menuButton)\.addEventListener\s*\(\s*['\"]click['\"]",
-    re.IGNORECASE,
-)
-
-
 def active_section(relative_path: str) -> str | None:
     """Return the main-navigation section for a public path."""
 
@@ -84,7 +78,7 @@ def nav_link(label: str, href: str, key: str, active: str | None, *, mobile: boo
     return f'<a href="{href}" class="{classes}"{aria}>{escaped_label}</a>'
 
 
-def render_header(relative_path: str, *, needs_menu_script: bool) -> str:
+def render_header(relative_path: str) -> str:
     active = active_section(relative_path)
     desktop = "\n".join(
         f"                {nav_link(label, href, key, active, mobile=False)}"
@@ -94,62 +88,52 @@ def render_header(relative_path: str, *, needs_menu_script: bool) -> str:
         f"            {nav_link(label, href, key, active, mobile=True)}"
         for label, href, key in NAV_ITEMS
     )
-    onclick = ""
-    toggle_function = ""
-    if needs_menu_script:
-        onclick = ' onclick="siteShellToggleMenu(this)"'
-        toggle_function = """
-        function siteShellToggleMenu(button) {
-            const menu = document.getElementById('mobile-menu');
-            if (!menu) return;
-            menu.classList.toggle('hidden');
-            if (window.siteShellSyncMenuState) window.siteShellSyncMenuState();
-        }
-"""
-    # Legacy pages retain their existing toggle listener, but one canonical
-    # state synchronizer keeps the button's accessible name/state and icon in
-    # step with either the `hidden` or `is-open` menu convention. Observing the
-    # menu class avoids attaching a second click listener and double-toggling.
+    # The canonical handler runs in the capture phase and stops older page-level
+    # menu listeners from firing. That gives every public page one effective
+    # menu implementation without risking broad edits to unrelated page scripts.
     menu_script = f"""
     <script data-site-shell-menu-state-script>
         (() => {{
             const button = document.getElementById('mobile-menu-button');
             const menu = document.getElementById('mobile-menu');
             if (!button || !menu) return;
-            const canonicalIcon = button.innerHTML;
 
-            window.siteShellSyncMenuState = () => {{
-                const isOpen = menu.classList.contains('is-open') || !menu.classList.contains('hidden');
-                button.setAttribute('aria-expanded', String(isOpen));
-                button.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
-                if (button.innerHTML !== canonicalIcon) button.innerHTML = canonicalIcon;
+            const setOpen = (open) => {{
+                menu.classList.toggle('hidden', !open);
+                menu.classList.remove('is-open');
+                button.setAttribute('aria-expanded', String(open));
+                button.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
             }};
 
-            new MutationObserver(window.siteShellSyncMenuState).observe(menu, {{
-                attributes: true,
-                attributeFilter: ['class']
-            }});
+            button.addEventListener('click', (event) => {{
+                event.stopImmediatePropagation();
+                setOpen(button.getAttribute('aria-expanded') !== 'true');
+            }}, {{ capture: true }});
+            menu.addEventListener('click', (event) => {{
+                if (!event.target.closest('a')) return;
+                event.stopImmediatePropagation();
+                setOpen(false);
+            }}, {{ capture: true }});
             document.addEventListener('keydown', (event) => {{
                 if (event.key !== 'Escape' || button.getAttribute('aria-expanded') !== 'true') return;
-                menu.classList.add('hidden');
-                menu.classList.remove('is-open');
-                window.siteShellSyncMenuState();
+                event.stopImmediatePropagation();
+                setOpen(false);
                 button.focus();
-            }});
-            window.siteShellSyncMenuState();
+            }}, {{ capture: true }});
+            setOpen(false);
         }})();
-{toggle_function}    </script>"""
+    </script>"""
     return f"""{HEADER_START}
     <header class="bg-white/80 backdrop-blur-lg border-b border-border-color sticky top-0 z-50" data-site-shell-header>
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center" aria-label="Primary navigation">
             <a href="/index.html" class="flex items-center space-x-2">
-                <span class="text-2xl font-bold text-brand-purple-dark">SEIU 503</span>
+                <span class="site-wordmark text-2xl font-bold text-brand-purple-dark">SEIU 503</span>
                 <span class="text-lg text-text-secondary hidden md:block">| Oregon State University</span>
             </a>
             <div class="hidden lg:flex space-x-8">
 {desktop}
             </div>
-            <button type="button" id="mobile-menu-button" class="lg:hidden text-text-secondary hover:text-brand-purple" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false"{onclick}>
+            <button type="button" id="mobile-menu-button" class="lg:hidden text-text-secondary hover:text-brand-purple" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false" data-site-shell-menu-owner>
                 <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
             </button>
         </nav>
@@ -267,15 +251,7 @@ def sync_source(source: str, relative_path: str) -> str:
     )
     shell_less = not had_marked_header and header_span is None
 
-    # Existing inline page scripts keep controlling menus on legacy pages.
-    # Every page receives a state observer; shell-less redirect stubs also
-    # receive the small scoped toggle function in the shell.
-    stripped_for_handler_check = MARKED_HEADER_RE.sub("", source)
-    needs_menu_script = not MOBILE_HANDLER_RE.search(stripped_for_handler_check)
-    header = render_header(
-        relative_path,
-        needs_menu_script=needs_menu_script,
-    )
+    header = render_header(relative_path)
     if had_marked_header:
         source = MARKED_HEADER_RE.sub(lambda _: header, source, count=1)
     elif header_span:

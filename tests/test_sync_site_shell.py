@@ -54,18 +54,30 @@ class SyncSiteShellTests(unittest.TestCase):
         self.assertIn("<article><header><h1>Article title</h1></header><p>Body copy</p></article>", updated)
         self.assertIn('href="/privacy.html#analytics-controls">Tracking settings</a>', updated)
         self.assertIn("data-site-shell-menu-state-script", updated)
-        self.assertIn("new MutationObserver(window.siteShellSyncMenuState)", updated)
+        self.assertIn("event.stopImmediatePropagation()", updated)
+        self.assertIn("{ capture: true }", updated)
+        self.assertIn("data-site-shell-menu-owner", updated)
         self.assertNotIn("Old footer", updated)
         self.assertNotIn('onclick="siteShellToggleMenu(this)"', updated)
 
-    def test_adds_compatible_shell_and_handler_to_redirect_stub(self):
+    def test_adds_canonical_shell_and_handler_to_redirect_stub(self):
         page = '<!doctype html><html><head></head><body class="flex"><main id="main-content">Redirect</main></body></html>'
         updated = shell.sync_source(page, "eps/index.html")
         self.assertIn("data-site-shell-added", updated)
         self.assertIn("data-site-shell-menu-state-script", updated)
-        self.assertIn('onclick="siteShellToggleMenu(this)"', updated)
-        self.assertIn("function siteShellToggleMenu(button)", updated)
+        self.assertIn("data-site-shell-menu-owner", updated)
+        self.assertIn("button.addEventListener('click'", updated)
         self.assertIn("Redirect</main>", updated)
+
+    def test_wordmark_uses_scoped_canonical_brand_color(self):
+        updated = shell.sync_source(PAGE, "about.html")
+        self.assertIn(
+            '<span class="site-wordmark text-2xl font-bold text-brand-purple-dark">SEIU 503</span>',
+            updated,
+        )
+        styles = (ROOT / "styles" / "site-shell.css").read_text(encoding="utf-8")
+        self.assertIn("[data-site-shell-header] .site-wordmark", styles)
+        self.assertIn("color: var(--brand-purple-dark) !important", styles)
 
     def test_is_idempotent(self):
         once = shell.sync_source(PAGE, "about.html")

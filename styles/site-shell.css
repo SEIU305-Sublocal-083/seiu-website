@@ -38,6 +38,11 @@
     margin-inline: auto;
 }
 
+/* Page-local utility overrides must not change the shared wordmark color. */
+[data-site-shell-header] .site-wordmark {
+    color: var(--brand-purple-dark) !important;
+}
+
 body[data-site-shell-added] {
     display: grid !important;
     grid-template-rows: auto 1fr auto;
