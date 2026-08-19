@@ -1,6 +1,6 @@
 {
   "schema": "local083-current-action-v1",
-  "updatedAt": "2026-07-22",
+  "updatedAt": "2026-08-18",
   "defaultAction": "higher-ed-strike-pledge",
   "slots": {
     "homepageHero": "higher-ed-strike-pledge",
@@ -41,31 +41,32 @@
       "slug": "higher-ed-strike-pledge",
       "type": "bargaining_action",
       "visibility": {
-        "from": "2026-07-22T00:00:00-07:00",
-        "until": "2026-08-31T23:59:59-07:00"
+        "from": "2026-08-07T00:00:00-07:00"
       },
       "eyebrow": "Current bargaining action",
-      "headline": "Sign the Higher Ed strike pledge",
-      "summary": "Management is still at 0% COLA, with major takeaways still on the table. Signing the pledge shows that Higher Ed workers reject this offer and are ready to keep fighting for a fair contract.",
-      "promoEyebrow": "Build the response",
-      "promoHeadline": "Sign once. Ask 10 coworkers.",
-      "promoBody": "A strong response gives our bargaining team a clear measure of worker readiness and shows management that we are organized across all seven universities.",
+      "headline": "Impasse declared. Sign the Higher Ed strike pledge.",
+      "summary": "Our bargaining team declared impasse after Aug. 5-6 mediation. Management still wants a four-year deal with only one guaranteed 0.75 percent COLA, a one-year step freeze, weaker health care protections and takeaways on layoffs and contracting out. The pledge is not a strike-authorization vote.",
+      "promoEyebrow": "Why we are fighting",
+      "promoHeadline": "Wages. Health care. Job security. Respect.",
+      "promoBody": "Management's package would leave our pay behind rising costs while weakening protections that classified workers have built over decades.",
       "image": {
-        "src": "/images/2026-bargaining-zoom-backgrounds.webp",
-        "alt": "A purple background with silhouettes of raised fists and campus mascots, featuring the Higher Education Bargaining 2026 message."
+        "src": "/images/6eb56f3e-5b51-43f9-8212-91b5ff76a83a-august-bargaining-team.webp",
+        "alt": "SEIU Local 503 Higher Education bargaining team members meet around tables during August mediation.",
+        "width": 2560,
+        "height": 1736
       },
       "details": [
         {
-          "label": "What it is",
-          "value": "A way to show our bargaining team and management that workers reject the current offer"
+          "label": "Where things stand",
+          "value": "Impasse preserves our right to strike if management does not make genuine movement"
         },
         {
-          "label": "What it is not",
-          "value": "The pledge is not a strike-authorization vote"
+          "label": "What management offers",
+          "value": "One guaranteed 0.75 percent COLA in a four-year contract and a one-year step freeze"
         },
         {
-          "label": "What comes next",
-          "value": "Sign once, then ask 10 coworkers to stand with you"
+          "label": "What we can do",
+          "value": "Sign the pledge, wear purple, take action and talk with coworkers"
         }
       ],
       "ctas": [
@@ -86,12 +87,12 @@
         },
         {
           "id": "secondary",
-          "label": "Prepare and get answers",
-          "href": "/resources/strike-readiness.html",
+          "label": "Read the impasse update",
+          "href": "/news/2026-08-07-higher-ed-bargaining-team-declares-impasse.html",
           "style": "secondary",
           "analytics": {
-            "event": "resource_click",
-            "label": "Strike Readiness Hub",
+            "event": "news_click",
+            "label": "Higher Ed Impasse Update",
             "metadata": {
               "placement": "homepage_hero",
               "action_slug": "higher-ed-strike-pledge"
@@ -114,9 +115,9 @@
         }
       ],
       "actionPage": {
-        "headline": "Sign the Higher Ed strike pledge",
-        "body": "The pledge tells our bargaining team and management that Higher Ed workers reject 0% COLA and the takeaways still on the table. It helps our union measure readiness and decide how strongly workers are prepared to act together.",
-        "nextStep": "This is not a strike-authorization vote. Sign the pledge, then ask 10 coworkers to sign with you."
+        "headline": "Impasse declared: Sign the Higher Ed strike pledge",
+        "body": "Our bargaining team declared impasse after management failed to offer a fair path on wages, health care, layoffs and contracting out. The pledge shows that Higher Ed workers are united and ready to do what it takes for a fair contract.",
+        "nextStep": "The pledge is not a strike-authorization vote. Sign it, then ask 10 coworkers to stand with you."
       }
     },
     "hell-no-president-email": {
@@ -128,7 +129,7 @@
       },
       "eyebrow": "Current bargaining action",
       "headline": "Take 3 actions with our union for a fair contract",
-      "summary": "Oregon State University management is stalling. Email OSU leadership today, sign the strike pledge when it arrives and build our union with one coworker conversation.",
+      "summary": "Oregon State University management is stalling. Email OSU leadership, sign the strike pledge and build our union with one coworker conversation.",
       "promoEyebrow": "Our three-action plan",
       "promoHeadline": "One email. One pledge. One conversation.",
       "promoBody": "Each action builds our power and shows OSU that classified staff are informed, organized and ready to stand with one another.",
@@ -138,15 +139,15 @@
       },
       "details": [
         {
-          "label": "Today",
+          "label": "Email",
           "value": "Email OSU leadership and demand a fair contract"
         },
         {
-          "label": "Next week",
+          "label": "Pledge",
           "value": "Read and sign our union's strike pledge"
         },
         {
-          "label": "Starting now",
+          "label": "Organize",
           "value": "Become a member or ask one coworker to join"
         }
       ],
@@ -154,7 +155,7 @@
         {
           "id": "primary",
           "label": "Take 3 actions for a fair contract",
-          "href": "/news/2026-07-09-tell-universities-hell-no.html",
+          "href": "/news/2026-07-16-three-actions-fair-contract.html",
           "style": "primary",
           "analytics": {
             "event": "action_page_click",
@@ -196,8 +197,8 @@
       ],
       "actionPage": {
         "headline": "Take 3 actions with our union for a fair contract",
-        "body": "Our collective power comes from members moving together. Email OSU leadership today, sign the strike pledge when it arrives and build our union by becoming a member or asking one coworker to join.",
-        "nextStep": "Start with the email today. The action hub explains every step and will carry the strike pledge link as soon as it is available."
+        "body": "Our collective power comes from members moving together. Email OSU leadership, sign the strike pledge and build our union by becoming a member or asking one coworker to join.",
+        "nextStep": "Start with the email, then use the action hub to sign the strike pledge and choose another way to build our union."
       }
     },
     "membership-july-16": {

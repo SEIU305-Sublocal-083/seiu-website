@@ -20,6 +20,15 @@ mobileMenuButton.addEventListener('click', () => mobileMenu.classList.toggle('hi
 
 
 class SyncSiteShellTests(unittest.TestCase):
+    def test_top_level_section_pages_select_their_navigation_category(self):
+        for path, expected in (
+            ("events.html", "events"),
+            ("news.html", "news"),
+            ("resources.html", "resources"),
+        ):
+            with self.subTest(path=path):
+                self.assertEqual(shell.active_section(path), expected)
+
     def test_shell_styles_define_canonical_tokens_and_ui_font(self):
         styles = (ROOT / "styles" / "site-shell.css").read_text(encoding="utf-8")
         self.assertIn("[data-site-shell-header]", styles)

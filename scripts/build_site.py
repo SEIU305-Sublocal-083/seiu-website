@@ -4,12 +4,27 @@
 from __future__ import annotations
 
 import argparse
+import json
 import subprocess
 import sys
 from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
+
+
+def bargaining_news_paths(root: Path = ROOT) -> list[str]:
+    manifest = root / "data" / "higher-ed-bargaining-updates.json"
+    if not manifest.is_file():
+        return []
+    data = json.loads(manifest.read_text(encoding="utf-8"))
+    return [
+        article["url"].lstrip("/")
+        for update in data["updates"]
+        for article in update["languages"].values()
+    ]
+
+
 GENERATED_PATHS = [
     "index.html",
     "news.html",
@@ -25,7 +40,7 @@ GENERATED_PATHS = [
     "strikeprep/index.html",
     "strikepay/index.html",
     "strikehelp/index.html",
-]
+] + bargaining_news_paths()
 
 
 def run(command: list[str]) -> None:
@@ -59,6 +74,7 @@ def main() -> int:
     before = snapshot(paths) if args.check else {}
 
     try:
+        run(["python3", "scripts/generate_bargaining_news.py"])
         run(["python3", "scripts/generate_static_content.py"])
         run(["python3", "scripts/generate_rss.py"])
         run(["python3", "scripts/generate_sitemap.py"])

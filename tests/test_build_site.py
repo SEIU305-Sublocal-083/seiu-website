@@ -11,6 +11,20 @@ import build_site  # noqa: E402
 
 
 class BuildSiteDriftTests(unittest.TestCase):
+    def test_bargaining_news_outputs_come_from_bilingual_manifest(self):
+        with TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            (root / "data").mkdir()
+            (root / "data" / "higher-ed-bargaining-updates.json").write_text(
+                '{"updates":[{"languages":{"en":{"url":"/news/one.html"},"es":{"url":"/news/es/uno.html"}}}]}',
+                encoding="utf-8",
+            )
+
+            self.assertEqual(
+                build_site.bargaining_news_paths(root),
+                ["news/one.html", "news/es/uno.html"],
+            )
+
     def test_check_detects_drift_and_restores_original_file(self):
         with TemporaryDirectory() as tmp:
             root = Path(tmp)

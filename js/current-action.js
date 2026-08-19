@@ -1,5 +1,5 @@
 (function () {
-    const DATA_URL = '/data/current-action.json?v=2026-07-22-strike-pledge';
+    const DATA_URL = '/data/current-action.json?v=2026-08-18-higher-ed-current';
 
     const safeText = (value) => String(value || '');
 
@@ -51,6 +51,8 @@
         if (!element || !src) return;
         element.setAttribute('src', src);
         if (image.alt) element.setAttribute('alt', image.alt);
+        if (Number.isInteger(image.width) && image.width > 0) element.setAttribute('width', String(image.width));
+        if (Number.isInteger(image.height) && image.height > 0) element.setAttribute('height', String(image.height));
     };
 
     const applyAnalytics = (element, cta) => {

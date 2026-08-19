@@ -25,6 +25,15 @@ CANONICAL_PAGE = '''<!doctype html><html><body>
 
 
 class ShellAuditTests(unittest.TestCase):
+    def test_top_level_section_pages_expect_their_navigation_category(self):
+        for path, expected in (
+            ("events.html", "/events.html"),
+            ("news.html", "/news.html"),
+            ("resources.html", "/resources.html"),
+        ):
+            with self.subTest(path=path):
+                self.assertEqual(shell.active_nav_href(path), expected)
+
     def test_accepts_canonical_shell(self):
         with TemporaryDirectory() as tmp:
             root = Path(tmp)

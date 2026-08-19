@@ -112,7 +112,7 @@ def active_nav_href(relative_path: str) -> str | None:
     if first in {"events", "news", "resources"}:
         return f"/{first}.html"
     stem = Path(relative_path).stem
-    if "/" not in relative_path and stem in {"about", "leadership", "contact"}:
+    if "/" not in relative_path and stem in {Path(href).stem for _, href in EXPECTED_NAV}:
         return f"/{stem}.html"
     return None
 

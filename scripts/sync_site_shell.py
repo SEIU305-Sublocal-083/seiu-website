@@ -59,7 +59,7 @@ def active_section(relative_path: str) -> str | None:
     if first in {"events", "news", "resources"}:
         return first
     stem = Path(relative_path).stem
-    if "/" not in relative_path and stem in {"about", "leadership", "contact"}:
+    if "/" not in relative_path and stem in {key for _, _, key in NAV_ITEMS}:
         return stem
     return None
 

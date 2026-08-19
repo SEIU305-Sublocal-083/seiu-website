@@ -188,13 +188,20 @@ def lead_image(article: dict) -> tuple[str, str, int, int]:
 
 
 def thumbnail_url(image: str) -> str:
-    return {
+    known = {
         "/images/card.webp": "/images/card-192.webp",
         "/images/2026-bargaining-zoom-backgrounds.webp": "/images/2026-bargaining-zoom-backgrounds-192.webp",
         "/images/3cd44f56-3666-4fa5-82ac-4bf3b8b00c0d-june-30-rally-speaker-with-camera.webp": "/images/3cd44f56-3666-4fa5-82ac-4bf3b8b00c0d-june-30-rally-speaker-with-camera-192.webp",
         "/images/83a4a1c4-4d9a-482a-8ad9-a3e73c338df3-wngr-barg-update.webp": "/images/83a4a1c4-4d9a-482a-8ad9-a3e73c338df3-wngr-barg-update-192.webp",
         "/images/2cef7759-042d-4a05-9496-7eefff439a5e-june-30-rally-speaker-and-crowd.webp": "/images/2cef7759-042d-4a05-9496-7eefff439a5e-june-30-rally-speaker-and-crowd-192.webp",
-    }.get(image, image or "/images/card.webp")
+    }.get(image)
+    if known:
+        return known
+    if image.endswith(".webp"):
+        candidate = image[:-5] + "-192.webp"
+        if (ROOT / candidate.lstrip("/")).is_file():
+            return candidate
+    return image or "/images/card.webp"
 
 
 def primary_topic(article: dict) -> str:
