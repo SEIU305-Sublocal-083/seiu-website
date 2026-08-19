@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//SEIU Local 503 at OSU//Local083 Events//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:20260827-osu-cat-workshop-orientation@local083.org
+DTSTAMP:20260819T120000Z
+DTSTART:20260827T190000Z
+DTEND:20260827T200000Z
+SUMMARY:OSU CAT Workshop Orientation
+DESCRIPTION:Review next steps and organizing best practices and make a plan to get your workplace strike-ready. Register through the event page.
+LOCATION:Online via Zoom
+URL:https://www.local083.org/events/2026-08-17-27-OSU-CAT-Workshop-Orientations.html
+END:VEVENT
+END:VCALENDAR

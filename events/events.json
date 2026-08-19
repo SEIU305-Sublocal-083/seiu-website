@@ -1,6 +1,82 @@
 {
-  "asOf": "2026-07-27",
+  "asOf": "2026-08-19",
   "events": [
+  {
+    "date": "2026-09-09",
+    "time": "5:30 PM - 8:00 PM",
+    "title": "OSU Higher Ed Strike School",
+    "description": "OSU members can join a Higher Ed strike school to build organizing skills, prepare coworkers and get ready to win a strong contract. Registration is required.",
+    "type": "Strike School",
+    "url": "/events/2026-09-09-OSU-Higher-Ed-Strike-School.html",
+    "featured": true,
+    "location_detail": "Westminster House, 101 NW 23rd St, Corvallis",
+    "schema_location_name": "Westminster House",
+    "location_address": {
+      "streetAddress": "101 NW 23rd St",
+      "addressLocality": "Corvallis",
+      "addressRegion": "OR",
+      "postalCode": "97330",
+      "addressCountry": "US"
+    },
+    "schema_start_date": "2026-09-09T17:30:00-07:00",
+    "schema_end_date": "2026-09-09T20:00:00-07:00",
+    "calendar_link": "/events/ical/2026-09-09-OSU-Higher-Ed-Strike-School.ics"
+  },
+  {
+    "date": "2026-08-27",
+    "time": "12:00 PM - 1:00 PM",
+    "title": "OSU CAT Workshop Orientation",
+    "description": "Join an OSU Contract Action Team orientation to review next steps and organizing best practices, then make a plan to get your workplace strike-ready. Choose this session on the signup form.",
+    "type": "CAT Training",
+    "url": "/events/2026-08-17-27-OSU-CAT-Workshop-Orientations.html",
+    "featured": false,
+    "location_detail": "Online via Zoom",
+    "calendar_link": "/events/ical/2026-08-27-OSU-CAT-Workshop-Orientation.ics"
+  },
+  {
+    "date": "2026-08-26",
+    "time": "5:00 PM - 6:00 PM",
+    "title": "OSU CAT Workshop Orientation",
+    "description": "Join an OSU Contract Action Team orientation to review next steps and organizing best practices, then make a plan to get your workplace strike-ready. Choose this session on the signup form.",
+    "type": "CAT Training",
+    "url": "/events/2026-08-17-27-OSU-CAT-Workshop-Orientations.html",
+    "featured": false,
+    "location_detail": "Corvallis Office, 301 SW 4th St, Suite 209",
+    "calendar_link": "/events/ical/2026-08-26-OSU-CAT-Workshop-Orientation.ics"
+  },
+  {
+    "date": "2026-08-24",
+    "time": "5:00 PM - 6:00 PM",
+    "title": "OSU CAT Workshop Orientation",
+    "description": "Join an OSU Contract Action Team orientation to review next steps and organizing best practices, then make a plan to get your workplace strike-ready. Choose this session on the signup form.",
+    "type": "CAT Training",
+    "url": "/events/2026-08-17-27-OSU-CAT-Workshop-Orientations.html",
+    "featured": false,
+    "location_detail": "Online via Zoom",
+    "calendar_link": "/events/ical/2026-08-24-OSU-CAT-Workshop-Orientation.ics"
+  },
+  {
+    "date": "2026-08-19",
+    "time": "6:30 PM - 7:30 PM",
+    "title": "OSU CAT Workshop Orientation",
+    "description": "Join an OSU Contract Action Team orientation to review next steps and organizing best practices, then make a plan to get your workplace strike-ready. Choose this session on the signup form.",
+    "type": "CAT Training",
+    "url": "/events/2026-08-17-27-OSU-CAT-Workshop-Orientations.html",
+    "featured": true,
+    "location_detail": "Corvallis Office, 301 SW 4th St, Suite 209",
+    "calendar_link": "/events/ical/2026-08-19-OSU-CAT-Workshop-Orientation.ics"
+  },
+  {
+    "date": "2026-08-17",
+    "time": "5:00 PM - 6:00 PM",
+    "title": "OSU CAT Workshop Orientation",
+    "description": "Join an OSU Contract Action Team orientation to review next steps and organizing best practices, then make a plan to get your workplace strike-ready. Choose this session on the signup form.",
+    "type": "CAT Training",
+    "url": "/events/2026-08-17-27-OSU-CAT-Workshop-Orientations.html",
+    "featured": false,
+    "location_detail": "Corvallis Office, 301 SW 4th St, Suite 209",
+    "calendar_link": "/events/ical/2026-08-17-OSU-CAT-Workshop-Orientation.ics"
+  },
   {
     "date": "2025-10-22",
     "time": "12:00 PM - 1:00 PM",

@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//SEIU Local 503 at OSU//Local083 Events//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:20260909-osu-higher-ed-strike-school@local083.org
+DTSTAMP:20260819T120000Z
+DTSTART:20260910T003000Z
+DTEND:20260910T030000Z
+SUMMARY:OSU Higher Ed Strike School
+DESCRIPTION:OSU members can build organizing skills\, prepare coworkers and get ready to win a strong contract. Registration is required.
+LOCATION:Westminster House\, 101 NW 23rd St\, Corvallis\, OR 97330
+URL:https://www.local083.org/events/2026-09-09-OSU-Higher-Ed-Strike-School.html
+END:VEVENT
+END:VCALENDAR
