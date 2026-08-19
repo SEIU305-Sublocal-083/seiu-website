@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//SEIU Local 503 at OSU//Local083 Events//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:20260820-23-seiu-503-general-council@local083.org
+DTSTAMP:20260819T120000Z
+DTSTART;VALUE=DATE:20260820
+DTEND;VALUE=DATE:20260824
+SUMMARY:SEIU 503 General Council
+DESCRIPTION:Delegate-only union governance gathering. Local 083 members who are not attending are encouraged to ask their delegates what is being considered and hear a report-back afterward.
+LOCATION:Oregon Convention Center\, 777 NE Martin Luther King Jr Blvd\, Portland\, OR 97232
+URL:https://www.local083.org/events/2026-08-20-23-SEIU-503-General-Council.html
+END:VEVENT
+END:VCALENDAR
