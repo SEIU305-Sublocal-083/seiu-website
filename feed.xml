@@ -5,8 +5,16 @@
     <link>https://www.local083.org</link>
     <description>Combined news and event updates from SEIU Local 503 at Oregon State University.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 09 Sep 2026 07:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 17 Sep 2026 07:00:00 GMT</lastBuildDate>
     <atom:link href="https://www.local083.org/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>[Event] OSU Member Meeting</title>
+      <link>https://www.local083.org/events/2026-09-17-OSU-Member-Meeting.html</link>
+      <guid isPermaLink="false">event:2026-09-17:OSU Member Meeting:combined</guid>
+      <description>Join SEIU Local 083 members for our September OSU member meeting online via Zoom at noon Pacific time. | Date: 2026-09-17 | Time: 12:00 PM PT | Location: Online via Zoom</description>
+      <pubDate>Thu, 17 Sep 2026 07:00:00 GMT</pubDate>
+      <category>Zoom Meeting</category>
+    </item>
     <item>
       <title>[Event] OSU Higher Ed Strike School</title>
       <link>https://www.local083.org/events/2026-09-09-OSU-Higher-Ed-Strike-School.html</link>

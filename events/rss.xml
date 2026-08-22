@@ -5,7 +5,7 @@
     <link>https://www.local083.org</link>
     <description>Upcoming events from SEIU Local 503 at Oregon State University.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 09 Sep 2026 07:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 17 Sep 2026 07:00:00 GMT</lastBuildDate>
     <atom:link href="https://www.local083.org/events/rss.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>Membership Meeting</title>
@@ -542,6 +542,14 @@
       <description>OSU members can join a Higher Ed strike school to build organizing skills, prepare coworkers and get ready to win a strong contract. Registration is required. | Date: 2026-09-09 | Time: 5:30 PM - 8:00 PM | Location: Westminster House, 101 NW 23rd St, Corvallis</description>
       <pubDate>Wed, 09 Sep 2026 07:00:00 GMT</pubDate>
       <category>Strike School</category>
+    </item>
+    <item>
+      <title>OSU Member Meeting</title>
+      <link>https://www.local083.org/events/2026-09-17-OSU-Member-Meeting.html</link>
+      <guid isPermaLink="false">event:2026-09-17:OSU Member Meeting</guid>
+      <description>Join SEIU Local 083 members for our September OSU member meeting online via Zoom at noon Pacific time. | Date: 2026-09-17 | Time: 12:00 PM PT | Location: Online via Zoom</description>
+      <pubDate>Thu, 17 Sep 2026 07:00:00 GMT</pubDate>
+      <category>Zoom Meeting</category>
     </item>
   </channel>
 </rss>
