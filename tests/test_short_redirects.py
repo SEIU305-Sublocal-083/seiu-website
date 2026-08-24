@@ -24,6 +24,11 @@ class ShortRedirectTests(unittest.TestCase):
         self.assertEqual(self.by_slug["strikeprep"]["target"], "/resources/strike-readiness.html")
         self.assertEqual(self.by_slug["strikepay"]["target"], "/resources/strike-pay-benefits.html")
         self.assertEqual(self.by_slug["strikehelp"]["target"], "/resources/strike-support.html")
+        for slug in ("COC", "Conduct", "Code-of-Conduct"):
+            self.assertEqual(
+                self.by_slug[slug]["target"],
+                "/resources/code-of-conduct.html",
+            )
 
     def test_generated_redirects_are_noindex_canonical_and_accessible(self):
         for entry in self.entries:

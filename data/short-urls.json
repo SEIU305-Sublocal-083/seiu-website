@@ -18,6 +18,24 @@
     "description": "Continue to Local 083's 2026 bargaining updates, actions and resources for OSU classified staff."
   },
   {
+    "slug": "COC",
+    "target": "/resources/code-of-conduct.html",
+    "title": "SEIU 503 Code of Conduct",
+    "description": "Continue to the SEIU 503 Code of Conduct for union events, meetings and communications."
+  },
+  {
+    "slug": "Conduct",
+    "target": "/resources/code-of-conduct.html",
+    "title": "SEIU 503 Code of Conduct",
+    "description": "Continue to the SEIU 503 Code of Conduct for union events, meetings and communications."
+  },
+  {
+    "slug": "Code-of-Conduct",
+    "target": "/resources/code-of-conduct.html",
+    "title": "SEIU 503 Code of Conduct",
+    "description": "Continue to the SEIU 503 Code of Conduct for union events, meetings and communications."
+  },
+  {
     "slug": "strikeprep",
     "target": "/resources/strike-readiness.html",
     "title": "Strike Readiness Resources",
