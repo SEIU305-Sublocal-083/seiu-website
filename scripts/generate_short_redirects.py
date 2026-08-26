@@ -14,7 +14,7 @@ from sync_site_shell import sync_source
 
 
 MANIFEST = ROOT / "data" / "short-urls.json"
-SLUG_RE = re.compile(r"[a-z0-9]+(?:-[a-z0-9]+)*")
+SLUG_RE = re.compile(r"[A-Za-z0-9]+(?:-[A-Za-z0-9]+)*")
 
 
 def canonical_target(target: str) -> str:

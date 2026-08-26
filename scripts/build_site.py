@@ -25,6 +25,14 @@ def bargaining_news_paths(root: Path = ROOT) -> list[str]:
     ]
 
 
+def short_redirect_paths(root: Path = ROOT) -> list[str]:
+    manifest = root / "data" / "short-urls.json"
+    if not manifest.is_file():
+        return []
+    entries = json.loads(manifest.read_text(encoding="utf-8"))
+    return [f"{entry['slug']}/index.html" for entry in entries]
+
+
 GENERATED_PATHS = [
     "index.html",
     "news.html",
@@ -35,12 +43,7 @@ GENERATED_PATHS = [
     "sitemap.xml",
     "robots.txt",
     "styles/tailwind.css",
-    "actions/index.html",
-    "pledge/index.html",
-    "strikeprep/index.html",
-    "strikepay/index.html",
-    "strikehelp/index.html",
-] + bargaining_news_paths()
+] + short_redirect_paths() + bargaining_news_paths()
 
 
 def run(command: list[str]) -> None:

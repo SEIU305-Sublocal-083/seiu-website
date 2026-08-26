@@ -25,6 +25,20 @@ class BuildSiteDriftTests(unittest.TestCase):
                 ["news/one.html", "news/es/uno.html"],
             )
 
+    def test_short_redirect_outputs_come_from_manifest_and_preserve_case(self):
+        with TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            (root / "data").mkdir()
+            (root / "data" / "short-urls.json").write_text(
+                '[{"slug":"COC"},{"slug":"Code-of-Conduct"}]',
+                encoding="utf-8",
+            )
+
+            self.assertEqual(
+                build_site.short_redirect_paths(root),
+                ["COC/index.html", "Code-of-Conduct/index.html"],
+            )
+
     def test_check_detects_drift_and_restores_original_file(self):
         with TemporaryDirectory() as tmp:
             root = Path(tmp)
