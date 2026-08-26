@@ -12,11 +12,35 @@ class CodeOfConductTests(unittest.TestCase):
     def test_resource_page_contains_complete_policy_structure_and_source(self):
         source = RESOURCE_PATH.read_text(encoding="utf-8")
 
-        self.assertIn("Code of Conduct for Events, Meetings and Communications", source)
-        self.assertIn("Prohibited conduct includes, but is not limited to:", source)
+        self.assertIn(
+            "Code of Conduct for SEIU 503 Events/Meetings/Communications",
+            source.replace("<wbr>", ""),
+        )
+        self.assertIn(
+            "There is a prohibition against harassment and other exclusionary behavior. "
+            "This includes, but is not limited to:",
+            source,
+        )
         self.assertEqual(source.count('class="flex gap-4"'), 10)
-        self.assertIn("March 9, 2019", source)
-        self.assertIn("September 2, 2020", source)
+        policy_items = (
+            "Violent threats or language, signs, symbols, or images directed against another person",
+            "Discriminatory jokes and language, signs, symbols, or images",
+            "Ableist jokes and language, signs, symbols, or images",
+            "Sexually explicit or violent behavior and language, signs, symbols, or images",
+            "Offensive comments, signs, symbols, or images related to gender, gender identity and expression, "
+            "sexual orientation, disability, mental illness, neurotype, physical appearance, body, age, race, "
+            "ethnicity, nationality, language, family status, economic status, immigration status, or religion",
+            "Unwelcome sexual attention",
+            "Advocating for or encouraging any of the above behavior",
+            "Repeated harassment of others",
+            "Deliberate intimidation",
+            "Deliberate misgendering or use rejected names to describe groups of people",
+        )
+        for item in policy_items:
+            with self.subTest(item=item):
+                self.assertIn(item, source)
+        self.assertIn("originally adopted by the Board of Directors on 3/9/2019", source)
+        self.assertIn("amended on 9/2/2020", source)
         self.assertIn(
             "https://seiu503.org/wp-content/uploads/2020/11/Code-of-Conduct-for-SEIU-503-Events_Meetings_Communications.pdf",
             source,
