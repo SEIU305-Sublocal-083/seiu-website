@@ -5,7 +5,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 RESOURCE_PATH = ROOT / "resources" / "code-of-conduct.html"
-ALIASES = ("COC", "Conduct", "Code-of-Conduct")
+ALIASES = ("COC", "coc", "Conduct", "conduct", "Code-of-Conduct", "code-of-conduct")
 
 
 class CodeOfConductTests(unittest.TestCase):

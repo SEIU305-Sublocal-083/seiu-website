@@ -6,6 +6,7 @@ from __future__ import annotations
 import html
 import json
 import re
+import tempfile
 from pathlib import Path
 from urllib.parse import urlparse
 
@@ -98,13 +99,33 @@ def load_manifest(path: Path = MANIFEST) -> list[dict[str, str]]:
     return entries
 
 
-def generate(root: Path = ROOT, entries: list[dict[str, str]] | None = None) -> list[Path]:
+def filesystem_is_case_sensitive(root: Path) -> bool:
+    """Return whether *root* can store paths that differ only by case."""
+    with tempfile.TemporaryDirectory(prefix=".short-url-case-probe-", dir=root) as directory:
+        probe = Path(directory) / "case"
+        probe.write_text("probe", encoding="utf-8")
+        return not (Path(directory) / "CASE").exists()
+
+
+def generate(
+    root: Path = ROOT,
+    entries: list[dict[str, str]] | None = None,
+    *,
+    case_sensitive: bool | None = None,
+) -> list[Path]:
     output_paths: list[Path] = []
+    written_slugs: set[str] = set()
+    if case_sensitive is None:
+        case_sensitive = filesystem_is_case_sensitive(root)
     for entry in entries if entries is not None else load_manifest():
+        slug_key = entry["slug"].casefold()
+        if not case_sensitive and slug_key in written_slugs:
+            continue
         output = root / entry["slug"] / "index.html"
         output.parent.mkdir(parents=True, exist_ok=True)
         output.write_text(render_redirect(entry), encoding="utf-8")
         output_paths.append(output)
+        written_slugs.add(slug_key)
     return output_paths
 
 
