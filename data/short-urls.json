@@ -24,13 +24,31 @@
     "description": "Continue to the SEIU 503 Code of Conduct for union events, meetings and communications."
   },
   {
+    "slug": "coc",
+    "target": "/resources/code-of-conduct.html",
+    "title": "SEIU 503 Code of Conduct",
+    "description": "Continue to the SEIU 503 Code of Conduct for union events, meetings and communications."
+  },
+  {
     "slug": "Conduct",
     "target": "/resources/code-of-conduct.html",
     "title": "SEIU 503 Code of Conduct",
     "description": "Continue to the SEIU 503 Code of Conduct for union events, meetings and communications."
   },
   {
+    "slug": "conduct",
+    "target": "/resources/code-of-conduct.html",
+    "title": "SEIU 503 Code of Conduct",
+    "description": "Continue to the SEIU 503 Code of Conduct for union events, meetings and communications."
+  },
+  {
     "slug": "Code-of-Conduct",
+    "target": "/resources/code-of-conduct.html",
+    "title": "SEIU 503 Code of Conduct",
+    "description": "Continue to the SEIU 503 Code of Conduct for union events, meetings and communications."
+  },
+  {
+    "slug": "code-of-conduct",
     "target": "/resources/code-of-conduct.html",
     "title": "SEIU 503 Code of Conduct",
     "description": "Continue to the SEIU 503 Code of Conduct for union events, meetings and communications."

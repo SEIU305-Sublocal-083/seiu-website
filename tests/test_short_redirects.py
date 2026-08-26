@@ -1,5 +1,6 @@
 import json
 import sys
+import tempfile
 import unittest
 from pathlib import Path
 
@@ -24,7 +25,7 @@ class ShortRedirectTests(unittest.TestCase):
         self.assertEqual(self.by_slug["strikeprep"]["target"], "/resources/strike-readiness.html")
         self.assertEqual(self.by_slug["strikepay"]["target"], "/resources/strike-pay-benefits.html")
         self.assertEqual(self.by_slug["strikehelp"]["target"], "/resources/strike-support.html")
-        for slug in ("COC", "Conduct", "Code-of-Conduct"):
+        for slug in ("COC", "coc", "Conduct", "conduct", "Code-of-Conduct", "code-of-conduct"):
             self.assertEqual(
                 self.by_slug[slug]["target"],
                 "/resources/code-of-conduct.html",
@@ -54,6 +55,21 @@ class ShortRedirectTests(unittest.TestCase):
                 if target.endswith("/"):
                     path /= "index.html"
                 self.assertTrue(path.is_file())
+
+    def test_case_insensitive_generation_preserves_first_alias_variant(self):
+        entries = [self.by_slug["COC"], self.by_slug["coc"]]
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            outputs = redirects.generate(root, entries, case_sensitive=False)
+
+            self.assertEqual(
+                [output.relative_to(root).as_posix() for output in outputs],
+                ["COC/index.html"],
+            )
+            self.assertIn(
+                '<meta property="og:url" content="https://www.local083.org/COC/">',
+                outputs[0].read_text(encoding="utf-8"),
+            )
 
 
 if __name__ == "__main__":
