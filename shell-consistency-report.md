@@ -1,6 +1,6 @@
 # Public shell consistency report
 
-- Public pages checked: 163
+- Public pages checked: 165
 - Findings: 0
 - Intentional exception: `404.html` is audited because visitors see it, but it is excluded from the sitemap.
 

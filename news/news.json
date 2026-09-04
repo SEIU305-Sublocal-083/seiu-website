@@ -1,6 +1,53 @@
 [
   {
     "status": "published",
+    "title": "How to register for OSU Strike School",
+    "description": "Follow these steps to select the correct OSU Strike School session in the state registration form and finish registering for Sept. 9.",
+    "url": "/news/2026-09-01-how-to-register-for-osu-strike-school.html",
+    "image": "/images/2026-bargaining-zoom-backgrounds.webp",
+    "alt": "Purple 2026 Higher Education Bargaining graphic with raised fists and campus mascots.",
+    "tags": [
+      "Action",
+      "Strike School",
+      "Registration",
+      "2026 Bargaining"
+    ],
+    "author": {
+      "name": "SEIU Local 503 at Oregon State University",
+      "title": "Local 083"
+    },
+    "publishedAt": "2026-09-01",
+    "createdAt": "2026-09-01",
+    "updatedAt": "2026-09-01",
+    "featured": true,
+    "language": "en"
+  },
+  {
+    "status": "published",
+    "title": "Cómo registrarse para la Escuela de Huelga de OSU",
+    "description": "Sigue estos pasos para seleccionar la sesión correcta de la Escuela de Huelga de OSU en el formulario de registro estatal.",
+    "url": "/news/es/2026-09-01-como-registrarse-escuela-huelga-osu.html",
+    "image": "/images/2026-bargaining-zoom-backgrounds.webp",
+    "alt": "Gráfico morado de la campaña de negociación de Educación Superior 2026 con puños levantados y mascotas universitarias.",
+    "tags": [
+      "Action",
+      "Strike School",
+      "Registration",
+      "2026 Bargaining",
+      "Español"
+    ],
+    "author": {
+      "name": "SEIU Local 503 en la Universidad Estatal de Oregon",
+      "title": "Local 083"
+    },
+    "publishedAt": "2026-09-01",
+    "createdAt": "2026-09-01",
+    "updatedAt": "2026-09-03",
+    "featured": false,
+    "language": "es"
+  },
+  {
+    "status": "published",
     "title": "Higher Ed bargaining team declares impasse",
     "description": "Our bargaining team declared impasse after Aug. 5-6 mediation while management continued proposing cuts to rights, health care and real wages.",
     "url": "/news/2026-08-07-higher-ed-bargaining-team-declares-impasse.html",
@@ -21,7 +68,7 @@
     "publishedAt": "2026-08-07",
     "createdAt": "2026-08-07",
     "updatedAt": "2026-08-18",
-    "featured": true,
+    "featured": false,
     "language": "en"
   },
   {
