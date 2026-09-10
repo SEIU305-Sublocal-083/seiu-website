@@ -808,6 +808,8 @@
             grid-template-columns: repeat(3, minmax(0, 1fr));
         }
 
+        .past-empty { grid-column: 1 / -1; padding: 1.35rem; }
+
         .past-item {
             --past-accent: var(--brand-purple);
             color: var(--text-primary);
@@ -1074,28 +1076,28 @@ September 2026
                 <div class="past-intro">
                     <span class="eyebrow">Past events</span>
                     <h2 id="past-events-heading">Meetings, actions and gatherings from our archive</h2>
-                    <p>Browse earlier Local 083 events, from workplace meetings and bargaining actions to the community gatherings that help members build relationships.</p>
+                    <p>Explore our three most recent past event pages. Use the calendar above to browse earlier months.</p>
                 </div>
-                <div class="past-list">
-                    <a class="past-item past-rally" href="/events/2026-06-30-Rally-at-McNary-Field.html">
-                        <div class="past-item-top"><span class="past-icon" aria-hidden="true">✊</span><time datetime="2026-06-30">June 30, 2026 · Rally</time></div>
-                        <h3>Rally at McNary Field</h3>
-                        <p>Members and supporters rallied for real raises and a fair contract.</p>
+                <div id="past-events-list" class="past-list">
+                    <a class="past-item past-meeting" href="/events/2026-09-09-OSU-Higher-Ed-Strike-School.html">
+                        <div class="past-item-top"><span class="past-icon" aria-hidden="true">•</span><time datetime="2026-09-09">Sep 9, 2026 · Strike School</time></div>
+                        <h3>OSU Higher Ed Strike School</h3>
+                        <p>5:30 PM - 8:00 PM · Westminster House, 101 NW 23rd St, Corvallis</p>
                         <span class="arrow" aria-hidden="true">→</span>
                     </a>
-                    <a class="past-item past-meeting" href="/events/2026-06-18-OSU-June-Membership-Meeting.html">
-                        <div class="past-item-top"><span class="past-icon" aria-hidden="true">◎</span><time datetime="2026-06-18">June 18, 2026 · Meeting</time></div>
-                        <h3>June Membership Meeting</h3>
-                        <p>Members gathered online for Local 083 updates and discussion.</p>
+                    <a class="past-item past-meeting" href="/events/2026-08-17-27-OSU-CAT-Workshop-Orientations.html">
+                        <div class="past-item-top"><span class="past-icon" aria-hidden="true">⚡</span><time datetime="2026-08-27">Aug 27, 2026 · CAT Training</time></div>
+                        <h3>OSU CAT Workshop Orientation</h3>
+                        <p>12:00 PM - 1:00 PM · Online via Zoom</p>
                         <span class="arrow" aria-hidden="true">→</span>
                     </a>
-                    <a class="past-item past-community" href="/events/2025-10-23-Bowling.html">
-                        <div class="past-item-top"><span class="past-icon" aria-hidden="true">♥</span><time datetime="2025-10-23">Oct. 23, 2025 · Community</time></div>
-                        <h3>Member and Family Bowling Night</h3>
-                        <p>Members and their families shared bowling, food and community.</p>
+                    <a class="past-item past-meeting" href="/events/2026-08-20-23-SEIU-503-General-Council.html">
+                        <div class="past-item-top"><span class="past-icon" aria-hidden="true">•</span><time datetime="2026-08-23">Aug 23, 2026 · Union Governance</time></div>
+                        <h3>General Council: Candidate Speeches &amp; Final Session</h3>
+                        <p>7:00 AM - 3:00 PM · Oregon Convention Center, Portland</p>
                         <span class="arrow" aria-hidden="true">→</span>
                     </a>
-                </div>
+</div>
             </section>
 
         </section>
@@ -1146,6 +1148,7 @@ September 2026
     </footer>
 <!-- SITE SHELL: FOOTER END -->
 
+    <script src="/js/event-archive.js"></script>
     <script>
         const fallbackEvents = [
           {
@@ -2265,7 +2268,17 @@ September 2026
         monthViewButton.addEventListener('click', () => setView('month'));
         agendaViewButton.addEventListener('click', () => setView('agenda'));
 
+        const renderPastArchive = () => {
+            if (window.Local083EventArchive) {
+                document.getElementById('past-events-list').innerHTML =
+                    window.Local083EventArchive.renderPastEvents(calendarEvents);
+            }
+        };
+        document.addEventListener('visibilitychange', () => {
+            if (!document.hidden) renderPastArchive();
+        });
         renderCalendar();
+        renderPastArchive();
 
         fetch('/events/events.json')
             .then((response) => {
@@ -2277,6 +2290,7 @@ September 2026
                 if (Array.isArray(events)) {
                     calendarEvents = events.filter((event) => event.date && event.title && event.url);
                     renderCalendar();
+                    renderPastArchive();
                 }
             })
             .catch(() => {
