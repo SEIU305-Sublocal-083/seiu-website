@@ -5,15 +5,55 @@
     <link>https://www.local083.org</link>
     <description>Combined news and event updates from SEIU Local 503 at Oregon State University.</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 17 Sep 2026 07:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 06 Oct 2026 07:00:00 GMT</lastBuildDate>
     <atom:link href="https://www.local083.org/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
-      <title>[Event] OSU Member Meeting</title>
+      <title>[Event] Code of Conduct 101</title>
+      <link>https://www.local083.org/events/2026-10-06-Code-of-Conduct-101.html</link>
+      <guid isPermaLink="false">event:2026-10-06:Code of Conduct 101:combined</guid>
+      <description>Register for our free virtual Code of Conduct 101 training Tuesday, Oct. 6, from 5:30 to 7:30 p.m. Pacific. | Date: 2026-10-06 | Time: 5:30 PM - 7:30 PM | Location: Virtual — registration required</description>
+      <pubDate>Tue, 06 Oct 2026 07:00:00 GMT</pubDate>
+      <category>Training</category>
+    </item>
+    <item>
+      <title>[Event] OSU Membership Meeting</title>
       <link>https://www.local083.org/events/2026-09-17-OSU-Member-Meeting.html</link>
-      <guid isPermaLink="false">event:2026-09-17:OSU Member Meeting:combined</guid>
-      <description>Join SEIU Local 083 members for our September OSU member meeting online via Zoom at noon Pacific time. | Date: 2026-09-17 | Time: 12:00 PM PT | Location: Online via Zoom</description>
+      <guid isPermaLink="false">event:2026-09-17:OSU Membership Meeting:combined</guid>
+      <description>Join our September OSU membership meeting Thursday, Sept. 17, from noon to 1 p.m. in Memorial Union room 211 or on Zoom. | Date: 2026-09-17 | Time: 12:00 PM - 1:00 PM | Location: Memorial Union room 211 or Zoom</description>
+      <pubDate>Thu, 17 Sep 2026 07:00:00 GMT</pubDate>
+      <category>Membership Meeting</category>
+    </item>
+    <item>
+      <title>[Event] OSU CAT Meeting</title>
+      <link>https://www.local083.org/events/2026-09-17-OSU-CAT-Meeting.html</link>
+      <guid isPermaLink="false">event:2026-09-17:OSU CAT Meeting:combined</guid>
+      <description>Join our OSU Contract Action Team on Zoom Thursday, Sept. 17, from 6 to 7 p.m. Pacific. | Date: 2026-09-17 | Time: 6:00 PM - 7:00 PM | Location: Online via Zoom</description>
+      <pubDate>Thu, 17 Sep 2026 07:00:00 GMT</pubDate>
+      <category>CAT Meeting</category>
+    </item>
+    <item>
+      <title>[Event] OSU Steward Meeting</title>
+      <link>https://www.local083.org/events/2026-09-17-OSU-Steward-Meeting.html</link>
+      <guid isPermaLink="false">event:2026-09-17:OSU Steward Meeting:combined</guid>
+      <description>OSU stewards meet on Zoom Thursday, Sept. 17, from 7 to 8:30 p.m. Pacific, following the Contract Action Team meeting. | Date: 2026-09-17 | Time: 7:00 PM - 8:30 PM | Location: Online via Zoom</description>
       <pubDate>Thu, 17 Sep 2026 07:00:00 GMT</pubDate>
       <category>Zoom Meeting</category>
+    </item>
+    <item>
+      <title>[Event] OSU Executive Meeting</title>
+      <link>https://www.local083.org/events/2026-09-16-OSU-Executive-Meeting.html</link>
+      <guid isPermaLink="false">event:2026-09-16:OSU Executive Meeting:combined</guid>
+      <description>Join the Local 083 executive team on Zoom Wednesday, Sept. 16, from 6 to 7:30 p.m. Pacific. | Date: 2026-09-16 | Time: 6:00 PM - 7:30 PM | Location: Online via Zoom</description>
+      <pubDate>Wed, 16 Sep 2026 07:00:00 GMT</pubDate>
+      <category>Zoom Meeting</category>
+    </item>
+    <item>
+      <title>[Event] OSU Strike Authorization Vote</title>
+      <link>https://www.local083.org/events/2026-09-14-OSU-Strike-Authorization-Vote.html</link>
+      <guid isPermaLink="false">event:2026-09-14:OSU Strike Authorization Vote:combined</guid>
+      <description>Cast your strike authorization ballot in person Monday, Sept. 14, from 7:30 a.m. to 5 p.m. in the Memorial Union Multipurpose Room at OSU. | Date: 2026-09-14 | Time: 7:30 AM - 5:00 PM | Location: Memorial Union Multipurpose Room, OSU</description>
+      <pubDate>Mon, 14 Sep 2026 07:00:00 GMT</pubDate>
+      <category>Strike Vote</category>
     </item>
     <item>
       <title>[Event] OSU Higher Ed Strike School</title>

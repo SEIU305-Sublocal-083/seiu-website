@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//SEIU Local 503 OSU//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:2026-09-17-osu-steward-meeting@local083.org
+DTSTAMP:20260910T220000Z
+SEQUENCE:1
+DTSTART:20260918T020000Z
+DTEND:20260918T033000Z
+SUMMARY:OSU Steward Meeting
+DESCRIPTION:OSU stewards meet on Zoom Thursday\, Sept. 17\, from 7 to 8:3
+ 0 p.m. Pacific\, following the Contract Action Team meeting.\nJoin on Zo
+ om: https://seiu503-org.zoom.us/j/86104591735?pwd=YXkahEQ1FgqGaJ8a7meuXU
+ 3SPIZSlR.1\nMeeting ID: 861 0459 1735\nPasscode: 981033
+LOCATION:Online via Zoom
+URL:https://www.local083.org/events/2026-09-17-OSU-Steward-Meeting.html
+STATUS:CONFIRMED
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:OSU Steward Meeting
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+END:VCALENDAR
