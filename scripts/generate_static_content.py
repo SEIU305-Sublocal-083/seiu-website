@@ -94,6 +94,58 @@ def homepage_events(items: list[dict], as_of: datetime, limit: int = 2) -> list[
     return future[:limit]
 
 
+def past_events(items: list[dict], as_of: datetime, limit: int = 3) -> list[dict]:
+    """Latest distinct event pages before the editorial date, newest first."""
+    candidates = []
+    for item in items:
+        if not isinstance(item, dict) or not isinstance(item.get("title"), str) or not item["title"].strip():
+            continue
+        if not isinstance(item.get("url"), str) or not re.fullmatch(r"/events/[A-Za-z0-9._-]+\.html", item["url"]):
+            continue
+        try:
+            start = date_value(item["date"])
+        except (KeyError, TypeError, ValueError):
+            continue
+        end = start
+        try:
+            end = max(start, date_value(item.get("schema_end_date", "")[:10]))
+        except (TypeError, ValueError):
+            pass
+        if end < as_of:
+            candidates.append((end, start, item["url"], item))
+    seen = set()
+    result = []
+    for _, _, url, item in sorted(candidates, key=lambda row: row[:3], reverse=True):
+        if url not in seen:
+            seen.add(url)
+            result.append(item)
+    return result[:limit]
+
+
+def render_past_events(items: list[dict], as_of: datetime) -> str:
+    cards = []
+    for event in past_events(items, as_of):
+        kind = event.get("type") or "Event"
+        color, icon = "past-meeting", "•"
+        if re.search(r"rally|strike vote", kind, re.I):
+            color, icon = "past-rally", "✊"
+        elif re.search(r"social|community", kind, re.I):
+            color, icon = "past-community", "♥"
+        elif re.search(r"cat", kind, re.I):
+            icon = "⚡"
+        elif re.search(r"meeting", kind, re.I):
+            icon = "◎"
+        label = date_value(event["date"]).strftime("%b %-d, %Y")
+        details = " · ".join(str(event[key]) for key in ("time", "location_detail") if event.get(key))
+        cards.append(f'''                    <a class="past-item {color}" href="{esc(event['url'])}">
+                        <div class="past-item-top"><span class="past-icon" aria-hidden="true">{icon}</span><time datetime="{esc(event['date'])}">{esc(label)} · {esc(kind)}</time></div>
+                        <h3>{esc(event['title'])}</h3>
+                        <p>{esc(details)}</p>
+                        <span class="arrow" aria-hidden="true">→</span>
+                    </a>''')
+    return "\n".join(cards) or '<p class="past-empty">No past events are listed yet.</p>'
+
+
 def event_class(event_type: str = "") -> str:
     normalized = re.sub(r"[^a-z0-9]+", "-", event_type.lower()).strip("-")
     return normalized if normalized in {"membership-meeting", "zoom-meeting", "cat-meeting", "rally", "social-event"} else "default-event"
@@ -494,6 +546,7 @@ def build(root: Path = ROOT) -> list[Path]:
     events_path = root / "events.html"
     source = events_path.read_text(encoding="utf-8")
     source = replace_element_inner(source, "agenda-list", render_agenda(events))
+    source = replace_element_inner(source, "past-events-list", render_past_events(events_all, as_of))
     source = replace_element_inner(source, "intro-count-number", str(len(events)))
     source = replace_element_inner(source, "intro-count-label", f"{'event' if len(events) == 1 else 'events'} announced<br>in {calendar.month_name[month]}")
     source = replace_element_inner(source, "intro-date-list", render_glance(events, month))

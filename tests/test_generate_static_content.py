@@ -123,7 +123,7 @@ class StaticContentTests(unittest.TestCase):
             (root / "events.html").write_text(
                 graph()
                 + '<strong id="intro-count-number">0</strong><span id="intro-count-label">old</span><div id="intro-date-list">old</div>'
-                + '<h2 id="month-label">old</h2><div id="agenda-list">old</div>'
+                + '<h2 id="month-label">old</h2><div id="agenda-list">old</div><div id="past-events-list">old</div>'
                 + '<script>const fallbackEvents = [{"old": true}];</script>',
                 encoding="utf-8",
             )
