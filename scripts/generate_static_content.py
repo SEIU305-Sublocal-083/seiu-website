@@ -392,7 +392,7 @@ def event_schema(event: dict) -> dict | None:
         not location
         or "details coming soon" in location.lower()
         or not event.get("schema_end_date")
-        or not event.get("location_address")
+        or not (event.get("location_address") or event.get("virtual_url"))
     ):
         return None
 
@@ -412,10 +412,19 @@ def event_schema(event: dict) -> dict | None:
         },
     }
     schema["endDate"] = event["schema_end_date"]
-    schema["location"]["address"] = {
-        "@type": "PostalAddress",
-        **event["location_address"],
-    }
+    if event.get("location_address"):
+        schema["location"]["address"] = {
+            "@type": "PostalAddress",
+            **event["location_address"],
+        }
+    if event.get("virtual_url"):
+        virtual = {"@type": "VirtualLocation", "url": event["virtual_url"]}
+        if event.get("location_address"):
+            schema["location"] = [schema["location"], virtual]
+            schema["eventAttendanceMode"] = "https://schema.org/MixedEventAttendanceMode"
+        else:
+            schema["location"] = virtual
+            schema["eventAttendanceMode"] = "https://schema.org/OnlineEventAttendanceMode"
     return schema
 
 

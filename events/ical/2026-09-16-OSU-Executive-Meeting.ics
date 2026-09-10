@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//SEIU Local 503 OSU//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:2026-09-16-osu-executive-meeting@local083.org
+DTSTAMP:20260910T220000Z
+SEQUENCE:1
+DTSTART:20260917T010000Z
+DTEND:20260917T023000Z
+SUMMARY:OSU Executive Meeting
+DESCRIPTION:Join the Local 083 executive team on Zoom Wednesday\, Sept. 1
+ 6\, from 6 to 7:30 p.m. Pacific.\nJoin on Zoom: https://seiu503-org.zoom
+ .us/j/81561578134?pwd=wgXAssQAicsLovMbU8EwApb4gagocb.1\nMeeting ID: 815 
+ 6157 8134\nPasscode: 069987
+LOCATION:Online via Zoom
+URL:https://www.local083.org/events/2026-09-16-OSU-Executive-Meeting.html
+STATUS:CONFIRMED
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:OSU Executive Meeting
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

@@ -50,6 +50,34 @@ class StaticContentTests(unittest.TestCase):
         self.assertEqual(schema["location"]["name"], "Learning Innovation Center (LInC), Oregon State University")
         self.assertEqual(schema["location"]["address"]["addressCountry"], "US")
 
+    def test_online_event_is_included_without_a_physical_address(self):
+        event = {
+            "date": "2026-09-17", "title": "CAT Meeting", "url": "/events/cat.html",
+            "location_detail": "Online via Zoom", "virtual_url": "https://example.com/join",
+            "schema_start_date": "2026-09-17T18:00:00-07:00",
+            "schema_end_date": "2026-09-17T19:00:00-07:00",
+        }
+        items = []
+        static.update_events_graph(items, [event])
+        schema = next(item for item in items if item["@type"] == "Event")
+        self.assertEqual(schema["location"], {"@type": "VirtualLocation", "url": event["virtual_url"]})
+        self.assertEqual(schema["eventAttendanceMode"], "https://schema.org/OnlineEventAttendanceMode")
+        self.assertEqual(items[0]["numberOfItems"], 1)
+
+    def test_hybrid_event_keeps_room_and_online_join_link(self):
+        schema = static.event_schema({
+            "date": "2026-09-17", "title": "Membership Meeting", "url": "/events/members.html",
+            "location_detail": "MU 211 or Zoom", "schema_location_name": "MU 211",
+            "location_address": {"streetAddress": "2501 SW Jefferson Way"},
+            "virtual_url": "https://example.com/join",
+            "schema_start_date": "2026-09-17T12:00:00-07:00",
+            "schema_end_date": "2026-09-17T13:00:00-07:00",
+        })
+        self.assertEqual(schema["eventAttendanceMode"], "https://schema.org/MixedEventAttendanceMode")
+        self.assertEqual(schema["location"][0]["name"], "MU 211")
+        self.assertEqual(schema["location"][0]["address"]["streetAddress"], "2501 SW Jefferson Way")
+        self.assertEqual(schema["location"][1], {"@type": "VirtualLocation", "url": "https://example.com/join"})
+
     def test_element_replacement_handles_nested_same_name_tags(self):
         source = '<div id="target"><div>old</div></div><div>after</div>'
         self.assertEqual(

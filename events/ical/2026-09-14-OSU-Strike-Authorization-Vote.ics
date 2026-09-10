@@ -1,0 +1,26 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//SEIU Local 503 OSU//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:2026-09-14-osu-strike-authorization-vote@local083.org
+DTSTAMP:20260910T220000Z
+SEQUENCE:1
+DTSTART:20260914T143000Z
+DTEND:20260915T000000Z
+SUMMARY:OSU Strike Authorization Vote
+DESCRIPTION:Cast your strike authorization ballot in person Monday\, Sept
+ . 14\, from 7:30 a.m. to 5 p.m. in the Memorial Union Multipurpose Room 
+ at OSU.\nView voting information: https://seiu503.org/get-involved/barga
+ ining/higher-ed-bargaining-2026/
+LOCATION:Memorial Union Multipurpose Room\, OSU
+URL:https://www.local083.org/events/2026-09-14-OSU-Strike-Authorization-V
+ ote.html
+STATUS:CONFIRMED
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:OSU Strike Authorization Vote
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//SEIU Local 503 OSU//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:2026-10-06-code-of-conduct-101@local083.org
+DTSTAMP:20260910T220000Z
+SEQUENCE:1
+DTSTART:20261007T003000Z
+DTEND:20261007T023000Z
+SUMMARY:Code of Conduct 101
+DESCRIPTION:Register for our free virtual Code of Conduct 101 training Tu
+ esday\, Oct. 6\, from 5:30 to 7:30 p.m. Pacific.\nRegister for the train
+ ing: https://events.blackthorn.io/en/61YqfV6/g/htR8nfQySM/code-of-conduc
+ t-101-5a6WRf3DZXh/overview
+LOCATION:Virtual — registration required
+URL:https://www.local083.org/events/2026-10-06-Code-of-Conduct-101.html
+STATUS:CONFIRMED
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Code of Conduct 101
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+END:VCALENDAR
