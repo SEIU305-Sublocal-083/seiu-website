@@ -5,7 +5,7 @@
   "pages": [
     {
       "file": "strike/index.html",
-      "html_sha256": "d4aa473c80f955b1e3490d1325889e4b0446479f6e6f791a4daa18d97ccb3735",
+      "html_sha256": "920dce220e754dce505ebc3b995cc4331a49edf7ee9518ef1285ffc91876b422",
       "viewport": {
         "name": "desktop",
         "width": 1440,
@@ -27,7 +27,7 @@
     },
     {
       "file": "strike/index.html",
-      "html_sha256": "d4aa473c80f955b1e3490d1325889e4b0446479f6e6f791a4daa18d97ccb3735",
+      "html_sha256": "920dce220e754dce505ebc3b995cc4331a49edf7ee9518ef1285ffc91876b422",
       "viewport": {
         "name": "mobile",
         "width": 390,
