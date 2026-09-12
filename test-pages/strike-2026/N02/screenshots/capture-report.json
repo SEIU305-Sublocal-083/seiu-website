@@ -1,7 +1,6 @@
 {
   "item": "N02",
   "capture_method": "Playwright screenshot of local rendered HTML",
-  "artwork": "none",
   "pages": [
     {
       "file": "a.en.html",
@@ -14,7 +13,7 @@
       "screenshot": "screenshots/a-en-desktop-full.png",
       "screenshot_sha256": "af6d1a71a6467cadf4531731744cb95368fbada80cc879f47cac6ea365cf9aa5",
       "qa": {
-        "title": "Members authorize our bargaining team to call a strike — Local 083 review",
+        "title": "Members authorize our bargaining team to call a strike \u2014 Local 083 review",
         "h1": 1,
         "horizontalOverflow": false,
         "brokenImages": [],
@@ -35,7 +34,7 @@
       "screenshot": "screenshots/a-en-mobile-full.png",
       "screenshot_sha256": "2a64cf2c3b18d1c482508009c069dd82b552221d95749018c8ea1e65b635662c",
       "qa": {
-        "title": "Members authorize our bargaining team to call a strike — Local 083 review",
+        "title": "Members authorize our bargaining team to call a strike \u2014 Local 083 review",
         "h1": 1,
         "horizontalOverflow": false,
         "brokenImages": [],
@@ -56,7 +55,7 @@
       "screenshot": "screenshots/b-en-desktop-full.png",
       "screenshot_sha256": "86c9598d38e5f37c2b68c9345a9e6d16ab2e2e14dbf7c1eff3e09ecf50245718",
       "qa": {
-        "title": "Strike authorization did not pass — Local 083 review",
+        "title": "Strike authorization did not pass \u2014 Local 083 review",
         "h1": 1,
         "horizontalOverflow": false,
         "brokenImages": [],
@@ -77,7 +76,7 @@
       "screenshot": "screenshots/b-en-mobile-full.png",
       "screenshot_sha256": "806279cf0966cc03eb867abe24d12f8d1503ef302a582e6380e7a3f201e3f8a6",
       "qa": {
-        "title": "Strike authorization did not pass — Local 083 review",
+        "title": "Strike authorization did not pass \u2014 Local 083 review",
         "h1": 1,
         "horizontalOverflow": false,
         "brokenImages": [],
@@ -98,7 +97,7 @@
       "screenshot": "screenshots/c-en-desktop-full.png",
       "screenshot_sha256": "9d347242a83504a16bcacd2e7e43d03aeece8f69eee143116b05946769ef2667",
       "qa": {
-        "title": "We do not yet have a certified result to share — Local 083 review",
+        "title": "We do not yet have a certified result to share \u2014 Local 083 review",
         "h1": 1,
         "horizontalOverflow": false,
         "brokenImages": [],
@@ -119,7 +118,7 @@
       "screenshot": "screenshots/c-en-mobile-full.png",
       "screenshot_sha256": "a4255240e3120393c4d8ae0d2bfb9103db2b825e91d3ff90c4f85eea8b7a7f87",
       "qa": {
-        "title": "We do not yet have a certified result to share — Local 083 review",
+        "title": "We do not yet have a certified result to share \u2014 Local 083 review",
         "h1": 1,
         "horizontalOverflow": false,
         "brokenImages": [],
