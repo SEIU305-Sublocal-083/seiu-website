@@ -39,4 +39,4 @@ Ask the benefits team whether your employee tuition reduction and any dependent 
 
 **Your next step:** Send one specific question with the date you need an answer. For example: “I have approved leave beginning on this date. Please confirm my coverage, premium responsibility and leave handling in writing.” You can start without sharing your diagnosis or private documents in the first message.
 
-For union help, contact Sylvia Sharpe at [sharpes@seiu503.org](mailto:sharpes@seiu503.org), or [SEIU 503 Member Assistance](https://seiu503.org/contact-us/) at 1-844-503-7348, weekdays 8 a.m.–6 p.m., excluding holidays. A request does not guarantee a particular response time. Sources: OSU Employee Benefits and PEBB pages checked Sept. 12; briefing statements identified above.
+For union help, contact Sylvia Sharpe at [sharpes@seiu503.org](mailto:sharpes@seiu503.org), or [SEIU 503 Member Assistance](https://seiu503.org/contact-us/) at 1-844-503-7348, weekdays 8 a.m.–6 p.m., excluding holidays. A request does not guarantee a particular response time.
