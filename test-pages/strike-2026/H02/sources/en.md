@@ -1,0 +1,11 @@
+These references support the specific facts or help routes identified below. **Source snapshot: Sept. 12, 2026.** Recheck changing instructions before release.
+
+- [strike-pledge FAQ](https://seiu503.org/member_news/seiu-503-higher-ed-strike-pledge-frequently-asked-questions/) — SEIU 503 higher-education strike-pledge FAQ, dated Aug. 5, 2026. Background on authorization and membership. It does not verify a numerical threshold, this election's signup cutoff or a personal eligibility determination. Direct refresh timed out in the final packaging pass; recheck before release.
+- [start your union membership application](https://seiu503signup.org/) — SEIU 503 membership application, linked from Local 083. Starting or submitting an application does not establish this vote's cutoff or an applicant's eligibility; confirm with the organizer.
+- [Oregon Employment Relations Board's process explanation](https://www.oregon.gov/erb/pages/pecba.aspx) — Oregon Employment Relations Board, public employee collective bargaining. Public-sector process reference; not a substitute for the applicable contract or an individual representation decision.
+- [confirmed Monday daytime voting details](https://www.local083.org/events/2026-09-14-OSU-Strike-Authorization-Vote.html) — Local 083, Sept. 14 authorization-vote event. Supports the daytime MU date, hours, address and in-person format. Rechecked Sept. 12. It does not settle evening or Cascades logistics.
+- [SEIU 503's contact page](https://seiu503.org/contact-us/) — SEIU 503 official contact directory. A general help or media referral; it does not guarantee weekend response, emergency coverage or assistance payments.
+
+**Proposal source limit:** The Sept. 11 bargaining-team member update and the member briefing are dated union accounts. The full-steps detail is attributed to the briefing. Obtain approved current proposal text for public release; a general bargaining-page link does not independently prove every proposal detail. Private email bodies, source attachments and member-specific links are not included.
+
+**Other attributed records:** Sept. 11 bargaining-team update and corrected organizer invitation; member briefing, as attributed in the guide.
