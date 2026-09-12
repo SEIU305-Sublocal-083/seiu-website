@@ -1,0 +1,49 @@
+{
+  "item": "N03",
+  "capture_method": "Playwright screenshot of local rendered HTML",
+  "artwork": "none",
+  "pages": [
+    {
+      "file": "a.en.html",
+      "html_sha256": "5c5bd8868c863122f4bc0287d60f5d8ffba50befad9c78f659d9d72a1755e89f",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/a-en-desktop-full.png",
+      "screenshot_sha256": "c2d0b441bd718614b1789173ecad2089985158caf1f78fece4e6d78a48ea57da",
+      "qa": {
+        "title": "What members need to know after our Sept. 17 meeting — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "sourcesVisible": true,
+        "noindex": "noindex,nofollow",
+        "height": 3053
+      },
+      "errors": []
+    },
+    {
+      "file": "a.en.html",
+      "html_sha256": "5c5bd8868c863122f4bc0287d60f5d8ffba50befad9c78f659d9d72a1755e89f",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/a-en-mobile-full.png",
+      "screenshot_sha256": "4efa4e6e8684fb3d63970de11b3bd0869aeea126f98f0b03222fc1bbde0d94a7",
+      "qa": {
+        "title": "What members need to know after our Sept. 17 meeting — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "sourcesVisible": true,
+        "noindex": "noindex,nofollow",
+        "height": 4783
+      },
+      "errors": []
+    }
+  ]
+}
