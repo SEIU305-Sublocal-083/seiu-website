@@ -1,7 +1,6 @@
 {
   "item": "H03",
   "capture_method": "Playwright screenshot of local rendered HTML",
-  "artwork": "none",
   "pages": [
     {
       "file": "a.en.html",
@@ -14,7 +13,7 @@
       "screenshot": "screenshots/a-en-desktop-full.png",
       "screenshot_sha256": "9b4439b4acf882d45526f11d5ed2eb16f79aa6bde30f0c5352180acd9cb2548d",
       "qa": {
-        "title": "What we are bargaining for — Local 083 review",
+        "title": "What we are bargaining for \u2014 Local 083 review",
         "h1": 1,
         "horizontalOverflow": false,
         "brokenImages": [],
@@ -35,7 +34,7 @@
       "screenshot": "screenshots/a-en-mobile-full.png",
       "screenshot_sha256": "01c4cfa7c928e75be45b444fac244650dab65cafeb74ffd432ceb42f6a02e0f4",
       "qa": {
-        "title": "What we are bargaining for — Local 083 review",
+        "title": "What we are bargaining for \u2014 Local 083 review",
         "h1": 1,
         "horizontalOverflow": false,
         "brokenImages": [],
