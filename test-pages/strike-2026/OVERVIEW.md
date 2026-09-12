@@ -31,7 +31,7 @@ This workspace supports 28 separate draft PRs containing English copy, sources a
 3. Review the final English and Spanish together. Refresh desktop and mobile screenshots of the actual rendered pages.
 4. Merge completed item PRs into the translation integration branch. Keep the integration PR to `main` in draft until publication is separately authorized and the production changes are ready.
 
-No website updates, redirects, countdowns, email deliveries or schedules are activated here. The screenshots show rendered HTML. There is no AI-generated artwork in the package.
+No website updates, redirects, countdowns, email deliveries or schedules are activated here. The screenshots show rendered HTML.
 
 ## Sources and scope
 

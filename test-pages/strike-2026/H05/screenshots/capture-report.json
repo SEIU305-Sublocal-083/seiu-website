@@ -1,7 +1,6 @@
 {
   "item": "H05",
   "capture_method": "Playwright screenshot of local rendered HTML",
-  "artwork": "none",
   "pages": [
     {
       "file": "a.en.html",
@@ -14,7 +13,7 @@
       "screenshot": "screenshots/a-en-desktop-full.png",
       "screenshot_sha256": "4f727e4bb34b0e93e4cb17ad3b87eadf3175fcdad65297604aa33ce3bc40b58e",
       "qa": {
-        "title": "Check your coverage and leave before changing plans — Local 083 review",
+        "title": "Check your coverage and leave before changing plans \u2014 Local 083 review",
         "h1": 1,
         "horizontalOverflow": false,
         "brokenImages": [],
@@ -35,7 +34,7 @@
       "screenshot": "screenshots/a-en-mobile-full.png",
       "screenshot_sha256": "16c79171e4ed1c28c6cf3355bf4497298cd08d514fdc502fdaa11ec75b524f71",
       "qa": {
-        "title": "Check your coverage and leave before changing plans — Local 083 review",
+        "title": "Check your coverage and leave before changing plans \u2014 Local 083 review",
         "h1": 1,
         "horizontalOverflow": false,
         "brokenImages": [],
