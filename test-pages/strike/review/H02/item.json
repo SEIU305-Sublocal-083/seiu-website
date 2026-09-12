@@ -1,0 +1,40 @@
+{
+  "id": "H02",
+  "title": "What the ballot means and membership eligibility",
+  "title_es": "",
+  "channel": "article",
+  "as_of": "2026-09-12",
+  "internal_only": false,
+  "proposed_destination": "English /strike/en/authorization-and-membership/; Español /strike/es/authorization-and-membership/ (draft review; no publication or delivery)",
+  "selected_variant": null,
+  "editor_approved_by": "",
+  "facts_rechecked_at": "",
+  "source_notes_spanish_reviewer": "",
+  "open_release_gates": [
+    "Refresh dated facts and confirm the intended audience and send/publication time.",
+    "Resolve item-specific release conditions in REVIEW.md.",
+    "Human Spanish translation and bilingual review."
+  ],
+  "variants": [
+    {
+      "key": "a",
+      "label": "Primary copy",
+      "en": "../../en/authorization-and-membership/a.md",
+      "es": "../../es/authorization-and-membership/a.md",
+      "conditional": false,
+      "translation_status": "not_started",
+      "spanish_reviewer": "",
+      "approved_english_sha256": ""
+    }
+  ],
+  "citations": "collapsed",
+  "route_slug": "authorization-and-membership",
+  "sources": {
+    "en": "../../en/authorization-and-membership/sources.md",
+    "es": "../../es/authorization-and-membership/sources.md"
+  },
+  "proposed_paths": {
+    "en": "/strike/en/authorization-and-membership/",
+    "es": "/strike/es/authorization-and-membership/"
+  }
+}
