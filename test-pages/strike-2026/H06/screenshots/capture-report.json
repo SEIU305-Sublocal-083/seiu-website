@@ -1,0 +1,49 @@
+{
+  "item": "H06",
+  "capture_method": "Playwright screenshot of local rendered HTML",
+  "artwork": "none",
+  "pages": [
+    {
+      "file": "a.en.html",
+      "html_sha256": "17981458d76e5e6af3bab6c9240d432cc241ca7d05f35240a2a6e87c526c1645",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/a-en-desktop-full.png",
+      "screenshot_sha256": "38bdc15a15670196c7b4678f34285f80c457e82bbb00e6d946ba494c7a6c306f",
+      "qa": {
+        "title": "Get clear answers to workplace questions — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "sourcesVisible": true,
+        "noindex": "noindex,nofollow",
+        "height": 3261
+      },
+      "errors": []
+    },
+    {
+      "file": "a.en.html",
+      "html_sha256": "17981458d76e5e6af3bab6c9240d432cc241ca7d05f35240a2a6e87c526c1645",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/a-en-mobile-full.png",
+      "screenshot_sha256": "0d3cff8a81acebacb4209781b5d32346165b989e6a1e0436f886e1b4d2145c38",
+      "qa": {
+        "title": "Get clear answers to workplace questions — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "sourcesVisible": true,
+        "noindex": "noindex,nofollow",
+        "height": 5475
+      },
+      "errors": []
+    }
+  ]
+}
