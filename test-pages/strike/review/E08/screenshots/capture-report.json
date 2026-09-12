@@ -1,0 +1,507 @@
+{
+  "item": "E08",
+  "capture_method": "Playwright screenshot of local rendered HTML",
+  "citation_display": "none",
+  "pages": [
+    {
+      "file": "strike/en/emails/september-21/a.html",
+      "html_sha256": "c2c3e417b6771820a59bb93f15b690a4e333514347842b6a5d8d4c51bc6c2398",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/a-en-desktop-full.png",
+      "screenshot_sha256": "fa1ef86af9eddb0c03f662ae144ef316e9ec7426f488ca6873a5aaa5d6f9d88d",
+      "qa": {
+        "title": "Monday Sept21 weekly update variants — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1621,
+        "languageSwitch": true,
+        "translationPending": false,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/en/emails/september-21/a.html",
+      "html_sha256": "c2c3e417b6771820a59bb93f15b690a4e333514347842b6a5d8d4c51bc6c2398",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/a-en-mobile-full.png",
+      "screenshot_sha256": "3a40f3c29c2007005fa0712ab71fb646a710d62c086f0bf4ff404416bb7d625e",
+      "qa": {
+        "title": "Monday Sept21 weekly update variants — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 2125,
+        "languageSwitch": true,
+        "translationPending": false,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/es/emails/september-21/a.html",
+      "html_sha256": "abff019060989092d94a06535a44a239833f1722247c86215f9d917ad91b40e0",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/a-es-desktop-full.png",
+      "screenshot_sha256": "1d314775de7fb4d2c0bea05c643c5ede7d2ddb07fe4a75c1e5f205b2962ebe19",
+      "qa": {
+        "title": "Spanish translation pending — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1000,
+        "languageSwitch": true,
+        "translationPending": true,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/es/emails/september-21/a.html",
+      "html_sha256": "abff019060989092d94a06535a44a239833f1722247c86215f9d917ad91b40e0",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/a-es-mobile-full.png",
+      "screenshot_sha256": "b298003024c9d3fbcd89df19ba0952a7e6336e67c94fc109790f1c93cf046c5c",
+      "qa": {
+        "title": "Spanish translation pending — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1237,
+        "languageSwitch": true,
+        "translationPending": true,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/en/emails/september-21/b.html",
+      "html_sha256": "1b0eae2d98594b9293d43f01d519ee1a69c00fd083dba940905eac9bf895cc23",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/b-en-desktop-full.png",
+      "screenshot_sha256": "704d5835e8ee5893ef6a5aa27df5a3f48782ded085953f2820fc50718d0324b5",
+      "qa": {
+        "title": "Monday Sept21 weekly update variants — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1651,
+        "languageSwitch": true,
+        "translationPending": false,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/en/emails/september-21/b.html",
+      "html_sha256": "1b0eae2d98594b9293d43f01d519ee1a69c00fd083dba940905eac9bf895cc23",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/b-en-mobile-full.png",
+      "screenshot_sha256": "d4caf607b568c5c8d1bd969953ee8da86358c245cebf37fbad74d4aaf773ad37",
+      "qa": {
+        "title": "Monday Sept21 weekly update variants — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 2209,
+        "languageSwitch": true,
+        "translationPending": false,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/es/emails/september-21/b.html",
+      "html_sha256": "b6cfefb8db2c2d294b9e3a1e965549d9ec858b4134316704710abde1b67e7a67",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/b-es-desktop-full.png",
+      "screenshot_sha256": "2c452aa4cb69e012d3e21e7ba1110a2c10fd9a095281934d4f3fafcb09483b5c",
+      "qa": {
+        "title": "Spanish translation pending — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1000,
+        "languageSwitch": true,
+        "translationPending": true,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/es/emails/september-21/b.html",
+      "html_sha256": "b6cfefb8db2c2d294b9e3a1e965549d9ec858b4134316704710abde1b67e7a67",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/b-es-mobile-full.png",
+      "screenshot_sha256": "ca6472a63e6ec18857a2ff92f2460af6df7bcbcf35c35ad206dd21d896e50af4",
+      "qa": {
+        "title": "Spanish translation pending — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1237,
+        "languageSwitch": true,
+        "translationPending": true,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/en/emails/september-21/c.html",
+      "html_sha256": "1273a247a0b89fb35975f0ca4ebf3ba2dcf2d6da23364f1910c1c32fa100300b",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/c-en-desktop-full.png",
+      "screenshot_sha256": "961b038773c73ced30f50d89fac4452e46b0714aea280554696d76ec8370df3d",
+      "qa": {
+        "title": "Monday Sept21 weekly update variants — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1532,
+        "languageSwitch": true,
+        "translationPending": false,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/en/emails/september-21/c.html",
+      "html_sha256": "1273a247a0b89fb35975f0ca4ebf3ba2dcf2d6da23364f1910c1c32fa100300b",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/c-en-mobile-full.png",
+      "screenshot_sha256": "64fcddbccfb83267fc2287303a17214600e0e596f2014c95508abd1d5c88d4bf",
+      "qa": {
+        "title": "Monday Sept21 weekly update variants — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 2041,
+        "languageSwitch": true,
+        "translationPending": false,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/es/emails/september-21/c.html",
+      "html_sha256": "e0812c4a5b5f7e8560f9eab498932674dd65e441248687ae50e5e0862f251a7a",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/c-es-desktop-full.png",
+      "screenshot_sha256": "8b6a8417421b764857ef3aca0caf92d77c018ad0d6f4063084a7d7032ac6d154",
+      "qa": {
+        "title": "Spanish translation pending — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1000,
+        "languageSwitch": true,
+        "translationPending": true,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/es/emails/september-21/c.html",
+      "html_sha256": "e0812c4a5b5f7e8560f9eab498932674dd65e441248687ae50e5e0862f251a7a",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/c-es-mobile-full.png",
+      "screenshot_sha256": "17820c82bf7f9b4dc47c949b906383da0042497b66158a822471d447d27ffc93",
+      "qa": {
+        "title": "Spanish translation pending — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1237,
+        "languageSwitch": true,
+        "translationPending": true,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/en/emails/september-21/d.html",
+      "html_sha256": "8e413af353014bf66fe9896e11f2cd1314b6f20d5e169d3566c136c95888eed4",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/d-en-desktop-full.png",
+      "screenshot_sha256": "08c0bd6a5053942b662ad0e091038325b2c236d63b499c1304745bfb3268f410",
+      "qa": {
+        "title": "Monday Sept21 weekly update variants — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1503,
+        "languageSwitch": true,
+        "translationPending": false,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/en/emails/september-21/d.html",
+      "html_sha256": "8e413af353014bf66fe9896e11f2cd1314b6f20d5e169d3566c136c95888eed4",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/d-en-mobile-full.png",
+      "screenshot_sha256": "e5a45d0a45395e9575cec833929b02e033a47b3756f0c5554ddf6c0dc4f9268a",
+      "qa": {
+        "title": "Monday Sept21 weekly update variants — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1985,
+        "languageSwitch": true,
+        "translationPending": false,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/es/emails/september-21/d.html",
+      "html_sha256": "b62945c3c1163827b00c2af54fe2fed750ae9562390a590a2219a63999a81dc4",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/d-es-desktop-full.png",
+      "screenshot_sha256": "234437895a8f62a88008217190801670a3f533cec537b1941292f5f0100dee43",
+      "qa": {
+        "title": "Spanish translation pending — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1000,
+        "languageSwitch": true,
+        "translationPending": true,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/es/emails/september-21/d.html",
+      "html_sha256": "b62945c3c1163827b00c2af54fe2fed750ae9562390a590a2219a63999a81dc4",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/d-es-mobile-full.png",
+      "screenshot_sha256": "dcbec4c06db391a69aacfc84b8e1aab8b08b5b4d192a12012ed9c2f9728ce202",
+      "qa": {
+        "title": "Spanish translation pending — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1237,
+        "languageSwitch": true,
+        "translationPending": true,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/en/emails/september-21/e.html",
+      "html_sha256": "96baecf70f0696fec3a08652fd3e58118048dc5c02b0636b554779bdf629cbb5",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/e-en-desktop-full.png",
+      "screenshot_sha256": "432701d72d897c66154141a9bc42632282f43ee24b399714f84bc7b337212325",
+      "qa": {
+        "title": "Monday Sept21 weekly update variants — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1937,
+        "languageSwitch": true,
+        "translationPending": false,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/en/emails/september-21/e.html",
+      "html_sha256": "96baecf70f0696fec3a08652fd3e58118048dc5c02b0636b554779bdf629cbb5",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/e-en-mobile-full.png",
+      "screenshot_sha256": "174548ae7e2d2c4be7f9620c7178ec82403b2f15e56e0bb17eff791a1fe124a2",
+      "qa": {
+        "title": "Monday Sept21 weekly update variants — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 2483,
+        "languageSwitch": true,
+        "translationPending": false,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/es/emails/september-21/e.html",
+      "html_sha256": "fe3b1ddaaa5c33fed0699b79ecb00ebab0eef903d063b8e987733382aa6ae684",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/e-es-desktop-full.png",
+      "screenshot_sha256": "821922b33aa0e39f01022e0ba2255ee4e5a3e14d3b71b62cc69a547c5b977b82",
+      "qa": {
+        "title": "Spanish translation pending — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1000,
+        "languageSwitch": true,
+        "translationPending": true,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/es/emails/september-21/e.html",
+      "html_sha256": "fe3b1ddaaa5c33fed0699b79ecb00ebab0eef903d063b8e987733382aa6ae684",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/e-es-mobile-full.png",
+      "screenshot_sha256": "06fd6dbaf982a2b92ae01b082ca167337161a859fe64ee2a3b85a9a9eb70d502",
+      "qa": {
+        "title": "Spanish translation pending — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1237,
+        "languageSwitch": true,
+        "translationPending": true,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    }
+  ]
+}
