@@ -6,7 +6,7 @@ Information checked Saturday, Sept. 12, 2026.
 
 ### What do yes and no mean?
 
-Our union's [strike-pledge FAQ](https://seiu503.org/member_news/seiu-503-higher-ed-strike-pledge-frequently-asked-questions/) explains that the authorization vote gives our bargaining team authority to call a strike. Our team's stated aim is to build the power to win a fair contract.
+Our union's strike-pledge FAQ explains that the authorization vote gives our bargaining team authority to call a strike. Our team's stated aim is to build the power to win a fair contract.
 
 A no vote is a vote against granting that authorization on this ballot. It is not, by itself, a vote to accept management's contract proposal. The exact ballot wording and written explanation of the next steps should guide your decision; ask the election administrator through our organizer if either is unclear.
 
@@ -34,10 +34,10 @@ Our campaign asks members to stand together, and your questions about participat
 
 Authorization gives our bargaining team authority to call a strike, but we have not verified final written rules for its duration, ending the action or any further member vote. A goal such as winning a fair agreement does not establish a return date.
 
-Oregon's public-sector process includes bargaining requirements and notice before a lawful strike by a strike-permitted unit. Authorization alone does not prove those requirements have been completed. Read the [Oregon Employment Relations Board's process explanation](https://www.oregon.gov/erb/pages/pecba.aspx), and follow our union's actual start and return instructions when issued. **Sept. 28 was discussed as tentative; it is not a verified start instruction.**
+Oregon's public-sector process includes bargaining requirements and notice before a lawful strike by a strike-permitted unit. Authorization alone does not prove those requirements have been completed. Follow our union's actual start and return instructions when issued. **Sept. 28 was discussed as tentative; it is not a verified start instruction.**
 
 ### Take the next step
 
 Make your voting plan using the [confirmed Monday daytime voting details](https://www.local083.org/events/2026-09-14-OSU-Strike-Authorization-Vote.html). Send unresolved eligibility or ballot-rule questions to Sylvia Sharpe. General help is also available through [SEIU 503's contact page](https://seiu503.org/contact-us/) or 1-844-503-7348 during published weekday hours, 8 a.m.–6 p.m., excluding holidays.
 
-Sources: SEIU 503's Aug. 5 strike-pledge FAQ; Sept. 11 bargaining-team update and corrected organizer invitation; member briefing, as attributed above; Oregon ERB process page, checked Sept. 12. This page explains the decision and where to get an answer for your situation.
+This page explains the decision and where to get an answer for your situation.

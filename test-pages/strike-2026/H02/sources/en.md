@@ -7,3 +7,5 @@ These references support the specific facts or help routes identified below. **S
 - [SEIU 503's contact page](https://seiu503.org/contact-us/) — SEIU 503 official contact directory. A general help or media referral; it does not guarantee weekend response, emergency coverage or assistance payments.
 
 **Proposal source limit:** The Sept. 11 bargaining-team member update and the member briefing are dated union accounts. The full-steps detail is attributed to the briefing. Obtain approved current proposal text for public release; a general bargaining-page link does not independently prove every proposal detail. Private email bodies, source attachments and member-specific links are not included.
+
+**Other attributed records:** Sept. 11 bargaining-team update and corrected organizer invitation; member briefing, as attributed in the guide.

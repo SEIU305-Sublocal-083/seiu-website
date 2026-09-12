@@ -1,46 +1,71 @@
 {
   "item": "H02",
   "capture_method": "Playwright screenshot of local rendered HTML",
+  "citation_display": "collapsed",
   "pages": [
     {
       "file": "a.en.html",
-      "html_sha256": "5a7ba457ff123a330d39407d1470f45dce970d62c3bf2cfb9995e672409af720",
+      "html_sha256": "43d4d82a6ae32b16ab69aa9c48a9c60a9a4776050989859e8471b245205aa674",
       "viewport": {
         "name": "desktop",
         "width": 1440,
         "height": 1000
       },
       "screenshot": "screenshots/a-en-desktop-full.png",
-      "screenshot_sha256": "45237682fc91d5b6443b1f7df476f7616c5513298470ed96228f78c525105c37",
+      "screenshot_sha256": "b3a4fbfc7a693ef7d545de826f5e8ae65d43dc0ee04f6bbce70ab6755702ada3",
+      "expanded_sources": {
+        "screenshot": "screenshots/a-en-desktop-sources-expanded-full.png",
+        "screenshot_sha256": "137249b4eb271846f0f2566197cb756dbd0273f0e26bcab2e39c1be38aa87c24",
+        "qa": {
+          "open": true,
+          "contentVisible": true,
+          "referenceLinks": 5,
+          "horizontalOverflow": false
+        }
+      },
       "qa": {
-        "title": "What our authorization vote means \u2014 Local 083 review",
+        "title": "What our authorization vote means — Local 083 review",
         "h1": 1,
         "horizontalOverflow": false,
         "brokenImages": [],
-        "sourcesVisible": true,
+        "citationSections": 1,
+        "citationsClosedInitially": true,
         "noindex": "noindex,nofollow",
-        "height": 3311
+        "height": 2631,
+        "citationKeyboardToggle": true
       },
       "errors": []
     },
     {
       "file": "a.en.html",
-      "html_sha256": "5a7ba457ff123a330d39407d1470f45dce970d62c3bf2cfb9995e672409af720",
+      "html_sha256": "43d4d82a6ae32b16ab69aa9c48a9c60a9a4776050989859e8471b245205aa674",
       "viewport": {
         "name": "mobile",
         "width": 390,
         "height": 844
       },
       "screenshot": "screenshots/a-en-mobile-full.png",
-      "screenshot_sha256": "19511f860d9c847b79909e13c2096cbfb4a866b3c775a2616840131f763d9cf4",
+      "screenshot_sha256": "77396b01fd70dc32b2a5b49ea98855411f215987ca515be2999b217990b99bac",
+      "expanded_sources": {
+        "screenshot": "screenshots/a-en-mobile-sources-expanded-full.png",
+        "screenshot_sha256": "876c2f37e07acc5cc9fe290514f8b55e9db8d559df96dbb17d03d2913ffb6abe",
+        "qa": {
+          "open": true,
+          "contentVisible": true,
+          "referenceLinks": 5,
+          "horizontalOverflow": false
+        }
+      },
       "qa": {
-        "title": "What our authorization vote means \u2014 Local 083 review",
+        "title": "What our authorization vote means — Local 083 review",
         "h1": 1,
         "horizontalOverflow": false,
         "brokenImages": [],
-        "sourcesVisible": true,
+        "citationSections": 1,
+        "citationsClosedInitially": true,
         "noindex": "noindex,nofollow",
-        "height": 5750
+        "height": 4296,
+        "citationKeyboardToggle": true
       },
       "errors": []
     }
