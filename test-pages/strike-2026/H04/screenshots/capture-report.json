@@ -1,0 +1,49 @@
+{
+  "item": "H04",
+  "capture_method": "Playwright screenshot of local rendered HTML",
+  "artwork": "none",
+  "pages": [
+    {
+      "file": "a.en.html",
+      "html_sha256": "9f210766a112b207f8fdc03fe3a6d6ab01e5209f29fbfa90c685300867249f0d",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/a-en-desktop-full.png",
+      "screenshot_sha256": "dca83c21bd3507cefada287346f3d3386b162a149cb96f7dbefc624eab51859e",
+      "qa": {
+        "title": "Plan for money during a possible strike — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "sourcesVisible": true,
+        "noindex": "noindex,nofollow",
+        "height": 3700
+      },
+      "errors": []
+    },
+    {
+      "file": "a.en.html",
+      "html_sha256": "9f210766a112b207f8fdc03fe3a6d6ab01e5209f29fbfa90c685300867249f0d",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/a-en-mobile-full.png",
+      "screenshot_sha256": "4d8df8dddf1877ae17fb2facc4ea4be44cdc6f96bb16a4cc77f50e22765c18d4",
+      "qa": {
+        "title": "Plan for money during a possible strike — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "sourcesVisible": true,
+        "noindex": "noindex,nofollow",
+        "height": 6368
+      },
+      "errors": []
+    }
+  ]
+}
