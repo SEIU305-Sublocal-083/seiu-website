@@ -5,14 +5,14 @@
   "pages": [
     {
       "file": "index.html",
-      "html_sha256": "dd77b0810057718d737386eab74088258c8d216e8e809606f74e6b4f0c8eae76",
+      "html_sha256": "cef2c0990e7423b453dde7f88dc20cebddb2e5327327ecc739aff673a5b96c7b",
       "viewport": {
         "name": "desktop",
         "width": 1440,
         "height": 1000
       },
       "screenshot": "screenshots/overview-desktop-full.png",
-      "screenshot_sha256": "ea5ab6706b1cfb72dcac51a9b1ae078c6250b284c8a7515b6479ca0d2ff9caf6",
+      "screenshot_sha256": "3ec579012e7c7b26a3da8dbde6d91c244aa147f3e29b8516a2fa98b291927a6c",
       "qa": {
         "title": "Translation review workspace — Local 083 review",
         "h1": 1,
@@ -26,14 +26,14 @@
     },
     {
       "file": "index.html",
-      "html_sha256": "dd77b0810057718d737386eab74088258c8d216e8e809606f74e6b4f0c8eae76",
+      "html_sha256": "cef2c0990e7423b453dde7f88dc20cebddb2e5327327ecc739aff673a5b96c7b",
       "viewport": {
         "name": "mobile",
         "width": 390,
         "height": 844
       },
       "screenshot": "screenshots/overview-mobile-full.png",
-      "screenshot_sha256": "5bb87ff1f1bce3277cdc5cdb2a1d6044af3ec4afff21f7ef28e091116c359790",
+      "screenshot_sha256": "7dd3d7499edb699eb3cdfa493f78345b9ec34f00ac7fa5efc17734c5d1621d26",
       "qa": {
         "title": "Translation review workspace — Local 083 review",
         "h1": 1,
@@ -41,7 +41,7 @@
         "brokenImages": [],
         "sourcesVisible": true,
         "noindex": "noindex,nofollow",
-        "height": 3472
+        "height": 3416
       },
       "errors": []
     }
