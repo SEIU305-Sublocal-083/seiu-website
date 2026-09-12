@@ -1,46 +1,71 @@
 {
   "item": "H03",
   "capture_method": "Playwright screenshot of local rendered HTML",
+  "citation_display": "collapsed",
   "pages": [
     {
       "file": "a.en.html",
-      "html_sha256": "55c8e0397a2a1d6329bb277e180643e9a1fdd0bac700f86d956d69898b2422bb",
+      "html_sha256": "c306ca73dad2d73dfaea3dbbc17bbcc31f62712f18ad08773ca195f271630677",
       "viewport": {
         "name": "desktop",
         "width": 1440,
         "height": 1000
       },
       "screenshot": "screenshots/a-en-desktop-full.png",
-      "screenshot_sha256": "9b4439b4acf882d45526f11d5ed2eb16f79aa6bde30f0c5352180acd9cb2548d",
+      "screenshot_sha256": "c3fc25c52b7307431976676f89a2b2eda06d65d798cce8167bf519f85490c132",
+      "expanded_sources": {
+        "screenshot": "screenshots/a-en-desktop-sources-expanded-full.png",
+        "screenshot_sha256": "b9f9f94169c955597bfc02fdfc4396c0e256bc2a567acd37537a083b59e44883",
+        "qa": {
+          "open": true,
+          "contentVisible": true,
+          "referenceLinks": 2,
+          "horizontalOverflow": false
+        }
+      },
       "qa": {
-        "title": "What we are bargaining for \u2014 Local 083 review",
+        "title": "What we are bargaining for — Local 083 review",
         "h1": 1,
         "horizontalOverflow": false,
         "brokenImages": [],
-        "sourcesVisible": true,
+        "citationSections": 1,
+        "citationsClosedInitially": true,
         "noindex": "noindex,nofollow",
-        "height": 3000
+        "height": 2625,
+        "citationKeyboardToggle": true
       },
       "errors": []
     },
     {
       "file": "a.en.html",
-      "html_sha256": "55c8e0397a2a1d6329bb277e180643e9a1fdd0bac700f86d956d69898b2422bb",
+      "html_sha256": "c306ca73dad2d73dfaea3dbbc17bbcc31f62712f18ad08773ca195f271630677",
       "viewport": {
         "name": "mobile",
         "width": 390,
         "height": 844
       },
       "screenshot": "screenshots/a-en-mobile-full.png",
-      "screenshot_sha256": "01c4cfa7c928e75be45b444fac244650dab65cafeb74ffd432ceb42f6a02e0f4",
+      "screenshot_sha256": "f4d7221c135f9c44479f8cbfdebd937635d11704e6455ab70e33f86115edb3d1",
+      "expanded_sources": {
+        "screenshot": "screenshots/a-en-mobile-sources-expanded-full.png",
+        "screenshot_sha256": "245783d92ec95f6dd85d7a2951cefcb8190d0d76ea535483a522595ea74cd70e",
+        "qa": {
+          "open": true,
+          "contentVisible": true,
+          "referenceLinks": 2,
+          "horizontalOverflow": false
+        }
+      },
       "qa": {
-        "title": "What we are bargaining for \u2014 Local 083 review",
+        "title": "What we are bargaining for — Local 083 review",
         "h1": 1,
         "horizontalOverflow": false,
         "brokenImages": [],
-        "sourcesVisible": true,
+        "citationSections": 1,
+        "citationsClosedInitially": true,
         "noindex": "noindex,nofollow",
-        "height": 4543
+        "height": 3773,
+        "citationKeyboardToggle": true
       },
       "errors": []
     }
