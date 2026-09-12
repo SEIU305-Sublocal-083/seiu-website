@@ -1,130 +1,137 @@
 {
   "item": "N02",
   "capture_method": "Playwright screenshot of local rendered HTML",
+  "citation_display": "none",
   "pages": [
     {
       "file": "a.en.html",
-      "html_sha256": "c3624b6cb0f7ecee80f1285d18d13db81698a5fe86ba524bb796ec2ff2f7b478",
+      "html_sha256": "ea5a8a98745e38efebb4b5a81e11e85ad090d28bcc5f3c57e912262be1d20977",
       "viewport": {
         "name": "desktop",
         "width": 1440,
         "height": 1000
       },
       "screenshot": "screenshots/a-en-desktop-full.png",
-      "screenshot_sha256": "af6d1a71a6467cadf4531731744cb95368fbada80cc879f47cac6ea365cf9aa5",
+      "screenshot_sha256": "16e2b02e0d052ea3e08d05f3fe79353f07535b0ac6732f5ce76eb2991ed98d9c",
       "qa": {
-        "title": "Members authorize our bargaining team to call a strike \u2014 Local 083 review",
+        "title": "Members authorize our bargaining team to call a strike — Local 083 review",
         "h1": 1,
         "horizontalOverflow": false,
         "brokenImages": [],
-        "sourcesVisible": true,
+        "citationSections": 0,
+        "citationsClosedInitially": true,
         "noindex": "noindex,nofollow",
-        "height": 2125
+        "height": 1819
       },
       "errors": []
     },
     {
       "file": "a.en.html",
-      "html_sha256": "c3624b6cb0f7ecee80f1285d18d13db81698a5fe86ba524bb796ec2ff2f7b478",
+      "html_sha256": "ea5a8a98745e38efebb4b5a81e11e85ad090d28bcc5f3c57e912262be1d20977",
       "viewport": {
         "name": "mobile",
         "width": 390,
         "height": 844
       },
       "screenshot": "screenshots/a-en-mobile-full.png",
-      "screenshot_sha256": "2a64cf2c3b18d1c482508009c069dd82b552221d95749018c8ea1e65b635662c",
+      "screenshot_sha256": "2f257eb34cd64809e389734d52d243af6962e6af3a5a6110776ff4c13fc624c4",
       "qa": {
-        "title": "Members authorize our bargaining team to call a strike \u2014 Local 083 review",
+        "title": "Members authorize our bargaining team to call a strike — Local 083 review",
         "h1": 1,
         "horizontalOverflow": false,
         "brokenImages": [],
-        "sourcesVisible": true,
+        "citationSections": 0,
+        "citationsClosedInitially": true,
         "noindex": "noindex,nofollow",
-        "height": 3457
+        "height": 2880
       },
       "errors": []
     },
     {
       "file": "b.en.html",
-      "html_sha256": "cf58ca46c5737430a77693f9ea9ffc188101e55a8b540e74916d901ae8d050d6",
+      "html_sha256": "58eda4f0fcd0a3871fa845281a42685b16a5a262548bb61df58844985c6ad4da",
       "viewport": {
         "name": "desktop",
         "width": 1440,
         "height": 1000
       },
       "screenshot": "screenshots/b-en-desktop-full.png",
-      "screenshot_sha256": "86c9598d38e5f37c2b68c9345a9e6d16ab2e2e14dbf7c1eff3e09ecf50245718",
+      "screenshot_sha256": "27ababc6943abf97c7953b96b1023a3c5074482663efec60541debbf53824bb8",
       "qa": {
-        "title": "Strike authorization did not pass \u2014 Local 083 review",
+        "title": "Strike authorization did not pass — Local 083 review",
         "h1": 1,
         "horizontalOverflow": false,
         "brokenImages": [],
-        "sourcesVisible": true,
+        "citationSections": 0,
+        "citationsClosedInitially": true,
         "noindex": "noindex,nofollow",
-        "height": 1979
+        "height": 1672
       },
       "errors": []
     },
     {
       "file": "b.en.html",
-      "html_sha256": "cf58ca46c5737430a77693f9ea9ffc188101e55a8b540e74916d901ae8d050d6",
+      "html_sha256": "58eda4f0fcd0a3871fa845281a42685b16a5a262548bb61df58844985c6ad4da",
       "viewport": {
         "name": "mobile",
         "width": 390,
         "height": 844
       },
       "screenshot": "screenshots/b-en-mobile-full.png",
-      "screenshot_sha256": "806279cf0966cc03eb867abe24d12f8d1503ef302a582e6380e7a3f201e3f8a6",
+      "screenshot_sha256": "db1af6e70085428a5f8ff6630a14f92ef4e4a4aa69dc9cf5360d64041bb3d230",
       "qa": {
-        "title": "Strike authorization did not pass \u2014 Local 083 review",
+        "title": "Strike authorization did not pass — Local 083 review",
         "h1": 1,
         "horizontalOverflow": false,
         "brokenImages": [],
-        "sourcesVisible": true,
+        "citationSections": 0,
+        "citationsClosedInitially": true,
         "noindex": "noindex,nofollow",
-        "height": 3250
+        "height": 2673
       },
       "errors": []
     },
     {
       "file": "c.en.html",
-      "html_sha256": "8627155f13572b011b9a9cf6853cc7afd3e4a1e6e3b58c2886ff5167d4276057",
+      "html_sha256": "46effd00e5f66970064067055810ebddb5d1769995f7709a36e8fd032a5cf32e",
       "viewport": {
         "name": "desktop",
         "width": 1440,
         "height": 1000
       },
       "screenshot": "screenshots/c-en-desktop-full.png",
-      "screenshot_sha256": "9d347242a83504a16bcacd2e7e43d03aeece8f69eee143116b05946769ef2667",
+      "screenshot_sha256": "d5eea8d3edcf800d678a8a3082bd6c00b4e9aadf0b75ce68eb5451a94b4c41fe",
       "qa": {
-        "title": "We do not yet have a certified result to share \u2014 Local 083 review",
+        "title": "We do not yet have a certified result to share — Local 083 review",
         "h1": 1,
         "horizontalOverflow": false,
         "brokenImages": [],
-        "sourcesVisible": true,
+        "citationSections": 0,
+        "citationsClosedInitially": true,
         "noindex": "noindex,nofollow",
-        "height": 2007
+        "height": 1700
       },
       "errors": []
     },
     {
       "file": "c.en.html",
-      "html_sha256": "8627155f13572b011b9a9cf6853cc7afd3e4a1e6e3b58c2886ff5167d4276057",
+      "html_sha256": "46effd00e5f66970064067055810ebddb5d1769995f7709a36e8fd032a5cf32e",
       "viewport": {
         "name": "mobile",
         "width": 390,
         "height": 844
       },
       "screenshot": "screenshots/c-en-mobile-full.png",
-      "screenshot_sha256": "a4255240e3120393c4d8ae0d2bfb9103db2b825e91d3ff90c4f85eea8b7a7f87",
+      "screenshot_sha256": "90978616c159e0b9b6a1364d7ed42c17463b792fa547e5ce97404bdc54b37e2b",
       "qa": {
-        "title": "We do not yet have a certified result to share \u2014 Local 083 review",
+        "title": "We do not yet have a certified result to share — Local 083 review",
         "h1": 1,
         "horizontalOverflow": false,
         "brokenImages": [],
-        "sourcesVisible": true,
+        "citationSections": 0,
+        "citationsClosedInitially": true,
         "noindex": "noindex,nofollow",
-        "height": 3205
+        "height": 2628
       },
       "errors": []
     }

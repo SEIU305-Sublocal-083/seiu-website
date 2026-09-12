@@ -18,7 +18,7 @@
   "variants": [
     {
       "key": "a",
-      "label": "Variant A — authorization passes",
+      "label": "Variant A \u2014 authorization passes",
       "en": "copy/en/a.md",
       "es": "copy/es/a.md",
       "conditional": true,
@@ -28,7 +28,7 @@
     },
     {
       "key": "b",
-      "label": "Variant B — authorization does not pass",
+      "label": "Variant B \u2014 authorization does not pass",
       "en": "copy/en/b.md",
       "es": "copy/es/b.md",
       "conditional": true,
@@ -38,7 +38,7 @@
     },
     {
       "key": "c",
-      "label": "Variant C — result pending",
+      "label": "Variant C \u2014 result pending",
       "en": "copy/en/c.md",
       "es": "copy/es/c.md",
       "conditional": true,
@@ -46,5 +46,6 @@
       "spanish_reviewer": "",
       "approved_english_sha256": ""
     }
-  ]
+  ],
+  "citations": "none"
 }
