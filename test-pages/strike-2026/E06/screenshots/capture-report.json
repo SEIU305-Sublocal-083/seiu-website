@@ -1,0 +1,51 @@
+{
+  "item": "E06",
+  "capture_method": "Playwright screenshot of local rendered HTML",
+  "citation_display": "none",
+  "pages": [
+    {
+      "file": "a.en.html",
+      "html_sha256": "1a6506dad40ccc83aab674570b3b4700a74cc3ddf0ecb50c96a867f7ac671ee3",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/a-en-desktop-full.png",
+      "screenshot_sha256": "d48f4a28f24b83b7c4fe933c6556fb2b70fc495dcfdccb4458d453e0a8a7e51f",
+      "qa": {
+        "title": "Thursday membership meeting reminder — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1325
+      },
+      "errors": []
+    },
+    {
+      "file": "a.en.html",
+      "html_sha256": "1a6506dad40ccc83aab674570b3b4700a74cc3ddf0ecb50c96a867f7ac671ee3",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/a-en-mobile-full.png",
+      "screenshot_sha256": "4469e7ed33de84067b7ad9093ad209c9fcb45e1be594a366d578f33279061273",
+      "qa": {
+        "title": "Thursday membership meeting reminder — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1567
+      },
+      "errors": []
+    }
+  ]
+}
