@@ -1,46 +1,49 @@
 {
   "item": "E06",
   "capture_method": "Playwright screenshot of local rendered HTML",
+  "citation_display": "none",
   "pages": [
     {
       "file": "a.en.html",
-      "html_sha256": "ce7d1a2f317df49a85d4cf24009cb8b06f642a679bdc25064e692ee0b47bb67f",
+      "html_sha256": "1a6506dad40ccc83aab674570b3b4700a74cc3ddf0ecb50c96a867f7ac671ee3",
       "viewport": {
         "name": "desktop",
         "width": 1440,
         "height": 1000
       },
       "screenshot": "screenshots/a-en-desktop-full.png",
-      "screenshot_sha256": "90b1c199eb978473dcec67a6c1e4b44b1e4f1d1cd50711d7c0478e907c631a9b",
+      "screenshot_sha256": "d48f4a28f24b83b7c4fe933c6556fb2b70fc495dcfdccb4458d453e0a8a7e51f",
       "qa": {
-        "title": "Thursday membership meeting reminder \u2014 Local 083 review",
+        "title": "Thursday membership meeting reminder — Local 083 review",
         "h1": 1,
         "horizontalOverflow": false,
         "brokenImages": [],
-        "sourcesVisible": true,
+        "citationSections": 0,
+        "citationsClosedInitially": true,
         "noindex": "noindex,nofollow",
-        "height": 1593
+        "height": 1325
       },
       "errors": []
     },
     {
       "file": "a.en.html",
-      "html_sha256": "ce7d1a2f317df49a85d4cf24009cb8b06f642a679bdc25064e692ee0b47bb67f",
+      "html_sha256": "1a6506dad40ccc83aab674570b3b4700a74cc3ddf0ecb50c96a867f7ac671ee3",
       "viewport": {
         "name": "mobile",
         "width": 390,
         "height": 844
       },
       "screenshot": "screenshots/a-en-mobile-full.png",
-      "screenshot_sha256": "6ed80873169244c515d5f93ad0c3b1b43ad24ec0062aaf0a04b40d1d03a85bd4",
+      "screenshot_sha256": "4469e7ed33de84067b7ad9093ad209c9fcb45e1be594a366d578f33279061273",
       "qa": {
-        "title": "Thursday membership meeting reminder \u2014 Local 083 review",
+        "title": "Thursday membership meeting reminder — Local 083 review",
         "h1": 1,
         "horizontalOverflow": false,
         "brokenImages": [],
-        "sourcesVisible": true,
+        "citationSections": 0,
+        "citationsClosedInitially": true,
         "noindex": "noindex,nofollow",
-        "height": 1981
+        "height": 1567
       },
       "errors": []
     }
