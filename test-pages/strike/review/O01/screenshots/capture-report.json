@@ -1,0 +1,107 @@
+{
+  "item": "O01",
+  "capture_method": "Playwright screenshot of local rendered HTML",
+  "citation_display": "none",
+  "pages": [
+    {
+      "file": "strike/en/internal/strategy/a.html",
+      "html_sha256": "988caf48d8257cb9fb80aefd8a2b1927a3903535a614ea3854e5b675bf04885a",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/a-en-desktop-full.png",
+      "screenshot_sha256": "9f2dadac6454094bd22d7ded48af9874fafd757a2d4faf6e8c22e24b4f16f538",
+      "qa": {
+        "title": "O01 — Proposed ten-day communications and organizing plan — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 8545,
+        "languageSwitch": true,
+        "translationPending": false,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/en/internal/strategy/a.html",
+      "html_sha256": "988caf48d8257cb9fb80aefd8a2b1927a3903535a614ea3854e5b675bf04885a",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/a-en-mobile-full.png",
+      "screenshot_sha256": "d1a151fd6496962ec2923171e5a73e8cd4c6703e45cfd7ce31f51b2eb57e92a2",
+      "qa": {
+        "title": "O01 — Proposed ten-day communications and organizing plan — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 14123,
+        "languageSwitch": true,
+        "translationPending": false,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/es/internal/strategy/a.html",
+      "html_sha256": "9e107fb1233f6f39303c676c29b4c57b6da97b162768cbdbcadbe2937ebe91e3",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/a-es-desktop-full.png",
+      "screenshot_sha256": "cdf788995d5d66afea93d81f636d4c4a585a2c00daff9b2562e9886b3ebc01ff",
+      "qa": {
+        "title": "Spanish translation pending — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1000,
+        "languageSwitch": true,
+        "translationPending": true,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/es/internal/strategy/a.html",
+      "html_sha256": "9e107fb1233f6f39303c676c29b4c57b6da97b162768cbdbcadbe2937ebe91e3",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/a-es-mobile-full.png",
+      "screenshot_sha256": "cc8530b6ea0e4beae7b191c10c945219715f08c69da6bd0359581ae0adee4afa",
+      "qa": {
+        "title": "Spanish translation pending — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1008,
+        "languageSwitch": true,
+        "translationPending": true,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    }
+  ]
+}
