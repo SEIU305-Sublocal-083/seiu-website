@@ -1,0 +1,207 @@
+{
+  "item": "V01",
+  "capture_method": "Playwright screenshot of local rendered HTML",
+  "citation_display": "none",
+  "pages": [
+    {
+      "file": "strike/en/video/a.html",
+      "html_sha256": "db757478233ba3a271335bf741514c036bdf9d8d6b33743838967a442d1d2c54",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/a-en-desktop-full.png",
+      "screenshot_sha256": "0c55f16fc7f40b42b6741c0ebc4375099878efd111a73bb9d25648f7429b3351",
+      "qa": {
+        "title": "Optional short video script captions and transcript — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 2001,
+        "languageSwitch": true,
+        "translationPending": false,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/en/video/a.html",
+      "html_sha256": "db757478233ba3a271335bf741514c036bdf9d8d6b33743838967a442d1d2c54",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/a-en-mobile-full.png",
+      "screenshot_sha256": "9ef52c8d1ee42ad8375be584537fadcc8239adc9526ec6b927254d7ddffa3d72",
+      "qa": {
+        "title": "Optional short video script captions and transcript — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 2660,
+        "languageSwitch": true,
+        "translationPending": false,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/es/video/a.html",
+      "html_sha256": "d03cc6235b820a871e3534d229b7e9451abeeff30901885eec5db29d85f7c1bc",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/a-es-desktop-full.png",
+      "screenshot_sha256": "e5313dec892dd9ed657bb972001c2b51d7102f1ed665e70ceb5aa5a99a16011c",
+      "qa": {
+        "title": "Spanish translation pending — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1000,
+        "languageSwitch": true,
+        "translationPending": true,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/es/video/a.html",
+      "html_sha256": "d03cc6235b820a871e3534d229b7e9451abeeff30901885eec5db29d85f7c1bc",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/a-es-mobile-full.png",
+      "screenshot_sha256": "25c228657145db8d971112dd79e0c6d31da2744ab1139089c0dc16dad07b7049",
+      "qa": {
+        "title": "Spanish translation pending — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1055,
+        "languageSwitch": true,
+        "translationPending": true,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/en/video/b.html",
+      "html_sha256": "79afc82275c1a6f10b8d83b8ecdc04492746843f92ac213d1fd13572c44bb005",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/b-en-desktop-full.png",
+      "screenshot_sha256": "54879159d61ff3b9f51b992fd4671dfc4060d9b29badb47dc23777959733a1e6",
+      "qa": {
+        "title": "Optional short video script captions and transcript — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1316,
+        "languageSwitch": true,
+        "translationPending": false,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/en/video/b.html",
+      "html_sha256": "79afc82275c1a6f10b8d83b8ecdc04492746843f92ac213d1fd13572c44bb005",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/b-en-mobile-full.png",
+      "screenshot_sha256": "e546741842e35471df2ed7065919ba77923787e31fa4390f454528c60bac4530",
+      "qa": {
+        "title": "Optional short video script captions and transcript — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1863,
+        "languageSwitch": true,
+        "translationPending": false,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/es/video/b.html",
+      "html_sha256": "056dcab18b1cd7dbd8225551ed617e400e6c933b892b3a57daeee10994cae2b1",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/b-es-desktop-full.png",
+      "screenshot_sha256": "8118ec1c7d1c2745e787bdf0a5bd6c871a2546abea8c9bad6071af1ce16f7530",
+      "qa": {
+        "title": "Spanish translation pending — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1000,
+        "languageSwitch": true,
+        "translationPending": true,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/es/video/b.html",
+      "html_sha256": "056dcab18b1cd7dbd8225551ed617e400e6c933b892b3a57daeee10994cae2b1",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/b-es-mobile-full.png",
+      "screenshot_sha256": "ad858b0e40ab089e7a1d9be4e91d1eaba992a2a5d1e91687cb5391ef7dbc6e67",
+      "qa": {
+        "title": "Spanish translation pending — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1055,
+        "languageSwitch": true,
+        "translationPending": true,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    }
+  ]
+}

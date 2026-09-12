@@ -1,0 +1,107 @@
+{
+  "item": "A01",
+  "capture_method": "Playwright screenshot of local rendered HTML",
+  "citation_display": "none",
+  "pages": [
+    {
+      "file": "strike/en/write-your-letter/a.html",
+      "html_sha256": "307f3135f314324c9fe00c18bba5a470c0657cd7ccbedd6a1448f9be7e402fc1",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/a-en-desktop-full.png",
+      "screenshot_sha256": "bf3fc04ae1c21386246c60075f09ca97b126a28ee7036eee53bd29f9f5538290",
+      "qa": {
+        "title": "President and trustees personalized letter starter — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1798,
+        "languageSwitch": true,
+        "translationPending": false,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/en/write-your-letter/a.html",
+      "html_sha256": "307f3135f314324c9fe00c18bba5a470c0657cd7ccbedd6a1448f9be7e402fc1",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/a-en-mobile-full.png",
+      "screenshot_sha256": "6bf1049d5265536f2bbfa9fbe64f280c6347923a7ffdf054f17c39c1c4dbe358",
+      "qa": {
+        "title": "President and trustees personalized letter starter — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 2567,
+        "languageSwitch": true,
+        "translationPending": false,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/es/write-your-letter/a.html",
+      "html_sha256": "4d1fe30ef063cb1f7ddc72826e548e6dbe8e0bbccf99bc1efdab9a52802f362d",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/a-es-desktop-full.png",
+      "screenshot_sha256": "55157ec163957f35c96e9270cec8720cc01c5ba4603bb570b28b86a30ed432d9",
+      "qa": {
+        "title": "Spanish translation pending — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1000,
+        "languageSwitch": true,
+        "translationPending": true,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/es/write-your-letter/a.html",
+      "html_sha256": "4d1fe30ef063cb1f7ddc72826e548e6dbe8e0bbccf99bc1efdab9a52802f362d",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/a-es-mobile-full.png",
+      "screenshot_sha256": "26eec035d121acf7db5aaef98be3e2a7060daac6e28fcbfd2cfae3092de53f3b",
+      "qa": {
+        "title": "Spanish translation pending — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1008,
+        "languageSwitch": true,
+        "translationPending": true,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    }
+  ]
+}
