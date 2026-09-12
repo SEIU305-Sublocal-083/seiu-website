@@ -1,0 +1,91 @@
+{
+  "item": "N01",
+  "capture_method": "Playwright screenshot of local rendered HTML",
+  "artwork": "none",
+  "pages": [
+    {
+      "file": "a.en.html",
+      "html_sha256": "765fc062e7f76210aa43673f4ce174c99c0db10e381c6ca7349a8279f80a484e",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/a-en-desktop-full.png",
+      "screenshot_sha256": "3a0f36b7eaaeea34c3cf8b75e27b860d33ac29195aa6c692f1f810043d690f19",
+      "qa": {
+        "title": "Find our voting information and next steps in one place — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "sourcesVisible": true,
+        "noindex": "noindex,nofollow",
+        "height": 2489
+      },
+      "errors": []
+    },
+    {
+      "file": "a.en.html",
+      "html_sha256": "765fc062e7f76210aa43673f4ce174c99c0db10e381c6ca7349a8279f80a484e",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/a-en-mobile-full.png",
+      "screenshot_sha256": "6971caa0dac231290cbe9bbb63724a9e51d22c68ee0f638b99c93419bd76c3a3",
+      "qa": {
+        "title": "Find our voting information and next steps in one place — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "sourcesVisible": true,
+        "noindex": "noindex,nofollow",
+        "height": 4297
+      },
+      "errors": []
+    },
+    {
+      "file": "b.en.html",
+      "html_sha256": "9c5e12fb92241d338f7711110ab5234a52bd2503be77e9610369f47646ee8e20",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/b-en-desktop-full.png",
+      "screenshot_sha256": "4427f2307e8e16bb5fca82cedfb31e256ef1315f8125466edc34ffde1706cf73",
+      "qa": {
+        "title": "Make your plan for Monday's authorization vote — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "sourcesVisible": true,
+        "noindex": "noindex,nofollow",
+        "height": 2297
+      },
+      "errors": []
+    },
+    {
+      "file": "b.en.html",
+      "html_sha256": "9c5e12fb92241d338f7711110ab5234a52bd2503be77e9610369f47646ee8e20",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/b-en-mobile-full.png",
+      "screenshot_sha256": "e90bac6477d16534c632f86df3c3aa731523a90582db7dc8ecdd64d7af5849ef",
+      "qa": {
+        "title": "Make your plan for Monday's authorization vote — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "sourcesVisible": true,
+        "noindex": "noindex,nofollow",
+        "height": 3685
+      },
+      "errors": []
+    }
+  ]
+}
