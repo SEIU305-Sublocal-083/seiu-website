@@ -1,0 +1,217 @@
+{
+  "item": "N04",
+  "capture_method": "Playwright screenshot of local rendered HTML",
+  "artwork": "none",
+  "pages": [
+    {
+      "file": "a.en.html",
+      "html_sha256": "b6f0cd4095be9c34141425fca3014882ab7f6c8304e528ab082f434ccc04d3fe",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/a-en-desktop-full.png",
+      "screenshot_sha256": "6d63b0501d793dbfe6a742cb7af3e7e73347f4d2611fa4ca26c0e9cea7dc1b25",
+      "qa": {
+        "title": "Our union has issued a formal strike notice — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "sourcesVisible": true,
+        "noindex": "noindex,nofollow",
+        "height": 2042
+      },
+      "errors": []
+    },
+    {
+      "file": "a.en.html",
+      "html_sha256": "b6f0cd4095be9c34141425fca3014882ab7f6c8304e528ab082f434ccc04d3fe",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/a-en-mobile-full.png",
+      "screenshot_sha256": "e0571db309d186c66709dadf742c61cbd7d3511b87d78c9f8d624755d8d80a7d",
+      "qa": {
+        "title": "Our union has issued a formal strike notice — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "sourcesVisible": true,
+        "noindex": "noindex,nofollow",
+        "height": 3250
+      },
+      "errors": []
+    },
+    {
+      "file": "b.en.html",
+      "html_sha256": "f5b402719ecd7054dd443632b9bb70f2b0ca31e7811da52dae8ccbad931b0d51",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/b-en-desktop-full.png",
+      "screenshot_sha256": "c997bda1ab5f87d575b1f5b801d2738c4aae9bcb41a009d1d11c89259d771ff2",
+      "qa": {
+        "title": "Our union has called a strike: check the official start instructions — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "sourcesVisible": true,
+        "noindex": "noindex,nofollow",
+        "height": 2257
+      },
+      "errors": []
+    },
+    {
+      "file": "b.en.html",
+      "html_sha256": "f5b402719ecd7054dd443632b9bb70f2b0ca31e7811da52dae8ccbad931b0d51",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/b-en-mobile-full.png",
+      "screenshot_sha256": "c4d4a2473c7107d004402164da717509aeda2417a77ba7af6168295a086f087f",
+      "qa": {
+        "title": "Our union has called a strike: check the official start instructions — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "sourcesVisible": true,
+        "noindex": "noindex,nofollow",
+        "height": 3885
+      },
+      "errors": []
+    },
+    {
+      "file": "c.en.html",
+      "html_sha256": "8bed34f9bd57575dbe40350d8b2fb0515f2807a13bec9b8fd194e554f5fb73f8",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/c-en-desktop-full.png",
+      "screenshot_sha256": "ea13b7469a376f14e22a3c581079cf247af01c82486da7844b269b6cd8e63de9",
+      "qa": {
+        "title": "Our bargaining team has reached a tentative agreement — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "sourcesVisible": true,
+        "noindex": "noindex,nofollow",
+        "height": 2257
+      },
+      "errors": []
+    },
+    {
+      "file": "c.en.html",
+      "html_sha256": "8bed34f9bd57575dbe40350d8b2fb0515f2807a13bec9b8fd194e554f5fb73f8",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/c-en-mobile-full.png",
+      "screenshot_sha256": "494060f932176ae579ccd92ae06f4e69a6b9684121e30033ec98f2fd42a3f44f",
+      "qa": {
+        "title": "Our bargaining team has reached a tentative agreement — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "sourcesVisible": true,
+        "noindex": "noindex,nofollow",
+        "height": 3734
+      },
+      "errors": []
+    },
+    {
+      "file": "d.en.html",
+      "html_sha256": "59834eeafbbd5f9168366a7c96badd167c0d07fef193b76125032786619a0924",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/d-en-desktop-full.png",
+      "screenshot_sha256": "4a55c023c99ac0f25882d8813efe632e447c7ccca2138b4cc025ea085157869b",
+      "qa": {
+        "title": "The timeline has changed: use the updated instruction — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "sourcesVisible": true,
+        "noindex": "noindex,nofollow",
+        "height": 2050
+      },
+      "errors": []
+    },
+    {
+      "file": "d.en.html",
+      "html_sha256": "59834eeafbbd5f9168366a7c96badd167c0d07fef193b76125032786619a0924",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/d-en-mobile-full.png",
+      "screenshot_sha256": "b0c53d6690d4a4c4dfd3ec3f1252d6c5f9dd05b67a06cfb784164dc46d505a0a",
+      "qa": {
+        "title": "The timeline has changed: use the updated instruction — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "sourcesVisible": true,
+        "noindex": "noindex,nofollow",
+        "height": 3286
+      },
+      "errors": []
+    },
+    {
+      "file": "e.en.html",
+      "html_sha256": "1daa45cc8931ff6c4e8b0cdabc29d5d3d982b99c365db93404a6332fd5f05c6d",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/e-en-desktop-full.png",
+      "screenshot_sha256": "2b950273c5226ed4b89ef20a12ebf930dc9f80362e903ca7cc949faa72a1f948",
+      "qa": {
+        "title": "The strike continues: review the current instructions and support routes — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "sourcesVisible": true,
+        "noindex": "noindex,nofollow",
+        "height": 2217
+      },
+      "errors": []
+    },
+    {
+      "file": "e.en.html",
+      "html_sha256": "1daa45cc8931ff6c4e8b0cdabc29d5d3d982b99c365db93404a6332fd5f05c6d",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/e-en-mobile-full.png",
+      "screenshot_sha256": "fec12f1d1ee4fa4a1524f6e2536cf7eec3eb60d81888e97b21008fe9a63f796c",
+      "qa": {
+        "title": "The strike continues: review the current instructions and support routes — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "sourcesVisible": true,
+        "noindex": "noindex,nofollow",
+        "height": 3635
+      },
+      "errors": []
+    }
+  ]
+}
