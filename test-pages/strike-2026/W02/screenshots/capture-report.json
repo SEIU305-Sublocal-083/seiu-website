@@ -1,0 +1,49 @@
+{
+  "item": "W02",
+  "capture_method": "Playwright screenshot of local rendered HTML",
+  "artwork": "none",
+  "pages": [
+    {
+      "file": "a.en.html",
+      "html_sha256": "0f7e02a9de528094f58e4b30b34b331af336f9f597a96fb34eff806e14a47962",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/a-en-desktop-full.png",
+      "screenshot_sha256": "424ae4ed7c5ae428b2a7a1c316bf74eed035f99e3123e8ea21b760820f3eb8a1",
+      "qa": {
+        "title": "W02 — Website audit and migration plan — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "sourcesVisible": true,
+        "noindex": "noindex,nofollow",
+        "height": 5287
+      },
+      "errors": []
+    },
+    {
+      "file": "a.en.html",
+      "html_sha256": "0f7e02a9de528094f58e4b30b34b331af336f9f597a96fb34eff806e14a47962",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/a-en-mobile-full.png",
+      "screenshot_sha256": "37f16308a1b1291a599f9c5c1380974557706f529f17a5b9725c47fe31c0959c",
+      "qa": {
+        "title": "W02 — Website audit and migration plan — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "sourcesVisible": true,
+        "noindex": "noindex,nofollow",
+        "height": 8001
+      },
+      "errors": []
+    }
+  ]
+}
