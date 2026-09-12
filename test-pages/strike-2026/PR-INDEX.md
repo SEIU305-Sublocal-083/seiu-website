@@ -1,10 +1,21 @@
 # Local 083: 28 draft PRs for translation review
 
-**All 28 content PRs are open as drafts.** Each targets `codex/strike-translation-review` and owns its item directory. The live website publishes from `main`; none of these PRs has been merged.
+**All 28 content PRs are open as drafts.** They form four topic stacks above foundation PR #253, and each diff shows its own item relative to its parent. [Open the stack order and workflow](STACK.md). The live website publishes from `main`; none of these PRs has been merged.
 
 The user approved public GitHub review of the complete package, including the three internal planning items. That approval does not authorize website publication, sending emails or distributing materials.
 
 Every item contains the full English copy, translator files, editorial source notes and actual desktop/mobile screenshots. H01–H07 and Q01 display a collapsed “Sources and references” section; routine communications and action pages have no citation footer. Spanish has not yet been supplied or approved by the human translator. Future-result and strike/agreement messages remain conditional.
+
+## Topic stacks
+
+| Stack | Review order, beginning above the foundation | Combined stack files |
+|---|---|---|
+| Guides and Q&A | [#263](https://github.com/SEIU305-Sublocal-083/seiu-website/pull/263) → [#264](https://github.com/SEIU305-Sublocal-083/seiu-website/pull/264) → [#265](https://github.com/SEIU305-Sublocal-083/seiu-website/pull/265) → [#266](https://github.com/SEIU305-Sublocal-083/seiu-website/pull/266) → [#267](https://github.com/SEIU305-Sublocal-083/seiu-website/pull/267) → [#268](https://github.com/SEIU305-Sublocal-083/seiu-website/pull/268) → [#269](https://github.com/SEIU305-Sublocal-083/seiu-website/pull/269) → [#278](https://github.com/SEIU305-Sublocal-083/seiu-website/pull/278) | [Browse this stack](https://github.com/SEIU305-Sublocal-083/seiu-website/tree/codex/strike-q01-common-and-complex-questions-index/test-pages/strike-2026) |
+| Website and news | [#280](https://github.com/SEIU305-Sublocal-083/seiu-website/pull/280) → [#270](https://github.com/SEIU305-Sublocal-083/seiu-website/pull/270) → [#271](https://github.com/SEIU305-Sublocal-083/seiu-website/pull/271) → [#272](https://github.com/SEIU305-Sublocal-083/seiu-website/pull/272) → [#273](https://github.com/SEIU305-Sublocal-083/seiu-website/pull/273) → [#281](https://github.com/SEIU305-Sublocal-083/seiu-website/pull/281) | [Browse this stack](https://github.com/SEIU305-Sublocal-083/seiu-website/tree/codex/strike-w02-website-audit-and-migration-plan/test-pages/strike-2026) |
+| Emails | [#255](https://github.com/SEIU305-Sublocal-083/seiu-website/pull/255) → [#256](https://github.com/SEIU305-Sublocal-083/seiu-website/pull/256) → [#257](https://github.com/SEIU305-Sublocal-083/seiu-website/pull/257) → [#258](https://github.com/SEIU305-Sublocal-083/seiu-website/pull/258) → [#259](https://github.com/SEIU305-Sublocal-083/seiu-website/pull/259) → [#260](https://github.com/SEIU305-Sublocal-083/seiu-website/pull/260) → [#261](https://github.com/SEIU305-Sublocal-083/seiu-website/pull/261) → [#262](https://github.com/SEIU305-Sublocal-083/seiu-website/pull/262) | [Browse this stack](https://github.com/SEIU305-Sublocal-083/seiu-website/tree/codex/strike-e08-monday-sept21-weekly-update-variants/test-pages/strike-2026) |
+| Organizing materials | [#274](https://github.com/SEIU305-Sublocal-083/seiu-website/pull/274) → [#275](https://github.com/SEIU305-Sublocal-083/seiu-website/pull/275) → [#254](https://github.com/SEIU305-Sublocal-083/seiu-website/pull/254) → [#276](https://github.com/SEIU305-Sublocal-083/seiu-website/pull/276) → [#277](https://github.com/SEIU305-Sublocal-083/seiu-website/pull/277) → [#279](https://github.com/SEIU305-Sublocal-083/seiu-website/pull/279) | [Browse this stack](https://github.com/SEIU305-Sublocal-083/seiu-website/tree/codex/strike-v01-optional-short-video-script-captions-and-transcript/test-pages/strike-2026) |
+
+## Individual items
 
 | Item | Draft PR | English and translator files | Screenshots |
 |---|---|---|---|
@@ -39,18 +50,18 @@ Every item contains the full English copy, translator files, editorial source no
 
 ## Translator workflow
 
-Open an item PR and read its `REVIEW.md`. Add Spanish in the corresponding `copy/es/` files, translate `sources/es.md`, and fill `title_es` in `item.json`. This includes subjects, preheaders, actions, tables, captions and transcripts. Preserve the factual qualifications and verified contact links.
+Open an item PR and read its `REVIEW.md`. Add Spanish in the corresponding `copy/es/` files, translate `sources/es.md` on H01–H07 and Q01, and fill `title_es` in `item.json`. This includes subjects, preheaders, actions, tables, captions and transcripts. Preserve the factual qualifications and verified contact links.
 
 After translation, a bilingual reviewer records approval against the English source hash. The editor selects one conditional alternative and resolves the factual release conditions. Rebuild and capture both languages before marking the item ready. W02, O01 and O02 are internal plans with optional Spanish; do not count those as completed member translations.
 
 ## Merge order and publication boundary
 
-The 28 item PRs can merge into the translation integration branch in any order after review. [Support/index PR #253](https://github.com/SEIU305-Sublocal-083/seiu-website/pull/253) must remain draft and unmerged into `main`. Its role is to hold the review tooling and index while content is assembled separately.
+After translation and review, the 28 item PRs can be assembled into the translation integration branch in the order shown in [STACK.md](STACK.md), retargeting the next item as its predecessor is merged. [Support/index PR #253](https://github.com/SEIU305-Sublocal-083/seiu-website/pull/253) must remain draft and unmerged into `main`. It holds the common tools, stack manifest and review index.
 
 Pages are staged under `test-pages/strike-2026/`, with intended production destinations recorded in each `item.json`. A later authorized release must promote the selected bilingual pages, connect navigation, update source dates and run the production build. Email previews are review HTML, not sent or scheduled campaigns.
 
 ## Sources and unresolved facts
 
-The English page previews display their source notes beneath the body. Inline citations remain next to supported claims. Bargaining figures retain their dated union attribution; they are not presented as an agreed contract.
+H01–H07 and Q01 display references in a closed-by-default section. Other pages have no citation footer. Practical contact/action links and important qualifications stay in the body. Bargaining figures retain their dated union attribution; they are not presented as an agreed contract.
 
 Voting logistics, election-specific rules, program amounts, benefits eligibility and future announcements remain subject to the item-specific factual conditions. Translation and public PR review do not resolve those questions.

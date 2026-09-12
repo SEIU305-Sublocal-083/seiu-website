@@ -2,7 +2,7 @@
 
 **Draft PR only. No publication, email send or schedule.**
 
-This PR adds one independently mergeable review item. Target the translation integration branch, never `main` during this stage.
+This is item 8 of 8 in the Guides and Q&A stack. Its base is `codex/strike-h07-how-a-strike-works-students-and-accessible-participation` (PR #269); its diff adds only this item's directory. Edit this item on its own branch and carry parent updates forward. See [stack workflow](../STACK.md). Keep this PR draft during translation review.
 
 - Intended destination: /strike/questions/ (proposed Q&A page).
 - English source: `copy/en/`. 1 alternative(s), each with its own preview.
