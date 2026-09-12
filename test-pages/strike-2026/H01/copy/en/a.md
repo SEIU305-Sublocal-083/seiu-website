@@ -40,4 +40,4 @@ The corrected invitation includes members regardless of whether they signed a st
 
 **Your next step:** Put your voting time in your calendar, or find your own absentee email and follow its instructions. Keep your ballot choice private; you can ask for voting help without telling anyone how you plan to vote.
 
-Sources: [Local 083 daytime voting notice](https://www.local083.org/events/2026-09-14-OSU-Strike-Authorization-Vote.html); our bargaining team's Sept. 11 email named above; [SEIU 503 explanation of the pledge and authorization vote](https://seiu503.org/member_news/seiu-503-higher-ed-strike-pledge-frequently-asked-questions/). General union help: [SEIU 503 contact information](https://seiu503.org/contact-us/), 1-844-503-7348, weekdays 8 a.m.–6 p.m., excluding holidays. A weekend response is not guaranteed.
+General union help: [SEIU 503 contact information](https://seiu503.org/contact-us/), 1-844-503-7348, weekdays 8 a.m.–6 p.m., excluding holidays. A weekend response is not guaranteed.
