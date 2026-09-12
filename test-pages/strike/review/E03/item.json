@@ -1,0 +1,40 @@
+{
+  "id": "E03",
+  "title": "Monday weekly update and voting email",
+  "title_es": "",
+  "channel": "email",
+  "as_of": "2026-09-12",
+  "internal_only": false,
+  "proposed_destination": "English /strike/en/emails/monday/; Español /strike/es/emails/monday/ (draft review; no publication or delivery)",
+  "selected_variant": null,
+  "editor_approved_by": "",
+  "facts_rechecked_at": "",
+  "source_notes_spanish_reviewer": "",
+  "open_release_gates": [
+    "Refresh dated facts and confirm the intended audience and send/publication time.",
+    "Resolve item-specific release conditions in REVIEW.md.",
+    "Human Spanish translation and bilingual review."
+  ],
+  "variants": [
+    {
+      "key": "a",
+      "label": "Primary copy",
+      "en": "../../en/emails/monday/a.md",
+      "es": "../../es/emails/monday/a.md",
+      "conditional": false,
+      "translation_status": "not_started",
+      "spanish_reviewer": "",
+      "approved_english_sha256": ""
+    }
+  ],
+  "citations": "none",
+  "route_slug": "emails/monday",
+  "sources": {
+    "en": "../../en/emails/monday/sources.md",
+    "es": "../../es/emails/monday/sources.md"
+  },
+  "proposed_paths": {
+    "en": "/strike/en/emails/monday/",
+    "es": "/strike/es/emails/monday/"
+  }
+}

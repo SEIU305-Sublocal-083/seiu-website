@@ -1,11 +1,11 @@
-name: Strike translation previews
+name: Strike Prep previews
 
 on:
   pull_request:
-    branches: ['codex/strike-*']
+    branches: ['strike-prep/**']
     types: [opened, synchronize, reopened, edited]
     paths:
-      - 'test-pages/strike-2026/**'
+      - 'test-pages/strike/**'
       - 'scripts/build_strike_review.py'
       - '.github/workflows/strike-review.yml'
 
@@ -20,5 +20,5 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - run: pip install -r test-pages/strike-2026/requirements.txt
+      - run: pip install -r test-pages/strike/requirements.txt
       - run: python scripts/build_strike_review.py --check

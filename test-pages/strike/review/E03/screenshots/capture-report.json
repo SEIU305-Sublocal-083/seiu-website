@@ -1,0 +1,107 @@
+{
+  "item": "E03",
+  "capture_method": "Playwright screenshot of local rendered HTML",
+  "citation_display": "none",
+  "pages": [
+    {
+      "file": "strike/en/emails/monday/a.html",
+      "html_sha256": "be3aa7b505e10d71e78a0f674bfa294754fe3fe5b8f97faa975a4b74d324bdc4",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/a-en-desktop-full.png",
+      "screenshot_sha256": "22015bfed8e837657c1753766dba4d9632ae476de5fe08ed8f8bf5253f07b1bf",
+      "qa": {
+        "title": "Monday weekly update and voting email — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1951,
+        "languageSwitch": true,
+        "translationPending": false,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/en/emails/monday/a.html",
+      "html_sha256": "be3aa7b505e10d71e78a0f674bfa294754fe3fe5b8f97faa975a4b74d324bdc4",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/a-en-mobile-full.png",
+      "screenshot_sha256": "82397adb13fc7b27c7e0415ca490b8dc60d212415d06d39309cca0b11560bce3",
+      "qa": {
+        "title": "Monday weekly update and voting email — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 2508,
+        "languageSwitch": true,
+        "translationPending": false,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/es/emails/monday/a.html",
+      "html_sha256": "d31ff67b9d0870df7453e9bc0ddb0a2e2b583a4bce38c07cd4d56cb13d2ac57d",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/a-es-desktop-full.png",
+      "screenshot_sha256": "40bfc415f9420db156f712d5ff16b85c25aa245d31ffdd5e7c6dad3147174a17",
+      "qa": {
+        "title": "Spanish translation pending — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1000,
+        "languageSwitch": true,
+        "translationPending": true,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/es/emails/monday/a.html",
+      "html_sha256": "d31ff67b9d0870df7453e9bc0ddb0a2e2b583a4bce38c07cd4d56cb13d2ac57d",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/a-es-mobile-full.png",
+      "screenshot_sha256": "bb64d889000e9d9a634268ffe942267a5594bf6e5986dfbd76ca57b7175e4888",
+      "qa": {
+        "title": "Spanish translation pending — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 980,
+        "languageSwitch": true,
+        "translationPending": true,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    }
+  ]
+}
