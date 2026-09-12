@@ -1,0 +1,91 @@
+{
+  "item": "V01",
+  "capture_method": "Playwright screenshot of local rendered HTML",
+  "artwork": "none",
+  "pages": [
+    {
+      "file": "a.en.html",
+      "html_sha256": "89098bd49ad3245b42838f0987d923414f90c63c553619d328595b0521d43328",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/a-en-desktop-full.png",
+      "screenshot_sha256": "3fb30a28de8b75f969a9e659a14897cf136221e649e29b8fe78e4000e3a61c65",
+      "qa": {
+        "title": "Optional short video script captions and transcript — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "sourcesVisible": true,
+        "noindex": "noindex,nofollow",
+        "height": 2375
+      },
+      "errors": []
+    },
+    {
+      "file": "a.en.html",
+      "html_sha256": "89098bd49ad3245b42838f0987d923414f90c63c553619d328595b0521d43328",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/a-en-mobile-full.png",
+      "screenshot_sha256": "9051662e71833dc9602b8a3ab2dd95469f54f06af18bd70c5dcc74099128bdfe",
+      "qa": {
+        "title": "Optional short video script captions and transcript — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "sourcesVisible": true,
+        "noindex": "noindex,nofollow",
+        "height": 3425
+      },
+      "errors": []
+    },
+    {
+      "file": "b.en.html",
+      "html_sha256": "360c9ef53aab729fa79019125648a7713072dd446bae887df86be799649124db",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/b-en-desktop-full.png",
+      "screenshot_sha256": "a95b35a028c9d81a07d8a48c0dc0d14a06715ed2f259617e34d7fa82fdc56a53",
+      "qa": {
+        "title": "Optional short video script captions and transcript — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "sourcesVisible": true,
+        "noindex": "noindex,nofollow",
+        "height": 1690
+      },
+      "errors": []
+    },
+    {
+      "file": "b.en.html",
+      "html_sha256": "360c9ef53aab729fa79019125648a7713072dd446bae887df86be799649124db",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/b-en-mobile-full.png",
+      "screenshot_sha256": "c5494d2d2f9e74ca2c7b1170d7720c5dbba73918fcf09f626d59db5ca225f29d",
+      "qa": {
+        "title": "Optional short video script captions and transcript — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "sourcesVisible": true,
+        "noindex": "noindex,nofollow",
+        "height": 2628
+      },
+      "errors": []
+    }
+  ]
+}
