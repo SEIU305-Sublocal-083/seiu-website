@@ -1,0 +1,907 @@
+{
+  "item": "W01",
+  "capture_method": "Playwright screenshot of local rendered HTML",
+  "citation_display": "none",
+  "pages": [
+    {
+      "file": "strike/en/a.html",
+      "html_sha256": "cacbab0b59a778ab91d6353753152a3daeb12ff5617c2b2270f035891700061f",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/a-en-desktop-full.png",
+      "screenshot_sha256": "fce023ed937d8b2fbb60991dd0951ceb9625f79f593f1b509b91c875e0f97f16",
+      "qa": {
+        "title": "Our contract, our vote, our next steps — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 4849,
+        "languageSwitch": true,
+        "translationPending": false,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/en/a.html",
+      "html_sha256": "cacbab0b59a778ab91d6353753152a3daeb12ff5617c2b2270f035891700061f",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/a-en-mobile-full.png",
+      "screenshot_sha256": "10ba12ff0bbb8a209d4181d7f25bd597db3002e0216cd1bf943fd4949ccfd2e0",
+      "qa": {
+        "title": "Our contract, our vote, our next steps — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 7993,
+        "languageSwitch": true,
+        "translationPending": false,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/es/a.html",
+      "html_sha256": "f65f1aff5e915a0d7b5252bd52c6130f567a6775dcaecc195560410755944670",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/a-es-desktop-full.png",
+      "screenshot_sha256": "4d9bf036a14a009371bdac0975790d4e773068286b536c8d0640c8010daee013",
+      "qa": {
+        "title": "Spanish translation pending — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1110,
+        "languageSwitch": true,
+        "translationPending": true,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/es/a.html",
+      "html_sha256": "f65f1aff5e915a0d7b5252bd52c6130f567a6775dcaecc195560410755944670",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/a-es-mobile-full.png",
+      "screenshot_sha256": "120ccbb1d6a6c0fd53c0a4a64a916ebc396b7ae849700a64ebec12698b23b0f0",
+      "qa": {
+        "title": "Spanish translation pending — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1495,
+        "languageSwitch": true,
+        "translationPending": true,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/en/b.html",
+      "html_sha256": "00c7fc0d150f57d2f8476dad9ccbf2369e7a6ce8975eb1db2182e61213958e8f",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/b-en-desktop-full.png",
+      "screenshot_sha256": "34da4c81903f0d4036e6f370e0443c190278c8b95fd2e7874411e0566d99cb86",
+      "qa": {
+        "title": "Future hub status block — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1150,
+        "languageSwitch": true,
+        "translationPending": false,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/en/b.html",
+      "html_sha256": "00c7fc0d150f57d2f8476dad9ccbf2369e7a6ce8975eb1db2182e61213958e8f",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/b-en-mobile-full.png",
+      "screenshot_sha256": "76f72f074c01881a2f300f2a67fbb60f99dda8ee8e512b753a076d8a6f922304",
+      "qa": {
+        "title": "Future hub status block — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1586,
+        "languageSwitch": true,
+        "translationPending": false,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/es/b.html",
+      "html_sha256": "096ee634d7945cc61efa9fcae49fc461dc0b7b30d3a63ec7016c347b7da0509c",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/b-es-desktop-full.png",
+      "screenshot_sha256": "a9cdf1c229f02cd1f3d5b0dc8ba1b66e856e848e201762a401d8d54e56636be9",
+      "qa": {
+        "title": "Spanish translation pending — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1110,
+        "languageSwitch": true,
+        "translationPending": true,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/es/b.html",
+      "html_sha256": "096ee634d7945cc61efa9fcae49fc461dc0b7b30d3a63ec7016c347b7da0509c",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/b-es-mobile-full.png",
+      "screenshot_sha256": "927f605c71149f84c925ce1b87340dc53f02f206f8add5ea6270ceeb4698be22",
+      "qa": {
+        "title": "Spanish translation pending — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1518,
+        "languageSwitch": true,
+        "translationPending": true,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/en/c.html",
+      "html_sha256": "2c22fae93203c966b2f4562642c51036783f170ef056b62106ffca43dae86df9",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/c-en-desktop-full.png",
+      "screenshot_sha256": "2c9c65ae9648e56ede3c27805fdff983695be968697486506eb9f0dfcf68b935",
+      "qa": {
+        "title": "Future hub status block — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1150,
+        "languageSwitch": true,
+        "translationPending": false,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/en/c.html",
+      "html_sha256": "2c22fae93203c966b2f4562642c51036783f170ef056b62106ffca43dae86df9",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/c-en-mobile-full.png",
+      "screenshot_sha256": "59b8e86b4ae10c186f9e35d324faf957cb92033efd5dd596a143ff9dd64ae380",
+      "qa": {
+        "title": "Future hub status block — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1614,
+        "languageSwitch": true,
+        "translationPending": false,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/es/c.html",
+      "html_sha256": "72b31769de9e879398a4cba5675926da2be3c293d346d63462d84aff673a3dee",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/c-es-desktop-full.png",
+      "screenshot_sha256": "020038db209becc9fd22b95104b5fad3a4f5ac54d6876e3fd4a04612f04f07b8",
+      "qa": {
+        "title": "Spanish translation pending — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1110,
+        "languageSwitch": true,
+        "translationPending": true,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/es/c.html",
+      "html_sha256": "72b31769de9e879398a4cba5675926da2be3c293d346d63462d84aff673a3dee",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/c-es-mobile-full.png",
+      "screenshot_sha256": "97aab770ba09e48e54ba226f3d863bb560d8d81dbadb1f486e3ba16b2571d9f1",
+      "qa": {
+        "title": "Spanish translation pending — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1518,
+        "languageSwitch": true,
+        "translationPending": true,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/en/d.html",
+      "html_sha256": "a84dd364992eee42fccabedb286fc019f80f75a64d706304b574fbc27c39da5e",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/d-en-desktop-full.png",
+      "screenshot_sha256": "f63332828bef50b49efe6effe4861f72cdcae91d0e9f58d7284d8e7b46c2a182",
+      "qa": {
+        "title": "Future hub status block — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1180,
+        "languageSwitch": true,
+        "translationPending": false,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/en/d.html",
+      "html_sha256": "a84dd364992eee42fccabedb286fc019f80f75a64d706304b574fbc27c39da5e",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/d-en-mobile-full.png",
+      "screenshot_sha256": "ac3028f1882e941264e4cd586e8574b9816f707eed3d2cda55e4fabd95ba6c5d",
+      "qa": {
+        "title": "Future hub status block — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1642,
+        "languageSwitch": true,
+        "translationPending": false,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/es/d.html",
+      "html_sha256": "5d820b266ce937702fd44338cf75af73a425a9bb786c1668902dd7b53d0b6fa6",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/d-es-desktop-full.png",
+      "screenshot_sha256": "8a2e209cc80f5b6d74866d75ed9c958b275916d6d624d11eee58825d03d79695",
+      "qa": {
+        "title": "Spanish translation pending — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1110,
+        "languageSwitch": true,
+        "translationPending": true,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/es/d.html",
+      "html_sha256": "5d820b266ce937702fd44338cf75af73a425a9bb786c1668902dd7b53d0b6fa6",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/d-es-mobile-full.png",
+      "screenshot_sha256": "6eaa93aafc4bcd7b09a368a9dc8143692ebc15ddf076c7752c15760424dbd52b",
+      "qa": {
+        "title": "Spanish translation pending — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1518,
+        "languageSwitch": true,
+        "translationPending": true,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/en/e.html",
+      "html_sha256": "aa0e8ee2a7d0bcabeafff8c1d0a0eb93198c6ffcd8cee91995cb43d39204854b",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/e-en-desktop-full.png",
+      "screenshot_sha256": "9db6985a058689013fc08c2ddc8293dd8b6f8d07b9f76af31f93e4c4e756840d",
+      "qa": {
+        "title": "Future hub status block — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1180,
+        "languageSwitch": true,
+        "translationPending": false,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/en/e.html",
+      "html_sha256": "aa0e8ee2a7d0bcabeafff8c1d0a0eb93198c6ffcd8cee91995cb43d39204854b",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/e-en-mobile-full.png",
+      "screenshot_sha256": "667fa5ab0bcdaf7249ec59d7941fe1fedd90634c7ce3821be7d587016d5a4814",
+      "qa": {
+        "title": "Future hub status block — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1642,
+        "languageSwitch": true,
+        "translationPending": false,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/es/e.html",
+      "html_sha256": "34a7fa26c5ea522acfafb05dfde3aa5af1351e08ce0db340fc67a45205c0ff13",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/e-es-desktop-full.png",
+      "screenshot_sha256": "fa204d63fcb3989e7c6119c081459594b26c0fb6cef38ae636ca80be78440331",
+      "qa": {
+        "title": "Spanish translation pending — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1110,
+        "languageSwitch": true,
+        "translationPending": true,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/es/e.html",
+      "html_sha256": "34a7fa26c5ea522acfafb05dfde3aa5af1351e08ce0db340fc67a45205c0ff13",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/e-es-mobile-full.png",
+      "screenshot_sha256": "a219340ee0270343f27b9afa86014e1660c277998d67469d94de75cb4212c1ef",
+      "qa": {
+        "title": "Spanish translation pending — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1518,
+        "languageSwitch": true,
+        "translationPending": true,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/en/f.html",
+      "html_sha256": "cd6659237b7f8d665473322acc63ae63c14006ef3286e8e77610f5afba78d51c",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/f-en-desktop-full.png",
+      "screenshot_sha256": "eeadb563655dfcff8eea9213f7a986a47e97beb3b69fb04d7517c24443a24f9a",
+      "qa": {
+        "title": "Future hub status block — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1150,
+        "languageSwitch": true,
+        "translationPending": false,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/en/f.html",
+      "html_sha256": "cd6659237b7f8d665473322acc63ae63c14006ef3286e8e77610f5afba78d51c",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/f-en-mobile-full.png",
+      "screenshot_sha256": "f01a09e2bb6d8d85a423a42e56fee437530f2bdbce9f420aa5cedd14d353802d",
+      "qa": {
+        "title": "Future hub status block — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1614,
+        "languageSwitch": true,
+        "translationPending": false,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/es/f.html",
+      "html_sha256": "bd614776a89434650c18491e67d5db6fc1662d21b56f6d7d361a776119810d7b",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/f-es-desktop-full.png",
+      "screenshot_sha256": "343ce59b98cf7275c5116785280f09788fdf945b18f651bb547d7b689ecbd0aa",
+      "qa": {
+        "title": "Spanish translation pending — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1110,
+        "languageSwitch": true,
+        "translationPending": true,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/es/f.html",
+      "html_sha256": "bd614776a89434650c18491e67d5db6fc1662d21b56f6d7d361a776119810d7b",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/f-es-mobile-full.png",
+      "screenshot_sha256": "87c4bb7120174b7f6ac54de1abdf50c1168f4304567b4b2c4c6bd769c8ca64f5",
+      "qa": {
+        "title": "Spanish translation pending — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1518,
+        "languageSwitch": true,
+        "translationPending": true,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/en/g.html",
+      "html_sha256": "1f024e3d1717c06349de3380dc4788dea3d475cd5075c07d4e19c3da959c3a74",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/g-en-desktop-full.png",
+      "screenshot_sha256": "9535df0d7b0c3eb79b28effe3aa2b8e22d9bc13d511c199134f71aae100240d8",
+      "qa": {
+        "title": "Future hub status block — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1180,
+        "languageSwitch": true,
+        "translationPending": false,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/en/g.html",
+      "html_sha256": "1f024e3d1717c06349de3380dc4788dea3d475cd5075c07d4e19c3da959c3a74",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/g-en-mobile-full.png",
+      "screenshot_sha256": "0f6953abedf5dcb4bbfd26a8add1f19292a1b936ec046eb04e04bc5b12ba1b0c",
+      "qa": {
+        "title": "Future hub status block — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1642,
+        "languageSwitch": true,
+        "translationPending": false,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/es/g.html",
+      "html_sha256": "14fbf7a71d57293029299213c9722ae90c3346703a1aefe18b23db36cdca1990",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/g-es-desktop-full.png",
+      "screenshot_sha256": "4738a5a783ff13c48eb43d175dd0bd943d2ae3f5ee1a482ff63cc1896d4da086",
+      "qa": {
+        "title": "Spanish translation pending — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1110,
+        "languageSwitch": true,
+        "translationPending": true,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/es/g.html",
+      "html_sha256": "14fbf7a71d57293029299213c9722ae90c3346703a1aefe18b23db36cdca1990",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/g-es-mobile-full.png",
+      "screenshot_sha256": "ceed6c3110ce95044812cb9c652b2d0406659b38bebe801a3be9f48eb571a2f7",
+      "qa": {
+        "title": "Spanish translation pending — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1518,
+        "languageSwitch": true,
+        "translationPending": true,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/en/h.html",
+      "html_sha256": "0e3a03cabdd4024ff413c1ef47b549f19a276a8e77e9aedf5e3220442880c9a2",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/h-en-desktop-full.png",
+      "screenshot_sha256": "ecf825eab6b7200d6a419782cf898b8797ea65a1eaedbe1a3154bc13a688ac50",
+      "qa": {
+        "title": "Future hub status block — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1150,
+        "languageSwitch": true,
+        "translationPending": false,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/en/h.html",
+      "html_sha256": "0e3a03cabdd4024ff413c1ef47b549f19a276a8e77e9aedf5e3220442880c9a2",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/h-en-mobile-full.png",
+      "screenshot_sha256": "600f00399056f98d7378d0a082cbf3158e7e1690598cc5309e235fb618be3352",
+      "qa": {
+        "title": "Future hub status block — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1614,
+        "languageSwitch": true,
+        "translationPending": false,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/es/h.html",
+      "html_sha256": "02ae5109026eae22d24d40bbd539d0c8672db89c0ce652c22e12c897cd558786",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/h-es-desktop-full.png",
+      "screenshot_sha256": "66635f13d3e9b7dec60abaccb6257010c82e9c0f5658cea262c26a011df68062",
+      "qa": {
+        "title": "Spanish translation pending — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1110,
+        "languageSwitch": true,
+        "translationPending": true,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/es/h.html",
+      "html_sha256": "02ae5109026eae22d24d40bbd539d0c8672db89c0ce652c22e12c897cd558786",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/h-es-mobile-full.png",
+      "screenshot_sha256": "7757fea0214f72465c12150657205eb4546618aaba55eb0709d71fcc4ccf5db2",
+      "qa": {
+        "title": "Spanish translation pending — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1518,
+        "languageSwitch": true,
+        "translationPending": true,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/en/i.html",
+      "html_sha256": "e6bf6dc4920d8ca1b96f429b1defbbb4312664e76365b796a727b5b73cf0edbd",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/i-en-desktop-full.png",
+      "screenshot_sha256": "6fa519d901ab776b0ebed86462fea1388c131401a9e2e22a67644ad2bd44b1cd",
+      "qa": {
+        "title": "Future hub status block — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1180,
+        "languageSwitch": true,
+        "translationPending": false,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/en/i.html",
+      "html_sha256": "e6bf6dc4920d8ca1b96f429b1defbbb4312664e76365b796a727b5b73cf0edbd",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/i-en-mobile-full.png",
+      "screenshot_sha256": "a3154f69daa79737f1d0c4a4b2da9f762d0391c19b07bb5c0e46da4257e2eb04",
+      "qa": {
+        "title": "Future hub status block — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1670,
+        "languageSwitch": true,
+        "translationPending": false,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/es/i.html",
+      "html_sha256": "ab9815905853ecdde303b5d4aab9f0841f46ef47528300f367b1b0556272e55e",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/i-es-desktop-full.png",
+      "screenshot_sha256": "5bd3892559eed1c2d1f8fdde23aadbba37513f549f6207acd62160c235bfc3f8",
+      "qa": {
+        "title": "Spanish translation pending — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1110,
+        "languageSwitch": true,
+        "translationPending": true,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/es/i.html",
+      "html_sha256": "ab9815905853ecdde303b5d4aab9f0841f46ef47528300f367b1b0556272e55e",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/i-es-mobile-full.png",
+      "screenshot_sha256": "2d8af8fdf0913e4ec5ae8ef9877e9aac0b97a1c474678d98ed1bc2985497a7ae",
+      "qa": {
+        "title": "Spanish translation pending — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1518,
+        "languageSwitch": true,
+        "translationPending": true,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    }
+  ]
+}
