@@ -1,0 +1,49 @@
+{
+  "item": "O01",
+  "capture_method": "Playwright screenshot of local rendered HTML",
+  "artwork": "none",
+  "pages": [
+    {
+      "file": "a.en.html",
+      "html_sha256": "9a7abce05b924edd3a8f0d452bb1afe4b69afbcf24272ced85c54fb17cc119d0",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/a-en-desktop-full.png",
+      "screenshot_sha256": "e10f1fe96473683764be5d042a436449f92049da489feb5ebcbaa0ad9c8f5411",
+      "qa": {
+        "title": "O01 — Proposed ten-day communications and organizing plan — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "sourcesVisible": true,
+        "noindex": "noindex,nofollow",
+        "height": 9298
+      },
+      "errors": []
+    },
+    {
+      "file": "a.en.html",
+      "html_sha256": "9a7abce05b924edd3a8f0d452bb1afe4b69afbcf24272ced85c54fb17cc119d0",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/a-en-mobile-full.png",
+      "screenshot_sha256": "b4485e3f4585997d5f4259fef56a524be5a12e355a76e680d95f7db29df5de1e",
+      "qa": {
+        "title": "O01 — Proposed ten-day communications and organizing plan — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "sourcesVisible": true,
+        "noindex": "noindex,nofollow",
+        "height": 15712
+      },
+      "errors": []
+    }
+  ]
+}
