@@ -12,7 +12,7 @@ Information checked Saturday, Sept. 12, 2026.
 4. **Strike and bargaining:** A work stoppage means withholding covered work. Picketing is a coordinated activity with its own locations, shifts and instructions. Bargaining can continue.
 5. **Official next steps and return:** Follow the verified instructions for any agreement, changed timeline and return to work. A tentative agreement is not a ratified contract or an automatic return order.
 
-Read [SEIU 503's authorization explanation](https://seiu503.org/member_news/seiu-503-higher-ed-strike-pledge-frequently-asked-questions/) and [Oregon ERB's bargaining process](https://www.oregon.gov/erb/pages/pecba.aspx). No finalized strike duration or start time has been verified for this guide. **Sept. 28 remains a tentative date discussed at the briefing, not a start instruction.**
+No finalized strike duration or start time has been verified for this guide. **Sept. 28 remains a tentative date discussed at the briefing, not a start instruction.**
 
 ### Plan for your location, shift and access needs
 
@@ -37,7 +37,7 @@ At an approved picket, follow the coordinator's instructions, keep emergency acc
 
 At our briefing, speakers said workers who are also students are **not being asked to stop attending classes**. Ask separately about any concern involving your job, class access, tuition or university systems. Student enrollment and covered employment are different roles.
 
-Students and coworkers outside our bargaining unit can ask about approved rallies or personal letters of support. They should get guidance for their own situation before changing work duties. Oregon law has specific limits on other public employees refusing to cross a picket line; do not assume everyone on campus has the same strike rights. See [ORS 243.732](https://www.oregonlegislature.gov/bills_laws/ors/ors243.html).
+Students and coworkers outside our bargaining unit can ask about approved rallies or personal letters of support. They should get guidance for their own situation before changing work duties. Oregon law has specific limits on other public employees refusing to cross a picket line; do not assume everyone on campus has the same strike rights.
 
 ### If the timeline changes or a strike lasts longer
 
