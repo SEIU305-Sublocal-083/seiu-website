@@ -1,0 +1,207 @@
+{
+  "item": "E04",
+  "capture_method": "Playwright screenshot of local rendered HTML",
+  "citation_display": "none",
+  "pages": [
+    {
+      "file": "strike/en/emails/tuesday/a.html",
+      "html_sha256": "6fe65398861c083e2327e9d0bef98c4c3bb83182a0ac85d56ca0a812e3f49707",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/a-en-desktop-full.png",
+      "screenshot_sha256": "849f2060a820b6cc8af4e78c138aa6c603d2e3a078220d611fde7575d12e30a2",
+      "qa": {
+        "title": "Tuesday Cascades and absentee targeted reminder — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1376,
+        "languageSwitch": true,
+        "translationPending": false,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/en/emails/tuesday/a.html",
+      "html_sha256": "6fe65398861c083e2327e9d0bef98c4c3bb83182a0ac85d56ca0a812e3f49707",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/a-en-mobile-full.png",
+      "screenshot_sha256": "ae88072b000214a76005bf6061e9c303b37d1c01307443a3197539896c142ee5",
+      "qa": {
+        "title": "Tuesday Cascades and absentee targeted reminder — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1618,
+        "languageSwitch": true,
+        "translationPending": false,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/es/emails/tuesday/a.html",
+      "html_sha256": "4693e63c6523c24473170c04ae21bb376b5e0b8c661b0e210407d87c2ea16887",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/a-es-desktop-full.png",
+      "screenshot_sha256": "ffed533b4f33ac9b2bfca2db305045bd940ad01995deeea68a35bd8553883429",
+      "qa": {
+        "title": "Spanish translation pending — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1000,
+        "languageSwitch": true,
+        "translationPending": true,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/es/emails/tuesday/a.html",
+      "html_sha256": "4693e63c6523c24473170c04ae21bb376b5e0b8c661b0e210407d87c2ea16887",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/a-es-mobile-full.png",
+      "screenshot_sha256": "1bc632ef86a084729980a9e0b6e7c25a2456f3b76fc8b8bd300d728207481c54",
+      "qa": {
+        "title": "Spanish translation pending — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1031,
+        "languageSwitch": true,
+        "translationPending": true,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/en/emails/tuesday/b.html",
+      "html_sha256": "524ebdd5a8005df51bad8f3121b5db5e058ef96874dcfe7af010f09e70522be8",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/b-en-desktop-full.png",
+      "screenshot_sha256": "143a7adda7e8ffc9db400adc12bebe54e9e988281f9c9fe28544235ca76c17e0",
+      "qa": {
+        "title": "Tuesday Cascades and absentee targeted reminder — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1515,
+        "languageSwitch": true,
+        "translationPending": false,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/en/emails/tuesday/b.html",
+      "html_sha256": "524ebdd5a8005df51bad8f3121b5db5e058ef96874dcfe7af010f09e70522be8",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/b-en-mobile-full.png",
+      "screenshot_sha256": "2fd4183e125daba85a4e3efd04687298e8d34611591ffaad460194997681aa47",
+      "qa": {
+        "title": "Tuesday Cascades and absentee targeted reminder — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1834,
+        "languageSwitch": true,
+        "translationPending": false,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/es/emails/tuesday/b.html",
+      "html_sha256": "0138003a6e8a3aff18af431124d68cf8b87ff5ba7095e3b5ed9d03f74af94dbd",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/b-es-desktop-full.png",
+      "screenshot_sha256": "9a1b3a137abeff01612cc550d6a2c222f6d2e3a5f7133e65a9487fd9f9fc7660",
+      "qa": {
+        "title": "Spanish translation pending — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1000,
+        "languageSwitch": true,
+        "translationPending": true,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/es/emails/tuesday/b.html",
+      "html_sha256": "0138003a6e8a3aff18af431124d68cf8b87ff5ba7095e3b5ed9d03f74af94dbd",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/b-es-mobile-full.png",
+      "screenshot_sha256": "dc5784d64baa7c0ddbf18b5acb155fb1bcdcbc9ea7ce4563c7bc007be4345fc6",
+      "qa": {
+        "title": "Spanish translation pending — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1031,
+        "languageSwitch": true,
+        "translationPending": true,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    }
+  ]
+}
