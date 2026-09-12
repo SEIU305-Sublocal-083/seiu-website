@@ -1,0 +1,49 @@
+{
+  "item": "P01",
+  "capture_method": "Playwright screenshot of local rendered HTML",
+  "artwork": "none",
+  "pages": [
+    {
+      "file": "a.en.html",
+      "html_sha256": "0c79a5a71799d6160bd1b10aa17f96c91da6fa6f9fc899dbfee1661797538a7e",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/a-en-desktop-full.png",
+      "screenshot_sha256": "b9d23f26a605493d1a0b9470a7e0096b4e6afd46f2ee270f1ec8b80d2293c282",
+      "qa": {
+        "title": "Our contract. Our vote. — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "sourcesVisible": true,
+        "noindex": "noindex,nofollow",
+        "height": 1955
+      },
+      "errors": []
+    },
+    {
+      "file": "a.en.html",
+      "html_sha256": "0c79a5a71799d6160bd1b10aa17f96c91da6fa6f9fc899dbfee1661797538a7e",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/a-en-mobile-full.png",
+      "screenshot_sha256": "945c1da7178b6249a082a4514b7342f7c13ee0708a328bb7c5ed567406f900da",
+      "qa": {
+        "title": "Our contract. Our vote. — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "sourcesVisible": true,
+        "noindex": "noindex,nofollow",
+        "height": 2472
+      },
+      "errors": []
+    }
+  ]
+}
