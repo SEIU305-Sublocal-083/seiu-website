@@ -1,0 +1,507 @@
+{
+  "item": "N04",
+  "capture_method": "Playwright screenshot of local rendered HTML",
+  "citation_display": "none",
+  "pages": [
+    {
+      "file": "strike/en/news/status-update/a.html",
+      "html_sha256": "5d9f594deacd5ae0892d5e3c5ca53c55570380af434e30b12fab9ba6089c5a12",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/a-en-desktop-full.png",
+      "screenshot_sha256": "895d21e8108b5f0bc1833f6cedb6bb97dcbb88010afa081a84546c6cf50634a9",
+      "qa": {
+        "title": "Our union has issued a formal strike notice — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1763,
+        "languageSwitch": true,
+        "translationPending": false,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/en/news/status-update/a.html",
+      "html_sha256": "5d9f594deacd5ae0892d5e3c5ca53c55570380af434e30b12fab9ba6089c5a12",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/a-en-mobile-full.png",
+      "screenshot_sha256": "c1a7def79c473dc48a662bd58cfd8ed901e79f8b00238c89b28d6f48686c1efb",
+      "qa": {
+        "title": "Our union has issued a formal strike notice — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 2653,
+        "languageSwitch": true,
+        "translationPending": false,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/es/news/status-update/a.html",
+      "html_sha256": "8e81efc26ed442861a3b0aa1df04e310ddfd988a9ff089aad3c01716bbd39ce8",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/a-es-desktop-full.png",
+      "screenshot_sha256": "45d1ff78e85c3f569ccba9b5b8d08de2da2001807c01eaa45f6140b8c70f92f7",
+      "qa": {
+        "title": "Spanish translation pending — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1000,
+        "languageSwitch": true,
+        "translationPending": true,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/es/news/status-update/a.html",
+      "html_sha256": "8e81efc26ed442861a3b0aa1df04e310ddfd988a9ff089aad3c01716bbd39ce8",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/a-es-mobile-full.png",
+      "screenshot_sha256": "039b86077aec21082635b76ef3cb6e7cb2626d8e1faf568077f6a110309eff53",
+      "qa": {
+        "title": "Spanish translation pending — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1266,
+        "languageSwitch": true,
+        "translationPending": true,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/en/news/status-update/b.html",
+      "html_sha256": "7e437f3040951fe562c6e46a13fbbcbd681be077edc08f0b9f53904302c4a1d7",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/b-en-desktop-full.png",
+      "screenshot_sha256": "84dc3a07e42173edbda6fd482af5532e0cc09bc6ebb61d13f791ef6dc1faa716",
+      "qa": {
+        "title": "Our union has called a strike: check the official start instructions — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1977,
+        "languageSwitch": true,
+        "translationPending": false,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/en/news/status-update/b.html",
+      "html_sha256": "7e437f3040951fe562c6e46a13fbbcbd681be077edc08f0b9f53904302c4a1d7",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/b-en-mobile-full.png",
+      "screenshot_sha256": "2774042895ad5423413e4042ab3bdc4e15f82e087cf27bf74f75704cae960a9b",
+      "qa": {
+        "title": "Our union has called a strike: check the official start instructions — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 3288,
+        "languageSwitch": true,
+        "translationPending": false,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/es/news/status-update/b.html",
+      "html_sha256": "446aed34184856cb3d845725714055073f58986bf27c44221ca470d3bd1029fc",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/b-es-desktop-full.png",
+      "screenshot_sha256": "4530cffc2a8b33893b3b568a30c6f065816cce0edc4fe824b663a4071acf8797",
+      "qa": {
+        "title": "Spanish translation pending — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1000,
+        "languageSwitch": true,
+        "translationPending": true,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/es/news/status-update/b.html",
+      "html_sha256": "446aed34184856cb3d845725714055073f58986bf27c44221ca470d3bd1029fc",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/b-es-mobile-full.png",
+      "screenshot_sha256": "301d083ba4eb73b1e97532493f73b8199a517ac2c61b16bd914a031eb22c1bba",
+      "qa": {
+        "title": "Spanish translation pending — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1266,
+        "languageSwitch": true,
+        "translationPending": true,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/en/news/status-update/c.html",
+      "html_sha256": "218fda0f74cee8864a1ea67fbcd8fe5b6a8ed45f2515035be36d935539d41c2b",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/c-en-desktop-full.png",
+      "screenshot_sha256": "768e150e632d793c8d4db0d2dbe362ef2cc3c6d7fda3211b723d0bc1b4c5f01f",
+      "qa": {
+        "title": "Our bargaining team has reached a tentative agreement — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1977,
+        "languageSwitch": true,
+        "translationPending": false,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/en/news/status-update/c.html",
+      "html_sha256": "218fda0f74cee8864a1ea67fbcd8fe5b6a8ed45f2515035be36d935539d41c2b",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/c-en-mobile-full.png",
+      "screenshot_sha256": "71139564f556b59412ce705cf7d0d3d41efd9bb8796fe41d8a9872ca5ba3cf11",
+      "qa": {
+        "title": "Our bargaining team has reached a tentative agreement — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 3138,
+        "languageSwitch": true,
+        "translationPending": false,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/es/news/status-update/c.html",
+      "html_sha256": "8e85b9abbb4bb2d6c8986fcfe87e8a5bd7768f95cfe793c1bf17e2396f68fa7a",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/c-es-desktop-full.png",
+      "screenshot_sha256": "e04208f434c1ddd917e250ebcd12a67050b526569410cce6f74ddb6727d8ec3e",
+      "qa": {
+        "title": "Spanish translation pending — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1000,
+        "languageSwitch": true,
+        "translationPending": true,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/es/news/status-update/c.html",
+      "html_sha256": "8e85b9abbb4bb2d6c8986fcfe87e8a5bd7768f95cfe793c1bf17e2396f68fa7a",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/c-es-mobile-full.png",
+      "screenshot_sha256": "51137245ba5ee39ee3291eefc9a4c184a3eabb868190cd1b1f5e50aec33f46cc",
+      "qa": {
+        "title": "Spanish translation pending — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1266,
+        "languageSwitch": true,
+        "translationPending": true,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/en/news/status-update/d.html",
+      "html_sha256": "97eecf3dabb93724923714920e9abde17545e981e491c74075a30b69139d845b",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/d-en-desktop-full.png",
+      "screenshot_sha256": "133df8fee13dbb3104002349c5579e720fed18ff715d61cdf325b80e5d72e33a",
+      "qa": {
+        "title": "The timeline has changed: use the updated instruction — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1771,
+        "languageSwitch": true,
+        "translationPending": false,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/en/news/status-update/d.html",
+      "html_sha256": "97eecf3dabb93724923714920e9abde17545e981e491c74075a30b69139d845b",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/d-en-mobile-full.png",
+      "screenshot_sha256": "185541d0c1963a4713c3a3a1deba27a5a747c24461c16e418501742e1ff7611b",
+      "qa": {
+        "title": "The timeline has changed: use the updated instruction — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 2689,
+        "languageSwitch": true,
+        "translationPending": false,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/es/news/status-update/d.html",
+      "html_sha256": "372606427f0e9b1b50ad007d984be36f376f59b2776c9e0b95bc3b28a7edf27d",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/d-es-desktop-full.png",
+      "screenshot_sha256": "5187d6c9e0c62291fc74e7777e3ee8e2e1d8cde90e9c6d353e67075fd87339ec",
+      "qa": {
+        "title": "Spanish translation pending — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1000,
+        "languageSwitch": true,
+        "translationPending": true,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/es/news/status-update/d.html",
+      "html_sha256": "372606427f0e9b1b50ad007d984be36f376f59b2776c9e0b95bc3b28a7edf27d",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/d-es-mobile-full.png",
+      "screenshot_sha256": "fa429da42ad108bfdf12694dd03301fa48ca91d95f40e4359147d6e6e7e48925",
+      "qa": {
+        "title": "Spanish translation pending — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1266,
+        "languageSwitch": true,
+        "translationPending": true,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/en/news/status-update/e.html",
+      "html_sha256": "71ff793e53037fa5df6362e9a224fe947f4f84cbaeba1447d09eff80066b3a51",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/e-en-desktop-full.png",
+      "screenshot_sha256": "dbbe4a44558aff2eb8326020ed7058727ef12e42f370dfef594c87205a94ac51",
+      "qa": {
+        "title": "The strike continues: review the current instructions and support routes — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1937,
+        "languageSwitch": true,
+        "translationPending": false,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/en/news/status-update/e.html",
+      "html_sha256": "71ff793e53037fa5df6362e9a224fe947f4f84cbaeba1447d09eff80066b3a51",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/e-en-mobile-full.png",
+      "screenshot_sha256": "7976b92d2fa2a8c45002c60b009dd227794f499eb606bd9c7c796907b4a526ec",
+      "qa": {
+        "title": "The strike continues: review the current instructions and support routes — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 3038,
+        "languageSwitch": true,
+        "translationPending": false,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/es/news/status-update/e.html",
+      "html_sha256": "6a61ded16d214916e23f108173798aa9bee39ddff34d81fb8f7aa7dc8cd792be",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/e-es-desktop-full.png",
+      "screenshot_sha256": "a820887d5b1141a8fd4d2e51f71f1ab81877c786eb27170a8e1a131cf98771b7",
+      "qa": {
+        "title": "Spanish translation pending — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1000,
+        "languageSwitch": true,
+        "translationPending": true,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/es/news/status-update/e.html",
+      "html_sha256": "6a61ded16d214916e23f108173798aa9bee39ddff34d81fb8f7aa7dc8cd792be",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/e-es-mobile-full.png",
+      "screenshot_sha256": "94efcea1fe77f3e8934f02692dc18b89779f10d7fbc23b60cf8c9b19caed8d3b",
+      "qa": {
+        "title": "Spanish translation pending — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1266,
+        "languageSwitch": true,
+        "translationPending": true,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    }
+  ]
+}
