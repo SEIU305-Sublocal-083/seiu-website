@@ -1,7 +1,6 @@
 {
   "item": "H07",
   "capture_method": "Playwright screenshot of local rendered HTML",
-  "artwork": "none",
   "pages": [
     {
       "file": "a.en.html",
@@ -14,7 +13,7 @@
       "screenshot": "screenshots/a-en-desktop-full.png",
       "screenshot_sha256": "6dd80dd34efea8ca9f234b66e6c6a9df21afbc4108c488d76da36680e4925759",
       "qa": {
-        "title": "How a strike would work and how to prepare — Local 083 review",
+        "title": "How a strike would work and how to prepare \u2014 Local 083 review",
         "h1": 1,
         "horizontalOverflow": false,
         "brokenImages": [],
@@ -35,7 +34,7 @@
       "screenshot": "screenshots/a-en-mobile-full.png",
       "screenshot_sha256": "443e42b5d91b5bdcf02977103e0d163149663fdc0eb5a0e432b6f9d16fc5af55",
       "qa": {
-        "title": "How a strike would work and how to prepare — Local 083 review",
+        "title": "How a strike would work and how to prepare \u2014 Local 083 review",
         "h1": 1,
         "horizontalOverflow": false,
         "brokenImages": [],
