@@ -1,0 +1,60 @@
+{
+  "id": "E07",
+  "title": "Friday material-change email variants",
+  "title_es": "",
+  "channel": "email",
+  "as_of": "2026-09-12",
+  "internal_only": false,
+  "proposed_destination": "E07 email campaign draft; no send or schedule",
+  "selected_variant": null,
+  "editor_approved_by": "",
+  "facts_rechecked_at": "",
+  "source_notes_spanish_reviewer": "",
+  "open_release_gates": [
+    "Refresh dated facts and confirm the intended audience and send/publication time.",
+    "Resolve item-specific release conditions in REVIEW.md.",
+    "Human Spanish translation and bilingual review."
+  ],
+  "variants": [
+    {
+      "key": "a",
+      "label": "A — Advance notice only",
+      "en": "copy/en/a.md",
+      "es": "copy/es/a.md",
+      "conditional": true,
+      "translation_status": "not_started",
+      "spanish_reviewer": "",
+      "approved_english_sha256": ""
+    },
+    {
+      "key": "b",
+      "label": "B — Official strike call",
+      "en": "copy/en/b.md",
+      "es": "copy/es/b.md",
+      "conditional": true,
+      "translation_status": "not_started",
+      "spanish_reviewer": "",
+      "approved_english_sha256": ""
+    },
+    {
+      "key": "c",
+      "label": "C — Tentative agreement",
+      "en": "copy/en/c.md",
+      "es": "copy/es/c.md",
+      "conditional": true,
+      "translation_status": "not_started",
+      "spanish_reviewer": "",
+      "approved_english_sha256": ""
+    },
+    {
+      "key": "d",
+      "label": "D — Changed timeline",
+      "en": "copy/en/d.md",
+      "es": "copy/es/d.md",
+      "conditional": true,
+      "translation_status": "not_started",
+      "spanish_reviewer": "",
+      "approved_english_sha256": ""
+    }
+  ]
+}

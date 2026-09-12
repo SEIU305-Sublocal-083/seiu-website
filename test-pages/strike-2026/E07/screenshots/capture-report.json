@@ -1,0 +1,175 @@
+{
+  "item": "E07",
+  "capture_method": "Playwright screenshot of local rendered HTML",
+  "artwork": "none",
+  "pages": [
+    {
+      "file": "a.en.html",
+      "html_sha256": "2e04cbee6dc2a0b12c8c25e9100e078e721cab90e4dd2cc024791faa702fe105",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/a-en-desktop-full.png",
+      "screenshot_sha256": "24fb76a39aeb16856160aeb68a27da21861574bb0929892298d19f0622df3937",
+      "qa": {
+        "title": "Friday material-change email variants — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "sourcesVisible": true,
+        "noindex": "noindex,nofollow",
+        "height": 1647
+      },
+      "errors": []
+    },
+    {
+      "file": "a.en.html",
+      "html_sha256": "2e04cbee6dc2a0b12c8c25e9100e078e721cab90e4dd2cc024791faa702fe105",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/a-en-mobile-full.png",
+      "screenshot_sha256": "f3ac77510ec56feefccf68a81e8034f722f0f2aca578463504241abdf36d5beb",
+      "qa": {
+        "title": "Friday material-change email variants — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "sourcesVisible": true,
+        "noindex": "noindex,nofollow",
+        "height": 2232
+      },
+      "errors": []
+    },
+    {
+      "file": "b.en.html",
+      "html_sha256": "5e1b13da70376535c1b1e2e4375c9ae58a312ce9c118857dc6adac3cb203020e",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/b-en-desktop-full.png",
+      "screenshot_sha256": "66b8e19cb485cf37caa5445ea0b1dc23bd7e554ab9b5e833a516352ef357261f",
+      "qa": {
+        "title": "Friday material-change email variants — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "sourcesVisible": true,
+        "noindex": "noindex,nofollow",
+        "height": 1736
+      },
+      "errors": []
+    },
+    {
+      "file": "b.en.html",
+      "html_sha256": "5e1b13da70376535c1b1e2e4375c9ae58a312ce9c118857dc6adac3cb203020e",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/b-en-mobile-full.png",
+      "screenshot_sha256": "969f1388041bbdbb6541a04a52d38d407f4235ccdfb116695dbd7237c0cafdf3",
+      "qa": {
+        "title": "Friday material-change email variants — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "sourcesVisible": true,
+        "noindex": "noindex,nofollow",
+        "height": 2260
+      },
+      "errors": []
+    },
+    {
+      "file": "c.en.html",
+      "html_sha256": "d7409e256da1aeed17ce49b1d3c634a3785aba6bc969b2720e28c33a38e7c5d1",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/c-en-desktop-full.png",
+      "screenshot_sha256": "ecedeedda3242c6b5b3ce8b489750badf633c9758f6e117eb72cc47180eb6ad6",
+      "qa": {
+        "title": "Friday material-change email variants — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "sourcesVisible": true,
+        "noindex": "noindex,nofollow",
+        "height": 1647
+      },
+      "errors": []
+    },
+    {
+      "file": "c.en.html",
+      "html_sha256": "d7409e256da1aeed17ce49b1d3c634a3785aba6bc969b2720e28c33a38e7c5d1",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/c-en-mobile-full.png",
+      "screenshot_sha256": "4997e88df8ca7a15d3c87fbc7b5c6960ff90c7f5ff5bde06020da206900ff986",
+      "qa": {
+        "title": "Friday material-change email variants — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "sourcesVisible": true,
+        "noindex": "noindex,nofollow",
+        "height": 2232
+      },
+      "errors": []
+    },
+    {
+      "file": "d.en.html",
+      "html_sha256": "f605c90c27ec3e238d7fb150d2b776f3a364cafbbf7c8e4e133217d2f4ccd238",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/d-en-desktop-full.png",
+      "screenshot_sha256": "d86c8a4467d4f816e44be61ecf6bf994dd265e14f1dc1c1d86cb11d691f528d0",
+      "qa": {
+        "title": "Friday material-change email variants — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "sourcesVisible": true,
+        "noindex": "noindex,nofollow",
+        "height": 1677
+      },
+      "errors": []
+    },
+    {
+      "file": "d.en.html",
+      "html_sha256": "f605c90c27ec3e238d7fb150d2b776f3a364cafbbf7c8e4e133217d2f4ccd238",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/d-en-mobile-full.png",
+      "screenshot_sha256": "1cf7660d9ce3b5ad41adec6308b337532a046f19e13b39db87e99a3b82a3136b",
+      "qa": {
+        "title": "Friday material-change email variants — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "sourcesVisible": true,
+        "noindex": "noindex,nofollow",
+        "height": 2260
+      },
+      "errors": []
+    }
+  ]
+}
