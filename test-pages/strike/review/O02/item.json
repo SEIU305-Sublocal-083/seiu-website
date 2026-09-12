@@ -1,0 +1,39 @@
+{
+  "id": "O02",
+  "title": "Coworker organizing assignments and response workflow",
+  "title_es": "",
+  "channel": "internal",
+  "as_of": "2026-09-12",
+  "internal_only": true,
+  "proposed_destination": "English /strike/en/internal/organizing/; Español /strike/es/internal/organizing/ (draft review; no publication or delivery)",
+  "selected_variant": null,
+  "editor_approved_by": "",
+  "facts_rechecked_at": "",
+  "source_notes_spanish_reviewer": "",
+  "open_release_gates": [
+    "Refresh dated facts and confirm the intended audience and send/publication time.",
+    "Resolve item-specific release conditions in REVIEW.md."
+  ],
+  "variants": [
+    {
+      "key": "a",
+      "label": "Primary copy",
+      "en": "../../en/internal/organizing/a.md",
+      "es": "../../es/internal/organizing/a.md",
+      "conditional": false,
+      "translation_status": "not_required",
+      "spanish_reviewer": "",
+      "approved_english_sha256": ""
+    }
+  ],
+  "citations": "none",
+  "route_slug": "internal/organizing",
+  "sources": {
+    "en": "../../en/internal/organizing/sources.md",
+    "es": "../../es/internal/organizing/sources.md"
+  },
+  "proposed_paths": {
+    "en": "/strike/en/internal/organizing/",
+    "es": "/strike/es/internal/organizing/"
+  }
+}
