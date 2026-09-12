@@ -112,12 +112,6 @@ def validate(folder: Path, release: bool) -> list[str]:
     keys = [v['key'] for v in item['variants']]
     if len(keys) != len(set(keys)):
         errors.append('duplicate variant keys')
-    for path in folder.rglob('*'):
-        if path.suffix not in {'.md', '.json', '.html'}:
-            continue
-        value = path.read_text()
-        if re.search(r'https?://[^\s<>"\)]+(?:targetId=|mail\.google\.com|/gmail/)|/Users/|data:image/|(?:sk-proj-)[A-Za-z0-9]', value, re.I):
-            errors.append(f'private link, local path or embedded payload in {path.name}')
     for variant in item['variants']:
         for language in ('en', 'es'):
             path = folder / variant[language]
@@ -126,8 +120,21 @@ def validate(folder: Path, release: bool) -> list[str]:
                 errors.append(f'invalid language source path: {variant[language]}')
             if not path.exists():
                 errors.append(f'missing translation/source slot: {path}')
+    for language in ('en', 'es'):
+        path = folder / item['sources'][language]
+        expected = (REVIEWS / language / item['route_slug'] / 'sources.md').resolve()
+        if path.resolve() != expected or not expected.is_relative_to((REVIEWS / language).resolve()):
+            errors.append(f'invalid {language} source-note path')
+        elif not path.exists():
+            errors.append(f'missing {language} source notes')
     if errors:
         return [f'{folder.name}: {error}' for error in errors]
+    for path in list(folder.rglob('*')) + [folder / v[lang] for v in item['variants'] for lang in ('en', 'es')] + [folder / p for p in item['sources'].values()]:
+        if path.suffix not in {'.md', '.json', '.html'}:
+            continue
+        value = path.read_text()
+        if re.search(r'https?://[^\s<>"\)]+(?:targetId=|mail\.google\.com|/gmail/)|/Users/|data:image/|(?:sk-proj-)[A-Za-z0-9]', value, re.I):
+            errors.append(f'private link, local path or embedded payload in {path.name}')
     for variant in item['variants']:
         if not text_without_comments((folder / variant['en']).read_text()):
             errors.append(f'empty English source: {variant["key"]}')
