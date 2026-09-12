@@ -18,7 +18,7 @@
   "variants": [
     {
       "key": "a",
-      "label": "A — OSU-Cascades",
+      "label": "A \u2014 OSU-Cascades",
       "en": "copy/en/a.md",
       "es": "copy/es/a.md",
       "conditional": true,
@@ -28,7 +28,7 @@
     },
     {
       "key": "b",
-      "label": "B — Absentee voters",
+      "label": "B \u2014 Absentee voters",
       "en": "copy/en/b.md",
       "es": "copy/es/b.md",
       "conditional": true,
@@ -36,5 +36,6 @@
       "spanish_reviewer": "",
       "approved_english_sha256": ""
     }
-  ]
+  ],
+  "citations": "none"
 }

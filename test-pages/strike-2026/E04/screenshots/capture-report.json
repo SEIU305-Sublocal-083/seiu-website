@@ -1,88 +1,93 @@
 {
   "item": "E04",
   "capture_method": "Playwright screenshot of local rendered HTML",
+  "citation_display": "none",
   "pages": [
     {
       "file": "a.en.html",
-      "html_sha256": "1bc59aace79135a475e06011d653ecd47e76c7ec2f03e758a65fa62537164839",
+      "html_sha256": "f2f23b90f74b761c804904b1f4d24830e3cd700a5f5927b7ddc1e9ae22d7a508",
       "viewport": {
         "name": "desktop",
         "width": 1440,
         "height": 1000
       },
       "screenshot": "screenshots/a-en-desktop-full.png",
-      "screenshot_sha256": "daa48398d0392bff4de9d31a16487f9ac5ab142bb4b97db7ea0d28fd9fe659d0",
+      "screenshot_sha256": "e49b6f0c46b8f12b38b407b5693c1837bf5e0cf01434901f9de5ecef72927c22",
       "qa": {
-        "title": "Tuesday Cascades and absentee targeted reminder \u2014 Local 083 review",
+        "title": "Tuesday Cascades and absentee targeted reminder — Local 083 review",
         "h1": 1,
         "horizontalOverflow": false,
         "brokenImages": [],
-        "sourcesVisible": true,
+        "citationSections": 0,
+        "citationsClosedInitially": true,
         "noindex": "noindex,nofollow",
-        "height": 1712
+        "height": 1325
       },
       "errors": []
     },
     {
       "file": "a.en.html",
-      "html_sha256": "1bc59aace79135a475e06011d653ecd47e76c7ec2f03e758a65fa62537164839",
+      "html_sha256": "f2f23b90f74b761c804904b1f4d24830e3cd700a5f5927b7ddc1e9ae22d7a508",
       "viewport": {
         "name": "mobile",
         "width": 390,
         "height": 844
       },
       "screenshot": "screenshots/a-en-mobile-full.png",
-      "screenshot_sha256": "d26455fd6aef329389739864d30afe77eca9b7f0ef3ecb97690c18c1a6e9237b",
+      "screenshot_sha256": "b91bd1fd8fa844ed5800e1bd8558a2cfa3218e12ba0c86f7b7d37e934d103cf6",
       "qa": {
-        "title": "Tuesday Cascades and absentee targeted reminder \u2014 Local 083 review",
+        "title": "Tuesday Cascades and absentee targeted reminder — Local 083 review",
         "h1": 1,
         "horizontalOverflow": false,
         "brokenImages": [],
-        "sourcesVisible": true,
+        "citationSections": 0,
+        "citationsClosedInitially": true,
         "noindex": "noindex,nofollow",
-        "height": 2173
+        "height": 1590
       },
       "errors": []
     },
     {
       "file": "b.en.html",
-      "html_sha256": "9b981f6e3773f36c1e7f574ed92160247ea6215ebddb8ba966f5c6701d1703ba",
+      "html_sha256": "24a3efbfd248c31eaf755e957e0e225539ac8d64261df09b0a93668c693e62b8",
       "viewport": {
         "name": "desktop",
         "width": 1440,
         "height": 1000
       },
       "screenshot": "screenshots/b-en-desktop-full.png",
-      "screenshot_sha256": "ddca3fd355207730cd77afe33c0d978d7d230b296eb4eccf611758c9b41f860a",
+      "screenshot_sha256": "a68ac50f79d6e7aa231bd639fbbad5af024376e45d5c425bd9bb85df7121483b",
       "qa": {
-        "title": "Tuesday Cascades and absentee targeted reminder \u2014 Local 083 review",
+        "title": "Tuesday Cascades and absentee targeted reminder — Local 083 review",
         "h1": 1,
         "horizontalOverflow": false,
         "brokenImages": [],
-        "sourcesVisible": true,
+        "citationSections": 0,
+        "citationsClosedInitially": true,
         "noindex": "noindex,nofollow",
-        "height": 1850
+        "height": 1464
       },
       "errors": []
     },
     {
       "file": "b.en.html",
-      "html_sha256": "9b981f6e3773f36c1e7f574ed92160247ea6215ebddb8ba966f5c6701d1703ba",
+      "html_sha256": "24a3efbfd248c31eaf755e957e0e225539ac8d64261df09b0a93668c693e62b8",
       "viewport": {
         "name": "mobile",
         "width": 390,
         "height": 844
       },
       "screenshot": "screenshots/b-en-mobile-full.png",
-      "screenshot_sha256": "f06291b64cf0e65a697df7a10331b81a585da50bffd822881fc6c611bc73c77f",
+      "screenshot_sha256": "b7c02e8da23fa8293fa514cbf8fb8f49b0ae782dbbf274dcc91824734bbf348b",
       "qa": {
-        "title": "Tuesday Cascades and absentee targeted reminder \u2014 Local 083 review",
+        "title": "Tuesday Cascades and absentee targeted reminder — Local 083 review",
         "h1": 1,
         "horizontalOverflow": false,
         "brokenImages": [],
-        "sourcesVisible": true,
+        "citationSections": 0,
+        "citationsClosedInitially": true,
         "noindex": "noindex,nofollow",
-        "height": 2389
+        "height": 1806
       },
       "errors": []
     }
