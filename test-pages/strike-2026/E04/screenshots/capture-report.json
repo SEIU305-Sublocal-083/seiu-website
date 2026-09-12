@@ -1,0 +1,91 @@
+{
+  "item": "E04",
+  "capture_method": "Playwright screenshot of local rendered HTML",
+  "artwork": "none",
+  "pages": [
+    {
+      "file": "a.en.html",
+      "html_sha256": "1bc59aace79135a475e06011d653ecd47e76c7ec2f03e758a65fa62537164839",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/a-en-desktop-full.png",
+      "screenshot_sha256": "daa48398d0392bff4de9d31a16487f9ac5ab142bb4b97db7ea0d28fd9fe659d0",
+      "qa": {
+        "title": "Tuesday Cascades and absentee targeted reminder — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "sourcesVisible": true,
+        "noindex": "noindex,nofollow",
+        "height": 1712
+      },
+      "errors": []
+    },
+    {
+      "file": "a.en.html",
+      "html_sha256": "1bc59aace79135a475e06011d653ecd47e76c7ec2f03e758a65fa62537164839",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/a-en-mobile-full.png",
+      "screenshot_sha256": "d26455fd6aef329389739864d30afe77eca9b7f0ef3ecb97690c18c1a6e9237b",
+      "qa": {
+        "title": "Tuesday Cascades and absentee targeted reminder — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "sourcesVisible": true,
+        "noindex": "noindex,nofollow",
+        "height": 2173
+      },
+      "errors": []
+    },
+    {
+      "file": "b.en.html",
+      "html_sha256": "9b981f6e3773f36c1e7f574ed92160247ea6215ebddb8ba966f5c6701d1703ba",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/b-en-desktop-full.png",
+      "screenshot_sha256": "ddca3fd355207730cd77afe33c0d978d7d230b296eb4eccf611758c9b41f860a",
+      "qa": {
+        "title": "Tuesday Cascades and absentee targeted reminder — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "sourcesVisible": true,
+        "noindex": "noindex,nofollow",
+        "height": 1850
+      },
+      "errors": []
+    },
+    {
+      "file": "b.en.html",
+      "html_sha256": "9b981f6e3773f36c1e7f574ed92160247ea6215ebddb8ba966f5c6701d1703ba",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/b-en-mobile-full.png",
+      "screenshot_sha256": "f06291b64cf0e65a697df7a10331b81a585da50bffd822881fc6c611bc73c77f",
+      "qa": {
+        "title": "Tuesday Cascades and absentee targeted reminder — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "sourcesVisible": true,
+        "noindex": "noindex,nofollow",
+        "height": 2389
+      },
+      "errors": []
+    }
+  ]
+}
