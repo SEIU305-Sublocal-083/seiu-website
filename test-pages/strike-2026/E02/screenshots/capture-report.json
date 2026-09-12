@@ -1,7 +1,6 @@
 {
   "item": "E02",
   "capture_method": "Playwright screenshot of local rendered HTML",
-  "artwork": "none",
   "pages": [
     {
       "file": "a.en.html",
@@ -14,7 +13,7 @@
       "screenshot": "screenshots/a-en-desktop-full.png",
       "screenshot_sha256": "f07bd6b1f0df64a23a232c4499a049fb4cf6fcf5afccfe27aed0c47bd48a00ba",
       "qa": {
-        "title": "Sunday before-you-vote email — Local 083 review",
+        "title": "Sunday before-you-vote email \u2014 Local 083 review",
         "h1": 1,
         "horizontalOverflow": false,
         "brokenImages": [],
@@ -35,7 +34,7 @@
       "screenshot": "screenshots/a-en-mobile-full.png",
       "screenshot_sha256": "fe5c74b6cded6b25360c38f01da16c6e8eb8f08a8b5fafb85a912d2221f7be81",
       "qa": {
-        "title": "Sunday before-you-vote email — Local 083 review",
+        "title": "Sunday before-you-vote email \u2014 Local 083 review",
         "h1": 1,
         "horizontalOverflow": false,
         "brokenImages": [],

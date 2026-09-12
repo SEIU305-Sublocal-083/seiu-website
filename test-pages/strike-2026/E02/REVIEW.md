@@ -8,7 +8,7 @@ This PR adds one independently mergeable review item. Target the translation int
 - English source: `copy/en/`. 1 alternative(s), each with its own preview.
 - Spanish handoff: `copy/es/`, `sources/es.md` and `title_es` in `item.json`. Human translation has not been supplied or approved.
 - Full preview: `index.html`; alternatives: `a.en.html`, etc.
-- Screenshots: `screenshots/`. These are captures of the rendered HTML, not generated illustrations.
+- Screenshots: `screenshots/`. These are captures of the rendered HTML.
 - Visible citations: `sources/en.md` renders beneath the body in each preview. Inline supporting links stay in the copy.
 
 ## Translator and reviewer steps
@@ -35,4 +35,4 @@ Cadence and website sentences are the user-requested proposed communications pro
 
 ## Packaging note
 
-The earlier working package was planning-only. The user has now authorized separate draft PRs and rendered-page screenshots. That authorization does not approve live changes or sending. All original factual holds continue to apply. No AI-generated artwork or unreviewed machine Spanish is included in this PR.
+The earlier working package was planning-only. The user has now authorized separate draft PRs and rendered-page screenshots. That authorization does not approve live changes or sending. All original factual holds continue to apply. Unreviewed machine Spanish is not included in this PR.
