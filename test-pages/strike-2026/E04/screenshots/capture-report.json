@@ -1,7 +1,6 @@
 {
   "item": "E04",
   "capture_method": "Playwright screenshot of local rendered HTML",
-  "artwork": "none",
   "pages": [
     {
       "file": "a.en.html",
@@ -14,7 +13,7 @@
       "screenshot": "screenshots/a-en-desktop-full.png",
       "screenshot_sha256": "daa48398d0392bff4de9d31a16487f9ac5ab142bb4b97db7ea0d28fd9fe659d0",
       "qa": {
-        "title": "Tuesday Cascades and absentee targeted reminder — Local 083 review",
+        "title": "Tuesday Cascades and absentee targeted reminder \u2014 Local 083 review",
         "h1": 1,
         "horizontalOverflow": false,
         "brokenImages": [],
@@ -35,7 +34,7 @@
       "screenshot": "screenshots/a-en-mobile-full.png",
       "screenshot_sha256": "d26455fd6aef329389739864d30afe77eca9b7f0ef3ecb97690c18c1a6e9237b",
       "qa": {
-        "title": "Tuesday Cascades and absentee targeted reminder — Local 083 review",
+        "title": "Tuesday Cascades and absentee targeted reminder \u2014 Local 083 review",
         "h1": 1,
         "horizontalOverflow": false,
         "brokenImages": [],
@@ -56,7 +55,7 @@
       "screenshot": "screenshots/b-en-desktop-full.png",
       "screenshot_sha256": "ddca3fd355207730cd77afe33c0d978d7d230b296eb4eccf611758c9b41f860a",
       "qa": {
-        "title": "Tuesday Cascades and absentee targeted reminder — Local 083 review",
+        "title": "Tuesday Cascades and absentee targeted reminder \u2014 Local 083 review",
         "h1": 1,
         "horizontalOverflow": false,
         "brokenImages": [],
@@ -77,7 +76,7 @@
       "screenshot": "screenshots/b-en-mobile-full.png",
       "screenshot_sha256": "f06291b64cf0e65a697df7a10331b81a585da50bffd822881fc6c611bc73c77f",
       "qa": {
-        "title": "Tuesday Cascades and absentee targeted reminder — Local 083 review",
+        "title": "Tuesday Cascades and absentee targeted reminder \u2014 Local 083 review",
         "h1": 1,
         "horizontalOverflow": false,
         "brokenImages": [],
