@@ -1,7 +1,6 @@
 {
   "item": "O01",
   "capture_method": "Playwright screenshot of local rendered HTML",
-  "artwork": "none",
   "pages": [
     {
       "file": "a.en.html",
@@ -14,7 +13,7 @@
       "screenshot": "screenshots/a-en-desktop-full.png",
       "screenshot_sha256": "e10f1fe96473683764be5d042a436449f92049da489feb5ebcbaa0ad9c8f5411",
       "qa": {
-        "title": "O01 — Proposed ten-day communications and organizing plan — Local 083 review",
+        "title": "O01 \u2014 Proposed ten-day communications and organizing plan \u2014 Local 083 review",
         "h1": 1,
         "horizontalOverflow": false,
         "brokenImages": [],
@@ -35,7 +34,7 @@
       "screenshot": "screenshots/a-en-mobile-full.png",
       "screenshot_sha256": "b4485e3f4585997d5f4259fef56a524be5a12e355a76e680d95f7db29df5de1e",
       "qa": {
-        "title": "O01 — Proposed ten-day communications and organizing plan — Local 083 review",
+        "title": "O01 \u2014 Proposed ten-day communications and organizing plan \u2014 Local 083 review",
         "h1": 1,
         "horizontalOverflow": false,
         "brokenImages": [],
