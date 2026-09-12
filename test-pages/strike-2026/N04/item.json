@@ -18,7 +18,7 @@
   "variants": [
     {
       "key": "a",
-      "label": "Variant A — formal notice issued, not an immediate call",
+      "label": "Variant A \u2014 formal notice issued, not an immediate call",
       "en": "copy/en/a.md",
       "es": "copy/es/a.md",
       "conditional": true,
@@ -28,7 +28,7 @@
     },
     {
       "key": "b",
-      "label": "Variant B — official strike call",
+      "label": "Variant B \u2014 official strike call",
       "en": "copy/en/b.md",
       "es": "copy/es/b.md",
       "conditional": true,
@@ -38,7 +38,7 @@
     },
     {
       "key": "c",
-      "label": "Variant C — tentative agreement",
+      "label": "Variant C \u2014 tentative agreement",
       "en": "copy/en/c.md",
       "es": "copy/es/c.md",
       "conditional": true,
@@ -48,7 +48,7 @@
     },
     {
       "key": "d",
-      "label": "Variant D — changed timetable",
+      "label": "Variant D \u2014 changed timetable",
       "en": "copy/en/d.md",
       "es": "copy/es/d.md",
       "conditional": true,
@@ -58,7 +58,7 @@
     },
     {
       "key": "e",
-      "label": "Variant E — strike continues longer than initially expected",
+      "label": "Variant E \u2014 strike continues longer than initially expected",
       "en": "copy/en/e.md",
       "es": "copy/es/e.md",
       "conditional": true,
@@ -66,5 +66,6 @@
       "spanish_reviewer": "",
       "approved_english_sha256": ""
     }
-  ]
+  ],
+  "citations": "none"
 }
