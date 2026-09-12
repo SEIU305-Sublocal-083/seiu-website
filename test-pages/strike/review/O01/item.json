@@ -1,0 +1,39 @@
+{
+  "id": "O01",
+  "title": "Ten-day strategy letter and production calendar",
+  "title_es": "",
+  "channel": "internal",
+  "as_of": "2026-09-12",
+  "internal_only": true,
+  "proposed_destination": "English /strike/en/internal/strategy/; Español /strike/es/internal/strategy/ (draft review; no publication or delivery)",
+  "selected_variant": null,
+  "editor_approved_by": "",
+  "facts_rechecked_at": "",
+  "source_notes_spanish_reviewer": "",
+  "open_release_gates": [
+    "Refresh dated facts and confirm the intended audience and send/publication time.",
+    "Resolve item-specific release conditions in REVIEW.md."
+  ],
+  "variants": [
+    {
+      "key": "a",
+      "label": "Primary copy",
+      "en": "../../en/internal/strategy/a.md",
+      "es": "../../es/internal/strategy/a.md",
+      "conditional": false,
+      "translation_status": "not_required",
+      "spanish_reviewer": "",
+      "approved_english_sha256": ""
+    }
+  ],
+  "citations": "none",
+  "route_slug": "internal/strategy",
+  "sources": {
+    "en": "../../en/internal/strategy/sources.md",
+    "es": "../../es/internal/strategy/sources.md"
+  },
+  "proposed_paths": {
+    "en": "/strike/en/internal/strategy/",
+    "es": "/strike/es/internal/strategy/"
+  }
+}
