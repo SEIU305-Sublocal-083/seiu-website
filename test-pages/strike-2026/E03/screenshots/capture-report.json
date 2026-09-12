@@ -1,7 +1,6 @@
 {
   "item": "E03",
   "capture_method": "Playwright screenshot of local rendered HTML",
-  "artwork": "none",
   "pages": [
     {
       "file": "a.en.html",
@@ -14,7 +13,7 @@
       "screenshot": "screenshots/a-en-desktop-full.png",
       "screenshot_sha256": "015228d588d03274a190639543c4f24b0b8ab80c58eb11463ca03aade4dcdb97",
       "qa": {
-        "title": "Monday weekly update and voting email — Local 083 review",
+        "title": "Monday weekly update and voting email \u2014 Local 083 review",
         "h1": 1,
         "horizontalOverflow": false,
         "brokenImages": [],
@@ -35,7 +34,7 @@
       "screenshot": "screenshots/a-en-mobile-full.png",
       "screenshot_sha256": "4183c278ca957b3e7e388a130872e0e7b2932a7f60a596b08c857ce353a02fe5",
       "qa": {
-        "title": "Monday weekly update and voting email — Local 083 review",
+        "title": "Monday weekly update and voting email \u2014 Local 083 review",
         "h1": 1,
         "horizontalOverflow": false,
         "brokenImages": [],
