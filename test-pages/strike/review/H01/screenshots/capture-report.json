@@ -1,0 +1,129 @@
+{
+  "item": "H01",
+  "capture_method": "Playwright screenshot of local rendered HTML",
+  "citation_display": "collapsed",
+  "pages": [
+    {
+      "file": "strike/en/voting/a.html",
+      "html_sha256": "0e41ea7007373774e2b93352e8c4a0635313346e028a57d7f171f46915c0504a",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/a-en-desktop-full.png",
+      "screenshot_sha256": "f28b15832dc3e5836088fffce954a6b6e999613afca86292603bbb3b12cf601c",
+      "expanded_sources": {
+        "screenshot": "screenshots/a-en-desktop-sources-expanded-full.png",
+        "screenshot_sha256": "decfaf8b029acecef9670b7e7943fd6503d5f12920090fa86f34e268a8932116",
+        "qa": {
+          "open": true,
+          "contentVisible": true,
+          "referenceLinks": 3,
+          "horizontalOverflow": false
+        }
+      },
+      "qa": {
+        "title": "Make your plan to vote — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 1,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 2478,
+        "languageSwitch": true,
+        "translationPending": false,
+        "documentLanguage": "en",
+        "citationKeyboardToggle": true
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/en/voting/a.html",
+      "html_sha256": "0e41ea7007373774e2b93352e8c4a0635313346e028a57d7f171f46915c0504a",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/a-en-mobile-full.png",
+      "screenshot_sha256": "4bf77faa0cb60a1f804e89b66eed27f4846ee39589dc2da490dbddee3ff0ce07",
+      "expanded_sources": {
+        "screenshot": "screenshots/a-en-mobile-sources-expanded-full.png",
+        "screenshot_sha256": "3361161ccff0cdf97a5fd4b099545af17f9b0d35d58edb8fb85f99795e8ed259",
+        "qa": {
+          "open": true,
+          "contentVisible": true,
+          "referenceLinks": 3,
+          "horizontalOverflow": false
+        }
+      },
+      "qa": {
+        "title": "Make your plan to vote — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 1,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 3672,
+        "languageSwitch": true,
+        "translationPending": false,
+        "documentLanguage": "en",
+        "citationKeyboardToggle": true
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/es/voting/a.html",
+      "html_sha256": "25a145436f76cf26fadee6be46b875fd059c6c60c216d1956c26e820fa1a2c57",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/a-es-desktop-full.png",
+      "screenshot_sha256": "24770474269d051baee9ad9af459428cbc361f7ea250a871dfc800dafe5c3a71",
+      "qa": {
+        "title": "Spanish translation pending — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1000,
+        "languageSwitch": true,
+        "translationPending": true,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/es/voting/a.html",
+      "html_sha256": "25a145436f76cf26fadee6be46b875fd059c6c60c216d1956c26e820fa1a2c57",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/a-es-mobile-full.png",
+      "screenshot_sha256": "bdd449990c52d089facd385b5d23a0c8ff93186094744f8c30cc757b693c2933",
+      "qa": {
+        "title": "Spanish translation pending — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1008,
+        "languageSwitch": true,
+        "translationPending": true,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    }
+  ]
+}

@@ -1,0 +1,129 @@
+{
+  "item": "H02",
+  "capture_method": "Playwright screenshot of local rendered HTML",
+  "citation_display": "collapsed",
+  "pages": [
+    {
+      "file": "strike/en/authorization-and-membership/a.html",
+      "html_sha256": "b9a9d169b0b1998cc4c147c612f6cdbc21dc13eb6cc8532442a86ac2a5836ea0",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/a-en-desktop-full.png",
+      "screenshot_sha256": "dcca9a0f9f309aa3d18ee5e6da07980ce5cd6476c7554a348f72569fb7c94a83",
+      "expanded_sources": {
+        "screenshot": "screenshots/a-en-desktop-sources-expanded-full.png",
+        "screenshot_sha256": "d1367485304d7d4f35e3113d0fa23c3793c765fac4eab1381401734490279533",
+        "qa": {
+          "open": true,
+          "contentVisible": true,
+          "referenceLinks": 5,
+          "horizontalOverflow": false
+        }
+      },
+      "qa": {
+        "title": "What our authorization vote means — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 1,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 2682,
+        "languageSwitch": true,
+        "translationPending": false,
+        "documentLanguage": "en",
+        "citationKeyboardToggle": true
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/en/authorization-and-membership/a.html",
+      "html_sha256": "b9a9d169b0b1998cc4c147c612f6cdbc21dc13eb6cc8532442a86ac2a5836ea0",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/a-en-mobile-full.png",
+      "screenshot_sha256": "b55a7c931afa4ad47cc7eda9fa077dac85451c48f75e6f3a6e7d95f2bd1a51f9",
+      "expanded_sources": {
+        "screenshot": "screenshots/a-en-mobile-sources-expanded-full.png",
+        "screenshot_sha256": "76dd9c6cb7f53b9b377a61567556f11e2d7504e27b3d1459a2892fb237642bb2",
+        "qa": {
+          "open": true,
+          "contentVisible": true,
+          "referenceLinks": 5,
+          "horizontalOverflow": false
+        }
+      },
+      "qa": {
+        "title": "What our authorization vote means — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 1,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 4301,
+        "languageSwitch": true,
+        "translationPending": false,
+        "documentLanguage": "en",
+        "citationKeyboardToggle": true
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/es/authorization-and-membership/a.html",
+      "html_sha256": "a726da5b90940b89a2963ea98f2c526e579300ae9c20e70bfdf2d3ffd51a68a0",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/a-es-desktop-full.png",
+      "screenshot_sha256": "57b9de3101bd53eff315bd2913a7aee8aebc873aac437db1e9ef5d64b3d602a8",
+      "qa": {
+        "title": "Spanish translation pending — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1000,
+        "languageSwitch": true,
+        "translationPending": true,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/es/authorization-and-membership/a.html",
+      "html_sha256": "a726da5b90940b89a2963ea98f2c526e579300ae9c20e70bfdf2d3ffd51a68a0",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/a-es-mobile-full.png",
+      "screenshot_sha256": "37bee9530e4428838b2f36643cac373df10c380d0bede97acbc62f109aaf4a2e",
+      "qa": {
+        "title": "Spanish translation pending — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1008,
+        "languageSwitch": true,
+        "translationPending": true,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    }
+  ]
+}
