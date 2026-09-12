@@ -1,7 +1,6 @@
 {
   "item": "N01",
   "capture_method": "Playwright screenshot of local rendered HTML",
-  "artwork": "none",
   "pages": [
     {
       "file": "a.en.html",
@@ -14,7 +13,7 @@
       "screenshot": "screenshots/a-en-desktop-full.png",
       "screenshot_sha256": "3a0f36b7eaaeea34c3cf8b75e27b860d33ac29195aa6c692f1f810043d690f19",
       "qa": {
-        "title": "Find our voting information and next steps in one place — Local 083 review",
+        "title": "Find our voting information and next steps in one place \u2014 Local 083 review",
         "h1": 1,
         "horizontalOverflow": false,
         "brokenImages": [],
@@ -35,7 +34,7 @@
       "screenshot": "screenshots/a-en-mobile-full.png",
       "screenshot_sha256": "6971caa0dac231290cbe9bbb63724a9e51d22c68ee0f638b99c93419bd76c3a3",
       "qa": {
-        "title": "Find our voting information and next steps in one place — Local 083 review",
+        "title": "Find our voting information and next steps in one place \u2014 Local 083 review",
         "h1": 1,
         "horizontalOverflow": false,
         "brokenImages": [],
@@ -56,7 +55,7 @@
       "screenshot": "screenshots/b-en-desktop-full.png",
       "screenshot_sha256": "4427f2307e8e16bb5fca82cedfb31e256ef1315f8125466edc34ffde1706cf73",
       "qa": {
-        "title": "Make your plan for Monday's authorization vote — Local 083 review",
+        "title": "Make your plan for Monday's authorization vote \u2014 Local 083 review",
         "h1": 1,
         "horizontalOverflow": false,
         "brokenImages": [],
@@ -77,7 +76,7 @@
       "screenshot": "screenshots/b-en-mobile-full.png",
       "screenshot_sha256": "e90bac6477d16534c632f86df3c3aa731523a90582db7dc8ecdd64d7af5849ef",
       "qa": {
-        "title": "Make your plan for Monday's authorization vote — Local 083 review",
+        "title": "Make your plan for Monday's authorization vote \u2014 Local 083 review",
         "h1": 1,
         "horizontalOverflow": false,
         "brokenImages": [],
