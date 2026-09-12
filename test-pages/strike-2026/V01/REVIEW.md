@@ -2,7 +2,7 @@
 
 **Draft PR only. No publication, email send or schedule.**
 
-This PR adds one independently mergeable review item. Target the translation integration branch, never `main` during this stage.
+This is item 6 of 6 in the Organizing materials stack. Its base is `codex/strike-p02-before-you-vote-handout` (PR #277); its diff adds only this item's directory. Edit this item on its own branch and carry parent updates forward. See [stack workflow](../STACK.md). Keep this PR draft during translation review.
 
 - Intended destination: Video production script, captions, transcript and accessible accompanying post.
 - English source: `copy/en/`. 2 alternative(s), each with its own preview.

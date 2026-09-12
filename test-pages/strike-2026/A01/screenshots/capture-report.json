@@ -1,0 +1,51 @@
+{
+  "item": "A01",
+  "capture_method": "Playwright screenshot of local rendered HTML",
+  "citation_display": "none",
+  "pages": [
+    {
+      "file": "a.en.html",
+      "html_sha256": "1a42dd54ab8e991a5ad5a289a11b7b1eb301ec65c1e647f5cbd50aba22b8d149",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/a-en-desktop-full.png",
+      "screenshot_sha256": "e03b4a2076119cd5053a61b9e7fa0191e7cd52c79ee70dcd75c8eaee44c4b8ec",
+      "qa": {
+        "title": "President and trustees personalized letter starter — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1747
+      },
+      "errors": []
+    },
+    {
+      "file": "a.en.html",
+      "html_sha256": "1a42dd54ab8e991a5ad5a289a11b7b1eb301ec65c1e647f5cbd50aba22b8d149",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/a-en-mobile-full.png",
+      "screenshot_sha256": "3bcaa103268a6acb22421fd7e7cb48a718dee531e2d888e1e281a78cc008eedf",
+      "qa": {
+        "title": "President and trustees personalized letter starter — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 2562
+      },
+      "errors": []
+    }
+  ]
+}
