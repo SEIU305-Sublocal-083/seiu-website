@@ -1,0 +1,6 @@
+These references support the specific facts or help routes identified below. **Source snapshot: Sept. 12, 2026.** Recheck changing instructions before release.
+
+- [SEIU 503 higher-education bargaining page](https://seiu503.org/get-involved/bargaining/higher-ed-bargaining-2026/) — SEIU 503 higher-education bargaining reference. Proposal figures in this draft are explicitly attributed to the bargaining team's Sept. 11 member update; they are not jointly agreed terms. Obtain the current dated proposal text before release.
+- [confirmed Sept. 14 daytime voting details](https://www.local083.org/events/2026-09-14-OSU-Strike-Authorization-Vote.html) — Local 083, Sept. 14 authorization-vote event. Supports the daytime MU date, hours, address and in-person format. Rechecked Sept. 12. It does not settle evening or Cascades logistics.
+
+**Proposal source limit:** The Sept. 11 bargaining-team member update and the member briefing are dated union accounts. The full-steps detail is attributed to the briefing. Obtain approved current proposal text for public release; a general bargaining-page link does not independently prove every proposal detail. Private email bodies, source attachments and member-specific links are not included.
