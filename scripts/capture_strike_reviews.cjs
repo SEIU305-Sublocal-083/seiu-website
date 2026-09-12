@@ -13,7 +13,7 @@ const digest = p => crypto.createHash('sha256').update(fs.readFileSync(p)).diges
   const browser = await chromium.launch({ headless: true });
   const entries = fs.readdirSync(folder).filter(id => fs.existsSync(path.join(folder, id, 'item.json')) && (!requested || id === requested));
   const targets = [];
-  if (!requested) targets.push({id:'REVIEW',dir:folder,variants:[{key:'overview',file:'index.html'}]});
+  if (!requested || requested === 'REVIEW') targets.push({id:'REVIEW',dir:folder,variants:[{key:'overview',file:'index.html'}]});
   for (const id of entries) {
     const dir = path.join(folder,id);
     const item = JSON.parse(fs.readFileSync(path.join(dir,'item.json'),'utf8'));

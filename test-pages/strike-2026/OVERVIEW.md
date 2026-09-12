@@ -2,7 +2,7 @@
 
 **Sept. 12–21, 2026 · Proposed communications for SEIU 503 Sublocal 083**
 
-This workspace brings together the English copy, sources and screenshots for 28 separate review items. Every item has its own draft PR. Spanish will be provided and checked by the translator and bilingual reviewer.
+This workspace brings together the English copy, sources and screenshots for 28 separate review items. Each item is prepared for a separate draft PR; the 28 item PRs have not been opened. Their content branches remain local pending approval for upload to this public repository. Spanish will be provided and checked by the translator and bilingual reviewer.
 
 ## Three channels, one consistent explanation
 
