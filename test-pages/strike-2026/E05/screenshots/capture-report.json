@@ -1,130 +1,137 @@
 {
   "item": "E05",
   "capture_method": "Playwright screenshot of local rendered HTML",
+  "citation_display": "none",
   "pages": [
     {
       "file": "a.en.html",
-      "html_sha256": "1fb2b09b8ea6749c5bee3dc5f64e7de470c8346bc9b95cbd38181657c0c9ad2a",
+      "html_sha256": "52542539795d38d105631db96f3faf38b676496f65f638621f1903210a04ff88",
       "viewport": {
         "name": "desktop",
         "width": 1440,
         "height": 1000
       },
       "screenshot": "screenshots/a-en-desktop-full.png",
-      "screenshot_sha256": "8e9c16d3ca2b6026d8e255e0ebf8f497303f776e0a9b231d325017d70b08b3b2",
+      "screenshot_sha256": "12881b06720e335d9263ccba1536960d454f3ee60283962739a6b38467e5c1d2",
       "qa": {
-        "title": "Wednesday certified-result or pending email variants \u2014 Local 083 review",
+        "title": "Wednesday certified-result or pending email variants — Local 083 review",
         "h1": 1,
         "horizontalOverflow": false,
         "brokenImages": [],
-        "sourcesVisible": true,
+        "citationSections": 0,
+        "citationsClosedInitially": true,
         "noindex": "noindex,nofollow",
-        "height": 1731
+        "height": 1464
       },
       "errors": []
     },
     {
       "file": "a.en.html",
-      "html_sha256": "1fb2b09b8ea6749c5bee3dc5f64e7de470c8346bc9b95cbd38181657c0c9ad2a",
+      "html_sha256": "52542539795d38d105631db96f3faf38b676496f65f638621f1903210a04ff88",
       "viewport": {
         "name": "mobile",
         "width": 390,
         "height": 844
       },
       "screenshot": "screenshots/a-en-mobile-full.png",
-      "screenshot_sha256": "173bf578fe9c6210ac79cbfe10d1900811f7ecb247e71d5fbf1c9b85d03cb13c",
+      "screenshot_sha256": "c4318c6d29d2ff5d0244b0468ed00919ecfec84860a3baaf080db35cdd3b6cca",
       "qa": {
-        "title": "Wednesday certified-result or pending email variants \u2014 Local 083 review",
+        "title": "Wednesday certified-result or pending email variants — Local 083 review",
         "h1": 1,
         "horizontalOverflow": false,
         "brokenImages": [],
-        "sourcesVisible": true,
+        "citationSections": 0,
+        "citationsClosedInitially": true,
         "noindex": "noindex,nofollow",
-        "height": 2353
+        "height": 1939
       },
       "errors": []
     },
     {
       "file": "b.en.html",
-      "html_sha256": "d8be152f7241c2e6e0c6d0f244dbc836687ce2b7d8e81dd01d20a336f675bad5",
+      "html_sha256": "f77a97c5c04c8909e03c8ab6cb6c6da5eadfc658fbcc50bea36bab72d97146ec",
       "viewport": {
         "name": "desktop",
         "width": 1440,
         "height": 1000
       },
       "screenshot": "screenshots/b-en-desktop-full.png",
-      "screenshot_sha256": "bedb6d05348de6eec7bd5f6c4c5cca77c0c10e09c0eba39ef491505866d725f0",
+      "screenshot_sha256": "02a8e4bd92b7840f79b595eb36e445364752522880c4a9ddba4ed0d443af56de",
       "qa": {
-        "title": "Wednesday certified-result or pending email variants \u2014 Local 083 review",
+        "title": "Wednesday certified-result or pending email variants — Local 083 review",
         "h1": 1,
         "horizontalOverflow": false,
         "brokenImages": [],
-        "sourcesVisible": true,
+        "citationSections": 0,
+        "citationsClosedInitially": true,
         "noindex": "noindex,nofollow",
-        "height": 1702
+        "height": 1434
       },
       "errors": []
     },
     {
       "file": "b.en.html",
-      "html_sha256": "d8be152f7241c2e6e0c6d0f244dbc836687ce2b7d8e81dd01d20a336f675bad5",
+      "html_sha256": "f77a97c5c04c8909e03c8ab6cb6c6da5eadfc658fbcc50bea36bab72d97146ec",
       "viewport": {
         "name": "mobile",
         "width": 390,
         "height": 844
       },
       "screenshot": "screenshots/b-en-mobile-full.png",
-      "screenshot_sha256": "db05da6c503c69ec773233e2026aa48392ba8f87c155b4c4fcb06a4673decaf9",
+      "screenshot_sha256": "9b8ad1f4b9dc875287afee16786375c147cb9725a27838c0c739bcb408cc5069",
       "qa": {
-        "title": "Wednesday certified-result or pending email variants \u2014 Local 083 review",
+        "title": "Wednesday certified-result or pending email variants — Local 083 review",
         "h1": 1,
         "horizontalOverflow": false,
         "brokenImages": [],
-        "sourcesVisible": true,
+        "citationSections": 0,
+        "citationsClosedInitially": true,
         "noindex": "noindex,nofollow",
-        "height": 2297
+        "height": 1883
       },
       "errors": []
     },
     {
       "file": "c.en.html",
-      "html_sha256": "403d94fa7664ef6ecc74f89b29bac7f0c52092df206f2e9dee1e5a45435a0a5c",
+      "html_sha256": "97fd496a63f1f1a2cae9563f4241e0d2d58f1f853bce469bd0190f1a9c53de0a",
       "viewport": {
         "name": "desktop",
         "width": 1440,
         "height": 1000
       },
       "screenshot": "screenshots/c-en-desktop-full.png",
-      "screenshot_sha256": "4a3e0c37d488cc3019347c0ac58c8e55970d839f931b9f521079d7d8a590c4e2",
+      "screenshot_sha256": "fce746d15e45c92298a6e99a364e3f031438475dfba0b8c00ee440352284057f",
       "qa": {
-        "title": "Wednesday certified-result or pending email variants \u2014 Local 083 review",
+        "title": "Wednesday certified-result or pending email variants — Local 083 review",
         "h1": 1,
         "horizontalOverflow": false,
         "brokenImages": [],
-        "sourcesVisible": true,
+        "citationSections": 0,
+        "citationsClosedInitially": true,
         "noindex": "noindex,nofollow",
-        "height": 1731
+        "height": 1464
       },
       "errors": []
     },
     {
       "file": "c.en.html",
-      "html_sha256": "403d94fa7664ef6ecc74f89b29bac7f0c52092df206f2e9dee1e5a45435a0a5c",
+      "html_sha256": "97fd496a63f1f1a2cae9563f4241e0d2d58f1f853bce469bd0190f1a9c53de0a",
       "viewport": {
         "name": "mobile",
         "width": 390,
         "height": 844
       },
       "screenshot": "screenshots/c-en-mobile-full.png",
-      "screenshot_sha256": "eac6d52ea46cdfbd666b036f0b199d81a91b5555e04f65c87ae21613158197c1",
+      "screenshot_sha256": "11c0bf5135326034978c8ed1175e1fab770d431f984ddf466b7dfa7d06f77648",
       "qa": {
-        "title": "Wednesday certified-result or pending email variants \u2014 Local 083 review",
+        "title": "Wednesday certified-result or pending email variants — Local 083 review",
         "h1": 1,
         "horizontalOverflow": false,
         "brokenImages": [],
-        "sourcesVisible": true,
+        "citationSections": 0,
+        "citationsClosedInitially": true,
         "noindex": "noindex,nofollow",
-        "height": 2325
+        "height": 1911
       },
       "errors": []
     }

@@ -18,7 +18,7 @@
   "variants": [
     {
       "key": "a",
-      "label": "A — Authorization passed",
+      "label": "A \u2014 Authorization passed",
       "en": "copy/en/a.md",
       "es": "copy/es/a.md",
       "conditional": true,
@@ -28,7 +28,7 @@
     },
     {
       "key": "b",
-      "label": "B — Authorization did not pass",
+      "label": "B \u2014 Authorization did not pass",
       "en": "copy/en/b.md",
       "es": "copy/es/b.md",
       "conditional": true,
@@ -38,7 +38,7 @@
     },
     {
       "key": "c",
-      "label": "C — No certified result to share",
+      "label": "C \u2014 No certified result to share",
       "en": "copy/en/c.md",
       "es": "copy/es/c.md",
       "conditional": true,
@@ -46,5 +46,6 @@
       "spanish_reviewer": "",
       "approved_english_sha256": ""
     }
-  ]
+  ],
+  "citations": "none"
 }
