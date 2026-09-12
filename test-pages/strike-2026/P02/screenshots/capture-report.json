@@ -1,7 +1,6 @@
 {
   "item": "P02",
   "capture_method": "Playwright screenshot of local rendered HTML",
-  "artwork": "none",
   "pages": [
     {
       "file": "a.en.html",
@@ -14,7 +13,7 @@
       "screenshot": "screenshots/a-en-desktop-full.png",
       "screenshot_sha256": "e213a79279ba13f17fa47f68206d70f95d801b34df9daa605575b660d7794fa6",
       "qa": {
-        "title": "Before you vote: make a plan and bring your questions — Local 083 review",
+        "title": "Before you vote: make a plan and bring your questions \u2014 Local 083 review",
         "h1": 1,
         "horizontalOverflow": false,
         "brokenImages": [],
@@ -35,7 +34,7 @@
       "screenshot": "screenshots/a-en-mobile-full.png",
       "screenshot_sha256": "eebfec58ef53ad56b1057a0d3582dbab2da4c5db47662b0559919d252d76490d",
       "qa": {
-        "title": "Before you vote: make a plan and bring your questions — Local 083 review",
+        "title": "Before you vote: make a plan and bring your questions \u2014 Local 083 review",
         "h1": 1,
         "horizontalOverflow": false,
         "brokenImages": [],
