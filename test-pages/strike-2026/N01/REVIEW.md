@@ -2,7 +2,7 @@
 
 **Draft PR only. No publication, email send or schedule.**
 
-This PR adds one independently mergeable review item. Target the translation integration branch, never `main` during this stage.
+This is item 2 of 6 in the Website and news stack. Its base is `codex/strike-w01-open-strike-information-hub` (PR #280); its diff adds only this item's directory. Edit this item on its own branch and carry parent updates forward. See [stack workflow](../STACK.md). Keep this PR draft during translation review.
 
 - Intended destination: /news/2026-09-13-strike-information-hub.html (proposed; launch-dependent).
 - English source: `copy/en/`. 2 alternative(s), each with its own preview.
