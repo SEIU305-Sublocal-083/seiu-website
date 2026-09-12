@@ -16,7 +16,7 @@ Answers checked Saturday, Sept. 12, 2026. **Find your question, then use the sou
 
 **What threshold applies, who certifies it, and does yes personally obligate me?** Ask Sylvia for the written counting rule, who certifies the result, and guidance on individual obligations or exceptions. These answers have not been verified. The counting rule should state how much support is required and which votes or members count toward it. Do not rely on an unofficial tally. Final written duration/end rules and any further-vote requirement also need verification.
 
-Sources and details: [confirmed daytime vote](https://www.local083.org/events/2026-09-14-OSU-Strike-Authorization-Vote.html), [SEIU 503 authorization FAQ](https://seiu503.org/member_news/seiu-503-higher-ed-strike-pledge-frequently-asked-questions/), and your own Sept. 11 email. **Voting help: Sylvia Sharpe, [sharpes@seiu503.org](mailto:sharpes@seiu503.org).**
+**Voting help: Sylvia Sharpe, [sharpes@seiu503.org](mailto:sharpes@seiu503.org).**
 
 ### Pay proposals and protections
 
@@ -24,7 +24,7 @@ Sources and details: [confirmed daytime vote](https://www.local083.org/events/20
 
 **Did our team agree to freeze steps? What else is at stake?** At our briefing, our team said it had not agreed to a step freeze and described preserving full steps both years. Steps apply to eligible workers and differ from the COLA. The Sept. 11 summary also identifies management takeaways involving the guaranteed low-cost health plan, layoffs and contracting out. Ask for current proposal language for your question.
 
-Source and details: [SEIU 503 higher-education bargaining](https://seiu503.org/get-involved/bargaining/higher-ed-bargaining-2026/) and the Sept. 11 team email. **Proposal help: [Sylvia Sharpe](mailto:sharpes@seiu503.org).**
+**Proposal help: [Sylvia Sharpe](mailto:sharpes@seiu503.org).**
 
 ### Money and urgent bills
 
@@ -36,7 +36,7 @@ Source and details: [SEIU 503 higher-education bargaining](https://seiu503.org/g
 
 **Are retroactive raises or lost-strike-wage payments guaranteed? Must I repay UI?** A retroactive contract raise and compensation for wages lost during a strike are different from earned wages, union strike pay, hardship aid and UI. Neither future payment is guaranteed. OED says employer back pay for a strike requires repayment of benefits; ask about the actual payment you receive.
 
-Source and details: [OED's strike guidance, weekly rules and calculator](https://unemployment.oregon.gov/strikes). **Support help: [SEIU 503 Member Assistance](https://seiu503.org/contact-us/), 1-844-503-7348, or [Sylvia Sharpe](mailto:sharpes@seiu503.org).**
+**Support help: [SEIU 503 Member Assistance](https://seiu503.org/contact-us/), 1-844-503-7348, or [Sylvia Sharpe](mailto:sharpes@seiu503.org).**
 
 ### Health coverage, leave and tuition
 
@@ -50,7 +50,7 @@ Source and details: [OED's strike guidance, weekly rules and calculator](https:/
 
 **Will employee or dependent tuition benefits continue?** Ask about your status, current/next term and deadlines. A briefing expectation is not a guarantee.
 
-Sources and help: [OSU Employee Benefits contact](https://hr.oregonstate.edu/benefits/contact-us), **541-737-2805**, and [PEBB enrollment information](https://www.oregon.gov/oha/PEBB/Pages/Enrollment.aspx). Add [our organizer](mailto:sharpes@seiu503.org) for union support on employment questions.
+Benefits help: [OSU Employee Benefits contact](https://hr.oregonstate.edu/benefits/contact-us), **541-737-2805**, and [PEBB enrollment information](https://www.oregon.gov/oha/PEBB/Pages/Enrollment.aspx). Add [our organizer](mailto:sharpes@seiu503.org) for union support on employment questions.
 
 ### Work instructions and rights
 
@@ -66,7 +66,7 @@ Sources and help: [OSU Employee Benefits contact](https://hr.oregonstate.edu/ben
 
 **What if I face discipline, a layoff or retaliation?** Save notices, exact words and dates; contact our steward promptly. Ask about representation if a meeting could lead to discipline. Not every layoff is retaliation.
 
-Sources and help: [Oregon public-sector labor law](https://www.oregonlegislature.gov/bills_laws/ors/ors243.html), [ERB process](https://www.oregon.gov/erb/pages/pecba.aspx). **Contact your steward, [Sylvia Sharpe](mailto:sharpes@seiu503.org), or [SEIU 503 Member Assistance](https://seiu503.org/contact-us/).**
+**Contact your steward, [Sylvia Sharpe](mailto:sharpes@seiu503.org), or [SEIU 503 Member Assistance](https://seiu503.org/contact-us/).**
 
 ### Participating and staying informed
 
