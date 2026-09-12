@@ -2,7 +2,7 @@
 
 **Draft PR only. No publication, email send or schedule.**
 
-This PR adds one independently mergeable review item. Target the translation integration branch, never `main` during this stage.
+This is item 1 of 8 in the Guides and Q&A stack. Its base is `codex/strike-translation-review` (PR #253); its diff adds only this item's directory. Edit this item on its own branch and carry parent updates forward. See [stack workflow](../STACK.md). Keep this PR draft during translation review.
 
 - Intended destination: /strike/voting/ (proposed new guide).
 - English source: `copy/en/`. 1 alternative(s), each with its own preview.
