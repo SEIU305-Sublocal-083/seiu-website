@@ -1,12 +1,12 @@
-# P02: Before-you-vote handout
+# O01: Ten-day strategy letter and production calendar
 
 **Draft PR only. No publication, email send or schedule.**
 
-This is item 5 of 6 in the Organizing materials stack. Its base is `codex/strike-p01-voting-poster-copy` (PR #276); its diff adds only this item's directory. Edit this item on its own branch and carry parent updates forward. See [stack workflow](../STACK.md). Keep this PR draft during translation review.
+This is item 1 of 6 in the Organizing materials stack. Its base is `codex/strike-translation-review` (PR #253); its diff adds only this item's directory. Edit this item on its own branch and carry parent updates forward. See [stack workflow](../STACK.md). Keep this PR draft during translation review.
 
-- Intended destination: Print member handout; no automatic distribution.
+- Intended destination: Internal ten-day communications strategy.
 - English source: `copy/en/`. 1 alternative(s), each with its own preview.
-- Spanish handoff: `copy/es/` and `title_es` in `item.json`; include `sources/es.md` only when citations are displayed. Human translation has not been supplied or approved.
+- Spanish handoff: `copy/es/` and `title_es` in `item.json`; include `sources/es.md` only when citations are displayed. Spanish is optional for this internal-only plan.
 - Full preview: `index.html`; alternatives: `a.en.html`, etc.
 - Screenshots: `screenshots/`. These are captures of the rendered HTML.
 - Citations: no citation section appears in this page. `sources/en.md` is retained for editorial reference; contact and action links remain in the body.
@@ -21,11 +21,7 @@ This is item 5 of 6 in the Organizing materials stack. Its base is `codex/strike
 
 ## Item-specific editorial record
 
-# P02 — Before-you-vote handout
-
-## Editorial controls — not handout text
-
-Prepared Sept. 12, 2026. Complete English and Spanish handout copy; suggested front/back, one language per side, or two large-print sheets. Do not force small type to meet a one-sheet limit. Both languages travel together. Sources: S01–S04, ER1–ER5, G03/G04 and web R07. Confirm immediately before later distribution. Exact ballot, membership cutoff, threshold, paid-time rule, evening destination, Cascades room/hours and absentee zone remain unverified; copy gives useful interim routes. No QR required. The “my plan” area stays with the member; do not collect it or ballot choices. Attach longer H01–H07/Q01 only when approved and available; this handout does not invent their URLs.
+Internal recommendation only. Assignments, deadlines and proposed workflows need acceptance. No member case records or rosters are included.
 
 ## Packaging note
 

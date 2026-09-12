@@ -1,49 +1,49 @@
 {
-  "item": "REVIEW",
+  "item": "O02",
   "capture_method": "Playwright screenshot of local rendered HTML",
   "citation_display": "none",
   "pages": [
     {
-      "file": "index.html",
-      "html_sha256": "67a62383577f8faae0b5b32e27fdd683566f19b639a3b38d792122c8db40b018",
+      "file": "a.en.html",
+      "html_sha256": "66c358e8a8645a457126fbe34224b8a58078fffccfc8b25f01949ee41a977b2f",
       "viewport": {
         "name": "desktop",
         "width": 1440,
         "height": 1000
       },
-      "screenshot": "screenshots/overview-desktop-full.png",
-      "screenshot_sha256": "7bb6de5d45c57c4a74e6f2cdd0f97a8ea1f7b29c4136041059a40a057fb555eb",
+      "screenshot": "screenshots/a-en-desktop-full.png",
+      "screenshot_sha256": "335750df806a2a44892f215a9be9c7e5b2168db882418751ee1458e0b4271742",
       "qa": {
-        "title": "Translation review workspace — Local 083 review",
+        "title": "O02 — Proposed coworker coverage and response workflow — Local 083 review",
         "h1": 1,
         "horizontalOverflow": false,
         "brokenImages": [],
         "citationSections": 0,
         "citationsClosedInitially": true,
         "noindex": "noindex,nofollow",
-        "height": 2474
+        "height": 12465
       },
       "errors": []
     },
     {
-      "file": "index.html",
-      "html_sha256": "67a62383577f8faae0b5b32e27fdd683566f19b639a3b38d792122c8db40b018",
+      "file": "a.en.html",
+      "html_sha256": "66c358e8a8645a457126fbe34224b8a58078fffccfc8b25f01949ee41a977b2f",
       "viewport": {
         "name": "mobile",
         "width": 390,
         "height": 844
       },
-      "screenshot": "screenshots/overview-mobile-full.png",
-      "screenshot_sha256": "763d535203cf4d767e7c69dde8c1702aeaee1bf4d3b7c18dbfe3b34df177fcad",
+      "screenshot": "screenshots/a-en-mobile-full.png",
+      "screenshot_sha256": "86c409c50662e647c73c62c92f86069a5f7a92daea5cb47440a452a8d092be18",
       "qa": {
-        "title": "Translation review workspace — Local 083 review",
+        "title": "O02 — Proposed coworker coverage and response workflow — Local 083 review",
         "h1": 1,
         "horizontalOverflow": false,
         "brokenImages": [],
         "citationSections": 0,
         "citationsClosedInitially": true,
         "noindex": "noindex,nofollow",
-        "height": 3701
+        "height": 18369
       },
       "errors": []
     }
