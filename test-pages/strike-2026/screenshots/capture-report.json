@@ -1,0 +1,49 @@
+{
+  "item": "REVIEW",
+  "capture_method": "Playwright screenshot of local rendered HTML",
+  "artwork": "none",
+  "pages": [
+    {
+      "file": "index.html",
+      "html_sha256": "7b9281ccd1dd623e3f9237fd39558b8e178894f59b1dc47dea0fb82d53bc643c",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/overview-desktop-full.png",
+      "screenshot_sha256": "7cf2bb0732c09049a686a11f956a79ba5f3b7faf2343e34598d661425a2249a4",
+      "qa": {
+        "title": "Translation review workspace — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "sourcesVisible": true,
+        "noindex": "noindex,nofollow",
+        "height": 2325
+      },
+      "errors": []
+    },
+    {
+      "file": "index.html",
+      "html_sha256": "7b9281ccd1dd623e3f9237fd39558b8e178894f59b1dc47dea0fb82d53bc643c",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/overview-mobile-full.png",
+      "screenshot_sha256": "9badea23d50069d2df607c410b6c16376088a6af82416e2a85edf5973e8ba6d6",
+      "qa": {
+        "title": "Translation review workspace — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "sourcesVisible": true,
+        "noindex": "noindex,nofollow",
+        "height": 3360
+      },
+      "errors": []
+    }
+  ]
+}

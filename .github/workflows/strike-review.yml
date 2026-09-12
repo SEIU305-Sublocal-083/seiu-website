@@ -1,0 +1,23 @@
+name: Strike translation previews
+
+on:
+  pull_request:
+    branches: [codex/strike-translation-review]
+    paths:
+      - 'test-pages/strike-2026/**'
+      - 'scripts/build_strike_review.py'
+      - '.github/workflows/strike-review.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r test-pages/strike-2026/requirements.txt
+      - run: python scripts/build_strike_review.py --check
