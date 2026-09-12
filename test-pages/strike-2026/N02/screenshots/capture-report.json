@@ -1,0 +1,133 @@
+{
+  "item": "N02",
+  "capture_method": "Playwright screenshot of local rendered HTML",
+  "artwork": "none",
+  "pages": [
+    {
+      "file": "a.en.html",
+      "html_sha256": "c3624b6cb0f7ecee80f1285d18d13db81698a5fe86ba524bb796ec2ff2f7b478",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/a-en-desktop-full.png",
+      "screenshot_sha256": "af6d1a71a6467cadf4531731744cb95368fbada80cc879f47cac6ea365cf9aa5",
+      "qa": {
+        "title": "Members authorize our bargaining team to call a strike — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "sourcesVisible": true,
+        "noindex": "noindex,nofollow",
+        "height": 2125
+      },
+      "errors": []
+    },
+    {
+      "file": "a.en.html",
+      "html_sha256": "c3624b6cb0f7ecee80f1285d18d13db81698a5fe86ba524bb796ec2ff2f7b478",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/a-en-mobile-full.png",
+      "screenshot_sha256": "2a64cf2c3b18d1c482508009c069dd82b552221d95749018c8ea1e65b635662c",
+      "qa": {
+        "title": "Members authorize our bargaining team to call a strike — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "sourcesVisible": true,
+        "noindex": "noindex,nofollow",
+        "height": 3457
+      },
+      "errors": []
+    },
+    {
+      "file": "b.en.html",
+      "html_sha256": "cf58ca46c5737430a77693f9ea9ffc188101e55a8b540e74916d901ae8d050d6",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/b-en-desktop-full.png",
+      "screenshot_sha256": "86c9598d38e5f37c2b68c9345a9e6d16ab2e2e14dbf7c1eff3e09ecf50245718",
+      "qa": {
+        "title": "Strike authorization did not pass — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "sourcesVisible": true,
+        "noindex": "noindex,nofollow",
+        "height": 1979
+      },
+      "errors": []
+    },
+    {
+      "file": "b.en.html",
+      "html_sha256": "cf58ca46c5737430a77693f9ea9ffc188101e55a8b540e74916d901ae8d050d6",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/b-en-mobile-full.png",
+      "screenshot_sha256": "806279cf0966cc03eb867abe24d12f8d1503ef302a582e6380e7a3f201e3f8a6",
+      "qa": {
+        "title": "Strike authorization did not pass — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "sourcesVisible": true,
+        "noindex": "noindex,nofollow",
+        "height": 3250
+      },
+      "errors": []
+    },
+    {
+      "file": "c.en.html",
+      "html_sha256": "8627155f13572b011b9a9cf6853cc7afd3e4a1e6e3b58c2886ff5167d4276057",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/c-en-desktop-full.png",
+      "screenshot_sha256": "9d347242a83504a16bcacd2e7e43d03aeece8f69eee143116b05946769ef2667",
+      "qa": {
+        "title": "We do not yet have a certified result to share — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "sourcesVisible": true,
+        "noindex": "noindex,nofollow",
+        "height": 2007
+      },
+      "errors": []
+    },
+    {
+      "file": "c.en.html",
+      "html_sha256": "8627155f13572b011b9a9cf6853cc7afd3e4a1e6e3b58c2886ff5167d4276057",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/c-en-mobile-full.png",
+      "screenshot_sha256": "a4255240e3120393c4d8ae0d2bfb9103db2b825e91d3ff90c4f85eea8b7a7f87",
+      "qa": {
+        "title": "We do not yet have a certified result to share — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "sourcesVisible": true,
+        "noindex": "noindex,nofollow",
+        "height": 3205
+      },
+      "errors": []
+    }
+  ]
+}
