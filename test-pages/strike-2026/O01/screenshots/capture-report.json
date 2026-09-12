@@ -1,49 +1,49 @@
 {
-  "item": "REVIEW",
+  "item": "O01",
   "capture_method": "Playwright screenshot of local rendered HTML",
   "citation_display": "none",
   "pages": [
     {
-      "file": "index.html",
-      "html_sha256": "67a62383577f8faae0b5b32e27fdd683566f19b639a3b38d792122c8db40b018",
+      "file": "a.en.html",
+      "html_sha256": "d2a3d1bf3868562114c5fe6eceb77bd5f37d24d8dd8f8306831274b4507401c3",
       "viewport": {
         "name": "desktop",
         "width": 1440,
         "height": 1000
       },
-      "screenshot": "screenshots/overview-desktop-full.png",
-      "screenshot_sha256": "7bb6de5d45c57c4a74e6f2cdd0f97a8ea1f7b29c4136041059a40a057fb555eb",
+      "screenshot": "screenshots/a-en-desktop-full.png",
+      "screenshot_sha256": "f5aed0fc6aaa3520a96475e654590e3b462962aa1df2ea964dc9d26df033eef4",
       "qa": {
-        "title": "Translation review workspace — Local 083 review",
+        "title": "O01 — Proposed ten-day communications and organizing plan — Local 083 review",
         "h1": 1,
         "horizontalOverflow": false,
         "brokenImages": [],
         "citationSections": 0,
         "citationsClosedInitially": true,
         "noindex": "noindex,nofollow",
-        "height": 2474
+        "height": 8494
       },
       "errors": []
     },
     {
-      "file": "index.html",
-      "html_sha256": "67a62383577f8faae0b5b32e27fdd683566f19b639a3b38d792122c8db40b018",
+      "file": "a.en.html",
+      "html_sha256": "d2a3d1bf3868562114c5fe6eceb77bd5f37d24d8dd8f8306831274b4507401c3",
       "viewport": {
         "name": "mobile",
         "width": 390,
         "height": 844
       },
-      "screenshot": "screenshots/overview-mobile-full.png",
-      "screenshot_sha256": "763d535203cf4d767e7c69dde8c1702aeaee1bf4d3b7c18dbfe3b34df177fcad",
+      "screenshot": "screenshots/a-en-mobile-full.png",
+      "screenshot_sha256": "093d7144aee5120da73a93db2b03fa06a4f18fb49e8b4f64f07287d6ad3d821e",
       "qa": {
-        "title": "Translation review workspace — Local 083 review",
+        "title": "O01 — Proposed ten-day communications and organizing plan — Local 083 review",
         "h1": 1,
         "horizontalOverflow": false,
         "brokenImages": [],
         "citationSections": 0,
         "citationsClosedInitially": true,
         "noindex": "noindex,nofollow",
-        "height": 3701
+        "height": 14118
       },
       "errors": []
     }
