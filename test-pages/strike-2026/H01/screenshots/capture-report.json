@@ -1,7 +1,6 @@
 {
   "item": "H01",
   "capture_method": "Playwright screenshot of local rendered HTML",
-  "artwork": "none",
   "pages": [
     {
       "file": "a.en.html",
@@ -14,7 +13,7 @@
       "screenshot": "screenshots/a-en-desktop-full.png",
       "screenshot_sha256": "1c47f487ec91224e37a5374c51cf65a1adeadd371c43add34dba037a9965cac1",
       "qa": {
-        "title": "Make your plan to vote — Local 083 review",
+        "title": "Make your plan to vote \u2014 Local 083 review",
         "h1": 1,
         "horizontalOverflow": false,
         "brokenImages": [],
@@ -35,7 +34,7 @@
       "screenshot": "screenshots/a-en-mobile-full.png",
       "screenshot_sha256": "cb2b4b4d464a66b0cff4c57df866d021d880ffee46cc9de7d0a47b94323b44d6",
       "qa": {
-        "title": "Make your plan to vote — Local 083 review",
+        "title": "Make your plan to vote \u2014 Local 083 review",
         "h1": 1,
         "horizontalOverflow": false,
         "brokenImages": [],
