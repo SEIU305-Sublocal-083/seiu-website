@@ -1,46 +1,49 @@
 {
   "item": "P02",
   "capture_method": "Playwright screenshot of local rendered HTML",
+  "citation_display": "none",
   "pages": [
     {
       "file": "a.en.html",
-      "html_sha256": "cca27c8606b1b5a9a608ae5da30ed5746380f584188d3e3d2185747c4baf8513",
+      "html_sha256": "74bd3a251961a8c1edc69119b732341af87ad963fb34da9280fbbab6184407ec",
       "viewport": {
         "name": "desktop",
         "width": 1440,
         "height": 1000
       },
       "screenshot": "screenshots/a-en-desktop-full.png",
-      "screenshot_sha256": "e213a79279ba13f17fa47f68206d70f95d801b34df9daa605575b660d7794fa6",
+      "screenshot_sha256": "5a39cc233b41abe154ba6bfc255aa11760f3693e12d9a456981cafa1a233ba02",
       "qa": {
-        "title": "Before you vote: make a plan and bring your questions \u2014 Local 083 review",
+        "title": "Before you vote: make a plan and bring your questions — Local 083 review",
         "h1": 1,
         "horizontalOverflow": false,
         "brokenImages": [],
-        "sourcesVisible": true,
+        "citationSections": 0,
+        "citationsClosedInitially": true,
         "noindex": "noindex,nofollow",
-        "height": 3242
+        "height": 2761
       },
       "errors": []
     },
     {
       "file": "a.en.html",
-      "html_sha256": "cca27c8606b1b5a9a608ae5da30ed5746380f584188d3e3d2185747c4baf8513",
+      "html_sha256": "74bd3a251961a8c1edc69119b732341af87ad963fb34da9280fbbab6184407ec",
       "viewport": {
         "name": "mobile",
         "width": 390,
         "height": 844
       },
       "screenshot": "screenshots/a-en-mobile-full.png",
-      "screenshot_sha256": "eebfec58ef53ad56b1057a0d3582dbab2da4c5db47662b0559919d252d76490d",
+      "screenshot_sha256": "e47502c23612c49eb33891167e4831293fbb6738fd3b8971f3a067a67df4570f",
       "qa": {
-        "title": "Before you vote: make a plan and bring your questions \u2014 Local 083 review",
+        "title": "Before you vote: make a plan and bring your questions — Local 083 review",
         "h1": 1,
         "horizontalOverflow": false,
         "brokenImages": [],
-        "sourcesVisible": true,
+        "citationSections": 0,
+        "citationsClosedInitially": true,
         "noindex": "noindex,nofollow",
-        "height": 4784
+        "height": 3959
       },
       "errors": []
     }
