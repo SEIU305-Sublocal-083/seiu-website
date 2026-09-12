@@ -27,7 +27,7 @@ article{background:white;border:1px solid var(--line);border-top:6px solid var(-
 .prose{max-width:840px;margin:auto}.email .prose{max-width:680px}h1,h2,h3{font-family:Lora,Georgia,serif;color:#35205f;line-height:1.2;overflow-wrap:anywhere}h1{font-size:clamp(32px,4.5vw,48px);margin:10px 0 25px;letter-spacing:-.025em}h2{font-size:28px;margin:38px 0 16px}h3{font-size:23px;margin:30px 0 12px}p{margin:0 0 20px}li{margin:8px 0}ul,ol{padding-left:25px}strong{font-weight:750}
 blockquote{margin:24px 0;padding:18px 22px;border-left:5px solid #b45309;background:#fffbeb;color:#593706}blockquote p:last-child{margin-bottom:0}
 .table-wrap{overflow-x:auto;margin:24px 0;border:1px solid var(--line);border-radius:8px}table{border-collapse:collapse;width:100%;font-size:16px;line-height:1.5}th,td{text-align:left;vertical-align:top;padding:15px;border-bottom:1px solid var(--line)}th{background:var(--light);color:#35205f}tbody tr:nth-child(even){background:#faf8ff}
-.sources{border-top:2px solid var(--line);margin-top:40px;padding-top:4px;font-size:15px;color:#374151}.sources h2{font-size:24px}.sources li{margin:14px 0}.footer{max-width:1100px;margin:auto;padding:0 24px 36px;font-size:14px;color:var(--muted)}code{font-size:.9em;overflow-wrap:anywhere}pre{white-space:pre-wrap;background:#f3f4f6;padding:18px;border-radius:8px}.poster h1{font-size:clamp(42px,6vw,66px)}.poster article{border-top-width:12px}.poster .prose{max-width:760px}
+.sources{border:1px solid var(--line);border-radius:8px;margin-top:36px;font-size:15px;color:#374151}.sources summary{cursor:pointer;padding:16px 20px;color:var(--purple);font-weight:750;background:#faf8ff;border-radius:8px}.sources[open] summary{border-bottom:1px solid var(--line);border-radius:8px 8px 0 0}.sources-body{padding:20px}.sources-body>:last-child{margin-bottom:0}.sources li{margin:14px 0}.footer{max-width:1100px;margin:auto;padding:0 24px 36px;font-size:14px;color:var(--muted)}code{font-size:.9em;overflow-wrap:anywhere}pre{white-space:pre-wrap;background:#f3f4f6;padding:18px;border-radius:8px}.poster h1{font-size:clamp(42px,6vw,66px)}.poster article{border-top-width:12px}.poster .prose{max-width:760px}
 @media(max-width:600px){body{font-size:17px}.frame{padding:0 14px 30px}.masthead{padding:18px 16px}.masthead img{width:55px;height:50px}.brand{font-size:18px}.review-banner{padding:10px 16px;font-size:12px}.review-meta{padding:14px;font-size:14px}article{padding:22px 18px}h2{font-size:25px}h3{font-size:22px}th,td{min-width:155px;padding:12px}table{font-size:14px}.footer{padding:0 18px 28px}}
 @media print{.review-banner{border:2px solid #111}.variants,.skip{display:none}body{background:white;font-size:12pt}.frame{padding:0}article{border:0;box-shadow:none;padding:18px}.table-wrap{overflow:visible}h1{font-size:28pt}h2{font-size:20pt}a{color:#111}.review-meta{break-inside:avoid}.sources{font-size:10pt}}
 '''
@@ -57,7 +57,7 @@ def page(title: str, body: str, *, lang: str = 'en', kind: str = '', meta: str =
 <body class="{html.escape(kind)}"><a class="skip" href="#content">Skip to content</a><div class="review-banner">{banner}</div>
 <header class="masthead"><img src="{logo}" alt="SEIU 503" width="74" height="64"><div><div class="brand">SEIU 503 · Sublocal 083</div><p>Oregon State University · Our contract. Our voice.</p></div></header>
 <main id="content" class="frame">{meta}<article><div class="prose">{body}</div></article></main>
-<footer class="footer">Local preview only. Source snapshot: Sept. 12, 2026. No analytics, email delivery or publication.<br>Maintained sources and individual help routes belong with the member copy at release.</footer></body></html>
+<footer class="footer">Local preview only. Drafted Sept. 12, 2026. No analytics, email delivery or publication.<br>For editorial review and translation.</footer></body></html>
 '''
 
 
@@ -77,7 +77,7 @@ def outputs(folder: Path) -> dict[Path, str]:
                 body = '# ' + title + '\n\n' + body
             sources = folder / 'sources' / f'{language}.md'
             sources_text = sources.read_text() if sources.exists() else ''
-            sources_heading = 'Sources and source limits' if language == 'en' else 'Fuentes y límites de la información'
+            sources_heading = 'Sources and references' if language == 'en' else 'Fuentes y referencias'
             sources_html = render_md(sources_text) if text_without_comments(sources_text) else '<p>Source-note translation awaits human review.</p>'
             if item.get('internal_only'):
                 status = 'Internal plan · proposed responsibilities and dates require acceptance.'
@@ -88,7 +88,9 @@ def outputs(folder: Path) -> dict[Path, str]:
             nav = ''.join(f'<a href="{v["key"]}.{language}.html"'+(' aria-current="page"' if v['key'] == variant['key'] else '')+f'>{html.escape(v["label"])}</a>' for v in item['variants'] if text_without_comments((folder / v[language]).read_text()))
             translation = 'Not required for this internal plan' if item.get('internal_only') else variant['translation_status'].replace('_', ' ')
             meta = f'<aside class="review-meta" aria-label="Editorial review status"><div class="eyebrow">{item["id"]} · {html.escape(item["channel"])}</div><p><strong>{status}</strong></p><p>Spanish: {html.escape(translation)}. Proposed destination: {html.escape(item["proposed_destination"])}.</p><nav class="variants" aria-label="Draft alternatives">{nav}</nav></aside>'
-            content = render_md(body) + f'<section class="sources" aria-label="{sources_heading}"><h2>{sources_heading}</h2>{sources_html}</section>'
+            content = render_md(body)
+            if item.get('citations') == 'collapsed':
+                content += f'<details class="sources" id="sources"><summary>{sources_heading}</summary><div class="sources-body">{sources_html}</div></details>'
             document = page(title, content, lang=language, kind=item['channel'], meta=meta)
             result[folder / f'{variant["key"]}.{language}.html'] = document
             if i == 0 and language == 'en':
@@ -99,6 +101,8 @@ def outputs(folder: Path) -> dict[Path, str]:
 def validate(folder: Path, release: bool) -> list[str]:
     item = json.loads((folder / 'item.json').read_text())
     errors = []
+    if item.get('citations') not in {'collapsed', 'none'}:
+        errors.append('set citations to collapsed for consequential guidance or none for routine communications')
     keys = [v['key'] for v in item['variants']]
     if len(keys) != len(set(keys)):
         errors.append('duplicate variant keys')
@@ -118,7 +122,7 @@ def validate(folder: Path, release: bool) -> list[str]:
         if variant['translation_status'] == 'approved' and variant.get('approved_english_sha256') != sha(folder / variant['en']):
             errors.append(f'Spanish approval invalidated by English change: {variant["key"]}')
     if not text_without_comments((folder / 'sources/en.md').read_text()):
-        errors.append('missing visible English source notes')
+        errors.append('missing editorial English source notes')
     if release:
         selected = next((v for v in item['variants'] if v['key'] == item.get('selected_variant')), None)
         if selected is None:
@@ -129,8 +133,10 @@ def validate(folder: Path, release: bool) -> list[str]:
             if not item.get('internal_only'):
                 if selected['translation_status'] != 'approved' or not selected.get('spanish_reviewer'):
                     errors.append('human Spanish review is required')
-                if not item.get('source_notes_spanish_reviewer') or not text_without_comments((folder / 'sources/es.md').read_text()) or not item.get('title_es'):
-                    errors.append('Spanish title and visible source notes require review')
+                if not item.get('title_es'):
+                    errors.append('Spanish title requires review')
+                if item.get('citations') == 'collapsed' and (not item.get('source_notes_spanish_reviewer') or not text_without_comments((folder / 'sources/es.md').read_text())):
+                    errors.append('Spanish citations require review')
             for language in ('en', 'es') if not item.get('internal_only') else ('en',):
                 value = text_without_comments((folder / selected[language]).read_text())
                 if not value or re.search(r'\bHOLD\b|\bTBD\b|\[insert|\[name', value, re.I):
