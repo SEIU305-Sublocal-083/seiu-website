@@ -1,0 +1,40 @@
+{
+  "id": "E06",
+  "title": "Thursday membership meeting reminder",
+  "title_es": "",
+  "channel": "email",
+  "as_of": "2026-09-12",
+  "internal_only": false,
+  "proposed_destination": "English /strike/en/emails/meeting-reminder/; Español /strike/es/emails/meeting-reminder/ (draft review; no publication or delivery)",
+  "selected_variant": null,
+  "editor_approved_by": "",
+  "facts_rechecked_at": "",
+  "source_notes_spanish_reviewer": "",
+  "open_release_gates": [
+    "Refresh dated facts and confirm the intended audience and send/publication time.",
+    "Resolve item-specific release conditions in REVIEW.md.",
+    "Human Spanish translation and bilingual review."
+  ],
+  "variants": [
+    {
+      "key": "a",
+      "label": "Primary copy",
+      "en": "../../en/emails/meeting-reminder/a.md",
+      "es": "../../es/emails/meeting-reminder/a.md",
+      "conditional": false,
+      "translation_status": "not_started",
+      "spanish_reviewer": "",
+      "approved_english_sha256": ""
+    }
+  ],
+  "citations": "none",
+  "route_slug": "emails/meeting-reminder",
+  "sources": {
+    "en": "../../en/emails/meeting-reminder/sources.md",
+    "es": "../../es/emails/meeting-reminder/sources.md"
+  },
+  "proposed_paths": {
+    "en": "/strike/en/emails/meeting-reminder/",
+    "es": "/strike/es/emails/meeting-reminder/"
+  }
+}
