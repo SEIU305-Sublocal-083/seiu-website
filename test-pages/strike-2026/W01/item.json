@@ -1,0 +1,110 @@
+{
+  "id": "W01",
+  "title": "Open strike information hub",
+  "title_es": "",
+  "channel": "article",
+  "as_of": "2026-09-12",
+  "internal_only": false,
+  "proposed_destination": "/strike/ (proposed hub; not live)",
+  "selected_variant": null,
+  "editor_approved_by": "",
+  "facts_rechecked_at": "",
+  "source_notes_spanish_reviewer": "",
+  "open_release_gates": [
+    "Refresh dated facts and confirm the intended audience and send/publication time.",
+    "Resolve item-specific release conditions in REVIEW.md.",
+    "Human Spanish translation and bilingual review."
+  ],
+  "variants": [
+    {
+      "key": "a",
+      "label": "Primary copy",
+      "en": "copy/en/a.md",
+      "es": "copy/es/a.md",
+      "conditional": false,
+      "translation_status": "not_started",
+      "spanish_reviewer": "",
+      "approved_english_sha256": ""
+    },
+    {
+      "key": "b",
+      "label": "Verified voting session now open",
+      "en": "copy/en/b.md",
+      "es": "copy/es/b.md",
+      "conditional": true,
+      "translation_status": "not_started",
+      "spanish_reviewer": "",
+      "approved_english_sha256": ""
+    },
+    {
+      "key": "c",
+      "label": "Voting closed; authorized result check confirms no certification available",
+      "en": "copy/en/c.md",
+      "es": "copy/es/c.md",
+      "conditional": true,
+      "translation_status": "not_started",
+      "spanish_reviewer": "",
+      "approved_english_sha256": ""
+    },
+    {
+      "key": "d",
+      "label": "Written certification says authorization passed",
+      "en": "copy/en/d.md",
+      "es": "copy/es/d.md",
+      "conditional": true,
+      "translation_status": "not_started",
+      "spanish_reviewer": "",
+      "approved_english_sha256": ""
+    },
+    {
+      "key": "e",
+      "label": "Written certification says authorization did not pass",
+      "en": "copy/en/e.md",
+      "es": "copy/es/e.md",
+      "conditional": true,
+      "translation_status": "not_started",
+      "spanish_reviewer": "",
+      "approved_english_sha256": ""
+    },
+    {
+      "key": "f",
+      "label": "Authorized actual call, with verified scope and effective instructions",
+      "en": "copy/en/f.md",
+      "es": "copy/es/f.md",
+      "conditional": true,
+      "translation_status": "not_started",
+      "spanish_reviewer": "",
+      "approved_english_sha256": ""
+    },
+    {
+      "key": "g",
+      "label": "Authorized tentative agreement announcement and confirmed current work instruction",
+      "en": "copy/en/g.md",
+      "es": "copy/es/g.md",
+      "conditional": true,
+      "translation_status": "not_started",
+      "spanish_reviewer": "",
+      "approved_english_sha256": ""
+    },
+    {
+      "key": "h",
+      "label": "Authorized timetable change and precise superseded instruction available",
+      "en": "copy/en/h.md",
+      "es": "copy/es/h.md",
+      "conditional": true,
+      "translation_status": "not_started",
+      "spanish_reviewer": "",
+      "approved_english_sha256": ""
+    },
+    {
+      "key": "i",
+      "label": "Actual strike continues and authorized update available",
+      "en": "copy/en/i.md",
+      "es": "copy/es/i.md",
+      "conditional": true,
+      "translation_status": "not_started",
+      "spanish_reviewer": "",
+      "approved_english_sha256": ""
+    }
+  ]
+}

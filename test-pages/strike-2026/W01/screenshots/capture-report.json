@@ -1,0 +1,385 @@
+{
+  "item": "W01",
+  "capture_method": "Playwright screenshot of local rendered HTML",
+  "artwork": "none",
+  "pages": [
+    {
+      "file": "a.en.html",
+      "html_sha256": "2bc30bc64d1e73c8ded24bef9ab8ccc7df4ca136e004ed98e27753e8d09af42a",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/a-en-desktop-full.png",
+      "screenshot_sha256": "6aed8973bf7d2904829f10f11cc9ae14b185ddfc77fcedba7eab19e1ad2bef45",
+      "qa": {
+        "title": "Our contract, our vote, our next steps — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "sourcesVisible": true,
+        "noindex": "noindex,nofollow",
+        "height": 5684
+      },
+      "errors": []
+    },
+    {
+      "file": "a.en.html",
+      "html_sha256": "2bc30bc64d1e73c8ded24bef9ab8ccc7df4ca136e004ed98e27753e8d09af42a",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/a-en-mobile-full.png",
+      "screenshot_sha256": "62e605c518809313647eee98f0a5ef43d02426a0523d2dd4f0545f06ff47b809",
+      "qa": {
+        "title": "Our contract, our vote, our next steps — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "sourcesVisible": true,
+        "noindex": "noindex,nofollow",
+        "height": 9815
+      },
+      "errors": []
+    },
+    {
+      "file": "b.en.html",
+      "html_sha256": "1db482f87c59fc9251fea97787518c1817eb698506f1f3b43e0881af80e1f0f5",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/b-en-desktop-full.png",
+      "screenshot_sha256": "71259efa7fb8879a0ba41ea00a0f4fa2061b0190868fd8541585b5e0f38076fa",
+      "qa": {
+        "title": "Future hub status block — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "sourcesVisible": true,
+        "noindex": "noindex,nofollow",
+        "height": 1986
+      },
+      "errors": []
+    },
+    {
+      "file": "b.en.html",
+      "html_sha256": "1db482f87c59fc9251fea97787518c1817eb698506f1f3b43e0881af80e1f0f5",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/b-en-mobile-full.png",
+      "screenshot_sha256": "724ad1084a2f7fbef4fe65d085ed18d77181e4322581db378231b486631d31fb",
+      "qa": {
+        "title": "Future hub status block — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "sourcesVisible": true,
+        "noindex": "noindex,nofollow",
+        "height": 3408
+      },
+      "errors": []
+    },
+    {
+      "file": "c.en.html",
+      "html_sha256": "5b39abaf077f010fe705e2e340629a624936c27419e1c9b8acbb41de1c33e418",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/c-en-desktop-full.png",
+      "screenshot_sha256": "6404aa5317521bfcf78cd76313f5d68c84ecd482212b4875ca67e5668096c468",
+      "qa": {
+        "title": "Future hub status block — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "sourcesVisible": true,
+        "noindex": "noindex,nofollow",
+        "height": 1986
+      },
+      "errors": []
+    },
+    {
+      "file": "c.en.html",
+      "html_sha256": "5b39abaf077f010fe705e2e340629a624936c27419e1c9b8acbb41de1c33e418",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/c-en-mobile-full.png",
+      "screenshot_sha256": "6eb0d71f740aa11f78e06978fa12cf1e8342f2335541c0c32398f40cbd51167a",
+      "qa": {
+        "title": "Future hub status block — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "sourcesVisible": true,
+        "noindex": "noindex,nofollow",
+        "height": 3436
+      },
+      "errors": []
+    },
+    {
+      "file": "d.en.html",
+      "html_sha256": "bec11f6d3943440b8246600c92636684d48f5c71564f4a2f58d899b3e90366f2",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/d-en-desktop-full.png",
+      "screenshot_sha256": "81fa0125128360c63afdc08ba89bbf9c70dea8f9a461eb21eeead27147d0c246",
+      "qa": {
+        "title": "Future hub status block — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "sourcesVisible": true,
+        "noindex": "noindex,nofollow",
+        "height": 2015
+      },
+      "errors": []
+    },
+    {
+      "file": "d.en.html",
+      "html_sha256": "bec11f6d3943440b8246600c92636684d48f5c71564f4a2f58d899b3e90366f2",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/d-en-mobile-full.png",
+      "screenshot_sha256": "84a7c16c6b75d2194c6cf6eabdc345b47fd70f90715b9f688e0a68e5bd0722db",
+      "qa": {
+        "title": "Future hub status block — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "sourcesVisible": true,
+        "noindex": "noindex,nofollow",
+        "height": 3465
+      },
+      "errors": []
+    },
+    {
+      "file": "e.en.html",
+      "html_sha256": "82b4753440f433b590580ddc55984db475b47daae83d6ecb59902c33d1f15dfd",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/e-en-desktop-full.png",
+      "screenshot_sha256": "4a222f3f7778d53b176ca228abaff35b017ebe54a5d296e74302dacc956ff923",
+      "qa": {
+        "title": "Future hub status block — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "sourcesVisible": true,
+        "noindex": "noindex,nofollow",
+        "height": 2015
+      },
+      "errors": []
+    },
+    {
+      "file": "e.en.html",
+      "html_sha256": "82b4753440f433b590580ddc55984db475b47daae83d6ecb59902c33d1f15dfd",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/e-en-mobile-full.png",
+      "screenshot_sha256": "04e0ad355e3e6db9b3bb76e547e51575cd547a2710422655667ef868e7429de4",
+      "qa": {
+        "title": "Future hub status block — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "sourcesVisible": true,
+        "noindex": "noindex,nofollow",
+        "height": 3465
+      },
+      "errors": []
+    },
+    {
+      "file": "f.en.html",
+      "html_sha256": "884f56fa43d2c87895cbda887670133c6aa3943d923253f4ef2704e7d13aee33",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/f-en-desktop-full.png",
+      "screenshot_sha256": "740ca5b27ba7fc0a8f18e2101297381a925094c413f2de9d5f4b2b5d0b53c661",
+      "qa": {
+        "title": "Future hub status block — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "sourcesVisible": true,
+        "noindex": "noindex,nofollow",
+        "height": 1986
+      },
+      "errors": []
+    },
+    {
+      "file": "f.en.html",
+      "html_sha256": "884f56fa43d2c87895cbda887670133c6aa3943d923253f4ef2704e7d13aee33",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/f-en-mobile-full.png",
+      "screenshot_sha256": "10bffc1463c947722c2fb541cdfd39b4dd2f1487b94a59e15d7e9d575f9b2267",
+      "qa": {
+        "title": "Future hub status block — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "sourcesVisible": true,
+        "noindex": "noindex,nofollow",
+        "height": 3436
+      },
+      "errors": []
+    },
+    {
+      "file": "g.en.html",
+      "html_sha256": "80db06e6d78a639bbb7d45a0e0c2389adf92f1262159694cda23beb63c7e8b9f",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/g-en-desktop-full.png",
+      "screenshot_sha256": "961ff31dab1f6f00e3a486003c359f154290eb2afe88f120b4cc32d3fd67d14d",
+      "qa": {
+        "title": "Future hub status block — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "sourcesVisible": true,
+        "noindex": "noindex,nofollow",
+        "height": 2015
+      },
+      "errors": []
+    },
+    {
+      "file": "g.en.html",
+      "html_sha256": "80db06e6d78a639bbb7d45a0e0c2389adf92f1262159694cda23beb63c7e8b9f",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/g-en-mobile-full.png",
+      "screenshot_sha256": "5eb83914e8a49d03363ce6b00d61709daeba153e3f89e58d130fbf8f5afe7c8c",
+      "qa": {
+        "title": "Future hub status block — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "sourcesVisible": true,
+        "noindex": "noindex,nofollow",
+        "height": 3465
+      },
+      "errors": []
+    },
+    {
+      "file": "h.en.html",
+      "html_sha256": "563bb43171636db8e80be943dbc5815c1a968dc46a4b692b745c049d14ceb7a8",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/h-en-desktop-full.png",
+      "screenshot_sha256": "d19dda0121474a2788e69f36fe76cdd2b1d04b4f412820031a0896947efa6d24",
+      "qa": {
+        "title": "Future hub status block — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "sourcesVisible": true,
+        "noindex": "noindex,nofollow",
+        "height": 1986
+      },
+      "errors": []
+    },
+    {
+      "file": "h.en.html",
+      "html_sha256": "563bb43171636db8e80be943dbc5815c1a968dc46a4b692b745c049d14ceb7a8",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/h-en-mobile-full.png",
+      "screenshot_sha256": "0b3cf73d007e275f41c71aa671df3586d6c89c8268ce2bff7389873a4fa75ef8",
+      "qa": {
+        "title": "Future hub status block — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "sourcesVisible": true,
+        "noindex": "noindex,nofollow",
+        "height": 3436
+      },
+      "errors": []
+    },
+    {
+      "file": "i.en.html",
+      "html_sha256": "ad7dd883260f68b35be1ce0a3b84a8e11849c916dd3f5d36aa6a88606368f60f",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/i-en-desktop-full.png",
+      "screenshot_sha256": "6bc5ba7e4403114e44f8c2e6006b507596dd0deaa00dbe06bd63fc719c4a56d4",
+      "qa": {
+        "title": "Future hub status block — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "sourcesVisible": true,
+        "noindex": "noindex,nofollow",
+        "height": 2015
+      },
+      "errors": []
+    },
+    {
+      "file": "i.en.html",
+      "html_sha256": "ad7dd883260f68b35be1ce0a3b84a8e11849c916dd3f5d36aa6a88606368f60f",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/i-en-mobile-full.png",
+      "screenshot_sha256": "4f5a9aefc999bf88359307657e2bbdb83f0cbe7767afcc042140e80a2698e74c",
+      "qa": {
+        "title": "Future hub status block — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "sourcesVisible": true,
+        "noindex": "noindex,nofollow",
+        "height": 3493
+      },
+      "errors": []
+    }
+  ]
+}
