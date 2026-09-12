@@ -1,0 +1,49 @@
+{
+  "item": "Q01",
+  "capture_method": "Playwright screenshot of local rendered HTML",
+  "artwork": "none",
+  "pages": [
+    {
+      "file": "a.en.html",
+      "html_sha256": "76a6cb6467af7035a52fe8be358f3c2c11725b9aaeb4ff8fc7e19b9634d0b451",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/a-en-desktop-full.png",
+      "screenshot_sha256": "072bb4d46af58659edd1e2893fa8591391f91e7bcd7fd612ae85b3a037ff793c",
+      "qa": {
+        "title": "Questions before the vote and a possible strike — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "sourcesVisible": true,
+        "noindex": "noindex,nofollow",
+        "height": 6262
+      },
+      "errors": []
+    },
+    {
+      "file": "a.en.html",
+      "html_sha256": "76a6cb6467af7035a52fe8be358f3c2c11725b9aaeb4ff8fc7e19b9634d0b451",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/a-en-mobile-full.png",
+      "screenshot_sha256": "90b8c218d62f02834f45e4cf5380a2ab08adbfbec50cd2e4b67d74b38b9f2c8f",
+      "qa": {
+        "title": "Questions before the vote and a possible strike — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "sourcesVisible": true,
+        "noindex": "noindex,nofollow",
+        "height": 11482
+      },
+      "errors": []
+    }
+  ]
+}
