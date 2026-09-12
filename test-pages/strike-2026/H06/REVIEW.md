@@ -6,16 +6,16 @@ This PR adds one independently mergeable review item. Target the translation int
 
 - Intended destination: /resources/strike-rights-oregon.html (update existing guide after review).
 - English source: `copy/en/`. 1 alternative(s), each with its own preview.
-- Spanish handoff: `copy/es/`, `sources/es.md` and `title_es` in `item.json`. Human translation has not been supplied or approved.
+- Spanish handoff: `copy/es/` and `title_es` in `item.json`; include `sources/es.md` only when citations are displayed. Human translation has not been supplied or approved.
 - Full preview: `index.html`; alternatives: `a.en.html`, etc.
 - Screenshots: `screenshots/`. These are captures of the rendered HTML.
-- Visible citations: `sources/en.md` renders beneath the body in each preview. Inline supporting links stay in the copy.
+- Citations: a closed-by-default “Sources and references” section renders `sources/en.md`. Keep consequential qualifications and practical help links in the body.
 
 ## Translator and reviewer steps
 
 1. Translate the English alternative(s) that the editor intends to use; retain the other conditional drafts as alternatives.
-2. Translate subject lines, preheaders, headings, tables, actions, captions/transcripts and source notes. Do not invent missing facts or remove qualifications.
-3. Mark the variant `ready_for_review`. A bilingual reviewer records `approved`, their name and the SHA-256 of its current English file only after review. Fill `title_es` and the source-note reviewer.
+2. Translate subject lines, preheaders, headings, tables, actions and captions/transcripts. Translate source notes only when `citations` is `collapsed`. Do not invent missing facts or remove qualifications.
+3. Mark the variant `ready_for_review`. A bilingual reviewer records `approved`, their name and the SHA-256 of its current English file only after review. Fill `title_es`; record the source-note reviewer only when citations are displayed.
 4. An editor selects exactly one variant, resolves the release conditions, and records current fact-check and approval fields. Selection never sends or publishes anything.
 5. Run the preview builder, review both languages on desktop/mobile and refresh screenshots. `--release-check` intentionally fails until approvals and facts are complete.
 

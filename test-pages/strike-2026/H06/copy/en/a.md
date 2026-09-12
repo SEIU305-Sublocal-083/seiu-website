@@ -4,7 +4,7 @@ Information checked Saturday, Sept. 12, 2026.
 
 **Keep accurate records and bring specific instructions or concerns to our steward or organizer before you act.** A strike authorization vote does not instruct you to stop work, refuse an assignment or change an attendance report.
 
-Oregon law protects union activity and also sets conditions for public-sector strikes. Whether a particular question, schedule change or disciplinary action violates a right depends on the facts. Our union can help review your situation. See the [Oregon public-sector bargaining law](https://www.oregonlegislature.gov/bills_laws/ors/ors243.html) and [ERB's process explanation](https://www.oregon.gov/erb/pages/pecba.aspx).
+Oregon law protects union activity and also sets conditions for public-sector strikes. Whether a particular question, schedule change or disciplinary action violates a right depends on the facts. Our union can help review your situation.
 
 ### Can I vote during paid work time?
 

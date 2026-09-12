@@ -1,46 +1,71 @@
 {
   "item": "H06",
   "capture_method": "Playwright screenshot of local rendered HTML",
+  "citation_display": "collapsed",
   "pages": [
     {
       "file": "a.en.html",
-      "html_sha256": "17981458d76e5e6af3bab6c9240d432cc241ca7d05f35240a2a6e87c526c1645",
+      "html_sha256": "2d0eeea1ec19d0863d2f849a2403de6f20c8232a7616b60bd7f55580e989bd35",
       "viewport": {
         "name": "desktop",
         "width": 1440,
         "height": 1000
       },
       "screenshot": "screenshots/a-en-desktop-full.png",
-      "screenshot_sha256": "38bdc15a15670196c7b4678f34285f80c457e82bbb00e6d946ba494c7a6c306f",
+      "screenshot_sha256": "2e613ffc5db90f48f1063a9ecffe54c8f272a039b9225fd9e9637f9abd2bc7a8",
+      "expanded_sources": {
+        "screenshot": "screenshots/a-en-desktop-sources-expanded-full.png",
+        "screenshot_sha256": "e1ab631506a421db4c09cd58171a320530d5973a92b72c9d5aa4b938b2dc5074",
+        "qa": {
+          "open": true,
+          "contentVisible": true,
+          "referenceLinks": 3,
+          "horizontalOverflow": false
+        }
+      },
       "qa": {
-        "title": "Get clear answers to workplace questions \u2014 Local 083 review",
+        "title": "Get clear answers to workplace questions — Local 083 review",
         "h1": 1,
         "horizontalOverflow": false,
         "brokenImages": [],
-        "sourcesVisible": true,
+        "citationSections": 1,
+        "citationsClosedInitially": true,
         "noindex": "noindex,nofollow",
-        "height": 3261
+        "height": 2966,
+        "citationKeyboardToggle": true
       },
       "errors": []
     },
     {
       "file": "a.en.html",
-      "html_sha256": "17981458d76e5e6af3bab6c9240d432cc241ca7d05f35240a2a6e87c526c1645",
+      "html_sha256": "2d0eeea1ec19d0863d2f849a2403de6f20c8232a7616b60bd7f55580e989bd35",
       "viewport": {
         "name": "mobile",
         "width": 390,
         "height": 844
       },
       "screenshot": "screenshots/a-en-mobile-full.png",
-      "screenshot_sha256": "0d3cff8a81acebacb4209781b5d32346165b989e6a1e0436f886e1b4d2145c38",
+      "screenshot_sha256": "b1e3f8b748cb860802ad2af945422c92443949250df866b06709a0b6f8e63a65",
+      "expanded_sources": {
+        "screenshot": "screenshots/a-en-mobile-sources-expanded-full.png",
+        "screenshot_sha256": "33c175ab86e0f7bfa48b87ecb41e33b1fd987e141fafa234140e8379063455ff",
+        "qa": {
+          "open": true,
+          "contentVisible": true,
+          "referenceLinks": 3,
+          "horizontalOverflow": false
+        }
+      },
       "qa": {
-        "title": "Get clear answers to workplace questions \u2014 Local 083 review",
+        "title": "Get clear answers to workplace questions — Local 083 review",
         "h1": 1,
         "horizontalOverflow": false,
         "brokenImages": [],
-        "sourcesVisible": true,
+        "citationSections": 1,
+        "citationsClosedInitially": true,
         "noindex": "noindex,nofollow",
-        "height": 5475
+        "height": 4779,
+        "citationKeyboardToggle": true
       },
       "errors": []
     }
