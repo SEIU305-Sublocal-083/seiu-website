@@ -1,0 +1,9 @@
+These references support the specific facts or help routes identified below. **Source snapshot: Sept. 12, 2026.** Recheck changing instructions before release.
+
+- [Read our current voting information and next steps](https://www.local083.org/strike) — Public reference or help route linked in the copy. Confirm that its current information still supports the associated statement before release.
+- [Get the meeting details](https://www.local083.org/events/2026-09-17-OSU-Member-Meeting.html) — Local 083, Sept. 17 membership-meeting event. Supports this meeting's noon–1 p.m. Pacific time, MU 211 and Zoom access route; it does not establish a recurring meeting series.
+- [public contact page](https://www.local083.org/contact.html) — Local 083 public contact routes for membership, representation and questions. Private case details should be shared only through the appropriate agreed channel.
+- [Check the daytime vote event details](https://www.local083.org/events/2026-09-14-OSU-Strike-Authorization-Vote.html) — Local 083, Sept. 14 authorization-vote event. Supports the daytime MU date, hours, address and in-person format. Rechecked Sept. 12. It does not settle evening or Cascades logistics.
+- [Start your membership application](https://seiu503signup.org/) — SEIU 503 membership application, linked from Local 083. Starting or submitting an application does not establish this vote's cutoff or an applicant's eligibility; confirm with the organizer.
+
+**Voting source limit:** The member update titled “Your Latest Bargaining Update and Strike Vote Info” supplies the attributed absentee deadlines but does not state their time zone. The member must use their own private request link. No generalized request URL, paid-time entitlement or eligibility cutoff has been inferred. Conflicting evening and Cascades travel details remain subject to organizer confirmation.

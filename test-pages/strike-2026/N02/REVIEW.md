@@ -2,7 +2,7 @@
 
 **Draft PR only. No publication, email send or schedule.**
 
-This PR adds one independently mergeable review item. Target the translation integration branch, never `main` during this stage.
+This is item 3 of 6 in the Website and news stack. Its base is `codex/strike-n01-strike-hub-launch-news` (PR #270); its diff adds only this item's directory. Edit this item on its own branch and carry parent updates forward. See [stack workflow](../STACK.md). Keep this PR draft during translation review.
 
 - Intended destination: Dated /news/ article after the actual certified result or approved pending update.
 - English source: `copy/en/`. 3 alternative(s), each with its own preview.
