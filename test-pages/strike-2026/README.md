@@ -11,11 +11,11 @@ Each item owns its directory, so translators can work and maintainers can merge 
 1. Read its `REVIEW.md` and `item.json` for audience, intended destination and unresolved facts.
 2. Review the full English copy in `copy/en/`. Conditional announcements have separate files; they are alternatives, not a sequence of events that has happened.
 3. Open `index.html` locally, or use the committed desktop/mobile screenshots. Each alternative also has its own preview and screenshots. These screenshots show the actual rendered HTML.
-4. Read the visible “Sources and source limits” section in the preview. Citations remain in the page body, alongside factual claims where applicable. A contact route is not evidence of a guaranteed benefit. A dated union summary is not an agreed contract.
+4. On H01–H07 and Q01, open “Sources and references” for citations. It is collapsed by default. Routine emails, news, action pages, posters, the hub and internal plans have no citation footer. Practical contact/action links and important qualifications stay in the body; editorial source files remain available for every item. A contact route is not evidence of a guaranteed benefit. A dated union summary is not an agreed contract.
 
 ## Translator handoff
 
-Create the Spanish text in the corresponding files in `copy/es/`. The English files are the source of truth for this handoff; Spanish from earlier machine drafts has deliberately not been prefilled or marked approved. Translate headlines, email subject/preheader, actions, captions/transcript, table headings and the visible source notes. Keep official contact addresses and URLs intact. Use agency Spanish links only when their content supports the same claim.
+Create the Spanish text in the corresponding files in `copy/es/`. The English files are the source of truth for this handoff; Spanish from earlier machine drafts has deliberately not been prefilled or marked approved. Translate headlines, email subject/preheader, actions, captions/transcript, table headings, plus the source notes for items with `citations: "collapsed"`. Source-note translation is not required for pages with `citations: "none"`. Keep official contact addresses and URLs intact. Use agency Spanish links only when their content supports the same claim.
 
 Set the Spanish display title in `item.json` under `title_es`, and set each translated variant's `translation_status` to `ready_for_review`. The bilingual reviewer records approval and the English source SHA-256 in that variant only after checking the final pair. A subsequent English edit invalidates that approval automatically. Internal-only plans explicitly do not require Spanish; their statuses must remain distinct from member-facing work.
 
@@ -35,7 +35,7 @@ python3 -m http.server 8765 --bind 127.0.0.1
 
 Open `http://127.0.0.1:8765/test-pages/strike-2026/ITEM-ID/index.html`. You can also open the HTML directly; all preview styling is embedded and the existing logo uses a local relative path. No analytics, remote fonts or automatic publishing scripts run in these previews.
 
-`--item H04` limits the builder to one item. `--release-check --item H04` additionally requires the selected variant, current editorial approval, completed human-reviewed Spanish and source-note approval; it fails while those conditions are unresolved. This is a readiness check, not a publish command. Current draft PRs are expected to pass preview checks and fail release checks.
+`--item H04` limits the builder to one item. `--release-check --item H04` additionally requires the selected variant, current editorial approval, completed human-reviewed Spanish and, where displayed, source-note approval; it fails while those conditions are unresolved. This is a readiness check, not a publish command. Current draft PRs are expected to pass preview checks and fail release checks.
 
 ## Merge order and eventual release
 
