@@ -1,0 +1,107 @@
+{
+  "item": "E06",
+  "capture_method": "Playwright screenshot of local rendered HTML",
+  "citation_display": "none",
+  "pages": [
+    {
+      "file": "strike/en/emails/meeting-reminder/a.html",
+      "html_sha256": "69450d4e2a5ae07026c63b4721b0b34ff0dafb935c70310fa23f1f06aaa75173",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/a-en-desktop-full.png",
+      "screenshot_sha256": "7eec188e120e50b28267ff4ed46212e13e5905841e4a96dbde1a9666b5b79d10",
+      "qa": {
+        "title": "Thursday membership meeting reminder — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1376,
+        "languageSwitch": true,
+        "translationPending": false,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/en/emails/meeting-reminder/a.html",
+      "html_sha256": "69450d4e2a5ae07026c63b4721b0b34ff0dafb935c70310fa23f1f06aaa75173",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/a-en-mobile-full.png",
+      "screenshot_sha256": "91a5a713fcc5a8b33efe351546cc9c8032e47496e5a85faf0cfd59ea1ab180f9",
+      "qa": {
+        "title": "Thursday membership meeting reminder — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1595,
+        "languageSwitch": true,
+        "translationPending": false,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/es/emails/meeting-reminder/a.html",
+      "html_sha256": "93f24149367c2227e44788ecc91b978847a50864c1d30f09e64a9559f80a70a3",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/a-es-desktop-full.png",
+      "screenshot_sha256": "c8caa46d8e133727629ab4e084f18d080637261f6d5c24cdfee081a6c590c254",
+      "qa": {
+        "title": "Spanish translation pending — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1000,
+        "languageSwitch": true,
+        "translationPending": true,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/es/emails/meeting-reminder/a.html",
+      "html_sha256": "93f24149367c2227e44788ecc91b978847a50864c1d30f09e64a9559f80a70a3",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/a-es-mobile-full.png",
+      "screenshot_sha256": "b8dbb11b8050f6a83a5b6740def2f1a606d2491aa9111ab5dc8b712e85cc6c82",
+      "qa": {
+        "title": "Spanish translation pending — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1008,
+        "languageSwitch": true,
+        "translationPending": true,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    }
+  ]
+}
