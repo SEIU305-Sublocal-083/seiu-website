@@ -1,0 +1,107 @@
+{
+  "item": "N03",
+  "capture_method": "Playwright screenshot of local rendered HTML",
+  "citation_display": "none",
+  "pages": [
+    {
+      "file": "strike/en/news/meeting-recap/a.html",
+      "html_sha256": "7969d2482e9e65be77e82784a98657f19cabd981877caab2c916d907ed9632c6",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/a-en-desktop-full.png",
+      "screenshot_sha256": "af6148ceef0312fe7fd2154e7a0af000d1cbb51a76837e1483b4e0c7ecc4fce1",
+      "qa": {
+        "title": "What members need to know after our Sept. 17 meeting — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 2861,
+        "languageSwitch": true,
+        "translationPending": false,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/en/news/meeting-recap/a.html",
+      "html_sha256": "7969d2482e9e65be77e82784a98657f19cabd981877caab2c916d907ed9632c6",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/a-en-mobile-full.png",
+      "screenshot_sha256": "317c410340cc28c8d2cb5d8937f5af42d5fcdd9fdd891f77a53a17c5a62931b7",
+      "qa": {
+        "title": "What members need to know after our Sept. 17 meeting — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 4398,
+        "languageSwitch": true,
+        "translationPending": false,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/es/news/meeting-recap/a.html",
+      "html_sha256": "8bd0c1d3e420d1b8a1767b0159875e3a26e61440d7df6731cba570251572c529",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/a-es-desktop-full.png",
+      "screenshot_sha256": "4047d34b48cad17573ae0cb4470a75b4c34004fa9524b69c0df8f531ad03abc9",
+      "qa": {
+        "title": "Spanish translation pending — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1000,
+        "languageSwitch": true,
+        "translationPending": true,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/es/news/meeting-recap/a.html",
+      "html_sha256": "8bd0c1d3e420d1b8a1767b0159875e3a26e61440d7df6731cba570251572c529",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/a-es-mobile-full.png",
+      "screenshot_sha256": "5c6164ec65e2dd066d1936c7d6cd63e5edb07898d8c14268e2f9bfa08fd6f269",
+      "qa": {
+        "title": "Spanish translation pending — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1031,
+        "languageSwitch": true,
+        "translationPending": true,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    }
+  ]
+}

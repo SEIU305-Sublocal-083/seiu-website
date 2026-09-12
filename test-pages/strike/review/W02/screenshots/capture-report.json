@@ -1,0 +1,107 @@
+{
+  "item": "W02",
+  "capture_method": "Playwright screenshot of local rendered HTML",
+  "citation_display": "none",
+  "pages": [
+    {
+      "file": "strike/en/internal/website-plan/a.html",
+      "html_sha256": "28fea54f39075bcade9d284506d0218557d3fe0abda85921d57f3ac66234dd4a",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/a-en-desktop-full.png",
+      "screenshot_sha256": "35d271ebe7b7ef9a4921a1702a773251dd308a2aa418546bd5172a9cf8ba2b69",
+      "qa": {
+        "title": "W02 — Website audit and migration plan — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 5190,
+        "languageSwitch": true,
+        "translationPending": false,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/en/internal/website-plan/a.html",
+      "html_sha256": "28fea54f39075bcade9d284506d0218557d3fe0abda85921d57f3ac66234dd4a",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/a-en-mobile-full.png",
+      "screenshot_sha256": "0a6e3e8990337d7eb91c2e6790b7a5d2ae020b4dc61acc941645555b851be7d7",
+      "qa": {
+        "title": "W02 — Website audit and migration plan — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 7722,
+        "languageSwitch": true,
+        "translationPending": false,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/es/internal/website-plan/a.html",
+      "html_sha256": "a17ab389521a17e24885363b211591d14f8482ed74f8b37b602ba6b8d1e1b76c",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/a-es-desktop-full.png",
+      "screenshot_sha256": "c4b09e526e8700aad42ba3267889f19ac914a6db251bb310d5e01908b44d8c4d",
+      "qa": {
+        "title": "Spanish translation pending — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1000,
+        "languageSwitch": true,
+        "translationPending": true,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/es/internal/website-plan/a.html",
+      "html_sha256": "a17ab389521a17e24885363b211591d14f8482ed74f8b37b602ba6b8d1e1b76c",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/a-es-mobile-full.png",
+      "screenshot_sha256": "0489f0103129e1d660c0b194b936f96b8123b49b5c91acbeff81c92d60fc912e",
+      "qa": {
+        "title": "Spanish translation pending — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 980,
+        "languageSwitch": true,
+        "translationPending": true,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    }
+  ]
+}

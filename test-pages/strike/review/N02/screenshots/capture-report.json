@@ -1,0 +1,307 @@
+{
+  "item": "N02",
+  "capture_method": "Playwright screenshot of local rendered HTML",
+  "citation_display": "none",
+  "pages": [
+    {
+      "file": "strike/en/news/vote-result/a.html",
+      "html_sha256": "c7bb933d0b72fd0f51f6e9f918848d2e52cabde430bb864437d9f8af969beb2c",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/a-en-desktop-full.png",
+      "screenshot_sha256": "b484eccad86c8a6aa9a71d7eac1d47d45aab3d426d8be84801734a38fd80d297",
+      "qa": {
+        "title": "Members authorize our bargaining team to call a strike — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1870,
+        "languageSwitch": true,
+        "translationPending": false,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/en/news/vote-result/a.html",
+      "html_sha256": "c7bb933d0b72fd0f51f6e9f918848d2e52cabde430bb864437d9f8af969beb2c",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/a-en-mobile-full.png",
+      "screenshot_sha256": "c771f330728fb0b2728c4c81ae14f45922bc9a24f67b63cc3dc53f69633061fa",
+      "qa": {
+        "title": "Members authorize our bargaining team to call a strike — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 2885,
+        "languageSwitch": true,
+        "translationPending": false,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/es/news/vote-result/a.html",
+      "html_sha256": "1ee7305e576dca373f99a502e800bcd0f2f5f9abd64349634d1db2510af80efe",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/a-es-desktop-full.png",
+      "screenshot_sha256": "d6de923c9a16aa85b557551910b4e84d79b5315561478221fd153f3301b76c3e",
+      "qa": {
+        "title": "Spanish translation pending — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1000,
+        "languageSwitch": true,
+        "translationPending": true,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/es/news/vote-result/a.html",
+      "html_sha256": "1ee7305e576dca373f99a502e800bcd0f2f5f9abd64349634d1db2510af80efe",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/a-es-mobile-full.png",
+      "screenshot_sha256": "3c9c4e714c5e0e71a9620c552cdda11cbc1aae9b4cd833d3d857052cd15c18ac",
+      "qa": {
+        "title": "Spanish translation pending — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1097,
+        "languageSwitch": true,
+        "translationPending": true,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/en/news/vote-result/b.html",
+      "html_sha256": "e79ae3e147a6d8835e0ff4bc2cf18735fce5aedc1ec48f687adb30af73716955",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/b-en-desktop-full.png",
+      "screenshot_sha256": "5bdba8e6783ccf770813aad80c34f37dbb667f83daa0d316a2f183504d544cb6",
+      "qa": {
+        "title": "Strike authorization did not pass — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1724,
+        "languageSwitch": true,
+        "translationPending": false,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/en/news/vote-result/b.html",
+      "html_sha256": "e79ae3e147a6d8835e0ff4bc2cf18735fce5aedc1ec48f687adb30af73716955",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/b-en-mobile-full.png",
+      "screenshot_sha256": "8f302db9b662de68f1a7f187d99dfeb78e17d51f14a2ac5de5a33d1f6c2b6844",
+      "qa": {
+        "title": "Strike authorization did not pass — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 2678,
+        "languageSwitch": true,
+        "translationPending": false,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/es/news/vote-result/b.html",
+      "html_sha256": "7cd4ab8cdfb1325b7924bc035d25b3dc5d45eea53792cdeeb29d7012e3044f18",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/b-es-desktop-full.png",
+      "screenshot_sha256": "34fcd2ebe7a5b711164f549a58829840ea03d56b231bc61223c30d2654149941",
+      "qa": {
+        "title": "Spanish translation pending — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1000,
+        "languageSwitch": true,
+        "translationPending": true,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/es/news/vote-result/b.html",
+      "html_sha256": "7cd4ab8cdfb1325b7924bc035d25b3dc5d45eea53792cdeeb29d7012e3044f18",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/b-es-mobile-full.png",
+      "screenshot_sha256": "8fc77f56ce55b23d45c6d511eef08f13cf46cfa6e00a1e7a1e14bc1a752a16cd",
+      "qa": {
+        "title": "Spanish translation pending — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1097,
+        "languageSwitch": true,
+        "translationPending": true,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/en/news/vote-result/c.html",
+      "html_sha256": "5f76ac243ee83aad3e3b6cf416e160c5e31b87b9552f3a5cc2681261f158afc5",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/c-en-desktop-full.png",
+      "screenshot_sha256": "14039c43815ff78fc125beb8330555e91bb576c73860364152873dbc8ae95380",
+      "qa": {
+        "title": "We do not yet have a certified result to share — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1751,
+        "languageSwitch": true,
+        "translationPending": false,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/en/news/vote-result/c.html",
+      "html_sha256": "5f76ac243ee83aad3e3b6cf416e160c5e31b87b9552f3a5cc2681261f158afc5",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/c-en-mobile-full.png",
+      "screenshot_sha256": "c397fe24ca6d6f18e2fbec6fc1b89935fb6fbd8bc4111f0ea0eb877738463ec0",
+      "qa": {
+        "title": "We do not yet have a certified result to share — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 2633,
+        "languageSwitch": true,
+        "translationPending": false,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/es/news/vote-result/c.html",
+      "html_sha256": "bbb1d5fc53bd1da7230091477286e378ff84b9650df69d8d6bfee01ef27b814f",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/c-es-desktop-full.png",
+      "screenshot_sha256": "16f62b03ee79d49e5ad3d7573d2c4a709f8623377f4fa30fe20758254c309f7f",
+      "qa": {
+        "title": "Spanish translation pending — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1000,
+        "languageSwitch": true,
+        "translationPending": true,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/es/news/vote-result/c.html",
+      "html_sha256": "bbb1d5fc53bd1da7230091477286e378ff84b9650df69d8d6bfee01ef27b814f",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/c-es-mobile-full.png",
+      "screenshot_sha256": "b9f4dccb3e971ff5d2a4be82854fe03f8913e4b3ffac591f58673e551b3d112b",
+      "qa": {
+        "title": "Spanish translation pending — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1097,
+        "languageSwitch": true,
+        "translationPending": true,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    }
+  ]
+}

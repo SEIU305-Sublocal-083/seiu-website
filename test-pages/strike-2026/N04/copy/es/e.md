@@ -1,1 +1,0 @@
-<!-- Human translator: provide the Spanish version of copy/en/e.md here. Translate every headline, subject, preheader, caption, transcript, action and table. Do not fill unresolved facts by inference. -->

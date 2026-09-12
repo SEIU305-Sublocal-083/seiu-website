@@ -1,0 +1,80 @@
+{
+  "id": "N04",
+  "title": "Official strike notice tentative agreement or changed timeline news",
+  "title_es": "",
+  "channel": "article",
+  "as_of": "2026-09-12",
+  "internal_only": false,
+  "proposed_destination": "English /strike/en/news/status-update/; Español /strike/es/news/status-update/ (draft review; no publication or delivery)",
+  "selected_variant": null,
+  "editor_approved_by": "",
+  "facts_rechecked_at": "",
+  "source_notes_spanish_reviewer": "",
+  "open_release_gates": [
+    "Refresh dated facts and confirm the intended audience and send/publication time.",
+    "Resolve item-specific release conditions in REVIEW.md.",
+    "Human Spanish translation and bilingual review."
+  ],
+  "variants": [
+    {
+      "key": "a",
+      "label": "Variant A — formal notice issued, not an immediate call",
+      "en": "../../en/news/status-update/a.md",
+      "es": "../../es/news/status-update/a.md",
+      "conditional": true,
+      "translation_status": "not_started",
+      "spanish_reviewer": "",
+      "approved_english_sha256": ""
+    },
+    {
+      "key": "b",
+      "label": "Variant B — official strike call",
+      "en": "../../en/news/status-update/b.md",
+      "es": "../../es/news/status-update/b.md",
+      "conditional": true,
+      "translation_status": "not_started",
+      "spanish_reviewer": "",
+      "approved_english_sha256": ""
+    },
+    {
+      "key": "c",
+      "label": "Variant C — tentative agreement",
+      "en": "../../en/news/status-update/c.md",
+      "es": "../../es/news/status-update/c.md",
+      "conditional": true,
+      "translation_status": "not_started",
+      "spanish_reviewer": "",
+      "approved_english_sha256": ""
+    },
+    {
+      "key": "d",
+      "label": "Variant D — changed timetable",
+      "en": "../../en/news/status-update/d.md",
+      "es": "../../es/news/status-update/d.md",
+      "conditional": true,
+      "translation_status": "not_started",
+      "spanish_reviewer": "",
+      "approved_english_sha256": ""
+    },
+    {
+      "key": "e",
+      "label": "Variant E — strike continues longer than initially expected",
+      "en": "../../en/news/status-update/e.md",
+      "es": "../../es/news/status-update/e.md",
+      "conditional": true,
+      "translation_status": "not_started",
+      "spanish_reviewer": "",
+      "approved_english_sha256": ""
+    }
+  ],
+  "citations": "none",
+  "route_slug": "news/status-update",
+  "sources": {
+    "en": "../../en/news/status-update/sources.md",
+    "es": "../../es/news/status-update/sources.md"
+  },
+  "proposed_paths": {
+    "en": "/strike/en/news/status-update/",
+    "es": "/strike/es/news/status-update/"
+  }
+}
