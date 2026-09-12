@@ -1,0 +1,49 @@
+{
+  "item": "A01",
+  "capture_method": "Playwright screenshot of local rendered HTML",
+  "artwork": "none",
+  "pages": [
+    {
+      "file": "a.en.html",
+      "html_sha256": "7ccc771e3c40c3ca4f7ca2f86840184ed897510db84e54f7d3984eda0b9e1a34",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/a-en-desktop-full.png",
+      "screenshot_sha256": "4d793ab41f249abf3915b7ad03455609b95f70888a8584e9d63b830ae581ee86",
+      "qa": {
+        "title": "President and trustees personalized letter starter — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "sourcesVisible": true,
+        "noindex": "noindex,nofollow",
+        "height": 2053
+      },
+      "errors": []
+    },
+    {
+      "file": "a.en.html",
+      "html_sha256": "7ccc771e3c40c3ca4f7ca2f86840184ed897510db84e54f7d3984eda0b9e1a34",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/a-en-mobile-full.png",
+      "screenshot_sha256": "e1307f99989b6a4b378339e38993f48ce746ea26d86c42a582fec57d9198eaeb",
+      "qa": {
+        "title": "President and trustees personalized letter starter — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "sourcesVisible": true,
+        "noindex": "noindex,nofollow",
+        "height": 3040
+      },
+      "errors": []
+    }
+  ]
+}
