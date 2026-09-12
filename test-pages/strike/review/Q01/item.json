@@ -1,0 +1,40 @@
+{
+  "id": "Q01",
+  "title": "Common and complex questions index",
+  "title_es": "",
+  "channel": "article",
+  "as_of": "2026-09-12",
+  "internal_only": false,
+  "proposed_destination": "English /strike/en/questions/; Español /strike/es/questions/ (draft review; no publication or delivery)",
+  "selected_variant": null,
+  "editor_approved_by": "",
+  "facts_rechecked_at": "",
+  "source_notes_spanish_reviewer": "",
+  "open_release_gates": [
+    "Refresh dated facts and confirm the intended audience and send/publication time.",
+    "Resolve item-specific release conditions in REVIEW.md.",
+    "Human Spanish translation and bilingual review."
+  ],
+  "variants": [
+    {
+      "key": "a",
+      "label": "Primary copy",
+      "en": "../../en/questions/a.md",
+      "es": "../../es/questions/a.md",
+      "conditional": false,
+      "translation_status": "not_started",
+      "spanish_reviewer": "",
+      "approved_english_sha256": ""
+    }
+  ],
+  "citations": "collapsed",
+  "route_slug": "questions",
+  "sources": {
+    "en": "../../en/questions/sources.md",
+    "es": "../../es/questions/sources.md"
+  },
+  "proposed_paths": {
+    "en": "/strike/en/questions/",
+    "es": "/strike/es/questions/"
+  }
+}

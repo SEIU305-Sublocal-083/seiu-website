@@ -1,0 +1,129 @@
+{
+  "item": "H03",
+  "capture_method": "Playwright screenshot of local rendered HTML",
+  "citation_display": "collapsed",
+  "pages": [
+    {
+      "file": "strike/en/proposals/a.html",
+      "html_sha256": "2c65a4e5d09f0c97b3eab84751b0ce9f3022b5cddc63d12271b4ca66adedda56",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/a-en-desktop-full.png",
+      "screenshot_sha256": "603542f5bace179d657ce5cac57935211c91e36acf1e64c305ae03967aefb962",
+      "expanded_sources": {
+        "screenshot": "screenshots/a-en-desktop-sources-expanded-full.png",
+        "screenshot_sha256": "5bf948fc2d17564a2d8bb4445a895944b0fd777c81a21ef351884519271d80d7",
+        "qa": {
+          "open": true,
+          "contentVisible": true,
+          "referenceLinks": 2,
+          "horizontalOverflow": false
+        }
+      },
+      "qa": {
+        "title": "What we are bargaining for — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 1,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 2676,
+        "languageSwitch": true,
+        "translationPending": false,
+        "documentLanguage": "en",
+        "citationKeyboardToggle": true
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/en/proposals/a.html",
+      "html_sha256": "2c65a4e5d09f0c97b3eab84751b0ce9f3022b5cddc63d12271b4ca66adedda56",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/a-en-mobile-full.png",
+      "screenshot_sha256": "f12881971c22be5de96de34824dd818a1e96428fc497b5adda4c07f96bd464ea",
+      "expanded_sources": {
+        "screenshot": "screenshots/a-en-mobile-sources-expanded-full.png",
+        "screenshot_sha256": "9305f29e7e9f7413651790260c2d36bf7a03e6c8397de0c878f894cdc6a7e08d",
+        "qa": {
+          "open": true,
+          "contentVisible": true,
+          "referenceLinks": 2,
+          "horizontalOverflow": false
+        }
+      },
+      "qa": {
+        "title": "What we are bargaining for — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 1,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 3801,
+        "languageSwitch": true,
+        "translationPending": false,
+        "documentLanguage": "en",
+        "citationKeyboardToggle": true
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/es/proposals/a.html",
+      "html_sha256": "ee7b5ab0a918258e5646ee1d42d8a8b13633a85d1fab02e6d1348cd72106a114",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/a-es-desktop-full.png",
+      "screenshot_sha256": "0cb78f962de64a7616bb4c624eab62fc2f533fe04c814f2a2de2021b9c53e778",
+      "qa": {
+        "title": "Spanish translation pending — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1000,
+        "languageSwitch": true,
+        "translationPending": true,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/es/proposals/a.html",
+      "html_sha256": "ee7b5ab0a918258e5646ee1d42d8a8b13633a85d1fab02e6d1348cd72106a114",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/a-es-mobile-full.png",
+      "screenshot_sha256": "39bd2993f27d4883acecafe2a78f8587f88aa74e8ef2f1ea7e787eda0c8d0b6a",
+      "qa": {
+        "title": "Spanish translation pending — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1008,
+        "languageSwitch": true,
+        "translationPending": true,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    }
+  ]
+}
