@@ -4,46 +4,46 @@
   "citation_display": "none",
   "pages": [
     {
-      "file": "index.html",
-      "html_sha256": "67a62383577f8faae0b5b32e27fdd683566f19b639a3b38d792122c8db40b018",
+      "file": "strike/index.html",
+      "html_sha256": "d4aa473c80f955b1e3490d1325889e4b0446479f6e6f791a4daa18d97ccb3735",
       "viewport": {
         "name": "desktop",
         "width": 1440,
         "height": 1000
       },
       "screenshot": "screenshots/overview-desktop-full.png",
-      "screenshot_sha256": "7bb6de5d45c57c4a74e6f2cdd0f97a8ea1f7b29c4136041059a40a057fb555eb",
+      "screenshot_sha256": "4c9ef70b36217ede4ff6fed075f23d95cb5cd47418ec37614ce2d1c2cb71061d",
       "qa": {
-        "title": "Translation review workspace — Local 083 review",
+        "title": "Strike Prep review index — Strike Prep",
         "h1": 1,
         "horizontalOverflow": false,
         "brokenImages": [],
         "citationSections": 0,
         "citationsClosedInitially": true,
         "noindex": "noindex,nofollow",
-        "height": 2474
+        "height": 2199
       },
       "errors": []
     },
     {
-      "file": "index.html",
-      "html_sha256": "67a62383577f8faae0b5b32e27fdd683566f19b639a3b38d792122c8db40b018",
+      "file": "strike/index.html",
+      "html_sha256": "d4aa473c80f955b1e3490d1325889e4b0446479f6e6f791a4daa18d97ccb3735",
       "viewport": {
         "name": "mobile",
         "width": 390,
         "height": 844
       },
       "screenshot": "screenshots/overview-mobile-full.png",
-      "screenshot_sha256": "763d535203cf4d767e7c69dde8c1702aeaee1bf4d3b7c18dbfe3b34df177fcad",
+      "screenshot_sha256": "4ed55e994fc68c9785d70682971742bf3d8da661e5723ae97a346c3ab8bd268d",
       "qa": {
-        "title": "Translation review workspace — Local 083 review",
+        "title": "Strike Prep review index — Strike Prep",
         "h1": 1,
         "horizontalOverflow": false,
         "brokenImages": [],
         "citationSections": 0,
         "citationsClosedInitially": true,
         "noindex": "noindex,nofollow",
-        "height": 3701
+        "height": 3436
       },
       "errors": []
     }
