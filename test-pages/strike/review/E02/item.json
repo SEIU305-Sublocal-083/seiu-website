@@ -1,0 +1,40 @@
+{
+  "id": "E02",
+  "title": "Sunday before-you-vote email",
+  "title_es": "",
+  "channel": "email",
+  "as_of": "2026-09-12",
+  "internal_only": false,
+  "proposed_destination": "English /strike/en/emails/sunday/; Español /strike/es/emails/sunday/ (draft review; no publication or delivery)",
+  "selected_variant": null,
+  "editor_approved_by": "",
+  "facts_rechecked_at": "",
+  "source_notes_spanish_reviewer": "",
+  "open_release_gates": [
+    "Refresh dated facts and confirm the intended audience and send/publication time.",
+    "Resolve item-specific release conditions in REVIEW.md.",
+    "Human Spanish translation and bilingual review."
+  ],
+  "variants": [
+    {
+      "key": "a",
+      "label": "Primary copy",
+      "en": "../../en/emails/sunday/a.md",
+      "es": "../../es/emails/sunday/a.md",
+      "conditional": false,
+      "translation_status": "not_started",
+      "spanish_reviewer": "",
+      "approved_english_sha256": ""
+    }
+  ],
+  "citations": "none",
+  "route_slug": "emails/sunday",
+  "sources": {
+    "en": "../../en/emails/sunday/sources.md",
+    "es": "../../es/emails/sunday/sources.md"
+  },
+  "proposed_paths": {
+    "en": "/strike/en/emails/sunday/",
+    "es": "/strike/es/emails/sunday/"
+  }
+}
