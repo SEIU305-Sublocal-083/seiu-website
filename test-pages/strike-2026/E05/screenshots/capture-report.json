@@ -1,0 +1,133 @@
+{
+  "item": "E05",
+  "capture_method": "Playwright screenshot of local rendered HTML",
+  "artwork": "none",
+  "pages": [
+    {
+      "file": "a.en.html",
+      "html_sha256": "1fb2b09b8ea6749c5bee3dc5f64e7de470c8346bc9b95cbd38181657c0c9ad2a",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/a-en-desktop-full.png",
+      "screenshot_sha256": "8e9c16d3ca2b6026d8e255e0ebf8f497303f776e0a9b231d325017d70b08b3b2",
+      "qa": {
+        "title": "Wednesday certified-result or pending email variants — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "sourcesVisible": true,
+        "noindex": "noindex,nofollow",
+        "height": 1731
+      },
+      "errors": []
+    },
+    {
+      "file": "a.en.html",
+      "html_sha256": "1fb2b09b8ea6749c5bee3dc5f64e7de470c8346bc9b95cbd38181657c0c9ad2a",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/a-en-mobile-full.png",
+      "screenshot_sha256": "173bf578fe9c6210ac79cbfe10d1900811f7ecb247e71d5fbf1c9b85d03cb13c",
+      "qa": {
+        "title": "Wednesday certified-result or pending email variants — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "sourcesVisible": true,
+        "noindex": "noindex,nofollow",
+        "height": 2353
+      },
+      "errors": []
+    },
+    {
+      "file": "b.en.html",
+      "html_sha256": "d8be152f7241c2e6e0c6d0f244dbc836687ce2b7d8e81dd01d20a336f675bad5",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/b-en-desktop-full.png",
+      "screenshot_sha256": "bedb6d05348de6eec7bd5f6c4c5cca77c0c10e09c0eba39ef491505866d725f0",
+      "qa": {
+        "title": "Wednesday certified-result or pending email variants — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "sourcesVisible": true,
+        "noindex": "noindex,nofollow",
+        "height": 1702
+      },
+      "errors": []
+    },
+    {
+      "file": "b.en.html",
+      "html_sha256": "d8be152f7241c2e6e0c6d0f244dbc836687ce2b7d8e81dd01d20a336f675bad5",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/b-en-mobile-full.png",
+      "screenshot_sha256": "db05da6c503c69ec773233e2026aa48392ba8f87c155b4c4fcb06a4673decaf9",
+      "qa": {
+        "title": "Wednesday certified-result or pending email variants — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "sourcesVisible": true,
+        "noindex": "noindex,nofollow",
+        "height": 2297
+      },
+      "errors": []
+    },
+    {
+      "file": "c.en.html",
+      "html_sha256": "403d94fa7664ef6ecc74f89b29bac7f0c52092df206f2e9dee1e5a45435a0a5c",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/c-en-desktop-full.png",
+      "screenshot_sha256": "4a3e0c37d488cc3019347c0ac58c8e55970d839f931b9f521079d7d8a590c4e2",
+      "qa": {
+        "title": "Wednesday certified-result or pending email variants — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "sourcesVisible": true,
+        "noindex": "noindex,nofollow",
+        "height": 1731
+      },
+      "errors": []
+    },
+    {
+      "file": "c.en.html",
+      "html_sha256": "403d94fa7664ef6ecc74f89b29bac7f0c52092df206f2e9dee1e5a45435a0a5c",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/c-en-mobile-full.png",
+      "screenshot_sha256": "eac6d52ea46cdfbd666b036f0b199d81a91b5555e04f65c87ae21613158197c1",
+      "qa": {
+        "title": "Wednesday certified-result or pending email variants — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "sourcesVisible": true,
+        "noindex": "noindex,nofollow",
+        "height": 2325
+      },
+      "errors": []
+    }
+  ]
+}
