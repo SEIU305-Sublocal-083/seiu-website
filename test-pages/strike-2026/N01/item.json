@@ -18,7 +18,7 @@
   "variants": [
     {
       "key": "a",
-      "label": "Variant A — after verified hub launch",
+      "label": "Variant A \u2014 after verified hub launch",
       "en": "copy/en/a.md",
       "es": "copy/es/a.md",
       "conditional": true,
@@ -28,7 +28,7 @@
     },
     {
       "key": "b",
-      "label": "Variant B — if the hub is not ready",
+      "label": "Variant B \u2014 if the hub is not ready",
       "en": "copy/en/b.md",
       "es": "copy/es/b.md",
       "conditional": false,
@@ -36,5 +36,6 @@
       "spanish_reviewer": "",
       "approved_english_sha256": ""
     }
-  ]
+  ],
+  "citations": "none"
 }

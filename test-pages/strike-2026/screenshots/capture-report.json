@@ -1,46 +1,49 @@
 {
   "item": "REVIEW",
   "capture_method": "Playwright screenshot of local rendered HTML",
+  "citation_display": "none",
   "pages": [
     {
       "file": "index.html",
-      "html_sha256": "e9950777c0a17e8c8b868725dd933bf673064080500d8127fb9cb3714b077f70",
+      "html_sha256": "fcfc0806170e53a800bebd9de2695224ba877c610cbac35b29c866a8f1eb1cee",
       "viewport": {
         "name": "desktop",
         "width": 1440,
         "height": 1000
       },
       "screenshot": "screenshots/overview-desktop-full.png",
-      "screenshot_sha256": "2fa0f0431cd9c196dfa0d15bbc44a736926d994fe952648049d5ba53bd6fb8e7",
+      "screenshot_sha256": "32765f8b2fada293bdeb055f34fdb032bb6aaaedce05b790f097ae2c33d9d045",
       "qa": {
         "title": "Translation review workspace — Local 083 review",
         "h1": 1,
         "horizontalOverflow": false,
         "brokenImages": [],
-        "sourcesVisible": true,
+        "citationSections": 0,
+        "citationsClosedInitially": true,
         "noindex": "noindex,nofollow",
-        "height": 2355
+        "height": 2414
       },
       "errors": []
     },
     {
       "file": "index.html",
-      "html_sha256": "e9950777c0a17e8c8b868725dd933bf673064080500d8127fb9cb3714b077f70",
+      "html_sha256": "fcfc0806170e53a800bebd9de2695224ba877c610cbac35b29c866a8f1eb1cee",
       "viewport": {
         "name": "mobile",
         "width": 390,
         "height": 844
       },
       "screenshot": "screenshots/overview-mobile-full.png",
-      "screenshot_sha256": "eeb2a86e1bd074ba0459155d80b392503cceb758d6f369ec2092bf8ba9725152",
+      "screenshot_sha256": "d6c29388f0a4b125bc9bfa1534f494896c71368e80646b817dbdda40b3544b45",
       "qa": {
         "title": "Translation review workspace — Local 083 review",
         "h1": 1,
         "horizontalOverflow": false,
         "brokenImages": [],
-        "sourcesVisible": true,
+        "citationSections": 0,
+        "citationsClosedInitially": true,
         "noindex": "noindex,nofollow",
-        "height": 3388
+        "height": 3533
       },
       "errors": []
     }

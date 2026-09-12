@@ -1,88 +1,93 @@
 {
   "item": "N01",
   "capture_method": "Playwright screenshot of local rendered HTML",
+  "citation_display": "none",
   "pages": [
     {
       "file": "a.en.html",
-      "html_sha256": "765fc062e7f76210aa43673f4ce174c99c0db10e381c6ca7349a8279f80a484e",
+      "html_sha256": "cba9920ae80cfaa59f0838ac33b71b97811924cce62904590910796981ab2b0a",
       "viewport": {
         "name": "desktop",
         "width": 1440,
         "height": 1000
       },
       "screenshot": "screenshots/a-en-desktop-full.png",
-      "screenshot_sha256": "3a0f36b7eaaeea34c3cf8b75e27b860d33ac29195aa6c692f1f810043d690f19",
+      "screenshot_sha256": "43f1dbc1fc2ecd3e99da51cb4fb8926d6f8a2c926ab9888847ac49cdef5b52cd",
       "qa": {
-        "title": "Find our voting information and next steps in one place \u2014 Local 083 review",
+        "title": "Find our voting information and next steps in one place — Local 083 review",
         "h1": 1,
         "horizontalOverflow": false,
         "brokenImages": [],
-        "sourcesVisible": true,
+        "citationSections": 0,
+        "citationsClosedInitially": true,
         "noindex": "noindex,nofollow",
-        "height": 2489
+        "height": 1873
       },
       "errors": []
     },
     {
       "file": "a.en.html",
-      "html_sha256": "765fc062e7f76210aa43673f4ce174c99c0db10e381c6ca7349a8279f80a484e",
+      "html_sha256": "cba9920ae80cfaa59f0838ac33b71b97811924cce62904590910796981ab2b0a",
       "viewport": {
         "name": "mobile",
         "width": 390,
         "height": 844
       },
       "screenshot": "screenshots/a-en-mobile-full.png",
-      "screenshot_sha256": "6971caa0dac231290cbe9bbb63724a9e51d22c68ee0f638b99c93419bd76c3a3",
+      "screenshot_sha256": "d8e59c67b33d1732763e3cbbdc93f4e29a29484c0f7cfaaadd8942f2b664ffa5",
       "qa": {
-        "title": "Find our voting information and next steps in one place \u2014 Local 083 review",
+        "title": "Find our voting information and next steps in one place — Local 083 review",
         "h1": 1,
         "horizontalOverflow": false,
         "brokenImages": [],
-        "sourcesVisible": true,
+        "citationSections": 0,
+        "citationsClosedInitially": true,
         "noindex": "noindex,nofollow",
-        "height": 4297
+        "height": 3064
       },
       "errors": []
     },
     {
       "file": "b.en.html",
-      "html_sha256": "9c5e12fb92241d338f7711110ab5234a52bd2503be77e9610369f47646ee8e20",
+      "html_sha256": "66091a9083210d3d388921053b10fdf6a6fe906cb42f658d0c5d40fe315f197a",
       "viewport": {
         "name": "desktop",
         "width": 1440,
         "height": 1000
       },
       "screenshot": "screenshots/b-en-desktop-full.png",
-      "screenshot_sha256": "4427f2307e8e16bb5fca82cedfb31e256ef1315f8125466edc34ffde1706cf73",
+      "screenshot_sha256": "8ac7d2dac204a5a54bc9edb0e2266cf37294bd5086d4e8cd2f801e59b9899755",
       "qa": {
-        "title": "Make your plan for Monday's authorization vote \u2014 Local 083 review",
+        "title": "Make your plan for Monday's authorization vote — Local 083 review",
         "h1": 1,
         "horizontalOverflow": false,
         "brokenImages": [],
-        "sourcesVisible": true,
+        "citationSections": 0,
+        "citationsClosedInitially": true,
         "noindex": "noindex,nofollow",
-        "height": 2297
+        "height": 1682
       },
       "errors": []
     },
     {
       "file": "b.en.html",
-      "html_sha256": "9c5e12fb92241d338f7711110ab5234a52bd2503be77e9610369f47646ee8e20",
+      "html_sha256": "66091a9083210d3d388921053b10fdf6a6fe906cb42f658d0c5d40fe315f197a",
       "viewport": {
         "name": "mobile",
         "width": 390,
         "height": 844
       },
       "screenshot": "screenshots/b-en-mobile-full.png",
-      "screenshot_sha256": "e90bac6477d16534c632f86df3c3aa731523a90582db7dc8ecdd64d7af5849ef",
+      "screenshot_sha256": "1c6bf3672b33b6e32fb8d44652e56d0a73f89acc08ee38ec149fd1deff41f2c5",
       "qa": {
-        "title": "Make your plan for Monday's authorization vote \u2014 Local 083 review",
+        "title": "Make your plan for Monday's authorization vote — Local 083 review",
         "h1": 1,
         "horizontalOverflow": false,
         "brokenImages": [],
-        "sourcesVisible": true,
+        "citationSections": 0,
+        "citationsClosedInitially": true,
         "noindex": "noindex,nofollow",
-        "height": 3685
+        "height": 2453
       },
       "errors": []
     }
