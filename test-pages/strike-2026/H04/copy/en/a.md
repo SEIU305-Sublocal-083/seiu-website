@@ -42,11 +42,11 @@ When you are out of work because of a strike, follow OED's application or restar
 - A separate regular **waiting week** may also be required if you have not already served it in your benefit year. These weeks and claim review mean there is no promised payment after 14 days.
 - Report earnings for work performed in each claimed week, including other jobs, even if payment has not arrived. School-break rules can affect some claims.
 
-These are OED's rules, and OED decides how they apply to you. Ask OED specifically how to report union strike pay or hardship aid; the strike page does not settle that question. Do not assume either payment can be omitted from a claim. [Read OED's current guidance](https://unemployment.oregon.gov/strikes).
+These are OED's rules, and OED decides how they apply to you. Ask OED specifically how to report union strike pay or hardship aid; the strike page does not settle that question. Do not assume either payment can be omitted from a claim.
 
 ### Could I have to repay unemployment benefits?
 
-**Yes. OED says benefits must be repaid if an employer provides back pay for a strike.** Keep any agreement, award and payment statement and promptly ask OED how to handle it. A retroactive raise on work you performed is a different category from compensation for strike-lost wages; ask how the actual payment affects your claim. [OED's back-pay explanation](https://unemployment.oregon.gov/strikes).
+**Yes. OED says benefits must be repaid if an employer provides back pay for a strike.** Keep any agreement, award and payment statement and promptly ask OED how to handle it. A retroactive raise on work you performed is a different category from compensation for strike-lost wages; ask how the actual payment affects your claim.
 
 ### Get help with the next bill or unanswered rule
 
