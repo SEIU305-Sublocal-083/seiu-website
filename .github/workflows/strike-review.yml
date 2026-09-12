@@ -2,7 +2,8 @@ name: Strike translation previews
 
 on:
   pull_request:
-    branches: [codex/strike-translation-review]
+    branches: ['codex/strike-*']
+    types: [opened, synchronize, reopened, edited]
     paths:
       - 'test-pages/strike-2026/**'
       - 'scripts/build_strike_review.py'

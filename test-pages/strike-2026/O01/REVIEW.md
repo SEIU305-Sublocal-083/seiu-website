@@ -1,10 +1,10 @@
-# O02: Coworker organizing assignments and response workflow
+# O01: Ten-day strategy letter and production calendar
 
 **Draft PR only. No publication, email send or schedule.**
 
-This is item 2 of 6 in the Organizing materials stack. Its base is `codex/strike-o01-ten-day-strategy-letter-and-production-calendar` (PR #274); its diff adds only this item's directory. Edit this item on its own branch and carry parent updates forward. See [stack workflow](../STACK.md). Keep this PR draft during translation review.
+This is item 1 of 6 in the Organizing materials stack. Its base is `codex/strike-translation-review` (PR #253); its diff adds only this item's directory. Edit this item on its own branch and carry parent updates forward. See [stack workflow](../STACK.md). Keep this PR draft during translation review.
 
-- Intended destination: Internal coworker coverage and response plan.
+- Intended destination: Internal ten-day communications strategy.
 - English source: `copy/en/`. 1 alternative(s), each with its own preview.
 - Spanish handoff: `copy/es/` and `title_es` in `item.json`; include `sources/es.md` only when citations are displayed. Spanish is optional for this internal-only plan.
 - Full preview: `index.html`; alternatives: `a.en.html`, etc.
