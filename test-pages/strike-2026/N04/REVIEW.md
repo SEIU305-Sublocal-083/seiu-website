@@ -2,7 +2,7 @@
 
 **Draft PR only. No publication, email send or schedule.**
 
-This PR adds one independently mergeable review item. Target the translation integration branch, never `main` during this stage.
+This is item 5 of 6 in the Website and news stack. Its base is `codex/strike-n03-september17-membership-meeting-recap-template` (PR #272); its diff adds only this item's directory. Edit this item on its own branch and carry parent updates forward. See [stack workflow](../STACK.md). Keep this PR draft during translation review.
 
 - Intended destination: Dated /news/ article after an actual authorized announcement.
 - English source: `copy/en/`. 5 alternative(s), each with its own preview.
