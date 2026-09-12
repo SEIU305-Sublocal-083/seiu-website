@@ -1,0 +1,129 @@
+{
+  "item": "Q01",
+  "capture_method": "Playwright screenshot of local rendered HTML",
+  "citation_display": "collapsed",
+  "pages": [
+    {
+      "file": "strike/en/questions/a.html",
+      "html_sha256": "0f32b9b3517674f7e5120bc4d1a932adc974085cacb01ab7400ba2461d0aceac",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/a-en-desktop-full.png",
+      "screenshot_sha256": "d9b64378d991f5b478014b1592bff534564c463eaa557173c78c60ad5ef7f47f",
+      "expanded_sources": {
+        "screenshot": "screenshots/a-en-desktop-sources-expanded-full.png",
+        "screenshot_sha256": "e287479adf05bf994d42bef13116e7d9f7756d6fe5a24ef613d406e8fdfe3ebb",
+        "qa": {
+          "open": true,
+          "contentVisible": true,
+          "referenceLinks": 11,
+          "horizontalOverflow": false
+        }
+      },
+      "qa": {
+        "title": "Questions before the vote and a possible strike — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 1,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 5079,
+        "languageSwitch": true,
+        "translationPending": false,
+        "documentLanguage": "en",
+        "citationKeyboardToggle": true
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/en/questions/a.html",
+      "html_sha256": "0f32b9b3517674f7e5120bc4d1a932adc974085cacb01ab7400ba2461d0aceac",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/a-en-mobile-full.png",
+      "screenshot_sha256": "23f2cef70328ff883ad41bb54644f76334d5781ec506010418ab965359498821",
+      "expanded_sources": {
+        "screenshot": "screenshots/a-en-mobile-sources-expanded-full.png",
+        "screenshot_sha256": "422e76f6efe34e7afd0c4561ffa09b61df46f0ea54de81aafbdeec1d773835bb",
+        "qa": {
+          "open": true,
+          "contentVisible": true,
+          "referenceLinks": 11,
+          "horizontalOverflow": false
+        }
+      },
+      "qa": {
+        "title": "Questions before the vote and a possible strike — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 1,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 8860,
+        "languageSwitch": true,
+        "translationPending": false,
+        "documentLanguage": "en",
+        "citationKeyboardToggle": true
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/es/questions/a.html",
+      "html_sha256": "d3703fc6b3128b8f8854ad195926f96158e900c6e262e826a7ee481a069af809",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/a-es-desktop-full.png",
+      "screenshot_sha256": "c627431adef5a3787ce608745776555aef2ddc429ce7c54c5f4ba6751ff428fe",
+      "qa": {
+        "title": "Spanish translation pending — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1000,
+        "languageSwitch": true,
+        "translationPending": true,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/es/questions/a.html",
+      "html_sha256": "d3703fc6b3128b8f8854ad195926f96158e900c6e262e826a7ee481a069af809",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/a-es-mobile-full.png",
+      "screenshot_sha256": "14e40dd509af6174b4e86319993e86032135cc50c357a1eca8bee8303aef6280",
+      "qa": {
+        "title": "Spanish translation pending — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1008,
+        "languageSwitch": true,
+        "translationPending": true,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    }
+  ]
+}
