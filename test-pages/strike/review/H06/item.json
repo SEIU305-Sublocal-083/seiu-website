@@ -1,0 +1,40 @@
+{
+  "id": "H06",
+  "title": "Rights responsibilities and practical work questions",
+  "title_es": "",
+  "channel": "article",
+  "as_of": "2026-09-12",
+  "internal_only": false,
+  "proposed_destination": "English /strike/en/workplace-rights/; Español /strike/es/workplace-rights/ (draft review; no publication or delivery)",
+  "selected_variant": null,
+  "editor_approved_by": "",
+  "facts_rechecked_at": "",
+  "source_notes_spanish_reviewer": "",
+  "open_release_gates": [
+    "Refresh dated facts and confirm the intended audience and send/publication time.",
+    "Resolve item-specific release conditions in REVIEW.md.",
+    "Human Spanish translation and bilingual review."
+  ],
+  "variants": [
+    {
+      "key": "a",
+      "label": "Primary copy",
+      "en": "../../en/workplace-rights/a.md",
+      "es": "../../es/workplace-rights/a.md",
+      "conditional": false,
+      "translation_status": "not_started",
+      "spanish_reviewer": "",
+      "approved_english_sha256": ""
+    }
+  ],
+  "citations": "collapsed",
+  "route_slug": "workplace-rights",
+  "sources": {
+    "en": "../../en/workplace-rights/sources.md",
+    "es": "../../es/workplace-rights/sources.md"
+  },
+  "proposed_paths": {
+    "en": "/strike/en/workplace-rights/",
+    "es": "/strike/es/workplace-rights/"
+  }
+}

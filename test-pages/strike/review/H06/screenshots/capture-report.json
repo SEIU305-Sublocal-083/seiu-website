@@ -1,0 +1,129 @@
+{
+  "item": "H06",
+  "capture_method": "Playwright screenshot of local rendered HTML",
+  "citation_display": "collapsed",
+  "pages": [
+    {
+      "file": "strike/en/workplace-rights/a.html",
+      "html_sha256": "ecd39a7d65b728ec7943f5158ed44f971803e35ee514d0231bacc92877ec3ab7",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/a-en-desktop-full.png",
+      "screenshot_sha256": "8787a83257ae7aa32f1c11e4b7a9b4f326f9a2ae65974b7f7cffc368c5754ee6",
+      "expanded_sources": {
+        "screenshot": "screenshots/a-en-desktop-sources-expanded-full.png",
+        "screenshot_sha256": "15ca08ff3bb4c20ad81aa3810f45702679957b4b620be791727f4310e7529531",
+        "qa": {
+          "open": true,
+          "contentVisible": true,
+          "referenceLinks": 3,
+          "horizontalOverflow": false
+        }
+      },
+      "qa": {
+        "title": "Get clear answers to workplace questions — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 1,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 3017,
+        "languageSwitch": true,
+        "translationPending": false,
+        "documentLanguage": "en",
+        "citationKeyboardToggle": true
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/en/workplace-rights/a.html",
+      "html_sha256": "ecd39a7d65b728ec7943f5158ed44f971803e35ee514d0231bacc92877ec3ab7",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/a-en-mobile-full.png",
+      "screenshot_sha256": "383620f2c59ff42ed74806a34378c4a6c7b04a61cd24f5ae7b2d8f1a997068ff",
+      "expanded_sources": {
+        "screenshot": "screenshots/a-en-mobile-sources-expanded-full.png",
+        "screenshot_sha256": "292c974207bcd38e25129272f5952df2316a3a01ea1a71d8a423a9e4d7971584",
+        "qa": {
+          "open": true,
+          "contentVisible": true,
+          "referenceLinks": 3,
+          "horizontalOverflow": false
+        }
+      },
+      "qa": {
+        "title": "Get clear answers to workplace questions — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 1,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 4784,
+        "languageSwitch": true,
+        "translationPending": false,
+        "documentLanguage": "en",
+        "citationKeyboardToggle": true
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/es/workplace-rights/a.html",
+      "html_sha256": "dbddb7afd38e8826a0706757c0008589288bf6da53d5b0ff20261a33352f01b1",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/a-es-desktop-full.png",
+      "screenshot_sha256": "569e779a0a76d67e71983d9171ae5c2f3061e027e3e9ad8b1918e4ba1e61e1bd",
+      "qa": {
+        "title": "Spanish translation pending — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1000,
+        "languageSwitch": true,
+        "translationPending": true,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/es/workplace-rights/a.html",
+      "html_sha256": "dbddb7afd38e8826a0706757c0008589288bf6da53d5b0ff20261a33352f01b1",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/a-es-mobile-full.png",
+      "screenshot_sha256": "ad2601527f28d4e263446a6d237cc6eaad0cf77e5c2fcf3db411107eaf8e7ed9",
+      "qa": {
+        "title": "Spanish translation pending — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1008,
+        "languageSwitch": true,
+        "translationPending": true,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    }
+  ]
+}
