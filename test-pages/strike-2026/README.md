@@ -10,7 +10,7 @@ Each item owns its directory, so translators can work and maintainers can merge 
 
 1. Read its `REVIEW.md` and `item.json` for audience, intended destination and unresolved facts.
 2. Review the full English copy in `copy/en/`. Conditional announcements have separate files; they are alternatives, not a sequence of events that has happened.
-3. Open `index.html` locally, or use the committed desktop/mobile screenshots. Each alternative also has its own preview and screenshots. These screenshots show the actual rendered HTML. No generated artwork is included.
+3. Open `index.html` locally, or use the committed desktop/mobile screenshots. Each alternative also has its own preview and screenshots. These screenshots show the actual rendered HTML.
 4. Read the visible “Sources and source limits” section in the preview. Citations remain in the page body, alongside factual claims where applicable. A contact route is not evidence of a guaranteed benefit. A dated union summary is not an agreed contract.
 
 ## Translator handoff

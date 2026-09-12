@@ -1,18 +1,17 @@
 {
   "item": "REVIEW",
   "capture_method": "Playwright screenshot of local rendered HTML",
-  "artwork": "none",
   "pages": [
     {
       "file": "index.html",
-      "html_sha256": "cef2c0990e7423b453dde7f88dc20cebddb2e5327327ecc739aff673a5b96c7b",
+      "html_sha256": "e9950777c0a17e8c8b868725dd933bf673064080500d8127fb9cb3714b077f70",
       "viewport": {
         "name": "desktop",
         "width": 1440,
         "height": 1000
       },
       "screenshot": "screenshots/overview-desktop-full.png",
-      "screenshot_sha256": "3ec579012e7c7b26a3da8dbde6d91c244aa147f3e29b8516a2fa98b291927a6c",
+      "screenshot_sha256": "2fa0f0431cd9c196dfa0d15bbc44a736926d994fe952648049d5ba53bd6fb8e7",
       "qa": {
         "title": "Translation review workspace — Local 083 review",
         "h1": 1,
@@ -26,14 +25,14 @@
     },
     {
       "file": "index.html",
-      "html_sha256": "cef2c0990e7423b453dde7f88dc20cebddb2e5327327ecc739aff673a5b96c7b",
+      "html_sha256": "e9950777c0a17e8c8b868725dd933bf673064080500d8127fb9cb3714b077f70",
       "viewport": {
         "name": "mobile",
         "width": 390,
         "height": 844
       },
       "screenshot": "screenshots/overview-mobile-full.png",
-      "screenshot_sha256": "7dd3d7499edb699eb3cdfa493f78345b9ec34f00ac7fa5efc17734c5d1621d26",
+      "screenshot_sha256": "eeb2a86e1bd074ba0459155d80b392503cceb758d6f369ec2092bf8ba9725152",
       "qa": {
         "title": "Translation review workspace — Local 083 review",
         "h1": 1,
@@ -41,7 +40,7 @@
         "brokenImages": [],
         "sourcesVisible": true,
         "noindex": "noindex,nofollow",
-        "height": 3416
+        "height": 3388
       },
       "errors": []
     }

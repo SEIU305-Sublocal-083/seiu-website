@@ -1,7 +1,6 @@
 {
   "item": "H06",
   "capture_method": "Playwright screenshot of local rendered HTML",
-  "artwork": "none",
   "pages": [
     {
       "file": "a.en.html",
@@ -14,7 +13,7 @@
       "screenshot": "screenshots/a-en-desktop-full.png",
       "screenshot_sha256": "38bdc15a15670196c7b4678f34285f80c457e82bbb00e6d946ba494c7a6c306f",
       "qa": {
-        "title": "Get clear answers to workplace questions — Local 083 review",
+        "title": "Get clear answers to workplace questions \u2014 Local 083 review",
         "h1": 1,
         "horizontalOverflow": false,
         "brokenImages": [],
@@ -35,7 +34,7 @@
       "screenshot": "screenshots/a-en-mobile-full.png",
       "screenshot_sha256": "0d3cff8a81acebacb4209781b5d32346165b989e6a1e0436f886e1b4d2145c38",
       "qa": {
-        "title": "Get clear answers to workplace questions — Local 083 review",
+        "title": "Get clear answers to workplace questions \u2014 Local 083 review",
         "h1": 1,
         "horizontalOverflow": false,
         "brokenImages": [],
