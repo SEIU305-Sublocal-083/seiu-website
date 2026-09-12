@@ -2,7 +2,7 @@
 
 **Draft PR only. No publication, email send or schedule.**
 
-This PR adds one independently mergeable review item. Target the translation integration branch, never `main` during this stage.
+This is item 6 of 8 in the Guides and Q&A stack. Its base is `codex/strike-h05-health-coverage-planned-leave-vacation-and-surgery` (PR #267); its diff adds only this item's directory. Edit this item on its own branch and carry parent updates forward. See [stack workflow](../STACK.md). Keep this PR draft during translation review.
 
 - Intended destination: /resources/strike-rights-oregon.html (update existing guide after review).
 - English source: `copy/en/`. 1 alternative(s), each with its own preview.

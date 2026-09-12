@@ -2,7 +2,7 @@
 
 **Sept. 12–21, 2026 · Proposed communications for SEIU 503 Sublocal 083**
 
-This workspace supports 28 separate draft PRs containing English copy, editorial source notes and screenshots. [Open the complete PR index](PR-INDEX.md) to choose an item for review and translation. Spanish will be provided and checked by the translator and bilingual reviewer. The PRs are for review only; the live website is unchanged.
+This workspace supports 28 content draft PRs in four topic stacks: guides/Q&A, website/news, emails and organizing materials. Each item retains its own English copy, editorial source notes and screenshots. [See the stack order and workflow](STACK.md). [Open the complete PR index](PR-INDEX.md) to choose an item for review and translation. Spanish will be provided and checked by the translator and bilingual reviewer. The PRs are for review only; the live website is unchanged.
 
 ## Three channels, one consistent explanation
 
@@ -29,7 +29,7 @@ This workspace supports 28 separate draft PRs containing English copy, editorial
 1. Read the English body and item-specific release conditions. Conditional announcements are separate alternatives, not verified events.
 2. Add Spanish in the matching translation files, including subject lines, actions, tables and captions. Translate source notes on the detailed guides and Q&A where citations are displayed.
 3. Review the final English and Spanish together. Refresh desktop and mobile screenshots of the actual rendered pages.
-4. Merge completed item PRs into the translation integration branch. Keep the integration PR to `main` in draft until publication is separately authorized and the production changes are ready.
+4. After review, assemble completed item PRs into the translation integration branch in the order shown for their topic stack. Keep the integration PR to `main` in draft until publication is separately authorized and the production changes are ready.
 
 No website updates, redirects, countdowns, email deliveries or schedules are activated here. The screenshots show rendered HTML.
 
