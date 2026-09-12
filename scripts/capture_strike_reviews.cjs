@@ -4,27 +4,27 @@ const fs = require('node:fs');
 const path = require('node:path');
 const crypto = require('node:crypto');
 const root = path.resolve(__dirname, '..');
-const folder = path.join(root, 'test-pages/strike-2026');
+const folder = path.join(root, 'test-pages/strike');
 const requested = process.argv[2];
-const origin = process.env.LOCAL083_REVIEW_ORIGIN || 'http://127.0.0.1:8765';
+const origin = process.env.LOCAL083_REVIEW_ORIGIN || 'http://127.0.0.1:8766';
 const digest = p => crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex');
 
 (async () => {
   const browser = await chromium.launch({ headless: true });
-  const entries = fs.readdirSync(folder).filter(id => fs.existsSync(path.join(folder, id, 'item.json')) && (!requested || id === requested));
+  const entries = fs.readdirSync(path.join(folder,'review')).filter(id => fs.existsSync(path.join(folder, 'review', id, 'item.json')) && (!requested || id === requested));
   const targets = [];
-  if (!requested || requested === 'REVIEW') targets.push({id:'REVIEW',dir:folder,citations:'none',variants:[{key:'overview',file:'index.html'}]});
+  if (!requested || requested === 'REVIEW') targets.push({id:'REVIEW',dir:folder,citations:'none',variants:[{key:'overview',file:path.join(folder,'index.html')}]});
   for (const id of entries) {
-    const dir = path.join(folder,id);
+    const dir = path.join(folder,'review',id);
     const item = JSON.parse(fs.readFileSync(path.join(dir,'item.json'),'utf8'));
-    targets.push({id,dir,citations:item.citations,variants:item.variants.flatMap(v => ['en','es'].filter(lang => fs.existsSync(path.join(dir,`${v.key}.${lang}.html`))).map(lang => ({key:`${v.key}-${lang}`,file:`${v.key}.${lang}.html`})))});
+    targets.push({id,dir,citations:item.citations,variants:item.variants.flatMap(v => ['en','es'].map(lang => ({key:`${v.key}-${lang}`,language:lang,primary:v===item.variants[0],file:path.join(folder,lang,item.route_slug,`${v.key}.html`),counterpart:path.join(folder,lang==='en'?'es':'en',item.route_slug,`${v.key}.html`),index:path.join(folder,lang,item.route_slug,'index.html'),pending:!fs.readFileSync(path.resolve(dir,v[lang]),'utf8').replace(/<!--[\s\S]*?-->/g,'').trim()})))});
   }
   const failures = [];
   for (const target of targets) {
     const report = {item:target.id,capture_method:'Playwright screenshot of local rendered HTML',citation_display:target.citations,pages:[]};
     fs.mkdirSync(path.join(target.dir,'screenshots'),{recursive:true});
     for (const variant of target.variants) {
-      const localPath = path.relative(root,path.join(target.dir,variant.file)).split(path.sep).join('/');
+      const localPath = path.relative(path.join(root,'test-pages'),variant.file).split(path.sep).join('/');
       for (const [name,width,height] of [['desktop',1440,1000],['mobile',390,844]]) {
         const context = await browser.newContext({viewport:{width,height},deviceScaleFactor:1,reducedMotion:'reduce'});
         // Previews are local and contain no analytics. Catch unintended external fetches.
@@ -46,13 +46,28 @@ const digest = p => crypto.createHash('sha256').update(fs.readFileSync(p)).diges
           height:document.documentElement.scrollHeight,
           links:[...document.querySelectorAll('a[href]')].map(a=>a.getAttribute('href'))
         }));
-        const citationPolicyMatches=qa.citationSections===(target.citations==='collapsed'?1:0) && qa.citationsClosedInitially;
+        const citationPolicyMatches=qa.citationSections===(target.citations==='collapsed'&&!variant.pending?1:0) && qa.citationsClosedInitially;
         if(qa.h1!==1||qa.horizontalOverflow||qa.brokenImages.length||!citationPolicyMatches||qa.noindex!=='noindex,nofollow'||errors.length)failures.push({item:target.id,variant:variant.key,viewport:name,qa,errors});
+        if(variant.language){
+          const other=variant.language==='en'?'es':'en';
+          await page.locator(`a[data-language="${other}"]`).click();
+          const expected=`${origin}/${path.relative(path.join(root,'test-pages'),variant.counterpart).split(path.sep).join('/')}`;
+          const switched=page.url()===expected;
+          await page.locator(`a[data-language="${variant.language}"]`).click();
+          qa.languageSwitch=switched&&page.url()===`${origin}/${localPath}`;
+          qa.translationPending=await page.locator('h1').innerText()==='Spanish translation pending';
+          qa.documentLanguage=await page.locator('html').getAttribute('lang');
+          if(!qa.languageSwitch||qa.translationPending!==!!variant.pending||qa.documentLanguage!==(variant.pending?'en':variant.language))failures.push({item:target.id,variant:variant.key,qa});
+          if(variant.primary){
+            const indexUrl=`${origin}/${path.relative(path.join(root,'test-pages'),variant.index).split(path.sep).join('/')}`;
+            const response=await page.request.get(indexUrl);if(response.status()!==200)failures.push({indexUrl,status:response.status()});
+          }
+        }
         const filename=`${variant.key}-${name}-full.png`;
         await page.screenshot({path:path.join(target.dir,'screenshots',filename),fullPage:true});
-        if(variant===target.variants[0])await page.screenshot({path:path.join(target.dir,'screenshots',`${name}.png`)});
+        if(variant.primary || target.id==='REVIEW')await page.screenshot({path:path.join(target.dir,'screenshots',`${variant.language==='es'?'es-':''}${name}.png`)});
         let expandedSources;
-        if(target.citations==='collapsed'){
+        if(target.citations==='collapsed'&&!variant.pending){
           const summary=page.locator('details.sources > summary');
           await summary.focus();
           await page.keyboard.press('Enter');
@@ -66,7 +81,7 @@ const digest = p => crypto.createHash('sha256').update(fs.readFileSync(p)).diges
           if(!qa.citationKeyboardToggle)failures.push({item:target.id,variant:variant.key,viewport:name,expanded,closedAgain});
           expandedSources={screenshot:`screenshots/${expandedFilename}`,screenshot_sha256:digest(path.join(target.dir,'screenshots',expandedFilename)),qa:expanded};
         }
-        report.pages.push({file:variant.file,html_sha256:digest(path.join(target.dir,variant.file)),viewport:{name,width,height},screenshot:`screenshots/${filename}`,screenshot_sha256:digest(path.join(target.dir,'screenshots',filename)),expanded_sources:expandedSources,qa:{...qa,links:undefined},errors});
+        report.pages.push({file:localPath,html_sha256:digest(variant.file),viewport:{name,width,height},screenshot:`screenshots/${filename}`,screenshot_sha256:digest(path.join(target.dir,'screenshots',filename)),expanded_sources:expandedSources,qa:{...qa,links:undefined},errors});
         await context.close();
       }
     }

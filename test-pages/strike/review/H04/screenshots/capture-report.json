@@ -1,0 +1,129 @@
+{
+  "item": "H04",
+  "capture_method": "Playwright screenshot of local rendered HTML",
+  "citation_display": "collapsed",
+  "pages": [
+    {
+      "file": "strike/en/pay-and-support/a.html",
+      "html_sha256": "3c1d38fb4e22380ca1435f42c5b70d8ceb1725c9b5deba1566b8ded0ec4849bf",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/a-en-desktop-full.png",
+      "screenshot_sha256": "97aac207bc084f1abf6b612904f22431e049fe4264612ec607e8cbca9c34305a",
+      "expanded_sources": {
+        "screenshot": "screenshots/a-en-desktop-sources-expanded-full.png",
+        "screenshot_sha256": "e4a4421a7a4b68dda8c9500df916c4e0ea23c3b5df85d0a1810f6e4d191129b6",
+        "qa": {
+          "open": true,
+          "contentVisible": true,
+          "referenceLinks": 2,
+          "horizontalOverflow": false
+        }
+      },
+      "qa": {
+        "title": "Plan for money during a possible strike — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 1,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 3495,
+        "languageSwitch": true,
+        "translationPending": false,
+        "documentLanguage": "en",
+        "citationKeyboardToggle": true
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/en/pay-and-support/a.html",
+      "html_sha256": "3c1d38fb4e22380ca1435f42c5b70d8ceb1725c9b5deba1566b8ded0ec4849bf",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/a-en-mobile-full.png",
+      "screenshot_sha256": "e752fea60d28411e106688be46d015bc3ce27e0ad9ef167f719f5dbff2922eaf",
+      "expanded_sources": {
+        "screenshot": "screenshots/a-en-mobile-sources-expanded-full.png",
+        "screenshot_sha256": "edef1d2199ad6f2b55fa90054f69ed309aab22263636cefb87847094fb666bd5",
+        "qa": {
+          "open": true,
+          "contentVisible": true,
+          "referenceLinks": 2,
+          "horizontalOverflow": false
+        }
+      },
+      "qa": {
+        "title": "Plan for money during a possible strike — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 1,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 5818,
+        "languageSwitch": true,
+        "translationPending": false,
+        "documentLanguage": "en",
+        "citationKeyboardToggle": true
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/es/pay-and-support/a.html",
+      "html_sha256": "db6da32a59b056f470a54790eb576b0f06bf8aaf0c89547f36f7a292a8be531a",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/a-es-desktop-full.png",
+      "screenshot_sha256": "ee596cb2656289183faeb924106d30261fab414b615f296672433b6e60202312",
+      "qa": {
+        "title": "Spanish translation pending — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1000,
+        "languageSwitch": true,
+        "translationPending": true,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/es/pay-and-support/a.html",
+      "html_sha256": "db6da32a59b056f470a54790eb576b0f06bf8aaf0c89547f36f7a292a8be531a",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/a-es-mobile-full.png",
+      "screenshot_sha256": "be0de36ca36db1da114a66082e03b46d833cbfa437a00532367dd3da177283f6",
+      "qa": {
+        "title": "Spanish translation pending — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1008,
+        "languageSwitch": true,
+        "translationPending": true,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    }
+  ]
+}
