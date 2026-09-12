@@ -18,7 +18,7 @@
   "variants": [
     {
       "key": "a",
-      "label": "A — Bargaining continues, no official strike call",
+      "label": "A \u2014 Bargaining continues, no official strike call",
       "en": "copy/en/a.md",
       "es": "copy/es/a.md",
       "conditional": true,
@@ -28,7 +28,7 @@
     },
     {
       "key": "b",
-      "label": "B — Official strike call, preparation continues",
+      "label": "B \u2014 Official strike call, preparation continues",
       "en": "copy/en/b.md",
       "es": "copy/es/b.md",
       "conditional": true,
@@ -38,7 +38,7 @@
     },
     {
       "key": "c",
-      "label": "C — Tentative agreement awaiting member decision",
+      "label": "C \u2014 Tentative agreement awaiting member decision",
       "en": "copy/en/c.md",
       "es": "copy/es/c.md",
       "conditional": true,
@@ -48,7 +48,7 @@
     },
     {
       "key": "d",
-      "label": "D — Changed timeline",
+      "label": "D \u2014 Changed timeline",
       "en": "copy/en/d.md",
       "es": "copy/es/d.md",
       "conditional": true,
@@ -58,7 +58,7 @@
     },
     {
       "key": "e",
-      "label": "E — Contingency: a strike continues longer than expected",
+      "label": "E \u2014 Contingency: a strike continues longer than expected",
       "en": "copy/en/e.md",
       "es": "copy/es/e.md",
       "conditional": true,
@@ -66,5 +66,6 @@
       "spanish_reviewer": "",
       "approved_english_sha256": ""
     }
-  ]
+  ],
+  "citations": "none"
 }
