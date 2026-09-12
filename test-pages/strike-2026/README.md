@@ -2,7 +2,7 @@
 
 **Drafts as of Sept. 12, 2026. No website publication or email delivery is authorized.**
 
-This branch is the integration area for 28 separate content PRs. GitHub Pages publishes from `main`, not this branch. Each content PR targets `codex/strike-translation-review`. Keep the integration PR into `main` in draft; do not merge it as part of translation review.
+This branch is the integration area for [28 separate content draft PRs](PR-INDEX.md), now open for the public GitHub review authorized by the user. GitHub Pages publishes from `main`, not this branch. Each content PR targets `codex/strike-translation-review`. Keep the integration PR into `main` in draft; do not merge it as part of translation review.
 
 Each item owns its directory, so translators can work and maintainers can merge reviewed items here without conflicts in shared news, event, sitemap or homepage files. No production routes, redirects, news feeds, countdowns, Mailchimp campaigns or schedules are activated by these drafts. The proposed destination is recorded in each `item.json`. A later, separately authorized release must promote approved pages, connect navigation and rebuild the production site.
 
