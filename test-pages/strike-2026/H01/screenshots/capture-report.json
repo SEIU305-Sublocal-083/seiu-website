@@ -1,0 +1,73 @@
+{
+  "item": "H01",
+  "capture_method": "Playwright screenshot of local rendered HTML",
+  "citation_display": "collapsed",
+  "pages": [
+    {
+      "file": "a.en.html",
+      "html_sha256": "32736a689158ff562edf269481027adf5125da54a75592152c8e44b976786c4d",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/a-en-desktop-full.png",
+      "screenshot_sha256": "cfe4ae273653d18271e1d44cb1297cb0a721f6f8e5bb641e62893dca62ecb9a9",
+      "expanded_sources": {
+        "screenshot": "screenshots/a-en-desktop-sources-expanded-full.png",
+        "screenshot_sha256": "b24f98d9dccf1ba946f28d8e269cf2509dd1c658c874cd5e26145a8eda2ee6b8",
+        "qa": {
+          "open": true,
+          "contentVisible": true,
+          "referenceLinks": 3,
+          "horizontalOverflow": false
+        }
+      },
+      "qa": {
+        "title": "Make your plan to vote — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 1,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 2427,
+        "citationKeyboardToggle": true
+      },
+      "errors": []
+    },
+    {
+      "file": "a.en.html",
+      "html_sha256": "32736a689158ff562edf269481027adf5125da54a75592152c8e44b976786c4d",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/a-en-mobile-full.png",
+      "screenshot_sha256": "8e9cd3ab018b4c49a47488b1f423980656bd9215e7884fa56ed5496f814d61bd",
+      "expanded_sources": {
+        "screenshot": "screenshots/a-en-mobile-sources-expanded-full.png",
+        "screenshot_sha256": "cf0a1794a75a0ad32a61a488e097c1b628c90cfa588088864710234a9bce040c",
+        "qa": {
+          "open": true,
+          "contentVisible": true,
+          "referenceLinks": 3,
+          "horizontalOverflow": false
+        }
+      },
+      "qa": {
+        "title": "Make your plan to vote — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 1,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 3644,
+        "citationKeyboardToggle": true
+      },
+      "errors": []
+    }
+  ]
+}
