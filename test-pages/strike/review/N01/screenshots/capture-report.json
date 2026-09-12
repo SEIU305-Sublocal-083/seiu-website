@@ -1,0 +1,207 @@
+{
+  "item": "N01",
+  "capture_method": "Playwright screenshot of local rendered HTML",
+  "citation_display": "none",
+  "pages": [
+    {
+      "file": "strike/en/news/hub/a.html",
+      "html_sha256": "7d7b8a25e8de44f0f6cafebb08b39678cc8b31c0ae3559797632bcbb9c29af16",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/a-en-desktop-full.png",
+      "screenshot_sha256": "2cfdf6291c83df557c02787610bd5df01d1fffc33a9354a1b39e210f77fe0a70",
+      "qa": {
+        "title": "Find our voting information and next steps in one place — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1924,
+        "languageSwitch": true,
+        "translationPending": false,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/en/news/hub/a.html",
+      "html_sha256": "7d7b8a25e8de44f0f6cafebb08b39678cc8b31c0ae3559797632bcbb9c29af16",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/a-en-mobile-full.png",
+      "screenshot_sha256": "929b3f73dd26f2bc1d9391098cd9b7e1216416d34959c58c42d138aab2edb519",
+      "qa": {
+        "title": "Find our voting information and next steps in one place — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 3069,
+        "languageSwitch": true,
+        "translationPending": false,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/es/news/hub/a.html",
+      "html_sha256": "04bf929ad9fefbcb219d4faf9ebc142b33a2fb4c9a83dbae0d4f079524fb08bf",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/a-es-desktop-full.png",
+      "screenshot_sha256": "90cd7369df1b675499fc7b0eb63c3b3187126cf3b2c1fe96aacf391428380e55",
+      "qa": {
+        "title": "Spanish translation pending — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1000,
+        "languageSwitch": true,
+        "translationPending": true,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/es/news/hub/a.html",
+      "html_sha256": "04bf929ad9fefbcb219d4faf9ebc142b33a2fb4c9a83dbae0d4f079524fb08bf",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/a-es-mobile-full.png",
+      "screenshot_sha256": "bc025ca16f437f253aacac152806be4fb495187825062c9a83ed8665ea999286",
+      "qa": {
+        "title": "Spanish translation pending — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1050,
+        "languageSwitch": true,
+        "translationPending": true,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/en/news/hub/b.html",
+      "html_sha256": "7ed453e3addece763675ce3c18819061fac96fcfeb8075f8922dede5bf951d58",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/b-en-desktop-full.png",
+      "screenshot_sha256": "a673efe63d0f76524c102660c7b1526d40bd3c1cac12aeb3f4100920b3a19f4d",
+      "qa": {
+        "title": "Make your plan for Monday's authorization vote — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1733,
+        "languageSwitch": true,
+        "translationPending": false,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/en/news/hub/b.html",
+      "html_sha256": "7ed453e3addece763675ce3c18819061fac96fcfeb8075f8922dede5bf951d58",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/b-en-mobile-full.png",
+      "screenshot_sha256": "ab4516d048afbfedffd54ad15cb6edbb22e401af63abd6d9132966631c852ccd",
+      "qa": {
+        "title": "Make your plan for Monday's authorization vote — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 2457,
+        "languageSwitch": true,
+        "translationPending": false,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/es/news/hub/b.html",
+      "html_sha256": "f89f7fefabd4aa9a8ccb83ffcda36c369a2590b66b28f27bcd8b228683024059",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/b-es-desktop-full.png",
+      "screenshot_sha256": "025532b67517eb51df742e0289c11cdb5fa79135e9dcfd70c4ee181f3ff01217",
+      "qa": {
+        "title": "Spanish translation pending — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1000,
+        "languageSwitch": true,
+        "translationPending": true,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/es/news/hub/b.html",
+      "html_sha256": "f89f7fefabd4aa9a8ccb83ffcda36c369a2590b66b28f27bcd8b228683024059",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/b-es-mobile-full.png",
+      "screenshot_sha256": "6a025a046938ac99d2f36e717df955b0872642b6211d560f5a1ab43af9f428b0",
+      "qa": {
+        "title": "Spanish translation pending — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1027,
+        "languageSwitch": true,
+        "translationPending": true,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    }
+  ]
+}

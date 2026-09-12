@@ -1,0 +1,60 @@
+{
+  "id": "N02",
+  "title": "Certified vote result news variants",
+  "title_es": "",
+  "channel": "article",
+  "as_of": "2026-09-12",
+  "internal_only": false,
+  "proposed_destination": "English /strike/en/news/vote-result/; Español /strike/es/news/vote-result/ (draft review; no publication or delivery)",
+  "selected_variant": null,
+  "editor_approved_by": "",
+  "facts_rechecked_at": "",
+  "source_notes_spanish_reviewer": "",
+  "open_release_gates": [
+    "Refresh dated facts and confirm the intended audience and send/publication time.",
+    "Resolve item-specific release conditions in REVIEW.md.",
+    "Human Spanish translation and bilingual review."
+  ],
+  "variants": [
+    {
+      "key": "a",
+      "label": "Variant A — authorization passes",
+      "en": "../../en/news/vote-result/a.md",
+      "es": "../../es/news/vote-result/a.md",
+      "conditional": true,
+      "translation_status": "not_started",
+      "spanish_reviewer": "",
+      "approved_english_sha256": ""
+    },
+    {
+      "key": "b",
+      "label": "Variant B — authorization does not pass",
+      "en": "../../en/news/vote-result/b.md",
+      "es": "../../es/news/vote-result/b.md",
+      "conditional": true,
+      "translation_status": "not_started",
+      "spanish_reviewer": "",
+      "approved_english_sha256": ""
+    },
+    {
+      "key": "c",
+      "label": "Variant C — result pending",
+      "en": "../../en/news/vote-result/c.md",
+      "es": "../../es/news/vote-result/c.md",
+      "conditional": true,
+      "translation_status": "not_started",
+      "spanish_reviewer": "",
+      "approved_english_sha256": ""
+    }
+  ],
+  "citations": "none",
+  "route_slug": "news/vote-result",
+  "sources": {
+    "en": "../../en/news/vote-result/sources.md",
+    "es": "../../es/news/vote-result/sources.md"
+  },
+  "proposed_paths": {
+    "en": "/strike/en/news/vote-result/",
+    "es": "/strike/es/news/vote-result/"
+  }
+}
