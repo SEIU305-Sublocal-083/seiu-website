@@ -1,7 +1,6 @@
 {
   "item": "E01",
   "capture_method": "Playwright screenshot of local rendered HTML",
-  "artwork": "none",
   "pages": [
     {
       "file": "a.en.html",
@@ -14,7 +13,7 @@
       "screenshot": "screenshots/a-en-desktop-full.png",
       "screenshot_sha256": "354c0ea098f0628c03c924c1d6c3763df30023da19b5f866129ad5a7fc820e6a",
       "qa": {
-        "title": "Saturday targeted voting clarification — Local 083 review",
+        "title": "Saturday targeted voting clarification \u2014 Local 083 review",
         "h1": 1,
         "horizontalOverflow": false,
         "brokenImages": [],
@@ -35,7 +34,7 @@
       "screenshot": "screenshots/a-en-mobile-full.png",
       "screenshot_sha256": "cb2b6ae7b6c457d2adf97e4877047448f2d7b63b3fa71c20fed495b9076f9e30",
       "qa": {
-        "title": "Saturday targeted voting clarification — Local 083 review",
+        "title": "Saturday targeted voting clarification \u2014 Local 083 review",
         "h1": 1,
         "horizontalOverflow": false,
         "brokenImages": [],
