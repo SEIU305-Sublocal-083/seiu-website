@@ -1,0 +1,107 @@
+{
+  "item": "E01",
+  "capture_method": "Playwright screenshot of local rendered HTML",
+  "citation_display": "none",
+  "pages": [
+    {
+      "file": "strike/en/emails/voting-clarification/a.html",
+      "html_sha256": "6004c2cf9c9dc6bbeb283295f9acb9d12ab49d9eecde27a73d6f7d6c7f55b426",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/a-en-desktop-full.png",
+      "screenshot_sha256": "04603bc2761e5d4a6c6cde898eed4ce4fb4d897b073fe505a3ac3fcd55c4e51a",
+      "qa": {
+        "title": "Saturday targeted voting clarification — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1614,
+        "languageSwitch": true,
+        "translationPending": false,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/en/emails/voting-clarification/a.html",
+      "html_sha256": "6004c2cf9c9dc6bbeb283295f9acb9d12ab49d9eecde27a73d6f7d6c7f55b426",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/a-en-mobile-full.png",
+      "screenshot_sha256": "eb6b4fd73ca10c024ed9e81a9b38bb52b848b5a6417219117f986472e62087b8",
+      "qa": {
+        "title": "Saturday targeted voting clarification — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1841,
+        "languageSwitch": true,
+        "translationPending": false,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/es/emails/voting-clarification/a.html",
+      "html_sha256": "de8d719c9acb12797778ccb40c7e16afb873163f7221a3905ff3c7cd626bb453",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/a-es-desktop-full.png",
+      "screenshot_sha256": "51b72ef4c617034e8c1a0377c97f580c12b6ebd5155c8212b71f80574132d66d",
+      "qa": {
+        "title": "Spanish translation pending — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1000,
+        "languageSwitch": true,
+        "translationPending": true,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/es/emails/voting-clarification/a.html",
+      "html_sha256": "de8d719c9acb12797778ccb40c7e16afb873163f7221a3905ff3c7cd626bb453",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/a-es-mobile-full.png",
+      "screenshot_sha256": "7614e53997e46160e29efea76839218d1e9e98add6c22c990e20099f63e2ecd0",
+      "qa": {
+        "title": "Spanish translation pending — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 980,
+        "languageSwitch": true,
+        "translationPending": true,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    }
+  ]
+}
