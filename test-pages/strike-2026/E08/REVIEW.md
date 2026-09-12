@@ -2,7 +2,7 @@
 
 **Draft PR only. No publication, email send or schedule.**
 
-This PR adds one independently mergeable review item. Target the translation integration branch, never `main` during this stage.
+This is item 8 of 8 in the Emails stack. Its base is `codex/strike-e07-friday-material-change-email-variants` (PR #261); its diff adds only this item's directory. Edit this item on its own branch and carry parent updates forward. See [stack workflow](../STACK.md). Keep this PR draft during translation review.
 
 - Intended destination: E08 email campaign draft; no send or schedule.
 - English source: `copy/en/`. 5 alternative(s), each with its own preview.
