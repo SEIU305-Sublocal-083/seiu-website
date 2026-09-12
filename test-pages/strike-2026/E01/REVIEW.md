@@ -1,11 +1,11 @@
-# E04: Tuesday Cascades and absentee targeted reminder
+# E01: Saturday targeted voting clarification
 
 **Draft PR only. No publication, email send or schedule.**
 
-This is item 4 of 8 in the Emails stack. Its base is `codex/strike-e03-monday-weekly-update-and-voting-email` (PR #257); its diff adds only this item's directory. Edit this item on its own branch and carry parent updates forward. See [stack workflow](../STACK.md). Keep this PR draft during translation review.
+This is item 1 of 8 in the Emails stack. Its base is `codex/strike-translation-review` (PR #253); its diff adds only this item's directory. Edit this item on its own branch and carry parent updates forward. See [stack workflow](../STACK.md). Keep this PR draft during translation review.
 
-- Intended destination: E04 email campaign draft; no send or schedule.
-- English source: `copy/en/`. 2 alternative(s), each with its own preview.
+- Intended destination: E01 email campaign draft; no send or schedule.
+- English source: `copy/en/`. 1 alternative(s), each with its own preview.
 - Spanish handoff: `copy/es/` and `title_es` in `item.json`; include `sources/es.md` only when citations are displayed. Human translation has not been supplied or approved.
 - Full preview: `index.html`; alternatives: `a.en.html`, etc.
 - Screenshots: `screenshots/`. These are captures of the rendered HTML.
@@ -21,17 +21,15 @@ This is item 4 of 8 in the Emails stack. Its base is `codex/strike-e03-monday-we
 
 ## Item-specific editorial record
 
-# E04 — Tuesday targeted voting reminders
+# E01 — Saturday targeted voting clarification
 
 ## Internal editorial notes — do not send
 
 Round 4 brand/copy review completed Sept. 12, 2026. This is a finished local copy draft, not release approval. All fact-check holds and future assembly requirements remain in force. Human Spanish fluency review is still outstanding.
 
-Drafted Sept. 12 for Tuesday, Sept. 15, 2026. Two separate targeted messages; do not combine into an all-member repeat. Sources: emails.md ER3 and E04; guides.md G02/H01. Do not build audience lists from ballot choices. Monday's request cutoff is past; no invitation to submit a new request or invented extension.
+Drafted Sept. 12, 2026. Audience: members who missed Friday's information, were excluded from Zoom, or received the earlier pledge-restricted invitation. Trigger: a demonstrated clarification need on Saturday, Sept. 12; no automatic all-member send. Primary action: make a voting plan.
 
-**Cascades branch:** The official indexed table's Obsidian 205, 11 a.m.–5 p.m. is a published-source candidate with no time zone and other conflicted rows. It requires organizer refresh. The complete interim email below offers confirmed day and a direct contact; it does not resolve venue/hour access planning. Hold a full travel instruction until date, venue, room, hours, time zone and access route are confirmed. Then replace the first two paragraphs with the confirmed details in both languages before human release review.
-
-**Absentee branch:** Confirm the deadline time zone, accepted return method and missing-ballot escalation. Until then use the exact attributed deadline and the member's own ballot instructions below; do not add a time zone or share a personalized link. The member should contact the organizer promptly about nonreceipt; no second ballot assumed. Remove either branch when selecting the audience. No send is authorized.
+Sources: emails.md ER1–ER3, ER5; guides.md G01; SOURCE-LEDGER.md S01–S03. Confirmed daytime core is available for review now. Evening time is supported, but invitation, office directory and indexed statewide table disagree on destination. No address or map may be added without organizer confirmation. This draft uses direct confirmation before travel. A pledge is not required to receive the evening invitation; do not equate that with verified personal ballot eligibility. Help email is verified; response time/weekend staffing is not. All publication and sending remain held for human approval.
 
 ## Packaging note
 

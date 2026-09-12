@@ -1,11 +1,11 @@
-# E04: Tuesday Cascades and absentee targeted reminder
+# E03: Monday weekly update and voting email
 
 **Draft PR only. No publication, email send or schedule.**
 
-This is item 4 of 8 in the Emails stack. Its base is `codex/strike-e03-monday-weekly-update-and-voting-email` (PR #257); its diff adds only this item's directory. Edit this item on its own branch and carry parent updates forward. See [stack workflow](../STACK.md). Keep this PR draft during translation review.
+This is item 3 of 8 in the Emails stack. Its base is `codex/strike-e02-sunday-before-you-vote-email` (PR #256); its diff adds only this item's directory. Edit this item on its own branch and carry parent updates forward. See [stack workflow](../STACK.md). Keep this PR draft during translation review.
 
-- Intended destination: E04 email campaign draft; no send or schedule.
-- English source: `copy/en/`. 2 alternative(s), each with its own preview.
+- Intended destination: E03 email campaign draft; no send or schedule.
+- English source: `copy/en/`. 1 alternative(s), each with its own preview.
 - Spanish handoff: `copy/es/` and `title_es` in `item.json`; include `sources/es.md` only when citations are displayed. Human translation has not been supplied or approved.
 - Full preview: `index.html`; alternatives: `a.en.html`, etc.
 - Screenshots: `screenshots/`. These are captures of the rendered HTML.
@@ -21,17 +21,17 @@ This is item 4 of 8 in the Emails stack. Its base is `codex/strike-e03-monday-we
 
 ## Item-specific editorial record
 
-# E04 — Tuesday targeted voting reminders
+# E03 — Monday weekly update and voting email
 
 ## Internal editorial notes — do not send
 
 Round 4 brand/copy review completed Sept. 12, 2026. This is a finished local copy draft, not release approval. All fact-check holds and future assembly requirements remain in force. Human Spanish fluency review is still outstanding.
 
-Drafted Sept. 12 for Tuesday, Sept. 15, 2026. Two separate targeted messages; do not combine into an all-member repeat. Sources: emails.md ER3 and E04; guides.md G02/H01. Do not build audience lists from ballot choices. Monday's request cutoff is past; no invitation to submit a new request or invented extension.
+Drafted Sept. 12 for Monday, Sept. 14, 2026, before 7:30 a.m. Pacific. Audience: Local 083 members. Primary action: cast a strike authorization ballot. Source base: emails.md ER1–ER4; guides.md H01–H03. Refresh before release; change the opening if sent after voting begins and do not reuse after polls close. This is Monday's weekly message; no separate all-member weekly email is needed that day.
 
-**Cascades branch:** The official indexed table's Obsidian 205, 11 a.m.–5 p.m. is a published-source candidate with no time zone and other conflicted rows. It requires organizer refresh. The complete interim email below offers confirmed day and a direct contact; it does not resolve venue/hour access planning. Hold a full travel instruction until date, venue, room, hours, time zone and access route are confirmed. Then replace the first two paragraphs with the confirmed details in both languages before human release review.
+Release holds: evening destination; absentee time zone/approved general link; personal eligibility and paid-time instructions. Supported daytime core is usable independently. If unresolved, retain the attributed absentee times and direct-help wording exactly; do not present the times as fully verified operational instructions. No universal late-request option, paid-time right, immediate strike, numerical threshold or proposed hub claim. Recheck help route without promising instant response. Both languages require human approval.
 
-**Absentee branch:** Confirm the deadline time zone, accepted return method and missing-ballot escalation. Until then use the exact attributed deadline and the member's own ballot instructions below; do not add a time zone or share a personalized link. The member should contact the organizer promptly about nonreceipt; no second ballot assumed. Remove either branch when selecting the audience. No send is authorized.
+Membership addition checked Sept. 12: https://seiu503signup.org/ is the official application linked by Local 083. Starting, signing/submitting and processing an application do not establish this vote's cutoff or the applicant's eligibility. Preserve the organizer confirmation step in both languages.
 
 ## Packaging note
 

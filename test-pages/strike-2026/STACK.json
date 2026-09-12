@@ -1,0 +1,286 @@
+{
+  "version": 1,
+  "foundation": {
+    "branch": "codex/strike-translation-review",
+    "pr": 253,
+    "base": "main"
+  },
+  "stacks": [
+    {
+      "id": "guides",
+      "title": "Guides and Q&A",
+      "items": [
+        {
+          "id": "H01",
+          "branch": "codex/strike-h01-how-and-where-to-vote-and-absentee-ballots",
+          "pr": 263,
+          "base": "codex/strike-translation-review",
+          "previous_pr": 253,
+          "next_pr": 264,
+          "position": 1
+        },
+        {
+          "id": "H02",
+          "branch": "codex/strike-h02-what-the-ballot-means-and-membership-eligibility",
+          "pr": 264,
+          "base": "codex/strike-h01-how-and-where-to-vote-and-absentee-ballots",
+          "previous_pr": 263,
+          "next_pr": 265,
+          "position": 2
+        },
+        {
+          "id": "H03",
+          "branch": "codex/strike-h03-management-proposals-and-our-proposals",
+          "pr": 265,
+          "base": "codex/strike-h02-what-the-ballot-means-and-membership-eligibility",
+          "previous_pr": 264,
+          "next_pr": 266,
+          "position": 3
+        },
+        {
+          "id": "H04",
+          "branch": "codex/strike-h04-strike-pay-hardship-unemployment-and-back-pay",
+          "pr": 266,
+          "base": "codex/strike-h03-management-proposals-and-our-proposals",
+          "previous_pr": 265,
+          "next_pr": 267,
+          "position": 4
+        },
+        {
+          "id": "H05",
+          "branch": "codex/strike-h05-health-coverage-planned-leave-vacation-and-surgery",
+          "pr": 267,
+          "base": "codex/strike-h04-strike-pay-hardship-unemployment-and-back-pay",
+          "previous_pr": 266,
+          "next_pr": 268,
+          "position": 5
+        },
+        {
+          "id": "H06",
+          "branch": "codex/strike-h06-rights-responsibilities-and-practical-work-questions",
+          "pr": 268,
+          "base": "codex/strike-h05-health-coverage-planned-leave-vacation-and-surgery",
+          "previous_pr": 267,
+          "next_pr": 269,
+          "position": 6
+        },
+        {
+          "id": "H07",
+          "branch": "codex/strike-h07-how-a-strike-works-students-and-accessible-participation",
+          "pr": 269,
+          "base": "codex/strike-h06-rights-responsibilities-and-practical-work-questions",
+          "previous_pr": 268,
+          "next_pr": 278,
+          "position": 7
+        },
+        {
+          "id": "Q01",
+          "branch": "codex/strike-q01-common-and-complex-questions-index",
+          "pr": 278,
+          "base": "codex/strike-h07-how-a-strike-works-students-and-accessible-participation",
+          "previous_pr": 269,
+          "next_pr": null,
+          "position": 8
+        }
+      ]
+    },
+    {
+      "id": "website",
+      "title": "Website and news",
+      "items": [
+        {
+          "id": "W01",
+          "branch": "codex/strike-w01-open-strike-information-hub",
+          "pr": 280,
+          "base": "codex/strike-translation-review",
+          "previous_pr": 253,
+          "next_pr": 270,
+          "position": 1
+        },
+        {
+          "id": "N01",
+          "branch": "codex/strike-n01-strike-hub-launch-news",
+          "pr": 270,
+          "base": "codex/strike-w01-open-strike-information-hub",
+          "previous_pr": 280,
+          "next_pr": 271,
+          "position": 2
+        },
+        {
+          "id": "N02",
+          "branch": "codex/strike-n02-certified-vote-result-news-variants",
+          "pr": 271,
+          "base": "codex/strike-n01-strike-hub-launch-news",
+          "previous_pr": 270,
+          "next_pr": 272,
+          "position": 3
+        },
+        {
+          "id": "N03",
+          "branch": "codex/strike-n03-september17-membership-meeting-recap-template",
+          "pr": 272,
+          "base": "codex/strike-n02-certified-vote-result-news-variants",
+          "previous_pr": 271,
+          "next_pr": 273,
+          "position": 4
+        },
+        {
+          "id": "N04",
+          "branch": "codex/strike-n04-official-strike-notice-tentative-agreement-or-changed-timeline-n",
+          "pr": 273,
+          "base": "codex/strike-n03-september17-membership-meeting-recap-template",
+          "previous_pr": 272,
+          "next_pr": 281,
+          "position": 5
+        },
+        {
+          "id": "W02",
+          "branch": "codex/strike-w02-website-audit-and-migration-plan",
+          "pr": 281,
+          "base": "codex/strike-n04-official-strike-notice-tentative-agreement-or-changed-timeline-n",
+          "previous_pr": 273,
+          "next_pr": null,
+          "position": 6
+        }
+      ]
+    },
+    {
+      "id": "emails",
+      "title": "Emails",
+      "items": [
+        {
+          "id": "E01",
+          "branch": "codex/strike-e01-saturday-targeted-voting-clarification",
+          "pr": 255,
+          "base": "codex/strike-translation-review",
+          "previous_pr": 253,
+          "next_pr": 256,
+          "position": 1
+        },
+        {
+          "id": "E02",
+          "branch": "codex/strike-e02-sunday-before-you-vote-email",
+          "pr": 256,
+          "base": "codex/strike-e01-saturday-targeted-voting-clarification",
+          "previous_pr": 255,
+          "next_pr": 257,
+          "position": 2
+        },
+        {
+          "id": "E03",
+          "branch": "codex/strike-e03-monday-weekly-update-and-voting-email",
+          "pr": 257,
+          "base": "codex/strike-e02-sunday-before-you-vote-email",
+          "previous_pr": 256,
+          "next_pr": 258,
+          "position": 3
+        },
+        {
+          "id": "E04",
+          "branch": "codex/strike-e04-tuesday-cascades-and-absentee-targeted-reminder",
+          "pr": 258,
+          "base": "codex/strike-e03-monday-weekly-update-and-voting-email",
+          "previous_pr": 257,
+          "next_pr": 259,
+          "position": 4
+        },
+        {
+          "id": "E05",
+          "branch": "codex/strike-e05-wednesday-certified-result-or-pending-email-variants",
+          "pr": 259,
+          "base": "codex/strike-e04-tuesday-cascades-and-absentee-targeted-reminder",
+          "previous_pr": 258,
+          "next_pr": 260,
+          "position": 5
+        },
+        {
+          "id": "E06",
+          "branch": "codex/strike-e06-thursday-membership-meeting-reminder",
+          "pr": 260,
+          "base": "codex/strike-e05-wednesday-certified-result-or-pending-email-variants",
+          "previous_pr": 259,
+          "next_pr": 261,
+          "position": 6
+        },
+        {
+          "id": "E07",
+          "branch": "codex/strike-e07-friday-material-change-email-variants",
+          "pr": 261,
+          "base": "codex/strike-e06-thursday-membership-meeting-reminder",
+          "previous_pr": 260,
+          "next_pr": 262,
+          "position": 7
+        },
+        {
+          "id": "E08",
+          "branch": "codex/strike-e08-monday-sept21-weekly-update-variants",
+          "pr": 262,
+          "base": "codex/strike-e07-friday-material-change-email-variants",
+          "previous_pr": 261,
+          "next_pr": null,
+          "position": 8
+        }
+      ]
+    },
+    {
+      "id": "organizing",
+      "title": "Organizing materials",
+      "items": [
+        {
+          "id": "O01",
+          "branch": "codex/strike-o01-ten-day-strategy-letter-and-production-calendar",
+          "pr": 274,
+          "base": "codex/strike-translation-review",
+          "previous_pr": 253,
+          "next_pr": 275,
+          "position": 1
+        },
+        {
+          "id": "O02",
+          "branch": "codex/strike-o02-coworker-organizing-assignments-and-response-workflow",
+          "pr": 275,
+          "base": "codex/strike-o01-ten-day-strategy-letter-and-production-calendar",
+          "previous_pr": 274,
+          "next_pr": 254,
+          "position": 2
+        },
+        {
+          "id": "A01",
+          "branch": "codex/strike-a01-president-and-trustees-personalized-letter-starter",
+          "pr": 254,
+          "base": "codex/strike-o02-coworker-organizing-assignments-and-response-workflow",
+          "previous_pr": 275,
+          "next_pr": 276,
+          "position": 3
+        },
+        {
+          "id": "P01",
+          "branch": "codex/strike-p01-voting-poster-copy",
+          "pr": 276,
+          "base": "codex/strike-a01-president-and-trustees-personalized-letter-starter",
+          "previous_pr": 254,
+          "next_pr": 277,
+          "position": 4
+        },
+        {
+          "id": "P02",
+          "branch": "codex/strike-p02-before-you-vote-handout",
+          "pr": 277,
+          "base": "codex/strike-p01-voting-poster-copy",
+          "previous_pr": 276,
+          "next_pr": 279,
+          "position": 5
+        },
+        {
+          "id": "V01",
+          "branch": "codex/strike-v01-optional-short-video-script-captions-and-transcript",
+          "pr": 279,
+          "base": "codex/strike-p02-before-you-vote-handout",
+          "previous_pr": 277,
+          "next_pr": null,
+          "position": 6
+        }
+      ]
+    }
+  ]
+}
