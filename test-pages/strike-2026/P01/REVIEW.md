@@ -2,7 +2,7 @@
 
 **Draft PR only. No publication, email send or schedule.**
 
-This PR adds one independently mergeable review item. Target the translation integration branch, never `main` during this stage.
+This is item 4 of 6 in the Organizing materials stack. Its base is `codex/strike-a01-president-and-trustees-personalized-letter-starter` (PR #254); its diff adds only this item's directory. Edit this item on its own branch and carry parent updates forward. See [stack workflow](../STACK.md). Keep this PR draft during translation review.
 
 - Intended destination: Print voting poster; no automatic distribution.
 - English source: `copy/en/`. 1 alternative(s), each with its own preview.
