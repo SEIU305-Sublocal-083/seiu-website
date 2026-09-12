@@ -1,46 +1,49 @@
 {
   "item": "W02",
   "capture_method": "Playwright screenshot of local rendered HTML",
+  "citation_display": "none",
   "pages": [
     {
       "file": "a.en.html",
-      "html_sha256": "0f7e02a9de528094f58e4b30b34b331af336f9f597a96fb34eff806e14a47962",
+      "html_sha256": "253524213788f7284b93fd85584232e2200cf405bbb6785184a0a1f303971d2a",
       "viewport": {
         "name": "desktop",
         "width": 1440,
         "height": 1000
       },
       "screenshot": "screenshots/a-en-desktop-full.png",
-      "screenshot_sha256": "424ae4ed7c5ae428b2a7a1c316bf74eed035f99e3123e8ea21b760820f3eb8a1",
+      "screenshot_sha256": "24fbb52b70eda249d0c210f4cfb92311f0f5cc6d281fec41c7ac2671cd4205a9",
       "qa": {
-        "title": "W02 \u2014 Website audit and migration plan \u2014 Local 083 review",
+        "title": "W02 — Website audit and migration plan — Local 083 review",
         "h1": 1,
         "horizontalOverflow": false,
         "brokenImages": [],
-        "sourcesVisible": true,
+        "citationSections": 0,
+        "citationsClosedInitially": true,
         "noindex": "noindex,nofollow",
-        "height": 5287
+        "height": 4735
       },
       "errors": []
     },
     {
       "file": "a.en.html",
-      "html_sha256": "0f7e02a9de528094f58e4b30b34b331af336f9f597a96fb34eff806e14a47962",
+      "html_sha256": "253524213788f7284b93fd85584232e2200cf405bbb6785184a0a1f303971d2a",
       "viewport": {
         "name": "mobile",
         "width": 390,
         "height": 844
       },
       "screenshot": "screenshots/a-en-mobile-full.png",
-      "screenshot_sha256": "37f16308a1b1291a599f9c5c1380974557706f529f17a5b9725c47fe31c0959c",
+      "screenshot_sha256": "75fde919e4422ac1257a8c009bb149f891e9615c65873c003c2a024ef2a30b79",
       "qa": {
-        "title": "W02 \u2014 Website audit and migration plan \u2014 Local 083 review",
+        "title": "W02 — Website audit and migration plan — Local 083 review",
         "h1": 1,
         "horizontalOverflow": false,
         "brokenImages": [],
-        "sourcesVisible": true,
+        "citationSections": 0,
+        "citationsClosedInitially": true,
         "noindex": "noindex,nofollow",
-        "height": 8001
+        "height": 7003
       },
       "errors": []
     }
