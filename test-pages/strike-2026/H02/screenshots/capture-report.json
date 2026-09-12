@@ -1,7 +1,6 @@
 {
   "item": "H02",
   "capture_method": "Playwright screenshot of local rendered HTML",
-  "artwork": "none",
   "pages": [
     {
       "file": "a.en.html",
@@ -14,7 +13,7 @@
       "screenshot": "screenshots/a-en-desktop-full.png",
       "screenshot_sha256": "45237682fc91d5b6443b1f7df476f7616c5513298470ed96228f78c525105c37",
       "qa": {
-        "title": "What our authorization vote means — Local 083 review",
+        "title": "What our authorization vote means \u2014 Local 083 review",
         "h1": 1,
         "horizontalOverflow": false,
         "brokenImages": [],
@@ -35,7 +34,7 @@
       "screenshot": "screenshots/a-en-mobile-full.png",
       "screenshot_sha256": "19511f860d9c847b79909e13c2096cbfb4a866b3c775a2616840131f763d9cf4",
       "qa": {
-        "title": "What our authorization vote means — Local 083 review",
+        "title": "What our authorization vote means \u2014 Local 083 review",
         "h1": 1,
         "horizontalOverflow": false,
         "brokenImages": [],
