@@ -1,0 +1,407 @@
+{
+  "item": "E07",
+  "capture_method": "Playwright screenshot of local rendered HTML",
+  "citation_display": "none",
+  "pages": [
+    {
+      "file": "strike/en/emails/material-change/a.html",
+      "html_sha256": "025d5651eef1f192817104d96564d49e75cb15793103a1fc90e61162ab019a61",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/a-en-desktop-full.png",
+      "screenshot_sha256": "69ce1f22261337a216cd3eba32435fe19249a7801f880968d5f79350fc6fbc6b",
+      "qa": {
+        "title": "Friday material-change email variants — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1456,
+        "languageSwitch": true,
+        "translationPending": false,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/en/emails/material-change/a.html",
+      "html_sha256": "025d5651eef1f192817104d96564d49e75cb15793103a1fc90e61162ab019a61",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/a-en-mobile-full.png",
+      "screenshot_sha256": "5d15987836cd3102f9906d5ec940063223eaeabdcce85a4f09f2043ceb3663a8",
+      "qa": {
+        "title": "Friday material-change email variants — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1920,
+        "languageSwitch": true,
+        "translationPending": false,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/es/emails/material-change/a.html",
+      "html_sha256": "d71d1ff804284ad756ded2b2e7e696ef96dc5cbd6d5a841fd7b92373fd519bfb",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/a-es-desktop-full.png",
+      "screenshot_sha256": "2bf71c4e753d8ccd220a75f7e00b3e53592e9b3823ebc51f579113b7797c71e0",
+      "qa": {
+        "title": "Spanish translation pending — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1000,
+        "languageSwitch": true,
+        "translationPending": true,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/es/emails/material-change/a.html",
+      "html_sha256": "d71d1ff804284ad756ded2b2e7e696ef96dc5cbd6d5a841fd7b92373fd519bfb",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/a-es-mobile-full.png",
+      "screenshot_sha256": "2daf69f7669596fb248d85d8e980fc2664998da4c771f2ede4dce7de7c29c890",
+      "qa": {
+        "title": "Spanish translation pending — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1144,
+        "languageSwitch": true,
+        "translationPending": true,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/en/emails/material-change/b.html",
+      "html_sha256": "eba8d3923c4846471a69454ecac629fcd3fa73be55fc3b78d4735aa5934c539c",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/b-en-desktop-full.png",
+      "screenshot_sha256": "3f85eb30063322138ea3b7ee602675ff035cee23363c7f88e7d897adb3d9166e",
+      "qa": {
+        "title": "Friday material-change email variants — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1545,
+        "languageSwitch": true,
+        "translationPending": false,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/en/emails/material-change/b.html",
+      "html_sha256": "eba8d3923c4846471a69454ecac629fcd3fa73be55fc3b78d4735aa5934c539c",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/b-en-mobile-full.png",
+      "screenshot_sha256": "c02dc3a968ef9aeef846f747731886654321eb3cc316b6e916b94c0cad6621b2",
+      "qa": {
+        "title": "Friday material-change email variants — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1948,
+        "languageSwitch": true,
+        "translationPending": false,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/es/emails/material-change/b.html",
+      "html_sha256": "67291b12f7707798d1720ccdc09983a47ae0766ab5f4ede195fa833f9fddb3cf",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/b-es-desktop-full.png",
+      "screenshot_sha256": "b6c96476464552fc88ec81d4d274af6e51207f9a15529d07af5043bbcd8ad59c",
+      "qa": {
+        "title": "Spanish translation pending — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1000,
+        "languageSwitch": true,
+        "translationPending": true,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/es/emails/material-change/b.html",
+      "html_sha256": "67291b12f7707798d1720ccdc09983a47ae0766ab5f4ede195fa833f9fddb3cf",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/b-es-mobile-full.png",
+      "screenshot_sha256": "e116c34c5381135e7eeaa1eb61bd3c28018824b0b8ac33d6f1ab3c3d82b88b38",
+      "qa": {
+        "title": "Spanish translation pending — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1144,
+        "languageSwitch": true,
+        "translationPending": true,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/en/emails/material-change/c.html",
+      "html_sha256": "5b1b60e08b3a696e301660a966a34c2446c3db94a5a2a69ed13ccb080d8f5916",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/c-en-desktop-full.png",
+      "screenshot_sha256": "d8ce720b5dc6643ebbd836daac6e49df7d18bc5890c6643fe8c9c432bbe34144",
+      "qa": {
+        "title": "Friday material-change email variants — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1456,
+        "languageSwitch": true,
+        "translationPending": false,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/en/emails/material-change/c.html",
+      "html_sha256": "5b1b60e08b3a696e301660a966a34c2446c3db94a5a2a69ed13ccb080d8f5916",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/c-en-mobile-full.png",
+      "screenshot_sha256": "8ebee8dc07a8a4b3cca11b72b05463b37fce83729d13a5d45bcd061bd74ebbaf",
+      "qa": {
+        "title": "Friday material-change email variants — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1920,
+        "languageSwitch": true,
+        "translationPending": false,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/es/emails/material-change/c.html",
+      "html_sha256": "a0fa778d97ea1340bb4540db1e8a334928cb466ac7e8d58adc524b0e2c5c2353",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/c-es-desktop-full.png",
+      "screenshot_sha256": "fcf8e0d9c401f6d844f1ef6d33938a8f3de3875d0758d69e7720b0064c53884e",
+      "qa": {
+        "title": "Spanish translation pending — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1000,
+        "languageSwitch": true,
+        "translationPending": true,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/es/emails/material-change/c.html",
+      "html_sha256": "a0fa778d97ea1340bb4540db1e8a334928cb466ac7e8d58adc524b0e2c5c2353",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/c-es-mobile-full.png",
+      "screenshot_sha256": "16849d33856f25ed960395011abf1ce43db4ac4f21d5f7a644b9a188e8bfa10f",
+      "qa": {
+        "title": "Spanish translation pending — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1144,
+        "languageSwitch": true,
+        "translationPending": true,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/en/emails/material-change/d.html",
+      "html_sha256": "ee07ddc6d3405c0762e0ed756ed9de4807307e9b3e5c88b21bac07e04c8117b2",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/d-en-desktop-full.png",
+      "screenshot_sha256": "704bcccb50897c615274d9a00140945e82c0e37bb810cca6f2840baaa95700d9",
+      "qa": {
+        "title": "Friday material-change email variants — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1485,
+        "languageSwitch": true,
+        "translationPending": false,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/en/emails/material-change/d.html",
+      "html_sha256": "ee07ddc6d3405c0762e0ed756ed9de4807307e9b3e5c88b21bac07e04c8117b2",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/d-en-mobile-full.png",
+      "screenshot_sha256": "bde09dbf0afa9f81032966893a032a3393dd64089e7e9abf1b6b7f7c61a13d6f",
+      "qa": {
+        "title": "Friday material-change email variants — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1948,
+        "languageSwitch": true,
+        "translationPending": false,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/es/emails/material-change/d.html",
+      "html_sha256": "ac8ce2a704dc2cca009f8ada8f4d81a6aa9308655c3791856f5258ec68542ed4",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/d-es-desktop-full.png",
+      "screenshot_sha256": "b4b0f170f7ec299d12bf21690bd13bbd0457a50acd32b65ab4f3054e044aa422",
+      "qa": {
+        "title": "Spanish translation pending — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1000,
+        "languageSwitch": true,
+        "translationPending": true,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/es/emails/material-change/d.html",
+      "html_sha256": "ac8ce2a704dc2cca009f8ada8f4d81a6aa9308655c3791856f5258ec68542ed4",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/d-es-mobile-full.png",
+      "screenshot_sha256": "3eb1ecd0af05ea00f09aa0e6355f6c00ae888d39e7ef51f05b57987b3d4139b1",
+      "qa": {
+        "title": "Spanish translation pending — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1144,
+        "languageSwitch": true,
+        "translationPending": true,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    }
+  ]
+}
