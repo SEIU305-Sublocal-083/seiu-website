@@ -18,7 +18,7 @@
   "variants": [
     {
       "key": "a",
-      "label": "A — Advance notice only",
+      "label": "A \u2014 Advance notice only",
       "en": "copy/en/a.md",
       "es": "copy/es/a.md",
       "conditional": true,
@@ -28,7 +28,7 @@
     },
     {
       "key": "b",
-      "label": "B — Official strike call",
+      "label": "B \u2014 Official strike call",
       "en": "copy/en/b.md",
       "es": "copy/es/b.md",
       "conditional": true,
@@ -38,7 +38,7 @@
     },
     {
       "key": "c",
-      "label": "C — Tentative agreement",
+      "label": "C \u2014 Tentative agreement",
       "en": "copy/en/c.md",
       "es": "copy/es/c.md",
       "conditional": true,
@@ -48,7 +48,7 @@
     },
     {
       "key": "d",
-      "label": "D — Changed timeline",
+      "label": "D \u2014 Changed timeline",
       "en": "copy/en/d.md",
       "es": "copy/es/d.md",
       "conditional": true,
@@ -56,5 +56,6 @@
       "spanish_reviewer": "",
       "approved_english_sha256": ""
     }
-  ]
+  ],
+  "citations": "none"
 }

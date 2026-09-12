@@ -1,172 +1,181 @@
 {
   "item": "E07",
   "capture_method": "Playwright screenshot of local rendered HTML",
+  "citation_display": "none",
   "pages": [
     {
       "file": "a.en.html",
-      "html_sha256": "2e04cbee6dc2a0b12c8c25e9100e078e721cab90e4dd2cc024791faa702fe105",
+      "html_sha256": "e2e4f4de6743c6790fafedd24a2f6f9f2ebd1b24f65bf83dd1eaae8818c267e5",
       "viewport": {
         "name": "desktop",
         "width": 1440,
         "height": 1000
       },
       "screenshot": "screenshots/a-en-desktop-full.png",
-      "screenshot_sha256": "24fb76a39aeb16856160aeb68a27da21861574bb0929892298d19f0622df3937",
+      "screenshot_sha256": "63cc8ba82ac8154aaf141423c2bf92cd9612b2c73c58b0aee90067930f375bbb",
       "qa": {
-        "title": "Friday material-change email variants \u2014 Local 083 review",
+        "title": "Friday material-change email variants — Local 083 review",
         "h1": 1,
         "horizontalOverflow": false,
         "brokenImages": [],
-        "sourcesVisible": true,
+        "citationSections": 0,
+        "citationsClosedInitially": true,
         "noindex": "noindex,nofollow",
-        "height": 1647
+        "height": 1405
       },
       "errors": []
     },
     {
       "file": "a.en.html",
-      "html_sha256": "2e04cbee6dc2a0b12c8c25e9100e078e721cab90e4dd2cc024791faa702fe105",
+      "html_sha256": "e2e4f4de6743c6790fafedd24a2f6f9f2ebd1b24f65bf83dd1eaae8818c267e5",
       "viewport": {
         "name": "mobile",
         "width": 390,
         "height": 844
       },
       "screenshot": "screenshots/a-en-mobile-full.png",
-      "screenshot_sha256": "f3ac77510ec56feefccf68a81e8034f722f0f2aca578463504241abdf36d5beb",
+      "screenshot_sha256": "f9c05953d00b16313711197680e7ce56688c42f93d06b6262eb27962dc40c559",
       "qa": {
-        "title": "Friday material-change email variants \u2014 Local 083 review",
+        "title": "Friday material-change email variants — Local 083 review",
         "h1": 1,
         "horizontalOverflow": false,
         "brokenImages": [],
-        "sourcesVisible": true,
+        "citationSections": 0,
+        "citationsClosedInitially": true,
         "noindex": "noindex,nofollow",
-        "height": 2232
+        "height": 1892
       },
       "errors": []
     },
     {
       "file": "b.en.html",
-      "html_sha256": "5e1b13da70376535c1b1e2e4375c9ae58a312ce9c118857dc6adac3cb203020e",
+      "html_sha256": "0cf743e03fa718a6a950a57aafb95c0e963768854f7d50002280440be177a849",
       "viewport": {
         "name": "desktop",
         "width": 1440,
         "height": 1000
       },
       "screenshot": "screenshots/b-en-desktop-full.png",
-      "screenshot_sha256": "66b8e19cb485cf37caa5445ea0b1dc23bd7e554ab9b5e833a516352ef357261f",
+      "screenshot_sha256": "a8a088f134a6229600785cfdd9d40181caf9cb673fdc1cff09cb928027e20525",
       "qa": {
-        "title": "Friday material-change email variants \u2014 Local 083 review",
+        "title": "Friday material-change email variants — Local 083 review",
         "h1": 1,
         "horizontalOverflow": false,
         "brokenImages": [],
-        "sourcesVisible": true,
+        "citationSections": 0,
+        "citationsClosedInitially": true,
         "noindex": "noindex,nofollow",
-        "height": 1736
+        "height": 1494
       },
       "errors": []
     },
     {
       "file": "b.en.html",
-      "html_sha256": "5e1b13da70376535c1b1e2e4375c9ae58a312ce9c118857dc6adac3cb203020e",
+      "html_sha256": "0cf743e03fa718a6a950a57aafb95c0e963768854f7d50002280440be177a849",
       "viewport": {
         "name": "mobile",
         "width": 390,
         "height": 844
       },
       "screenshot": "screenshots/b-en-mobile-full.png",
-      "screenshot_sha256": "969f1388041bbdbb6541a04a52d38d407f4235ccdfb116695dbd7237c0cafdf3",
+      "screenshot_sha256": "12defdca3f54a085c5a2381a06b45d29ca34a97611dca20713572545b38389ec",
       "qa": {
-        "title": "Friday material-change email variants \u2014 Local 083 review",
+        "title": "Friday material-change email variants — Local 083 review",
         "h1": 1,
         "horizontalOverflow": false,
         "brokenImages": [],
-        "sourcesVisible": true,
+        "citationSections": 0,
+        "citationsClosedInitially": true,
         "noindex": "noindex,nofollow",
-        "height": 2260
+        "height": 1920
       },
       "errors": []
     },
     {
       "file": "c.en.html",
-      "html_sha256": "d7409e256da1aeed17ce49b1d3c634a3785aba6bc969b2720e28c33a38e7c5d1",
+      "html_sha256": "eef56f78bf93fafaf916409cc7d93fc1932ffce02153516f613848cc1d5ace3a",
       "viewport": {
         "name": "desktop",
         "width": 1440,
         "height": 1000
       },
       "screenshot": "screenshots/c-en-desktop-full.png",
-      "screenshot_sha256": "ecedeedda3242c6b5b3ce8b489750badf633c9758f6e117eb72cc47180eb6ad6",
+      "screenshot_sha256": "b6b38b2a1d236a5272ef274d5937d08e9568c7aebf810ba5534625dbb8657905",
       "qa": {
-        "title": "Friday material-change email variants \u2014 Local 083 review",
+        "title": "Friday material-change email variants — Local 083 review",
         "h1": 1,
         "horizontalOverflow": false,
         "brokenImages": [],
-        "sourcesVisible": true,
+        "citationSections": 0,
+        "citationsClosedInitially": true,
         "noindex": "noindex,nofollow",
-        "height": 1647
+        "height": 1405
       },
       "errors": []
     },
     {
       "file": "c.en.html",
-      "html_sha256": "d7409e256da1aeed17ce49b1d3c634a3785aba6bc969b2720e28c33a38e7c5d1",
+      "html_sha256": "eef56f78bf93fafaf916409cc7d93fc1932ffce02153516f613848cc1d5ace3a",
       "viewport": {
         "name": "mobile",
         "width": 390,
         "height": 844
       },
       "screenshot": "screenshots/c-en-mobile-full.png",
-      "screenshot_sha256": "4997e88df8ca7a15d3c87fbc7b5c6960ff90c7f5ff5bde06020da206900ff986",
+      "screenshot_sha256": "b980f1f16b439dcb9ec08971df82ae504431bbd24841c86e3ba22c793741fe9f",
       "qa": {
-        "title": "Friday material-change email variants \u2014 Local 083 review",
+        "title": "Friday material-change email variants — Local 083 review",
         "h1": 1,
         "horizontalOverflow": false,
         "brokenImages": [],
-        "sourcesVisible": true,
+        "citationSections": 0,
+        "citationsClosedInitially": true,
         "noindex": "noindex,nofollow",
-        "height": 2232
+        "height": 1892
       },
       "errors": []
     },
     {
       "file": "d.en.html",
-      "html_sha256": "f605c90c27ec3e238d7fb150d2b776f3a364cafbbf7c8e4e133217d2f4ccd238",
+      "html_sha256": "5652093e3b1cc3324002a9b87e6797ed719cfebd93f93783d639d8951363fa41",
       "viewport": {
         "name": "desktop",
         "width": 1440,
         "height": 1000
       },
       "screenshot": "screenshots/d-en-desktop-full.png",
-      "screenshot_sha256": "d86c8a4467d4f816e44be61ecf6bf994dd265e14f1dc1c1d86cb11d691f528d0",
+      "screenshot_sha256": "f294865af9133e492e6c066e6618f4d4d78a21e74ff2430c2c94fca7ff513c47",
       "qa": {
-        "title": "Friday material-change email variants \u2014 Local 083 review",
+        "title": "Friday material-change email variants — Local 083 review",
         "h1": 1,
         "horizontalOverflow": false,
         "brokenImages": [],
-        "sourcesVisible": true,
+        "citationSections": 0,
+        "citationsClosedInitially": true,
         "noindex": "noindex,nofollow",
-        "height": 1677
+        "height": 1434
       },
       "errors": []
     },
     {
       "file": "d.en.html",
-      "html_sha256": "f605c90c27ec3e238d7fb150d2b776f3a364cafbbf7c8e4e133217d2f4ccd238",
+      "html_sha256": "5652093e3b1cc3324002a9b87e6797ed719cfebd93f93783d639d8951363fa41",
       "viewport": {
         "name": "mobile",
         "width": 390,
         "height": 844
       },
       "screenshot": "screenshots/d-en-mobile-full.png",
-      "screenshot_sha256": "1cf7660d9ce3b5ad41adec6308b337532a046f19e13b39db87e99a3b82a3136b",
+      "screenshot_sha256": "3fec93577352953903269a8f56546064b6fec14dd5deb06eb7888e181f28e8ac",
       "qa": {
-        "title": "Friday material-change email variants \u2014 Local 083 review",
+        "title": "Friday material-change email variants — Local 083 review",
         "h1": 1,
         "horizontalOverflow": false,
         "brokenImages": [],
-        "sourcesVisible": true,
+        "citationSections": 0,
+        "citationsClosedInitially": true,
         "noindex": "noindex,nofollow",
-        "height": 2260
+        "height": 1920
       },
       "errors": []
     }
