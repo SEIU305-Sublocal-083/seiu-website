@@ -1,4 +1,4 @@
-// Capture actual rendered previews, including source notes. No generated artwork.
+// Capture actual rendered previews, including source notes.
 const { chromium } = require('playwright');
 const fs = require('node:fs');
 const path = require('node:path');
@@ -21,7 +21,7 @@ const digest = p => crypto.createHash('sha256').update(fs.readFileSync(p)).diges
   }
   const failures = [];
   for (const target of targets) {
-    const report = {item:target.id,capture_method:'Playwright screenshot of local rendered HTML',artwork:'none',pages:[]};
+    const report = {item:target.id,capture_method:'Playwright screenshot of local rendered HTML',pages:[]};
     fs.mkdirSync(path.join(target.dir,'screenshots'),{recursive:true});
     for (const variant of target.variants) {
       const localPath = path.relative(root,path.join(target.dir,variant.file)).split(path.sep).join('/');
