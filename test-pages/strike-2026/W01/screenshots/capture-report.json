@@ -1,0 +1,403 @@
+{
+  "item": "W01",
+  "capture_method": "Playwright screenshot of local rendered HTML",
+  "citation_display": "none",
+  "pages": [
+    {
+      "file": "a.en.html",
+      "html_sha256": "1d42bcc04723a140e5a5870756bbb5eeb6a8abe27aa38ac314bc805465b4d7ca",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/a-en-desktop-full.png",
+      "screenshot_sha256": "5f54c7bed87800ef6cfa774fe177fded33f38450547e2187f81c6a81c7d63202",
+      "qa": {
+        "title": "Our contract, our vote, our next steps — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 4798
+      },
+      "errors": []
+    },
+    {
+      "file": "a.en.html",
+      "html_sha256": "1d42bcc04723a140e5a5870756bbb5eeb6a8abe27aa38ac314bc805465b4d7ca",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/a-en-mobile-full.png",
+      "screenshot_sha256": "a8654f50ab82c0cfebf95bb18bc58743f6b7c7a572b00b67fc6a2f7fc52ab18a",
+      "qa": {
+        "title": "Our contract, our vote, our next steps — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 7965
+      },
+      "errors": []
+    },
+    {
+      "file": "b.en.html",
+      "html_sha256": "183310d3846d8ce79c28a4b1f73a333134dfa61619a79b439b612959c5d3fd36",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/b-en-desktop-full.png",
+      "screenshot_sha256": "4c81a7a7d68417fabb290c16ad5ba37aff94977cef3c62a794008a2a2d8b4a15",
+      "qa": {
+        "title": "Future hub status block — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1099
+      },
+      "errors": []
+    },
+    {
+      "file": "b.en.html",
+      "html_sha256": "183310d3846d8ce79c28a4b1f73a333134dfa61619a79b439b612959c5d3fd36",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/b-en-mobile-full.png",
+      "screenshot_sha256": "17723b4958c54c39d316379f98835c460012917d519578200aba1b9e0130b155",
+      "qa": {
+        "title": "Future hub status block — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1558
+      },
+      "errors": []
+    },
+    {
+      "file": "c.en.html",
+      "html_sha256": "3506b095b2b1b598e41a4f2d539188aa7aa1bcbeb256dde670d6923577030a9b",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/c-en-desktop-full.png",
+      "screenshot_sha256": "8e84340c86314b0d65da11b4e240cca91f7a2c785feb704687e00d8eae51ff55",
+      "qa": {
+        "title": "Future hub status block — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1099
+      },
+      "errors": []
+    },
+    {
+      "file": "c.en.html",
+      "html_sha256": "3506b095b2b1b598e41a4f2d539188aa7aa1bcbeb256dde670d6923577030a9b",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/c-en-mobile-full.png",
+      "screenshot_sha256": "2074767c2f7d48e40a93f85eafdfe52548d41a1551bf257e7f1adf212a31b5a6",
+      "qa": {
+        "title": "Future hub status block — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1586
+      },
+      "errors": []
+    },
+    {
+      "file": "d.en.html",
+      "html_sha256": "5362a8e855f93c415459e621f9521f38b80c5ae50d05a0850ea12a067301ac6a",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/d-en-desktop-full.png",
+      "screenshot_sha256": "f962813bbcd4906dbb69dd2f34c5ae1d94fedea612a4043fdccc5534aede4a35",
+      "qa": {
+        "title": "Future hub status block — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1129
+      },
+      "errors": []
+    },
+    {
+      "file": "d.en.html",
+      "html_sha256": "5362a8e855f93c415459e621f9521f38b80c5ae50d05a0850ea12a067301ac6a",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/d-en-mobile-full.png",
+      "screenshot_sha256": "bd0470effaccd520036032de1c2b78d9fe998685ea1bcaf89a44ba41e7fdd23e",
+      "qa": {
+        "title": "Future hub status block — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1614
+      },
+      "errors": []
+    },
+    {
+      "file": "e.en.html",
+      "html_sha256": "8cb4fbbc49d57db8e8882711cabdb50c8c825a9e3dbe01ebf6c7b323b975993f",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/e-en-desktop-full.png",
+      "screenshot_sha256": "ce0200526811fed96f240443df75d7387293c261b98f3dfb33dc05c71b0a4a22",
+      "qa": {
+        "title": "Future hub status block — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1129
+      },
+      "errors": []
+    },
+    {
+      "file": "e.en.html",
+      "html_sha256": "8cb4fbbc49d57db8e8882711cabdb50c8c825a9e3dbe01ebf6c7b323b975993f",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/e-en-mobile-full.png",
+      "screenshot_sha256": "7e514c0c6f6da7582c19e60f6692333d655622b6375ccb01a6b4afc2a3d88cfa",
+      "qa": {
+        "title": "Future hub status block — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1614
+      },
+      "errors": []
+    },
+    {
+      "file": "f.en.html",
+      "html_sha256": "9d9b2e85c97e729aed4fcf788a3bbe0c9b1a6bd2d0ea2c47391ae1ec15a93c2c",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/f-en-desktop-full.png",
+      "screenshot_sha256": "5a324b938576faf4cf9afe9f24209bbd7e43086936168227131d523d2aa02867",
+      "qa": {
+        "title": "Future hub status block — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1099
+      },
+      "errors": []
+    },
+    {
+      "file": "f.en.html",
+      "html_sha256": "9d9b2e85c97e729aed4fcf788a3bbe0c9b1a6bd2d0ea2c47391ae1ec15a93c2c",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/f-en-mobile-full.png",
+      "screenshot_sha256": "df6543d47d756b1ca63e315f6a6209ce413eb685dcd85cad9f67022691888dfc",
+      "qa": {
+        "title": "Future hub status block — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1586
+      },
+      "errors": []
+    },
+    {
+      "file": "g.en.html",
+      "html_sha256": "cd7bd7be0167702e3188b452006ecb1a305d5c81311f7bdf3b8ffa008d8e2b5b",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/g-en-desktop-full.png",
+      "screenshot_sha256": "289e492967fda18ad53c5f179541cf2347719ecee3b65a37deea3c921b7d053d",
+      "qa": {
+        "title": "Future hub status block — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1129
+      },
+      "errors": []
+    },
+    {
+      "file": "g.en.html",
+      "html_sha256": "cd7bd7be0167702e3188b452006ecb1a305d5c81311f7bdf3b8ffa008d8e2b5b",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/g-en-mobile-full.png",
+      "screenshot_sha256": "a4e5744857c859a04e475cec87b38095054325ea28e5aaff05bc22a4d01560ab",
+      "qa": {
+        "title": "Future hub status block — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1614
+      },
+      "errors": []
+    },
+    {
+      "file": "h.en.html",
+      "html_sha256": "9c5873408a255ee7b80001911290131c6eb2d515a1845fd34ac592c3f9ef8780",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/h-en-desktop-full.png",
+      "screenshot_sha256": "d87709423e5bc38256403cea98618e53de3df5c788084323715878d2e98d12b5",
+      "qa": {
+        "title": "Future hub status block — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1099
+      },
+      "errors": []
+    },
+    {
+      "file": "h.en.html",
+      "html_sha256": "9c5873408a255ee7b80001911290131c6eb2d515a1845fd34ac592c3f9ef8780",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/h-en-mobile-full.png",
+      "screenshot_sha256": "a28452073988b920349d867b5400814f406414e7344ab01fc9c9bc2857cbcb69",
+      "qa": {
+        "title": "Future hub status block — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1586
+      },
+      "errors": []
+    },
+    {
+      "file": "i.en.html",
+      "html_sha256": "755ad41624a743db08d08e75e26dd9e33b9fda886f571b4ba07322945912f7f7",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/i-en-desktop-full.png",
+      "screenshot_sha256": "c51312e6e42b5bc8cdd3cba400e20ffcfd79b5f29bd8f3949f9fe55f349682e7",
+      "qa": {
+        "title": "Future hub status block — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1129
+      },
+      "errors": []
+    },
+    {
+      "file": "i.en.html",
+      "html_sha256": "755ad41624a743db08d08e75e26dd9e33b9fda886f571b4ba07322945912f7f7",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/i-en-mobile-full.png",
+      "screenshot_sha256": "65efe66a6391186046ea03205d5a633a6c3047270c3ebe6679fefc876fde5bbf",
+      "qa": {
+        "title": "Future hub status block — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1642
+      },
+      "errors": []
+    }
+  ]
+}

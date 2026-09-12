@@ -2,9 +2,9 @@
 
 **Drafts as of Sept. 12, 2026. No website publication or email delivery is authorized.**
 
-This branch is the integration area for [28 separate content draft PRs](PR-INDEX.md), now open for the public GitHub review authorized by the user. GitHub Pages publishes from `main`, not this branch. Each content PR targets `codex/strike-translation-review`. Keep the integration PR into `main` in draft; do not merge it as part of translation review.
+This branch is the integration area for [28 separate content draft PRs](PR-INDEX.md), now open for the public GitHub review authorized by the user. GitHub Pages publishes from `main`, not this branch. Content PRs form four topic stacks; each targets its preceding branch, and the first in each stack targets `codex/strike-translation-review`. See [stack order and translation workflow](STACK.md). Keep the integration PR into `main` in draft; do not merge it as part of translation review.
 
-Each item owns its directory, so translators can work and maintainers can merge reviewed items here without conflicts in shared news, event, sitemap or homepage files. No production routes, redirects, news feeds, countdowns, Mailchimp campaigns or schedules are activated by these drafts. The proposed destination is recorded in each `item.json`. A later, separately authorized release must promote approved pages, connect navigation and rebuild the production site.
+Each item owns its directory. Translate that directory on its existing branch; earlier directories in the checkout belong to parent PRs. Carry parent updates through the stack before assembly. No production routes, redirects, news feeds, countdowns, Mailchimp campaigns or schedules are activated by these drafts. The proposed destination is recorded in each `item.json`. A later, separately authorized release must promote approved pages, connect navigation and rebuild the production site.
 
 ## Review one PR
 
@@ -39,6 +39,6 @@ Open `http://127.0.0.1:8765/test-pages/strike-2026/ITEM-ID/index.html`. You can 
 
 ## Merge order and eventual release
 
-The 28 content PRs share this integration branch as their base and each adds one independent directory. They can be merged into this branch in any order after review. The integration PR into `main` is the final stop, not a translation convenience. Keep it unmerged until the user authorizes publication and the promotion changes, sources, time-sensitive facts, Spanish pages, internal links and production build have been reviewed together.
+The 28 content PRs are arranged in four topic stacks. Each PR adds one item relative to its parent. After translation and review, assemble each stack in the order in [STACK.md](STACK.md), retargeting the next approved item to the integration branch as its predecessor is merged. Topic stacks can be reviewed independently. The integration PR into `main` is the final stop, not a translation convenience. Keep it unmerged until the user authorizes publication and the promotion changes, sources, time-sensitive facts, Spanish pages, internal links and production build have been reviewed together.
 
 Do not automatically replace the bargaining archive or redirect pages during this stage. Preserve dated history. The migration proposal (W02) identifies the later production work and existing guides to reuse.

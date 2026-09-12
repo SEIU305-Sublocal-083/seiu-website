@@ -2,7 +2,7 @@
 
 **Draft PR only. No publication, email send or schedule.**
 
-This PR adds one independently mergeable review item. Target the translation integration branch, never `main` during this stage.
+This is item 4 of 6 in the Website and news stack. Its base is `codex/strike-n02-certified-vote-result-news-variants` (PR #271); its diff adds only this item's directory. Edit this item on its own branch and carry parent updates forward. See [stack workflow](../STACK.md). Keep this PR draft during translation review.
 
 - Intended destination: /news/2026-09-17-membership-meeting-recap.html (proposed; checked notes required).
 - English source: `copy/en/`. 1 alternative(s), each with its own preview.
