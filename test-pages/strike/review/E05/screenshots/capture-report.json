@@ -1,0 +1,307 @@
+{
+  "item": "E05",
+  "capture_method": "Playwright screenshot of local rendered HTML",
+  "citation_display": "none",
+  "pages": [
+    {
+      "file": "strike/en/emails/vote-result/a.html",
+      "html_sha256": "52219652ccf23864550ab6cb8638eb688e03840c0bf15865024f183bb38a3900",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/a-en-desktop-full.png",
+      "screenshot_sha256": "7a9bede1caf80d66a94cd40024737ae2469b0d910f788134a33eb29af68528d6",
+      "qa": {
+        "title": "Wednesday certified-result or pending email variants — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1515,
+        "languageSwitch": true,
+        "translationPending": false,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/en/emails/vote-result/a.html",
+      "html_sha256": "52219652ccf23864550ab6cb8638eb688e03840c0bf15865024f183bb38a3900",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/a-en-mobile-full.png",
+      "screenshot_sha256": "86f3b0a46381108e5941a4db66ff1244fa8daf98a3a03bc2e15b4d6ae88bf704",
+      "qa": {
+        "title": "Wednesday certified-result or pending email variants — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1967,
+        "languageSwitch": true,
+        "translationPending": false,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/es/emails/vote-result/a.html",
+      "html_sha256": "9d7a9c2276417114aa087b8540b77b7908b0bd1244f77f5e374d0826d5bee0d8",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/a-es-desktop-full.png",
+      "screenshot_sha256": "6ca2355d8fdf05e29dad905c01dc1d93510f347970fcd788b62724d350127f4c",
+      "qa": {
+        "title": "Spanish translation pending — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1000,
+        "languageSwitch": true,
+        "translationPending": true,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/es/emails/vote-result/a.html",
+      "html_sha256": "9d7a9c2276417114aa087b8540b77b7908b0bd1244f77f5e374d0826d5bee0d8",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/a-es-mobile-full.png",
+      "screenshot_sha256": "71a9af9a9d013c5488e933ebbc5c30a30db129889d37e8b1029b2d5ff47d2c90",
+      "qa": {
+        "title": "Spanish translation pending — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1125,
+        "languageSwitch": true,
+        "translationPending": true,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/en/emails/vote-result/b.html",
+      "html_sha256": "b950ad9210ba35a7a976124f42415fdaeec7cc8e367dec42e443ee5607ef2ec9",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/b-en-desktop-full.png",
+      "screenshot_sha256": "95fab60490dadec2d79eb0326c8e82a6b2e4db73b4108d68b8d8b3f2290daf91",
+      "qa": {
+        "title": "Wednesday certified-result or pending email variants — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1485,
+        "languageSwitch": true,
+        "translationPending": false,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/en/emails/vote-result/b.html",
+      "html_sha256": "b950ad9210ba35a7a976124f42415fdaeec7cc8e367dec42e443ee5607ef2ec9",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/b-en-mobile-full.png",
+      "screenshot_sha256": "309d4a4d9f23d6ee6a4d19d32f0723c821c5f03046254dfb39ae5e0b5f0c1fc0",
+      "qa": {
+        "title": "Wednesday certified-result or pending email variants — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1911,
+        "languageSwitch": true,
+        "translationPending": false,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/es/emails/vote-result/b.html",
+      "html_sha256": "ed4862f170107d241dee454ccdaa946395115852e1612e9631521ca30b345cb1",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/b-es-desktop-full.png",
+      "screenshot_sha256": "569dda3825d49dc77cded6d422edf18eb7c2951f54c92f1b1ec0d6543b4e4599",
+      "qa": {
+        "title": "Spanish translation pending — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1000,
+        "languageSwitch": true,
+        "translationPending": true,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/es/emails/vote-result/b.html",
+      "html_sha256": "ed4862f170107d241dee454ccdaa946395115852e1612e9631521ca30b345cb1",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/b-es-mobile-full.png",
+      "screenshot_sha256": "48cc3684bea28f34602b491a18d711be1f4362b4d60dbeeffbf5463299a324ff",
+      "qa": {
+        "title": "Spanish translation pending — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1125,
+        "languageSwitch": true,
+        "translationPending": true,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/en/emails/vote-result/c.html",
+      "html_sha256": "f9dd698a102c5323be2959d727e4daac86c0ab0591b9bbc0ec6c47042e3b21fb",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/c-en-desktop-full.png",
+      "screenshot_sha256": "88290ac218f0fd73be0c774fa0afb91d122a070dafdaa42a79a74a895d58fca1",
+      "qa": {
+        "title": "Wednesday certified-result or pending email variants — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1515,
+        "languageSwitch": true,
+        "translationPending": false,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/en/emails/vote-result/c.html",
+      "html_sha256": "f9dd698a102c5323be2959d727e4daac86c0ab0591b9bbc0ec6c47042e3b21fb",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/c-en-mobile-full.png",
+      "screenshot_sha256": "2285868d1f8b4f88615a515c9177001ecbcdce2a8a115e2da1a5ea9d1f1d6bef",
+      "qa": {
+        "title": "Wednesday certified-result or pending email variants — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1939,
+        "languageSwitch": true,
+        "translationPending": false,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/es/emails/vote-result/c.html",
+      "html_sha256": "4965d42cc0f9955f8409383af50f2d2c7f3f1cb06572290960efdf129ed98dd7",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/c-es-desktop-full.png",
+      "screenshot_sha256": "5b1f4f96fd4b0b84f0dc43c623bc89eabb70c156ecf0b99fb65e8e7166ec2055",
+      "qa": {
+        "title": "Spanish translation pending — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1000,
+        "languageSwitch": true,
+        "translationPending": true,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/es/emails/vote-result/c.html",
+      "html_sha256": "4965d42cc0f9955f8409383af50f2d2c7f3f1cb06572290960efdf129ed98dd7",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/c-es-mobile-full.png",
+      "screenshot_sha256": "98b00fc2b09fcfa9bd2116326fd67e8f20e5092f631c1e0aeb0ce898953c37ef",
+      "qa": {
+        "title": "Spanish translation pending — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1125,
+        "languageSwitch": true,
+        "translationPending": true,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    }
+  ]
+}

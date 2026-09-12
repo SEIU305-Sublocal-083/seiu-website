@@ -1,0 +1,70 @@
+{
+  "id": "E07",
+  "title": "Friday material-change email variants",
+  "title_es": "",
+  "channel": "email",
+  "as_of": "2026-09-12",
+  "internal_only": false,
+  "proposed_destination": "English /strike/en/emails/material-change/; Español /strike/es/emails/material-change/ (draft review; no publication or delivery)",
+  "selected_variant": null,
+  "editor_approved_by": "",
+  "facts_rechecked_at": "",
+  "source_notes_spanish_reviewer": "",
+  "open_release_gates": [
+    "Refresh dated facts and confirm the intended audience and send/publication time.",
+    "Resolve item-specific release conditions in REVIEW.md.",
+    "Human Spanish translation and bilingual review."
+  ],
+  "variants": [
+    {
+      "key": "a",
+      "label": "A — Advance notice only",
+      "en": "../../en/emails/material-change/a.md",
+      "es": "../../es/emails/material-change/a.md",
+      "conditional": true,
+      "translation_status": "not_started",
+      "spanish_reviewer": "",
+      "approved_english_sha256": ""
+    },
+    {
+      "key": "b",
+      "label": "B — Official strike call",
+      "en": "../../en/emails/material-change/b.md",
+      "es": "../../es/emails/material-change/b.md",
+      "conditional": true,
+      "translation_status": "not_started",
+      "spanish_reviewer": "",
+      "approved_english_sha256": ""
+    },
+    {
+      "key": "c",
+      "label": "C — Tentative agreement",
+      "en": "../../en/emails/material-change/c.md",
+      "es": "../../es/emails/material-change/c.md",
+      "conditional": true,
+      "translation_status": "not_started",
+      "spanish_reviewer": "",
+      "approved_english_sha256": ""
+    },
+    {
+      "key": "d",
+      "label": "D — Changed timeline",
+      "en": "../../en/emails/material-change/d.md",
+      "es": "../../es/emails/material-change/d.md",
+      "conditional": true,
+      "translation_status": "not_started",
+      "spanish_reviewer": "",
+      "approved_english_sha256": ""
+    }
+  ],
+  "citations": "none",
+  "route_slug": "emails/material-change",
+  "sources": {
+    "en": "../../en/emails/material-change/sources.md",
+    "es": "../../es/emails/material-change/sources.md"
+  },
+  "proposed_paths": {
+    "en": "/strike/en/emails/material-change/",
+    "es": "/strike/es/emails/material-change/"
+  }
+}
