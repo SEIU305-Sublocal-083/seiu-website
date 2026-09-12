@@ -1,49 +1,49 @@
 {
-  "item": "REVIEW",
+  "item": "E03",
   "capture_method": "Playwright screenshot of local rendered HTML",
   "citation_display": "none",
   "pages": [
     {
-      "file": "index.html",
-      "html_sha256": "67a62383577f8faae0b5b32e27fdd683566f19b639a3b38d792122c8db40b018",
+      "file": "a.en.html",
+      "html_sha256": "3820c512b82fb32d2e3d3012e10b2f00d6b7c5eb517bd9d98541ae041988527e",
       "viewport": {
         "name": "desktop",
         "width": 1440,
         "height": 1000
       },
-      "screenshot": "screenshots/overview-desktop-full.png",
-      "screenshot_sha256": "7bb6de5d45c57c4a74e6f2cdd0f97a8ea1f7b29c4136041059a40a057fb555eb",
+      "screenshot": "screenshots/a-en-desktop-full.png",
+      "screenshot_sha256": "8776e2f2e6cc098ed7188c7d35bd8a882101e2c74241c58d7d2f1cd131174ba6",
       "qa": {
-        "title": "Translation review workspace — Local 083 review",
+        "title": "Monday weekly update and voting email — Local 083 review",
         "h1": 1,
         "horizontalOverflow": false,
         "brokenImages": [],
         "citationSections": 0,
         "citationsClosedInitially": true,
         "noindex": "noindex,nofollow",
-        "height": 2474
+        "height": 1900
       },
       "errors": []
     },
     {
-      "file": "index.html",
-      "html_sha256": "67a62383577f8faae0b5b32e27fdd683566f19b639a3b38d792122c8db40b018",
+      "file": "a.en.html",
+      "html_sha256": "3820c512b82fb32d2e3d3012e10b2f00d6b7c5eb517bd9d98541ae041988527e",
       "viewport": {
         "name": "mobile",
         "width": 390,
         "height": 844
       },
-      "screenshot": "screenshots/overview-mobile-full.png",
-      "screenshot_sha256": "763d535203cf4d767e7c69dde8c1702aeaee1bf4d3b7c18dbfe3b34df177fcad",
+      "screenshot": "screenshots/a-en-mobile-full.png",
+      "screenshot_sha256": "43df5f47c6180f546207f0167682af6784978ab7e793199c93aa40d7be3c8dee",
       "qa": {
-        "title": "Translation review workspace — Local 083 review",
+        "title": "Monday weekly update and voting email — Local 083 review",
         "h1": 1,
         "horizontalOverflow": false,
         "brokenImages": [],
         "citationSections": 0,
         "citationsClosedInitially": true,
         "noindex": "noindex,nofollow",
-        "height": 3701
+        "height": 2480
       },
       "errors": []
     }

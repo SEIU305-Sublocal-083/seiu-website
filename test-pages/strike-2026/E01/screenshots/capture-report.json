@@ -1,49 +1,49 @@
 {
-  "item": "REVIEW",
+  "item": "E01",
   "capture_method": "Playwright screenshot of local rendered HTML",
   "citation_display": "none",
   "pages": [
     {
-      "file": "index.html",
-      "html_sha256": "67a62383577f8faae0b5b32e27fdd683566f19b639a3b38d792122c8db40b018",
+      "file": "a.en.html",
+      "html_sha256": "e68412448d26884dc26cc4bff4eb63b160c34ff0d579fa1483c6086b309da561",
       "viewport": {
         "name": "desktop",
         "width": 1440,
         "height": 1000
       },
-      "screenshot": "screenshots/overview-desktop-full.png",
-      "screenshot_sha256": "7bb6de5d45c57c4a74e6f2cdd0f97a8ea1f7b29c4136041059a40a057fb555eb",
+      "screenshot": "screenshots/a-en-desktop-full.png",
+      "screenshot_sha256": "8ba98cb6bb924f72b7ba73a333c35195e1148b22c992a414bd382ce202377eb0",
       "qa": {
-        "title": "Translation review workspace — Local 083 review",
+        "title": "Saturday targeted voting clarification — Local 083 review",
         "h1": 1,
         "horizontalOverflow": false,
         "brokenImages": [],
         "citationSections": 0,
         "citationsClosedInitially": true,
         "noindex": "noindex,nofollow",
-        "height": 2474
+        "height": 1563
       },
       "errors": []
     },
     {
-      "file": "index.html",
-      "html_sha256": "67a62383577f8faae0b5b32e27fdd683566f19b639a3b38d792122c8db40b018",
+      "file": "a.en.html",
+      "html_sha256": "e68412448d26884dc26cc4bff4eb63b160c34ff0d579fa1483c6086b309da561",
       "viewport": {
         "name": "mobile",
         "width": 390,
         "height": 844
       },
-      "screenshot": "screenshots/overview-mobile-full.png",
-      "screenshot_sha256": "763d535203cf4d767e7c69dde8c1702aeaee1bf4d3b7c18dbfe3b34df177fcad",
+      "screenshot": "screenshots/a-en-mobile-full.png",
+      "screenshot_sha256": "885bdf7427d72b52985c57447649adde1c5fd0d8c8b14b31c68adae25fc101b9",
       "qa": {
-        "title": "Translation review workspace — Local 083 review",
+        "title": "Saturday targeted voting clarification — Local 083 review",
         "h1": 1,
         "horizontalOverflow": false,
         "brokenImages": [],
         "citationSections": 0,
         "citationsClosedInitially": true,
         "noindex": "noindex,nofollow",
-        "height": 3701
+        "height": 1813
       },
       "errors": []
     }

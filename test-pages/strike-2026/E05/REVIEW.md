@@ -2,7 +2,7 @@
 
 **Draft PR only. No publication, email send or schedule.**
 
-This PR adds one independently mergeable review item. Target the translation integration branch, never `main` during this stage.
+This is item 5 of 8 in the Emails stack. Its base is `codex/strike-e04-tuesday-cascades-and-absentee-targeted-reminder` (PR #258); its diff adds only this item's directory. Edit this item on its own branch and carry parent updates forward. See [stack workflow](../STACK.md). Keep this PR draft during translation review.
 
 - Intended destination: E05 email campaign draft; no send or schedule.
 - English source: `copy/en/`. 3 alternative(s), each with its own preview.
