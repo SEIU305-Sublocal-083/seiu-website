@@ -1,7 +1,6 @@
 {
   "item": "O02",
   "capture_method": "Playwright screenshot of local rendered HTML",
-  "artwork": "none",
   "pages": [
     {
       "file": "a.en.html",
@@ -14,7 +13,7 @@
       "screenshot": "screenshots/a-en-desktop-full.png",
       "screenshot_sha256": "34744fd36c7662130d5b7b7920947a23535f6455786af92bca5094d33279daed",
       "qa": {
-        "title": "O02 — Proposed coworker coverage and response workflow — Local 083 review",
+        "title": "O02 \u2014 Proposed coworker coverage and response workflow \u2014 Local 083 review",
         "h1": 1,
         "horizontalOverflow": false,
         "brokenImages": [],
@@ -35,7 +34,7 @@
       "screenshot": "screenshots/a-en-mobile-full.png",
       "screenshot_sha256": "fb99812355c8f46e305901ece5601fb1904eb0918c387e6859565ca5408339da",
       "qa": {
-        "title": "O02 — Proposed coworker coverage and response workflow — Local 083 review",
+        "title": "O02 \u2014 Proposed coworker coverage and response workflow \u2014 Local 083 review",
         "h1": 1,
         "horizontalOverflow": false,
         "brokenImages": [],
