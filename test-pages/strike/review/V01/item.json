@@ -1,0 +1,50 @@
+{
+  "id": "V01",
+  "title": "Optional short video script captions and transcript",
+  "title_es": "",
+  "channel": "video",
+  "as_of": "2026-09-12",
+  "internal_only": false,
+  "proposed_destination": "English /strike/en/video/; Español /strike/es/video/ (draft review; no publication or delivery)",
+  "selected_variant": null,
+  "editor_approved_by": "",
+  "facts_rechecked_at": "",
+  "source_notes_spanish_reviewer": "",
+  "open_release_gates": [
+    "Refresh dated facts and confirm the intended audience and send/publication time.",
+    "Resolve item-specific release conditions in REVIEW.md.",
+    "Human Spanish translation and bilingual review."
+  ],
+  "variants": [
+    {
+      "key": "a",
+      "label": "Production script, captions and transcript",
+      "en": "../../en/video/a.md",
+      "es": "../../es/video/a.md",
+      "conditional": false,
+      "translation_status": "not_started",
+      "spanish_reviewer": "",
+      "approved_english_sha256": ""
+    },
+    {
+      "key": "b",
+      "label": "Accompanying accessible post",
+      "en": "../../en/video/b.md",
+      "es": "../../es/video/b.md",
+      "conditional": false,
+      "translation_status": "not_started",
+      "spanish_reviewer": "",
+      "approved_english_sha256": ""
+    }
+  ],
+  "citations": "none",
+  "route_slug": "video",
+  "sources": {
+    "en": "../../en/video/sources.md",
+    "es": "../../es/video/sources.md"
+  },
+  "proposed_paths": {
+    "en": "/strike/en/video/",
+    "es": "/strike/es/video/"
+  }
+}
