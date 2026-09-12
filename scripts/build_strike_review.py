@@ -6,13 +6,14 @@ import argparse
 import hashlib
 import html
 import json
+import os
 import re
 from pathlib import Path
 
 import markdown
 
 ROOT = Path(__file__).resolve().parents[1]
-REVIEWS = ROOT / 'test-pages' / 'strike-2026'
+REVIEWS = ROOT / 'test-pages' / 'strike'
 CSS = '''
 :root{--purple:#4c1d95;--light:#ede9fe;--ink:#1f2937;--muted:#4b5563;--line:#d1d5db}
 *{box-sizing:border-box}body{margin:0;color:var(--ink);background:#f9fafb;font:18px/1.65 Inter,Arial,sans-serif}
@@ -46,18 +47,22 @@ def render_md(value: str) -> str:
     return result.replace('<table>', '<div class="table-wrap" tabindex="0" role="region" aria-label="Scrollable comparison table"><table>').replace('</table>', '</table></div>')
 
 
-def page(title: str, body: str, *, lang: str = 'en', kind: str = '', meta: str = '', root: bool = False) -> str:
-    logo = '../../images/logo.png' if root else '../../../images/logo.png'
-    banner = 'REVIEW DRAFT · Translation and editorial approval pending · Not an announcement or work instruction'
+def relative(target: Path, current: Path) -> str:
+    return os.path.relpath(target, current.parent).replace(os.sep, '/')
+
+
+def page(title: str, body: str, *, output: Path, lang: str = 'en', kind: str = '', meta: str = '') -> str:
+    logo = relative(REVIEWS / 'assets/logo.png', output)
+    banner = 'STRIKE PREP · REVIEW DRAFT · Translation and editorial approval pending'
     if lang == 'es':
-        banner = 'BORRADOR PARA REVISIÓN · Pendiente de aprobación · No es un anuncio ni una instrucción laboral'
+        banner = 'STRIKE PREP · BORRADOR PARA REVISIÓN · Pendiente de aprobación'
     return f'''<!doctype html>
 <html lang="{lang}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="robots" content="noindex,nofollow"><title>{html.escape(title)} — Local 083 review</title><style>{CSS}</style></head>
+<meta name="robots" content="noindex,nofollow"><title>{html.escape(title)} — Strike Prep</title><style>{CSS}</style></head>
 <body class="{html.escape(kind)}"><a class="skip" href="#content">Skip to content</a><div class="review-banner">{banner}</div>
-<header class="masthead"><img src="{logo}" alt="SEIU 503" width="74" height="64"><div><div class="brand">SEIU 503 · Sublocal 083</div><p>Oregon State University · Our contract. Our voice.</p></div></header>
+<header class="masthead"><img src="{logo}" alt="SEIU 503" width="74" height="64"><div><div class="brand">SEIU 503 · Sublocal 083</div><p>Strike Prep · Member communications review</p></div></header>
 <main id="content" class="frame">{meta}<article><div class="prose">{body}</div></article></main>
-<footer class="footer">Local preview only. Drafted Sept. 12, 2026. No analytics, email delivery or publication.<br>For editorial review and translation.</footer></body></html>
+<footer class="footer">Drafted Sept. 12, 2026. For editorial review and translation.<br>Not an announcement or work instruction. No publication or email delivery.</footer></body></html>
 '''
 
 
@@ -67,16 +72,16 @@ def outputs(folder: Path) -> dict[Path, str]:
     for language in ('en', 'es'):
         for i, variant in enumerate(item['variants']):
             source = folder / variant[language]
-            if not source.exists() or not text_without_comments(source.read_text()):
-                continue
             body = source.read_text()
+            pending = not text_without_comments(body)
             headings = re.findall(r'^# (.+)$', body, re.M)
-            title = headings[0] if headings else (item.get('title_es') if language == 'es' else item['title'])
-            title = title or item['title']
-            if not headings:
+            title = headings[0] if headings else ((item.get('title_es') if language == 'es' else item['title']) or item['title'])
+            if pending:
+                title = 'Spanish translation pending'
+                body = '# Spanish translation pending\n\nThis page is reserved for the human Spanish translation of **' + item['title'] + '**. Translation and bilingual review have not been completed.\n\nUse the English link above to read the current source draft. The communications team will add the reviewed Spanish copy here.'
+            elif not headings:
                 body = '# ' + title + '\n\n' + body
-            sources = folder / 'sources' / f'{language}.md'
-            sources_text = sources.read_text() if sources.exists() else ''
+            sources_text = (folder / item['sources'][language]).read_text()
             sources_heading = 'Sources and references' if language == 'en' else 'Fuentes y referencias'
             sources_html = render_md(sources_text) if text_without_comments(sources_text) else '<p>Source-note translation awaits human review.</p>'
             if item.get('internal_only'):
@@ -84,17 +89,18 @@ def outputs(folder: Path) -> dict[Path, str]:
             elif variant.get('conditional'):
                 status = 'Conditional draft · this event has not been verified. Complete the factual panel before release.'
             else:
-                status = 'English source for translation · refresh time-sensitive facts before release.'
-            nav = ''.join(f'<a href="{v["key"]}.{language}.html"'+(' aria-current="page"' if v['key'] == variant['key'] else '')+f'>{html.escape(v["label"])}</a>' for v in item['variants'] if text_without_comments((folder / v[language]).read_text()))
-            translation = 'Not required for this internal plan' if item.get('internal_only') else variant['translation_status'].replace('_', ' ')
-            meta = f'<aside class="review-meta" aria-label="Editorial review status"><div class="eyebrow">{item["id"]} · {html.escape(item["channel"])}</div><p><strong>{status}</strong></p><p>Spanish: {html.escape(translation)}. Proposed destination: {html.escape(item["proposed_destination"])}.</p><nav class="variants" aria-label="Draft alternatives">{nav}</nav></aside>'
-            content = render_md(body)
-            if item.get('citations') == 'collapsed':
-                content += f'<details class="sources" id="sources"><summary>{sources_heading}</summary><div class="sources-body">{sources_html}</div></details>'
-            document = page(title, content, lang=language, kind=item['channel'], meta=meta)
-            result[folder / f'{variant["key"]}.{language}.html'] = document
-            if i == 0 and language == 'en':
-                result[folder / 'index.html'] = document
+                status = 'Source draft · refresh time-sensitive facts before release.'
+            translation = 'Optional for this internal plan; pending' if item.get('internal_only') else variant['translation_status'].replace('_', ' ')
+            output_dir = REVIEWS / language / item['route_slug']
+            for filename in ([variant['key'] + '.html', 'index.html'] if i == 0 else [variant['key'] + '.html']):
+                output = output_dir / filename
+                nav = ''.join(f'<a href="{v["key"]}.html"'+(' aria-current="page"' if v['key'] == variant['key'] else '')+f'>{html.escape(v["label"])}</a>' for v in item['variants'])
+                languages = ''.join(f'<a lang="{code}" hreflang="{code}" data-language="{code}" href="{relative(REVIEWS / code / item["route_slug"] / filename, output)}"'+(' aria-current="page"' if code == language else '')+f'>{label}</a>' for code, label in [('en', 'English'), ('es', 'Español')])
+                meta = f'<aside class="review-meta" aria-label="Editorial review status"><div class="eyebrow">{item["id"]} · {html.escape(item["channel"])}</div><p><strong>{status}</strong></p><p>Spanish: {html.escape(translation)}.</p><nav class="variants languages" aria-label="Language">{languages}</nav><nav class="variants" aria-label="Draft alternatives">{nav}</nav></aside>'
+                content = render_md(body)
+                if item.get('citations') == 'collapsed' and not pending:
+                    content += f'<details class="sources" id="sources"><summary>{sources_heading}</summary><div class="sources-body">{sources_html}</div></details>'
+                result[output] = page(title, content, output=output, lang='en' if pending else language, kind=item['channel'], meta=meta)
     return result
 
 
@@ -115,13 +121,19 @@ def validate(folder: Path, release: bool) -> list[str]:
     for variant in item['variants']:
         for language in ('en', 'es'):
             path = folder / variant[language]
+            expected = (REVIEWS / language / item['route_slug'] / (variant['key'] + '.md')).resolve()
+            if path.resolve() != expected or not expected.is_relative_to((REVIEWS / language).resolve()):
+                errors.append(f'invalid language source path: {variant[language]}')
             if not path.exists():
                 errors.append(f'missing translation/source slot: {path}')
+    if errors:
+        return [f'{folder.name}: {error}' for error in errors]
+    for variant in item['variants']:
         if not text_without_comments((folder / variant['en']).read_text()):
             errors.append(f'empty English source: {variant["key"]}')
         if variant['translation_status'] == 'approved' and variant.get('approved_english_sha256') != sha(folder / variant['en']):
             errors.append(f'Spanish approval invalidated by English change: {variant["key"]}')
-    if not text_without_comments((folder / 'sources/en.md').read_text()):
+    if not text_without_comments((folder / item['sources']['en']).read_text()):
         errors.append('missing editorial English source notes')
     if release:
         selected = next((v for v in item['variants'] if v['key'] == item.get('selected_variant')), None)
@@ -135,7 +147,7 @@ def validate(folder: Path, release: bool) -> list[str]:
                     errors.append('human Spanish review is required')
                 if not item.get('title_es'):
                     errors.append('Spanish title requires review')
-                if item.get('citations') == 'collapsed' and (not item.get('source_notes_spanish_reviewer') or not text_without_comments((folder / 'sources/es.md').read_text())):
+                if item.get('citations') == 'collapsed' and (not item.get('source_notes_spanish_reviewer') or not text_without_comments((folder / item['sources']['es']).read_text())):
                     errors.append('Spanish citations require review')
             for language in ('en', 'es') if not item.get('internal_only') else ('en',):
                 value = text_without_comments((folder / selected[language]).read_text())
@@ -150,15 +162,15 @@ def main() -> int:
     parser.add_argument('--check', action='store_true', help='Validate committed preview output without writing')
     parser.add_argument('--release-check', action='store_true', help='Additionally require completed translation and release conditions; never publishes')
     args = parser.parse_args()
-    folders = sorted(p.parent for p in REVIEWS.glob('*/item.json') if not args.item or p.parent.name == args.item)
+    folders = sorted(p.parent for p in (REVIEWS / 'review').glob('*/item.json') if not args.item or p.parent.name == args.item)
     if args.item and not folders:
         parser.error('unknown item ID')
     failures = []
     generated = 0
     if not args.item:
         overview = REVIEWS / 'OVERVIEW.md'
-        overview_page = page('Translation review workspace', render_md(overview.read_text()), root=True)
         overview_path = REVIEWS / 'index.html'
+        overview_page = page('Strike Prep review index', render_md(overview.read_text()), output=overview_path)
         if args.check:
             if not overview_path.exists() or overview_path.read_text() != overview_page:
                 failures.append('stale translation-workspace overview')
@@ -172,6 +184,7 @@ def main() -> int:
                 if not path.exists() or path.read_text() != content:
                     failures.append(f'stale preview: {path.relative_to(ROOT)}')
             elif not args.release_check:
+                path.parent.mkdir(parents=True, exist_ok=True)
                 path.write_text(content)
     if failures:
         print('\n'.join(failures))

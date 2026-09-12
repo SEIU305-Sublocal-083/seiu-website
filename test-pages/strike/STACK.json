@@ -1,0 +1,231 @@
+{
+  "version": 2,
+  "name": "Strike Prep",
+  "foundation": {
+    "branch": "strike-prep/review",
+    "pr": null,
+    "base": "main"
+  },
+  "stacks": [
+    {
+      "id": "guides",
+      "title": "Guides and Q&A",
+      "items": [
+        {
+          "id": "H01",
+          "branch": "strike-prep/h01-voting",
+          "pr": null,
+          "base": "strike-prep/review",
+          "position": 1
+        },
+        {
+          "id": "H02",
+          "branch": "strike-prep/h02-authorization",
+          "pr": null,
+          "base": "strike-prep/h01-voting",
+          "position": 2
+        },
+        {
+          "id": "H03",
+          "branch": "strike-prep/h03-proposals",
+          "pr": null,
+          "base": "strike-prep/h02-authorization",
+          "position": 3
+        },
+        {
+          "id": "H04",
+          "branch": "strike-prep/h04-pay-and-support",
+          "pr": null,
+          "base": "strike-prep/h03-proposals",
+          "position": 4
+        },
+        {
+          "id": "H05",
+          "branch": "strike-prep/h05-coverage-and-leave",
+          "pr": null,
+          "base": "strike-prep/h04-pay-and-support",
+          "position": 5
+        },
+        {
+          "id": "H06",
+          "branch": "strike-prep/h06-workplace-rights",
+          "pr": null,
+          "base": "strike-prep/h05-coverage-and-leave",
+          "position": 6
+        },
+        {
+          "id": "H07",
+          "branch": "strike-prep/h07-how-strikes-work",
+          "pr": null,
+          "base": "strike-prep/h06-workplace-rights",
+          "position": 7
+        },
+        {
+          "id": "Q01",
+          "branch": "strike-prep/q01-questions",
+          "pr": null,
+          "base": "strike-prep/h07-how-strikes-work",
+          "position": 8
+        }
+      ]
+    },
+    {
+      "id": "website",
+      "title": "Website and news",
+      "items": [
+        {
+          "id": "W01",
+          "branch": "strike-prep/w01-hub",
+          "pr": null,
+          "base": "strike-prep/review",
+          "position": 1
+        },
+        {
+          "id": "N01",
+          "branch": "strike-prep/n01-hub-news",
+          "pr": null,
+          "base": "strike-prep/w01-hub",
+          "position": 2
+        },
+        {
+          "id": "N02",
+          "branch": "strike-prep/n02-result-news",
+          "pr": null,
+          "base": "strike-prep/n01-hub-news",
+          "position": 3
+        },
+        {
+          "id": "N03",
+          "branch": "strike-prep/n03-meeting-recap",
+          "pr": null,
+          "base": "strike-prep/n02-result-news",
+          "position": 4
+        },
+        {
+          "id": "N04",
+          "branch": "strike-prep/n04-status-news",
+          "pr": null,
+          "base": "strike-prep/n03-meeting-recap",
+          "position": 5
+        },
+        {
+          "id": "W02",
+          "branch": "strike-prep/w02-website-plan",
+          "pr": null,
+          "base": "strike-prep/n04-status-news",
+          "position": 6
+        }
+      ]
+    },
+    {
+      "id": "emails",
+      "title": "Emails",
+      "items": [
+        {
+          "id": "E01",
+          "branch": "strike-prep/e01-voting-clarification",
+          "pr": null,
+          "base": "strike-prep/review",
+          "position": 1
+        },
+        {
+          "id": "E02",
+          "branch": "strike-prep/e02-sunday-email",
+          "pr": null,
+          "base": "strike-prep/e01-voting-clarification",
+          "position": 2
+        },
+        {
+          "id": "E03",
+          "branch": "strike-prep/e03-monday-email",
+          "pr": null,
+          "base": "strike-prep/e02-sunday-email",
+          "position": 3
+        },
+        {
+          "id": "E04",
+          "branch": "strike-prep/e04-tuesday-email",
+          "pr": null,
+          "base": "strike-prep/e03-monday-email",
+          "position": 4
+        },
+        {
+          "id": "E05",
+          "branch": "strike-prep/e05-result-email",
+          "pr": null,
+          "base": "strike-prep/e04-tuesday-email",
+          "position": 5
+        },
+        {
+          "id": "E06",
+          "branch": "strike-prep/e06-meeting-email",
+          "pr": null,
+          "base": "strike-prep/e05-result-email",
+          "position": 6
+        },
+        {
+          "id": "E07",
+          "branch": "strike-prep/e07-change-email",
+          "pr": null,
+          "base": "strike-prep/e06-meeting-email",
+          "position": 7
+        },
+        {
+          "id": "E08",
+          "branch": "strike-prep/e08-next-week-email",
+          "pr": null,
+          "base": "strike-prep/e07-change-email",
+          "position": 8
+        }
+      ]
+    },
+    {
+      "id": "organizing",
+      "title": "Organizing materials",
+      "items": [
+        {
+          "id": "O01",
+          "branch": "strike-prep/o01-strategy",
+          "pr": null,
+          "base": "strike-prep/review",
+          "position": 1
+        },
+        {
+          "id": "O02",
+          "branch": "strike-prep/o02-organizing",
+          "pr": null,
+          "base": "strike-prep/o01-strategy",
+          "position": 2
+        },
+        {
+          "id": "A01",
+          "branch": "strike-prep/a01-letters",
+          "pr": null,
+          "base": "strike-prep/o02-organizing",
+          "position": 3
+        },
+        {
+          "id": "P01",
+          "branch": "strike-prep/p01-poster",
+          "pr": null,
+          "base": "strike-prep/a01-letters",
+          "position": 4
+        },
+        {
+          "id": "P02",
+          "branch": "strike-prep/p02-handout",
+          "pr": null,
+          "base": "strike-prep/p01-poster",
+          "position": 5
+        },
+        {
+          "id": "V01",
+          "branch": "strike-prep/v01-video",
+          "pr": null,
+          "base": "strike-prep/p02-handout",
+          "position": 6
+        }
+      ]
+    }
+  ]
+}

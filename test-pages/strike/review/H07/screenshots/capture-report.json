@@ -1,0 +1,129 @@
+{
+  "item": "H07",
+  "capture_method": "Playwright screenshot of local rendered HTML",
+  "citation_display": "collapsed",
+  "pages": [
+    {
+      "file": "strike/en/how-a-strike-works/a.html",
+      "html_sha256": "bd1cb748d810f979bac7c76fe37a020520f9b8cece40ad039063cf4cad12a607",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/a-en-desktop-full.png",
+      "screenshot_sha256": "2b62af16d294cddbf5f0298f4dc63ae15aae5dd932df59d16446db5c3bb43c24",
+      "expanded_sources": {
+        "screenshot": "screenshots/a-en-desktop-sources-expanded-full.png",
+        "screenshot_sha256": "6b5de239b81d5ddf6580931cc1d3821b401d8b17f63a64a043ac1f993623f1a0",
+        "qa": {
+          "open": true,
+          "contentVisible": true,
+          "referenceLinks": 5,
+          "horizontalOverflow": false
+        }
+      },
+      "qa": {
+        "title": "How a strike would work and how to prepare — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 1,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 2952,
+        "languageSwitch": true,
+        "translationPending": false,
+        "documentLanguage": "en",
+        "citationKeyboardToggle": true
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/en/how-a-strike-works/a.html",
+      "html_sha256": "bd1cb748d810f979bac7c76fe37a020520f9b8cece40ad039063cf4cad12a607",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/a-en-mobile-full.png",
+      "screenshot_sha256": "2c7c7669f5f6868a285e1e5c116935158a251fdc28f422324c9023f19801e9f8",
+      "expanded_sources": {
+        "screenshot": "screenshots/a-en-mobile-sources-expanded-full.png",
+        "screenshot_sha256": "82033af33a04e83c76bf8053ed8c77f0d66897b68fc751a4b62704f558f7fb59",
+        "qa": {
+          "open": true,
+          "contentVisible": true,
+          "referenceLinks": 5,
+          "horizontalOverflow": false
+        }
+      },
+      "qa": {
+        "title": "How a strike would work and how to prepare — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 1,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 4644,
+        "languageSwitch": true,
+        "translationPending": false,
+        "documentLanguage": "en",
+        "citationKeyboardToggle": true
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/es/how-a-strike-works/a.html",
+      "html_sha256": "ed55fe7a41bb9fec748ab158ab38df45c63b515567c66bfb793f22e65f0d4e85",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/a-es-desktop-full.png",
+      "screenshot_sha256": "fd4fa6be431a45a640aac9c99d7b9a2c69e7a6ef384d7a592203ce438836e7fd",
+      "qa": {
+        "title": "Spanish translation pending — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1000,
+        "languageSwitch": true,
+        "translationPending": true,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    },
+    {
+      "file": "strike/es/how-a-strike-works/a.html",
+      "html_sha256": "ed55fe7a41bb9fec748ab158ab38df45c63b515567c66bfb793f22e65f0d4e85",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/a-es-mobile-full.png",
+      "screenshot_sha256": "34e315e8b748f456ece537bfffae90a65adbf282c13221a90c008d15f654b57b",
+      "qa": {
+        "title": "Spanish translation pending — Strike Prep",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "citationSections": 0,
+        "citationsClosedInitially": true,
+        "noindex": "noindex,nofollow",
+        "height": 1008,
+        "languageSwitch": true,
+        "translationPending": true,
+        "documentLanguage": "en"
+      },
+      "errors": []
+    }
+  ]
+}
