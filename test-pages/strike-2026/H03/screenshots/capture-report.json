@@ -1,0 +1,49 @@
+{
+  "item": "H03",
+  "capture_method": "Playwright screenshot of local rendered HTML",
+  "artwork": "none",
+  "pages": [
+    {
+      "file": "a.en.html",
+      "html_sha256": "55c8e0397a2a1d6329bb277e180643e9a1fdd0bac700f86d956d69898b2422bb",
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "screenshots/a-en-desktop-full.png",
+      "screenshot_sha256": "9b4439b4acf882d45526f11d5ed2eb16f79aa6bde30f0c5352180acd9cb2548d",
+      "qa": {
+        "title": "What we are bargaining for — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "sourcesVisible": true,
+        "noindex": "noindex,nofollow",
+        "height": 3000
+      },
+      "errors": []
+    },
+    {
+      "file": "a.en.html",
+      "html_sha256": "55c8e0397a2a1d6329bb277e180643e9a1fdd0bac700f86d956d69898b2422bb",
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "screenshots/a-en-mobile-full.png",
+      "screenshot_sha256": "01c4cfa7c928e75be45b444fac244650dab65cafeb74ffd432ceb42f6a02e0f4",
+      "qa": {
+        "title": "What we are bargaining for — Local 083 review",
+        "h1": 1,
+        "horizontalOverflow": false,
+        "brokenImages": [],
+        "sourcesVisible": true,
+        "noindex": "noindex,nofollow",
+        "height": 4543
+      },
+      "errors": []
+    }
+  ]
+}
