@@ -4,7 +4,7 @@
 
 The user approved public GitHub review of the complete package, including the three internal planning items. That approval does not authorize website publication, sending emails or distributing materials.
 
-Every item contains the full English copy, translator files, visible source notes and actual desktop/mobile screenshots. Spanish has not yet been supplied or approved by the human translator. Future-result and strike/agreement messages remain conditional.
+Every item contains the full English copy, translator files, editorial source notes and actual desktop/mobile screenshots. H01–H07 and Q01 display a collapsed “Sources and references” section; routine communications and action pages have no citation footer. Spanish has not yet been supplied or approved by the human translator. Future-result and strike/agreement messages remain conditional.
 
 | Item | Draft PR | English and translator files | Screenshots |
 |---|---|---|---|
