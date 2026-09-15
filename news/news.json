@@ -1,6 +1,51 @@
 [
   {
     "status": "published",
+    "title": "Strike benefits update",
+    "description": "Our union approved $80 per day in strike benefits, up to $400 per week, and a hardship fund for a potential Higher Education strike.",
+    "url": "/news/2026-09-15-strike-benefits-update.html",
+    "image": "/images/2026-bargaining-zoom-backgrounds.webp",
+    "alt": "2026 Higher Education Bargaining",
+    "tags": [
+      "Bargaining",
+      "Strike Benefits",
+      "2026 Bargaining"
+    ],
+    "author": {
+      "name": "SEIU Local 503 at Oregon State University",
+      "title": "Local 083"
+    },
+    "publishedAt": "2026-09-15",
+    "createdAt": "2026-09-15",
+    "updatedAt": "2026-09-15",
+    "featured": true,
+    "language": "en"
+  },
+  {
+    "status": "published",
+    "title": "Actualización sobre el apoyo económico durante una huelga",
+    "description": "Nuestro sindicato aprobó un apoyo de $80 por día, hasta $400 por semana, y un fondo de ayuda para una posible huelga de educación superior.",
+    "url": "/news/es/2026-09-15-actualizacion-apoyo-huelga.html",
+    "image": "/images/2026-bargaining-zoom-backgrounds.webp",
+    "alt": "Negociación de educación superior 2026",
+    "tags": [
+      "Bargaining",
+      "Strike Benefits",
+      "2026 Bargaining",
+      "Español"
+    ],
+    "author": {
+      "name": "SEIU Local 503 at Oregon State University",
+      "title": "Local 083"
+    },
+    "publishedAt": "2026-09-15",
+    "createdAt": "2026-09-15",
+    "updatedAt": "2026-09-15",
+    "featured": true,
+    "language": "es"
+  },
+  {
+    "status": "published",
     "title": "How to register for OSU Strike School",
     "description": "Follow these steps to select the correct OSU Strike School session in the state registration form and finish registering for Sept. 9.",
     "url": "/news/2026-09-01-how-to-register-for-osu-strike-school.html",
