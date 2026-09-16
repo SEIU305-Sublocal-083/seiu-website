@@ -1,6 +1,28 @@
 [
   {
     "status": "published",
+    "title": "UW workers’ fight is our fight, too",
+    "description": "Our SEIU 925 siblings at the University of Washington are organizing for fair pay and working conditions. Their fight connects with ours at OSU.",
+    "url": "/news/2026-09-16-uw-workers-solidarity.html",
+    "image": "/images/dc1bcafa-58bc-41d7-b01a-6fbada691fc8-uw-workers-we-keep-uw-running-procession.webp",
+    "alt": "A long procession of marchers in purple follows a “We keep UW running” banner along a campus walkway.",
+    "tags": [
+      "Bargaining",
+      "Solidarity",
+      "2026 Bargaining"
+    ],
+    "author": {
+      "name": "SEIU Local 503 at Oregon State University",
+      "title": "Local 083"
+    },
+    "publishedAt": "2026-09-16",
+    "createdAt": "2026-09-16",
+    "updatedAt": "2026-09-16",
+    "featured": true,
+    "language": "en"
+  },
+  {
+    "status": "published",
     "title": "Strike benefits update",
     "description": "Our union approved $80 per day in strike benefits, up to $400 per week, and a hardship fund for a potential Higher Education strike.",
     "url": "/news/2026-09-15-strike-benefits-update.html",
