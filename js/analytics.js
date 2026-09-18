@@ -122,7 +122,7 @@
     const eventIdFromUrl = (raw) => fileNameFromUrl(raw).replace(/\.html$/i, '').toLowerCase();
 
     const isCatSignup = (raw) => /seiu503\.tfaforms\.net\/759/i.test(raw || '');
-    const isMemberSignup = (raw) => /seiu503signup\.org/i.test(raw || '');
+    const isMemberSignup = (raw) => /^https:\/\/seiu503\.org\/join-us\/?(?:[?#]|$)/i.test(raw || '');
     const isTakeAction = (raw) => /www2\.seiu503\.org\/e\/171302\//i.test(raw || '');
     const isBargainingHub = (raw) => /\/2026-bargaining\/(?:index\.html)?$/i.test(parseUrl(raw)?.pathname || raw || '');
     const isStewardMailto = (raw) => /^mailto:083stewards@seiu503\.org/i.test(raw || '');
@@ -150,7 +150,7 @@
 
         if (eventName === 'member_signup_click') {
             props.signup_type = props.signup_type || 'member';
-            props.signup_destination_domain = 'seiu503signup.org';
+            props.signup_destination_domain = 'seiu503.org';
         }
 
         if (eventName === 'cat_signup_click') {

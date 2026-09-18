@@ -15,7 +15,7 @@ X-Frame-Options: DENY
 Start Content Security Policy in report-only mode, review reports, then enforce it:
 
 ```text
-Content-Security-Policy-Report-Only: default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; img-src 'self' https: data:; font-src 'self'; connect-src 'self' https://us.i.posthog.com https://us-assets.i.posthog.com; script-src 'self' 'unsafe-inline' https://us-assets.i.posthog.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline'; form-action 'self' https://seiu503signup.org https://seiu503.tfaforms.net; upgrade-insecure-requests
+Content-Security-Policy-Report-Only: default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; img-src 'self' https: data:; font-src 'self'; connect-src 'self' https://us.i.posthog.com https://us-assets.i.posthog.com; script-src 'self' 'unsafe-inline' https://us-assets.i.posthog.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline'; form-action 'self' https://seiu503.org https://seiu503.tfaforms.net; upgrade-insecure-requests
 ```
 
 The temporary `'unsafe-inline'` allowances are needed because legacy public pages still contain inline styles, UI scripts and event handlers. Removing those should be a follow-up hardening project. Do not enforce a stricter policy until the report-only logs show that navigation, analytics, calendar controls and archive pages still work.

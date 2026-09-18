@@ -6,6 +6,12 @@
     "description": "Continue to Local 083's current bargaining action for Oregon State University classified workers."
   },
   {
+    "slug": "signup",
+    "target": "https://seiu503.org/join-us/",
+    "title": "Become a Member",
+    "description": "Continue to the official SEIU Local 503 membership application to join or recommit as a union member."
+  },
+  {
     "slug": "pledge",
     "target": "https://canvasser-7217.my.site.com/survey/s/surveyvista?su=NaJMuv",
     "title": "Higher Ed Strike Pledge",

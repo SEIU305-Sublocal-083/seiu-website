@@ -9,7 +9,7 @@
         if (/^mailto:[^\s@?]+@[^\s@?]+(?:\?[^\s]*)?$/i.test(href)) return href;
         try {
             const url = new URL(href);
-            const allowedHosts = new Set(['www.local083.org', 'local083.org', 'seiu503signup.org', 'seiu503.tfaforms.net', 'www2.seiu503.org']);
+            const allowedHosts = new Set(['www.local083.org', 'local083.org', 'seiu503.org', 'seiu503.tfaforms.net', 'www2.seiu503.org']);
             return url.protocol === 'https:' && allowedHosts.has(url.hostname) ? url.toString() : '#';
         } catch (error) {
             return '#';
