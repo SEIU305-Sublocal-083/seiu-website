@@ -1,10 +1,10 @@
 {
   "schema": "local083-current-action-v1",
-  "updatedAt": "2026-08-18",
+  "updatedAt": "2026-09-18",
   "defaultAction": "higher-ed-strike-pledge",
   "slots": {
-    "homepageHero": "higher-ed-strike-pledge",
-    "homepagePromo": "higher-ed-strike-pledge",
+    "homepageHero": "strike-notice-delivered",
+    "homepagePromo": "strike-notice-delivered",
     "actionPageDefault": "higher-ed-strike-pledge"
   },
   "emailActions": {
@@ -336,6 +336,88 @@
         "headline": "Help carry the update back to your worksite",
         "body": "CAT members share updates, listen to coworkers, and help turn member readiness into visible workplace power.",
         "nextStep": "Invite one coworker who wants to help but has not joined CAT yet."
+      }
+    },
+    "strike-notice-delivered": {
+      "slug": "strike-notice-delivered",
+      "type": "bargaining_action",
+      "visibility": {
+        "from": "2026-09-18T00:00:00-07:00"
+      },
+      "eyebrow": "OSU workers are ready",
+      "headline": "STRIKE HAS BEEN DECLARED. NOTICE HAS BEEN GIVEN.",
+      "summary": "We delivered our strike notice to OSU leadership. Our intended strike start is September 28 at 6 a.m. We return to bargaining September 24 to fight for a fair contract that can avert a strike. Read the story. Know what comes next. Stand with your coworkers.",
+      "promoEyebrow": "United for a fair contract",
+      "promoHeadline": "We keep OSU running. We demand respect.",
+      "promoBody": "Fair wages. Strong health care. Job security. Read the notice, get prepared and talk with your coworkers about what comes next.",
+      "image": {
+        "src": "/images/6c1b0ab7-5dff-4b01-a1da-9cda46e5c729.png",
+        "alt": "A Local 083 member hands our union’s strike notice to OSU Provost Roy Haggerty in the Kerr Administration Building lobby.",
+        "width": 1200,
+        "height": 675
+      },
+      "details": [
+        {
+          "label": "Notice delivered",
+          "value": "September 18 — our union put OSU leadership on notice"
+        },
+        {
+          "label": "Intended strike start",
+          "value": "September 28 at 6 a.m."
+        },
+        {
+          "label": "Next bargaining date",
+          "value": "September 24 — fighting for an agreement that can avert a strike"
+        }
+      ],
+      "ctas": [
+        {
+          "id": "primary",
+          "label": "Read about it →",
+          "href": "/news/2026-09-18-osu-strike-notice-delivered.html",
+          "style": "primary",
+          "analytics": {
+            "event": "news_click",
+            "label": "Homepage Strike Notice Story",
+            "metadata": {
+              "placement": "homepage_hero",
+              "action_slug": "strike-notice-delivered"
+            }
+          }
+        },
+        {
+          "id": "secondary",
+          "label": "Get strike ready",
+          "href": "/strikeprep",
+          "style": "secondary",
+          "analytics": {
+            "event": "take_action_click",
+            "label": "Homepage Strike Preparation",
+            "metadata": {
+              "placement": "homepage_hero",
+              "action_slug": "strike-notice-delivered"
+            }
+          }
+        },
+        {
+          "id": "tertiary",
+          "label": "Read the Bargaining Hub",
+          "href": "/2026-bargaining/index.html",
+          "style": "outline",
+          "analytics": {
+            "event": "bargaining_hub_click",
+            "label": "Homepage Bargaining Hub",
+            "metadata": {
+              "placement": "homepage_promo",
+              "action_slug": "strike-notice-delivered"
+            }
+          }
+        }
+      ],
+      "actionPage": {
+        "headline": "STRIKE HAS BEEN DECLARED. NOTICE HAS BEEN GIVEN.",
+        "body": "We delivered our strike notice to OSU leadership. Our intended strike start is September 28 at 6 a.m. We return to bargaining September 24 to fight for a fair contract that can avert a strike. Read the story. Know what comes next. Stand with your coworkers.",
+        "nextStep": "Read the notice and prepare with your coworkers."
       }
     }
   },
