@@ -18,6 +18,7 @@ BASE_URL = "https://www.local083.org"
 EXCLUDED_DIRS = {
     ".git",
     ".github",
+    ".tmp",
     "jules-scratch",
     "marketing",
     "node_modules",

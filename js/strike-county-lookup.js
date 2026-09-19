@@ -17,7 +17,7 @@
     communityInAction: { name: 'Community in Action', phone: '541-889-1060 ext. 101', phoneHref: 'tel:+15418891060', url: 'https://communityinaction.info/' },
     csc: { name: 'Community Services Consortium', phone: '541-928-6335', phoneHref: 'tel:+15419286335', url: 'https://communityservices.us/' },
     klcas: { name: 'Klamath & Lake Community Action Services', phone: '541-882-3500', phoneHref: 'tel:+15418823500', url: 'https://www.klcas.org/' },
-    lane: { name: 'Lane County Human Services Division', phone: '541-682-3378', phoneHref: 'tel:+15416823378', url: 'https://www.lanecounty.org/government/county_departments/health_and_human_services/human_services_division' },
+    lane: { name: 'Lane County Human Services Division', phone: '541-682-3798', phoneHref: 'tel:+15416823798', url: 'https://www.lanecounty.org/government/county_departments/health_and_human_services/human_services_division' },
     mccac: { name: 'Mid-Columbia Community Action Council', phone: '541-298-5131', phoneHref: 'tel:+15412985131', url: 'https://www.mccac.com/' },
     multnomah: { name: 'Multnomah County Human Services Division', phone: '503-988-3691', phoneHref: 'tel:+15039883691', url: 'https://www.multco.us/dchs' },
     mwvcaa: { name: 'Mid-Willamette Valley Community Action Agency', phone: '503-399-9080', phoneHref: 'tel:+15033999080', url: 'https://mwvcaa.org/' },

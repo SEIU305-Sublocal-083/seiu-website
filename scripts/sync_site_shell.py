@@ -50,6 +50,8 @@ def active_section(relative_path: str) -> str | None:
     """Return the main-navigation section for a public path."""
 
     first = relative_path.split("/", 1)[0]
+    if first == "strike":
+        return "resources"
     if first in {"events", "news", "resources"}:
         return first
     stem = Path(relative_path).stem

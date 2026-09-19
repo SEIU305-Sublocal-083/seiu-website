@@ -31,6 +31,8 @@ class ShellAuditTests(unittest.TestCase):
             ("events.html", "/events.html"),
             ("news.html", "/news.html"),
             ("resources.html", "/resources.html"),
+            ("strike/index.html", "/resources.html"),
+            ("strike/en/index.html", "/resources.html"),
         ):
             with self.subTest(path=path):
                 self.assertEqual(shell.active_nav_href(path), expected)

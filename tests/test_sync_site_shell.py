@@ -25,6 +25,7 @@ class SyncSiteShellTests(unittest.TestCase):
             ("events.html", "events"),
             ("news.html", "news"),
             ("resources.html", "resources"),
+            ("strike/index.html", "resources"),
         ):
             with self.subTest(path=path):
                 self.assertEqual(shell.active_section(path), expected)

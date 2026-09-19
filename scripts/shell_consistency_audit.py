@@ -123,6 +123,8 @@ def active_nav_href(relative_path: str) -> str | None:
     """Return the canonical navigation target that owns a public page."""
 
     first = relative_path.split("/", 1)[0]
+    if first == "strike":
+        return "/resources.html"
     if first in {"events", "news", "resources"}:
         return f"/{first}.html"
     stem = Path(relative_path).stem

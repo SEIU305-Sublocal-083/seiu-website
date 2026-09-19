@@ -388,7 +388,7 @@
         {
           "id": "secondary",
           "label": "Get strike ready",
-          "href": "/strikeprep",
+          "href": "/strike/",
           "style": "secondary",
           "analytics": {
             "event": "take_action_click",

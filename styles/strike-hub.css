@@ -1,0 +1,112 @@
+/* Extends the shared strike-resource styles with the campaign hub layout. */
+.strike-hub .strike-hero-grid { gap: 3rem; padding-block: 4rem; }
+.strike-hub .strike-hero h1 { max-width: 13ch; }
+.strike-hub .strike-hero { background: radial-gradient(circle at 95% 12%, #fff3c8, transparent 30rem), linear-gradient(135deg, #f5f3ff, #fff 65%); }
+.strike-hub .strike-hero p { max-width: 42rem; }
+.strike-hub #member-questions { scroll-margin-top: 6rem; }
+.hub-photo { margin: 0; }
+.hub-photo img { aspect-ratio: 16 / 9; border: 5px solid #fff; border-radius: 1.1rem; box-shadow: 0 18px 42px #4c1d9524; object-fit: cover; width: 100%; }
+.hub-photo figcaption { color: #4b5563; font-size: .78rem; line-height: 1.6; margin-top: .85rem; }
+.hub-timeline-section { background: #fff; border-bottom: 1px solid #ddd6fe; padding-block: 2.75rem 3rem; }
+.hub-timeline-heading h2 { font-size: clamp(1.85rem, 3vw, 2.5rem); font-weight: 800; line-height: 1.15; margin-top: .45rem; }
+.hub-timeline-heading > p { color: #374151; line-height: 1.65; margin-top: .65rem; }
+.hub-timeline-heading a { color: #4c1d95; text-decoration: underline; text-underline-offset: 3px; }
+.hub-timeline-layout { align-items: start; display: grid; gap: 2.75rem; grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); margin-top: 2rem; }
+.hub-current-card { background: linear-gradient(145deg, #f5f3ff, #faf9ff); border: 1px solid #ddd6fe; border-radius: 1rem; overflow: hidden; }
+.hub-current-header { align-items: center; background: #fdb913; color: #3b176b; display: flex; flex-wrap: wrap; gap: .4rem 1rem; justify-content: space-between; padding: .9rem 1.65rem; }
+.hub-current-header > span { font-size: .75rem; font-weight: 850; letter-spacing: .08em; text-transform: uppercase; }
+.hub-current-header time { font-size: .73rem; font-weight: 600; }
+.hub-current-body { padding: 1.7rem 1.65rem; }
+.hub-current-body h3 { color: #4c1d95; font-size: clamp(1.7rem, 2.65vw, 2.25rem); font-weight: 800; letter-spacing: -.02em; line-height: 1.2; }
+.hub-current-body > p { color: #374151; font-size: .97rem; line-height: 1.75; margin-top: 1rem; }
+.hub-next-session { align-items: center; border-block: 1px solid #ddd6fe; display: flex; gap: 1rem; margin-top: 1.5rem; padding-block: 1.25rem; }
+.hub-next-date { background: #fff; border: 1px solid #ddd6fe; border-radius: .5rem; color: #4c1d95; display: grid; flex: 0 0 3.75rem; overflow: hidden; text-align: center; }
+.hub-next-date span { background: #ede9fe; font-size: .62rem; font-weight: 800; letter-spacing: .08em; padding: .25rem; text-transform: uppercase; }
+.hub-next-date strong { font-size: 1.6rem; font-variant-numeric: tabular-nums; line-height: 1.4; padding: .1rem; }
+.hub-next-label { color: #5b21b6; display: block; font-size: .68rem; font-weight: 800; letter-spacing: .07em; text-transform: uppercase; }
+.hub-next-session p { color: #4c1d95; font-size: 1.03rem; font-weight: 750; line-height: 1.4; margin-top: .2rem; }
+.hub-next-detail { color: #4b5563; display: block; font-size: .8rem; line-height: 1.6; margin-top: .3rem; }
+.hub-current-actions { align-items: stretch; display: flex; flex-direction: column; gap: .65rem; margin-top: 1.4rem; }
+.hub-current-actions .strike-btn { gap: .8rem; }
+.hub-current-actions .strike-btn span { font-size: 1.15rem; }
+.hub-current-questions { align-self: center; color: #4c1d95; font-size: .8rem; font-weight: 650; padding: .4rem; text-decoration: underline; text-underline-offset: 3px; }
+.hub-current-questions span { margin-left: .3rem; }
+.hub-current-actions a:focus-visible { outline: 3px solid #4c1d95; outline-offset: 4px; }
+.hub-milestones { list-style: none; margin: 0; padding: 0; }
+.hub-milestones > li { padding: 0 0 .8rem 3.25rem; position: relative; }
+.hub-milestones > li::before { border-left: 2px dashed #c4b5fd; bottom: -1.1rem; content: ""; left: .94rem; position: absolute; top: 1.1rem; }
+.hub-milestones > li.is-complete::before { border-left-style: solid; border-color: #4c1d95; }
+.hub-milestones > li:last-child { padding-bottom: 0; }
+.hub-milestones > li:last-child::before { display: none; }
+.hub-milestone-marker { align-items: center; background: #fff; border: 2px solid #a78bfa; border-radius: 50%; color: #4c1d95; display: flex; font-size: .77rem; font-weight: 800; height: 2rem; justify-content: center; left: 0; position: absolute; top: 1.1rem; width: 2rem; }
+.hub-milestones .is-complete .hub-milestone-marker { background: #4c1d95; border-color: #4c1d95; color: #fff; }
+.hub-milestones .is-current .hub-milestone-marker { background: #4c1d95; border-color: #4c1d95; box-shadow: 0 0 0 4px #fdb913; color: #fff; }
+.hub-milestone-copy { border: 1px solid transparent; border-radius: .8rem; padding: 1rem 1.15rem; }
+.hub-milestones .is-current .hub-milestone-copy { background: #fffbeb; border-color: #fdb913; }
+.hub-milestone-meta { align-items: center; display: flex; flex-wrap: wrap; gap: .4rem .7rem; justify-content: space-between; }
+.hub-milestone-meta time { color: #5b21b6; font-size: .7rem; font-weight: 750; letter-spacing: .025em; line-height: 1.5; text-transform: uppercase; }
+.hub-milestone-state { background: #f5f3ff; border-radius: .3rem; color: #5b21b6; font-size: .62rem; font-weight: 800; letter-spacing: .04em; line-height: 1.5; padding: .25rem .5rem; text-transform: uppercase; }
+.hub-milestones .is-current .hub-milestone-state { background: #fdb913; color: #3b176b; }
+.hub-milestones h3 { font-size: 1.18rem; font-weight: 700; line-height: 1.35; margin-top: .55rem; }
+.hub-milestone-copy p { color: #374151; font-size: .92rem; line-height: 1.7; margin-top: .45rem; }
+.hub-milestone-copy a { color: #4c1d95; text-decoration: underline; text-underline-offset: 3px; }
+.hub-countdown { align-items: center; background: #4c1d95; border: 1px solid #5b21b6; border-radius: 1rem; color: #fff; display: grid; gap: 1.75rem; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); margin-bottom: 2.75rem; padding: 1.75rem 2rem; }
+.hub-countdown-status { align-items: center; color: #ede9fe; display: flex; font-size: .72rem; font-weight: 750; gap: .75rem; letter-spacing: .08em; text-transform: uppercase; }
+.hub-countdown-pulse { background: #fdb913; border-radius: 50%; flex: 0 0 auto; height: .6rem; position: relative; width: .6rem; }
+.hub-countdown-pulse::after { border: 1px solid #fdb913; border-radius: 50%; content: ""; inset: -4px; position: absolute; }
+.hub-countdown[data-state="running"] .hub-countdown-pulse::after { animation: strike-countdown-pulse 2.2s ease-out infinite; }
+.hub-countdown h2 { color: #fff; font-size: clamp(1.7rem, 3vw, 2.3rem); font-weight: 700; line-height: 1.2; margin-top: .65rem; }
+.hub-countdown-date, .hub-countdown-message { color: #ede9fe; font-size: .85rem; line-height: 1.65; margin-top: .7rem; }
+.hub-countdown-date a { color: #fff; text-decoration: underline; text-underline-offset: 3px; }
+.hub-countdown-clock { min-width: 0; }
+.hub-countdown-digits { display: grid; gap: .6rem; grid-template-columns: repeat(4, minmax(0, 1fr)); text-align: center; }
+.hub-countdown-digits > div { background: #ffffff0c; border: 1px solid #ffffff30; border-radius: .6rem; padding: .8rem .25rem; }
+.hub-countdown-digits [data-countdown-unit] { display: block; font-size: clamp(1.7rem, 3.7vw, 3rem); font-variant-numeric: tabular-nums; font-weight: 750; line-height: 1.15; }
+.hub-countdown-unit { color: #ede9fe; display: block; font-size: .64rem; font-weight: 600; letter-spacing: .03em; margin-top: .45rem; text-transform: uppercase; }
+.hub-countdown-toggle { color: #ede9fe; display: block; font-size: .75rem; margin: .6rem 0 0 auto; padding: .35rem .1rem; text-decoration: underline; text-underline-offset: 3px; }
+.hub-countdown-toggle:focus-visible { outline: 2px solid #fdb913; outline-offset: 4px; }
+.hub-countdown [hidden] { display: none; }
+.hub-countdown[data-paused="true"] .hub-countdown-pulse::after, .hub-countdown[data-state="elapsed"] .hub-countdown-pulse::after { animation: none; }
+@keyframes strike-countdown-pulse { from { opacity: .85; transform: scale(.7); } to { opacity: 0; transform: scale(1.8); } }
+.hub-reading-layout { display: grid; gap: 3rem; grid-template-columns: minmax(0, 1fr); }
+.hub-reading-layout aside { align-self: start; background: #f5f3ff; border: 1px solid #ddd6fe; border-radius: 1rem; padding: 1.5rem; }
+.hub-reading-layout aside h2 { font-size: 1.4rem; font-weight: 700; }
+.hub-reading-layout aside p { color: #374151; font-size: .92rem; line-height: 1.7; margin-top: .8rem; }
+.hub-reading-layout aside a { color: #4c1d95; font-weight: 700; text-decoration: underline; }
+.hub-reading-layout .strike-copy { max-width: none; }
+.hub-status-link { color: #4c1d95; font-weight: 700; text-decoration: underline; }
+.hub-amount { color: #4c1d95; display: block; font-family: "Lora", serif; font-size: 2.25rem; line-height: 1.2; margin-bottom: .8rem; }
+.strike-hub .strike-card { padding: 1.5rem; }
+.strike-hub .strike-card p, .strike-hub .strike-card li { font-size: .98rem; }
+@media (min-width: 1000px) {
+    .strike-hub .strike-hero-grid { grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); }
+    .hub-reading-layout { grid-template-columns: minmax(0, 1fr) 18rem; }
+}
+@media (max-width: 999px) {
+    .hub-timeline-layout { gap: 1.75rem; grid-template-columns: 1fr; }
+    .hub-current-body h3 { font-size: 2rem; }
+    .hub-countdown { grid-template-columns: 1fr; padding: 1.35rem 1.15rem; }
+    .hub-countdown-digits [data-countdown-unit] { font-size: 2rem; }
+    .strike-hub .strike-hero-grid { gap: 2rem; padding-block: 2.5rem; }
+    .hub-timeline-section { padding-block: 2rem; }
+    .hub-amount { font-size: 2rem; }
+}
+@media (max-width: 399px) {
+    .hub-current-header { padding-inline: 1.15rem; }
+    .hub-current-body { padding: 1.3rem 1.15rem; }
+    .hub-current-body h3 { font-size: 1.7rem; }
+    .hub-next-session { gap: .75rem; }
+    .hub-milestones > li { padding-left: 2.75rem; }
+    .hub-milestone-copy { padding-inline: .8rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .hub-countdown[data-state="running"] .hub-countdown-pulse::after { animation: none; }
+}
+@media print {
+    .hub-photo { display: none; }
+    .hub-timeline-section { break-inside: avoid; }
+    .hub-current-card, .hub-milestones > li { break-inside: avoid; }
+    .hub-countdown { background: #fff; border-color: #4c1d95; }
+    .hub-countdown h2, .hub-countdown-date, .hub-countdown-date a { color: #4c1d95; }
+    .hub-countdown-status, .hub-countdown-clock, .hub-countdown-message { display: none; }
+}

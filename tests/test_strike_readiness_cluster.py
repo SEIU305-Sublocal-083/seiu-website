@@ -35,35 +35,27 @@ class StrikeReadinessClusterTests(unittest.TestCase):
                 for path in expected:
                     self.assertIn(path, source)
 
-    def test_every_page_connects_readiness_to_current_pledge(self):
+    def test_every_page_connects_to_current_strike_status(self):
         for filename in PAGES:
             source = (ROOT / "resources" / filename).read_text(encoding="utf-8")
             with self.subTest(filename=filename):
-                self.assertIn('href="/pledge"', source)
-                self.assertIn("not a strike-authorization vote", source)
+                self.assertRegex(source, r'href="/strike/?(?:#[^"]*)?"')
+                self.assertNotIn("Sign the Higher Ed strike pledge.", source)
 
-    def test_high_stakes_pages_show_review_date_and_sources(self):
-        review_dates = {
-            "strike-rights-oregon.html": "July 22, 2026",
-            "strike-pay-benefits.html": "July 20, 2026",
-            "strike-support.html": "July 22, 2026",
-        }
-        for filename, review_date in review_dates.items():
+    def test_every_guide_has_sources_without_claiming_leadership_approval(self):
+        for filename in PAGES:
             source = (ROOT / "resources" / filename).read_text(encoding="utf-8")
             with self.subTest(filename=filename):
-                self.assertIn(review_date, source)
                 self.assertIn('class="source-list"', source)
+                self.assertNotRegex(source.lower(), r"leadership (?:review|approval).*?pending")
+                self.assertNotIn("Reviewed by Local 083", source)
 
-    def test_rights_guide_accounts_for_current_contract_extension(self):
+    def test_rights_guide_uses_notice_without_certifying_individual_rights(self):
         source = (ROOT / "resources" / "strike-rights-oregon.html").read_text(encoding="utf-8")
-        self.assertIn("extended the current agreement through Aug. 31, 2026", source)
-        self.assertIn("Treat the no-strike clause as continuing during the reported extension", source)
-        self.assertIn("https://seiu503.org/get-involved/bargaining/higher-ed-bargaining-2026/", source)
-
-        layoff = (ROOT / "resources" / "layoff-workflow.html").read_text(encoding="utf-8")
-        self.assertIn("extended through August 31, 2026", layoff)
-        self.assertNotIn("agreement expired June 30, 2026", layoff)
-        self.assertIn("https://seiu503.org/get-involved/bargaining/higher-ed-bargaining-2026/", layoff)
+        self.assertIn("/news/2026-09-18-osu-strike-notice-delivered.html", source)
+        self.assertIn("ORS 243.726", source)
+        self.assertIn("ORS 243.672(3)", source)
+        self.assertNotIn("Mediation — current stage", source)
 
     def test_unemployment_copy_distinguishes_two_unpaid_requirements(self):
         hub = (ROOT / "resources" / "strike-readiness.html").read_text(encoding="utf-8")
@@ -75,7 +67,7 @@ class StrikeReadinessClusterTests(unittest.TestCase):
         for filename in PAGES:
             source = (ROOT / "resources" / filename).read_text(encoding="utf-8")
             with self.subTest(filename=filename):
-                self.assertIn("Reviewed by Local 083", source)
+                self.assertNotIn("Reviewed by Local 083", source)
                 self.assertIn("083execteam@seiu503.org?subject=Correction%20to%20Local%20083", source)
                 self.assertIn("What%20needs%20correction%3A", source)
                 self.assertIn(">Send a correction<", source)
@@ -150,7 +142,7 @@ class StrikeReadinessClusterTests(unittest.TestCase):
         self.assertNotIn('border-radius: 999px; color: #4b5563', stylesheet)
         self.assertNotIn("border-top: 4px solid #c4b5fd", stylesheet)
         self.assertIn("border-left: 4px solid var(--brand-purple)", stylesheet)
-        self.assertIn("grid-template-columns: repeat(6, max-content)", stylesheet)
+        self.assertIn("overflow-x: auto", stylesheet)
         self.assertIn("justify-content: space-between", stylesheet)
         self.assertIn("top: 4.0625rem", stylesheet)
         self.assertNotIn("top: 4.5rem", stylesheet)
@@ -192,23 +184,28 @@ class StrikeReadinessClusterTests(unittest.TestCase):
         self.assertIn("https://www.caporegon.org/find-help", support)
         self.assertNotIn("https://www.caporegon.org/find-services/", support)
 
-    def test_requested_strike_resource_copy_is_current_and_member_focused(self):
-        hub = (ROOT / "resources" / "strike-readiness.html").read_text(encoding="utf-8")
-        rights = (ROOT / "resources" / "strike-rights-oregon.html").read_text(encoding="utf-8")
-        history = (ROOT / "resources" / "strike-history.html").read_text(encoding="utf-8")
+    def test_tax_correction_and_benefit_limits_are_easy_to_find(self):
+        for relative in ["strike/index.html", "resources/strike-readiness.html",
+                         "resources/strike-pay-benefits.html"]:
+            source = (ROOT / relative).read_text(encoding="utf-8")
+            with self.subTest(relative=relative):
+                self.assertIn("Strike pay is taxable income", source)
+                self.assertIn("$400", source)
+                self.assertIn("https://www.irs.gov/publications/p525", source)
+        benefits = (ROOT / "resources/strike-pay-benefits.html").read_text(encoding="utf-8")
+        self.assertIn("not an automatic payment", benefits)
+        self.assertIn("A payable week is not a promised deposit date", benefits)
 
-        self.assertNotIn("settle every political question", hub)
-        self.assertIn("Whatever questions you still have about a possible strike", hub)
-
-        self.assertIn("<strong>Information reviewed:</strong> July 22, 2026.", rights)
-        self.assertNotIn("Legal information reviewed", rights)
-        self.assertNotIn("This page is educational, not individual legal advice", rights)
-        self.assertIn('aria-current="step"', rights)
-        self.assertIn("entered mediation on July 21, 2026", rights)
-        self.assertIn("not our classified Higher Ed bargaining unit", rights)
-
-        self.assertNotIn("A famous past victory does not prove", history)
-        self.assertIn("solidarity can move employers", history)
+    def test_sources_have_resolving_unique_fragment_targets(self):
+        paths = [ROOT / "resources" / name for name in PAGES]
+        paths += [ROOT / "strike/index.html"]
+        for path in paths:
+            source = path.read_text(encoding="utf-8")
+            ids = re.findall(r'\bid="([^"]+)"', source)
+            refs = re.findall(r'href="#([^"]+)"', source)
+            with self.subTest(path=str(path.relative_to(ROOT))):
+                self.assertEqual(len(ids), len(set(ids)), "Duplicate fragment targets")
+                self.assertTrue(set(refs).issubset(ids), set(refs) - set(ids))
 
     def test_resource_library_lists_cluster(self):
         source = (ROOT / "resources.html").read_text(encoding="utf-8")

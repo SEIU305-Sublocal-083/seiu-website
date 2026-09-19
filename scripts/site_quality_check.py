@@ -78,7 +78,7 @@ def is_ignorable_url(url: str) -> bool:
         return True
     if url.startswith("#"):
         return True
-    for prefix in ("mailto:", "tel:", "javascript:", "data:"):
+    for prefix in ("mailto:", "tel:", "sms:", "javascript:", "data:"):
         if url.startswith(prefix):
             return True
     return False

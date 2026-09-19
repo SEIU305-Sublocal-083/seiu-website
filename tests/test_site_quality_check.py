@@ -27,6 +27,17 @@ class PathExistsTests(unittest.TestCase):
 
 
 class HtmlLinkTests(unittest.TestCase):
+    def test_sms_contacts_are_not_treated_as_local_file_paths(self):
+        with TemporaryDirectory() as tmp:
+            page = Path(tmp) / "support.html"
+            page.write_text('<a href="sms:898211">Text 211</a>', encoding="utf-8")
+            original_root = sq.ROOT
+            try:
+                sq.ROOT = Path(tmp)
+                self.assertEqual(sq.check_html_links([page]), [])
+            finally:
+                sq.ROOT = original_root
+
     def test_flags_active_hash_only_links_but_not_commented_markup(self):
         with TemporaryDirectory() as tmp:
             root = Path(tmp)
@@ -55,6 +66,8 @@ class PublicPageDiscoveryTests(unittest.TestCase):
             (root / "action" / "index.html").write_text("<html></html>", encoding="utf-8")
             (root / "test-pages").mkdir()
             (root / "test-pages" / "draft.html").write_text("<html></html>", encoding="utf-8")
+            (root / ".tmp" / "review").mkdir(parents=True)
+            (root / ".tmp" / "review" / "private-notes.html").write_text("<p>Not public</p>", encoding="utf-8")
             (root / "scheduled.html").write_text('<meta name="robots" content="noindex">', encoding="utf-8")
 
             pages = pp.discover_public_pages(root)

@@ -27,7 +27,7 @@ body[data-site-shell-added] > main {
     width: 100%;
 }
 h1, h2, h3, h4 { color: var(--brand-purple-dark); font-family: "Lora", serif; }
-a:focus-visible, button:focus-visible, select:focus-visible { outline: 3px solid var(--brand-purple); outline-offset: 3px; }
+a:focus-visible, button:focus-visible, select:focus-visible, summary:focus-visible { outline: 3px solid var(--brand-purple); outline-offset: 3px; }
 
 .strike-shell { margin-inline: auto; max-width: 74rem; padding-inline: 1.5rem; width: 100%; }
 .strike-nav-wrap { backdrop-filter: blur(13px); background: rgba(255, 255, 255, .9); border-bottom: 1px solid #e5e7eb; position: sticky; top: 4.0625rem; z-index: 40; }
@@ -48,6 +48,7 @@ a:focus-visible, button:focus-visible, select:focus-visible { outline: 3px solid
 .strike-hero p { color: var(--text-secondary); font-size: 1.05rem; line-height: 1.65; margin-top: 1rem; max-width: 44rem; }
 .strike-hero-card { background: var(--brand-purple-dark); border: 1px solid #5b21b6; border-radius: 1.1rem; box-shadow: 0 18px 42px rgba(76, 29, 149, .14); color: #fff; padding: 1.4rem; }
 .strike-hero-card h2 { color: #fff; font-size: 1.45rem; font-weight: 800; line-height: 1.2; }
+.strike-hero-card .eyebrow { color: #ede9fe; }
 .strike-hero-card p { color: #ede9fe; font-size: .9rem; margin-top: .6rem; }
 .strike-hero-card .strike-btn.dark { background: #fff; color: var(--brand-purple-dark); }
 .strike-hero-card .strike-btn.dark:hover { background: var(--brand-purple-light); }
@@ -117,12 +118,36 @@ a:focus-visible, button:focus-visible, select:focus-visible { outline: 3px solid
 .editorial-trust .trust-links { align-items: flex-start; display: flex; flex-wrap: wrap; gap: .65rem 1rem; }
 .editorial-trust a { color: var(--brand-purple-dark); font-size: .82rem; }
 
+/* The strike hub and longer answers share the resource guides' visual system. */
+.review-banner { background: #f5f3ff; border-bottom: 1px solid #ddd6fe; color: #4c1d95; font-size: .82rem; line-height: 1.6; padding-block: .75rem; }
+.review-banner a { color: inherit; font-weight: 700; text-decoration: underline; }
+.strike-hero a:not(.strike-btn) { text-decoration: underline; text-underline-offset: 3px; }
+.strike-hero-card a:not(.strike-btn) { color: #fff; }
+.strike-card ul, .strike-copy ul { list-style: disc; }
+.strike-card ol, .strike-copy ol, .source-list { list-style: decimal; }
+.strike-copy .action-list, .strike-copy .timeline, .strike-copy .contact-list { list-style: none; }
+.source-list li, .strike-copy h2, .strike-copy h3, .strike-faq { scroll-margin-top: 8rem; }
+.strike-copy, .source-list, .strike-card { overflow-wrap: anywhere; }
+.strike-faq { border-bottom: 1px solid #ddd6e8; padding-block: 1.2rem; }
+.strike-faq summary { color: var(--brand-purple-dark); cursor: pointer; font-family: "Lora", serif; font-size: 1.25rem; font-weight: 700; line-height: 1.4; }
+.strike-faq[open] summary { margin-bottom: .8rem; }
+.strike-faq p + p, .strike-faq p + ul { margin-top: .75rem; }
+.strike-faq-list { max-width: 58rem; margin-top: 1.5rem; }
+.strike-faq-list .strike-copy { max-width: 54rem; }
+.strike-topic-links { display: flex; flex-wrap: wrap; gap: .6rem 1.3rem; list-style: none !important; margin: 1.25rem 0 0 !important; }
+.strike-topic-links a { display: inline-block; padding-block: .35rem; }
+.strike-table-wrap { overflow-x: auto; }
+@media print {
+    .review-banner { display: block; }
+    .strike-faq > :not(summary) { display: block !important; }
+}
+
 @media (min-width: 640px) {
     .strike-grid.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .strike-grid.three { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (min-width: 760px) {
-    .strike-nav { display: grid; gap: 1rem; grid-template-columns: repeat(6, max-content); justify-content: space-between; overflow-x: visible; }
+    .strike-nav { display: flex; gap: 1.5rem; justify-content: space-between; overflow-x: auto; }
 }
 @media (max-width: 639px) {
     .pledge-callout { align-items: stretch; flex-direction: column; }
