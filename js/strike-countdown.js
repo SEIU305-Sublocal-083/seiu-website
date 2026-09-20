@@ -10,13 +10,10 @@
   const heading = countdown.querySelector('[data-countdown-heading]');
   const status = countdown.querySelector('[data-countdown-status]');
   const message = countdown.querySelector('[data-countdown-message]');
-  const toggle = countdown.querySelector('[data-countdown-toggle]');
   const units = ['days', 'hours', 'minutes', 'seconds'];
-  let paused = false;
   let interval;
 
   function render() {
-    if (paused) return;
     const remaining = Math.max(0, Math.ceil((start - Date.now()) / 1000));
     if (remaining === 0) {
       // A deadline alone cannot establish that a strike actually went ahead.
@@ -26,7 +23,6 @@
       message.textContent = 'Follow our union’s latest update for strike status and instructions.';
       message.hidden = false;
       digits.hidden = true;
-      toggle.hidden = true;
       clearInterval(interval);
       return;
     }
@@ -44,17 +40,8 @@
     digits.setAttribute('aria-label', values.map((value, index) => `${value} ${units[index]}`).join(', ') + ' until the intended strike start');
     heading.textContent = 'Strike starts in';
     digits.hidden = false;
-    toggle.hidden = false;
   }
 
-  toggle.addEventListener('click', () => {
-    paused = !paused;
-    countdown.dataset.paused = String(paused);
-    toggle.setAttribute('aria-pressed', String(paused));
-    toggle.textContent = paused ? 'Resume countdown' : 'Pause countdown';
-    if (paused) heading.textContent = 'Countdown paused';
-    else render();
-  });
   document.addEventListener('visibilitychange', () => {
     if (!document.hidden) render();
   });

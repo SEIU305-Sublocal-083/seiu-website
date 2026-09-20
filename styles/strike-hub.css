@@ -63,10 +63,8 @@
 .hub-countdown-digits > div { background: #ffffff0c; border: 1px solid #ffffff30; border-radius: .6rem; padding: .8rem .25rem; }
 .hub-countdown-digits [data-countdown-unit] { display: block; font-size: clamp(1.7rem, 3.7vw, 3rem); font-variant-numeric: tabular-nums; font-weight: 750; line-height: 1.15; }
 .hub-countdown-unit { color: #ede9fe; display: block; font-size: .64rem; font-weight: 600; letter-spacing: .03em; margin-top: .45rem; text-transform: uppercase; }
-.hub-countdown-toggle { color: #ede9fe; display: block; font-size: .75rem; margin: .6rem 0 0 auto; padding: .35rem .1rem; text-decoration: underline; text-underline-offset: 3px; }
-.hub-countdown-toggle:focus-visible { outline: 2px solid #fdb913; outline-offset: 4px; }
 .hub-countdown [hidden] { display: none; }
-.hub-countdown[data-paused="true"] .hub-countdown-pulse::after, .hub-countdown[data-state="elapsed"] .hub-countdown-pulse::after { animation: none; }
+.hub-countdown[data-state="elapsed"] .hub-countdown-pulse::after { animation: none; }
 @keyframes strike-countdown-pulse { from { opacity: .85; transform: scale(.7); } to { opacity: 0; transform: scale(1.8); } }
 .hub-reading-layout { display: grid; gap: 3rem; grid-template-columns: minmax(0, 1fr); }
 .hub-reading-layout aside { align-self: start; background: #f5f3ff; border: 1px solid #ddd6fe; border-radius: 1rem; padding: 1.5rem; }
