@@ -121,9 +121,12 @@
 /* The complete guide remains in this page, with native disclosures for scanning. */
 .hub-page-nav { padding-block: 1.5rem; }
 .hub-page-nav > p { color: #4c1d95; font-size: .75rem; font-weight: 800; letter-spacing: .08em; margin-bottom: .75rem; text-transform: uppercase; }
-.hub-page-nav > div { display: flex; flex-wrap: wrap; gap: .6rem; }
-.hub-page-nav a { background: #fff; border: 1px solid #ddd6fe; border-radius: .5rem; color: #4c1d95; font-size: .82rem; font-weight: 700; padding: .7rem .85rem; }
+.hub-page-nav > div { display: grid; gap: .6rem; grid-auto-rows: 1fr; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.hub-page-nav a { align-items: center; background: #fff; border: 1px solid #ddd6fe; border-radius: .5rem; color: #4c1d95; display: flex; font-size: .82rem; font-weight: 700; justify-content: center; line-height: 1.4; min-height: 3rem; min-width: 0; overflow-wrap: anywhere; padding: .7rem .85rem; text-align: center; }
 .hub-page-nav a:hover { background: #ede9fe; }
+@media (min-width: 760px) {
+    .hub-page-nav > div { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+}
 #full-guide, .hub-topic, .hub-topic [id], .hub-source-group { scroll-margin-top: 6rem; }
 .hub-topics { display: grid; gap: 1rem; }
 .hub-topic { background: #fff; border: 1px solid #ddd6fe; border-radius: .9rem; min-width: 0; }
