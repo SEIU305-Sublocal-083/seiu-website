@@ -117,3 +117,63 @@
     .hub-countdown h2, .hub-countdown-date, .hub-countdown-date a { color: #4c1d95; }
     .hub-countdown-status, .hub-countdown-clock, .hub-countdown-message { display: none; }
 }
+
+/* The complete guide remains in this page, with native disclosures for scanning. */
+.hub-page-nav { padding-block: 1.5rem; }
+.hub-page-nav > p { color: #4c1d95; font-size: .75rem; font-weight: 800; letter-spacing: .08em; margin-bottom: .75rem; text-transform: uppercase; }
+.hub-page-nav > div { display: flex; flex-wrap: wrap; gap: .6rem; }
+.hub-page-nav a { background: #fff; border: 1px solid #ddd6fe; border-radius: .5rem; color: #4c1d95; font-size: .82rem; font-weight: 700; padding: .7rem .85rem; }
+.hub-page-nav a:hover { background: #ede9fe; }
+#full-guide, .hub-topic, .hub-topic [id], .hub-source-group { scroll-margin-top: 6rem; }
+.hub-topics { display: grid; gap: 1rem; }
+.hub-topic { background: #fff; border: 1px solid #ddd6fe; border-radius: .9rem; min-width: 0; }
+.hub-topic > summary { align-items: start; cursor: pointer; display: flex; gap: 1rem; list-style: none; padding: 1.5rem; }
+.hub-topic > summary::-webkit-details-marker { display: none; }
+.hub-topic-number { align-items: center; background: #ede9fe; border-radius: .45rem; color: #4c1d95; display: inline-flex; flex: 0 0 2.5rem; font-size: .78rem; font-weight: 800; height: 2.5rem; justify-content: center; }
+.hub-topic-label { display: grid; flex: 1; gap: .45rem; min-width: 0; }
+.hub-topic-label strong { color: #4c1d95; font-family: "Lora", serif; font-size: 1.3rem; line-height: 1.3; }
+.hub-topic-label > span { color: #4b5563; font-size: .9rem; line-height: 1.6; max-width: 48rem; }
+.hub-topic-icon { color: #4c1d95; flex: 0 0 1rem; font-size: 1.6rem; line-height: 1.2; }
+.hub-topic[open] > summary { background: #f5f3ff; border-bottom: 1px solid #ddd6fe; border-radius: .9rem .9rem 0 0; }
+.hub-topic[open] > summary .hub-topic-icon { transform: rotate(45deg); }
+.hub-topic-body { color: #374151; line-height: 1.7; overflow-wrap: anywhere; padding: 1.5rem 2rem 2rem; }
+.hub-topic-body .strike-shell { margin: 0; max-width: none; padding-inline: 0; width: 100%; }
+.hub-topic-body .strike-section { background: none; padding-block: 1.5rem; }
+.hub-topic-body .strike-section + .strike-section { border-top: 1px solid #ede9fe; margin-top: .5rem; }
+.hub-topic-body .strike-copy { font-size: 1rem; max-width: 58rem; }
+.hub-topic-body h3 { font-size: 1.55rem; font-weight: 800; line-height: 1.3; margin-block: .45rem 1rem; }
+.hub-topic-body h4 { font-size: 1.15rem; font-weight: 800; line-height: 1.4; margin-block: 1.5rem .65rem; }
+.hub-topic-body .strike-card h4 { margin-top: 0; }
+.hub-topic-body a:not(.strike-btn) { color: #4c1d95; text-decoration: underline; text-underline-offset: 3px; }
+.hub-topic-body .strike-heading { margin-bottom: 1.25rem; }
+.hub-topic-callout { margin-block: 1rem 1.5rem; }
+.hub-topic-callout > p + p { margin-top: .7rem; }
+.hub-topic-body .quick-table { table-layout: fixed; }
+.hub-topic-body .quick-table th, .hub-topic-body .quick-table td { overflow-wrap: anywhere; }
+.hub-county-directory { border-top: 1px solid #ddd6fe; margin-top: 1.5rem; padding-top: 1rem; }
+.hub-county-directory > summary, .hub-source-group > summary { color: #4c1d95; cursor: pointer; font-weight: 750; line-height: 1.5; padding-block: .5rem; }
+.hub-table-scroll { max-width: 100%; overflow-x: auto; }
+.hub-county-directory .quick-table { min-width: 30rem; }
+.hub-source-group { border-top: 1px solid #ddd6fe; margin-top: 1.25rem; padding-top: .5rem; }
+.hub-source-group .source-list { padding-bottom: 1rem; }
+.hub-source-note { color: #4b5563; font-size: .85rem; line-height: 1.7; margin-block: 1.5rem 1rem; max-width: 58rem; }
+@media (max-width: 599px) {
+    .hub-topic > summary { gap: .65rem; padding: 1.1rem .85rem; }
+    .hub-topic-number { flex-basis: 1.9rem; height: 1.9rem; }
+    .hub-topic-label strong { font-size: 1.12rem; }
+    .hub-topic-body { padding: 1.15rem .9rem; }
+    .hub-topic-body .strike-card { padding: 1rem; }
+    .hub-topic-body h3 { font-size: 1.35rem; }
+    .hub-topic-body .quick-table th, .hub-topic-body .quick-table td { padding: .5rem; }
+}
+@media print {
+    .hub-page-nav, [data-expand-guides], .hub-topic-icon { display: none; }
+    .hub-topic { border: 0; }
+    .hub-topic > summary { break-after: avoid; padding-inline: 0; }
+    .hub-topic-body { padding-inline: 0; }
+    .hub-table-scroll { overflow: visible; }
+    .hub-county-directory .quick-table { min-width: 0; }
+}
+#full-guide > .strike-heading { margin-bottom: 1.5rem; }
+[data-expand-guides] { margin-top: 1rem; }
+[data-expand-guides][hidden] { display: none; }
