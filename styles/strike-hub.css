@@ -1,5 +1,5 @@
 /* Extends the shared strike-resource styles with the campaign hub layout. */
-.strike-hub .strike-hero-grid { gap: 3rem; padding-block: 4rem; }
+.strike-hub .strike-hero-grid { gap: 3rem; grid-template-columns: minmax(0, 1fr); padding-block: 4rem; }
 .strike-hub .strike-hero h1 { max-width: 13ch; }
 .strike-hub .strike-hero { background: radial-gradient(circle at 95% 12%, #fff3c8, transparent 30rem), linear-gradient(135deg, #f5f3ff, #fff 65%); }
 .strike-hub .strike-hero p { max-width: 42rem; }
@@ -66,28 +66,92 @@
 .hub-countdown [hidden] { display: none; }
 .hub-countdown[data-state="elapsed"] .hub-countdown-pulse::after { animation: none; }
 @keyframes strike-countdown-pulse { from { opacity: .85; transform: scale(.7); } to { opacity: 0; transform: scale(1.8); } }
-.hub-reading-layout { display: grid; gap: 3rem; grid-template-columns: minmax(0, 1fr); }
-.hub-reading-layout aside { align-self: start; background: #f5f3ff; border: 1px solid #ddd6fe; border-radius: 1rem; padding: 1.5rem; }
-.hub-reading-layout aside h2 { font-size: 1.4rem; font-weight: 700; }
-.hub-reading-layout aside p { color: #374151; font-size: .92rem; line-height: 1.7; margin-top: .8rem; }
-.hub-reading-layout aside a { color: #4c1d95; font-weight: 700; text-decoration: underline; }
-.hub-reading-layout .strike-copy { max-width: none; }
 .hub-status-link { color: #4c1d95; font-weight: 700; text-decoration: underline; }
 .hub-amount { color: #4c1d95; display: block; font-family: "Lora", serif; font-size: 2.25rem; line-height: 1.2; margin-bottom: .8rem; }
 .strike-hub .strike-card { padding: 1.5rem; }
 .strike-hub .strike-card p, .strike-hub .strike-card li { font-size: .98rem; }
-.hub-faq-jumps { display: flex; flex-wrap: wrap; gap: .55rem; margin-block: 1.4rem 2rem; }
-.strike-copy .hub-faq-jumps a { background: #fff; border: 1px solid #ddd6fe; border-radius: .45rem; font-size: .8rem; font-weight: 650; line-height: 1.5; padding: .65rem .8rem; text-decoration: none; }
-.hub-faq-jumps a:hover { background: #ede9fe; border-color: #a78bfa; }
-.hub-faq-jumps a:focus-visible, .hub-faq-group summary:focus-visible { outline: 3px solid #4c1d95; outline-offset: 4px; }
-.hub-faq-group + .hub-faq-group { margin-top: 2.75rem; }
-.strike-copy .hub-faq-group h3 { align-items: center; color: #4c1d95; display: flex; gap: .85rem; font-size: 1.45rem; line-height: 1.3; margin: 0 0 .45rem; }
-.hub-faq-group h3 > span { align-items: center; background: #ede9fe; border-radius: .45rem; display: inline-flex; flex: 0 0 2.25rem; font-family: "Inter", sans-serif; font-size: .75rem; font-weight: 800; height: 2.25rem; justify-content: center; }
 .hub-faq-subanswer { background: #f5f3ff; border-left: 3px solid #7c3aed; margin-block: 1rem; padding: 1rem 1.15rem; }
 .hub-faq-subanswer h4 { color: #4c1d95; font-family: "Inter", sans-serif; font-size: .95rem; font-weight: 800; margin-bottom: .5rem; }
+/* Topic-level graphics distinguish the questions without adding a repeated icon to every row. */
+.hub-qa-intro { align-items: center; display: grid; gap: 1.5rem 3rem; margin-bottom: 2rem; }
+.hub-qa-intro .strike-copy { max-width: none; }
+.hub-qa-intro .strike-copy h2 { margin-top: .5rem; }
+.hub-qa-intro .strike-copy > p { max-width: 38rem; }
+.hub-faq-jumps { display: flex; flex-wrap: wrap; gap: 0 1.2rem; margin-top: 1rem; }
+.strike-copy .hub-faq-jumps a { align-items: center; display: inline-flex; font-size: .85rem; font-weight: 650; min-height: 2.75rem; text-underline-offset: 4px; }
+.hub-qa-layout a:hover { text-decoration-thickness: 2px; }
+.hub-qa-layout a:focus-visible { outline: 3px solid #4c1d95; outline-offset: 4px; }
+.hub-qa-photo { margin: 0; }
+.hub-qa-photo > img { aspect-ratio: 2 / 1; border-radius: .85rem; display: block; height: auto; object-fit: cover; object-position: center 55%; width: 100%; }
+.hub-qa-photo figcaption { color: #4b5563; font-size: .75rem; line-height: 1.6; margin-top: .6rem; }
+.hub-qa-photo a, .hub-qa-answer a, .hub-qa-contact a { color: #4c1d95; font-weight: 650; text-decoration: underline; text-underline-offset: 3px; }
+.hub-faq-grid { align-items: start; display: grid; gap: 1.5rem; grid-template-columns: minmax(0, 1fr); }
+.hub-faq-group { background: #fff; border: 1px solid #b79bda; border-radius: 1rem; min-width: 0; }
+.hub-qa-group-heading { align-items: center; background: #4c1d95; border-bottom: 1px solid #4c1d95; border-radius: 1rem 1rem 0 0; display: flex; gap: .9rem; padding: 1.15rem 1.4rem; }
+.hub-faq-group:nth-child(even) .hub-qa-group-heading { background: #fdb913; border-bottom-color: #d49400; }
+.hub-qa-topic-icon { align-items: center; background: #fdb913; border: 1px solid transparent; border-radius: .7rem; display: inline-flex; flex: 0 0 2.75rem; height: 2.75rem; justify-content: center; }
+.hub-qa-topic-icon img { height: 1.75rem; width: 1.75rem; }
+.hub-qa-group-heading h3 { color: #fff; font-size: 1.4rem; font-weight: 700; line-height: 1.25; margin: 0; }
+.hub-faq-group:nth-child(even) .hub-qa-group-heading h3 { color: #3b176b; }
+.hub-faq-group:nth-child(even) .hub-qa-topic-icon { background: #4c1d95; }
+.hub-faq-group:nth-child(even) .hub-qa-topic-icon img { filter: invert(1); }
+.hub-faq-group .strike-faq { border-bottom: 0; padding: 0; scroll-margin-top: 6rem; }
+.hub-faq-group .strike-faq + .strike-faq { border-top: 1px solid #ede9f2; }
+.hub-faq-group .strike-faq > summary { align-items: center; color: #30243c; display: flex; font-family: "Inter", sans-serif; font-size: 1rem; font-weight: 650; gap: .9rem; justify-content: space-between; line-height: 1.55; list-style: none; margin: 0; min-height: 3.75rem; padding: 1.1rem 1.4rem; }
+.hub-faq-group .strike-faq > summary::-webkit-details-marker { display: none; }
+.hub-faq-group .strike-faq > summary:hover { background: #faf8ff; }
+.hub-faq-group .strike-faq > summary:focus-visible { border-radius: .5rem; outline: 3px solid #4c1d95; outline-offset: -4px; }
+.hub-qa-question { min-width: 0; }
+.hub-qa-toggle { border: 1px solid #7c3cad; border-radius: 50%; color: #4c1d95; flex: 0 0 1.5rem; height: 1.5rem; position: relative; }
+.hub-qa-toggle::before, .hub-qa-toggle::after { background: currentColor; content: ""; height: 2px; left: calc(50% - 4px); position: absolute; top: calc(50% - 1px); width: 8px; }
+.hub-qa-toggle::after { transform: rotate(90deg); }
+.hub-faq-group .strike-faq[open] > summary { color: #4c1d95; }
+.hub-faq-group .strike-faq[open] .hub-qa-toggle { background: #4c1d95; border-color: #4c1d95; color: #fff; }
+.hub-faq-group .strike-faq[open] .hub-qa-toggle::after { display: none; }
+.hub-qa-answer { color: #374151; font-size: .97rem; line-height: 1.7; overflow-wrap: anywhere; padding: 0 1.4rem 1.4rem; }
+.hub-qa-answer > * + * { margin-top: .85rem; }
+.hub-qa-answer > .source-references { font-size: .8rem; margin-top: .5rem; }
+.hub-qa-answer > p:last-child:not(:first-child):not(.source-references) { font-size: .9rem; }
+.hub-qa-contact { border-top: 2px solid #fdb913; display: grid; gap: 1.5rem; margin-top: 2.5rem; padding-top: 2rem; }
+.hub-qa-contact h3 { color: #4c1d95; font-size: 1.5rem; font-weight: 700; line-height: 1.3; margin-top: .45rem; }
+.hub-qa-contact p { color: #374151; font-size: .9rem; line-height: 1.65; }
+.hub-qa-contact-options { display: grid; gap: 1rem 2rem; }
+.hub-qa-contact-options strong { font-weight: 600; }
+.hub-qa-contact-note p { font-size: .8rem; }
+.hub-qa-contact-note p + p { margin-top: .45rem; }
+@media (min-width: 900px) {
+    .hub-qa-intro { grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr); }
+    .hub-faq-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .hub-qa-contact { grid-template-columns: minmax(0, .8fr) minmax(0, 1.6fr); }
+    .hub-qa-contact-options { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .hub-qa-contact-note { grid-column: 2; }
+}
+@media (max-width: 599px) {
+    .hub-qa-intro { gap: 1.2rem; margin-bottom: 1.5rem; }
+    .hub-qa-intro .strike-copy > p { font-size: 1rem; line-height: 1.6; }
+    .hub-faq-jumps { gap: 0 1rem; margin-top: .5rem; }
+    .hub-qa-photo > img { aspect-ratio: 2.4 / 1; border-radius: .7rem; }
+    .hub-qa-photo figcaption { font-size: .72rem; }
+    .hub-faq-grid { gap: 1.25rem; }
+    .hub-qa-group-heading { gap: .7rem; padding: 1rem; }
+    .hub-qa-group-heading h3 { font-size: 1.25rem; }
+    .hub-qa-topic-icon { flex-basis: 2.5rem; height: 2.5rem; }
+    .hub-faq-group .strike-faq > summary { font-size: .95rem; gap: .65rem; line-height: 1.5; padding: 1rem; }
+    .hub-qa-answer { font-size: .95rem; padding: 0 1rem 1.2rem; }
+    .hub-qa-contact { gap: 1.25rem; margin-top: 2rem; padding-top: 1.5rem; }
+}
+@media print {
+    .hub-faq-grid, .hub-qa-intro, .hub-qa-contact, .hub-qa-contact-options { display: block; }
+    .hub-qa-photo, .hub-faq-jumps, .hub-qa-toggle { display: none; }
+    .hub-faq-group { border: 0; margin-bottom: 1.5rem; }
+    .hub-faq-grid .hub-faq-group .hub-qa-group-heading { background: #fff; border-bottom-color: #4c1d95; break-after: avoid; }
+    .hub-faq-grid .hub-faq-group .hub-qa-group-heading h3 { color: #4c1d95; }
+    .hub-faq-grid .hub-faq-group .hub-qa-topic-icon { background: #fff; }
+    .hub-faq-grid .hub-faq-group .hub-qa-topic-icon img { filter: none; }
+    .hub-qa-contact p { margin-top: 1rem; }
+}
 @media (min-width: 1000px) {
     .strike-hub .strike-hero-grid { grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); }
-    .hub-reading-layout { grid-template-columns: minmax(0, 1fr) 18rem; }
 }
 @media (max-width: 999px) {
     .hub-timeline-layout { gap: 1.75rem; grid-template-columns: 1fr; }
@@ -181,11 +245,14 @@
     .hub-county-directory .quick-table { min-width: 0; }
 }
 #full-guide > .strike-heading { margin-bottom: 1.5rem; }
+#full-guide .hub-manual-link { margin-top: .75rem; }
+.hub-manual-link a { align-items: center; color: #4c1d95; display: inline-flex; font-weight: 700; gap: .4rem; line-height: 1.5; min-height: 2.75rem; text-decoration: underline; text-underline-offset: 4px; }
+.hub-manual-link a:focus-visible { outline: 3px solid #4c1d95; outline-offset: 4px; }
 [data-expand-guides] { margin-top: 1rem; }
 [data-expand-guides][hidden] { display: none; }
 
 /* Short routes through the full guide, including direct links from quick answers. */
-#strike-topics, #money-support, #union-contacts, #strike-timeline-title, .hub-faq-group > h3 { scroll-margin-top: 6rem; }
+#strike-topics, #money-support, #union-contacts, #strike-timeline-title, .hub-qa-group-heading h3 { scroll-margin-top: 6rem; }
 .hub-topic-jumps { background: #f5f3ff; border-left: 3px solid #a78bfa; margin-block: 1.25rem; padding: 1rem 1.15rem; }
 .hub-topic-jumps > p { color: #4c1d95; font-size: .75rem; font-weight: 800; letter-spacing: .06em; margin: 0 0 .6rem; text-transform: uppercase; }
 .hub-topic-jumps > div { display: flex; flex-wrap: wrap; gap: .25rem 1.25rem; }
@@ -195,4 +262,53 @@
 .hub-page-nav a:focus-visible, .hub-topic > summary:focus-visible, .hub-topic-body a:focus-visible { outline: 3px solid #4c1d95; outline-offset: 4px; }
 @media print {
     .hub-topic-jumps, .hub-topic-back { display: none; }
+}
+
+/* The countdown spans the hero's text and photo columns, above the topic menu. */
+.strike-hub .strike-hero-grid { align-items: start; row-gap: 2rem; }
+.strike-hub .hub-countdown--hero { grid-column: 1 / -1; margin: 0; }
+.strike-hub .hub-countdown--hero .hub-countdown-status { color: #ede9fe; font-size: .72rem; line-height: 1.5; margin: 0; }
+.strike-hub .hub-countdown--hero .hub-countdown-date,
+.strike-hub .hub-countdown--hero .hub-countdown-message { color: #ede9fe; font-size: .85rem; line-height: 1.65; margin-top: .7rem; }
+.strike-hub .hub-countdown--hero:not([data-state="running"]) { grid-template-columns: minmax(0, 1fr); }
+.hub-countdown--hero:not([data-state="running"]) .hub-countdown-clock { display: none; }
+@media (min-width: 1000px) {
+    .strike-hub .strike-hero-grid > .hub-photo { margin-top: 1.6rem; }
+}
+@media (max-width: 399px) {
+    .strike-hub .hub-countdown--hero { padding-inline: .75rem; }
+    .hub-countdown--hero .hub-countdown-digits { gap: .25rem; }
+    .hub-countdown--hero .hub-countdown-digits > div { padding-inline: .1rem; }
+    .hub-countdown--hero .hub-countdown-unit { font-size: .6rem; }
+}
+@media print {
+    .strike-hub .hub-countdown--hero { grid-template-columns: minmax(0, 1fr); }
+    .strike-hub .hub-countdown--hero .hub-countdown-date { color: #4c1d95; }
+}
+
+/* A quieter, more compact opening for phones; the desktop composition stays intact. */
+@media screen and (max-width: 599px) {
+    .strike-hub .strike-hero-grid { padding: 1.5rem 1.25rem 1.75rem; row-gap: 1.25rem; }
+    .strike-hub .strike-hero .eyebrow { font-size: .66rem; letter-spacing: .055em; line-height: 1.5; }
+    .strike-hub .strike-hero h1 { font-size: clamp(2rem, 8.3vw, 2.25rem); line-height: 1.08; margin-top: .6rem; max-width: none; text-wrap: balance; }
+    .strike-hub .strike-hero-grid > div:first-child > p { font-size: 1rem; line-height: 1.55; margin-top: .85rem; }
+    .strike-hub .strike-hero .button-row { display: grid; gap: .25rem; grid-template-columns: minmax(0, 1fr); margin-top: 1rem; }
+    .strike-hub .strike-hero .button-row .strike-btn { width: 100%; }
+    .strike-hub .strike-hero .button-row .strike-btn.outline { background: transparent; border: 0; font-weight: 650; min-height: 2.75rem; padding: .5rem; text-decoration: underline !important; text-underline-offset: 3px; }
+    .strike-hub .strike-hero .button-row .strike-btn.outline:not(:focus-visible) { outline: none; }
+    .strike-hub .strike-hero .button-row .strike-btn.outline:focus-visible { outline: 3px solid #4c1d95; outline-offset: 2px; }
+    .strike-hub .hub-photo img { border-radius: .8rem; border-width: 3px; box-shadow: 0 8px 24px #4c1d9514; }
+    .strike-hub .hub-photo figcaption { font-size: .73rem; line-height: 1.5; margin-top: .5rem; }
+    .strike-hub .hub-countdown--hero { border-radius: .85rem; gap: 1rem; padding: 1rem; }
+    .strike-hub .hub-countdown--hero .hub-countdown-status { font-size: .625rem; gap: .6rem; }
+    .hub-countdown--hero h2 { font-size: 1.55rem; margin-top: .35rem; }
+    .strike-hub .hub-countdown--hero .hub-countdown-date,
+    .strike-hub .hub-countdown--hero .hub-countdown-message { font-size: .75rem; line-height: 1.5; margin-top: .5rem; }
+    .hub-countdown--hero .hub-countdown-digits { gap: .25rem; }
+    .hub-countdown--hero .hub-countdown-digits > div { border-radius: .5rem; padding: .6rem .1rem; }
+    .hub-countdown--hero .hub-countdown-digits [data-countdown-unit] { font-size: 2rem; }
+    .hub-countdown--hero .hub-countdown-unit { font-size: .6rem; margin-top: .3rem; }
+    .hub-page-nav { padding: 1.1rem 1.25rem; }
+    .hub-page-nav > div { gap: .5rem; grid-auto-rows: auto; }
+    .hub-page-nav a { min-height: 2.75rem; padding: .6rem .65rem; }
 }
