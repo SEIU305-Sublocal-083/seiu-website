@@ -1,0 +1,12 @@
+.strike-guide-links { background: #f6f2fb; border-block: 1px solid #e1d8ec; color: #1f2937; padding: 2.5rem 1.5rem; }
+.strike-guide-links-inner { max-width: 71rem; margin-inline: auto; }
+.strike-guide-links .guide-eyebrow { font: 800 .75rem/1.5 Inter,sans-serif; letter-spacing: .1em; text-transform: uppercase; color: #60359a; }
+.strike-guide-links h2 { color: #4c1d95; font: 700 clamp(1.75rem,3vw,2.35rem)/1.2 Lora,serif; margin: .4rem 0 1.25rem; }
+.strike-guide-links-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 1rem; }
+.strike-guide-link { display: flex; flex-direction: column; padding: 1.5rem; background: white; border: 1px solid #d8c9e9; border-radius: 1rem; color: #374151; text-decoration: none; transition: border-color .15s,box-shadow .15s; }
+.strike-guide-link:hover { border-color: #7c3aed; box-shadow: 0 5px 16px #4c1d9514; }
+.strike-guide-link:focus-visible { outline: 3px solid #7c3aed; outline-offset: 4px; }
+.strike-guide-link h3 { color: #4c1d95; font: 700 1.45rem/1.3 Lora,serif; margin: 0 0 .65rem; }
+.strike-guide-link p { font: 400 1rem/1.6 Inter,sans-serif; margin: 0 0 1rem; }
+.strike-guide-link span { margin-top: auto; color: #4c1d95; font: 800 .9rem/1.5 Inter,sans-serif; text-decoration: underline; text-underline-offset: 3px; }
+@media (max-width: 640px) { .strike-guide-links { padding: 1.75rem 1.25rem; } .strike-guide-links-grid { grid-template-columns: 1fr; } .strike-guide-link { padding: 1.25rem; } }

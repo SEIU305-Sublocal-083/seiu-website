@@ -1,0 +1,52 @@
+/* Layout for the community-support and picket-logistics guides. */
+.strike-companion .strike-shell { max-width: 68rem; }
+.strike-companion main > .strike-shell:first-child { padding-block: .85rem; }
+.strike-companion main > .strike-shell:first-child .callout { margin: 0; padding: .65rem 1rem; font-size: .85rem; }
+.strike-companion .strike-hero-grid { grid-template-columns: minmax(0, 1fr); padding-block: 2.5rem; gap: 0; }
+.strike-companion .strike-hero h1 { max-width: 22ch; font-size: clamp(2.1rem, 4.5vw, 3.35rem); line-height: 1.12; }
+.strike-companion .strike-hero p { max-width: 65ch; }
+.strike-companion .strike-actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.4rem; }
+.strike-companion .strike-btn.primary { background: var(--brand-purple-dark); color: white; }
+.strike-companion .strike-btn.primary:hover { background: #37136f; }
+.strike-companion .strike-section { padding-block: 2.25rem; }
+.strike-companion .strike-section + .strike-section { border-top: 1px solid #ddd6e8; }
+.strike-companion .strike-heading { max-width: 56rem; margin-bottom: 1rem; }
+.strike-companion .strike-heading h2 { font-size: clamp(1.6rem, 3vw, 2.15rem); line-height: 1.2; margin: 0; }
+.strike-companion .strike-copy { max-width: none; font-size: 1rem; line-height: 1.7; }
+.strike-companion .strike-copy > p { max-width: 76ch; }
+.strike-companion .strike-grid.three { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; margin-top: 1.25rem; }
+.strike-companion .strike-card { padding: 1.35rem; }
+.strike-companion .strike-card h3 { margin: 0; font-size: 1.2rem; line-height: 1.3; }
+.strike-companion .strike-card p { margin-top: .65rem; }
+.strike-companion .callout { padding: 1.15rem 1.3rem; }
+.strike-companion blockquote.callout { max-width: 76ch; }
+.strike-companion iframe { display: block; width: 100%; height: 390px; background: #ede9fe; }
+.strike-companion .strike-section:last-child { padding-bottom: 2.5rem; }
+@media (max-width: 700px) {
+  .strike-companion .strike-shell { padding-inline: 1.25rem; }
+  .strike-companion .strike-hero-grid { padding-block: 1.75rem; }
+  .strike-companion .strike-section { padding-block: 1.75rem; }
+  .strike-companion .strike-grid.three { grid-template-columns: minmax(0, 1fr); gap: .8rem; }
+  .strike-companion .strike-actions { flex-direction: column; align-items: stretch; }
+  .strike-companion .strike-actions .strike-btn { width: 100%; }
+  .strike-companion .strike-card { padding: 1.15rem; }
+  .strike-companion iframe { height: 300px; }
+}
+@media print {
+  .strike-companion .strike-section { padding-block: 1rem; }
+  .strike-companion iframe { display: none; }
+}
+
+/* One consistent reading column, including headings, cards and map. */
+.strike-companion main .strike-shell { max-width: 58rem; text-align: left; }
+.strike-companion main .strike-heading,
+.strike-companion main .strike-copy,
+.strike-companion main .strike-copy > p,
+.strike-companion main blockquote.callout,
+.strike-companion main .strike-hero p { max-width: none; }
+.strike-companion main .strike-hero h1 { max-width: none; }
+.strike-companion main .action-note { font-size: .875rem; line-height: 1.5; color: #4b5563; margin-top: .85rem; }
+
+.strike-companion .email-fallback { margin-top: 1rem; }
+.strike-companion .email-fallback summary { cursor: pointer; font-weight: 700; color: var(--brand-purple-dark); }
+.strike-companion .email-fallback p { margin-top: .75rem; overflow-wrap: anywhere; }

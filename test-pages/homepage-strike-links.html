@@ -1,0 +1,1217 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Official home of SEIU Local 503 at Oregon State University: workplace rights, stewards, our contract, bargaining updates, events, and news for classified staff.">
+    <meta name="author" content="SEIU Local 503 at OSU">
+    <title>SEIU Local 503 at Oregon State University | Local 083</title>
+    <link rel="icon" href="/images/logo.png" type="image/png">
+    <link rel="apple-touch-icon" href="/images/logo.png">
+    <link rel="stylesheet" href="/styles/tailwind.css">
+<link rel="stylesheet" href="/styles/fonts.css">
+        <link rel="stylesheet" href="/styles/site-shell.css">
+<style>
+        /*
+         * V9 Style Revision:
+         * - Redesigned "About Us" with a dynamic "What We Do" section.
+         * - Reverted "News & Updates" to a more traditional grid layout.
+         * - Placed "Get Involved" and "FAQ" side-by-side on desktop.
+         */
+        :root {
+            --brand-purple-dark: #4C1D95; /* Deep Purple */
+            --brand-purple: #7C3AED;      /* Vibrant Purple */
+            --brand-purple-light: #EDE9FE; /* Lighter Lavender for high contrast */
+            --brand-dark: #111827;         /* Near-black for high contrast text/bg */
+            --brand-light: #F9FAFB;        /* Off-white Background */
+            --text-primary: #1F2937;
+            --text-secondary: #374151;     /* Darker secondary text for better contrast */
+            --border-color: #D1D5DB;
+        }
+
+        html {
+            scroll-padding-top: 80px; /* Offset for sticky header */
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--brand-light);
+            color: var(--text-primary);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Lora', serif;
+            color: var(--brand-purple-dark);
+        }
+
+        /* Accessibility: Clear focus indicators for all interactive elements */
+        a:focus-visible, button:focus-visible, details:focus-visible, input:focus-visible, textarea:focus-visible {
+            outline: 3px solid var(--brand-purple);
+            outline-offset: 2px;
+            border-radius: 4px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            min-height: 3.5rem;
+            padding: 0.9rem 1.5rem;
+            border: 2px solid transparent;
+            border-radius: 0.9rem;
+            font-weight: 700;
+            line-height: 1.2;
+            text-decoration: none;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 180ms ease, box-shadow 180ms ease, background-color 180ms ease, border-color 180ms ease, color 180ms ease;
+            box-shadow: 0 10px 22px rgba(17, 24, 39, 0.14);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 16px 30px rgba(17, 24, 39, 0.18);
+        }
+
+        .btn:active {
+            transform: translateY(0);
+            box-shadow: 0 8px 16px rgba(17, 24, 39, 0.16);
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #5b21b6 0%, #7c3aed 100%);
+            color: #ffffff;
+            border-color: #4c1d95;
+            box-shadow: 0 14px 28px rgba(91, 33, 182, 0.3);
+        }
+
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #4c1d95 0%, #6d28d9 100%);
+            color: #ffffff;
+            border-color: #4c1d95;
+        }
+
+        .btn-secondary {
+            background: linear-gradient(135deg, #facc15 0%, #f59e0b 100%);
+            color: #3b1d78;
+            border-color: #eab308;
+            box-shadow: 0 14px 28px rgba(234, 179, 8, 0.24);
+        }
+
+        .btn-secondary:hover {
+            background: linear-gradient(135deg, #fde047 0%, #fbbf24 100%);
+            color: #312e81;
+            border-color: #d97706;
+        }
+
+        .btn-outline {
+            background-color: #f5f3ff;
+            color: var(--brand-purple-dark);
+            border-color: #8b5cf6;
+            box-shadow: inset 0 0 0 1px rgba(139, 92, 246, 0.18), 0 10px 22px rgba(17, 24, 39, 0.08);
+        }
+
+        .btn-outline:hover {
+            background-color: #ede9fe;
+            color: #4c1d95;
+            border-color: #7c3aed;
+        }
+
+        .action-hero {
+            position: relative;
+            overflow: hidden;
+            background:
+                radial-gradient(circle at 86% 18%, rgba(250, 204, 21, 0.24), transparent 22rem),
+                radial-gradient(circle at 8% 82%, rgba(124, 58, 237, 0.14), transparent 26rem),
+                #ffffff;
+        }
+
+        .action-hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            opacity: 0.28;
+            background-image: radial-gradient(rgba(76, 29, 149, 0.24) 1px, transparent 1px);
+            background-size: 24px 24px;
+            mask-image: linear-gradient(to right, transparent 4%, black 40%, transparent 94%);
+        }
+
+        .live-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.65rem;
+            padding: 0.55rem 0.9rem;
+            border: 1px solid rgba(124, 58, 237, 0.24);
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.78);
+            color: var(--brand-purple-dark);
+            box-shadow: 0 8px 24px rgba(76, 29, 149, 0.08);
+            backdrop-filter: blur(10px);
+        }
+
+        .live-pill::before {
+            content: "";
+            width: 0.65rem;
+            height: 0.65rem;
+            flex: 0 0 auto;
+            border-radius: 999px;
+            background: #16a34a;
+            box-shadow: 0 0 0 0 rgba(22, 163, 74, 0.5);
+            animation: live-pulse 2.2s infinite;
+        }
+
+        .hero-art {
+            position: relative;
+            isolation: isolate;
+        }
+
+        .hero-art::before {
+            content: "";
+            position: absolute;
+            inset: -1.25rem 1rem 1.25rem -1rem;
+            z-index: -1;
+            border-radius: 1.5rem;
+            background: linear-gradient(145deg, #facc15, #f59e0b);
+            transform: rotate(-3deg);
+            box-shadow: 0 22px 60px rgba(76, 29, 149, 0.2);
+        }
+
+        .hero-art img {
+            width: 100%;
+            border-radius: 1.25rem;
+            border: 5px solid #ffffff;
+            box-shadow: 0 24px 60px rgba(17, 24, 39, 0.24);
+            transition: transform 400ms ease;
+        }
+
+        .hero-art:hover img {
+            transform: translateY(-5px) rotate(0.5deg);
+        }
+
+        [data-action-details] > div {
+            position: relative;
+            overflow: hidden;
+            min-height: 8rem;
+            background: rgba(255, 255, 255, 0.86) !important;
+            border-color: rgba(124, 58, 237, 0.22) !important;
+            box-shadow: 0 10px 30px rgba(76, 29, 149, 0.06);
+        }
+
+        [data-action-details] > div::after {
+            content: "";
+            position: absolute;
+            right: -1.5rem;
+            bottom: -2rem;
+            width: 5rem;
+            height: 5rem;
+            border-radius: 999px;
+            background: var(--brand-purple-light);
+            opacity: 0.65;
+        }
+
+        .campaign-pulse {
+            background: var(--brand-purple-dark);
+            color: #ffffff;
+        }
+
+        .campaign-pulse h2,
+        .campaign-pulse h3 {
+            color: #ffffff;
+        }
+
+        .campaign-pulse-card {
+            border-left: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .evergreen-title {
+            max-width: 48rem;
+            color: var(--brand-purple-dark);
+        }
+
+        .campaign-headline {
+            max-width: 46rem;
+            color: #5b21b6;
+        }
+
+        .worker-help {
+            position: relative;
+            z-index: 2;
+            background: linear-gradient(90deg, #ffffff 0%, #f5f3ff 100%);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .worker-help-inner {
+            display: grid;
+            grid-template-columns: 14.5rem minmax(0, 1fr);
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .worker-help-intro p {
+            margin-top: 0.35rem;
+            color: var(--text-secondary);
+            font-size: 0.8rem;
+            line-height: 1.35;
+        }
+
+        .worker-help-grid {
+            display: grid;
+            grid-template-columns: repeat(5, minmax(0, 1fr));
+            gap: 0.6rem;
+        }
+
+        .worker-help-link {
+            display: flex;
+            min-height: 4.35rem;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.6rem;
+            padding: 0.8rem 0.9rem;
+            border: 1px solid var(--border-color);
+            border-radius: 0.8rem;
+            background: #ffffff;
+            color: var(--text-primary);
+            font-size: 0.88rem;
+            font-weight: 700;
+            line-height: 1.25;
+            transition: transform 180ms ease, border-color 180ms ease, background-color 180ms ease, box-shadow 180ms ease;
+        }
+
+        .worker-help-link:hover {
+            transform: translateY(-3px);
+            border-color: var(--brand-purple);
+            background: var(--brand-purple-light);
+            box-shadow: 0 14px 28px rgba(76, 29, 149, 0.1);
+        }
+
+        .worker-help-link span:last-child {
+            flex: 0 0 auto;
+            color: var(--brand-purple);
+            font-size: 1.05rem;
+        }
+
+        .proof-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 0.9rem;
+        }
+
+        .proof-stat {
+            padding: 1rem;
+            border: 1px solid rgba(124, 58, 237, 0.22);
+            border-radius: 1rem;
+            background: #ffffff;
+        }
+
+        .proof-stat strong {
+            display: block;
+            color: var(--brand-purple-dark);
+            font-family: 'Lora', serif;
+            font-size: 1.8rem;
+            line-height: 1;
+        }
+
+        .member-quote {
+            position: relative;
+            margin-top: 1rem;
+            padding: 1.25rem 1.25rem 1.25rem 1.5rem;
+            border-radius: 1rem;
+            background: var(--brand-purple-dark);
+            color: #ffffff;
+            box-shadow: inset 5px 0 0 #facc15;
+        }
+
+        .member-quote p {
+            font-family: 'Lora', serif;
+            font-size: 1.08rem;
+            line-height: 1.5;
+        }
+
+        .member-quote cite {
+            display: block;
+            margin-top: 0.7rem;
+            color: #ddd6fe;
+            font-size: 0.78rem;
+            font-style: normal;
+        }
+
+        .member-collage {
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            grid-template-rows: repeat(2, 10rem);
+            gap: 0.75rem;
+        }
+
+        .member-collage img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 1rem;
+            transition: transform 300ms ease, filter 300ms ease;
+        }
+
+        .member-collage img:first-child {
+            grid-row: 1 / 3;
+        }
+
+        .member-collage:hover img:not(:hover) {
+            filter: saturate(0.65);
+        }
+
+        .member-collage img:hover {
+            transform: scale(1.025);
+        }
+
+        .section-kicker {
+            display: block;
+            margin-bottom: 0.65rem;
+            color: var(--brand-purple);
+            font-size: 0.78rem;
+            font-weight: 800;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+        }
+
+        .event-card,
+        .news-card {
+            transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+        }
+
+        .event-card:hover,
+        .news-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(124, 58, 237, 0.55);
+            box-shadow: 0 22px 45px rgba(76, 29, 149, 0.14);
+        }
+
+        .event-date {
+            display: inline-flex;
+            min-width: 4.25rem;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-radius: 0.9rem;
+            background: var(--brand-purple-dark);
+            color: #ffffff;
+            line-height: 1;
+            padding: 0.7rem 0.8rem;
+        }
+
+        .event-date-month {
+            font-size: 0.72rem;
+            font-weight: 800;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+
+        .event-date-day {
+            margin-top: 0.25rem;
+            font-family: 'Lora', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        .news-card-media {
+            position: relative;
+            overflow: hidden;
+            background: var(--brand-purple-light);
+        }
+
+        .news-card-media img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 450ms ease;
+        }
+
+        .news-card:hover .news-card-media img {
+            transform: scale(1.045);
+        }
+
+        .reveal-ready [data-reveal] {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 600ms ease, transform 600ms cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .reveal-ready [data-reveal].is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @keyframes live-pulse {
+            70% { box-shadow: 0 0 0 0.55rem rgba(22, 163, 74, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(22, 163, 74, 0); }
+        }
+
+        @media (max-width: 767px) {
+            .hero-art::before {
+                inset: -0.65rem 0.65rem 0.65rem -0.65rem;
+            }
+
+            .campaign-pulse-card {
+                border-top: 1px solid rgba(255, 255, 255, 0.2);
+                border-left: 0;
+            }
+
+            .member-collage {
+                grid-template-rows: repeat(2, 8rem);
+            }
+
+            [data-action-details] > div {
+                min-height: auto;
+            }
+        }
+
+        @media (max-width: 1099px) {
+            .worker-help-inner {
+                display: block;
+            }
+
+            .worker-help-grid {
+                display: flex;
+                margin-top: 1rem;
+                padding-bottom: 0.35rem;
+                overflow-x: auto;
+                scroll-snap-type: x proximity;
+                scrollbar-width: thin;
+            }
+
+            .worker-help-link {
+                flex: 0 0 11.5rem;
+                scroll-snap-align: start;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                scroll-behavior: auto !important;
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+
+            .reveal-ready [data-reveal] {
+                opacity: 1;
+                transform: none;
+            }
+        }
+
+    </style>
+    <!-- SEO META START -->
+    <link rel="canonical" href="https://www.local083.org/test-pages/homepage-strike-links.html">
+    <link rel="alternate" type="application/rss+xml" title="SEIU Local 503 Combined News and Events RSS" href="https://www.local083.org/feed.xml">
+    <link rel="alternate" type="application/rss+xml" title="SEIU Local 503 News RSS" href="https://www.local083.org/news/rss.xml">
+    <link rel="alternate" type="application/rss+xml" title="SEIU Local 503 Events RSS" href="https://www.local083.org/events/rss.xml">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.local083.org/">
+    <meta property="og:title" content="SEIU Local 503 at Oregon State University | Local 083">
+    <meta property="og:description" content="Workplace rights, stewards, our contract, bargaining updates, events, and news for OSU classified staff.">
+    <meta property="og:image" content="https://www.local083.org/images/card.webp">
+    <meta property="og:image:alt" content="SEIU Local 503 at Oregon State University">
+    <meta property="og:image:width" content="1280">
+    <meta property="og:image:height" content="720">
+    <meta property="og:site_name" content="SEIU Local 503 at Oregon State University">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://www.local083.org/">
+    <meta name="twitter:title" content="SEIU Local 503 at Oregon State University | Local 083">
+    <meta name="twitter:description" content="Workplace rights, stewards, our contract, bargaining updates, events, and news for OSU classified staff.">
+    <meta name="twitter:image" content="https://www.local083.org/images/card.webp">
+    <meta name="twitter:image:alt" content="SEIU Local 503 at Oregon State University">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.local083.org#organization",
+      "name": "SEIU Local 503 at Oregon State University",
+      "url": "https://www.local083.org",
+      "logo": "https://www.local083.org/images/logo.png"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.local083.org#website",
+      "name": "SEIU Local 503 at Oregon State University",
+      "url": "https://www.local083.org",
+      "publisher": {
+        "@id": "https://www.local083.org#organization"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://www.local083.org/#webpage",
+      "url": "https://www.local083.org/",
+      "name": "SEIU Local 503 at Oregon State University | Local 083",
+      "description": "Official home of SEIU Local 503 at Oregon State University: workplace rights, stewards, our contract, bargaining updates, events, and news for classified staff.",
+      "isPartOf": {
+        "@id": "https://www.local083.org#website"
+      },
+      "about": {
+        "@id": "https://www.local083.org#organization"
+      }
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://www.local083.org/#home-news-list",
+      "name": "Latest Local 083 news",
+      "numberOfItems": 3,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "url": "https://www.local083.org/news/2026-09-18-osu-strike-notice-delivered.html",
+          "name": "Our union delivers strike notice to OSU leadership"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "url": "https://www.local083.org/news/2026-09-16-uw-workers-solidarity.html",
+          "name": "UW workers’ fight is our fight, too"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "url": "https://www.local083.org/news/2026-09-15-strike-benefits-update.html",
+          "name": "Strike benefits update"
+        }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://www.local083.org/#home-event-list",
+      "name": "Latest announced Local 083 events",
+      "numberOfItems": 2,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "url": "https://www.local083.org/events/2026-09-14-OSU-Strike-Authorization-Vote.html",
+          "name": "OSU Strike Authorization Vote"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "url": "https://www.local083.org/events/2026-09-16-OSU-Executive-Meeting.html",
+          "name": "OSU Executive Meeting"
+        }
+      ]
+    }
+  ]
+}
+    </script>
+    <!-- SEO META END -->
+    <script src="/js/analytics.js" defer></script>
+    <script src="/js/current-action.js?v=2026-08-18-higher-ed-current" defer></script>
+<meta name="robots" content="noindex, follow"><link rel="stylesheet" href="/styles/strike-guide-links.css"></head>
+<body class="bg-brand-light">
+    <noscript><nav aria-label="Primary navigation without JavaScript" class="border-b border-border-color bg-white px-4 py-3 text-center text-sm font-semibold"><a class="mx-2 underline" href="/">Home</a><a class="mx-2 underline" href="/about.html">About</a><a class="mx-2 underline" href="/events.html">Events</a><a class="mx-2 underline" href="/news.html">News</a><a class="mx-2 underline" href="/resources.html">Resources &amp; Rights</a><a class="mx-2 underline" href="/leadership.html">Leadership</a><a class="mx-2 underline" href="/contact.html">Contact</a></nav></noscript>
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:bg-white focus:text-brand-purple-dark focus:px-4 focus:py-2 focus:rounded focus:shadow-lg">Skip to content</a>
+
+    <!-- SITE SHELL: HEADER START -->
+    <header class="bg-white/80 backdrop-blur-lg border-b border-border-color sticky top-0 z-50" data-site-shell-header>
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center" aria-label="Primary navigation">
+            <a href="/index.html" class="flex items-center space-x-2">
+                <span class="site-wordmark text-2xl font-bold text-brand-purple-dark">SEIU 503</span>
+                <span class="text-lg text-text-secondary hidden md:block">| Oregon State University</span>
+            </a>
+            <div class="hidden lg:flex space-x-8">
+                <a href="/about.html" class="text-text-secondary hover:text-brand-purple transition-colors">About</a>
+                <a href="/events.html" class="text-text-secondary hover:text-brand-purple transition-colors">Events</a>
+                <a href="/news.html" class="text-text-secondary hover:text-brand-purple transition-colors">News</a>
+                <a href="/resources.html" class="text-text-secondary hover:text-brand-purple transition-colors">Resources &amp; Rights</a>
+                <a href="/leadership.html" class="text-text-secondary hover:text-brand-purple transition-colors">Leadership</a>
+                <a href="/contact.html" class="text-text-secondary hover:text-brand-purple transition-colors">Contact</a>
+            </div>
+            <button type="button" id="mobile-menu-button" class="lg:hidden text-text-secondary hover:text-brand-purple" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false" data-site-shell-menu-owner>
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+        <div id="mobile-menu" class="hidden lg:hidden absolute top-full left-0 w-full bg-white border-t border-border-color shadow-lg" role="navigation" aria-label="Mobile navigation">
+            <a href="/about.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">About</a>
+            <a href="/events.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Events</a>
+            <a href="/news.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">News</a>
+            <a href="/resources.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Resources &amp; Rights</a>
+            <a href="/leadership.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Leadership</a>
+            <a href="/contact.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Contact</a>
+        </div>
+    </header>
+    <script data-site-shell-menu-state-script>
+        (() => {
+            const button = document.getElementById('mobile-menu-button');
+            const menu = document.getElementById('mobile-menu');
+            if (!button || !menu) return;
+
+            const setOpen = (open) => {
+                menu.classList.toggle('hidden', !open);
+                menu.classList.remove('is-open');
+                button.setAttribute('aria-expanded', String(open));
+                button.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+            };
+
+            button.addEventListener('click', (event) => {
+                event.stopImmediatePropagation();
+                setOpen(button.getAttribute('aria-expanded') !== 'true');
+            }, { capture: true });
+            menu.addEventListener('click', (event) => {
+                if (!event.target.closest('a')) return;
+                event.stopImmediatePropagation();
+                setOpen(false);
+            }, { capture: true });
+            document.addEventListener('keydown', (event) => {
+                if (event.key !== 'Escape' || button.getAttribute('aria-expanded') !== 'true') return;
+                event.stopImmediatePropagation();
+                setOpen(false);
+                button.focus();
+            }, { capture: true });
+            setOpen(false);
+        })();
+    </script>
+<!-- SITE SHELL: HEADER END -->
+
+    <main id="main-content">
+
+    <section class="action-hero" data-current-action-home>
+        <div class="container mx-auto px-6 py-14 md:py-20 lg:py-24 relative">
+            <div class="grid lg:grid-cols-[1.12fr_0.88fr] items-center gap-14 lg:gap-20">
+                <div class="text-center lg:text-left" data-reveal>
+                    <div class="live-pill text-sm font-bold mb-6" data-action-eyebrow>OSU workers are ready</div>
+                    <h1 class="evergreen-title text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.03] tracking-tight">SEIU Local 503 at Oregon State University</h1>
+                    <p class="mt-4 text-sm md:text-base font-bold uppercase tracking-[0.12em] text-brand-purple">Local 083 · Worker-led across Oregon</p>
+                    <h2 class="campaign-headline mt-7 text-3xl md:text-4xl lg:text-5xl font-bold leading-[1.06] tracking-tight" data-action-headline>STRIKE HAS BEEN DECLARED. NOTICE HAS BEEN GIVEN.</h2>
+                    <p class="mt-6 text-lg md:text-xl text-text-secondary max-w-2xl mx-auto lg:mx-0 leading-relaxed" data-action-summary>We delivered our strike notice to OSU leadership. Our intended strike start is September 28 at 6 a.m. We return to bargaining September 24 to fight for a fair contract that can avert a strike. Read the story. Know what comes next. Stand with your coworkers.</p>
+                    <div class="mt-8 flex flex-col sm:flex-row sm:items-center gap-4 justify-center lg:justify-start">
+                        <a href="/news/2026-09-18-osu-strike-notice-delivered.html" class="btn btn-primary w-full sm:w-auto" data-action-primary data-ph-event="news_click" data-ph-label="Homepage Strike Notice Story" data-ph-metadata='{"placement":"homepage_hero","action_slug":"strike-notice-delivered"}'>Read about it →</a>
+                        <a href="/strike/" class="btn btn-secondary w-full sm:w-auto" data-action-secondary data-ph-event="take_action_click" data-ph-label="Homepage Strike Preparation" data-ph-metadata='{"placement":"homepage_hero","action_slug":"strike-notice-delivered"}'>Get strike ready</a>
+                    </div>
+                </div>
+                <div class="hero-art" data-reveal>
+                    <img src="/images/6c1b0ab7-5dff-4b01-a1da-9cda46e5c729.png" alt="A Local 083 member hands our union’s strike notice to OSU Provost Roy Haggerty in the Kerr Administration Building lobby." decoding="async" width="1200" height="675" data-action-image>
+                </div>
+            </div>
+            <dl class="mt-14 grid grid-cols-1 sm:grid-cols-3 gap-4 text-left relative" data-action-details data-reveal>
+                <div class="rounded-lg border border-border-color bg-brand-light p-5">
+                    <dt class="text-sm font-bold uppercase tracking-wide text-brand-purple">Notice delivered</dt>
+                    <dd class="mt-2 text-text-primary font-semibold">September 18 — our union put OSU leadership on notice</dd>
+                </div>
+                <div class="rounded-lg border border-border-color bg-brand-light p-5">
+                    <dt class="text-sm font-bold uppercase tracking-wide text-brand-purple">Intended strike start</dt>
+                    <dd class="mt-2 text-text-primary font-semibold">September 28 at 6 a.m.</dd>
+                </div>
+                <div class="rounded-lg border border-border-color bg-brand-light p-5">
+                    <dt class="text-sm font-bold uppercase tracking-wide text-brand-purple">Next bargaining date</dt>
+                    <dd class="mt-2 text-text-primary font-semibold">September 24 — fighting for an agreement that can avert a strike</dd>
+                </div>
+            </dl>
+        </div>
+    </section>
+
+<section class="strike-guide-links" id="ways-to-take-part" aria-labelledby="ways-to-take-part-title">
+<div class="strike-guide-links-inner"><p class="guide-eyebrow">Members and community supporters</p><h2 id="ways-to-take-part-title">Find your next step.</h2>
+<div class="strike-guide-links-grid">
+<a class="strike-guide-link" href="/test-pages/osu-picket-logistics.html"><h3>Join us outside Kerr</h3><p>Find the picket location, map and preparation checklist. Confirm your shift and check-in details before traveling.</p><span>View picket information →</span></a>
+<a class="strike-guide-link" href="/test-pages/osu-community-support.html"><h3>Stand with OSU workers</h3><p>Show solidarity, share our updates and offer help. Fundraising is still being set up; solidarity is the ask right now.</p><span>See how to support workers →</span></a>
+</div></div></section>
+    <section class="campaign-pulse">
+        <div class="container mx-auto px-6 py-8 md:py-9">
+            <div class="grid md:grid-cols-[1.15fr_1.5fr_auto] gap-6 md:gap-8 items-center">
+                <div>
+                    <p class="text-xs font-bold uppercase tracking-[0.16em] text-yellow-300" data-action-promo-eyebrow>United for a fair contract</p>
+                    <p class="mt-2 text-sm text-purple-100">Updated as bargaining moves</p>
+                </div>
+                <div class="campaign-pulse-card pt-5 md:pt-0 md:pl-8">
+                    <h2 class="text-2xl font-bold leading-tight" data-action-promo-headline>We keep OSU running. We demand respect.</h2>
+                    <p class="mt-2 text-sm text-purple-100 line-clamp-2" data-action-promo-body>Fair wages. Strong health care. Job security. Read the notice, get prepared and talk with your coworkers about what comes next.</p>
+                </div>
+                <div class="campaign-pulse-card pt-5 md:pt-0 md:pl-8">
+                    <a href="/2026-bargaining/index.html" class="btn btn-secondary whitespace-nowrap w-full md:w-auto" data-action-tertiary data-ph-event="bargaining_hub_click" data-ph-label="Homepage Bargaining Hub" data-ph-metadata='{"placement":"homepage_promo","action_slug":"strike-notice-delivered"}'>Read the Bargaining Hub</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="reasons-to-fight" class="bg-white border-b border-border-color" aria-labelledby="reasons-to-fight-heading">
+        <div class="container mx-auto px-6 py-14 md:py-20">
+            <div class="max-w-3xl">
+                <span class="section-kicker">Why we are fighting</span>
+                <h2 id="reasons-to-fight-heading" class="mt-2 text-3xl md:text-5xl font-bold leading-tight">A fair contract must protect the people who keep OSU running.</h2>
+                <p class="mt-5 text-lg text-text-secondary leading-relaxed">Management's current package does not keep pace with living costs and would weaken core protections. Our collective action is how we move them.</p>
+            </div>
+            <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+                <article class="rounded-2xl border border-border-color bg-brand-light p-6"><span class="text-sm font-bold uppercase tracking-wide text-brand-purple">Fair wages</span><h3 class="mt-3 text-2xl font-bold">Keep up with living costs</h3><p class="mt-3 text-text-secondary">Management guarantees only one 0.75 percent COLA across four years. Our team proposes inflation-matching COLAs in a two-year contract.</p></article>
+                <article class="rounded-2xl border border-border-color bg-brand-light p-6"><span class="text-sm font-bold uppercase tracking-wide text-brand-purple">Health care</span><h3 class="mt-3 text-2xl font-bold">Protect affordable coverage</h3><p class="mt-3 text-text-secondary">Management wants to remove the guarantee of a low-cost health plan while wages are already falling behind.</p></article>
+                <article class="rounded-2xl border border-border-color bg-brand-light p-6"><span class="text-sm font-bold uppercase tracking-wide text-brand-purple">Job security</span><h3 class="mt-3 text-2xl font-bold">Defend layoff rights</h3><p class="mt-3 text-text-secondary">We are fighting to keep seniority-based protections and the rights workers rely on during layoffs.</p></article>
+                <article class="rounded-2xl border border-border-color bg-brand-light p-6"><span class="text-sm font-bold uppercase tracking-wide text-brand-purple">Public jobs</span><h3 class="mt-3 text-2xl font-bold">Stop outsourcing</h3><p class="mt-3 text-text-secondary">Management is pushing proposals that open the door to contracting out the work our members do on campus.</p></article>
+            </div>
+            <div class="mt-8 flex flex-col sm:flex-row gap-3">
+                <a href="/pledge" class="btn btn-primary">Sign the strike pledge</a>
+                <a href="/2026-bargaining/" class="btn btn-outline">See bargaining updates</a>
+            </div>
+            <p class="mt-3 text-sm text-text-secondary">The pledge is not a strike-authorization vote.</p>
+        </div>
+    </section>
+
+    <section class="worker-help" aria-labelledby="worker-help-heading">
+        <div class="container mx-auto px-6 py-6 md:py-7">
+            <div class="worker-help-inner">
+                <div class="worker-help-intro">
+                    <span class="section-kicker">Worker help</span>
+                    <h2 id="worker-help-heading" class="text-2xl font-bold leading-tight">How can our union help?</h2>
+                    <p>Fast paths for OSU classified workers.</p>
+                </div>
+            <div class="worker-help-grid">
+                <a href="/resources/stewards.html" class="worker-help-link"><span>Find my union steward</span><span aria-hidden="true">→</span></a>
+                <a href="/resources/weingarten-rights.html" class="worker-help-link"><span>I was called into a meeting</span><span aria-hidden="true">→</span></a>
+                <a href="/resources/seiu_cba_2022-2026.pdf" class="worker-help-link"><span>Open Our Contract (PDF)</span><span aria-hidden="true">→</span></a>
+                <a href="/resources/layoff-workflow.html" class="worker-help-link"><span>I need layoff or workplace-change help</span><span aria-hidden="true">→</span></a>
+                <a href="https://seiu503.org/join-us/" class="worker-help-link"><span>Become a Member</span><span aria-hidden="true">→</span></a>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container mx-auto px-6 py-16">
+
+
+        <section id="events" class="mb-24" data-reveal>
+            <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10">
+                <div>
+                    <span class="section-kicker">Show up together</span>
+                    <h2 class="text-4xl md:text-5xl font-bold">Upcoming Events</h2>
+                </div>
+                <a href="/events.html" class="font-bold text-brand-purple hover:underline">View full calendar →</a>
+            </div>
+            <div id="upcoming-events-container" class="grid md:grid-cols-2 gap-6 lg:max-w-5xl">
+                <article class="event-card bg-white rounded-2xl border-2 border-brand-purple shadow-xl overflow-hidden flex flex-col">
+                    <div class="p-6 md:p-7 flex-grow"><div class="flex items-start justify-between gap-4 mb-6"><div class="event-date" aria-label="Monday, September 14, 2026"><span class="event-date-month">Sep</span><span class="event-date-day">14</span></div><div class="text-right"><div class="bg-brand-purple text-white inline-flex font-bold rounded-full px-3 py-1 text-xs uppercase tracking-wide">Strike Vote</div><div class="mt-3 text-sm font-semibold text-text-secondary"><span aria-hidden="true">●</span> 7:30 AM</div></div></div>
+                        <h3 class="font-bold text-2xl md:text-3xl mb-3">OSU Strike Authorization Vote</h3><p class="text-text-secondary leading-relaxed">Cast your strike authorization ballot in person Monday, Sept. 14, from 7:30 a.m. to 5 p.m. in the Memorial Union Multipurpose Room at OSU.</p><p class="mt-3 text-sm text-text-secondary"><strong>Where:</strong> Memorial Union Multipurpose Room, OSU</p>
+                    </div>
+                    <div class="bg-brand-purple-light border-t border-border-color p-4 flex items-center justify-between gap-3"><span class="text-sm font-bold text-text-primary">Mon, Sep 14, 2026</span><a href="/events/2026-09-14-OSU-Strike-Authorization-Vote.html" class="font-bold text-brand-purple hover:underline" aria-label="View OSU Strike Authorization Vote details">View event details →</a></div>
+                </article>
+                <article class="event-card bg-white rounded-2xl border border-border-color overflow-hidden flex flex-col">
+                    <div class="p-6 md:p-7 flex-grow"><div class="flex items-start justify-between gap-4 mb-6"><div class="event-date" aria-label="Wednesday, September 16, 2026"><span class="event-date-month">Sep</span><span class="event-date-day">16</span></div><div class="text-right"><div class="bg-brand-purple-light text-brand-purple-dark inline-flex font-bold rounded-full px-3 py-1 text-xs uppercase tracking-wide">Zoom Meeting</div><div class="mt-3 text-sm font-semibold text-text-secondary"><span aria-hidden="true">●</span> 6:00 PM</div></div></div>
+                        <h3 class="font-bold text-2xl md:text-3xl mb-3">OSU Executive Meeting</h3><p class="text-text-secondary leading-relaxed">Join the Local 083 executive team on Zoom Wednesday, Sept. 16, from 6 to 7:30 p.m. Pacific.</p><p class="mt-3 text-sm text-text-secondary"><strong>Where:</strong> Online via Zoom</p>
+                    </div>
+                    <div class="bg-gray-50 border-t border-border-color p-4 flex items-center justify-between gap-3"><span class="text-sm font-bold text-text-primary">Wed, Sep 16, 2026</span><a href="/events/2026-09-16-OSU-Executive-Meeting.html" class="font-bold text-brand-purple hover:underline" aria-label="View OSU Executive Meeting details">View event details →</a></div>
+                </article>
+</div>
+        </section>
+
+        <section id="news" class="mb-24" data-reveal>
+            <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10">
+                <div>
+                    <span class="section-kicker">From our union</span>
+                    <h2 class="text-4xl md:text-5xl font-bold">News &amp; updates</h2>
+                </div>
+                <a href="/news.html" class="font-bold text-brand-purple hover:underline">Read all news →</a>
+            </div>
+            <div id="news-grid-container" class="grid lg:grid-cols-[1.18fr_0.82fr] gap-6">
+                <article class="news-card bg-white rounded-2xl border border-border-color overflow-hidden group">
+                    <a href="/news/2026-09-18-osu-strike-notice-delivered.html" class="block news-card-media aspect-[16/9]" aria-label="Read Our union delivers strike notice to OSU leadership"><img src="/images/6c1b0ab7-5dff-4b01-a1da-9cda46e5c729.png" alt="A Local 083 member hands our union’s strike notice to Roy Haggerty in the Kerr Administration Building lobby." loading="lazy" decoding="async" width="1200" height="675"></a>
+                    <div class="p-6 md:p-8">
+                        <div class="flex items-center gap-3 text-sm mb-4"><span class="bg-brand-purple-light text-brand-purple-dark font-bold rounded-full px-3 py-1">Bargaining</span><span class="text-text-secondary">September 18, 2026</span></div>
+                        <h3 class="font-bold text-3xl md:text-4xl leading-tight mb-4">Our union delivers strike notice to OSU leadership</h3>
+                        <p class="text-text-secondary leading-relaxed">Haggerty expressed sympathy for our demands and cited negotiations with other universities. Our notice identifies Sept. 28 at 6 a.m. as the intended strike start.</p>
+                        <a href="/news/2026-09-18-osu-strike-notice-delivered.html" class="text-brand-purple font-bold mt-5 inline-block group-hover:underline">Read the story →</a>
+                    </div>
+                </article>
+                <div class="space-y-6">
+                    <article class="news-card bg-white rounded-2xl border border-border-color overflow-hidden group">
+                        <a href="/news/2026-09-16-uw-workers-solidarity.html" class="block news-card-media aspect-[16/7]" aria-label="Read UW workers’ fight is our fight, too"><img src="/images/dc1bcafa-58bc-41d7-b01a-6fbada691fc8-uw-workers-we-keep-uw-running-procession.webp" alt="A long procession of marchers in purple follows a “We keep UW running” banner along a campus walkway." loading="lazy" decoding="async" width="1200" height="675"></a>
+                        <div class="p-5 md:p-6"><div class="flex items-center gap-3 text-xs mb-3"><span class="font-bold uppercase tracking-wide text-brand-purple">Bargaining</span><span class="text-text-secondary">September 16, 2026</span></div><h3 class="font-bold text-xl md:text-2xl leading-tight mb-3">UW workers’ fight is our fight, too</h3><p class="text-text-secondary text-sm leading-relaxed">Our SEIU 925 siblings at the University of Washington are organizing for fair pay and working conditions. Their fight connects with ours at OSU.</p><a href="/news/2026-09-16-uw-workers-solidarity.html" class="text-brand-purple font-bold mt-4 inline-block group-hover:underline">Read the story →</a></div>
+                    </article>
+                    <article class="news-card bg-white rounded-2xl border border-border-color overflow-hidden group">
+                        <a href="/news/2026-09-15-strike-benefits-update.html" class="block news-card-media aspect-[16/7]" aria-label="Read Strike benefits update"><img src="/images/2026-bargaining-zoom-backgrounds.webp" alt="2026 Higher Education Bargaining" loading="lazy" decoding="async" width="1200" height="675"></a>
+                        <div class="p-5 md:p-6"><div class="flex items-center gap-3 text-xs mb-3"><span class="font-bold uppercase tracking-wide text-brand-purple">Bargaining</span><span class="text-text-secondary">September 15, 2026</span></div><h3 class="font-bold text-xl md:text-2xl leading-tight mb-3">Strike benefits update</h3><p class="text-text-secondary text-sm leading-relaxed">Our union approved $80 per day in strike benefits, up to $400 per week, and a hardship fund for a potential Higher Education strike.</p><a href="/news/2026-09-15-strike-benefits-update.html" class="text-brand-purple font-bold mt-4 inline-block group-hover:underline">Read the story →</a></div>
+                    </article>
+                </div>
+</div>
+        </section>
+
+        <section id="about" class="mb-24" data-reveal>
+            <div class="grid lg:grid-cols-[0.95fr_1.05fr] gap-10 lg:gap-16 items-center">
+                <div>
+                    <span class="section-kicker">Who we are</span>
+                    <h2 class="text-4xl md:text-5xl font-bold leading-tight">1,454 workers keeping OSU—and Oregon—working.</h2>
+                    <p class="mt-6 text-text-secondary leading-relaxed text-lg">
+                        Local 083 is SEIU Local 503's union for classified staff at Oregon State University. We are administrative staff, food service workers, custodians, IT professionals, researchers, tradespeople and many other coworkers building a fairer workplace together.
+                    </p>
+                    <div class="proof-grid mt-8">
+                        <div class="proof-stat"><strong>1,454</strong><span class="text-sm text-text-secondary">represented OSU workers</span></div>
+                        <div class="proof-stat"><strong>36</strong><span class="text-sm text-text-secondary">Oregon counties represented</span></div>
+                    </div>
+                    <a href="/about.html" class="mt-7 inline-flex items-center font-bold text-brand-purple hover:underline">Meet our union and leadership <span aria-hidden="true" class="ml-2">→</span></a>
+                </div>
+                <div class="member-collage" aria-label="Local 083 members gathering at an OSU community event">
+                    <img src="/images/members-talking-home.webp" alt="Two Local 083 members talking at an OSU community event" loading="lazy" decoding="async" width="1200" height="900">
+                    <img src="/images/member-bowling-home.webp" alt="A Local 083 member bowling at an OSU community gathering" loading="lazy" decoding="async" width="900" height="506">
+                    <img src="/images/members-community-home.webp" alt="Local 083 members in conversation at a community event" loading="lazy" decoding="async" width="900" height="675">
+                </div>
+            </div>
+        </section>
+
+        <div class="grid lg:grid-cols-[0.72fr_1.28fr] gap-8 lg:gap-12 items-stretch mb-24" data-reveal>
+            <section id="involved" class="mb-24 lg:mb-0 text-center bg-brand-purple-light py-16 rounded-xl h-full flex flex-col justify-center">
+                 <div class="container mx-auto px-6">
+                    <h2 class="text-4xl font-bold text-brand-purple-dark mb-4">Get involved. Get active.</h2>
+                    <p class="text-text-secondary max-w-2xl mx-auto mb-8">Our strength is our members. Join us to build a better OSU.</p>
+                    <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a href="https://seiu503.org/join-us/" class="btn btn-primary w-full sm:w-auto" data-ph-event="member_signup_click" data-ph-label="Homepage Become a Member" data-ph-metadata='{"placement":"get_involved"}'>Become a Member</a>
+                        <a href="https://seiu503.tfaforms.net/759" class="btn btn-outline w-full sm:w-auto" data-ph-event="cat_signup_click" data-ph-label="Homepage Join CAT" data-ph-metadata='{"signup_type":"cat","placement":"get_involved"}'>Join the CAT</a>
+                    </div>
+                 </div>
+            </section>
+
+            <section id="resources" class="bg-white rounded-xl border border-border-color p-6 md:p-8">
+                <span class="section-kicker">Learn about Local 083</span>
+                <h2 class="text-4xl font-bold text-brand-purple-dark mt-2">What would you like to understand?</h2>
+                <p class="text-text-secondary mt-3 mb-6">Start with a common question, then visit the page with the full answer and next steps.</p>
+                <div class="grid sm:grid-cols-2 gap-3">
+                    <a href="/about.html#who-we-are" class="rounded-lg border border-border-color p-4 hover:border-brand-purple hover:bg-brand-purple-light transition-colors"><strong class="block text-brand-purple-dark">Who does Local 083 represent?</strong><span class="text-sm text-text-secondary">See our work and statewide reach →</span></a>
+                    <a href="/about.html#membership" class="rounded-lg border border-border-color p-4 hover:border-brand-purple hover:bg-brand-purple-light transition-colors"><strong class="block text-brand-purple-dark">What does membership add?</strong><span class="text-sm text-text-secondary">Learn about representation, voice and voting →</span></a>
+                    <a href="/resources.html#start-here" class="rounded-lg border border-border-color p-4 hover:border-brand-purple hover:bg-brand-purple-light transition-colors"><strong class="block text-brand-purple-dark">What rights do classified workers have?</strong><span class="text-sm text-text-secondary">Explore workplace guides and our contract →</span></a>
+                    <a href="/2026-bargaining/index.html" class="rounded-lg border border-border-color p-4 hover:border-brand-purple hover:bg-brand-purple-light transition-colors"><strong class="block text-brand-purple-dark">Where does bargaining stand?</strong><span class="text-sm text-text-secondary">Read the latest verified status →</span></a>
+                </div>
+                <div class="mt-6 flex flex-wrap gap-x-6 gap-y-3 text-sm font-bold">
+                    <a href="/about.html#questions" class="text-brand-purple hover:underline">Browse common questions →</a>
+                    <a href="/resources.html" class="text-brand-purple hover:underline">Browse every guide and resource →</a>
+                </div>
+            </section>
+        </div>
+
+        <section id="contact" class="bg-white p-8 md:p-12 rounded-xl border border-border-color" data-reveal>
+            <div class="text-center">
+                <h2 class="text-4xl font-bold text-center mb-6">Contact us</h2>
+                <p class="text-text-secondary text-lg max-w-2xl mx-auto mb-8">Have a workplace question or need help finding the right contact? Our steward and executive teams are here to help.</p>
+                <div class="text-lg text-text-primary space-y-2">
+                    <p><strong>Stewards Email:</strong> <a href="mailto:083stewards@seiu503.org" class="text-brand-purple hover:underline">083stewards@seiu503.org</a></p>
+                    <p><strong>Leadership Email:</strong> <a href="mailto:083execteam@seiu503.org" class="text-brand-purple hover:underline">083execteam@seiu503.org</a></p>
+                </div>
+            </div>
+        </section>
+    </div>
+    </main>
+
+                <!-- SITE SHELL: FOOTER START -->
+    <footer class="bg-gray-100 pt-12 pb-8 text-text-primary border-t border-gray-200" data-site-shell-footer>
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="md:col-span-2 lg:col-span-1">
+                    <div class="flex items-center mb-4">
+                        <img src="/images/logo.png" alt="SEIU 503 logo" class="h-12 w-12 mr-3 bg-white p-1 rounded" width="48" height="48" loading="lazy" decoding="async">
+                        <div><h3 class="text-xl font-bold">SEIU Local 503</h3><p class="text-text-secondary text-sm">Oregon State University</p></div>
+                    </div>
+                    <p class="text-text-secondary leading-relaxed">Our member-led union represents classified staff at Oregon State University. Together, we bargain fair contracts, defend our rights and build power at work.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase">Quick links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="/about.html" class="text-text-secondary hover:text-brand-purple transition-colors">About our union</a></li>
+                        <li><a href="/events.html" class="text-text-secondary hover:text-brand-purple transition-colors">Events</a></li>
+                        <li><a href="/news.html" class="text-text-secondary hover:text-brand-purple transition-colors">News</a></li>
+                        <li><a href="/leadership.html" class="text-text-secondary hover:text-brand-purple transition-colors">Leadership</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase"><a href="/resources.html" class="hover:text-brand-purple transition-colors">Resources</a></h4>
+                    <ul class="space-y-3">
+                        <li><a href="/resources.html" class="text-text-secondary hover:text-brand-purple transition-colors">Resources &amp; Rights</a></li>
+                        <li><a href="/resources/seiu_cba_2022-2026.pdf" class="text-text-secondary hover:text-brand-purple transition-colors">Our Contract (PDF)</a></li>
+                        <li><a href="/resources/stewards.html" class="text-text-secondary hover:text-brand-purple transition-colors">Find a Steward</a></li>
+                        <li><a href="/resources/weingarten-rights.html" class="text-text-secondary hover:text-brand-purple transition-colors">Weingarten Rights</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase"><a href="/contact.html" class="hover:text-brand-purple transition-colors">Contact us</a></h4>
+                    <ul class="space-y-3">
+                        <li><a href="mailto:083execteam@seiu503.org" class="text-text-secondary hover:text-brand-purple transition-colors break-all">083execteam@seiu503.org</a></li>
+                        <li><a href="mailto:083stewards@seiu503.org" class="text-text-secondary hover:text-brand-purple transition-colors break-all">083stewards@seiu503.org</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-10 pt-8 border-t border-gray-300 text-center space-y-2">
+                <p class="text-text-secondary text-sm">&copy; 2026 SEIU Local 503, Local 083. All rights reserved.</p>
+                <p class="text-text-secondary text-xs"><a class="underline hover:text-brand-purple" href="/privacy.html#analytics-controls">Tracking settings</a><span aria-hidden="true"> · </span><a class="underline hover:text-brand-purple" href="/privacy.html">Privacy notice</a></p>
+            </div>
+        </div>
+    </footer>
+<!-- SITE SHELL: FOOTER END -->
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- Mobile Menu Toggle ---
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const navLinks = document.querySelectorAll('#mobile-menu a');
+
+            mobileMenuButton.addEventListener('click', () => {
+                const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+                mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenuButton.setAttribute('aria-expanded', 'false');
+                });
+            });
+
+            document.addEventListener('keydown', (event) => {
+                if (event.key === 'Escape' && mobileMenuButton.getAttribute('aria-expanded') === 'true') {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenuButton.setAttribute('aria-expanded', 'false');
+                    mobileMenuButton.focus();
+                }
+            });
+
+            // --- Helpers ---
+            const escapeHTML = window.Sentinel && window.Sentinel.escapeHTML
+                ? window.Sentinel.escapeHTML
+                : (str) => String(str || '').replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
+
+            const sanitizeUrl = (url) => {
+                if (window.Sentinel && typeof window.Sentinel.sanitizeUrl === 'function') {
+                    return window.Sentinel.sanitizeUrl(url);
+                }
+                if (!url) return '#';
+                const str = String(url).trim();
+                const lower = str.toLowerCase();
+                if (lower.startsWith('javascript:') || lower.startsWith('data:')) return '#';
+                return str;
+            };
+
+            // --- Load Upcoming Events ---
+            const safeCapture = (name, props = {}) => {
+                if (typeof window.phCapture === 'function') window.phCapture(name, props);
+            };
+
+            const observeReveals = () => {
+                const elements = document.querySelectorAll('[data-reveal]:not([data-reveal-observed])');
+                if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                    elements.forEach(element => element.classList.add('is-visible'));
+                    return;
+                }
+
+                const observer = new IntersectionObserver(entries => {
+                    entries.forEach(entry => {
+                        if (!entry.isIntersecting) return;
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    });
+                }, { threshold: 0.12, rootMargin: '0px 0px -40px' });
+
+                elements.forEach(element => {
+                    element.dataset.revealObserved = 'true';
+                    observer.observe(element);
+                });
+            };
+
+            document.documentElement.classList.add('reveal-ready');
+            observeReveals();
+
+            const loadUpcomingEvents = async () => {
+                const eventsContainer = document.getElementById('upcoming-events-container');
+                try {
+                    const response = await fetch('/events/events.json?v=2026-07-16-membership');
+                    if (!response.ok) throw new Error('Network response was not ok');
+                    const eventsPayload = await response.json();
+                    const events = Array.isArray(eventsPayload) ? eventsPayload : eventsPayload.events;
+                    if (!Array.isArray(events)) throw new Error('Events data is not an array');
+
+                    const today = new Date();
+                    const todayString = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
+
+                    const upcomingEvents = events
+                        .filter(event => event.date >= todayString)
+                        .sort((a, b) => {
+                            if (a.featured && !b.featured) return -1;
+                            if (!a.featured && b.featured) return 1;
+
+                            // ⚡ Bolt: Use fast string comparison instead of new Date() in sort loop (~25x faster)
+                            return a.date > b.date ? 1 : (a.date < b.date ? -1 : 0);
+                        })
+                        .slice(0, 3);
+
+                    // ⚡ Bolt: Format dates only for the sliced items to avoid expensive operations on hidden entries
+                    const monthShortFormatter = new Intl.DateTimeFormat('en-US', { month: 'short' });
+                    const dateShortFormatter = new Intl.DateTimeFormat('en-US', {
+                        weekday: 'short',
+                        month: 'short',
+                        day: 'numeric',
+                        year: 'numeric'
+                    });
+                    upcomingEvents.forEach(event => {
+                        event.parsedDate = new Date(event.date + 'T00:00:00');
+                        event.formattedDateShort = dateShortFormatter.format(event.parsedDate);
+                    });
+
+                    if (upcomingEvents.length > 0) {
+                        eventsContainer.innerHTML = upcomingEvents.map(event => {
+                            const isFeaturedAction = event.featured;
+                            const eventId = sanitizeUrl(event.url).split('/').pop().replace(/\.html$/, '').toLowerCase();
+                            const month = monthShortFormatter.format(event.parsedDate);
+                            const day = event.parsedDate.getDate();
+
+                            let timeHtml = '';
+                            if (event.time) {
+                                timeHtml = `
+                                <div class="text-sm font-semibold text-text-secondary">
+                                    <span aria-hidden="true">●</span> ${escapeHTML(event.time.split(' - ')[0])}
+                                </div>`;
+                            }
+
+                            const locationHtml = event.location_detail
+                                ? `<p class="mt-3 text-sm text-text-secondary"><strong>Where:</strong> ${escapeHTML(event.location_detail)}</p>`
+                                : '';
+
+                            return `
+                                <article class="event-card bg-white rounded-2xl ${isFeaturedAction ? 'border-2 border-brand-purple shadow-xl' : 'border border-border-color'} overflow-hidden flex flex-col" data-reveal>
+                                    <div class="p-6 md:p-7 flex-grow">
+                                        <div class="flex items-start justify-between gap-4 mb-6">
+                                            <div class="event-date" aria-label="${escapeHTML(event.formattedDateShort)}">
+                                                <span class="event-date-month">${escapeHTML(month)}</span>
+                                                <span class="event-date-day">${escapeHTML(day)}</span>
+                                            </div>
+                                            <div class="text-right">
+                                                <div class="${isFeaturedAction ? 'bg-brand-purple text-white' : 'bg-brand-purple-light text-brand-purple-dark'} inline-flex font-bold rounded-full px-3 py-1 text-xs uppercase tracking-wide">${escapeHTML(event.type)}</div>
+                                                <div class="mt-3">${timeHtml}</div>
+                                            </div>
+                                        </div>
+                                        <h3 class="font-bold text-2xl md:text-3xl mb-3">${escapeHTML(event.title)}</h3>
+                                        <p class="text-text-secondary leading-relaxed">${escapeHTML(event.description)}</p>
+                                        ${locationHtml}
+                                    </div>
+                                    <div class="${isFeaturedAction ? 'bg-brand-purple-light' : 'bg-gray-50'} border-t border-border-color p-4 flex items-center justify-between gap-3">
+                                        <span class="text-sm font-bold text-text-primary">${escapeHTML(event.formattedDateShort)}</span>
+                                        <a href="${escapeHTML(sanitizeUrl(event.url))}" class="font-bold text-brand-purple hover:underline" aria-label="View ${escapeHTML(event.title)} details" data-ph-event="event_details_click" data-ph-label="${escapeHTML(event.title)}" data-ph-metadata='{"section":"home_upcoming","event_id":"${escapeHTML(eventId)}"}'>View event details &rarr;</a>
+                                    </div>
+                                </article>
+                            `;
+                        }).join('');
+                        eventsContainer.className = upcomingEvents.length < 3
+                            ? 'grid md:grid-cols-2 gap-6 lg:max-w-5xl'
+                            : 'grid md:grid-cols-2 lg:grid-cols-3 gap-6';
+                        observeReveals();
+                    } else {
+                        eventsContainer.innerHTML = `
+                            <div class="col-span-full flex flex-col items-center justify-center py-12 px-6 bg-white rounded-xl border border-border-color border-dashed" role="status">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-gray-400 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                </svg>
+                                <h3 class="text-xl font-bold text-brand-purple-dark mb-2">No upcoming events</h3>
+                                <p class="text-text-secondary mb-6 text-center max-w-md">There are no events scheduled for the near future. Check out our past events.</p>
+                                <a href="/events.html#past-events" class="btn btn-outline">View Past Events</a>
+                            </div>
+                        `;
+                    }
+                    safeCapture('home_events_loaded', { count: upcomingEvents.length });
+                } catch (error) {
+                    console.error('Error fetching events:', error);
+                    eventsContainer.insertAdjacentHTML('beforebegin', '<p class="mb-4 rounded-lg border border-yellow-300 bg-yellow-50 p-3 text-sm text-text-secondary" role="status">Live calendar updates could not be checked. Showing the latest events saved with this page.</p>');
+                }
+            };
+
+            // --- Load News ---
+            const loadNews = async () => {
+                const newsGridContainer = document.getElementById('news-grid-container');
+                 try {
+                    const response = await fetch('/news/news.json');
+                    if (!response.ok) throw new Error('Network response was not ok');
+                    const newsItems = await response.json();
+
+                    const todayKey = new Date().toLocaleDateString('en-CA', { timeZone: 'America/Los_Angeles' });
+                    const sortedNews = newsItems
+                        .filter(item => (item.status || 'published') === 'published' && item.publishedAt && item.publishedAt <= todayKey)
+                        // Keep one editorially featured story first, then sort the remaining stories by date.
+                        .sort((a, b) => {
+                            if (a.featured !== b.featured) return a.featured ? -1 : 1;
+                            return a.publishedAt < b.publishedAt ? 1 : (a.publishedAt > b.publishedAt ? -1 : 0);
+                        })
+                        .slice(0, 3);
+
+                    // ⚡ Bolt: Format dates only for the sliced items to avoid expensive operations on hidden entries
+                    const newsDateFormatter = new Intl.DateTimeFormat('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+                    sortedNews.forEach(item => {
+                        item.formattedPublishedAt = newsDateFormatter.format(new Date(item.publishedAt + 'T00:00:00'));
+                    });
+
+                    if (sortedNews.length > 0) {
+                        const mainStory = sortedNews[0];
+                        const sideStories = sortedNews.slice(1);
+
+                        const mainStoryTag = Array.isArray(mainStory.tags) && mainStory.tags.length ? mainStory.tags[0] : 'Update';
+                        const mainStoryHtml = `
+                            <article class="news-card bg-white rounded-2xl border border-border-color overflow-hidden group" data-reveal>
+                                <a href="${escapeHTML(sanitizeUrl(mainStory.url))}" class="block news-card-media aspect-[16/9]" aria-label="Read ${escapeHTML(mainStory.title)}">
+                                    <img src="${escapeHTML(sanitizeUrl(mainStory.image || '/images/card.webp'))}" alt="${escapeHTML(mainStory.alt || '')}" loading="lazy" decoding="async">
+                                </a>
+                                <div class="p-6 md:p-8">
+                                    <div class="flex items-center gap-3 text-sm mb-4">
+                                        <span class="bg-brand-purple-light text-brand-purple-dark font-bold rounded-full px-3 py-1">${escapeHTML(mainStoryTag)}</span>
+                                        <span class="text-text-secondary">${escapeHTML(mainStory.formattedPublishedAt)}</span>
+                                    </div>
+                                    <h3 class="font-bold text-3xl md:text-4xl leading-tight mb-4">${escapeHTML(mainStory.title)}</h3>
+                                    <p class="text-text-secondary leading-relaxed">${escapeHTML(mainStory.description)}</p>
+                                    <a href="${escapeHTML(sanitizeUrl(mainStory.url))}" class="text-brand-purple font-bold mt-5 inline-block group-hover:underline" aria-label="Read ${escapeHTML(mainStory.title)}">Read the story →</a>
+                                </div>
+                            </article>`;
+
+                        const sideStoriesHtml = sideStories.map(story => {
+                            const storyTag = Array.isArray(story.tags) && story.tags.length ? story.tags[0] : 'Update';
+                            return `
+                                <article class="news-card bg-white rounded-2xl border border-border-color overflow-hidden group" data-reveal>
+                                    <a href="${escapeHTML(sanitizeUrl(story.url))}" class="block news-card-media aspect-[16/7]" aria-label="Read ${escapeHTML(story.title)}">
+                                        <img src="${escapeHTML(sanitizeUrl(story.image || '/images/card.webp'))}" alt="${escapeHTML(story.alt || '')}" loading="lazy" decoding="async">
+                                    </a>
+                                    <div class="p-5 md:p-6">
+                                        <div class="flex items-center gap-3 text-xs mb-3">
+                                            <span class="font-bold uppercase tracking-wide text-brand-purple">${escapeHTML(storyTag)}</span>
+                                            <span class="text-text-secondary">${escapeHTML(story.formattedPublishedAt)}</span>
+                                        </div>
+                                        <h3 class="font-bold text-xl md:text-2xl leading-tight mb-3">${escapeHTML(story.title)}</h3>
+                                        <p class="text-text-secondary text-sm leading-relaxed">${escapeHTML(story.description)}</p>
+                                        <a href="${escapeHTML(sanitizeUrl(story.url))}" class="text-brand-purple font-bold mt-4 inline-block group-hover:underline" aria-label="Read ${escapeHTML(story.title)}">Read the story →</a>
+                                    </div>
+                                </article>
+                            `;
+                        }).join('');
+
+                        newsGridContainer.innerHTML = `
+                            ${mainStoryHtml}
+                            <div class="space-y-6">
+                                ${sideStoriesHtml}
+                            </div>
+                        `;
+                        observeReveals();
+                    } else {
+                        newsGridContainer.innerHTML = `
+                            <div class="col-span-full flex flex-col items-center justify-center py-12 px-6 bg-white rounded-xl border border-border-color border-dashed" role="status">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-gray-400 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9.5a2.5 2.5 0 00-2.5-2.5H15M9 11l3 3m0 0l3-3m-3 3V8" />
+                                </svg>
+                                <h3 class="text-xl font-bold text-brand-purple-dark mb-2">No news to display</h3>
+                                <p class="text-text-secondary mb-6 text-center max-w-md">There are no recent news articles to display at this time.</p>
+                                <a href="/news.html" class="btn btn-outline">View All News</a>
+                            </div>
+                        `;
+                    }
+                    safeCapture('home_news_loaded', { count: sortedNews.length });
+
+                } catch(error) {
+                    console.error('Error fetching news:', error);
+                    newsGridContainer.insertAdjacentHTML('beforebegin', '<p class="mb-4 rounded-lg border border-yellow-300 bg-yellow-50 p-3 text-sm text-text-secondary" role="status">Live news updates could not be checked. Showing the latest stories saved with this page.</p>');
+                }
+            };
+
+            // Initialize dynamic content loading
+            loadUpcomingEvents();
+            loadNews();
+        });
+    </script>
+</body>
+</html>

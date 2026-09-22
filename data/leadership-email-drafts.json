@@ -1,0 +1,353 @@
+{
+  "version": 1,
+  "to": [
+    "pres.office@oregonstate.edu",
+    "trustees@oregonstate.edu"
+  ],
+  "sources": [
+    {
+      "url": "https://leadership.oregonstate.edu/board-trustee/jayathi-y-murthy",
+      "description": "Published email for President Murthy",
+      "verified": "2026-09-22"
+    },
+    {
+      "url": "https://leadership.oregonstate.edu/trustees/about-board/contact-trustees-and-board-office-staff",
+      "description": "Published Board of Trustees email",
+      "verified": "2026-09-22"
+    }
+  ],
+  "drafts": [
+    {
+      "id": "01",
+      "subject": "How are cost-of-living adjustments assessed against research goals?",
+      "issue": "Cost-of-living adjustments",
+      "goal": "Advancing research excellence and practical discoveries",
+      "sourceUrls": [
+        "https://www.local083.org/news/2026-09-18-osu-strike-notice-delivered.html",
+        "https://leadership.oregonstate.edu/strategic-plan/three-goals"
+      ],
+      "body": "Dear President Murthy and members of the OSU Board of Trustees,\n\nLocal 083's September 18 notice listed cost-of-living adjustments as unresolved. Could you clarify the current status of that issue? OSU's strategic plan describes advancing research excellence and practical discoveries. How is the current bargaining position evaluated against that goal, including possible effects on staffing that supports research?\n\nPlease describe the evidence used to assess those effects and any limits to what it can establish. Where can the public find an explanation of the assumptions behind that assessment?\n\nThank you for your response.\n\nSources:\nhttps://www.local083.org/news/2026-09-18-osu-strike-notice-delivered.html\nhttps://leadership.oregonstate.edu/strategic-plan/three-goals"
+    },
+    {
+      "id": "02",
+      "subject": "Questions about cost-of-living adjustments and student support",
+      "issue": "Cost-of-living adjustments",
+      "goal": "Helping admitted students complete their degrees",
+      "sourceUrls": [
+        "https://www.local083.org/news/2026-09-18-osu-strike-notice-delivered.html",
+        "https://leadership.oregonstate.edu/strategic-plan/three-goals"
+      ],
+      "body": "Dear President Murthy and members of the OSU Board of Trustees,\n\nHow does OSU assess the relationship between its current position on cost-of-living adjustments and its goal of helping admitted students complete their degrees? Local 083 identified these adjustments as unresolved in its September 18 notice; please explain whether that status has changed.\n\nWhat information is considered about possible staffing or service effects in areas supporting students? It would be helpful to understand which indicators leadership reviews, how often they are reviewed, and whether a public summary is available.\n\nThank you for clarifying the assessment.\n\nSources:\nhttps://www.local083.org/news/2026-09-18-osu-strike-notice-delivered.html\nhttps://leadership.oregonstate.edu/strategic-plan/three-goals"
+    },
+    {
+      "id": "03",
+      "subject": "How do cost-of-living decisions relate to community goals?",
+      "issue": "Cost-of-living adjustments",
+      "goal": "Supporting economic, workforce and community development",
+      "sourceUrls": [
+        "https://www.local083.org/news/2026-09-18-osu-strike-notice-delivered.html",
+        "https://leadership.oregonstate.edu/strategic-plan/three-goals"
+      ],
+      "body": "Dear President Murthy and members of the OSU Board of Trustees,\n\nOSU's strategic plan includes supporting economic, workforce and community development. How is the university's current position on cost-of-living adjustments evaluated in relation to that goal? The September 18 Local 083 notice listed adjustments as an unresolved issue, and I would appreciate an update on their status.\n\nDoes the evaluation consider possible staffing effects on programs serving community partners? Please explain how those potential effects are assessed, which assumptions are used, and where the community can find further information about this process.\n\nSources:\nhttps://www.local083.org/news/2026-09-18-osu-strike-notice-delivered.html\nhttps://leadership.oregonstate.edu/strategic-plan/three-goals"
+    },
+    {
+      "id": "04",
+      "subject": "What informs the assessment of cost-of-living adjustments?",
+      "issue": "Cost-of-living adjustments",
+      "goal": "Recruiting and retaining faculty and staff",
+      "sourceUrls": [
+        "https://www.local083.org/news/2026-09-18-osu-strike-notice-delivered.html",
+        "https://leadership.oregonstate.edu/strategic-plan/implementation"
+      ],
+      "body": "Dear President Murthy and members of the OSU Board of Trustees,\n\nPlease explain how the current position on cost-of-living adjustments is evaluated alongside OSU's implementation objective of recruiting and retaining faculty and staff. Local 083's September 18 notice identified adjustments as unresolved; what is the present status?\n\nWhich recruitment or retention information informs the evaluation, and how does leadership distinguish potential effects of adjustments from other factors? I would also appreciate an explanation of how any resulting staffing or service implications are considered, including what information can be shared publicly.\n\nThank you.\n\nSources:\nhttps://www.local083.org/news/2026-09-18-osu-strike-notice-delivered.html\nhttps://leadership.oregonstate.edu/strategic-plan/implementation"
+    },
+    {
+      "id": "05",
+      "subject": "Cost-of-living adjustments: planning and degree completion",
+      "issue": "Cost-of-living adjustments",
+      "goal": "Supporting students through to degree completion",
+      "sourceUrls": [
+        "https://www.local083.org/news/2026-09-18-osu-strike-notice-delivered.html",
+        "https://leadership.oregonstate.edu/strategic-plan/three-goals"
+      ],
+      "body": "Dear President Murthy and members of the OSU Board of Trustees,\n\nThe September 18 Local 083 notice included cost-of-living adjustments among unresolved issues. Please provide the current status and explain how OSU evaluates its position against its goal of supporting students through to degree completion.\n\nOver what planning period does leadership consider possible staffing and student-service effects? How are uncertainty and changing circumstances accounted for in that evaluation? Please identify any public explanation of the approach, including how the assessment would be updated if relevant information changes.\n\nThank you for addressing these questions.\n\nSources:\nhttps://www.local083.org/news/2026-09-18-osu-strike-notice-delivered.html\nhttps://leadership.oregonstate.edu/strategic-plan/three-goals"
+    },
+    {
+      "id": "06",
+      "subject": "How is the salary position assessed against research goals?",
+      "issue": "Salary",
+      "goal": "Strengthening research excellence and useful discoveries",
+      "sourceUrls": [
+        "https://www.local083.org/news/2026-09-18-osu-strike-notice-delivered.html",
+        "https://leadership.oregonstate.edu/strategic-plan/three-goals"
+      ],
+      "body": "Dear President Murthy and members of the OSU Board of Trustees,\n\nCould you explain how OSU assesses its current salary position in relation to strengthening research excellence and useful discoveries? Salary appeared among the unresolved issues in Local 083's September 18 notice; please clarify its status now.\n\nWhat methods are used to consider possible staffing effects on research support, and what comparison data inform that work? I would appreciate clarification of how leadership accounts for differences between roles when interpreting those data and whether a public summary of the assessment is available.\n\nSources:\nhttps://www.local083.org/news/2026-09-18-osu-strike-notice-delivered.html\nhttps://leadership.oregonstate.edu/strategic-plan/three-goals"
+    },
+    {
+      "id": "07",
+      "subject": "Questions about salary assessment and student services",
+      "issue": "Salary",
+      "goal": "Helping students progress toward degree completion",
+      "sourceUrls": [
+        "https://www.local083.org/news/2026-09-18-osu-strike-notice-delivered.html",
+        "https://leadership.oregonstate.edu/strategic-plan/three-goals"
+      ],
+      "body": "Dear President Murthy and members of the OSU Board of Trustees,\n\nLocal 083's September 18 notice identified salary as unresolved. Please share the current status and explain how OSU evaluates its salary position against the strategic goal of helping students progress toward degree completion.\n\nDoes that evaluation consider potential changes in vacancies, hiring times or service availability in student-support functions? Please describe which measures are relevant, how leadership interprets them, and what limitations apply. Where can people find a current explanation of how this information informs the university's assessment?\n\nThank you for responding.\n\nSources:\nhttps://www.local083.org/news/2026-09-18-osu-strike-notice-delivered.html\nhttps://leadership.oregonstate.edu/strategic-plan/three-goals"
+    },
+    {
+      "id": "08",
+      "subject": "Salary decisions and OSU community partnerships",
+      "issue": "Salary",
+      "goal": "Advancing economic, workforce and community development",
+      "sourceUrls": [
+        "https://www.local083.org/news/2026-09-18-osu-strike-notice-delivered.html",
+        "https://leadership.oregonstate.edu/strategic-plan/three-goals"
+      ],
+      "body": "Dear President Murthy and members of the OSU Board of Trustees,\n\nOSU describes advancing economic, workforce and community development as a strategic goal. How does leadership evaluate its current salary position against that goal, including potential staffing or service effects in work involving community partners?\n\nThe September 18 Local 083 notice listed salary as unresolved. Please clarify what has changed since that notice, if anything, and explain how information from affected university units or partners enters the evaluation. It would be useful to know where the public can read about the method and its findings.\n\nSources:\nhttps://www.local083.org/news/2026-09-18-osu-strike-notice-delivered.html\nhttps://leadership.oregonstate.edu/strategic-plan/three-goals"
+    },
+    {
+      "id": "09",
+      "subject": "Which recruitment and retention measures inform salary decisions?",
+      "issue": "Salary",
+      "goal": "Recruiting and retaining faculty and staff",
+      "sourceUrls": [
+        "https://www.local083.org/news/2026-09-18-osu-strike-notice-delivered.html",
+        "https://leadership.oregonstate.edu/strategic-plan/implementation"
+      ],
+      "body": "Dear President Murthy and members of the OSU Board of Trustees,\n\nWhat recruitment and retention measures inform the evaluation of OSU's current salary position? The implementation plan includes recruiting and retaining faculty and staff. Please explain how the salary assessment relates to that objective and considers potential staffing or service effects.\n\nLocal 083 listed salary as unresolved in its September 18 notice; I would appreciate a current status update. In explaining the evaluation, please clarify how leadership considers application patterns, accepted offers or employee departures where relevant, and what conclusions the available information can support.\n\nSources:\nhttps://www.local083.org/news/2026-09-18-osu-strike-notice-delivered.html\nhttps://leadership.oregonstate.edu/strategic-plan/implementation"
+    },
+    {
+      "id": "10",
+      "subject": "How does salary assessment address research-support continuity?",
+      "issue": "Salary",
+      "goal": "Building research excellence with practical applications",
+      "sourceUrls": [
+        "https://www.local083.org/news/2026-09-18-osu-strike-notice-delivered.html",
+        "https://leadership.oregonstate.edu/strategic-plan/three-goals"
+      ],
+      "body": "Dear President Murthy and members of the OSU Board of Trustees,\n\nPlease describe how OSU evaluates its current salary position in relation to building research excellence with practical applications. Salary was listed as unresolved in Local 083's September 18 notice, so a current update would also be helpful.\n\nHow are potential effects on staffing continuity or research-support services considered? Please explain whether the assessment looks at different possible outcomes, what assumptions those scenarios use, and how new evidence would change the evaluation. Where can the university community find information about this work and ask follow-up questions?\n\nSources:\nhttps://www.local083.org/news/2026-09-18-osu-strike-notice-delivered.html\nhttps://leadership.oregonstate.edu/strategic-plan/three-goals"
+    },
+    {
+      "id": "11",
+      "subject": "Insurance discussions and staff retention",
+      "issue": "insurance",
+      "goal": "Recruiting and retaining faculty and staff",
+      "sourceUrls": [
+        "https://www.local083.org/news/2026-09-18-osu-strike-notice-delivered.html",
+        "https://leadership.oregonstate.edu/strategic-plan/implementation"
+      ],
+      "body": "Dear President Murthy and members of the OSU Board of Trustees,\n\nLocal 083's September 18, 2026 notice identified insurance as unresolved. Has its status changed?\n\nHow are OSU's insurance positions evaluated against its aim of recruiting and retaining faculty and staff? What staffing effects have been examined, and over what period? If an assessment exists, where can the public find its findings? I would appreciate clarification of what evidence informs that review and which office can explain it.\n\nThank you for a response.\n\nSources:\nhttps://www.local083.org/news/2026-09-18-osu-strike-notice-delivered.html\nhttps://leadership.oregonstate.edu/strategic-plan/implementation"
+    },
+    {
+      "id": "12",
+      "subject": "Insurance proposals and student support planning",
+      "issue": "insurance",
+      "goal": "Helping students progress toward completing degrees",
+      "sourceUrls": [
+        "https://www.local083.org/news/2026-09-18-osu-strike-notice-delivered.html",
+        "https://leadership.oregonstate.edu/strategic-plan/three-goals"
+      ],
+      "body": "Dear President Murthy and members of the OSU Board of Trustees,\n\nInsurance appeared among the unresolved issues in Local 083's September 18, 2026 notice. I would appreciate an update on that issue.\n\nHow does OSU assess insurance positions against its goal of helping students progress toward completing degrees? Have possible effects on staffing or student services been considered? If so, which services were included, and what measures were used? Please indicate where any public explanation of that assessment is available.\n\nThank you for clarifying the process.\n\nSources:\nhttps://www.local083.org/news/2026-09-18-osu-strike-notice-delivered.html\nhttps://leadership.oregonstate.edu/strategic-plan/three-goals"
+    },
+    {
+      "id": "13",
+      "subject": "Research staffing considerations in insurance discussions",
+      "issue": "insurance",
+      "goal": "Strengthening research excellence and collaborative discovery",
+      "sourceUrls": [
+        "https://www.local083.org/news/2026-09-18-osu-strike-notice-delivered.html",
+        "https://leadership.oregonstate.edu/strategic-plan/three-goals"
+      ],
+      "body": "Dear President Murthy and members of the OSU Board of Trustees,\n\nI am seeking information about insurance, which Local 083 listed as unresolved in its September 18, 2026 notice. Please clarify its current status.\n\nHow is OSU evaluating insurance positions alongside its goal of strengthening research excellence and collaborative discovery? What potential effects on research staffing or supporting services have been assessed? Does that evaluation distinguish immediate considerations from longer planning periods? A public summary of the approach would help explain how those questions are considered.\n\nThank you for your time.\n\nSources:\nhttps://www.local083.org/news/2026-09-18-osu-strike-notice-delivered.html\nhttps://leadership.oregonstate.edu/strategic-plan/three-goals"
+    },
+    {
+      "id": "14",
+      "subject": "How employee benefits are assessed for recruitment",
+      "issue": "employee benefits",
+      "goal": "Recruiting and retaining faculty and staff",
+      "sourceUrls": [
+        "https://www.local083.org/news/2026-09-18-osu-strike-notice-delivered.html",
+        "https://leadership.oregonstate.edu/strategic-plan/implementation"
+      ],
+      "body": "Dear President Murthy and members of the OSU Board of Trustees,\n\nLocal 083's September 18, 2026 notice included employee benefits among the unresolved issues. Is there a newer public update?\n\nHow does OSU assess its employee-benefits positions against its aim of recruiting and retaining faculty and staff? What information, if any, about recruitment or retention has been considered? I would appreciate knowing how possible staffing effects are assessed and whether the methods or findings are publicly available. Please direct this inquiry to the appropriate office if necessary.\n\nThank you for your help.\n\nSources:\nhttps://www.local083.org/news/2026-09-18-osu-strike-notice-delivered.html\nhttps://leadership.oregonstate.edu/strategic-plan/implementation"
+    },
+    {
+      "id": "15",
+      "subject": "Employee benefits and continuity of student services",
+      "issue": "employee benefits",
+      "goal": "Helping students progress toward completing degrees",
+      "sourceUrls": [
+        "https://www.local083.org/news/2026-09-18-osu-strike-notice-delivered.html",
+        "https://leadership.oregonstate.edu/strategic-plan/three-goals"
+      ],
+      "body": "Dear President Murthy and members of the OSU Board of Trustees,\n\nI would appreciate clarification about employee benefits, identified as unresolved in Local 083's September 18, 2026 notice. Have developments since that notice been published?\n\nWhen evaluating employee-benefits positions against OSU's goal of helping students progress toward completing degrees, what questions about staffing and student services are examined? Have any possible service effects been assessed, and who coordinates that work? Please identify any public document that explains the scope of the evaluation without disclosing confidential bargaining information.\n\nThank you for a response.\n\nSources:\nhttps://www.local083.org/news/2026-09-18-osu-strike-notice-delivered.html\nhttps://leadership.oregonstate.edu/strategic-plan/three-goals"
+    },
+    {
+      "id": "16",
+      "subject": "Employee benefits and community development planning",
+      "issue": "employee benefits",
+      "goal": "Supporting economic, workforce, and community development",
+      "sourceUrls": [
+        "https://www.local083.org/news/2026-09-18-osu-strike-notice-delivered.html",
+        "https://leadership.oregonstate.edu/strategic-plan/three-goals"
+      ],
+      "body": "Dear President Murthy and members of the OSU Board of Trustees,\n\nThe September 18, 2026 Local 083 notice listed employee benefits as unresolved. I would like to understand the current status and evaluation process.\n\nHow are OSU's employee-benefits positions considered alongside its goal of supporting economic, workforce, and community development? Have possible staffing or service effects relevant to that goal been assessed? If so, what information informed the assessment, and does it include a defined geographic or organizational scope? A link to any public explanation would be useful.\n\nThank you for your time.\n\nSources:\nhttps://www.local083.org/news/2026-09-18-osu-strike-notice-delivered.html\nhttps://leadership.oregonstate.edu/strategic-plan/three-goals"
+    },
+    {
+      "id": "17",
+      "subject": "Contracting out and research support assessment",
+      "issue": "contracting out",
+      "goal": "Strengthening research excellence and collaborative discovery",
+      "sourceUrls": [
+        "https://www.local083.org/news/2026-09-18-osu-strike-notice-delivered.html",
+        "https://leadership.oregonstate.edu/strategic-plan/three-goals"
+      ],
+      "body": "Dear President Murthy and members of the OSU Board of Trustees,\n\nContracting out was identified as unresolved in Local 083's September 18, 2026 notice. Please let me know where to find any subsequent update.\n\nHow does OSU evaluate contracting-out positions against its goal of strengthening research excellence and collaborative discovery? What possible effects on staffing or research-support services have been assessed? If an evaluation has occurred, does it consider different time horizons or implementation conditions? I would appreciate a public explanation of its scope and the evidence considered.\n\nThank you for responding.\n\nSources:\nhttps://www.local083.org/news/2026-09-18-osu-strike-notice-delivered.html\nhttps://leadership.oregonstate.edu/strategic-plan/three-goals"
+    },
+    {
+      "id": "18",
+      "subject": "Contracting out and student service evaluation",
+      "issue": "contracting out",
+      "goal": "Helping students progress toward completing degrees",
+      "sourceUrls": [
+        "https://www.local083.org/news/2026-09-18-osu-strike-notice-delivered.html",
+        "https://leadership.oregonstate.edu/strategic-plan/three-goals"
+      ],
+      "body": "Dear President Murthy and members of the OSU Board of Trustees,\n\nLocal 083's September 18, 2026 notice named contracting out as unresolved. I am interested in its current status and how relevant effects are evaluated.\n\nHow are contracting-out positions assessed against OSU's goal of helping students progress toward completing degrees? Which potential staffing or student-service effects, if any, have been examined? Please explain how the university determines which services to include in that assessment and where readers can find the criteria used.\n\nThank you for directing me to available information.\n\nSources:\nhttps://www.local083.org/news/2026-09-18-osu-strike-notice-delivered.html\nhttps://leadership.oregonstate.edu/strategic-plan/three-goals"
+    },
+    {
+      "id": "19",
+      "subject": "Contracting-out discussions and workforce planning",
+      "issue": "contracting out",
+      "goal": "Recruiting and retaining faculty and staff",
+      "sourceUrls": [
+        "https://www.local083.org/news/2026-09-18-osu-strike-notice-delivered.html",
+        "https://leadership.oregonstate.edu/strategic-plan/implementation"
+      ],
+      "body": "Dear President Murthy and members of the OSU Board of Trustees,\n\nI am asking about contracting out, which appeared in Local 083's September 18, 2026 list of unresolved issues. Has an updated account been published?\n\nHow does OSU review contracting-out positions in relation to its aim of recruiting and retaining faculty and staff? What possible staffing effects have been assessed, and which workforce-planning assumptions were used? If the assessment is incomplete, is there a public description of the work still underway and the office responsible?\n\nThank you for clarifying what information is available.\n\nSources:\nhttps://www.local083.org/news/2026-09-18-osu-strike-notice-delivered.html\nhttps://leadership.oregonstate.edu/strategic-plan/implementation"
+    },
+    {
+      "id": "20",
+      "subject": "Contracting out and community-facing services",
+      "issue": "contracting out",
+      "goal": "Supporting economic, workforce, and community development",
+      "sourceUrls": [
+        "https://www.local083.org/news/2026-09-18-osu-strike-notice-delivered.html",
+        "https://leadership.oregonstate.edu/strategic-plan/three-goals"
+      ],
+      "body": "Dear President Murthy and members of the OSU Board of Trustees,\n\nThe September 18, 2026 notice from Local 083 identified contracting out as unresolved. Please clarify whether that remains the current status.\n\nHow are contracting-out positions evaluated against OSU's goal of supporting economic, workforce, and community development? Have possible staffing or service effects involving university-community activities been assessed? If so, what kinds of activities were considered, and how were the assessment's boundaries established? I would appreciate a reference to any public findings or explanation of the review process.\n\nThank you for a response.\n\nSources:\nhttps://www.local083.org/news/2026-09-18-osu-strike-notice-delivered.html\nhttps://leadership.oregonstate.edu/strategic-plan/three-goals"
+    },
+    {
+      "id": "21",
+      "subject": "Question about layoff proposals and student support",
+      "issue": "layoffs",
+      "goal": "Helping students complete their degrees",
+      "sourceUrls": [
+        "https://www.local083.org/news/2026-09-18-osu-strike-notice-delivered.html",
+        "https://leadership.oregonstate.edu/strategic-plan/three-goals"
+      ],
+      "body": "Dear President Murthy and members of the OSU Board of Trustees,\n\nLocal 083's September 18 notice listed layoffs among unresolved bargaining issues. Could you explain the university's current position on layoffs and how it relates to OSU's goal of helping students complete their degrees?\n\nWhat potential staffing or student-service effects has the university evaluated when considering these provisions? If an assessment is available, please share it or summarize its scope. I would appreciate a dated response distinguishing the current proposal from any terms both parties have agreed to.\n\nThank you.\n\nSources:\nhttps://www.local083.org/news/2026-09-18-osu-strike-notice-delivered.html\nhttps://leadership.oregonstate.edu/strategic-plan/three-goals"
+    },
+    {
+      "id": "22",
+      "subject": "Information about layoff provisions and research staffing",
+      "issue": "layoffs",
+      "goal": "Advancing research excellence and useful discoveries",
+      "sourceUrls": [
+        "https://www.local083.org/news/2026-09-18-osu-strike-notice-delivered.html",
+        "https://leadership.oregonstate.edu/strategic-plan/three-goals"
+      ],
+      "body": "Dear President Murthy and members of the OSU Board of Trustees,\n\nThe September 18 Local 083 notice identified layoffs as unresolved. I would appreciate an explanation of the university's position today and how it fits OSU's goal of advancing research excellence and useful discoveries.\n\nHas the university assessed potential effects of the proposed layoff provisions on research-support staffing or services? Please explain which considerations were examined and whether public findings are available. If the proposal has changed since September 18, please identify the current document so readers can understand the latest position.\n\nThank you.\n\nSources:\nhttps://www.local083.org/news/2026-09-18-osu-strike-notice-delivered.html\nhttps://leadership.oregonstate.edu/strategic-plan/three-goals"
+    },
+    {
+      "id": "23",
+      "subject": "Layoff provisions and OSU community partnerships",
+      "issue": "layoffs",
+      "goal": "Supporting economic development and community partnerships",
+      "sourceUrls": [
+        "https://www.local083.org/news/2026-09-18-osu-strike-notice-delivered.html",
+        "https://leadership.oregonstate.edu/strategic-plan/three-goals"
+      ],
+      "body": "Dear President Murthy and members of the OSU Board of Trustees,\n\nCould you clarify the current status of bargaining over layoffs? Local 083 listed that issue as unresolved in its September 18 notice.\n\nHow does the university's present position fit OSU's goal of supporting economic development and community partnerships? What possible effects on staffing or services connected with those partnerships have been evaluated? Please identify any relevant public analysis, or explain what information is available if no separate assessment exists. A dated explanation would help distinguish the university's current position from the earlier notice.\n\nThank you.\n\nSources:\nhttps://www.local083.org/news/2026-09-18-osu-strike-notice-delivered.html\nhttps://leadership.oregonstate.edu/strategic-plan/three-goals"
+    },
+    {
+      "id": "24",
+      "subject": "Question about layoffs and staff retention planning",
+      "issue": "layoffs",
+      "goal": "Recruiting and retaining faculty and staff",
+      "sourceUrls": [
+        "https://www.local083.org/news/2026-09-18-osu-strike-notice-delivered.html",
+        "https://leadership.oregonstate.edu/strategic-plan/implementation"
+      ],
+      "body": "Dear President Murthy and members of the OSU Board of Trustees,\n\nOSU's implementation plan includes recruiting and retaining faculty and staff. How does the university's current position on layoffs relate to that objective? Local 083's September 18 notice listed layoffs among unresolved issues.\n\nPlease explain what potential staffing or service effects were considered in developing the current position. Were those considerations assessed within the university's workforce planning, and is any summary publicly available? I would also appreciate clarification of whether the issue has changed status since the notice and where the latest proposal can be read.\n\nThank you.\n\nSources:\nhttps://www.local083.org/news/2026-09-18-osu-strike-notice-delivered.html\nhttps://leadership.oregonstate.edu/strategic-plan/implementation"
+    },
+    {
+      "id": "25",
+      "subject": "Request to explain trial-service proposals and recruitment",
+      "issue": "trial service",
+      "goal": "Recruiting and retaining faculty and staff",
+      "sourceUrls": [
+        "https://www.local083.org/news/2026-09-18-osu-strike-notice-delivered.html",
+        "https://leadership.oregonstate.edu/strategic-plan/implementation"
+      ],
+      "body": "Dear President Murthy and members of the OSU Board of Trustees,\n\nLocal 083's September 18 notice identified trial service as an unresolved bargaining issue. Could you describe the university's current proposal in plain language and explain how it fits OSU's objective of recruiting and retaining faculty and staff?\n\nWhat potential effects on staffing or services have been considered when evaluating trial-service provisions? Please share any public explanation of those considerations and indicate whether it reflects the latest proposal. If the issue has since been resolved, a link to the agreed language would be helpful.\n\nThank you.\n\nSources:\nhttps://www.local083.org/news/2026-09-18-osu-strike-notice-delivered.html\nhttps://leadership.oregonstate.edu/strategic-plan/implementation"
+    },
+    {
+      "id": "26",
+      "subject": "Trial service and planning for student support",
+      "issue": "trial service",
+      "goal": "Helping students complete their degrees",
+      "sourceUrls": [
+        "https://www.local083.org/news/2026-09-18-osu-strike-notice-delivered.html",
+        "https://leadership.oregonstate.edu/strategic-plan/three-goals"
+      ],
+      "body": "Dear President Murthy and members of the OSU Board of Trustees,\n\nI would appreciate an update on trial service, which Local 083's September 18 notice listed as unresolved. How does the university's current position relate to OSU's goal of helping students complete their degrees?\n\nCould you explain what potential effects on staffing and student services were evaluated when considering this issue? Please distinguish any documented assessment from matters that remain under review. A link to the latest proposal, together with a dated explanation of its status, would help make the university's position easier to understand.\n\nThank you.\n\nSources:\nhttps://www.local083.org/news/2026-09-18-osu-strike-notice-delivered.html\nhttps://leadership.oregonstate.edu/strategic-plan/three-goals"
+    },
+    {
+      "id": "27",
+      "subject": "Question about trial service and research-support staffing",
+      "issue": "trial service",
+      "goal": "Advancing research excellence and useful discoveries",
+      "sourceUrls": [
+        "https://www.local083.org/news/2026-09-18-osu-strike-notice-delivered.html",
+        "https://leadership.oregonstate.edu/strategic-plan/three-goals"
+      ],
+      "body": "Dear President Murthy and members of the OSU Board of Trustees,\n\nHow is the university considering its research objectives when developing its position on trial service? Local 083's September 18 notice listed trial service among unresolved bargaining issues.\n\nPlease explain how the current proposal fits OSU's goal of advancing research excellence and useful discoveries, and what potential effects on research-support staffing or services have been assessed. I would appreciate links to any public explanation or relevant proposal language. Please also indicate whether the issue's status has changed since September 18 and the date your response reflects.\n\nThank you.\n\nSources:\nhttps://www.local083.org/news/2026-09-18-osu-strike-notice-delivered.html\nhttps://leadership.oregonstate.edu/strategic-plan/three-goals"
+    },
+    {
+      "id": "28",
+      "subject": "Agreement duration and university workforce planning",
+      "issue": "agreement duration",
+      "goal": "Recruiting and retaining faculty and staff",
+      "sourceUrls": [
+        "https://www.local083.org/news/2026-09-18-osu-strike-notice-delivered.html",
+        "https://leadership.oregonstate.edu/strategic-plan/implementation"
+      ],
+      "body": "Dear President Murthy and members of the OSU Board of Trustees,\n\nCould you explain the university's current position on agreement duration? Local 083's September 18 notice listed duration among unresolved issues, and OSU's implementation plan includes recruiting and retaining faculty and staff.\n\nHow does the proposed duration fit that objective? What potential staffing or service effects have been considered when evaluating the agreement's length? Please share any public explanation of the planning assumptions involved. I would appreciate a dated response that identifies the latest proposal and clarifies whether duration remains under discussion or has since been agreed.\n\nThank you.\n\nSources:\nhttps://www.local083.org/news/2026-09-18-osu-strike-notice-delivered.html\nhttps://leadership.oregonstate.edu/strategic-plan/implementation"
+    },
+    {
+      "id": "29",
+      "subject": "Request to clarify agreement duration and research planning",
+      "issue": "agreement duration",
+      "goal": "Advancing research excellence and useful discoveries",
+      "sourceUrls": [
+        "https://www.local083.org/news/2026-09-18-osu-strike-notice-delivered.html",
+        "https://leadership.oregonstate.edu/strategic-plan/three-goals"
+      ],
+      "body": "Dear President Murthy and members of the OSU Board of Trustees,\n\nLocal 083 identified agreement duration as unresolved in its September 18 notice. I would appreciate an explanation of the university's current position and how it fits OSU's goal of advancing research excellence and useful discoveries.\n\nWhat potential effects on staffing or research-support services has the university considered in assessing different agreement lengths? Please explain any relevant planning assumptions and identify publicly available supporting material. If there has been a change since the notice, please link to the updated proposal or agreement and specify its date.\n\nThank you.\n\nSources:\nhttps://www.local083.org/news/2026-09-18-osu-strike-notice-delivered.html\nhttps://leadership.oregonstate.edu/strategic-plan/three-goals"
+    },
+    {
+      "id": "30",
+      "subject": "Agreement length and OSU community-service planning",
+      "issue": "agreement duration",
+      "goal": "Supporting economic development and community partnerships",
+      "sourceUrls": [
+        "https://www.local083.org/news/2026-09-18-osu-strike-notice-delivered.html",
+        "https://leadership.oregonstate.edu/strategic-plan/three-goals"
+      ],
+      "body": "Dear President Murthy and members of the OSU Board of Trustees,\n\nHow does the university's current position on agreement duration fit OSU's goal of supporting economic development and community partnerships? Local 083's September 18 notice listed duration among unresolved bargaining issues.\n\nCould you explain what potential effects on staffing or services related to those partnerships have been evaluated when considering the agreement's length? Please point to any public assessment or explanation of the university's planning approach. I would also appreciate confirmation of the issue's current status, with a date and a link to the applicable proposal.\n\nThank you.\n\nSources:\nhttps://www.local083.org/news/2026-09-18-osu-strike-notice-delivered.html\nhttps://leadership.oregonstate.edu/strategic-plan/three-goals"
+    }
+  ],
+  "contentAsOf": "2026-09-22",
+  "statusNote": "Issues attributed to the September 18 notice; each draft asks for current status. Review after the next bargaining update."
+}
