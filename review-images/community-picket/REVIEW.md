@@ -37,3 +37,5 @@ Verification: node tests/test_leadership_email.cjs covers 30 unique complete dra
 ## Public review release
 
 Prepared on isolated branch codex/community-picket-review from origin/main 76ab663. Homepage and strike review copies were refreshed from that published revision. The four /test-pages/ URLs are publicly viewable review pages, with noindex metadata and exclusion from the sitemap. Live homepage and strike entry points are unchanged.
+
+Marketing/copy follow-up: see [MARKETING-REVISIONS.md](MARKETING-REVISIONS.md) for the applied copy and hierarchy changes, browser QA, and separate inherited homepage follow-ups. The email action on the picket guide is now secondary and collapsed by default. Updated screenshots reflect this revision.
