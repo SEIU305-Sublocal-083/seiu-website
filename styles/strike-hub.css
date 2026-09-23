@@ -189,7 +189,7 @@
 .hub-page-nav a { align-items: center; background: #fff; border: 1px solid #ddd6fe; border-radius: .5rem; color: #4c1d95; display: flex; font-size: .82rem; font-weight: 700; justify-content: center; line-height: 1.4; min-height: 3rem; min-width: 0; overflow-wrap: anywhere; padding: .7rem .85rem; text-align: center; }
 .hub-page-nav a:hover { background: #ede9fe; }
 @media (min-width: 760px) {
-    .hub-page-nav > div { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+    .hub-page-nav > div { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 }
 #full-guide, .hub-topic, .hub-topic [id], .hub-source-group { scroll-margin-top: 6rem; }
 .hub-topics { display: grid; gap: 1rem; }
@@ -312,3 +312,14 @@
     .hub-page-nav > div { gap: .5rem; grid-auto-rows: auto; }
     .hub-page-nav a { min-height: 2.75rem; padding: .6rem .65rem; }
 }
+
+/* Questions and detailed instructions share one four-topic guide. */
+.hub-anchor { display: block; scroll-margin-top: 6rem; }
+#why-we-are-fighting { scroll-margin-top: 6rem; }
+.hub-topic-body > .strike-faq:first-of-type { padding-top: 0; }
+.hub-topic-body > .strike-faq > summary { font-size: 1.15rem; }
+.hub-topic-body > .strike-faq > .strike-copy { margin-top: 1rem; }
+.hub-topic-body .strike-faq h4 { font-size: 1.25rem; }
+.hub-topic-body .strike-faq .strike-copy + .strike-copy { margin-top: 1.5rem; }
+.hub-topic-body .strike-faq > section { padding-block: 1rem; }
+.strike-hub #union-contacts { grid-column: 1 / -1; }
