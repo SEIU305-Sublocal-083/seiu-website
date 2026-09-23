@@ -1,4 +1,8 @@
-# Community support and picket logistics drafts
+# Community support and picket preparation
+
+Current release: the reviewed pages are promoted to `/strike/community-support/` and `/strike/picket-preparation/`, with links from the homepage and strike hub. See [PUBLICATION.md](PUBLICATION.md) for routes, redirects, screenshots and validation.
+
+## Review history
 
 Prepared September 22, 2026. New drafts only; production navigation and sitemap unchanged. Both pages use noindex while under review.
 
