@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//SEIU Local 503 OSU//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:2026-09-24-strike-captain-training-mu@local083.org
+DTSTAMP:20260923T190000Z
+SEQUENCE:0
+DTSTART:20260924T180000Z
+DTEND:20260924T200000Z
+SUMMARY:Strike Captain Training: MU 211
+DESCRIPTION:Join our in-person strike captain training Thursday\, Sept. 24\
+ , from 11 a.m. to 1 p.m. in Memorial Union Room 211. All are welcome.
+LOCATION:Memorial Union\, Room 211 - 2501 SW Jefferson Way\, Corvallis\, OR
+  97331
+URL:https://www.local083.org/events/2026-09-24-Strike-Captain-Training-MU.h
+ tml
+STATUS:CONFIRMED
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Strike Captain Training: MU 211
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

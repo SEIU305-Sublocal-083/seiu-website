@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//SEIU Local 503 OSU//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:2026-09-27-strike-captain-training@local083.org
+DTSTAMP:20260923T190000Z
+SEQUENCE:0
+DTSTART:20260927T200000Z
+DTEND:20260928T000000Z
+SUMMARY:Strike Captain Training: Corvallis Union Office
+DESCRIPTION:Join our in-person strike captain training Sunday\, Sept. 27\,
+  from 1 to 5 p.m. at the Corvallis union office\, 301 SW 4th St.\, Unit 26
+ 0.
+LOCATION:Corvallis union office - 301 SW 4th St\, Unit 260\, Corvallis\, OR
+  97333
+URL:https://www.local083.org/events/2026-09-27-Strike-Captain-Training.html
+STATUS:CONFIRMED
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Strike Captain Training: Corvallis Union Office
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+END:VCALENDAR
