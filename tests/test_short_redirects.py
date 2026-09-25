@@ -1,3 +1,4 @@
+import html
 import json
 import sys
 import tempfile
@@ -35,9 +36,10 @@ class ShortRedirectTests(unittest.TestCase):
         for entry in self.entries:
             with self.subTest(slug=entry["slug"]):
                 source = redirects.render_redirect(entry)
+                escaped_target = html.escape(entry["target"], quote=True)
                 self.assertIn('<meta name="robots" content="noindex, follow">', source)
-                self.assertIn(f'<meta http-equiv="refresh" content="0; url={entry["target"]}">', source)
-                self.assertIn(f'href="{entry["target"]}"', source)
+                self.assertIn(f'<meta http-equiv="refresh" content="0; url={escaped_target}">', source)
+                self.assertIn(f'href="{escaped_target}"', source)
                 self.assertIn("data-site-shell-header", source)
                 self.assertIn("data-site-shell-footer", source)
                 self.assertIn(

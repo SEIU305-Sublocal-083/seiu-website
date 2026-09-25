@@ -94,5 +94,11 @@
     "target": "https://canvasser-7217.my.site.com/survey/s/surveyvista?su=zufRjw",
     "title": "Sign Up for a Strike Shift",
     "description": "Choose your strike shifts with SEIU Local 503 at Oregon State University."
+  },
+  {
+    "slug": "email-signup",
+    "target": "https://local083.us18.list-manage.com/subscribe?u=0eab8f11133c965a81c06f0cd&id=50e99d5915",
+    "title": "Local 083 Email Updates",
+    "description": "Sign up for bargaining updates, meeting reminders and ways to take action with our union at Oregon State University."
   }
 ]
