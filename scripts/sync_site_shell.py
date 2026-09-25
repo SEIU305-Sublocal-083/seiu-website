@@ -43,8 +43,9 @@ STYLE_RE = re.compile(r"<style\b", re.IGNORECASE)
 TAILWIND_LINK_RE = re.compile(
     r"<link\b[^>]*href=[\"']/styles/tailwind\.css[\"'][^>]*>", re.IGNORECASE
 )
+SHELL_STYLES_URL = "/styles/site-shell.css?v=20260925-footer2"
 SHELL_STYLES_LINK_RE = re.compile(
-    r"<link\b[^>]*href=[\"']/styles/site-shell\.css[\"'][^>]*>", re.IGNORECASE
+    r"<link\b[^>]*href=[\"']/styles/site-shell\.css(?:\?[^\"\']*)?[\"'][^>]*>", re.IGNORECASE
 )
 def active_section(relative_path: str) -> str | None:
     """Return the main-navigation section for a public path."""
@@ -222,8 +223,11 @@ def ensure_shell_styles(source: str) -> str:
     links: list[str] = []
     if not TAILWIND_LINK_RE.search(source):
         links.append('    <link rel="stylesheet" href="/styles/tailwind.css">')
-    if not SHELL_STYLES_LINK_RE.search(source):
-        links.append('    <link rel="stylesheet" href="/styles/site-shell.css">')
+    shell_link = f'<link rel="stylesheet" href="{SHELL_STYLES_URL}">'
+    if SHELL_STYLES_LINK_RE.search(source):
+        source = SHELL_STYLES_LINK_RE.sub(lambda _: shell_link, source)
+    else:
+        links.append("    " + shell_link)
     if not links:
         return source
     style = STYLE_RE.search(source)

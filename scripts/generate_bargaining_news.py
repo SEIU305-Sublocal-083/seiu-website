@@ -9,7 +9,7 @@ import json
 from datetime import datetime
 from pathlib import Path
 
-from sync_site_shell import render_footer, render_header
+from sync_site_shell import SHELL_STYLES_URL, render_footer, render_header
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -177,7 +177,7 @@ def render_page(
     <title>{esc(page_title)}</title>
     <link rel="stylesheet" href="/styles/tailwind.css">
     <link rel="stylesheet" href="/styles/fonts.css">
-    <link rel="stylesheet" href="/styles/site-shell.css">
+    <link rel="stylesheet" href="{SHELL_STYLES_URL}">
     <link rel="icon" href="/images/logo.png" type="image/png">
     <link rel="apple-touch-icon" href="/images/logo.png">
     <style>

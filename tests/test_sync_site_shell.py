@@ -43,10 +43,17 @@ class SyncSiteShellTests(unittest.TestCase):
         )
         self.assertIn("max-width: 80rem", styles)
 
+    def test_refreshes_cached_shell_stylesheet_url(self):
+        for href in ["/styles/site-shell.css", "/styles/site-shell.css?v=old"]:
+            source = '<html><head><link rel="stylesheet" href="' + href + '"></head><body></body></html>'
+            updated = shell.ensure_shell_styles(source)
+            self.assertEqual(updated.count(shell.SHELL_STYLES_URL), 1)
+            self.assertEqual(shell.ensure_shell_styles(updated), updated)
+
     def test_replaces_shell_but_preserves_article_header_and_body(self):
         updated = shell.sync_source(PAGE, "news/story.html")
         self.assertIn('<link rel="stylesheet" href="/styles/tailwind.css">', updated)
-        self.assertIn('<link rel="stylesheet" href="/styles/site-shell.css">', updated)
+        self.assertIn(f'<link rel="stylesheet" href="{shell.SHELL_STYLES_URL}">', updated)
         self.assertIn('<a href="/news.html" class="text-brand-purple font-bold" aria-current="page">News</a>', updated)
         self.assertIn(
             '<a href="/news.html" class="block text-center py-3 px-6 text-lg text-brand-purple bg-brand-purple-light font-bold" aria-current="page">News</a>',

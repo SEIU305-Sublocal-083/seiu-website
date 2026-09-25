@@ -64,8 +64,8 @@ body[data-site-shell-added] > main {
     display: flex;
     flex-wrap: wrap;
     align-items: baseline;
-    gap: 0.5rem 0.75rem;
-    margin-bottom: 1rem;
+    gap: 0.625rem 0.875rem;
+    margin-bottom: 1.25rem;
 }
 
 [data-site-shell-footer] .footer-contact-links h4 {
@@ -75,6 +75,9 @@ body[data-site-shell-added] > main {
 [data-site-shell-footer] .footer-email-signup {
     color: var(--text-secondary);
     font-size: 0.875rem;
+    line-height: 1.5;
+    padding: 0.125rem 0 0.125rem 0.875rem;
+    border-left: 1px solid var(--border-color);
     text-decoration: underline;
     text-underline-offset: 0.2em;
     white-space: nowrap;
