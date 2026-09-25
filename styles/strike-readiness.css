@@ -125,7 +125,7 @@ a:focus-visible, button:focus-visible, select:focus-visible, summary:focus-visib
 .strike-hero-card a:not(.strike-btn) { color: #fff; }
 .strike-card ul, .strike-copy ul { list-style: disc; }
 .strike-card ol, .strike-copy ol, .source-list { list-style: decimal; }
-.strike-copy .action-list, .strike-copy .timeline, .strike-copy .contact-list { list-style: none; }
+.strike-copy .action-list, .strike-copy .timeline, .strike-copy .contact-list, .strike-card .contact-list { list-style: none; }
 .source-list li, .strike-copy h2, .strike-copy h3, .strike-faq { scroll-margin-top: 8rem; }
 .strike-copy, .source-list, .strike-card { overflow-wrap: anywhere; }
 .strike-faq { border-bottom: 1px solid #ddd6e8; padding-block: 1.2rem; }
