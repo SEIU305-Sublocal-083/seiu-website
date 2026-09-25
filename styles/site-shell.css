@@ -58,3 +58,33 @@ body[data-site-shell-added] > main {
     justify-self: center;
     margin: 2rem auto;
 }
+
+/* Keep the signup action beside Contact us, wrapping on narrow layouts. */
+[data-site-shell-footer] .footer-contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.5rem 0.75rem;
+    margin-bottom: 1rem;
+}
+
+[data-site-shell-footer] .footer-contact-links h4 {
+    margin: 0;
+}
+
+[data-site-shell-footer] .footer-email-signup {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+    white-space: nowrap;
+}
+
+[data-site-shell-footer] .footer-email-signup:hover {
+    color: var(--brand-purple);
+}
+
+[data-site-shell-footer] .footer-contact-links a:focus-visible {
+    outline: 2px solid var(--brand-purple-dark);
+    outline-offset: 4px;
+}
