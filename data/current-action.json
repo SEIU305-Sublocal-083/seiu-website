@@ -1,39 +1,24 @@
 {
   "schema": "local083-current-action-v1",
-  "updatedAt": "2026-09-18",
-  "defaultAction": "higher-ed-strike-pledge",
+  "updatedAt": "2026-09-27",
+  "defaultAction": "strike-notice-delivered",
   "slots": {
     "homepageHero": "strike-notice-delivered",
     "homepagePromo": "strike-notice-delivered",
-    "actionPageDefault": "higher-ed-strike-pledge"
+    "actionPageDefault": "strike-notice-delivered"
   },
   "emailActions": {
     "osu-president": {
       "recipient": "pres.office@oregonstate.edu",
       "cc": "trustees@oregonstate.edu",
       "subjects": [
-        "OSU staff deserve a fair contract",
-        "0% COLAs are not acceptable",
-        "Respect classified staff at OSU",
-        "A fair contract cannot wait",
-        "Protect OSU staff rights",
-        "We reject 19 years to the top step",
-        "Higher education works because staff work",
-        "OSU should not balance budgets on workers’ backs",
-        "Pay OSU classified staff enough to live on",
-        "Protect layoff and contracting-out rights",
-        "OSU staff need real raises and real protections",
-        "Invest in the people who keep OSU running",
-        "A 19-year step path is not progress",
-        "Staff deserve respect at the bargaining table",
-        "Settle a fair contract for OSU staff",
-        "No takeaways in the next OSU contract",
-        "Honor the rights workers built",
-        "Do not make staff pay for management's budget choices",
-        "OSU needs a contract that respects its workers",
-        "HELL, NO to 0% COLAs and takeaways"
+        "OSU staff need a fair wage agreement",
+        "Close the wage gap for classified staff",
+        "Support 3% on Nov. 1 for OSU classified workers",
+        "Protect lower-wage university workers",
+        "Settle a fair contract and preserve worker protections"
       ],
-      "body": "President Murthy and Members of the OSU Board of Trustees,\n\nI am writing in support of Oregon State classified staff and our union. I am asking OSU to settle a fair contract that respects the members and coworkers who keep our campuses clean, safe, running, and serving students.\n\nPlease reject an offer that provides no cost-of-living increases for four years, would stretch the step system to 19 years from Step 1 to Step 10, and rolls back layoff and contracting-out protections. OSU classified workers deserve a contract that pays enough to live on and protects the rights our union has built over decades.\n\nSincerely,\n[Your name]\n[Your OSU role or connection]"
+      "body": "President Murthy and Members of the OSU Board of Trustees,\n\nPlease settle a fair contract for classified staff. At the Sept. 27 briefing, our bargaining team reported management’s first-year offer of 2.25%. Our priorities are 3% for everyone on Nov. 1 and 6% over two years for workers earning under $25 an hour.\n\nOur team reported progress on protecting health plans and withdrawal of takeaways, but no overall tentative agreement. Please close the wage gap and preserve health care, steps and job protections in a final agreement.\n\nCurrent update: https://www.local083.org/strike/#why-we-are-fighting\n\nSincerely,\n[Your name]\n[Your OSU role or connection]"
     }
   },
   "actions": {
@@ -45,7 +30,7 @@
       },
       "eyebrow": "Current bargaining action",
       "headline": "Impasse declared. Sign the Higher Ed strike pledge.",
-      "summary": "Our bargaining team declared impasse after Aug. 5-6 mediation. Management still wants a four-year deal with only one guaranteed 0.75 percent COLA, a one-year step freeze, weaker health care protections and takeaways on layoffs and contracting out. The pledge is not a strike-authorization vote.",
+      "summary": "Sept. 27 bargaining update: Our team is seeking 3% for everyone on Nov. 1 and 6% over two years for workers earning under $25 an hour. Management’s reported first-year offer is 2.25%. Prepare for the Sept. 28 strike unless our union announces otherwise.",
       "promoEyebrow": "Why we are fighting",
       "promoHeadline": "Wages. Health care. Job security. Respect.",
       "promoBody": "Management's package would leave our pay behind rising costs while weakening protections that classified workers have built over decades.",
@@ -62,7 +47,7 @@
         },
         {
           "label": "What management offers",
-          "value": "One guaranteed 0.75 percent COLA in a four-year contract and a one-year step freeze"
+          "value": "Sept. 27: management’s reported first-year offer is 2.25%; our team seeks 3% on Nov. 1"
         },
         {
           "label": "What we can do",
@@ -116,7 +101,7 @@
       ],
       "actionPage": {
         "headline": "Impasse declared: Sign the Higher Ed strike pledge",
-        "body": "Our bargaining team declared impasse after management failed to offer a fair path on wages, health care, layoffs and contracting out. The pledge shows that Higher Ed workers are united and ready to do what it takes for a fair contract.",
+        "body": "Sept. 27 bargaining update: Our team is seeking 3% for everyone on Nov. 1 and 6% over two years for workers earning under $25 an hour. Management’s reported first-year offer is 2.25%. Prepare for the Sept. 28 strike unless our union announces otherwise.",
         "nextStep": "The pledge is not a strike-authorization vote. Sign it, then ask 10 coworkers to stand with you."
       }
     },
@@ -346,10 +331,10 @@
       },
       "eyebrow": "OSU workers are ready",
       "headline": "STRIKE HAS BEEN DECLARED. NOTICE HAS BEEN GIVEN.",
-      "summary": "We delivered our strike notice to OSU leadership. Our intended strike start is September 28 at 6 a.m. We return to bargaining September 24 to fight for a fair contract that can avert a strike. Read the story. Know what comes next. Stand with your coworkers.",
+      "summary": "Sept. 27 bargaining update: Our team is seeking 3% for everyone on Nov. 1 and 6% over two years for workers earning under $25 an hour. Management’s reported first-year offer is 2.25%. Prepare for the Sept. 28 strike unless our union announces otherwise.",
       "promoEyebrow": "United for a fair contract",
       "promoHeadline": "We keep OSU running. We demand respect.",
-      "promoBody": "Fair wages. Strong health care. Job security. Read the notice, get prepared and talk with your coworkers about what comes next.",
+      "promoBody": "Wages remain unresolved. Our team reported progress on health plans and withdrawal of takeaways, but no overall tentative agreement. Check the current stakes and prepare with your coworkers.",
       "image": {
         "src": "/images/6c1b0ab7-5dff-4b01-a1da-9cda46e5c729.png",
         "alt": "A Local 083 member hands our union’s strike notice to OSU Provost Roy Haggerty in the Kerr Administration Building lobby.",
@@ -366,15 +351,15 @@
           "value": "September 28 at 6 a.m."
         },
         {
-          "label": "Next bargaining date",
-          "value": "September 24 — fighting for an agreement that can avert a strike"
+          "label": "Latest bargaining update",
+          "value": "Sept. 27 — wages unresolved; no tentative agreement announced at the briefing"
         }
       ],
       "ctas": [
         {
           "id": "primary",
-          "label": "Read about it →",
-          "href": "/news/2026-09-18-osu-strike-notice-delivered.html",
+          "label": "Read the current stakes →",
+          "href": "/strike/#why-we-are-fighting",
           "style": "primary",
           "analytics": {
             "event": "news_click",
@@ -416,8 +401,8 @@
       ],
       "actionPage": {
         "headline": "STRIKE HAS BEEN DECLARED. NOTICE HAS BEEN GIVEN.",
-        "body": "We delivered our strike notice to OSU leadership. Our intended strike start is September 28 at 6 a.m. We return to bargaining September 24 to fight for a fair contract that can avert a strike. Read the story. Know what comes next. Stand with your coworkers.",
-        "nextStep": "Read the notice and prepare with your coworkers."
+        "body": "Sept. 27 bargaining update: Our team is seeking 3% for everyone on Nov. 1 and 6% over two years for workers earning under $25 an hour. Management’s reported first-year offer is 2.25%. Prepare for the Sept. 28 strike unless our union announces otherwise.",
+        "nextStep": "Prepare to strike Monday, Sept. 28, at 6 a.m. Pacific unless our union announces a tentative agreement and calls off the strike. Watch for an email and text message if that changes."
       }
     }
   },

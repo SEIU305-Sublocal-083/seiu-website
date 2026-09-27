@@ -47,18 +47,19 @@ class RuntimeDataContractTests(unittest.TestCase):
             with self.subTest(page=page):
                 self.assertIn(fallback_href, self.source(page))
 
-    def test_current_action_is_direct_and_distinguishes_pledge_from_vote(self):
+    def test_current_action_uses_current_stakes_and_preserves_pledge_distinction(self):
         payload = json.loads(self.source("data/current-action.json"))
         action = payload["actions"][payload["defaultAction"]]
-
-        self.assertEqual(action["slug"], "higher-ed-strike-pledge")
-        self.assertEqual(action["ctas"][0]["href"], "/pledge")
-        self.assertIn("not a strike-authorization vote", action["actionPage"]["nextStep"])
+        self.assertEqual(payload["slots"]["actionPageDefault"], action["slug"])
+        self.assertEqual(action["ctas"][0]["href"], "/strike/#why-we-are-fighting")
+        self.assertIn("unless", action["actionPage"]["nextStep"])
+        pledge = payload["actions"]["higher-ed-strike-pledge"]
+        self.assertIn("not a strike-authorization vote", pledge["actionPage"]["nextStep"])
         for page in ("index.html", "action/index.html"):
             with self.subTest(page=page):
                 source = self.source(page)
-                self.assertIn('href="/pledge"', source)
-                self.assertIn("not a strike-authorization vote", source)
+                self.assertIn("2.25%", source)
+                self.assertNotIn("We return to bargaining September 24", source)
 
 
 if __name__ == "__main__":
