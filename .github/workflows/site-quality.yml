@@ -8,6 +8,7 @@ on:
       - "**/*.xml"
       - "images/**"
       - "styles/**"
+      - "js/**"
       - "tailwind.config.cjs"
       - "scripts/**"
       - "tests/**"
@@ -20,6 +21,7 @@ on:
       - "**/*.xml"
       - "images/**"
       - "styles/**"
+      - "js/**"
       - "tailwind.config.cjs"
       - "scripts/**"
       - "tests/**"
@@ -46,6 +48,9 @@ jobs:
 
       - name: Run generator unit tests
         run: python3 -m unittest discover -s tests -v
+
+      - name: Run homepage strike clock tests
+        run: node --test tests/test_homepage_strike.cjs
 
       - name: Verify generated site files are current
         run: python3 scripts/build_site.py --check

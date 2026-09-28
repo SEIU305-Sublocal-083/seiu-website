@@ -54,11 +54,21 @@ class RuntimeDataContractTests(unittest.TestCase):
         self.assertIn("unless", action["actionPage"]["nextStep"])
         pledge = payload["actions"]["higher-ed-strike-pledge"]
         self.assertIn("not a strike-authorization vote", pledge["actionPage"]["nextStep"])
-        for page in ("index.html", "action/index.html"):
+        for page in ("action/index.html",):
             with self.subTest(page=page):
                 source = self.source(page)
                 self.assertIn("2.25%", source)
                 self.assertNotIn("We return to bargaining September 24", source)
+
+    def test_homepage_campaign_and_clock_keep_a_static_fallback(self):
+        payload = json.loads(self.source("data/current-action.json"))
+        action = payload["actions"][payload["slots"]["homepageHero"]]
+        self.assertIn(action["strikeClock"]["status"], ("confirmed", "paused", "resolved"))
+        self.assertEqual(action["strikeClock"]["startsAt"], "2026-09-28T06:00:00-07:00")
+        self.assertEqual(action["ctas"][0]["href"], "/strike/")
+        if action["strikeClock"]["status"] == "confirmed":
+            self.assertIn(action["headline"], self.source("index.html"))
+            self.assertIn(action["summary"], self.source("index.html"))
 
 
 if __name__ == "__main__":

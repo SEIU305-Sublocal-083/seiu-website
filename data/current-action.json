@@ -3,8 +3,8 @@
   "updatedAt": "2026-09-27",
   "defaultAction": "strike-notice-delivered",
   "slots": {
-    "homepageHero": "strike-notice-delivered",
-    "homepagePromo": "strike-notice-delivered",
+    "homepageHero": "strike-september-28",
+    "homepagePromo": "strike-september-28",
     "actionPageDefault": "strike-notice-delivered"
   },
   "emailActions": {
@@ -403,6 +403,96 @@
         "headline": "STRIKE HAS BEEN DECLARED. NOTICE HAS BEEN GIVEN.",
         "body": "Sept. 27 bargaining update: Our team is seeking 3% for everyone on Nov. 1 and 6% over two years for workers earning under $25 an hour. Management’s reported first-year offer is 2.25%. Prepare for the Sept. 28 strike unless our union announces otherwise.",
         "nextStep": "Prepare to strike Monday, Sept. 28, at 6 a.m. Pacific unless our union announces a tentative agreement and calls off the strike. Watch for an email and text message if that changes."
+      }
+    },
+    "strike-september-28": {
+      "slug": "strike-september-28",
+      "type": "bargaining_action",
+      "visibility": {
+        "from": "2026-09-27T00:00:00-07:00"
+      },
+      "eyebrow": "OSU classified workers · United for a fair contract",
+      "headline": "WE’RE GOING ON STRIKE.",
+      "summary": "Management had the chance to settle a fair contract. Instead, its offers leave us falling behind rising costs. We keep these universities running. We are done being left behind.",
+      "promoEyebrow": "This is what we are fighting for",
+      "promoHeadline": "WHEN WE FIGHT, WE WIN.",
+      "promoBody": "Pay that keeps up. A standard of living we can afford. Respect for the work that makes higher education possible. Stand with your coworkers.",
+      "image": {
+        "src": "/images/2cef7759-042d-4a05-9496-7eefff439a5e-june-30-rally-speaker-and-crowd-960w.webp",
+        "alt": "Local 083 members gather with purple union signs during the June 30 rally at Oregon State University.",
+        "width": 1800,
+        "height": 1084
+      },
+      "details": [
+        {
+          "label": "OSU picket line",
+          "value": "15th & Jefferson, in front of Kerr Administration Building"
+        },
+        {
+          "label": "Picket shifts",
+          "value": "7:30 a.m.–12:30 p.m. and noon–5 p.m."
+        },
+        {
+          "label": "Noon rally",
+          "value": "Join your coworkers at the OSU picket site."
+        }
+      ],
+      "ctas": [
+        {
+          "id": "primary",
+          "label": "Join the picket line →",
+          "href": "/strike/",
+          "style": "primary",
+          "analytics": {
+            "event": "take_action_click",
+            "label": "Homepage Join the Picket Line",
+            "metadata": {
+              "placement": "homepage_hero",
+              "action_slug": "strike-september-28"
+            }
+          }
+        },
+        {
+          "id": "secondary",
+          "label": "Sign up for a strike shift",
+          "href": "/strike-shifts/",
+          "style": "secondary",
+          "analytics": {
+            "event": "take_action_click",
+            "label": "Homepage Strike Shift Signup",
+            "metadata": {
+              "placement": "homepage_hero",
+              "action_slug": "strike-september-28"
+            }
+          }
+        },
+        {
+          "id": "tertiary",
+          "label": "Get email updates",
+          "href": "/email-signup/",
+          "style": "outline",
+          "analytics": {
+            "event": "take_action_click",
+            "label": "Homepage Strike Email Updates",
+            "metadata": {
+              "placement": "homepage_promo",
+              "action_slug": "strike-september-28"
+            }
+          }
+        }
+      ],
+      "actionPage": {
+        "headline": "WE’RE GOING ON STRIKE.",
+        "body": "Management had the chance to settle a fair contract. Instead, its offers leave us falling behind rising costs. We keep these universities running. We are done being left behind.",
+        "nextStep": "Join the OSU picket line at 15th & Jefferson in front of Kerr Administration Building. Get the latest instructions on our strike page."
+      },
+      "strikeClock": {
+        "status": "confirmed",
+        "startsAt": "2026-09-28T06:00:00-07:00",
+        "startLabel": "Monday, September 28, at 6 a.m. Pacific",
+        "activeHeadline": "WE ARE ON STRIKE.",
+        "activeMessage": "Management: settle a fair contract. Every hour without a deal is another hour workers and our families pay the price.",
+        "updateUrl": "/strike/"
       }
     }
   },

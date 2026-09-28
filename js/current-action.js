@@ -1,5 +1,5 @@
 (function () {
-    const DATA_URL = '/data/current-action.json?v=2026-08-18-higher-ed-current';
+    const DATA_URL = '/data/current-action.json?v=20260928-strike-clock';
 
     const safeText = (value) => String(value || '');
 
@@ -180,6 +180,7 @@
         setCta('[data-action-primary]', ctaById(action, 'primary'));
         setCta('[data-action-secondary]', ctaById(action, 'secondary'));
         setCta('[data-action-tertiary]', ctaById(action, 'tertiary'));
+        document.dispatchEvent(new CustomEvent('local083:homepage-action', { detail: action }));
     };
 
     const renderActionPage = (action) => {
@@ -210,11 +211,14 @@
         return getAction(payload, 'actionPageDefault');
     };
 
+    let newestLoad = 0;
     const load = async () => {
+        const request = ++newestLoad;
         try {
             const response = await fetch(DATA_URL, { cache: 'no-store' });
             if (!response.ok) throw new Error('Current action payload unavailable');
             const payload = await response.json();
+            if (request !== newestLoad) return;
             renderHomepage(getAction(payload, 'homepageHero'));
             renderActionPage(chooseActionForPage(payload));
             configureEmailActions(payload);
@@ -226,4 +230,9 @@
     };
 
     document.addEventListener('DOMContentLoaded', load);
+    if (document.querySelector('[data-current-action-home]')) {
+        // Pick up an editorial strike-status change on pages left open overnight.
+        setInterval(() => { if (!document.hidden) load(); }, 60000);
+        document.addEventListener('visibilitychange', () => { if (!document.hidden) load(); });
+    }
 })();

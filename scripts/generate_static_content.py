@@ -16,6 +16,8 @@ from datetime import datetime
 from pathlib import Path
 from typing import Callable
 
+from homepage_action import render_hero, render_promo
+
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE_URL = "https://www.local083.org"
@@ -557,6 +559,11 @@ def build(root: Path = ROOT) -> list[Path]:
 
     home_path = root / "index.html"
     source = home_path.read_text(encoding="utf-8")
+    if 'id="homepage-action"' in source:
+        actions = json.loads((root / "data" / "current-action.json").read_text(encoding="utf-8"))
+        action = actions["actions"][actions["slots"]["homepageHero"]]
+        source = replace_element_inner(source, "homepage-action", render_hero(action))
+        source = replace_element_inner(source, "homepage-action-promo", render_promo(action))
     home_events = homepage_events(events_all, as_of)
     source = replace_element_inner(source, "upcoming-events-container", render_home_events(home_events))
     source = replace_element_inner(source, "news-grid-container", render_home_news(news))
