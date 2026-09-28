@@ -153,8 +153,8 @@
         },
         {
           "id": "secondary",
-          "label": "Read Latest Bargaining Update",
-          "href": "/news/2026-07-09-latest-bargaining-update.html",
+          "label": "Read the latest bargaining update",
+          "href": "/news/2026-09-27-bargaining-stakes.html",
           "style": "secondary",
           "analytics": {
             "event": "news_article_click",
@@ -358,8 +358,8 @@
       "ctas": [
         {
           "id": "primary",
-          "label": "Read the current stakes →",
-          "href": "/strike/#why-we-are-fighting",
+          "label": "Read the latest bargaining update →",
+          "href": "/news/2026-09-27-bargaining-stakes.html",
           "style": "primary",
           "analytics": {
             "event": "news_click",

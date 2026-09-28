@@ -51,7 +51,7 @@ class RuntimeDataContractTests(unittest.TestCase):
         payload = json.loads(self.source("data/current-action.json"))
         action = payload["actions"][payload["defaultAction"]]
         self.assertEqual(payload["slots"]["actionPageDefault"], action["slug"])
-        self.assertEqual(action["ctas"][0]["href"], "/strike/#why-we-are-fighting")
+        self.assertEqual(action["ctas"][0]["href"], "/news/2026-09-27-bargaining-stakes.html")
         self.assertIn("unless", action["actionPage"]["nextStep"])
         pledge = payload["actions"]["higher-ed-strike-pledge"]
         self.assertIn("not a strike-authorization vote", pledge["actionPage"]["nextStep"])

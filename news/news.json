@@ -1,6 +1,28 @@
 [
   {
     "status": "published",
+    "title": "Wages remain unresolved as Oregon university workers prepare to strike",
+    "description": "Union leaders credit members’ collective action for progress on contract protections.",
+    "url": "/news/2026-09-27-bargaining-stakes.html",
+    "image": "/images/654789f0-b8ca-4ba8-96a0-531ad89d38a1-kerr-administration-sunset.webp",
+    "alt": "Kerr Administration Building at Oregon State University silhouetted against an orange sunset and dark blue sky.",
+    "tags": [
+      "Bargaining",
+      "Update",
+      "2026 Bargaining"
+    ],
+    "author": {
+      "name": "SEIU Local 503 at Oregon State University",
+      "title": "Local 083"
+    },
+    "publishedAt": "2026-09-27",
+    "createdAt": "2026-09-27",
+    "updatedAt": "2026-09-27",
+    "featured": true,
+    "language": "en"
+  },
+  {
+    "status": "published",
     "title": "Our union delivers strike notice to OSU leadership",
     "description": "Haggerty expressed sympathy for our demands and cited negotiations with other universities. Our notice identifies Sept. 28 at 6 a.m. as the intended strike start.",
     "url": "/news/2026-09-18-osu-strike-notice-delivered.html",
