@@ -185,7 +185,7 @@ class StrikeReadinessClusterTests(unittest.TestCase):
         self.assertNotIn("https://www.caporegon.org/find-services/", support)
 
     def test_tax_correction_and_benefit_limits_are_easy_to_find(self):
-        for relative in ["strike/index.html", "resources/strike-readiness.html",
+        for relative in ["resources/strike-readiness.html",
                          "resources/strike-pay-benefits.html"]:
             source = (ROOT / relative).read_text(encoding="utf-8")
             with self.subTest(relative=relative):

@@ -43,7 +43,7 @@ STYLE_RE = re.compile(r"<style\b", re.IGNORECASE)
 TAILWIND_LINK_RE = re.compile(
     r"<link\b[^>]*href=[\"']/styles/tailwind\.css[\"'][^>]*>", re.IGNORECASE
 )
-SHELL_STYLES_URL = "/styles/site-shell.css?v=20260925-footer2"
+SHELL_STYLES_URL = "/styles/site-shell.css?v=20260928-contract-win"
 SHELL_STYLES_LINK_RE = re.compile(
     r"<link\b[^>]*href=[\"']/styles/site-shell\.css(?:\?[^\"\']*)?[\"'][^>]*>", re.IGNORECASE
 )
@@ -143,7 +143,11 @@ def render_header(relative_path: str) -> str:
         <div id="mobile-menu" class="hidden lg:hidden absolute top-full left-0 w-full bg-white border-t border-border-color shadow-lg" role="navigation" aria-label="Mobile navigation">
 {mobile}
         </div>
-    </header>{menu_script}
+    </header>
+    <aside class="contract-win-banner" aria-label="Contract victory announcement" data-contract-win-banner>
+        <a href="/news/2026-09-28-we-won.html"><strong>We won our fair contract.</strong> <span>Click here to read more →</span></a>
+        <p>The strike is off. Report to work as scheduled.</p>
+    </aside>{menu_script}
 {HEADER_END}"""
 
 

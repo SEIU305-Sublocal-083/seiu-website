@@ -23,7 +23,7 @@ class ShortRedirectTests(unittest.TestCase):
         self.assertEqual(self.by_slug["presentation"]["target"], "/strike/")
         self.assertEqual(
             self.by_slug["pledge"]["target"],
-            "https://canvasser-7217.my.site.com/survey/s/surveyvista?su=NaJMuv",
+            "/strike/",
         )
         self.assertEqual(self.by_slug["strikeprep"]["target"], "/resources/strike-readiness.html")
         self.assertEqual(self.by_slug["strikepay"]["target"], "/resources/strike-pay-benefits.html")

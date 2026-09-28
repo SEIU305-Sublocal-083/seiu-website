@@ -1,6 +1,28 @@
 [
   {
     "status": "published",
+    "title": "We won our fair contract. The strike is off.",
+    "description": "We won our fair contract: 3% and 3%. The strike is off. Report to work as scheduled. More bargaining information will be shared in the morning.",
+    "url": "/news/2026-09-28-we-won.html",
+    "image": "/images/logo.png",
+    "alt": "SEIU Local 503 logo",
+    "tags": [
+      "Bargaining",
+      "Update",
+      "2026 Bargaining"
+    ],
+    "author": {
+      "name": "SEIU Local 503 at Oregon State University",
+      "title": "Local 083"
+    },
+    "publishedAt": "2026-09-28",
+    "createdAt": "2026-09-28",
+    "updatedAt": "2026-09-28",
+    "featured": true,
+    "language": "en"
+  },
+  {
+    "status": "published",
     "title": "Wages remain unresolved as Oregon university workers prepare to strike",
     "description": "Union leaders credit members’ collective action for progress on contract protections.",
     "url": "/news/2026-09-27-bargaining-stakes.html",
@@ -18,7 +40,7 @@
     "publishedAt": "2026-09-27",
     "createdAt": "2026-09-27",
     "updatedAt": "2026-09-27",
-    "featured": true,
+    "featured": false,
     "language": "en"
   },
   {
@@ -40,7 +62,7 @@
     "publishedAt": "2026-09-18",
     "createdAt": "2026-09-18",
     "updatedAt": "2026-09-18",
-    "featured": true,
+    "featured": false,
     "language": "en"
   },
   {
@@ -62,7 +84,7 @@
     "publishedAt": "2026-09-16",
     "createdAt": "2026-09-16",
     "updatedAt": "2026-09-16",
-    "featured": true,
+    "featured": false,
     "language": "en"
   },
   {
@@ -84,7 +106,7 @@
     "publishedAt": "2026-09-15",
     "createdAt": "2026-09-15",
     "updatedAt": "2026-09-15",
-    "featured": true,
+    "featured": false,
     "language": "en"
   },
   {
@@ -107,7 +129,7 @@
     "publishedAt": "2026-09-15",
     "createdAt": "2026-09-15",
     "updatedAt": "2026-09-15",
-    "featured": true,
+    "featured": false,
     "language": "es"
   },
   {
@@ -130,7 +152,7 @@
     "publishedAt": "2026-09-01",
     "createdAt": "2026-09-01",
     "updatedAt": "2026-09-01",
-    "featured": true,
+    "featured": false,
     "language": "en"
   },
   {
@@ -999,7 +1021,7 @@
     "publishedAt": "2026-08-04",
     "createdAt": "2026-07-31",
     "updatedAt": "2026-08-04",
-    "featured": true
+    "featured": false
   },
   {
     "status": "published",
@@ -1020,7 +1042,7 @@
     "publishedAt": "2026-07-23",
     "createdAt": "2026-07-21",
     "updatedAt": "2026-07-23",
-    "featured": true
+    "featured": false
   },
   {
     "status": "published",
@@ -1101,7 +1123,7 @@
     "publishedAt": "2026-07-09",
     "createdAt": "2026-07-09",
     "updatedAt": "2026-07-16",
-    "featured": true
+    "featured": false
   },
   {
     "title": "Economics They Say / We Say",
@@ -1309,7 +1331,8 @@
     },
     "publishedAt": "2025-08-22",
     "createdAt": "2025-08-22",
-    "updatedAt": "2025-08-22"
+    "updatedAt": "2025-08-22",
+    "featured": false
   },
   {
     "title": "Make Your Voice Heard! The 2026 Bargaining Survey is Here!",
@@ -1327,7 +1350,8 @@
     },
     "publishedAt": "2025-10-01",
     "createdAt": "2025-10-01",
-    "updatedAt": "2025-10-01"
+    "updatedAt": "2025-10-01",
+    "featured": false
   },
   {
     "title": "Our Union Bargaining Update: Protecting Our Hardship Leave",

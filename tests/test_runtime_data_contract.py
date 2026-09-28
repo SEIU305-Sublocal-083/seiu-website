@@ -46,29 +46,31 @@ class RuntimeDataContractTests(unittest.TestCase):
             with self.subTest(page=page):
                 self.assertIn(fallback_href, self.source(page))
 
-    def test_current_action_uses_current_stakes_and_preserves_pledge_distinction(self):
+    def test_current_action_announces_victory_and_retires_mobilization(self):
         payload = json.loads(self.source("data/current-action.json"))
         action = payload["actions"][payload["defaultAction"]]
-        self.assertEqual(payload["slots"]["actionPageDefault"], action["slug"])
-        self.assertEqual(action["ctas"][0]["href"], "/news/2026-09-27-bargaining-stakes.html")
-        self.assertIn("unless", action["actionPage"]["nextStep"])
-        pledge = payload["actions"]["higher-ed-strike-pledge"]
-        self.assertIn("not a strike-authorization vote", pledge["actionPage"]["nextStep"])
-        for page in ("action/index.html",):
-            with self.subTest(page=page):
-                source = self.source(page)
-                self.assertIn("2.25%", source)
-                self.assertNotIn("We return to bargaining September 24", source)
+        self.assertTrue(all(slug == action["slug"] for slug in payload["slots"].values()))
+        self.assertEqual(action["ctas"][0]["href"], "/news/2026-09-28-we-won.html")
+        self.assertIn("Report to work as scheduled", action["actionPage"]["nextStep"])
+        self.assertEqual(payload["actions"]["strike-september-28"]["strikeClock"]["status"], "cancelled")
+        for slug, old_action in payload["actions"].items():
+            if slug != action["slug"]:
+                self.assertIn("until", old_action["visibility"])
+        for page in ("index.html", "action/index.html", "strike/index.html"):
+            source = self.source(page)
+            self.assertIn("3% and 3%", source)
+            self.assertIn("The strike is off.", source)
+            self.assertNotIn("data-strike-countdown", source)
+            self.assertNotIn("WE’RE GOING ON STRIKE.", source)
+            self.assertNotIn("data-home-strike-clock", source)
 
-    def test_homepage_campaign_and_clock_keep_a_static_fallback(self):
+    def test_homepage_victory_keeps_a_static_fallback(self):
         payload = json.loads(self.source("data/current-action.json"))
         action = payload["actions"][payload["slots"]["homepageHero"]]
-        self.assertIn(action["strikeClock"]["status"], ("confirmed", "paused", "resolved"))
-        self.assertEqual(action["strikeClock"]["startsAt"], "2026-09-28T06:00:00-07:00")
-        self.assertEqual(action["ctas"][0]["href"], "/strike/")
-        if action["strikeClock"]["status"] == "confirmed":
-            self.assertIn(action["headline"], self.source("index.html"))
-            self.assertIn(action["summary"], self.source("index.html"))
+        self.assertEqual(action["type"], "contract_victory")
+        self.assertIn(action["headline"], self.source("index.html"))
+        self.assertIn(action["summary"], self.source("index.html"))
+        self.assertNotIn('role="timer"', self.source("index.html"))
 
 
 if __name__ == "__main__":

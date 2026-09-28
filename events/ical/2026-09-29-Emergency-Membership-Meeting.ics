@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//SEIU Local 503 OSU//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:2026-09-29-emergency-membership-meeting@local083.org
+DTSTAMP:20260928T071403Z
+DTSTART:20260929T190000Z
+SUMMARY:Emergency Membership Meeting
+DESCRIPTION:Join our emergency membership meeting online Tuesday at noon P
+ acific. Zoom link to be announced. Check the event page for the link.
+LOCATION:Online via Zoom - link to be announced
+URL:https://www.local083.org/events/2026-09-29-Emergency-Membership-Meetin
+ g.html
+STATUS:CONFIRMED
+END:VEVENT
+END:VCALENDAR

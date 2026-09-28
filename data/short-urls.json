@@ -13,9 +13,9 @@
   },
   {
     "slug": "pledge",
-    "target": "https://canvasser-7217.my.site.com/survey/s/surveyvista?su=NaJMuv",
-    "title": "Higher Ed Strike Pledge",
-    "description": "Continue to the official SEIU 503 Higher Education strike pledge."
+    "target": "/strike/",
+    "title": "The strike is off. We won!",
+    "description": "We won our fair contract: 3% and 3%. The strike is off. Report to work as scheduled. More bargaining information will be shared in the morning."
   },
   {
     "slug": "presentation",
@@ -26,8 +26,8 @@
   {
     "slug": "2026-bargaining",
     "target": "/strike/",
-    "title": "OSU Strike Information",
-    "description": "Continue to Local 083's strike updates, picket information and resources for OSU classified workers."
+    "title": "The strike is off. We won!",
+    "description": "We won our fair contract: 3% and 3%. The strike is off. Report to work as scheduled. More bargaining information will be shared in the morning."
   },
   {
     "slug": "COC",
@@ -85,15 +85,15 @@
   },
   {
     "slug": "strike-manual",
-    "target": "https://seiu503.org/wp-content/uploads/2026/09/202609-higher-ed-strike-manual-03.pdf",
-    "title": "Higher Ed Strike Manual",
-    "description": "Open the SEIU Local 503 Higher Ed strike manual (PDF)."
+    "target": "/strike/",
+    "title": "The strike is off. We won!",
+    "description": "We won our fair contract: 3% and 3%. The strike is off. Report to work as scheduled. More bargaining information will be shared in the morning."
   },
   {
     "slug": "strike-shifts",
-    "target": "https://canvasser-7217.my.site.com/survey/s/surveyvista?su=zufRjw",
-    "title": "Sign Up for a Strike Shift",
-    "description": "Choose your strike shifts with SEIU Local 503 at Oregon State University."
+    "target": "/strike/",
+    "title": "The strike is off. We won!",
+    "description": "We won our fair contract: 3% and 3%. The strike is off. Report to work as scheduled. More bargaining information will be shared in the morning."
   },
   {
     "slug": "email-signup",

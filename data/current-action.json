@@ -1,11 +1,11 @@
 {
   "schema": "local083-current-action-v1",
-  "updatedAt": "2026-09-27",
-  "defaultAction": "strike-notice-delivered",
+  "updatedAt": "2026-09-28",
+  "defaultAction": "fair-contract-won",
   "slots": {
-    "homepageHero": "strike-september-28",
-    "homepagePromo": "strike-september-28",
-    "actionPageDefault": "strike-notice-delivered"
+    "homepageHero": "fair-contract-won",
+    "homepagePromo": "fair-contract-won",
+    "actionPageDefault": "fair-contract-won"
   },
   "emailActions": {
     "osu-president": {
@@ -22,11 +22,80 @@
     }
   },
   "actions": {
+    "fair-contract-won": {
+      "slug": "fair-contract-won",
+      "type": "contract_victory",
+      "eyebrow": "When we fight, we win.",
+      "headline": "WE WON.",
+      "summary": "We won our fair contract: 3% and 3%. The strike is off. Report to work as scheduled. More bargaining information will be shared in the morning.",
+      "promoEyebrow": "A fair contract",
+      "promoHeadline": "3% and 3%.",
+      "promoBody": "Thank you for standing together. More bargaining information will be shared in the morning.",
+      "details": [
+        {
+          "label": "Strike status",
+          "value": "Called off. Report to work as scheduled."
+        }
+      ],
+      "ctas": [
+        {
+          "id": "primary",
+          "label": "Read the announcement",
+          "href": "/news/2026-09-28-we-won.html",
+          "style": "primary",
+          "analytics": {
+            "event": "news_click",
+            "label": "Read the announcement",
+            "metadata": {
+              "action_slug": "fair-contract-won"
+            }
+          }
+        },
+        {
+          "id": "secondary",
+          "label": "The strike is off",
+          "href": "/strike/",
+          "style": "secondary",
+          "analytics": {
+            "event": "news_click",
+            "label": "The strike is off",
+            "metadata": {
+              "action_slug": "fair-contract-won"
+            }
+          }
+        },
+        {
+          "id": "tertiary",
+          "label": "Get email updates",
+          "href": "/email-signup/",
+          "style": "outline",
+          "analytics": {
+            "event": "news_click",
+            "label": "Get email updates",
+            "metadata": {
+              "action_slug": "fair-contract-won"
+            }
+          }
+        }
+      ],
+      "actionPage": {
+        "headline": "We won our fair contract.",
+        "body": "We won our fair contract: 3% and 3%. The strike is off. Report to work as scheduled. More bargaining information will be shared in the morning.",
+        "nextStep": "The strike is off. Report to work as scheduled."
+      },
+      "image": {
+        "src": "/images/2cef7759-042d-4a05-9496-7eefff439a5e-june-30-rally-speaker-and-crowd-960w.webp",
+        "alt": "Local 083 members gather with purple union signs during the June 30 rally at Oregon State University.",
+        "width": 1800,
+        "height": 1084
+      }
+    },
     "higher-ed-strike-pledge": {
       "slug": "higher-ed-strike-pledge",
       "type": "bargaining_action",
       "visibility": {
-        "from": "2026-08-07T00:00:00-07:00"
+        "from": "2026-08-07T00:00:00-07:00",
+        "until": "2026-09-27T23:59:59-07:00"
       },
       "eyebrow": "Current bargaining action",
       "headline": "Impasse declared. Sign the Higher Ed strike pledge.",
@@ -327,7 +396,8 @@
       "slug": "strike-notice-delivered",
       "type": "bargaining_action",
       "visibility": {
-        "from": "2026-09-18T00:00:00-07:00"
+        "from": "2026-09-18T00:00:00-07:00",
+        "until": "2026-09-27T23:59:59-07:00"
       },
       "eyebrow": "OSU workers are ready",
       "headline": "STRIKE HAS BEEN DECLARED. NOTICE HAS BEEN GIVEN.",
@@ -409,7 +479,8 @@
       "slug": "strike-september-28",
       "type": "bargaining_action",
       "visibility": {
-        "from": "2026-09-27T00:00:00-07:00"
+        "from": "2026-09-27T00:00:00-07:00",
+        "until": "2026-09-27T23:59:59-07:00"
       },
       "eyebrow": "OSU classified workers · United for a fair contract",
       "headline": "WE’RE GOING ON STRIKE.",
@@ -487,22 +558,24 @@
         "nextStep": "Join the OSU picket line at 15th & Jefferson in front of Kerr Administration Building. Get the latest instructions on our strike page."
       },
       "strikeClock": {
-        "status": "confirmed",
+        "status": "cancelled",
         "startsAt": "2026-09-28T06:00:00-07:00",
         "startLabel": "Monday, September 28, at 6 a.m. Pacific",
         "activeHeadline": "WE ARE ON STRIKE.",
         "activeMessage": "Management: settle a fair contract. Every hour without a deal takes a toll on workers, our families, students, research and the campus services we all depend on.",
-        "updateUrl": "/strike/"
+        "updateUrl": "/news/2026-09-28-we-won.html",
+        "resolutionHeadline": "WE WON.",
+        "resolutionMessage": "We won our fair contract: 3% and 3%. The strike is off. Report to work as scheduled. More bargaining information will be shared in the morning."
       }
     }
   },
   "fallback": {
     "eyebrow": "Current action",
-    "headline": "Check the latest Local 083 updates",
-    "summary": "We are updating the current action page. Visit the events calendar for the latest meeting information.",
+    "headline": "We won our fair contract.",
+    "summary": "We won our fair contract: 3% and 3%. The strike is off. Report to work as scheduled. More bargaining information will be shared in the morning.",
     "promoEyebrow": "Stay connected",
-    "promoHeadline": "Find the next meeting or action.",
-    "promoBody": "When a new action is ready, this page will point you to it.",
+    "promoHeadline": "The strike is off.",
+    "promoBody": "Report to work as scheduled.",
     "details": [
       {
         "label": "Next step",
@@ -512,14 +585,40 @@
     "ctas": [
       {
         "id": "primary",
-        "label": "View Events",
-        "href": "/events.html",
+        "label": "Read the announcement",
+        "href": "/news/2026-09-28-we-won.html",
         "style": "primary",
         "analytics": {
-          "event": "event_details_click",
-          "label": "Fallback Events",
+          "event": "news_click",
+          "label": "Read the announcement",
           "metadata": {
-            "placement": "current_action_fallback"
+            "action_slug": "fair-contract-won"
+          }
+        }
+      },
+      {
+        "id": "secondary",
+        "label": "The strike is off",
+        "href": "/strike/",
+        "style": "secondary",
+        "analytics": {
+          "event": "news_click",
+          "label": "The strike is off",
+          "metadata": {
+            "action_slug": "fair-contract-won"
+          }
+        }
+      },
+      {
+        "id": "tertiary",
+        "label": "Get email updates",
+        "href": "/email-signup/",
+        "style": "outline",
+        "analytics": {
+          "event": "news_click",
+          "label": "Get email updates",
+          "metadata": {
+            "action_slug": "fair-contract-won"
           }
         }
       }

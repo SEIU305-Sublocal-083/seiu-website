@@ -18,6 +18,26 @@ def cta(action, position, style):
 
 
 def render_hero(action):
+    if action.get("type") == "contract_victory":
+        image = action["image"]
+        return f'''<img class="home-strike-backdrop" src="{esc(image['src'])}" alt="" aria-hidden="true" width="{image['width']}" height="{image['height']}" decoding="async" fetchpriority="high" data-action-image>
+        <div class="container mx-auto px-6 home-strike-inner">
+          <div class="home-strike-grid">
+           <div class="home-strike-copy">
+            <p class="home-strike-eyebrow" data-action-eyebrow>{esc(action['eyebrow'])}</p>
+            <h1 class="home-strike-title" data-action-headline>{esc(action['headline'])}</h1>
+            <p class="home-strike-summary" data-action-summary>{esc(action['summary'])}</p>
+            <div class="home-strike-ctas">{cta(action, 'primary', 'btn-primary')}{cta(action, 'secondary', 'btn-secondary')}</div>
+           </div>
+           <section class="home-victory" aria-labelledby="home-victory-title">
+            <p class="home-victory-kicker">Together, we did it.</p>
+            <h2 id="home-victory-title"><button type="button" class="home-victory-celebrate" data-victory-confetti aria-label="We won! Celebrate with confetti">WE WON!</button></h2>
+            <p class="home-victory-raises">3% <span>and</span> 3%</p>
+            <p class="home-victory-message">Our fair contract. Our collective power.</p>
+            <p class="home-victory-hint">Hover or tap “We won!” to celebrate</p>
+           </section>
+          </div>
+        </div>'''
     clock = action["strikeClock"]
     inactive = clock["status"] != "confirmed"
     headline = clock.get("resolutionHeadline", "STRIKE UPDATE") if inactive else action["headline"]
@@ -62,6 +82,11 @@ def render_hero(action):
 
 
 def render_promo(action):
+    if action.get("type") == "contract_victory":
+        return f'''<div class="container mx-auto px-6 home-strike-promo">
+            <div><p class="home-strike-promo-kicker" data-action-promo-eyebrow>{esc(action['promoEyebrow'])}</p><h2 data-action-promo-headline>{esc(action['promoHeadline'])}</h2><p data-action-promo-body>{esc(action['promoBody'])}</p></div>
+            {cta(action, 'tertiary', 'btn-secondary')}
+        </div>'''
     hidden = ' hidden' if action["strikeClock"]["status"] != "confirmed" else ''
     return f'''        <div class="container mx-auto px-6 home-strike-promo" data-strike-mobilization{hidden}>
             <div><p class="home-strike-promo-kicker" data-action-promo-eyebrow>{esc(action['promoEyebrow'])}</p><h2 data-action-promo-headline>{esc(action['promoHeadline'])}</h2><p data-action-promo-body>{esc(action['promoBody'])}</p></div>
