@@ -82,6 +82,11 @@ def nav_link(label: str, href: str, key: str, active: str | None, *, mobile: boo
 
 
 def render_header(relative_path: str) -> str:
+    announcement_banner = "" if relative_path == "news/2026-09-28-we-won.html" else """
+    <aside class="contract-win-banner" aria-label="Contract victory announcement" data-contract-win-banner>
+        <a href="/news/2026-09-28-we-won.html"><strong>We won our fair contract.</strong> <span>Click here to read more →</span></a>
+        <p>The strike is off. Report to work as scheduled.</p>
+    </aside>"""
     active = active_section(relative_path)
     desktop = "\n".join(
         f"                {nav_link(label, href, key, active, mobile=False)}"
@@ -143,11 +148,7 @@ def render_header(relative_path: str) -> str:
         <div id="mobile-menu" class="hidden lg:hidden absolute top-full left-0 w-full bg-white border-t border-border-color shadow-lg" role="navigation" aria-label="Mobile navigation">
 {mobile}
         </div>
-    </header>
-    <aside class="contract-win-banner" aria-label="Contract victory announcement" data-contract-win-banner>
-        <a href="/news/2026-09-28-we-won.html"><strong>We won our fair contract.</strong> <span>Click here to read more →</span></a>
-        <p>The strike is off. Report to work as scheduled.</p>
-    </aside>{menu_script}
+    </header>{announcement_banner}{menu_script}
 {HEADER_END}"""
 
 

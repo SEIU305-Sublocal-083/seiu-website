@@ -1,7 +1,7 @@
 /* A brief purple-and-gold celebration; the page remains usable underneath. */
 (() => {
     const button = document.querySelector('[data-victory-confetti]');
-    if (!button) return;
+    if (!button && !document.querySelector('[data-victory-confetti-load]')) return;
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
     const colors = ['#4c1d95', '#7c3aed', '#a855f7', '#facc15', '#eab308', '#fde047'];
     let canvas, context, frame, previousTime, lastBurst = -Infinity;
@@ -65,7 +65,7 @@
             document.body.append(canvas);
             resize();
         }
-        const rect = button.getBoundingClientRect();
+        const rect = button?.getBoundingClientRect();
         const count = rain ? (width < 600 ? 90 : 155) : 65;
         for (let i = 0; i < count; i++) {
             particles.push({
@@ -84,10 +84,10 @@
         if (!frame) frame = requestAnimationFrame(draw);
     }
 
-    button.addEventListener('pointerenter', event => {
+    button?.addEventListener('pointerenter', event => {
         if (event.pointerType !== 'touch') celebrate();
     });
-    button.addEventListener('click', () => celebrate());
+    button?.addEventListener('click', () => celebrate());
     window.addEventListener('resize', resize, { passive: true });
     window.addEventListener('pagehide', stop);
     document.addEventListener('visibilitychange', () => { if (document.hidden) stop(); });

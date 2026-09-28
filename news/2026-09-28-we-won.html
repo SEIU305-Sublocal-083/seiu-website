@@ -154,9 +154,12 @@
         .article-date { font-size:.9rem; line-height:1.6; }
         @media (max-width: 767px) { main { padding:2rem 1rem; } article { padding:1.5rem; } article h1 { font-size:2rem; } }
             .prose > p:nth-last-child(-n+2) { text-indent: 0; text-align: left; }
+            .home-victory-confetti { position: fixed; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 100; }
+        @media (prefers-reduced-motion: reduce) { .home-victory-confetti { display: none; } }
     </style>
 <meta name="author" content="Your Higher Ed Bargaining team">
-</head><body class="bg-brand-light" data-site-shell-added><a href="#main-content" class="sr-only focus:not-sr-only">Skip to content</a>
+<script src="/js/homepage-celebration.js?v=20260928-notice-confetti" defer></script>
+</head><body class="bg-brand-light" data-site-shell-added data-victory-confetti-load><a href="#main-content" class="sr-only focus:not-sr-only">Skip to content</a>
 
     <!-- SITE SHELL: HEADER START -->
     <header class="bg-white/80 backdrop-blur-lg border-b border-border-color sticky top-0 z-50" data-site-shell-header>
@@ -186,10 +189,6 @@
             <a href="/contact.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Contact</a>
         </div>
     </header>
-    <aside class="contract-win-banner" aria-label="Contract victory announcement" data-contract-win-banner>
-        <a href="/news/2026-09-28-we-won.html"><strong>We won our fair contract.</strong> <span>Click here to read more →</span></a>
-        <p>The strike is off. Report to work as scheduled.</p>
-    </aside>
     <script data-site-shell-menu-state-script>
         (() => {
             const button = document.getElementById('mobile-menu-button');
@@ -252,7 +251,12 @@
           Mark Decker, WOU</p>
         </div>
             <div class="mt-12 text-center border-t border-border-color pt-8">
-                <a href="/news.html" class="btn btn-outline">More union news</a>
+                <p class="text-lg text-text-secondary">more details to come</p>
+                <div class="article-contact-actions mt-8 border-t border-border-color pt-8" aria-label="Contact our union and get updates">
+                    <a href="mailto:083execteam@seiu503.org?cc=sharpes%40seiu503.org&amp;subject=Question%20about%20the%20Sept.%2028%20tentative%20agreement%20and%20ratification&amp;body=Hi%20Local%20083%20executive%20team%20and%20Sylv%2C%0D%0A%0D%0AI%20read%20the%20Sept.%2028%20tentative%20agreement%20announcement%20and%20have%20a%20question%20about%20the%20agreement%20or%20ratification.%0D%0A%0D%0AMy%20question%3A%0D%0A%0D%0AName%3A%0D%0ADepartment%20or%20connection%20to%20OSU%3A%0D%0ABest%20way%20to%20reach%20me%3A%0D%0A%0D%0AThank%20you." class="btn btn-outline">Contact Execs</a>
+                    <a href="mailto:083stewards@seiu503.org?cc=sharpes%40seiu503.org&amp;subject=Request%20for%20steward%20support%20%E2%80%94%20tentative%20agreement%20and%20return%20to%20work&amp;body=Hi%20Local%20083%20stewards%20and%20Sylv%2C%0D%0A%0D%0AI%20read%20the%20Sept.%2028%20announcement%20that%20the%20strike%20has%20been%20called%20off%20and%20would%20like%20steward%20support%20with%20a%20question%20about%20returning%20to%20work%20or%20my%20workplace%20rights.%0D%0A%0D%0AMy%20question%3A%0D%0AAny%20deadline%3A%0D%0A%0D%0AName%3A%0D%0ADepartment%3A%0D%0ABest%20way%20to%20reach%20me%3A%0D%0A%0D%0AThank%20you." class="btn btn-outline">Contact A Steward</a>
+                    <a href="/email-signup/" class="btn btn-primary">Sign Up For Our Mailing List</a>
+                </div>
             </div>
         </article>
     </main>
