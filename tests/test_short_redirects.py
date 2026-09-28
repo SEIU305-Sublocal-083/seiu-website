@@ -19,6 +19,8 @@ class ShortRedirectTests(unittest.TestCase):
 
     def test_required_and_high_value_short_urls_are_declared(self):
         self.assertEqual(self.by_slug["actions"]["target"], "/action/")
+        self.assertEqual(self.by_slug["2026-bargaining"]["target"], "/strike/")
+        self.assertEqual(self.by_slug["presentation"]["target"], "/strike/")
         self.assertEqual(
             self.by_slug["pledge"]["target"],
             "https://canvasser-7217.my.site.com/survey/s/surveyvista?su=NaJMuv",

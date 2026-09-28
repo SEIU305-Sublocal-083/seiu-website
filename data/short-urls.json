@@ -19,9 +19,15 @@
   },
   {
     "slug": "presentation",
-    "target": "/2026-bargaining/index.html",
-    "title": "2026 OSU Classified Staff Bargaining",
-    "description": "Continue to Local 083's 2026 bargaining updates, actions and resources for OSU classified staff."
+    "target": "/strike/",
+    "title": "OSU Strike Information",
+    "description": "Continue to Local 083's strike updates, picket information and resources for OSU classified workers."
+  },
+  {
+    "slug": "2026-bargaining",
+    "target": "/strike/",
+    "title": "OSU Strike Information",
+    "description": "Continue to Local 083's strike updates, picket information and resources for OSU classified workers."
   },
   {
     "slug": "COC",

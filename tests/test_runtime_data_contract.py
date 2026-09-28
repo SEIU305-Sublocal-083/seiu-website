@@ -38,7 +38,6 @@ class RuntimeDataContractTests(unittest.TestCase):
         self.assertIn("cc=${encodeURIComponent(cc)}", self.source("js/current-action.js"))
 
         fallback_pages = (
-            "2026-bargaining/index.html",
             "news/2026-07-09-latest-bargaining-update.html",
             "news/2026-07-09-tell-universities-hell-no.html",
         )
