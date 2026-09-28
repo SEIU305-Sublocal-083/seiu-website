@@ -54,7 +54,7 @@
         {
           "id": "secondary",
           "label": "The strike is off",
-          "href": "/strike/",
+          "href": "/news/2026-09-28-we-won.html",
           "style": "secondary",
           "analytics": {
             "event": "news_click",
