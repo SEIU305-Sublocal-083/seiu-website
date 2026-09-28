@@ -1,18 +1,6 @@
 {
   "asOf": "2026-09-28",
   "events": [
-    {
-      "date": "2026-09-29",
-      "time": "12:00 PM Pacific",
-      "title": "Emergency Membership Meeting",
-      "description": "Join our emergency membership meeting online Tuesday, September 29, at noon Pacific. The Zoom link will be announced.",
-      "type": "Membership Meeting",
-      "url": "/events/2026-09-29-Emergency-Membership-Meeting.html",
-      "featured": true,
-      "location_detail": "Online via Zoom; link to be announced",
-      "schema_start_date": "2026-09-29T12:00:00-07:00",
-      "calendar_link": "/events/ical/2026-09-29-Emergency-Membership-Meeting.ics"
-    },
 {
   "date": "2026-09-24",
   "time": "11:00 AM - 1:00 PM",
