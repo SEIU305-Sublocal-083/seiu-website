@@ -22,6 +22,7 @@ EXCLUDED_DIRS = {
     "jules-scratch",
     "marketing",
     "node_modules",
+    "output",
     "review-images",
     "slides",
     "templates",

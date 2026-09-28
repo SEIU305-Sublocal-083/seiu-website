@@ -68,6 +68,8 @@ class PublicPageDiscoveryTests(unittest.TestCase):
             (root / "test-pages" / "draft.html").write_text("<html></html>", encoding="utf-8")
             (root / ".tmp" / "review").mkdir(parents=True)
             (root / ".tmp" / "review" / "private-notes.html").write_text("<p>Not public</p>", encoding="utf-8")
+            (root / "output" / "email").mkdir(parents=True)
+            (root / "output" / "email" / "draft.html").write_text("<p>Email preview, not a public page</p>", encoding="utf-8")
             (root / "scheduled.html").write_text('<meta name="robots" content="noindex">', encoding="utf-8")
 
             pages = pp.discover_public_pages(root)

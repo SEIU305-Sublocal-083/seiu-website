@@ -5,6 +5,7 @@ Disallow: /private/
 Disallow: /test-pages/workday-transition/
 Disallow: /marketing/
 Disallow: /review-images/
+Disallow: /output/
 Disallow: /tmp/
 Disallow: /jules-scratch/
 Disallow: /slides/

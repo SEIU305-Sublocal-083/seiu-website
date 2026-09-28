@@ -6,6 +6,7 @@ from __future__ import annotations
 import argparse
 import html
 import json
+import mimetypes
 from datetime import datetime
 from pathlib import Path
 
@@ -114,7 +115,7 @@ def render_page(
     en_url = f"{BASE_URL}{update['languages']['en']['url']}"
     es_url = f"{BASE_URL}{update['languages']['es']['url']}"
     source_url = payload["source"]["spanish" if language == "es" else "english"]
-    page_title = f"{article['title']} - SEIU Local 503 at Oregon State University"
+    page_title = f"{article['title']} | Local 083"
     tags = article_tags(update, language)
     body_html = "\n".join(line.rstrip() for line in article["bodyHtml"].splitlines())
     tag_meta = "\n".join(
@@ -223,6 +224,7 @@ def render_page(
     <meta property="og:image:alt" content="{esc(article['heroAlt'])}">
     <meta property="og:image:width" content="{article['heroWidth']}">
     <meta property="og:image:height" content="{article['heroHeight']}">
+    <meta property="og:image:type" content="{mimetypes.guess_type(article['heroImage'])[0]}">
     <meta property="og:site_name" content="SEIU Local 503 at Oregon State University">
     <meta property="article:published_time" content="{update['date']}">
     <meta property="article:section" content="Bargaining">

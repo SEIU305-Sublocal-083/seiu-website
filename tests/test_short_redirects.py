@@ -37,6 +37,9 @@ class ShortRedirectTests(unittest.TestCase):
             with self.subTest(slug=entry["slug"]):
                 source = redirects.render_redirect(entry)
                 escaped_target = html.escape(entry["target"], quote=True)
+                canonical = html.escape(redirects.canonical_target(entry["target"]), quote=True)
+                self.assertIn(f'<meta property="og:url" content="{canonical}">', source)
+                self.assertIn(f'<meta name="twitter:url" content="{canonical}">', source)
                 self.assertIn('<meta name="robots" content="noindex, follow">', source)
                 self.assertIn(f'<meta http-equiv="refresh" content="0; url={escaped_target}">', source)
                 self.assertIn(f'href="{escaped_target}"', source)
@@ -69,7 +72,7 @@ class ShortRedirectTests(unittest.TestCase):
                 ["COC/index.html"],
             )
             self.assertIn(
-                '<meta property="og:url" content="https://www.local083.org/COC/">',
+                '<meta property="og:url" content="https://www.local083.org/resources/code-of-conduct.html">',
                 outputs[0].read_text(encoding="utf-8"),
             )
 
