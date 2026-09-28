@@ -27,10 +27,10 @@
       "type": "contract_victory",
       "eyebrow": "When we fight, we win.",
       "headline": "WE WON.",
-      "summary": "We won our fair contract: 3% and 3%. The strike is off. Report to work as scheduled. More bargaining information will be shared in the morning.",
-      "promoEyebrow": "A fair contract",
-      "promoHeadline": "3% and 3%.",
-      "promoBody": "Thank you for standing together. More bargaining information will be shared in the morning.",
+      "summary": "No takeaways. A 3% COLA in each of the next two years. Celebrate today, noon–1 p.m., in front of Kerr or on Zoom. Food provided; no RSVP.",
+      "promoEyebrow": "Today · Monday, September 28",
+      "promoHeadline": "Victory lunch + bargaining update",
+      "promoBody": "Noon–1 p.m. in front of Kerr Administration Building or on Zoom. The strike is off. Report to work as scheduled.",
       "details": [
         {
           "label": "Strike status",
@@ -40,12 +40,12 @@
       "ctas": [
         {
           "id": "primary",
-          "label": "Read the announcement",
-          "href": "/news/2026-09-28-we-won.html",
+          "label": "Victory lunch details",
+          "href": "/events/2026-09-28-Victory-Lunch-and-Emergency-Membership-Meeting.html",
           "style": "primary",
           "analytics": {
             "event": "news_click",
-            "label": "Read the announcement",
+            "label": "Victory lunch details",
             "metadata": {
               "action_slug": "fair-contract-won"
             }
@@ -53,12 +53,12 @@
         },
         {
           "id": "secondary",
-          "label": "The strike is off",
-          "href": "/news/2026-09-28-we-won.html",
+          "label": "Join on Zoom",
+          "href": "https://seiu503-org.zoom.us/j/89833736467?pwd=uLGarzqIdObDguVgvKWHgOgbPEbKQe.1",
           "style": "secondary",
           "analytics": {
             "event": "news_click",
-            "label": "The strike is off",
+            "label": "Join on Zoom",
             "metadata": {
               "action_slug": "fair-contract-won"
             }
@@ -66,12 +66,12 @@
         },
         {
           "id": "tertiary",
-          "label": "Get email updates",
-          "href": "/email-signup/",
+          "label": "Add to calendar",
+          "href": "/events/ical/2026-09-28-Victory-Lunch-and-Emergency-Membership-Meeting.ics",
           "style": "outline",
           "analytics": {
             "event": "news_click",
-            "label": "Get email updates",
+            "label": "Add to calendar",
             "metadata": {
               "action_slug": "fair-contract-won"
             }
@@ -79,9 +79,9 @@
         }
       ],
       "actionPage": {
-        "headline": "We won our fair contract.",
-        "body": "We won our fair contract: 3% and 3%. The strike is off. Report to work as scheduled. More bargaining information will be shared in the morning.",
-        "nextStep": "The strike is off. Report to work as scheduled."
+        "headline": "We won. Celebrate with us today.",
+        "body": "Join our victory lunch and emergency membership meeting Monday, Sept. 28, noon–1 p.m. in front of Kerr or on Zoom. Food provided; no RSVP needed.",
+        "nextStep": "Food provided. No RSVP. The strike is off. Report to work as scheduled."
       },
       "image": {
         "src": "/images/2cef7759-042d-4a05-9496-7eefff439a5e-june-30-rally-speaker-and-crowd-960w.webp",

@@ -1,5 +1,5 @@
 (function () {
-    const DATA_URL = '/data/current-action.json?v=20260928-contract-win';
+    const DATA_URL = '/data/current-action.json?v=20260928-victory-lunch';
 
     const safeText = (value) => String(value || '');
 
@@ -9,7 +9,7 @@
         if (/^mailto:[^\s@?]+@[^\s@?]+(?:\?[^\s]*)?$/i.test(href)) return href;
         try {
             const url = new URL(href);
-            const allowedHosts = new Set(['www.local083.org', 'local083.org', 'seiu503.org', 'seiu503.tfaforms.net', 'www2.seiu503.org']);
+            const allowedHosts = new Set(['www.local083.org', 'local083.org', 'seiu503.org', 'seiu503.tfaforms.net', 'www2.seiu503.org', 'seiu503-org.zoom.us']);
             return url.protocol === 'https:' && allowedHosts.has(url.hostname) ? url.toString() : '#';
         } catch (error) {
             return '#';

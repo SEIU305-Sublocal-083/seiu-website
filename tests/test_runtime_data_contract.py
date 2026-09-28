@@ -1,4 +1,5 @@
 import json
+import re
 import unittest
 from pathlib import Path
 
@@ -50,7 +51,7 @@ class RuntimeDataContractTests(unittest.TestCase):
         payload = json.loads(self.source("data/current-action.json"))
         action = payload["actions"][payload["defaultAction"]]
         self.assertTrue(all(slug == action["slug"] for slug in payload["slots"].values()))
-        self.assertEqual(action["ctas"][0]["href"], "/news/2026-09-28-we-won.html")
+        self.assertEqual(action["ctas"][0]["href"], "/events/2026-09-28-Victory-Lunch-and-Emergency-Membership-Meeting.html")
         self.assertIn("Report to work as scheduled", action["actionPage"]["nextStep"])
         self.assertEqual(payload["actions"]["strike-september-28"]["strikeClock"]["status"], "cancelled")
         for slug, old_action in payload["actions"].items():
@@ -58,7 +59,7 @@ class RuntimeDataContractTests(unittest.TestCase):
                 self.assertIn("until", old_action["visibility"])
         for page in ("index.html", "action/index.html", "strike/index.html"):
             source = self.source(page)
-            self.assertIn("3% and 3%", source)
+            self.assertIn("3% and 3%", re.sub(r"<[^>]+>", "", source))
             self.assertIn("The strike is off.", source)
             self.assertNotIn("data-strike-countdown", source)
             self.assertNotIn("WE’RE GOING ON STRIKE.", source)
