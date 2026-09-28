@@ -26,7 +26,8 @@ def render_hero(action):
     config = json.dumps({"clock": clock, "headline": action["headline"], "summary": action["summary"]}, ensure_ascii=False).replace("<", "\\u003c")
     details = "\n".join(f'<div><dt>{esc(item["label"])}</dt><dd>{esc(item["value"])}</dd></div>' for item in action["details"])
     hidden = ' hidden' if inactive else ''
-    return f'''        <div class="container mx-auto px-6 home-strike-inner">
+    return f'''        <img class="home-strike-backdrop" src="{esc(image['src'])}" alt="" aria-hidden="true" width="{image['width']}" height="{image['height']}" decoding="async" fetchpriority="high" data-action-image>
+        <div class="container mx-auto px-6 home-strike-inner">
             <div class="home-strike-grid">
                 <div class="home-strike-copy">
                     <p class="home-strike-union">SEIU Local 503 at Oregon State University · Local 083</p>
@@ -53,7 +54,6 @@ def render_hero(action):
                         <p class="home-strike-clock-message" data-home-clock-message>{esc(summary) if inactive else 'Management: settle a fair contract.'}</p>
                         <noscript><p>The live timer needs JavaScript. Use the strike page for the latest status and instructions.</p></noscript>
                     </section>
-                    <figure class="home-strike-photo"><img src="{esc(image['src'])}" alt="{esc(image['alt'])}" width="{image['width']}" height="{image['height']}" decoding="async" fetchpriority="high" data-action-image><figcaption>Our work makes OSU work. Our solidarity makes us strong.</figcaption></figure>
                 </div>
             </div>
             <dl class="home-strike-details" data-action-details data-strike-mobilization{hidden}>{details}</dl>
