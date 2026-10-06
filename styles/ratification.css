@@ -27,21 +27,15 @@ body[data-ratification-page] { display:block !important; }
 body[data-ratification-page] > main { margin:0; max-width:none; width:100%; }
 .ratification details { margin:24px 0; }
 .ratification summary { min-height:48px; padding:12px; font-weight:700; cursor:pointer; }
-#homepage-action .ratification-wrap { position:relative; z-index:1; width:56%; max-width:740px; margin-left:44%; margin-right:auto; padding:36px 32px 28px; }
+#homepage-action .ratification-wrap { position:relative; z-index:1; padding-top:36px; padding-bottom:28px; }
 #homepage-action .home-strike-title { font-size:clamp(2.25rem,6vw,4.75rem); line-height:1.08; max-width:900px; }
 #homepage-action .home-strike-summary { font-size:1.125rem; max-width:800px; }
 #homepage-action .ratification-kicker { color:#4c1d95; }
-#homepage-action { min-height:0; background:#faf8fd; }
-#homepage-action .home-strike-backdrop { width:44%; object-position:60% 20%; filter:grayscale(1) sepia(1) saturate(3) hue-rotate(220deg); opacity:.8; }
-#homepage-action::before { background:linear-gradient(90deg,transparent 25%,#faf8fd 44%); }
+#homepage-action { min-height:0; }
+#homepage-action .home-strike-backdrop { object-position:60% 10%; }
 #homepage-action-promo .home-strike-promo { padding-top:24px; padding-bottom:24px; }
 @media(max-width:700px) { .ratification-cards { grid-template-columns:1fr; } .ratification-wrap { padding:28px 20px; } .ratification-actions { flex-direction:column; } .ratification-actions a { width:100%; } .ratification-card { padding:20px; } }
 @media(max-width:600px) {
-    #homepage-action .ratification-wrap { width:100%; max-width:none; margin:0; padding:28px 20px; }
-    #homepage-action .home-strike-backdrop { width:36%; height:460px; object-position:60% top; mask-image:linear-gradient(#000 120px,transparent 190px); }
-    #homepage-action::before { background:linear-gradient(90deg,transparent 28%,#faf8fd 36%); }
-    #homepage-action .ratification-kicker,#homepage-action .home-strike-title { margin-left:36%; }
-    #homepage-action .home-strike-title { min-height:100px; font-size:clamp(1.625rem,7vw,2.25rem); }
     #main-content { min-width:0; overflow-wrap:anywhere; }
     .worker-help-grid { display:grid; grid-template-columns:minmax(0,1fr); overflow:visible; }
     .worker-help-link { min-width:0; }
