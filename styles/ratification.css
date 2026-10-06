@@ -32,10 +32,11 @@ body[data-ratification-page] > main { margin:0; max-width:none; width:100%; }
 #homepage-action .home-strike-summary { font-size:1.125rem; max-width:800px; }
 #homepage-action .ratification-kicker { color:#4c1d95; }
 #homepage-action { min-height:0; }
-#homepage-action .home-strike-backdrop { object-position:60% 10%; }
+#homepage-action .home-strike-backdrop { object-position:60% 10%; transform:translateX(25%); mask-image:linear-gradient(90deg,transparent,#000 24%); }
 #homepage-action-promo .home-strike-promo { padding-top:24px; padding-bottom:24px; }
 @media(max-width:700px) { .ratification-cards { grid-template-columns:1fr; } .ratification-wrap { padding:28px 20px; } .ratification-actions { flex-direction:column; } .ratification-actions a { width:100%; } .ratification-card { padding:20px; } }
 @media(max-width:600px) {
+    #homepage-action .home-strike-backdrop { transform:translateX(15%); }
     #main-content { min-width:0; overflow-wrap:anywhere; }
     .worker-help-grid { display:grid; grid-template-columns:minmax(0,1fr); overflow:visible; }
     .worker-help-link { min-width:0; }
