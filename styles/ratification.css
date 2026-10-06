@@ -32,6 +32,7 @@ body[data-ratification-page] > main { margin:0; max-width:none; width:100%; }
 #homepage-action .home-strike-summary { font-size:1.125rem; max-width:800px; }
 #homepage-action .ratification-kicker { color:#4c1d95; }
 #homepage-action { min-height:0; }
+#homepage-action .home-strike-backdrop { object-position:60% 10%; }
 #homepage-action-promo .home-strike-promo { padding-top:24px; padding-bottom:24px; }
 @media(max-width:700px) { .ratification-cards { grid-template-columns:1fr; } .ratification-wrap { padding:28px 20px; } .ratification-actions { flex-direction:column; } .ratification-actions a { width:100%; } .ratification-card { padding:20px; } }
 @media(max-width:600px) {
