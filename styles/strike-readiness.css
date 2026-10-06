@@ -36,6 +36,12 @@ a:focus-visible, button:focus-visible, select:focus-visible, summary:focus-visib
 .strike-nav a { border-bottom: 2px solid transparent; color: #4b5563; flex: 0 0 auto; font-size: .74rem; font-weight: 800; padding-block: .28rem; text-decoration: none; white-space: nowrap; }
 .strike-nav a:hover { color: var(--brand-purple); }
 .strike-nav a[aria-current="page"] { border-bottom-color: var(--brand-purple); color: var(--brand-purple-dark); }
+@media (max-width: 600px) {
+    .strike-nav-wrap { position:static; }
+    .strike-nav { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:4px 10px; overflow:visible; }
+    .strike-nav a { display:flex; align-items:center; min-height:44px; white-space:normal; font-size:.875rem; line-height:1.35; }
+    .strike-section[aria-label="Current status"] { padding-block:28px; }
+}
 
 .pledge-callout { align-items: center; background: #fffbeb; border: 1px solid #fbbf24; border-left: 5px solid #d97706; border-radius: .8rem; display: flex; gap: 1.5rem; justify-content: space-between; margin-block: 1.25rem; padding-block: 1rem; }
 .pledge-callout h2 { font-size: 1.35rem; font-weight: 800; line-height: 1.2; margin-top: .2rem; }

@@ -5,7 +5,7 @@
     <link>https://www.local083.org</link>
     <description>Upcoming events from SEIU Local 503 at Oregon State University.</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 06 Oct 2026 07:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 14 Oct 2026 07:00:00 GMT</lastBuildDate>
     <atom:link href="https://www.local083.org/events/rss.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>Membership Meeting</title>
@@ -624,12 +624,36 @@
       <category>Membership Meeting</category>
     </item>
     <item>
+      <title>Contract Ratification Presentation — OSU Hatfield</title>
+      <link>https://www.local083.org/events/2026-10-06-Hatfield-Ratification-Presentation.html</link>
+      <guid isPermaLink="false">event:2026-10-06:Contract Ratification Presentation — OSU Hatfield</guid>
+      <description>Tuesday, October 6, 2026 at 3 p.m. Pacific. Join in person at Hatfield Marine Science Center, Guin Library Seminar Room or on Zoom for a tentative agreement presentation and Q&amp;A. Members and nonmembers welcome. | Date: 2026-10-06 | Time: 3 p.m. Pacific · Presentation + Q&amp;A | Location: Hatfield Marine Science Center, Guin Library Seminar Room, or Zoom</description>
+      <pubDate>Tue, 06 Oct 2026 07:00:00 GMT</pubDate>
+      <category>Membership Meeting</category>
+    </item>
+    <item>
       <title>Code of Conduct 101</title>
       <link>https://www.local083.org/events/2026-10-06-Code-of-Conduct-101.html</link>
       <guid isPermaLink="false">event:2026-10-06:Code of Conduct 101</guid>
       <description>Register for our free virtual Code of Conduct 101 training Tuesday, Oct. 6, from 5:30 to 7:30 p.m. Pacific. | Date: 2026-10-06 | Time: 5:30 PM - 7:30 PM | Location: Virtual — registration required</description>
       <pubDate>Tue, 06 Oct 2026 07:00:00 GMT</pubDate>
       <category>Training</category>
+    </item>
+    <item>
+      <title>Contract Ratification Presentation — OSU Bend</title>
+      <link>https://www.local083.org/events/2026-10-08-Bend-Ratification-Presentation.html</link>
+      <guid isPermaLink="false">event:2026-10-08:Contract Ratification Presentation — OSU Bend</guid>
+      <description>Thursday, October 8, 2026 at Noon Pacific. Join in person at OSU Bend campus (Obsidian 210 Boardroom) or on Zoom for a tentative agreement presentation and Q&amp;A. Members and nonmembers welcome. | Date: 2026-10-08 | Time: Noon Pacific · Presentation + Q&amp;A | Location: OSU Bend campus — Obsidian 210 Boardroom, or Zoom</description>
+      <pubDate>Thu, 08 Oct 2026 07:00:00 GMT</pubDate>
+      <category>Membership Meeting</category>
+    </item>
+    <item>
+      <title>Contract Ratification Presentation — OSU Main Campus</title>
+      <link>https://www.local083.org/events/2026-10-14-Main-Campus-Ratification-Presentation.html</link>
+      <guid isPermaLink="false">event:2026-10-14:Contract Ratification Presentation — OSU Main Campus</guid>
+      <description>Wednesday, October 14, 2026 at Noon Pacific. Join in person at OSU Memorial Union (MU), Room 104 or on Zoom for a tentative agreement presentation and Q&amp;A. Members and nonmembers welcome. | Date: 2026-10-14 | Time: Noon Pacific · Presentation + Q&amp;A | Location: OSU Memorial Union (MU), Room 104, or Zoom</description>
+      <pubDate>Wed, 14 Oct 2026 07:00:00 GMT</pubDate>
+      <category>Membership Meeting</category>
     </item>
   </channel>
 </rss>

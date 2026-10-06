@@ -1,0 +1,43 @@
+
+.ratification { color:#24103f; font: 1rem/1.65 Inter, sans-serif; }
+.ratification-wrap { max-width:1120px; margin:auto; padding:32px 24px; }
+.ratification h1,.ratification h2,.ratification h3 { color:#4c1d95; font-family:Lora,serif; font-weight:700; line-height:1.2; }
+.ratification h1 { font-size:clamp(2rem,5vw,3.75rem); margin:12px 0 20px; }
+.ratification h2 { font-size:clamp(1.5rem,3vw,2.1rem); margin:0 0 16px; }
+.ratification h3 { font-size:1.25rem; margin:10px 0; }
+.ratification p { margin:0 0 16px; }
+.ratification a:not(.ratification-button) { color:#4c1d95; text-decoration:underline; text-underline-offset:3px; }
+.ratification ul,.ratification ol { padding-left:24px; list-style:revert; }
+.ratification li { margin:12px 0; }
+.ratification-kicker { font-size:.875rem; font-weight:700; }
+.ratification-lead { font-size:1.125rem; max-width:760px; }
+.ratification-actions { display:flex; flex-wrap:wrap; gap:12px; margin:20px 0; }
+.ratification-button { display:inline-flex; align-items:center; justify-content:center; min-height:48px; padding:12px 18px; border:2px solid #4c1d95; border-radius:10px; color:white; background:#4c1d95; font-weight:700; text-align:center; line-height:1.4; text-decoration:none; }
+.ratification-button.secondary { background:white; color:#4c1d95; }
+.ratification a:focus-visible,.ratification summary:focus-visible { outline:3px solid #7c3aed; outline-offset:4px; }
+.ratification-status { background:#ede9fe; border-left:5px solid #4c1d95; padding:20px; margin:20px 0; border-radius:0 12px 12px 0; }
+.ratification-review { background:#fff8df; border-left:5px solid #a16207; padding:20px; margin:20px 0; }
+.ratification-cards { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; }
+.ratification-card { padding:22px; border:1px solid #c4b5d5; border-radius:14px; background:white; display:flex; flex-direction:column; min-width:0; }
+.ratification-card .ratification-button { margin-top:auto; }
+.ratification-meetings { background:#f5f3ff; scroll-margin-top:90px; }
+.ratification section[id] { scroll-margin-top:96px; }
+.ratification-rule { border-top:1px solid #d1d5db; }
+body[data-ratification-page] { display:block !important; }
+body[data-ratification-page] > main { margin:0; max-width:none; width:100%; }
+.ratification details { margin:24px 0; }
+.ratification summary { min-height:48px; padding:12px; font-weight:700; cursor:pointer; }
+#homepage-action .ratification-wrap { position:relative; z-index:1; padding-top:36px; padding-bottom:28px; }
+#homepage-action .home-strike-title { font-size:clamp(2.25rem,6vw,4.75rem); line-height:1.08; max-width:900px; }
+#homepage-action .home-strike-summary { font-size:1.125rem; max-width:800px; }
+#homepage-action .ratification-kicker { color:#4c1d95; }
+#homepage-action { min-height:0; }
+#homepage-action-promo .home-strike-promo { padding-top:24px; padding-bottom:24px; }
+@media(max-width:700px) { .ratification-cards { grid-template-columns:1fr; } .ratification-wrap { padding:28px 20px; } .ratification-actions { flex-direction:column; } .ratification-actions a { width:100%; } .ratification-card { padding:20px; } }
+@media(max-width:600px) {
+    #main-content { min-width:0; overflow-wrap:anywhere; }
+    .worker-help-grid { display:grid; grid-template-columns:minmax(0,1fr); overflow:visible; }
+    .worker-help-link { min-width:0; }
+    #upcoming-events-container .flex { flex-wrap:wrap; }
+    #upcoming-events-container .text-right { min-width:0; max-width:100%; text-align:left; }
+}

@@ -109,3 +109,10 @@ body[data-site-shell-added] > main {
 .contract-win-home .home-strike-title { margin: 18px 0; }
 .contract-win-home .home-strike-summary { max-width: 780px; }
 @media (max-width: 600px) { .contract-win-banner a span { display: block; margin-left: 0; } .contract-win-page { padding-top: 36px; } }
+
+/* Reachable navigation and touch targets on narrow and short phone screens. */
+[data-site-shell-header] #mobile-menu-button { min-width:44px; min-height:44px; display:flex; align-items:center; justify-content:center; }
+[data-site-shell-header] #mobile-menu { max-height:calc(100vh - 88px); max-height:calc(100dvh - 88px); overflow-y:auto; overscroll-behavior:contain; }
+[data-site-shell-header] a:focus-visible,[data-site-shell-header] button:focus-visible { outline:3px solid #4c1d95; outline-offset:3px; }
+@media(min-width:1024px) { [data-site-shell-header] #mobile-menu-button { display:none; } }
+@media(max-width:600px) { .contract-win-banner { padding:10px 20px; } .contract-win-banner a { font-size:16px; } }

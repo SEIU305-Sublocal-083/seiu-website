@@ -22,6 +22,7 @@ FOOTER_START = "<!-- SITE SHELL: FOOTER START -->"
 FOOTER_END = "<!-- SITE SHELL: FOOTER END -->"
 
 NAV_ITEMS = (
+    ("Bargaining", "/2026-bargaining/", "bargaining"),
     ("About", "/about.html", "about"),
     ("Events", "/events.html", "events"),
     ("News", "/news.html", "news"),
@@ -43,7 +44,7 @@ STYLE_RE = re.compile(r"<style\b", re.IGNORECASE)
 TAILWIND_LINK_RE = re.compile(
     r"<link\b[^>]*href=[\"']/styles/tailwind\.css[\"'][^>]*>", re.IGNORECASE
 )
-SHELL_STYLES_URL = "/styles/site-shell.css?v=20260928-contract-win"
+SHELL_STYLES_URL = "/styles/site-shell.css?v=20261006-ratification"
 SHELL_STYLES_LINK_RE = re.compile(
     r"<link\b[^>]*href=[\"']/styles/site-shell\.css(?:\?[^\"\']*)?[\"'][^>]*>", re.IGNORECASE
 )
@@ -51,6 +52,8 @@ def active_section(relative_path: str) -> str | None:
     """Return the main-navigation section for a public path."""
 
     first = relative_path.split("/", 1)[0]
+    if first == "2026-bargaining":
+        return "bargaining"
     if first == "strike":
         return "resources"
     if first in {"events", "news", "resources"}:
@@ -82,11 +85,6 @@ def nav_link(label: str, href: str, key: str, active: str | None, *, mobile: boo
 
 
 def render_header(relative_path: str) -> str:
-    announcement_banner = "" if relative_path == "news/2026-09-28-we-won.html" else """
-    <aside class="contract-win-banner" aria-label="Contract victory announcement" data-contract-win-banner>
-        <a href="/news/2026-09-28-we-won.html"><strong>We won our fair contract.</strong> <span>Click here to read more →</span></a>
-        <p>The strike is off. Report to work as scheduled.</p>
-    </aside>"""
     active = active_section(relative_path)
     desktop = "\n".join(
         f"                {nav_link(label, href, key, active, mobile=False)}"
@@ -136,9 +134,9 @@ def render_header(relative_path: str) -> str:
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center" aria-label="Primary navigation">
             <a href="/index.html" class="flex items-center space-x-2">
                 <span class="site-wordmark text-2xl font-bold text-brand-purple-dark">SEIU 503</span>
-                <span class="text-lg text-text-secondary hidden md:block">| Oregon State University</span>
+                <span class="text-lg text-text-secondary hidden xl:block">| Oregon State University</span>
             </a>
-            <div class="hidden lg:flex space-x-8">
+            <div class="hidden lg:flex space-x-6">
 {desktop}
             </div>
             <button type="button" id="mobile-menu-button" class="lg:hidden text-text-secondary hover:text-brand-purple" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false" data-site-shell-menu-owner>
@@ -148,7 +146,14 @@ def render_header(relative_path: str) -> str:
         <div id="mobile-menu" class="hidden lg:hidden absolute top-full left-0 w-full bg-white border-t border-border-color shadow-lg" role="navigation" aria-label="Mobile navigation">
 {mobile}
         </div>
-    </header>{announcement_banner}{menu_script}
+        <noscript><style>
+            @media (max-width: 1023px) {{
+                [data-site-shell-header] {{ position:static; }}
+                [data-site-shell-header] #mobile-menu {{ display:block; position:static; max-height:none; }}
+                [data-site-shell-header] #mobile-menu-button {{ display:none; }}
+            }}
+        </style></noscript>
+    </header>{menu_script}
 {HEADER_END}"""
 
 
@@ -178,7 +183,7 @@ def render_footer(relative_path: str) -> str:
                     <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase"><a href="/resources.html" class="hover:text-brand-purple transition-colors">Resources</a></h4>
                     <ul class="space-y-3">
                         <li><a href="/resources.html" class="text-text-secondary hover:text-brand-purple transition-colors">Resources &amp; Rights</a></li>
-                        <li><a href="/resources/seiu_cba_2022-2026.pdf" class="text-text-secondary hover:text-brand-purple transition-colors">Our Contract (PDF)</a></li>
+                        <li><a href="/resources/seiu_cba_2022-2026.pdf" class="text-text-secondary hover:text-brand-purple transition-colors">2022–2026 contract (PDF)</a></li>
                         <li><a href="/resources/stewards.html" class="text-text-secondary hover:text-brand-purple transition-colors">Find a Steward</a></li>
                         <li><a href="/resources/weingarten-rights.html" class="text-text-secondary hover:text-brand-purple transition-colors">Weingarten Rights</a></li>
                     </ul>

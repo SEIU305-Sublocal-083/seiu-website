@@ -1,87 +1,57 @@
 {
   "schema": "local083-current-action-v1",
-  "updatedAt": "2026-09-28",
-  "defaultAction": "fair-contract-won",
+  "updatedAt": "2026-10-06",
+  "defaultAction": "ratification-2026",
   "slots": {
-    "homepageHero": "fair-contract-won",
-    "homepagePromo": "fair-contract-won",
-    "actionPageDefault": "fair-contract-won"
+    "homepageHero": "ratification-2026",
+    "homepagePromo": "ratification-2026",
+    "actionPageDefault": "ratification-2026"
   },
-  "emailActions": {
-    "osu-president": {
-      "recipient": "pres.office@oregonstate.edu",
-      "cc": "trustees@oregonstate.edu",
-      "subjects": [
-        "OSU staff need a fair wage agreement",
-        "Close the wage gap for classified staff",
-        "Support 3% on Nov. 1 for OSU classified workers",
-        "Protect lower-wage university workers",
-        "Settle a fair contract and preserve worker protections"
-      ],
-      "body": "President Murthy and Members of the OSU Board of Trustees,\n\nPlease settle a fair contract for classified staff. At the Sept. 27 briefing, our bargaining team reported management’s first-year offer of 2.25%. Our priorities are 3% for everyone on Nov. 1 and 6% over two years for workers earning under $25 an hour.\n\nOur team reported progress on protecting health plans and withdrawal of takeaways, but no overall tentative agreement. Please close the wage gap and preserve health care, steps and job protections in a final agreement.\n\nCurrent update: https://www.local083.org/strike/#why-we-are-fighting\n\nSincerely,\n[Your name]\n[Your OSU role or connection]"
-    }
-  },
+  "emailActions": {},
   "actions": {
     "fair-contract-won": {
       "slug": "fair-contract-won",
-      "type": "contract_victory",
-      "eyebrow": "When we fight, we win.",
-      "headline": "WE WON.",
-      "summary": "No takeaways. A 3% COLA in each of the next two years. Celebrate today, noon–1 p.m., in front of Kerr or on Zoom. Food provided; no RSVP.",
-      "promoEyebrow": "Today · Monday, September 28",
-      "promoHeadline": "Victory lunch + bargaining update",
-      "promoBody": "Noon–1 p.m. in front of Kerr Administration Building or on Zoom. The strike is off. Report to work as scheduled.",
+      "type": "ratification",
+      "eyebrow": "Strike called off · Updated October 6, 2026",
+      "headline": "Our agreement. Our vote.",
+      "summary": "The strike was called off September 28. Our tentative agreement is now before members for ratification. Review the summary, bring your questions to a meeting, and use your personal ballot email to vote.",
+      "promoEyebrow": "Your next step",
+      "promoHeadline": "Find your ballot. Make your voice heard.",
+      "promoBody": "Look for SEIU 503’s October 5 email, “Vote on Contract Ratification Now!” Voting is online; informational meetings do not include a vote.",
       "details": [
         {
           "label": "Strike status",
-          "value": "Called off. Report to work as scheduled."
+          "value": "Called off September 28, 2026. Report to work as scheduled."
+        },
+        {
+          "label": "Voting cutoff",
+          "value": "Exact closing date and time awaiting confirmation (Pacific time)."
         }
       ],
       "ctas": [
         {
           "id": "primary",
-          "label": "Victory lunch details",
-          "href": "/events/2026-09-28-Victory-Lunch-and-Emergency-Membership-Meeting.html",
-          "style": "primary",
-          "analytics": {
-            "event": "news_click",
-            "label": "Victory lunch details",
-            "metadata": {
-              "action_slug": "fair-contract-won"
-            }
-          }
+          "label": "Voting information",
+          "href": "/2026-bargaining/#vote",
+          "style": "primary"
         },
         {
           "id": "secondary",
-          "label": "Join on Zoom",
-          "href": "https://seiu503-org.zoom.us/j/89833736467?pwd=uLGarzqIdObDguVgvKWHgOgbPEbKQe.1",
-          "style": "secondary",
-          "analytics": {
-            "event": "news_click",
-            "label": "Join on Zoom",
-            "metadata": {
-              "action_slug": "fair-contract-won"
-            }
-          }
+          "label": "Meetings & Zoom details",
+          "href": "/2026-bargaining/#ratification-meetings",
+          "style": "secondary"
         },
         {
           "id": "tertiary",
-          "label": "Add to calendar",
-          "href": "/events/ical/2026-09-28-Victory-Lunch-and-Emergency-Membership-Meeting.ics",
-          "style": "outline",
-          "analytics": {
-            "event": "news_click",
-            "label": "Add to calendar",
-            "metadata": {
-              "action_slug": "fair-contract-won"
-            }
-          }
+          "label": "Get ballot help",
+          "href": "/2026-bargaining/#vote",
+          "style": "outline"
         }
       ],
       "actionPage": {
-        "headline": "We won. Celebrate with us today.",
-        "body": "Join our victory lunch and emergency membership meeting Monday, Sept. 28, noon–1 p.m. in front of Kerr or on Zoom. Food provided; no RSVP needed.",
-        "nextStep": "Food provided. No RSVP. The strike is off. Report to work as scheduled."
+        "headline": "Our tentative agreement is ready for member review.",
+        "body": "The strike has been called off. Review the tentative agreement summary and attend an informational meeting.",
+        "nextStep": "Use your own SEIU 503 ballot email to vote online. Contact our union if you need ballot help."
       },
       "image": {
         "src": "/images/2cef7759-042d-4a05-9496-7eefff439a5e-june-30-rally-speaker-and-crowd-960w.webp",
@@ -394,234 +364,207 @@
     },
     "strike-notice-delivered": {
       "slug": "strike-notice-delivered",
-      "type": "bargaining_action",
-      "visibility": {
-        "from": "2026-09-18T00:00:00-07:00",
-        "until": "2026-09-27T23:59:59-07:00"
-      },
-      "eyebrow": "OSU workers are ready",
-      "headline": "STRIKE HAS BEEN DECLARED. NOTICE HAS BEEN GIVEN.",
-      "summary": "Sept. 27 bargaining update: Our team is seeking 3% for everyone on Nov. 1 and 6% over two years for workers earning under $25 an hour. Management’s reported first-year offer is 2.25%. Prepare for the Sept. 28 strike unless our union announces otherwise.",
-      "promoEyebrow": "United for a fair contract",
-      "promoHeadline": "We keep OSU running. We demand respect.",
-      "promoBody": "Wages remain unresolved. Our team reported progress on health plans and withdrawal of takeaways, but no overall tentative agreement. Check the current stakes and prepare with your coworkers.",
-      "image": {
-        "src": "/images/6c1b0ab7-5dff-4b01-a1da-9cda46e5c729.png",
-        "alt": "A Local 083 member hands our union’s strike notice to OSU Provost Roy Haggerty in the Kerr Administration Building lobby.",
-        "width": 1200,
-        "height": 675
-      },
+      "type": "ratification",
+      "eyebrow": "Strike called off · Updated October 6, 2026",
+      "headline": "Our agreement. Our vote.",
+      "summary": "The strike was called off September 28. Our tentative agreement is now before members for ratification. Review the summary, bring your questions to a meeting, and use your personal ballot email to vote.",
+      "promoEyebrow": "Your next step",
+      "promoHeadline": "Find your ballot. Make your voice heard.",
+      "promoBody": "Look for SEIU 503’s October 5 email, “Vote on Contract Ratification Now!” Voting is online; informational meetings do not include a vote.",
       "details": [
         {
-          "label": "Notice delivered",
-          "value": "September 18 — our union put OSU leadership on notice"
+          "label": "Strike status",
+          "value": "Called off September 28, 2026. Report to work as scheduled."
         },
         {
-          "label": "Intended strike start",
-          "value": "September 28 at 6 a.m."
-        },
-        {
-          "label": "Latest bargaining update",
-          "value": "Sept. 27 — wages unresolved; no tentative agreement announced at the briefing"
+          "label": "Voting cutoff",
+          "value": "Exact closing date and time awaiting confirmation (Pacific time)."
         }
       ],
       "ctas": [
         {
           "id": "primary",
-          "label": "Read the latest bargaining update →",
-          "href": "/news/2026-09-27-bargaining-stakes.html",
-          "style": "primary",
-          "analytics": {
-            "event": "news_click",
-            "label": "Homepage Strike Notice Story",
-            "metadata": {
-              "placement": "homepage_hero",
-              "action_slug": "strike-notice-delivered"
-            }
-          }
+          "label": "Voting information",
+          "href": "/2026-bargaining/#vote",
+          "style": "primary"
         },
         {
           "id": "secondary",
-          "label": "Get strike ready",
-          "href": "/strike/",
-          "style": "secondary",
-          "analytics": {
-            "event": "take_action_click",
-            "label": "Homepage Strike Preparation",
-            "metadata": {
-              "placement": "homepage_hero",
-              "action_slug": "strike-notice-delivered"
-            }
-          }
+          "label": "Meetings & Zoom details",
+          "href": "/2026-bargaining/#ratification-meetings",
+          "style": "secondary"
         },
         {
           "id": "tertiary",
-          "label": "Read the Bargaining Hub",
-          "href": "/2026-bargaining/index.html",
-          "style": "outline",
-          "analytics": {
-            "event": "bargaining_hub_click",
-            "label": "Homepage Bargaining Hub",
-            "metadata": {
-              "placement": "homepage_promo",
-              "action_slug": "strike-notice-delivered"
-            }
-          }
+          "label": "Get ballot help",
+          "href": "/2026-bargaining/#vote",
+          "style": "outline"
         }
       ],
       "actionPage": {
-        "headline": "STRIKE HAS BEEN DECLARED. NOTICE HAS BEEN GIVEN.",
-        "body": "Sept. 27 bargaining update: Our team is seeking 3% for everyone on Nov. 1 and 6% over two years for workers earning under $25 an hour. Management’s reported first-year offer is 2.25%. Prepare for the Sept. 28 strike unless our union announces otherwise.",
-        "nextStep": "Prepare to strike Monday, Sept. 28, at 6 a.m. Pacific unless our union announces a tentative agreement and calls off the strike. Watch for an email and text message if that changes."
-      }
-    },
-    "strike-september-28": {
-      "slug": "strike-september-28",
-      "type": "bargaining_action",
-      "visibility": {
-        "from": "2026-09-27T00:00:00-07:00",
-        "until": "2026-09-27T23:59:59-07:00"
+        "headline": "Our tentative agreement is ready for member review.",
+        "body": "The strike has been called off. Review the tentative agreement summary and attend an informational meeting.",
+        "nextStep": "Use your own SEIU 503 ballot email to vote online. Contact our union if you need ballot help."
       },
-      "eyebrow": "OSU classified workers · United for a fair contract",
-      "headline": "WE’RE GOING ON STRIKE.",
-      "summary": "Management had the chance to settle a fair contract. Instead, its offers leave us falling behind rising costs. We keep these universities running. We are done being left behind.",
-      "promoEyebrow": "This is what we are fighting for",
-      "promoHeadline": "WHEN WE FIGHT, WE WIN.",
-      "promoBody": "Pay that keeps up. A standard of living we can afford. Respect for the work that makes higher education possible. Stand with your coworkers.",
       "image": {
         "src": "/images/2cef7759-042d-4a05-9496-7eefff439a5e-june-30-rally-speaker-and-crowd-960w.webp",
         "alt": "Local 083 members gather with purple union signs during the June 30 rally at Oregon State University.",
         "width": 1800,
         "height": 1084
-      },
+      }
+    },
+    "strike-september-28": {
+      "slug": "strike-september-28",
+      "type": "ratification",
+      "eyebrow": "Strike called off · Updated October 6, 2026",
+      "headline": "Our agreement. Our vote.",
+      "summary": "The strike was called off September 28. Our tentative agreement is now before members for ratification. Review the summary, bring your questions to a meeting, and use your personal ballot email to vote.",
+      "promoEyebrow": "Your next step",
+      "promoHeadline": "Find your ballot. Make your voice heard.",
+      "promoBody": "Look for SEIU 503’s October 5 email, “Vote on Contract Ratification Now!” Voting is online; informational meetings do not include a vote.",
       "details": [
         {
-          "label": "OSU picket line",
-          "value": "15th & Jefferson, in front of Kerr Administration Building"
+          "label": "Strike status",
+          "value": "Called off September 28, 2026. Report to work as scheduled."
         },
         {
-          "label": "Picket shifts",
-          "value": "7:30 a.m.–12:30 p.m. and noon–5 p.m."
-        },
-        {
-          "label": "Noon rally",
-          "value": "Join your coworkers at the OSU picket site."
+          "label": "Voting cutoff",
+          "value": "Exact closing date and time awaiting confirmation (Pacific time)."
         }
       ],
       "ctas": [
         {
           "id": "primary",
-          "label": "Join the picket line →",
-          "href": "/strike/",
-          "style": "primary",
-          "analytics": {
-            "event": "take_action_click",
-            "label": "Homepage Join the Picket Line",
-            "metadata": {
-              "placement": "homepage_hero",
-              "action_slug": "strike-september-28"
-            }
-          }
+          "label": "Voting information",
+          "href": "/2026-bargaining/#vote",
+          "style": "primary"
         },
         {
           "id": "secondary",
-          "label": "Sign up for a strike shift",
-          "href": "/strike-shifts/",
-          "style": "secondary",
-          "analytics": {
-            "event": "take_action_click",
-            "label": "Homepage Strike Shift Signup",
-            "metadata": {
-              "placement": "homepage_hero",
-              "action_slug": "strike-september-28"
-            }
-          }
+          "label": "Meetings & Zoom details",
+          "href": "/2026-bargaining/#ratification-meetings",
+          "style": "secondary"
         },
         {
           "id": "tertiary",
-          "label": "Get email updates",
-          "href": "/email-signup/",
-          "style": "outline",
-          "analytics": {
-            "event": "take_action_click",
-            "label": "Homepage Strike Email Updates",
-            "metadata": {
-              "placement": "homepage_promo",
-              "action_slug": "strike-september-28"
-            }
-          }
+          "label": "Get ballot help",
+          "href": "/2026-bargaining/#vote",
+          "style": "outline"
         }
       ],
       "actionPage": {
-        "headline": "WE’RE GOING ON STRIKE.",
-        "body": "Management had the chance to settle a fair contract. Instead, its offers leave us falling behind rising costs. We keep these universities running. We are done being left behind.",
-        "nextStep": "Join the OSU picket line at 15th & Jefferson in front of Kerr Administration Building. Get the latest instructions on our strike page."
+        "headline": "Our tentative agreement is ready for member review.",
+        "body": "The strike has been called off. Review the tentative agreement summary and attend an informational meeting.",
+        "nextStep": "Use your own SEIU 503 ballot email to vote online. Contact our union if you need ballot help."
       },
-      "strikeClock": {
-        "status": "cancelled",
-        "startsAt": "2026-09-28T06:00:00-07:00",
-        "startLabel": "Monday, September 28, at 6 a.m. Pacific",
-        "activeHeadline": "WE ARE ON STRIKE.",
-        "activeMessage": "Management: settle a fair contract. Every hour without a deal takes a toll on workers, our families, students, research and the campus services we all depend on.",
-        "updateUrl": "/news/2026-09-28-we-won.html",
-        "resolutionHeadline": "WE WON.",
-        "resolutionMessage": "We won our fair contract: 3% and 3%. The strike is off. Report to work as scheduled. More bargaining information will be shared in the morning."
+      "image": {
+        "src": "/images/2cef7759-042d-4a05-9496-7eefff439a5e-june-30-rally-speaker-and-crowd-960w.webp",
+        "alt": "Local 083 members gather with purple union signs during the June 30 rally at Oregon State University.",
+        "width": 1800,
+        "height": 1084
+      }
+    },
+    "ratification-2026": {
+      "slug": "ratification-2026",
+      "type": "ratification",
+      "eyebrow": "Updated October 6, 2026 · Local 083",
+      "headline": "Our agreement. Our vote.",
+      "summary": "The strike was called off September 28. Our tentative agreement is now before members for ratification. Review the summary, bring your questions to a meeting, and use your personal ballot email to vote.",
+      "promoEyebrow": "Your next step",
+      "promoHeadline": "Find your ballot. Make your voice heard.",
+      "promoBody": "Look for SEIU 503’s October 5 email, “Vote on Contract Ratification Now!” Voting is online; informational meetings do not include a vote.",
+      "details": [
+        {
+          "label": "Strike status",
+          "value": "Called off September 28, 2026. Report to work as scheduled."
+        },
+        {
+          "label": "Voting cutoff",
+          "value": "Exact closing date and time awaiting confirmation (Pacific time)."
+        }
+      ],
+      "ctas": [
+        {
+          "id": "primary",
+          "label": "Voting information",
+          "href": "/2026-bargaining/#vote",
+          "style": "primary"
+        },
+        {
+          "id": "secondary",
+          "label": "Meetings & Zoom details",
+          "href": "/2026-bargaining/#ratification-meetings",
+          "style": "secondary"
+        },
+        {
+          "id": "tertiary",
+          "label": "Get ballot help",
+          "href": "/2026-bargaining/#vote",
+          "style": "outline"
+        }
+      ],
+      "actionPage": {
+        "headline": "Our tentative agreement is ready for member review.",
+        "body": "The strike has been called off. Review the tentative agreement summary and attend an informational meeting.",
+        "nextStep": "Use your own SEIU 503 ballot email to vote online. Contact our union if you need ballot help."
+      },
+      "image": {
+        "src": "/images/2cef7759-042d-4a05-9496-7eefff439a5e-june-30-rally-speaker-and-crowd-960w.webp",
+        "alt": "Local 083 members gather with purple union signs during the June 30 rally at Oregon State University.",
+        "width": 1800,
+        "height": 1084
       }
     }
   },
   "fallback": {
-    "eyebrow": "Current action",
-    "headline": "We won our fair contract.",
-    "summary": "We won our fair contract: 3% and 3%. The strike is off. Report to work as scheduled. More bargaining information will be shared in the morning.",
-    "promoEyebrow": "Stay connected",
-    "promoHeadline": "The strike is off.",
-    "promoBody": "Report to work as scheduled.",
+    "slug": "ratification-2026",
+    "type": "ratification",
+    "eyebrow": "Updated October 6, 2026 · Local 083",
+    "headline": "Our agreement. Our vote.",
+    "summary": "The strike was called off September 28. Our tentative agreement is now before members for ratification. Review the summary, bring your questions to a meeting, and use your personal ballot email to vote.",
+    "promoEyebrow": "Your next step",
+    "promoHeadline": "Find your ballot. Make your voice heard.",
+    "promoBody": "Look for SEIU 503’s October 5 email, “Vote on Contract Ratification Now!” Voting is online; informational meetings do not include a vote.",
     "details": [
       {
-        "label": "Next step",
-        "value": "Check events"
+        "label": "Strike status",
+        "value": "Called off September 28, 2026. Report to work as scheduled."
+      },
+      {
+        "label": "Voting cutoff",
+        "value": "Exact closing date and time awaiting confirmation (Pacific time)."
       }
     ],
     "ctas": [
       {
         "id": "primary",
-        "label": "Read the announcement",
-        "href": "/news/2026-09-28-we-won.html",
-        "style": "primary",
-        "analytics": {
-          "event": "news_click",
-          "label": "Read the announcement",
-          "metadata": {
-            "action_slug": "fair-contract-won"
-          }
-        }
+        "label": "Voting information",
+        "href": "/2026-bargaining/#vote",
+        "style": "primary"
       },
       {
         "id": "secondary",
-        "label": "The strike is off",
-        "href": "/strike/",
-        "style": "secondary",
-        "analytics": {
-          "event": "news_click",
-          "label": "The strike is off",
-          "metadata": {
-            "action_slug": "fair-contract-won"
-          }
-        }
+        "label": "Meetings & Zoom details",
+        "href": "/2026-bargaining/#ratification-meetings",
+        "style": "secondary"
       },
       {
         "id": "tertiary",
-        "label": "Get email updates",
-        "href": "/email-signup/",
-        "style": "outline",
-        "analytics": {
-          "event": "news_click",
-          "label": "Get email updates",
-          "metadata": {
-            "action_slug": "fair-contract-won"
-          }
-        }
+        "label": "Get ballot help",
+        "href": "/2026-bargaining/#vote",
+        "style": "outline"
       }
-    ]
+    ],
+    "actionPage": {
+      "headline": "Our tentative agreement is ready for member review.",
+      "body": "The strike has been called off. Review the tentative agreement summary and attend an informational meeting.",
+      "nextStep": "Use your own SEIU 503 ballot email to vote online. Contact our union if you need ballot help."
+    },
+    "image": {
+      "src": "/images/2cef7759-042d-4a05-9496-7eefff439a5e-june-30-rally-speaker-and-crowd-960w.webp",
+      "alt": "Local 083 members gather with purple union signs during the June 30 rally at Oregon State University.",
+      "width": 1800,
+      "height": 1084
+    }
   }
 }

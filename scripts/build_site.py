@@ -35,6 +35,7 @@ def short_redirect_paths(root: Path = ROOT) -> list[str]:
 
 GENERATED_PATHS = [
     "index.html",
+    "2026-bargaining/index.html",
     "news.html",
     "events.html",
     "feed.xml",

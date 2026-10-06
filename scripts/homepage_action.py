@@ -18,6 +18,15 @@ def cta(action, position, style):
 
 
 def render_hero(action):
+    if action.get("type") == "ratification":
+        image = action["image"]
+        return f'''<img class="home-strike-backdrop" src="{esc(image['src'])}" alt="" aria-hidden="true" width="{image['width']}" height="{image['height']}" decoding="async" fetchpriority="high" data-action-image>
+        <div class="ratification-wrap">
+          <p class="ratification-kicker" data-action-eyebrow>{esc(action['eyebrow'])}</p>
+          <h1 class="home-strike-title" data-action-headline>{esc(action['headline'])}</h1>
+          <p class="home-strike-summary" data-action-summary>{esc(action['summary'])}</p>
+          <div class="home-strike-ctas">{cta(action, 'primary', 'btn-primary')}{cta(action, 'secondary', 'btn-secondary')}</div>
+        </div>'''
     if action.get("type") == "contract_victory":
         image = action["image"]
         return f'''<img class="home-strike-backdrop" src="{esc(image['src'])}" alt="" aria-hidden="true" width="{image['width']}" height="{image['height']}" decoding="async" fetchpriority="high" data-action-image>
@@ -82,7 +91,7 @@ def render_hero(action):
 
 
 def render_promo(action):
-    if action.get("type") == "contract_victory":
+    if action.get("type") in {"contract_victory", "ratification"}:
         return f'''<div class="container mx-auto px-6 home-strike-promo">
             <div><p class="home-strike-promo-kicker" data-action-promo-eyebrow>{esc(action['promoEyebrow'])}</p><h2 data-action-promo-headline>{esc(action['promoHeadline'])}</h2><p data-action-promo-body>{esc(action['promoBody'])}</p></div>
             {cta(action, 'tertiary', 'btn-secondary')}

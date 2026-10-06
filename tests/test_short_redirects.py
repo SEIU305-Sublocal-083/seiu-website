@@ -4,6 +4,7 @@ import sys
 import tempfile
 import unittest
 from pathlib import Path
+from urllib.parse import urlsplit
 
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -19,8 +20,9 @@ class ShortRedirectTests(unittest.TestCase):
 
     def test_required_and_high_value_short_urls_are_declared(self):
         self.assertEqual(self.by_slug["actions"]["target"], "/action/")
-        self.assertEqual(self.by_slug["2026-bargaining"]["target"], "/strike/")
-        self.assertEqual(self.by_slug["presentation"]["target"], "/strike/")
+        self.assertNotIn("2026-bargaining", self.by_slug)
+        self.assertTrue((ROOT / "2026-bargaining/index.html").is_file())
+        self.assertEqual(self.by_slug["presentation"]["target"], "/2026-bargaining/#ratification-meetings")
         self.assertEqual(
             self.by_slug["pledge"]["target"],
             "/strike/",
@@ -54,9 +56,9 @@ class ShortRedirectTests(unittest.TestCase):
 
     def test_internal_redirect_targets_exist(self):
         for entry in self.entries:
-            target = entry["target"]
-            if not target.startswith("/"):
+            if not entry["target"].startswith("/"):
                 continue
+            target = urlsplit(entry["target"]).path
             with self.subTest(slug=entry["slug"]):
                 path = ROOT / target.lstrip("/")
                 if target.endswith("/"):

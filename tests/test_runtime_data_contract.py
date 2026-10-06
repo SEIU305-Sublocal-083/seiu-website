@@ -29,13 +29,9 @@ class RuntimeDataContractTests(unittest.TestCase):
         self.assertIn("Array.isArray(events)", index)
         self.assertIn("Array.isArray(events)", calendar)
 
-    def test_current_email_action_copies_osu_trustees(self):
+    def test_ratification_retires_the_pre_settlement_email_action(self):
         payload = json.loads(self.source("data/current-action.json"))
-        email_action = payload["emailActions"]["osu-president"]
-
-        self.assertEqual(email_action["recipient"], "pres.office@oregonstate.edu")
-        self.assertEqual(email_action["cc"], "trustees@oregonstate.edu")
-        self.assertIn("Members of the OSU Board of Trustees", email_action["body"])
+        self.assertNotIn("osu-president", payload["emailActions"])
         self.assertIn("cc=${encodeURIComponent(cc)}", self.source("js/current-action.js"))
 
         fallback_pages = (
@@ -47,31 +43,40 @@ class RuntimeDataContractTests(unittest.TestCase):
             with self.subTest(page=page):
                 self.assertIn(fallback_href, self.source(page))
 
-    def test_current_action_announces_victory_and_retires_mobilization(self):
+    def test_current_action_routes_to_ratification_and_retires_mobilization(self):
         payload = json.loads(self.source("data/current-action.json"))
         action = payload["actions"][payload["defaultAction"]]
         self.assertTrue(all(slug == action["slug"] for slug in payload["slots"].values()))
-        self.assertEqual(action["ctas"][0]["href"], "/events/2026-09-28-Victory-Lunch-and-Emergency-Membership-Meeting.html")
-        self.assertIn("Report to work as scheduled", action["actionPage"]["nextStep"])
-        self.assertEqual(payload["actions"]["strike-september-28"]["strikeClock"]["status"], "cancelled")
+        self.assertEqual(action["ctas"][0]["href"], "/2026-bargaining/#vote")
+        self.assertIn("ballot", action["actionPage"]["nextStep"])
         for slug, old_action in payload["actions"].items():
-            if slug != action["slug"]:
+            if old_action["type"] != "ratification":
                 self.assertIn("until", old_action["visibility"])
+        for slug in ("strike-september-28", "strike-notice-delivered", "fair-contract-won"):
+            self.assertEqual(payload["actions"][slug]["type"], "ratification")
         for page in ("index.html", "action/index.html", "strike/index.html"):
             source = self.source(page)
-            self.assertIn("3% and 3%", re.sub(r"<[^>]+>", "", source))
-            self.assertIn("The strike is off.", source)
+            self.assertIn("/2026-bargaining/", source)
+            self.assertIn("called off", source)
             self.assertNotIn("data-strike-countdown", source)
             self.assertNotIn("WE’RE GOING ON STRIKE.", source)
             self.assertNotIn("data-home-strike-clock", source)
 
-    def test_homepage_victory_keeps_a_static_fallback(self):
+    def test_homepage_ratification_keeps_a_static_fallback(self):
         payload = json.loads(self.source("data/current-action.json"))
         action = payload["actions"][payload["slots"]["homepageHero"]]
-        self.assertEqual(action["type"], "contract_victory")
+        self.assertEqual(action["type"], "ratification")
         self.assertIn(action["headline"], self.source("index.html"))
         self.assertIn(action["summary"], self.source("index.html"))
         self.assertNotIn('role="timer"', self.source("index.html"))
+
+    def test_bargaining_hub_has_no_redirect_and_no_personal_ballot(self):
+        source = self.source("2026-bargaining/index.html")
+        self.assertNotIn('http-equiv="refresh"', source)
+        self.assertNotIn('evoting?id=', source)
+        self.assertIn('id="vote"', source)
+        self.assertIn('id="ratification-meetings"', source)
+        self.assertIn("Full agreement: public link not yet verified", source)
 
 
 if __name__ == "__main__":

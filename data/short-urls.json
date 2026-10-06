@@ -14,20 +14,14 @@
   {
     "slug": "pledge",
     "target": "/strike/",
-    "title": "The strike is off. Join our victory lunch.",
-    "description": "Join our victory lunch and emergency membership meeting Monday, Sept. 28, noon–1 p.m. in front of Kerr or on Zoom. Food provided; no RSVP needed."
+    "title": "Strike called off — bargaining and ratification",
+    "description": "The September 28 strike was called off. Find current bargaining information, ratification meetings and voting help."
   },
   {
     "slug": "presentation",
-    "target": "/strike/",
-    "title": "The strike is off. Join our victory lunch.",
-    "description": "Join our victory lunch and emergency membership meeting Monday, Sept. 28, noon–1 p.m. in front of Kerr or on Zoom. Food provided; no RSVP needed."
-  },
-  {
-    "slug": "2026-bargaining",
-    "target": "/strike/",
-    "title": "The strike is off. Join our victory lunch.",
-    "description": "Join our victory lunch and emergency membership meeting Monday, Sept. 28, noon–1 p.m. in front of Kerr or on Zoom. Food provided; no RSVP needed."
+    "target": "/2026-bargaining/#ratification-meetings",
+    "title": "Strike called off — bargaining and ratification",
+    "description": "The September 28 strike was called off. Find current bargaining information, ratification meetings and voting help."
   },
   {
     "slug": "COC",
@@ -86,14 +80,14 @@
   {
     "slug": "strike-manual",
     "target": "/strike/",
-    "title": "The strike is off. Join our victory lunch.",
-    "description": "Join our victory lunch and emergency membership meeting Monday, Sept. 28, noon–1 p.m. in front of Kerr or on Zoom. Food provided; no RSVP needed."
+    "title": "Strike called off — bargaining and ratification",
+    "description": "The September 28 strike was called off. Find current bargaining information, ratification meetings and voting help."
   },
   {
     "slug": "strike-shifts",
     "target": "/strike/",
-    "title": "The strike is off. Join our victory lunch.",
-    "description": "Join our victory lunch and emergency membership meeting Monday, Sept. 28, noon–1 p.m. in front of Kerr or on Zoom. Food provided; no RSVP needed."
+    "title": "Strike called off — bargaining and ratification",
+    "description": "The September 28 strike was called off. Find current bargaining information, ratification meetings and voting help."
   },
   {
     "slug": "email-signup",

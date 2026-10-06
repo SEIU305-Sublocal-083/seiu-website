@@ -1,6 +1,48 @@
 {
-  "asOf": "2026-09-28",
+  "asOf": "2026-10-06",
   "events": [
+    {
+      "date": "2026-10-14",
+      "time": "Noon Pacific · Presentation + Q&A",
+      "title": "Contract Ratification Presentation — OSU Main Campus",
+      "description": "Wednesday, October 14, 2026 at Noon Pacific. Join in person at OSU Memorial Union (MU), Room 104 or on Zoom for a tentative agreement presentation and Q&A. Members and nonmembers welcome.",
+      "type": "Membership Meeting",
+      "url": "/events/2026-10-14-Main-Campus-Ratification-Presentation.html",
+      "featured": false,
+      "location_detail": "OSU Memorial Union (MU), Room 104, or Zoom",
+      "schema_start_date": "2026-10-14T12:00:00-07:00",
+      "calendar_link": "/events/ical/2026-10-14-Main-Campus-Ratification-Presentation.ics",
+      "schema_location_name": "OSU Memorial Union (MU), Room 104",
+      "virtual_url": "https://seiu503-org.zoom.us/j/83948011849?pwd=jm6aBQSLSNAJILU9JAW7x4ua9d9mHw.1"
+    },
+    {
+      "date": "2026-10-08",
+      "time": "Noon Pacific · Presentation + Q&A",
+      "title": "Contract Ratification Presentation — OSU Bend",
+      "description": "Thursday, October 8, 2026 at Noon Pacific. Join in person at OSU Bend campus (Obsidian 210 Boardroom) or on Zoom for a tentative agreement presentation and Q&A. Members and nonmembers welcome.",
+      "type": "Membership Meeting",
+      "url": "/events/2026-10-08-Bend-Ratification-Presentation.html",
+      "featured": false,
+      "location_detail": "OSU Bend campus — Obsidian 210 Boardroom, or Zoom",
+      "schema_start_date": "2026-10-08T12:00:00-07:00",
+      "calendar_link": "/events/ical/2026-10-08-Bend-Ratification-Presentation.ics",
+      "schema_location_name": "OSU Bend campus — Obsidian 210 Boardroom",
+      "virtual_url": "https://seiu503-org.zoom.us/j/85461448276?pwd=bCky65SDIhVEt64ihUsFRdZ3PcStNX.1"
+    },
+    {
+      "date": "2026-10-06",
+      "time": "3 p.m. Pacific · Presentation + Q&A",
+      "title": "Contract Ratification Presentation — OSU Hatfield",
+      "description": "Tuesday, October 6, 2026 at 3 p.m. Pacific. Join in person at Hatfield Marine Science Center, Guin Library Seminar Room or on Zoom for a tentative agreement presentation and Q&A. Members and nonmembers welcome.",
+      "type": "Membership Meeting",
+      "url": "/events/2026-10-06-Hatfield-Ratification-Presentation.html",
+      "featured": false,
+      "location_detail": "Hatfield Marine Science Center, Guin Library Seminar Room, or Zoom",
+      "schema_start_date": "2026-10-06T15:00:00-07:00",
+      "calendar_link": "/events/ical/2026-10-06-Hatfield-Ratification-Presentation.ics",
+      "schema_location_name": "Hatfield Marine Science Center, Guin Library Seminar Room",
+      "virtual_url": "https://seiu503-org.zoom.us/j/84821216322?pwd=IbUpYY0Mj1Jgzkin4PCz8qElZWmGi3.1"
+    },
     {
       "date": "2026-09-28",
       "time": "12:00 PM - 1:00 PM",
@@ -8,7 +50,7 @@
       "description": "Victory lunch and emergency membership meeting, Monday, Sept. 28, noon–1 p.m. in front of Kerr or on Zoom. Food provided; no RSVP. Get the bargaining update.",
       "type": "Membership Meeting",
       "url": "/events/2026-09-28-Victory-Lunch-and-Emergency-Membership-Meeting.html",
-      "featured": true,
+      "featured": false,
       "location_detail": "In front of Kerr Administration Building or Zoom",
       "schema_start_date": "2026-09-28T12:00:00-07:00",
       "schema_end_date": "2026-09-28T13:00:00-07:00",
@@ -23,7 +65,7 @@
       "description": "Join our in-person strike captain training Thursday, Sept. 24, from 11 a.m. to 1 p.m. in Memorial Union Room 211. All are welcome.",
       "type": "Strike School",
       "url": "/events/2026-09-24-Strike-Captain-Training-MU.html",
-      "featured": true,
+      "featured": false,
       "location_detail": "Memorial Union, Room 211",
       "schema_start_date": "2026-09-24T11:00:00-07:00",
       "schema_end_date": "2026-09-24T13:00:00-07:00",
@@ -44,7 +86,7 @@
       "description": "Join our online strike captain training Thursday, Sept. 24, from 5:30 to 7:30 p.m. Pacific. All are welcome.",
       "type": "Strike School",
       "url": "/events/2026-09-24-Strike-Captain-Training-Zoom.html",
-      "featured": true,
+      "featured": false,
       "location_detail": "Online via Zoom",
       "schema_start_date": "2026-09-24T17:30:00-07:00",
       "schema_end_date": "2026-09-24T19:30:00-07:00",
@@ -58,7 +100,7 @@
       "description": "Join our emergency membership meeting Friday, Sept. 25, from noon to 1 p.m. in Memorial Union Room 13 or on Zoom. Get the bargaining update and prepare for Monday together.",
       "type": "Membership Meeting",
       "url": "/events/2026-09-25-Emergency-Membership-Meeting.html",
-      "featured": true,
+      "featured": false,
       "location_detail": "Memorial Union, Room 13 or Zoom",
       "schema_start_date": "2026-09-25T12:00:00-07:00",
       "schema_end_date": "2026-09-25T13:00:00-07:00",
@@ -80,7 +122,7 @@
       "description": "Join our in-person strike captain training Sunday, Sept. 27, from 1 to 5 p.m. at the Corvallis union office, 301 SW 4th St., Unit 260.",
       "type": "Strike School",
       "url": "/events/2026-09-27-Strike-Captain-Training.html",
-      "featured": true,
+      "featured": false,
       "location_detail": "Corvallis union office",
       "schema_start_date": "2026-09-27T13:00:00-07:00",
       "schema_end_date": "2026-09-27T17:00:00-07:00",
@@ -101,7 +143,7 @@
       "description": "Cast your strike authorization ballot in person Monday, Sept. 14, from 7:30 a.m. to 5 p.m. in the Memorial Union Multipurpose Room at OSU.",
       "type": "Strike Vote",
       "url": "/events/2026-09-14-OSU-Strike-Authorization-Vote.html",
-      "featured": true,
+      "featured": false,
       "location_detail": "Memorial Union Multipurpose Room, OSU",
       "schema_start_date": "2026-09-14T07:30:00-07:00",
       "schema_end_date": "2026-09-14T17:00:00-07:00",
@@ -136,7 +178,7 @@
       "description": "Join our September OSU membership meeting Thursday, Sept. 17, from noon to 1 p.m. in Memorial Union room 211 or on Zoom.",
       "type": "Membership Meeting",
       "url": "/events/2026-09-17-OSU-Member-Meeting.html",
-      "featured": true,
+      "featured": false,
       "location_detail": "Memorial Union room 211 or Zoom",
       "schema_start_date": "2026-09-17T12:00:00-07:00",
       "schema_end_date": "2026-09-17T13:00:00-07:00",
@@ -200,7 +242,7 @@
       "description": "OSU members can join a Higher Ed strike school to build organizing skills, prepare coworkers and get ready to win a strong contract. Registration is required.",
       "type": "Strike School",
       "url": "/events/2026-09-09-OSU-Higher-Ed-Strike-School.html",
-      "featured": true,
+      "featured": false,
       "location_detail": "Westminster House, 101 NW 23rd St, Corvallis",
       "schema_location_name": "Westminster House",
       "location_address": {
@@ -221,7 +263,7 @@
       "description": "Join SEIU Local 083 members in Memorial Union room 211 or on Zoom for our August OSU membership meeting. Lunch from New Morning Bakery will be provided for in-person attendees.",
       "type": "Membership Meeting",
       "url": "/events/2026-08-20-OSU-Membership-Meeting.html",
-      "featured": true,
+      "featured": false,
       "location_detail": "Memorial Union room 211 or Zoom",
       "schema_location_name": "Memorial Union room 211, Oregon State University",
       "location_address": {
@@ -242,7 +284,7 @@
       "description": "General Council begins with workshops on trans inclusion, bargaining, climate and PERS, grievance tools and union building, followed by delegate orientation, the opening program and the first governance session. Delegate-only event.",
       "type": "Union Governance",
       "url": "/events/2026-08-20-23-SEIU-503-General-Council.html",
-      "featured": true,
+      "featured": false,
       "location_detail": "Oregon Convention Center, Portland",
       "calendar_link": "/events/ical/2026-08-20-SEIU-503-General-Council.ics"
     },
@@ -319,7 +361,7 @@
       "description": "Join an OSU Contract Action Team orientation to review next steps and organizing best practices, then make a plan to get your workplace strike-ready. Choose this session on the signup form.",
       "type": "CAT Training",
       "url": "/events/2026-08-17-27-OSU-CAT-Workshop-Orientations.html",
-      "featured": true,
+      "featured": false,
       "location_detail": "Corvallis Office, 301 SW 4th St, Suite 209",
       "calendar_link": "/events/ical/2026-08-19-OSU-CAT-Workshop-Orientation.ics"
     },
@@ -341,7 +383,7 @@
       "description": "Our SEIU Local 083 Contract Action Team meeting ran on Zoom from noon to 1 p.m. We discussed what was happening in bargaining and how we communicated with coworkers across all campuses to support our bargaining team.",
       "type": "Zoom Meeting",
       "url": "/events/2025-10-22-CAT-Meeting.html",
-      "featured": true,
+      "featured": false,
       "location_detail": "Online via Zoom"
     },
     {
@@ -351,7 +393,7 @@
       "description": "Members joined at the MU Quad to show OSU that classified staff were united for a fair contract while bargaining happened on campus that day. Members wore purple and brought coworkers.",
       "type": "Rally",
       "url": "/events/2026-03-31-Rally-at-OSU.html",
-      "featured": true,
+      "featured": false,
       "location_detail": "MU Quad (OSU Memorial Union)",
       "calendar_link": "/events/ical/2026-03-31-Rally-at-OSU.ics"
     },
@@ -382,7 +424,7 @@
       "description": "Join SEIU Local 083 for a bargaining update membership meeting in Memorial Union room 211 or on Zoom. We will talk through where bargaining stands, what is at stake, and how members are preparing to fight back together.",
       "type": "Membership Meeting",
       "url": "/events/2026-05-21-Membership-Meeting.html",
-      "featured": true,
+      "featured": false,
       "location_detail": "Memorial Union room 211 or Zoom",
       "calendar_link": "/events/ical/2026-05-21-Membership-Meeting.ics"
     },
@@ -415,7 +457,7 @@
       "description": "This bargaining observation was originally scheduled for 10:00 AM. Around 9:00 AM, management changed it to 1:15 PM. Please stay muted for the full session to protect bargaining privilege. Anyone joining after 1:20 PM will be removed.",
       "type": "Zoom Observation",
       "url": "/events/2026-02-12-Bargaining-Zoom-Observation.html",
-      "featured": true,
+      "featured": false,
       "location_detail": "Online via Zoom"
     },
     {
@@ -485,7 +527,7 @@
       "description": "May 1 International Workers' Day celebrates Day Without an Immigrant with rallies across Oregon. SEIU 503 is supporting the PCUN-hosted Salem event and Portland-area actions, with transportation from Portland and Eugene. Register to get updates on the option that works best for you.",
       "type": "Rally",
       "url": "/mayday",
-      "featured": true,
+      "featured": false,
       "location_detail": "Salem, Oregon and Portland-area actions"
     },
     {
@@ -515,7 +557,7 @@
       "description": "Drop by Westminster House on Monroe to help make direct, readable signs before Tuesday's McNary Field rally. Bring a coworker, bring an idea, or just show up for 20 minutes.",
       "type": "Sign-Making Party",
       "url": "/events/2026-06-29-Sign-Making-Party.html",
-      "featured": true,
+      "featured": false,
       "location_detail": "Westminster House on Monroe",
       "calendar_link": "/events/ical/2026-06-29-Sign-Making-Party.ics"
     },
@@ -526,7 +568,7 @@
       "description": "Join coworkers at McNary Field for food, lawn games, and a strong show of unity. Management is offering no raises and no cost-of-living adjustment for four years, and members are showing up for real raises and a fair contract.",
       "type": "Rally",
       "url": "/events/2026-06-30-Rally-at-McNary-Field.html",
-      "featured": true,
+      "featured": false,
       "location_detail": "McNary Field",
       "calendar_link": "/events/ical/2026-06-30-Rally-at-McNary-Field.ics"
     },
@@ -537,7 +579,7 @@
       "description": "Join us Thursday, July 16, at noon in Memorial Union room 215. The Memorial Union double-booked our usual MU 211 room and found this alternate space. TOGO'S sandwiches will be provided. We will talk through the new phase of bargaining, member readiness, and how higher ed works because we work. Zoom details are coming shortly.",
       "type": "Membership Meeting",
       "url": "/events/2026-07-16-General-Membership-Meeting.html",
-      "featured": true,
+      "featured": false,
       "location_detail": "Memorial Union room 215",
       "schema_location_name": "Memorial Union room 215, Oregon State University",
       "location_address": {
@@ -558,7 +600,7 @@
       "description": "Join SEIU Local 083 for our Sublocal Contract Action Team meeting to coordinate coworker outreach and prepare the next round of workplace action.",
       "type": "CAT Meeting",
       "url": "/events/2026-07-18-Sublocal-CAT-Meeting.html",
-      "featured": true,
+      "featured": false,
       "location_detail": "Learning Innovation Center (LInC), room number to be announced",
       "schema_location_name": "Learning Innovation Center (LInC), Oregon State University",
       "location_address": {
@@ -589,7 +631,7 @@
       "description": "Mediation with university management is still underway and taking longer than expected. Join our SEIU Local 503 Higher Ed Bargaining Team on Zoom at 5 p.m. for the latest developments and what comes next. Please join by 5:05 p.m.; anyone joining after 5:05 p.m. will be removed.",
       "type": "Zoom Meeting",
       "url": "/events/2026-07-21-Higher-Ed-Mediation-Update.html",
-      "featured": true,
+      "featured": false,
       "location_detail": "Online via Zoom"
     },
     {
@@ -599,7 +641,7 @@
       "description": "Vet Med coworkers can stop by to meet Sylvia, our SEIU Local 503 organizer, talk about the workplace, and grab food and union swag.",
       "type": "Meet & Greet",
       "url": "/events/2026-07-28-Organizer-Meet-and-Greet-at-Vet-Med.html",
-      "featured": true,
+      "featured": false,
       "location_detail": "College of Veterinary Medicine",
       "schema_location_name": "College of Veterinary Medicine, Oregon State University",
       "schema_start_date": "2026-07-28T11:15:00-07:00"
@@ -611,7 +653,7 @@
       "description": "Join SEIU Local 503 President Johnny Earl and OSU bargaining delegate Damien Manassa in Memorial Union room 211 or on Zoom for a Q&A about where bargaining stands, what a strike is and what the Higher Ed strike pledge means. Sign the pledge with coworkers. Catered lunch will be provided for in-person attendees; menu details and Zoom connection information are coming soon.",
       "type": "Bargaining Action",
       "url": "/events/2026-07-30-Strike-Pledge-Drive-and-Bargaining-QA.html",
-      "featured": true,
+      "featured": false,
       "location_detail": "Memorial Union room 211 or Zoom",
       "schema_location_name": "Memorial Union room 211, Oregon State University",
       "location_address": {
@@ -882,7 +924,7 @@
       "description": "Members and their families gathered at Lanes & Games for bowling, food and community.",
       "type": "Social Event",
       "url": "/events/2025-10-23-Bowling.html",
-      "featured": true,
+      "featured": false,
       "location_detail": "Lanes & Games, MU Basement",
       "calendar_link": "/events/ical/2025-10-23-Bowling.ics"
     },

@@ -9,7 +9,7 @@
     <title>Trabajadores de OSU se manifiestan mientras continúa la negociación | Local 083</title>
     <link rel="stylesheet" href="/styles/tailwind.css">
     <link rel="stylesheet" href="/styles/fonts.css">
-    <link rel="stylesheet" href="/styles/site-shell.css?v=20260928-contract-win">
+    <link rel="stylesheet" href="/styles/site-shell.css?v=20261006-ratification">
     <link rel="icon" href="/images/logo.png" type="image/png">
     <link rel="apple-touch-icon" href="/images/logo.png">
     <style>
@@ -149,9 +149,10 @@
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center" aria-label="Primary navigation">
             <a href="/index.html" class="flex items-center space-x-2">
                 <span class="site-wordmark text-2xl font-bold text-brand-purple-dark">SEIU 503</span>
-                <span class="text-lg text-text-secondary hidden md:block">| Oregon State University</span>
+                <span class="text-lg text-text-secondary hidden xl:block">| Oregon State University</span>
             </a>
-            <div class="hidden lg:flex space-x-8">
+            <div class="hidden lg:flex space-x-6">
+                <a href="/2026-bargaining/" class="text-text-secondary hover:text-brand-purple transition-colors">Bargaining</a>
                 <a href="/about.html" class="text-text-secondary hover:text-brand-purple transition-colors">About</a>
                 <a href="/events.html" class="text-text-secondary hover:text-brand-purple transition-colors">Events</a>
                 <a href="/news.html" class="text-brand-purple font-bold" aria-current="page">News</a>
@@ -164,6 +165,7 @@
             </button>
         </nav>
         <div id="mobile-menu" class="hidden lg:hidden absolute top-full left-0 w-full bg-white border-t border-border-color shadow-lg" role="navigation" aria-label="Mobile navigation">
+            <a href="/2026-bargaining/" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Bargaining</a>
             <a href="/about.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">About</a>
             <a href="/events.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Events</a>
             <a href="/news.html" class="block text-center py-3 px-6 text-lg text-brand-purple bg-brand-purple-light font-bold" aria-current="page">News</a>
@@ -171,11 +173,14 @@
             <a href="/leadership.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Leadership</a>
             <a href="/contact.html" class="block text-center py-3 px-6 text-lg text-text-secondary hover:bg-brand-purple-light">Contact</a>
         </div>
+        <noscript><style>
+            @media (max-width: 1023px) {
+                [data-site-shell-header] { position:static; }
+                [data-site-shell-header] #mobile-menu { display:block; position:static; max-height:none; }
+                [data-site-shell-header] #mobile-menu-button { display:none; }
+            }
+        </style></noscript>
     </header>
-    <aside class="contract-win-banner" aria-label="Contract victory announcement" data-contract-win-banner>
-        <a href="/news/2026-09-28-we-won.html"><strong>We won our fair contract.</strong> <span>Click here to read more →</span></a>
-        <p>The strike is off. Report to work as scheduled.</p>
-    </aside>
     <script data-site-shell-menu-state-script>
         (() => {
             const button = document.getElementById('mobile-menu-button');
@@ -317,7 +322,7 @@
                     <h4 class="text-lg font-semibold mb-4 tracking-wider uppercase"><a href="/resources.html" class="hover:text-brand-purple transition-colors">Resources</a></h4>
                     <ul class="space-y-3">
                         <li><a href="/resources.html" class="text-text-secondary hover:text-brand-purple transition-colors">Resources &amp; Rights</a></li>
-                        <li><a href="/resources/seiu_cba_2022-2026.pdf" class="text-text-secondary hover:text-brand-purple transition-colors">Our Contract (PDF)</a></li>
+                        <li><a href="/resources/seiu_cba_2022-2026.pdf" class="text-text-secondary hover:text-brand-purple transition-colors">2022–2026 contract (PDF)</a></li>
                         <li><a href="/resources/stewards.html" class="text-text-secondary hover:text-brand-purple transition-colors">Find a Steward</a></li>
                         <li><a href="/resources/weingarten-rights.html" class="text-text-secondary hover:text-brand-purple transition-colors">Weingarten Rights</a></li>
                     </ul>
