@@ -232,25 +232,6 @@
         .desk-meta strong { color: var(--brand-purple-dark); font-size: 0.82rem; text-transform: uppercase; }
         .desk-meta a { color: var(--brand-purple); font-weight: 800; text-underline-offset: 0.2rem; }
 
-        .news-flash {
-            align-items: center;
-            background: var(--brand-yellow-light);
-            border: 1px solid #f5d66f;
-            border-radius: 0.9rem;
-            display: grid;
-            gap: 0.8rem;
-            grid-template-columns: auto minmax(0, 1fr) auto;
-            margin-top: 1.25rem;
-            min-height: 3.6rem;
-            padding: 0.7rem 0.85rem;
-        }
-
-        .flash-label { background: var(--brand-yellow); border-radius: 999px; color: #4d3600; font-size: 0.67rem; font-weight: 800; letter-spacing: 0.08em; padding: 0.36rem 0.55rem; text-transform: uppercase; }
-        .flash-copy { color: #4d3600; font-size: 0.88rem; line-height: 1.4; }
-        .flash-copy strong { color: var(--brand-purple-dark); }
-        .flash-date { color: #765d19; font-size: 0.72rem; font-weight: 700; white-space: nowrap; }
-        .news-flash a { color: inherit; display: contents; text-decoration: none; }
-
         .top-stories { display: grid; gap: 1.15rem; grid-template-columns: minmax(0, 1.7fr) minmax(18rem, 0.72fr); margin-top: 1.15rem; }
 
         .lead-story {
@@ -411,8 +392,6 @@
             .brand span { display: none; }
             .news-masthead { align-items: start; grid-template-columns: 1fr; }
             .desk-meta { border-left: 0; border-top: 1px solid #ddd6fe; grid-template-columns: 1fr auto; padding-left: 0; padding-top: 0.8rem; }
-            .news-flash { grid-template-columns: auto minmax(0, 1fr); }
-            .flash-date { grid-column: 2; }
             .lead-story { grid-template-columns: 1fr; }
             .lead-image-wrap { min-height: 18rem; }
             .control-row { grid-template-columns: 1fr 1fr; }
@@ -430,8 +409,6 @@
         @media (max-width: 540px) {
             .container { padding-inline: 1rem; }
             .news-masthead { padding-block: 1.65rem 1.35rem; }
-            .news-flash { align-items: start; grid-template-columns: 1fr; }
-            .flash-date { grid-column: auto; }
             .lead-copy { padding: 1.35rem; }
             .lead-image-wrap { min-height: 14rem; }
             .news-explorer { padding-block: 3rem 4rem; }
@@ -545,14 +522,6 @@
     </section>
 
         <section class="container" aria-label="Top Local 083 stories">
-            <div id="news-flash" class="news-flash">
-                <span class="flash-label">Meeting update</span>
-                <a href="/news/2026-07-10-membership-meeting-room-change.html">
-                    <span class="flash-copy"><strong>July 16 membership meeting moved to MU 215</strong> The July 16 Local 083 membership meeting has moved from MU 211 to MU 215 after a double-booking. Join us at noon for TOGO&#x27;S sandwiches.</span>
-                    <time class="flash-date" datetime="2026-07-10">Jul 10, 2026</time>
-                </a>
-</div>
-
             <div class="top-stories">
                 <!-- NEWS_LEAD_START -->
                 <article class="lead-story" id="lead-story">
@@ -2141,7 +2110,6 @@ Showing 7 of 59 stories
         ];
 
         const elements = {
-            flash: document.getElementById('news-flash'),
             lead: document.getElementById('lead-story'),
             latest: document.getElementById('latest-list'),
             latestCount: document.getElementById('latest-count'),
@@ -2233,16 +2201,6 @@ Showing 7 of 59 stories
                 || state.articles[0];
             if (!featured) return;
             state.leadUrl = featured.url;
-
-            const flash = state.articles.find((article) => article.tags?.includes('Events') && article.tags?.includes('Update')) || state.articles[0];
-            if (flash) {
-                elements.flash.innerHTML = `
-                    <span class="flash-label">${flash.tags?.includes('Events') ? 'Meeting update' : 'Latest update'}</span>
-                    <a href="${escapeHtml(safeUrl(flash.url))}">
-                        <span class="flash-copy"><strong>${escapeHtml(flash.title)}</strong> ${escapeHtml(flash.description)}</span>
-                        <time class="flash-date" datetime="${escapeHtml(flash.publishedAt)}">${escapeHtml(formatDate(flash.publishedAt))}</time>
-                    </a>`;
-            }
 
             const credit = photoCredit(featured);
             const leadImage = responsiveImage(featured.image);

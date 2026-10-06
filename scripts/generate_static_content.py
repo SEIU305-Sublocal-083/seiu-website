@@ -298,15 +298,6 @@ def choose_lead(news: list[dict]) -> dict:
     )
 
 
-def render_news_flash(article: dict) -> str:
-    label = "Meeting update" if "Events" in (article.get("tags") or []) else "Latest update"
-    return f'''                <span class="flash-label">{esc(label)}</span>
-                <a href="{esc(article['url'])}">
-                    <span class="flash-copy"><strong>{esc(article['title'])}</strong> {esc(article.get('description'))}</span>
-                    <time class="flash-date" datetime="{esc(article['publishedAt'])}">{esc(short_date(article['publishedAt']))}</time>
-                </a>'''
-
-
 def render_news_lead(article: dict) -> str:
     src, srcset, width, height = lead_image(article)
     responsive = f' srcset="{esc(srcset)}" sizes="(max-width: 767px) calc(100vw - 2rem), 55vw"' if srcset else ""
@@ -533,10 +524,8 @@ def build(root: Path = ROOT) -> list[Path]:
 
     news_path = root / "news.html"
     source = news_path.read_text(encoding="utf-8")
-    flash = next((item for item in news if {"Events", "Update"}.issubset(set(item.get("tags") or []))), news[0])
     lead = choose_lead(news)
     archive = [item for item in news if item["url"] != lead["url"]][:7]
-    source = replace_element_inner(source, "news-flash", render_news_flash(flash))
     source = replace_element_inner(source, "lead-story", render_news_lead(lead))
     source = replace_element_inner(source, "latest-list", render_latest(news))
     source = replace_element_inner(source, "stories-grid", "\n".join(render_story_card(item, wide=index == 0) for index, item in enumerate(archive)))

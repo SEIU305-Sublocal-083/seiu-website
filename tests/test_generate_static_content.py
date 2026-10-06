@@ -115,7 +115,7 @@ class StaticContentTests(unittest.TestCase):
             )
             (root / "news.html").write_text(
                 graph()
-                + '<div id="news-flash">old</div><article id="lead-story">old</article><div id="latest-list">old</div>'
+                + '<article id="lead-story">old</article><div id="latest-list">old</div>'
                 + '<span id="latest-count">old</span><p id="results-status">old</p><div id="stories-grid">old</div>'
                 + '<script>const fallbackNews = [{"old": true}];</script>',
                 encoding="utf-8",
