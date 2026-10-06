@@ -22,4 +22,4 @@ def render_meetings(events):
     return f'''<div class="ratification-wrap"><h2>Ratification meetings</h2>
     <p>Join in person or on Zoom for a presentation and Q&amp;A. Members and nonmembers are welcome. All times are Pacific.</p>
     <div class="ratification-cards">{''.join(cards)}</div>
-    <p style="margin-top:20px">These are informational meetings; voting happens online using your personal ballot. For accessibility or language support, <a href="mailto:sharpes@seiu503.org">contact Sylvia Sharpe</a>.</p></div>'''
+    <p style="margin-top:20px">These are informational meetings; voting happens online using your personal ballot. For accessibility or language support, <a href="mailto:sharpes@seiu503.org?cc=083execteam%40seiu503.org">contact our organizer</a>.</p></div>'''
