@@ -1,6 +1,27 @@
 [
   {
     "status": "published",
+    "title": "Nominations open for Membership Coordinator",
+    "description": "Nominate yourself or a fellow member October 14\u2013November 13 to help welcome coworkers and strengthen our union.",
+    "url": "/news/2026-10-14-membership-coordinator-nominations.html",
+    "image": "/images/logo.png",
+    "alt": "SEIU Local 503 logo",
+    "tags": [
+      "Membership",
+      "Leadership"
+    ],
+    "author": {
+      "name": "Local 083 Executive Team",
+      "title": "Executive Team"
+    },
+    "publishedAt": "2026-10-13",
+    "createdAt": "2026-10-13",
+    "updatedAt": "2026-10-13",
+    "featured": true,
+    "language": "en"
+  },
+  {
+    "status": "published",
     "title": "Tentative agreement: the strike has been called off",
     "description": "Our Higher Ed Bargaining team announces a tentative agreement. The strike has been called off. Workers should report to work at their usual start times Monday morning.",
     "url": "/news/2026-09-28-we-won.html",
@@ -24,7 +45,7 @@
   {
     "status": "published",
     "title": "Historical: Wages remain unresolved as Oregon university workers prepare to strike",
-    "description": "Historical announcement. The September 28 strike was later called off; see our bargaining hub for current ratification information. Union leaders credit members’ collective action for progress on contract protections.",
+    "description": "Historical announcement. The September 28 strike was later called off; see our bargaining hub for current ratification information. Union leaders credit members\u2019 collective action for progress on contract protections.",
     "url": "/news/2026-09-27-bargaining-stakes.html",
     "image": "/images/654789f0-b8ca-4ba8-96a0-531ad89d38a1-kerr-administration-sunset.webp",
     "alt": "Kerr Administration Building at Oregon State University silhouetted against an orange sunset and dark blue sky.",
@@ -49,7 +70,7 @@
     "description": "Historical announcement. The September 28 strike was later called off; see our bargaining hub for current ratification information. Haggerty expressed sympathy for our demands and cited negotiations with other universities. Our notice identifies Sept. 28 at 6 a.m. as the intended strike start.",
     "url": "/news/2026-09-18-osu-strike-notice-delivered.html",
     "image": "/images/6c1b0ab7-5dff-4b01-a1da-9cda46e5c729.png",
-    "alt": "A Local 083 member hands our union’s strike notice to Roy Haggerty in the Kerr Administration Building lobby.",
+    "alt": "A Local 083 member hands our union\u2019s strike notice to Roy Haggerty in the Kerr Administration Building lobby.",
     "tags": [
       "Bargaining",
       "Strike Notice",
@@ -67,11 +88,11 @@
   },
   {
     "status": "published",
-    "title": "UW workers’ fight is our fight, too",
+    "title": "UW workers\u2019 fight is our fight, too",
     "description": "Our SEIU 925 siblings at the University of Washington are organizing for fair pay and working conditions. Their fight connects with ours at OSU.",
     "url": "/news/2026-09-16-uw-workers-solidarity.html",
     "image": "/images/dc1bcafa-58bc-41d7-b01a-6fbada691fc8-uw-workers-we-keep-uw-running-procession.webp",
-    "alt": "A long procession of marchers in purple follows a “We keep UW running” banner along a campus walkway.",
+    "alt": "A long procession of marchers in purple follows a \u201cWe keep UW running\u201d banner along a campus walkway.",
     "tags": [
       "Bargaining",
       "Solidarity",
@@ -111,16 +132,16 @@
   },
   {
     "status": "published",
-    "title": "Actualización sobre el apoyo económico durante una huelga",
-    "description": "Nuestro sindicato aprobó un apoyo de $80 por día, hasta $400 por semana, y un fondo de ayuda para una posible huelga de educación superior.",
+    "title": "Actualizaci\u00f3n sobre el apoyo econ\u00f3mico durante una huelga",
+    "description": "Nuestro sindicato aprob\u00f3 un apoyo de $80 por d\u00eda, hasta $400 por semana, y un fondo de ayuda para una posible huelga de educaci\u00f3n superior.",
     "url": "/news/es/2026-09-15-actualizacion-apoyo-huelga.html",
     "image": "/images/2026-bargaining-zoom-backgrounds.webp",
-    "alt": "Negociación de educación superior 2026",
+    "alt": "Negociaci\u00f3n de educaci\u00f3n superior 2026",
     "tags": [
       "Bargaining",
       "Strike Benefits",
       "2026 Bargaining",
-      "Español"
+      "Espa\u00f1ol"
     ],
     "author": {
       "name": "SEIU Local 503 at Oregon State University",
@@ -157,17 +178,17 @@
   },
   {
     "status": "published",
-    "title": "Cómo registrarse para la Escuela de Huelga de OSU",
-    "description": "Sigue estos pasos para seleccionar la sesión correcta de la Escuela de Huelga de OSU en el formulario de registro estatal.",
+    "title": "C\u00f3mo registrarse para la Escuela de Huelga de OSU",
+    "description": "Sigue estos pasos para seleccionar la sesi\u00f3n correcta de la Escuela de Huelga de OSU en el formulario de registro estatal.",
     "url": "/news/es/2026-09-01-como-registrarse-escuela-huelga-osu.html",
     "image": "/images/2026-bargaining-zoom-backgrounds.webp",
-    "alt": "Gráfico morado de la campaña de negociación de Educación Superior 2026 con puños levantados y mascotas universitarias.",
+    "alt": "Gr\u00e1fico morado de la campa\u00f1a de negociaci\u00f3n de Educaci\u00f3n Superior 2026 con pu\u00f1os levantados y mascotas universitarias.",
     "tags": [
       "Action",
       "Strike School",
       "Registration",
       "2026 Bargaining",
-      "Español"
+      "Espa\u00f1ol"
     ],
     "author": {
       "name": "SEIU Local 503 en la Universidad Estatal de Oregon",
@@ -206,11 +227,11 @@
   },
   {
     "status": "published",
-    "title": "El equipo de negociación de educación superior declara un punto muerto",
-    "description": "Nuestro equipo declaró un punto muerto tras la mediación del 5 y 6 de agosto mientras la gerencia mantenía recortes a derechos, salud y salarios reales.",
+    "title": "El equipo de negociaci\u00f3n de educaci\u00f3n superior declara un punto muerto",
+    "description": "Nuestro equipo declar\u00f3 un punto muerto tras la mediaci\u00f3n del 5 y 6 de agosto mientras la gerencia manten\u00eda recortes a derechos, salud y salarios reales.",
     "url": "/news/es/2026-08-07-equipo-negociador-declara-punto-muerto.html",
     "image": "/images/6eb56f3e-5b51-43f9-8212-91b5ff76a83a-august-bargaining-team.webp",
-    "alt": "Integrantes del equipo de negociación de educación superior de SEIU Local 503 se reúnen durante la mediación de agosto.",
+    "alt": "Integrantes del equipo de negociaci\u00f3n de educaci\u00f3n superior de SEIU Local 503 se re\u00fanen durante la mediaci\u00f3n de agosto.",
     "tags": [
       "Bargaining",
       "Update",
@@ -218,7 +239,7 @@
       "Action",
       "Mediation",
       "2026 Bargaining",
-      "Español"
+      "Espa\u00f1ol"
     ],
     "author": {
       "name": "SEIU 503 Higher Ed Bargaining Team",
@@ -256,18 +277,18 @@
   },
   {
     "status": "published",
-    "title": "Los trabajadores aumentan la presión tras otra sesión decepcionante",
-    "description": "La gerencia mantuvo cuatro años sin COLA y ataques a la salud, los despidos y las protecciones laborales mientras crecía el compromiso de huelga.",
+    "title": "Los trabajadores aumentan la presi\u00f3n tras otra sesi\u00f3n decepcionante",
+    "description": "La gerencia mantuvo cuatro a\u00f1os sin COLA y ataques a la salud, los despidos y las protecciones laborales mientras crec\u00eda el compromiso de huelga.",
     "url": "/news/es/2026-07-22-trabajadores-aumentan-la-presion.html",
     "image": "/images/75964049-46c7-4f61-9201-23b91585799b-higher-ed-bargaining-campaign.webp",
-    "alt": "Gráfico de la campaña SEIU Local 503 Negociación de Educación Superior 2026, Juntos en Solidaridad.",
+    "alt": "Gr\u00e1fico de la campa\u00f1a SEIU Local 503 Negociaci\u00f3n de Educaci\u00f3n Superior 2026, Juntos en Solidaridad.",
     "tags": [
       "Bargaining",
       "Update",
       "Action",
       "Contract",
       "2026 Bargaining",
-      "Español"
+      "Espa\u00f1ol"
     ],
     "author": {
       "name": "SEIU 503 Higher Ed Bargaining Team",
@@ -305,18 +326,18 @@
   },
   {
     "status": "published",
-    "title": "La gerencia mantiene COLA de 0% y una escala salarial de 19 años",
-    "description": "El personal clasificado de EOU se hizo presente mientras la gerencia mantuvo COLA de 0%, debilitó los escalones y atacó derechos de despido y subcontratación.",
+    "title": "La gerencia mantiene COLA de 0% y una escala salarial de 19 a\u00f1os",
+    "description": "El personal clasificado de EOU se hizo presente mientras la gerencia mantuvo COLA de 0%, debilit\u00f3 los escalones y atac\u00f3 derechos de despido y subcontrataci\u00f3n.",
     "url": "/news/es/2026-07-10-cola-cero-y-escala-de-19-anos.html",
     "image": "/images/e094c84e-0fca-47dc-b66c-33678f10be2f-eou-classified-staff.webp",
-    "alt": "Personal clasificado de Eastern Oregon University se reúne de morado para apoyar la negociación de educación superior.",
+    "alt": "Personal clasificado de Eastern Oregon University se re\u00fane de morado para apoyar la negociaci\u00f3n de educaci\u00f3n superior.",
     "tags": [
       "Bargaining",
       "Update",
       "Contract",
       "Economics",
       "2026 Bargaining",
-      "Español"
+      "Espa\u00f1ol"
     ],
     "author": {
       "name": "SEIU 503 Higher Ed Bargaining Team",
@@ -354,18 +375,18 @@
   },
   {
     "status": "published",
-    "title": "La gerencia llega sin propuesta económica mientras los trabajadores se manifiestan",
-    "description": "La gerencia llegó a la mesa sin propuesta económica mientras cientos de trabajadores se manifestaron por COLA y respeto.",
+    "title": "La gerencia llega sin propuesta econ\u00f3mica mientras los trabajadores se manifiestan",
+    "description": "La gerencia lleg\u00f3 a la mesa sin propuesta econ\u00f3mica mientras cientos de trabajadores se manifestaron por COLA y respeto.",
     "url": "/news/es/2026-06-30-gerencia-sin-propuesta-economica.html",
     "image": "/images/5f3a029f-1677-401d-a54a-ad59730b2453-osu-rally-johnny.webp",
-    "alt": "El presidente de SEIU Local 503, Johnny Earl, habla en la manifestación del 30 de junio en Oregon State University.",
+    "alt": "El presidente de SEIU Local 503, Johnny Earl, habla en la manifestaci\u00f3n del 30 de junio en Oregon State University.",
     "tags": [
       "Bargaining",
       "Update",
       "Rally",
       "Economics",
       "2026 Bargaining",
-      "Español"
+      "Espa\u00f1ol"
     ],
     "author": {
       "name": "SEIU 503 Higher Ed Bargaining Team",
@@ -403,18 +424,18 @@
   },
   {
     "status": "published",
-    "title": "Es momento de entrar en acción por un contrato justo",
-    "description": "Ante la fecha límite del contrato, nuestro equipo llamó a una acción masiva en los campus y compartió las propuestas del 18 de junio.",
+    "title": "Es momento de entrar en acci\u00f3n por un contrato justo",
+    "description": "Ante la fecha l\u00edmite del contrato, nuestro equipo llam\u00f3 a una acci\u00f3n masiva en los campus y comparti\u00f3 las propuestas del 18 de junio.",
     "url": "/news/es/2026-06-18-es-momento-de-entrar-en-accion.html",
     "image": "/images/75964049-46c7-4f61-9201-23b91585799b-higher-ed-bargaining-campaign.webp",
-    "alt": "Gráfico de la campaña SEIU Local 503 Negociación de Educación Superior 2026, Juntos en Solidaridad.",
+    "alt": "Gr\u00e1fico de la campa\u00f1a SEIU Local 503 Negociaci\u00f3n de Educaci\u00f3n Superior 2026, Juntos en Solidaridad.",
     "tags": [
       "Bargaining",
       "Update",
       "Action",
       "Contract",
       "2026 Bargaining",
-      "Español"
+      "Espa\u00f1ol"
     ],
     "author": {
       "name": "SEIU 503 Higher Ed Bargaining Team",
@@ -452,16 +473,16 @@
   {
     "status": "published",
     "title": "La gerencia intensifica los ataques contra los derechos laborales",
-    "description": "La gerencia propuso nuevas restricciones, eliminó protecciones contra la discriminación y dificultó que los trabajadores se unan o contacten a nuestro sindicato.",
+    "description": "La gerencia propuso nuevas restricciones, elimin\u00f3 protecciones contra la discriminaci\u00f3n y dificult\u00f3 que los trabajadores se unan o contacten a nuestro sindicato.",
     "url": "/news/es/2026-06-02-gerencia-ataca-derechos-laborales.html",
     "image": "/images/75964049-46c7-4f61-9201-23b91585799b-higher-ed-bargaining-campaign.webp",
-    "alt": "Gráfico de la campaña SEIU Local 503 Negociación de Educación Superior 2026, Juntos en Solidaridad.",
+    "alt": "Gr\u00e1fico de la campa\u00f1a SEIU Local 503 Negociaci\u00f3n de Educaci\u00f3n Superior 2026, Juntos en Solidaridad.",
     "tags": [
       "Bargaining",
       "Update",
       "Contract",
       "2026 Bargaining",
-      "Español"
+      "Espa\u00f1ol"
     ],
     "author": {
       "name": "SEIU 503 Higher Ed Bargaining Team",
@@ -500,17 +521,17 @@
   {
     "status": "published",
     "title": "Cientos se manifiestan en Eugene ante la oferta salarial de 0%",
-    "description": "Trabajadores llenaron las calles de la University of Oregon después de que la gerencia propusiera cuatro años sin crecimiento salarial.",
+    "description": "Trabajadores llenaron las calles de la University of Oregon despu\u00e9s de que la gerencia propusiera cuatro a\u00f1os sin crecimiento salarial.",
     "url": "/news/es/2026-05-15-manifestacion-eugene-salarios-cero.html",
     "image": "/images/9c0addce-e409-4fbf-a748-467a5b449f54-uo-rally.webp",
-    "alt": "Trabajadores de educación superior se manifiestan en la University of Oregon en Eugene.",
+    "alt": "Trabajadores de educaci\u00f3n superior se manifiestan en la University of Oregon en Eugene.",
     "tags": [
       "Bargaining",
       "Update",
       "Rally",
       "Economics",
       "2026 Bargaining",
-      "Español"
+      "Espa\u00f1ol"
     ],
     "author": {
       "name": "SEIU 503 Higher Ed Bargaining Team",
@@ -548,18 +569,18 @@
   },
   {
     "status": "published",
-    "title": "Nuestro sindicato presenta propuestas económicas para trabajadores universitarios",
-    "description": "Nuestro equipo propuso aumentos ligados a la inflación, salud protegida, pago por antigüedad y un contrato de dos años mientras la gerencia retuvo su oferta salarial.",
+    "title": "Nuestro sindicato presenta propuestas econ\u00f3micas para trabajadores universitarios",
+    "description": "Nuestro equipo propuso aumentos ligados a la inflaci\u00f3n, salud protegida, pago por antig\u00fcedad y un contrato de dos a\u00f1os mientras la gerencia retuvo su oferta salarial.",
     "url": "/news/es/2026-04-24-propuestas-economicas-del-sindicato.html",
     "image": "/images/75964049-46c7-4f61-9201-23b91585799b-higher-ed-bargaining-campaign.webp",
-    "alt": "Gráfico de la campaña SEIU Local 503 Negociación de Educación Superior 2026, Juntos en Solidaridad.",
+    "alt": "Gr\u00e1fico de la campa\u00f1a SEIU Local 503 Negociaci\u00f3n de Educaci\u00f3n Superior 2026, Juntos en Solidaridad.",
     "tags": [
       "Bargaining",
       "Update",
       "Contract",
       "Economics",
       "2026 Bargaining",
-      "Español"
+      "Espa\u00f1ol"
     ],
     "author": {
       "name": "SEIU 503 Higher Ed Bargaining Team",
@@ -597,18 +618,18 @@
   },
   {
     "status": "published",
-    "title": "Trabajadores de OSU se manifiestan mientras continúa la negociación",
-    "description": "Trabajadores de OSU marcharon en apoyo de nuestro equipo mientras ambas partes intercambiaron propuestas económicas, de derechos y protecciones laborales.",
+    "title": "Trabajadores de OSU se manifiestan mientras contin\u00faa la negociaci\u00f3n",
+    "description": "Trabajadores de OSU marcharon en apoyo de nuestro equipo mientras ambas partes intercambiaron propuestas econ\u00f3micas, de derechos y protecciones laborales.",
     "url": "/news/es/2026-04-01-trabajadores-osu-se-manifiestan.html",
     "image": "/images/899a3c4c-64d4-479a-ac4c-c6bdbb838a87-osu-rally.webp",
-    "alt": "Trabajadores de Oregon State University se manifiestan en apoyo del equipo de negociación de educación superior.",
+    "alt": "Trabajadores de Oregon State University se manifiestan en apoyo del equipo de negociaci\u00f3n de educaci\u00f3n superior.",
     "tags": [
       "Bargaining",
       "Update",
       "Rally",
       "Action",
       "2026 Bargaining",
-      "Español"
+      "Espa\u00f1ol"
     ],
     "author": {
       "name": "SEIU 503 Higher Ed Bargaining Team",
@@ -645,17 +666,17 @@
   },
   {
     "status": "published",
-    "title": "La negociación en PSU se centra en derechos y protecciones laborales",
-    "description": "Nuestro equipo impulsó derechos sindicales, protecciones para inmigrantes y asuntos laborales mientras la gerencia buscó limitar licencias y otras protecciones.",
+    "title": "La negociaci\u00f3n en PSU se centra en derechos y protecciones laborales",
+    "description": "Nuestro equipo impuls\u00f3 derechos sindicales, protecciones para inmigrantes y asuntos laborales mientras la gerencia busc\u00f3 limitar licencias y otras protecciones.",
     "url": "/news/es/2026-03-23-psu-derechos-y-protecciones.html",
     "image": "/images/f957de47-b518-4afb-9831-921c21873253-psu-rally.webp",
-    "alt": "Una persona se dirige a trabajadores de educación superior en una manifestación de negociación en Portland State University.",
+    "alt": "Una persona se dirige a trabajadores de educaci\u00f3n superior en una manifestaci\u00f3n de negociaci\u00f3n en Portland State University.",
     "tags": [
       "Bargaining",
       "Update",
       "Contract",
       "2026 Bargaining",
-      "Español"
+      "Espa\u00f1ol"
     ],
     "author": {
       "name": "SEIU 503 Higher Ed Bargaining Team",
@@ -692,8 +713,8 @@
   },
   {
     "status": "published",
-    "title": "Trabajadores se manifiestan en WOU mientras la negociación avanza hacia OSU",
-    "description": "Miembros, estudiantes y aliados se manifestaron en Western Oregon University antes de propuestas sobre despidos, subcontratación, IA y más.",
+    "title": "Trabajadores se manifiestan en WOU mientras la negociaci\u00f3n avanza hacia OSU",
+    "description": "Miembros, estudiantes y aliados se manifestaron en Western Oregon University antes de propuestas sobre despidos, subcontrataci\u00f3n, IA y m\u00e1s.",
     "url": "/news/es/2026-03-09-manifestacion-wou-actualizacion.html",
     "image": "/images/b5f74535-d5eb-45a4-9f00-096bb7ae7619-wou-rally.webp",
     "alt": "Trabajadoras de Western Oregon University sostienen carteles en apoyo de estudiantes y personal clasificado.",
@@ -702,7 +723,7 @@
       "Update",
       "Rally",
       "2026 Bargaining",
-      "Español"
+      "Espa\u00f1ol"
     ],
     "author": {
       "name": "SEIU 503 Higher Ed Bargaining Team",
@@ -740,18 +761,18 @@
   },
   {
     "status": "published",
-    "title": "La negociación comienza con casi 150 miembros observando",
-    "description": "Miembros se hicieron presentes en línea y en Eugene cuando nuestro equipo electo abrió negociaciones con las siete universidades públicas de Oregón.",
+    "title": "La negociaci\u00f3n comienza con casi 150 miembros observando",
+    "description": "Miembros se hicieron presentes en l\u00ednea y en Eugene cuando nuestro equipo electo abri\u00f3 negociaciones con las siete universidades p\u00fablicas de Oreg\u00f3n.",
     "url": "/news/es/2026-02-17-negociacion-comienza-con-poder-sindical.html",
     "image": "/images/a1e459b1-0199-4598-a857-caccff69e1fc-melissa-opening-statement.webp",
-    "alt": "La directora ejecutiva de SEIU Local 503, Melissa Unger, lee la declaración inicial de negociación de educación superior.",
+    "alt": "La directora ejecutiva de SEIU Local 503, Melissa Unger, lee la declaraci\u00f3n inicial de negociaci\u00f3n de educaci\u00f3n superior.",
     "tags": [
       "Bargaining",
       "Update",
       "Events",
       "Action",
       "2026 Bargaining",
-      "Español"
+      "Espa\u00f1ol"
     ],
     "author": {
       "name": "SEIU 503 Higher Ed Bargaining Team",
@@ -788,17 +809,17 @@
   },
   {
     "status": "published",
-    "title": "La negociación comienza con prioridades claras de los miembros",
-    "description": "Nuestro equipo llegó a las declaraciones iniciales enfocado en salarios justos, beneficios protegidos, cargas sostenibles, seguridad laboral y poder sindical.",
+    "title": "La negociaci\u00f3n comienza con prioridades claras de los miembros",
+    "description": "Nuestro equipo lleg\u00f3 a las declaraciones iniciales enfocado en salarios justos, beneficios protegidos, cargas sostenibles, seguridad laboral y poder sindical.",
     "url": "/news/es/2026-02-10-negociacion-comienza-prioridades.html",
     "image": "/images/72c22a0d-7a5e-4d75-beb3-7a48f91a1554-bargaining-starts.webp",
-    "alt": "Gráfico de Negociación de Educación Superior 2026 que anuncia el inicio de las negociaciones en febrero.",
+    "alt": "Gr\u00e1fico de Negociaci\u00f3n de Educaci\u00f3n Superior 2026 que anuncia el inicio de las negociaciones en febrero.",
     "tags": [
       "Bargaining",
       "Update",
       "Contract",
       "2026 Bargaining",
-      "Español"
+      "Espa\u00f1ol"
     ],
     "author": {
       "name": "SEIU 503 Higher Ed Bargaining Team",
@@ -835,17 +856,17 @@
   },
   {
     "status": "published",
-    "title": "Nuestro equipo se prepara para luchar por un contrato sólido",
-    "description": "El equipo preparó propuestas, organizó la petición contractual y defendió el acceso amplio de miembros para observar las negociaciones.",
+    "title": "Nuestro equipo se prepara para luchar por un contrato s\u00f3lido",
+    "description": "El equipo prepar\u00f3 propuestas, organiz\u00f3 la petici\u00f3n contractual y defendi\u00f3 el acceso amplio de miembros para observar las negociaciones.",
     "url": "/news/es/2026-01-21-equipo-prepara-contrato-solido.html",
     "image": "/images/75964049-46c7-4f61-9201-23b91585799b-higher-ed-bargaining-campaign.webp",
-    "alt": "Gráfico de la campaña SEIU Local 503 Negociación de Educación Superior 2026, Juntos en Solidaridad.",
+    "alt": "Gr\u00e1fico de la campa\u00f1a SEIU Local 503 Negociaci\u00f3n de Educaci\u00f3n Superior 2026, Juntos en Solidaridad.",
     "tags": [
       "Bargaining",
       "Update",
       "Contract",
       "2026 Bargaining",
-      "Español"
+      "Espa\u00f1ol"
     ],
     "author": {
       "name": "SEIU 503 Higher Ed Bargaining Team",
@@ -883,18 +904,18 @@
   },
   {
     "status": "published",
-    "title": "Cierra la encuesta y comienza la petición por el contrato",
-    "description": "Nuestro equipo comenzó a revisar los resultados de la encuesta y pidió a cada trabajador de educación superior que firme la petición por nuestro próximo contrato.",
+    "title": "Cierra la encuesta y comienza la petici\u00f3n por el contrato",
+    "description": "Nuestro equipo comenz\u00f3 a revisar los resultados de la encuesta y pidi\u00f3 a cada trabajador de educaci\u00f3n superior que firme la petici\u00f3n por nuestro pr\u00f3ximo contrato.",
     "url": "/news/es/2025-12-05-cierra-encuesta-comienza-peticion.html",
     "image": "/images/75964049-46c7-4f61-9201-23b91585799b-higher-ed-bargaining-campaign.webp",
-    "alt": "Gráfico de la campaña SEIU Local 503 Negociación de Educación Superior 2026, Juntos en Solidaridad.",
+    "alt": "Gr\u00e1fico de la campa\u00f1a SEIU Local 503 Negociaci\u00f3n de Educaci\u00f3n Superior 2026, Juntos en Solidaridad.",
     "tags": [
       "Bargaining",
       "Update",
       "Action",
       "Contract",
       "2026 Bargaining",
-      "Español"
+      "Espa\u00f1ol"
     ],
     "author": {
       "name": "SEIU 503 Higher Ed Bargaining Team",
@@ -932,18 +953,18 @@
   },
   {
     "status": "published",
-    "title": "Abre la encuesta de negociación de educación superior",
-    "description": "Nuestro sindicato lanzó la encuesta confidencial que guiaría las prioridades para el contrato de educación superior de 2026.",
+    "title": "Abre la encuesta de negociaci\u00f3n de educaci\u00f3n superior",
+    "description": "Nuestro sindicato lanz\u00f3 la encuesta confidencial que guiar\u00eda las prioridades para el contrato de educaci\u00f3n superior de 2026.",
     "url": "/news/es/2025-09-23-abre-encuesta-de-negociacion.html",
     "image": "/images/75964049-46c7-4f61-9201-23b91585799b-higher-ed-bargaining-campaign.webp",
-    "alt": "Gráfico de la campaña SEIU Local 503 Negociación de Educación Superior 2026, Juntos en Solidaridad.",
+    "alt": "Gr\u00e1fico de la campa\u00f1a SEIU Local 503 Negociaci\u00f3n de Educaci\u00f3n Superior 2026, Juntos en Solidaridad.",
     "tags": [
       "Bargaining",
       "Update",
       "Action",
       "Contract",
       "2026 Bargaining",
-      "Español"
+      "Espa\u00f1ol"
     ],
     "author": {
       "name": "SEIU 503 Higher Ed Bargaining Team",
@@ -980,17 +1001,17 @@
   },
   {
     "status": "published",
-    "title": "Líderes se preparan para la lucha por el contrato de 2026",
-    "description": "Delegados de las siete universidades públicas de Oregón se reunieron en Salem para estudiar la economía, planear la campaña y preparar la encuesta.",
+    "title": "L\u00edderes se preparan para la lucha por el contrato de 2026",
+    "description": "Delegados de las siete universidades p\u00fablicas de Oreg\u00f3n se reunieron en Salem para estudiar la econom\u00eda, planear la campa\u00f1a y preparar la encuesta.",
     "url": "/news/es/2025-09-18-conferencia-de-negociacion.html",
     "image": "/images/78573217-cbca-431e-af2e-c9c2a5ff4e27-damien-speaks.webp",
-    "alt": "El líder de OSU Damien Manassa habla durante la Conferencia de Negociación de Educación Superior.",
+    "alt": "El l\u00edder de OSU Damien Manassa habla durante la Conferencia de Negociaci\u00f3n de Educaci\u00f3n Superior.",
     "tags": [
       "Bargaining",
       "Update",
       "Events",
       "2026 Bargaining",
-      "Español"
+      "Espa\u00f1ol"
     ],
     "author": {
       "name": "SEIU 503 Higher Ed Bargaining Team",
@@ -1241,7 +1262,7 @@
   },
   {
     "title": "Fighting for Higher Education",
-    "description": "Join classified workers at Oregon’s Public Universities in the fight for fair wages, benefit protections, and union power. Sign the petition today!",
+    "description": "Join classified workers at Oregon\u2019s Public Universities in the fight for fair wages, benefit protections, and union power. Sign the petition today!",
     "url": "/news/2025-12-15-fighting-for-higher-education.html",
     "image": "/images/452eb3b6-e72b-43ec-9698-bde681a4df9f-Fighting-for-Higher-Education-Banner.webp",
     "alt": "Graphic with text 'Bargaining Update' and SEIU 503 logo",
@@ -1355,7 +1376,7 @@
   },
   {
     "title": "Our Union Bargaining Update: Protecting Our Hardship Leave",
-    "description": "Our bargaining team is fighting management’s proposal to eliminate Hardship Leave. Learn why it matters and how members can take action today.",
+    "description": "Our bargaining team is fighting management\u2019s proposal to eliminate Hardship Leave. Learn why it matters and how members can take action today.",
     "url": "/news/2026-03-11-protecting-our-hardship-leave.html",
     "image": "/images/2026-bargaining-zoom-backgrounds.webp",
     "alt": "Purple 2026 higher education bargaining graphic",
