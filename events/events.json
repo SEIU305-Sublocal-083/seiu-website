@@ -1,6 +1,21 @@
 {
-  "asOf": "2026-10-06",
+  "asOf": "2026-10-15",
   "events": [
+    {
+      "date": "2026-10-15",
+      "time": "Noon–1 p.m. Pacific · Program begins 12:15 p.m.",
+      "title": "OSU Membership Meeting",
+      "description": "Join our membership meeting in MU 211 or on Zoom. We’ll begin at 12:15 p.m. with contract updates, membership news, and Workday.",
+      "type": "Membership Meeting",
+      "url": "/events/2026-10-15-OSU-Membership-Meeting.html",
+      "featured": true,
+      "location_detail": "Memorial Union room 211, or Zoom",
+      "schema_location_name": "Memorial Union room 211",
+      "schema_start_date": "2026-10-15T12:00:00-07:00",
+      "schema_end_date": "2026-10-15T13:00:00-07:00",
+      "virtual_url": "https://seiu503-org.zoom.us/j/88970842649?pwd=GQVIk2iaxcw4lzw76TvNu6bGdkC64c.1",
+      "calendar_link": "/events/ical/2026-10-15-OSU-Membership-Meeting.ics"
+    },
     {
       "date": "2026-10-14",
       "time": "Noon Pacific · Presentation + Q&A",

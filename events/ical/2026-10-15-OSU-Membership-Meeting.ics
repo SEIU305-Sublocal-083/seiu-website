@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//SEIU Local 083//Membership Meetings//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:20261015-membership-meeting@local083.org
+DTSTAMP:20261015T180000Z
+DTSTART:20261015T190000Z
+DTEND:20261015T200000Z
+SUMMARY:OSU Membership Meeting
+LOCATION:Memorial Union room 211 or Zoom
+DESCRIPTION:Program begins at 12:15 p.m. Pacific. Join on Zoom: https://
+ seiu503-org.zoom.us/j/88970842649?pwd=GQVIk2iaxcw4lzw76TvNu6bGdkC64c.1
+URL:https://www.local083.org/events/2026-10-15-OSU-Membership-Meeting.ht
+ ml
+END:VEVENT
+END:VCALENDAR

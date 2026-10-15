@@ -5,7 +5,7 @@
     <link>https://www.local083.org</link>
     <description>Upcoming events from SEIU Local 503 at Oregon State University.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 14 Oct 2026 07:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 15 Oct 2026 07:00:00 GMT</lastBuildDate>
     <atom:link href="https://www.local083.org/events/rss.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>Membership Meeting</title>
@@ -653,6 +653,14 @@
       <guid isPermaLink="false">event:2026-10-14:Contract Ratification Presentation — OSU Main Campus</guid>
       <description>Wednesday, October 14, 2026 at Noon Pacific. Join in person at OSU Memorial Union (MU), Room 104 or on Zoom for a tentative agreement presentation and Q&amp;A. Members and nonmembers welcome. | Date: 2026-10-14 | Time: Noon Pacific · Presentation + Q&amp;A | Location: OSU Memorial Union (MU), Room 104, or Zoom</description>
       <pubDate>Wed, 14 Oct 2026 07:00:00 GMT</pubDate>
+      <category>Membership Meeting</category>
+    </item>
+    <item>
+      <title>OSU Membership Meeting</title>
+      <link>https://www.local083.org/events/2026-10-15-OSU-Membership-Meeting.html</link>
+      <guid isPermaLink="false">event:2026-10-15:OSU Membership Meeting</guid>
+      <description>Join our membership meeting in MU 211 or on Zoom. We’ll begin at 12:15 p.m. with contract updates, membership news, and Workday. | Date: 2026-10-15 | Time: Noon–1 p.m. Pacific · Program begins 12:15 p.m. | Location: Memorial Union room 211, or Zoom</description>
+      <pubDate>Thu, 15 Oct 2026 07:00:00 GMT</pubDate>
       <category>Membership Meeting</category>
     </item>
   </channel>
