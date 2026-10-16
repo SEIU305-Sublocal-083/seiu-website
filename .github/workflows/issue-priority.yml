@@ -1,0 +1,69 @@
+name: Issue priority policy
+
+on:
+  issues:
+    types: [opened, labeled, unlabeled, reopened]
+  workflow_dispatch:
+    inputs:
+      issue_number:
+        description: Issue number to reconcile
+        required: true
+        type: string
+
+permissions:
+  issues: write
+
+concurrency:
+  group: issue-priority-${{ github.event.issue.number || inputs.issue_number }}
+  cancel-in-progress: false
+
+jobs:
+  enforce-priority:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      # No checkout and no execution of contributor-controlled code.
+      - name: Default to P2 and preserve only Jax's priority decisions
+        uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # v8
+        with:
+          script: |
+            const priorityOwner = 'jaxsnjohnson';
+            const isPriority = name => /^\[P[0-5]\]$/.test(name || '');
+            const issue_number = context.payload.issue?.number || Number(context.payload.inputs?.issue_number);
+            if (!Number.isSafeInteger(issue_number) || issue_number < 1) {
+              throw new Error('A valid issue number is required.');
+            }
+            const target = {...context.repo, issue_number};
+            const {data: issue} = await github.rest.issues.get(target);
+            if (issue.pull_request) {
+              core.info('Priority policy applies to issues only.');
+              return;
+            }
+            // Replay only the owner's choices. Bot repairs and other users' changes
+            // must never become authoritative. Paginate to retain older owner choices.
+            const events = await github.paginate(github.rest.issues.listEventsForTimeline, {
+              ...target, per_page: 100
+            });
+            let desired = '[P2]';
+            for (const event of events) {
+              if (event.actor?.login?.toLowerCase() !== priorityOwner) continue;
+              const label = event.label?.name;
+              if (!isPriority(label)) continue;
+              if (event.event === 'labeled') desired = label;
+              if (event.event === 'unlabeled' && label === desired) desired = '[P2]';
+            }
+            // Touch priority labels individually so concurrent category-label edits survive.
+            const labels = await github.paginate(github.rest.issues.listLabelsOnIssue, {...target, per_page: 100});
+            for (const label of labels) {
+              if (isPriority(label.name) && label.name !== desired) {
+                try {
+                  await github.rest.issues.removeLabel({...target, name: label.name});
+                } catch (error) {
+                  if (error.status !== 404) throw error;
+                }
+              }
+            }
+            if (!labels.some(label => label.name === desired)) {
+              await github.rest.issues.addLabels({...target, labels: [desired]});
+            }
+            core.info(`Issue #${issue_number}: enforced ${desired}; only ${priorityOwner} sets priority.`);
