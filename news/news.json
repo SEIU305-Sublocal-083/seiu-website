@@ -1,6 +1,28 @@
 [
   {
     "status": "published",
+    "title": "2026 Higher Ed contract summary for OSU classified staff",
+    "description": "A Local 083 reference for Oregon State University staff, adapted from SEIU 503\u2019s October 2 bargaining update.",
+    "url": "/news/2026-10-16-higher-ed-contract-summary.html",
+    "image": "/images/logo.png",
+    "alt": "SEIU Local 503 logo",
+    "tags": [
+      "Bargaining",
+      "2026 Bargaining",
+      "Contract"
+    ],
+    "author": {
+      "name": "Local 083",
+      "title": "Local 083"
+    },
+    "publishedAt": "2026-10-16",
+    "createdAt": "2026-10-16",
+    "updatedAt": "2026-10-16",
+    "featured": false,
+    "language": "en"
+  },
+  {
+    "status": "published",
     "title": "We Did It \u2013 We Have a New Contract!",
     "description": "Higher education members voted 97% to ratify our new contract: 3% COLAs in 2026 and 2027, full annual steps and workplace protections.",
     "url": "/news/2026-10-15-we-have-a-new-contract.html",
