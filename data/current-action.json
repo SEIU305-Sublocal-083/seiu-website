@@ -1,57 +1,57 @@
 {
   "schema": "local083-current-action-v1",
-  "updatedAt": "2026-10-06",
-  "defaultAction": "ratification-2026",
+  "updatedAt": "2026-10-16",
+  "defaultAction": "contract-ratified-2026",
   "slots": {
-    "homepageHero": "ratification-2026",
-    "homepagePromo": "ratification-2026",
-    "actionPageDefault": "ratification-2026"
+    "homepageHero": "contract-ratified-2026",
+    "homepagePromo": "contract-ratified-2026",
+    "actionPageDefault": "contract-ratified-2026"
   },
   "emailActions": {},
   "actions": {
     "fair-contract-won": {
       "slug": "fair-contract-won",
-      "type": "ratification",
-      "eyebrow": "Strike called off · Updated October 6, 2026",
-      "headline": "Our agreement. Our vote.",
-      "summary": "The strike was called off September 28. Our tentative agreement is now before members for ratification. Review the summary, bring your questions to a meeting, and use your personal ballot email to vote.",
-      "promoEyebrow": "Your next step",
-      "promoHeadline": "Find your ballot. Make your voice heard.",
-      "promoBody": "Look for SEIU 503’s October 5 email, “Vote on Contract Ratification Now!” Voting is online; informational meetings do not include a vote.",
+      "type": "contract_victory",
+      "eyebrow": "Ratified · October 15, 2026",
+      "headline": "We have a new contract!",
+      "summary": "Higher education members voted 97% to ratify our new contract. We won 3% COLAs on November 1, 2026 and November 1, 2027, full steps each year and workplace protections.",
+      "promoEyebrow": "Our new contract",
+      "promoHeadline": "Know what we won. Know what comes next.",
+      "promoBody": "Read the ratification announcement and our guide to key dates, protected benefits and the work still ahead.",
       "details": [
         {
-          "label": "Strike status",
-          "value": "Called off September 28, 2026. Report to work as scheduled."
+          "label": "Contract status",
+          "value": "Ratified. SEIU 503 announced the result October 15, 2026."
         },
         {
-          "label": "Voting cutoff",
-          "value": "Exact closing date and time awaiting confirmation (Pacific time)."
+          "label": "COLA dates",
+          "value": "3% on November 1, 2026; 3% on November 1, 2027."
         }
       ],
       "ctas": [
         {
           "id": "primary",
-          "label": "Voting information",
-          "href": "/2026-bargaining/#vote",
+          "label": "Read the ratification news",
+          "href": "/news/2026-10-15-we-have-a-new-contract.html",
           "style": "primary"
         },
         {
           "id": "secondary",
-          "label": "Meetings & Zoom details",
-          "href": "/2026-bargaining/#ratification-meetings",
+          "label": "What our new contract means",
+          "href": "/news/2026-10-16-what-our-new-contract-means.html",
           "style": "secondary"
         },
         {
           "id": "tertiary",
-          "label": "Get ballot help",
-          "href": "/2026-bargaining/#vote",
+          "label": "Read SEIU 503’s agreement summary",
+          "href": "https://seiu503.org/member_news/2026-higher-ed-tentative-agreement-summary/",
           "style": "outline"
         }
       ],
       "actionPage": {
-        "headline": "Our tentative agreement is ready for member review.",
-        "body": "The strike has been called off. Review the tentative agreement summary and attend an informational meeting.",
-        "nextStep": "Use your own SEIU 503 ballot email to vote online. Contact our union if you need ballot help."
+        "headline": "We have a new contract!",
+        "body": "Higher education members voted 97% to ratify our new contract. We won 3% COLAs on November 1, 2026 and November 1, 2027, full steps each year and workplace protections.",
+        "nextStep": "Read the announcement and contract explainer, then share them with a coworker."
       },
       "image": {
         "src": "/images/78573217-cbca-431e-af2e-c9c2a5ff4e27-damien-speaks.webp",
@@ -364,47 +364,47 @@
     },
     "strike-notice-delivered": {
       "slug": "strike-notice-delivered",
-      "type": "ratification",
-      "eyebrow": "Strike called off · Updated October 6, 2026",
-      "headline": "Our agreement. Our vote.",
-      "summary": "The strike was called off September 28. Our tentative agreement is now before members for ratification. Review the summary, bring your questions to a meeting, and use your personal ballot email to vote.",
-      "promoEyebrow": "Your next step",
-      "promoHeadline": "Find your ballot. Make your voice heard.",
-      "promoBody": "Look for SEIU 503’s October 5 email, “Vote on Contract Ratification Now!” Voting is online; informational meetings do not include a vote.",
+      "type": "contract_victory",
+      "eyebrow": "Ratified · October 15, 2026",
+      "headline": "We have a new contract!",
+      "summary": "Higher education members voted 97% to ratify our new contract. We won 3% COLAs on November 1, 2026 and November 1, 2027, full steps each year and workplace protections.",
+      "promoEyebrow": "Our new contract",
+      "promoHeadline": "Know what we won. Know what comes next.",
+      "promoBody": "Read the ratification announcement and our guide to key dates, protected benefits and the work still ahead.",
       "details": [
         {
-          "label": "Strike status",
-          "value": "Called off September 28, 2026. Report to work as scheduled."
+          "label": "Contract status",
+          "value": "Ratified. SEIU 503 announced the result October 15, 2026."
         },
         {
-          "label": "Voting cutoff",
-          "value": "Exact closing date and time awaiting confirmation (Pacific time)."
+          "label": "COLA dates",
+          "value": "3% on November 1, 2026; 3% on November 1, 2027."
         }
       ],
       "ctas": [
         {
           "id": "primary",
-          "label": "Voting information",
-          "href": "/2026-bargaining/#vote",
+          "label": "Read the ratification news",
+          "href": "/news/2026-10-15-we-have-a-new-contract.html",
           "style": "primary"
         },
         {
           "id": "secondary",
-          "label": "Meetings & Zoom details",
-          "href": "/2026-bargaining/#ratification-meetings",
+          "label": "What our new contract means",
+          "href": "/news/2026-10-16-what-our-new-contract-means.html",
           "style": "secondary"
         },
         {
           "id": "tertiary",
-          "label": "Get ballot help",
-          "href": "/2026-bargaining/#vote",
+          "label": "Read SEIU 503’s agreement summary",
+          "href": "https://seiu503.org/member_news/2026-higher-ed-tentative-agreement-summary/",
           "style": "outline"
         }
       ],
       "actionPage": {
-        "headline": "Our tentative agreement is ready for member review.",
-        "body": "The strike has been called off. Review the tentative agreement summary and attend an informational meeting.",
-        "nextStep": "Use your own SEIU 503 ballot email to vote online. Contact our union if you need ballot help."
+        "headline": "We have a new contract!",
+        "body": "Higher education members voted 97% to ratify our new contract. We won 3% COLAs on November 1, 2026 and November 1, 2027, full steps each year and workplace protections.",
+        "nextStep": "Read the announcement and contract explainer, then share them with a coworker."
       },
       "image": {
         "src": "/images/78573217-cbca-431e-af2e-c9c2a5ff4e27-damien-speaks.webp",
@@ -415,47 +415,47 @@
     },
     "strike-september-28": {
       "slug": "strike-september-28",
-      "type": "ratification",
-      "eyebrow": "Strike called off · Updated October 6, 2026",
-      "headline": "Our agreement. Our vote.",
-      "summary": "The strike was called off September 28. Our tentative agreement is now before members for ratification. Review the summary, bring your questions to a meeting, and use your personal ballot email to vote.",
-      "promoEyebrow": "Your next step",
-      "promoHeadline": "Find your ballot. Make your voice heard.",
-      "promoBody": "Look for SEIU 503’s October 5 email, “Vote on Contract Ratification Now!” Voting is online; informational meetings do not include a vote.",
+      "type": "contract_victory",
+      "eyebrow": "Ratified · October 15, 2026",
+      "headline": "We have a new contract!",
+      "summary": "Higher education members voted 97% to ratify our new contract. We won 3% COLAs on November 1, 2026 and November 1, 2027, full steps each year and workplace protections.",
+      "promoEyebrow": "Our new contract",
+      "promoHeadline": "Know what we won. Know what comes next.",
+      "promoBody": "Read the ratification announcement and our guide to key dates, protected benefits and the work still ahead.",
       "details": [
         {
-          "label": "Strike status",
-          "value": "Called off September 28, 2026. Report to work as scheduled."
+          "label": "Contract status",
+          "value": "Ratified. SEIU 503 announced the result October 15, 2026."
         },
         {
-          "label": "Voting cutoff",
-          "value": "Exact closing date and time awaiting confirmation (Pacific time)."
+          "label": "COLA dates",
+          "value": "3% on November 1, 2026; 3% on November 1, 2027."
         }
       ],
       "ctas": [
         {
           "id": "primary",
-          "label": "Voting information",
-          "href": "/2026-bargaining/#vote",
+          "label": "Read the ratification news",
+          "href": "/news/2026-10-15-we-have-a-new-contract.html",
           "style": "primary"
         },
         {
           "id": "secondary",
-          "label": "Meetings & Zoom details",
-          "href": "/2026-bargaining/#ratification-meetings",
+          "label": "What our new contract means",
+          "href": "/news/2026-10-16-what-our-new-contract-means.html",
           "style": "secondary"
         },
         {
           "id": "tertiary",
-          "label": "Get ballot help",
-          "href": "/2026-bargaining/#vote",
+          "label": "Read SEIU 503’s agreement summary",
+          "href": "https://seiu503.org/member_news/2026-higher-ed-tentative-agreement-summary/",
           "style": "outline"
         }
       ],
       "actionPage": {
-        "headline": "Our tentative agreement is ready for member review.",
-        "body": "The strike has been called off. Review the tentative agreement summary and attend an informational meeting.",
-        "nextStep": "Use your own SEIU 503 ballot email to vote online. Contact our union if you need ballot help."
+        "headline": "We have a new contract!",
+        "body": "Higher education members voted 97% to ratify our new contract. We won 3% COLAs on November 1, 2026 and November 1, 2027, full steps each year and workplace protections.",
+        "nextStep": "Read the announcement and contract explainer, then share them with a coworker."
       },
       "image": {
         "src": "/images/78573217-cbca-431e-af2e-c9c2a5ff4e27-damien-speaks.webp",
@@ -466,47 +466,98 @@
     },
     "ratification-2026": {
       "slug": "ratification-2026",
-      "type": "ratification",
-      "eyebrow": "Updated October 6, 2026 · Local 083",
-      "headline": "Our agreement. Our vote.",
-      "summary": "The strike was called off September 28. Our tentative agreement is now before members for ratification. Review the summary, bring your questions to a meeting, and use your personal ballot email to vote.",
-      "promoEyebrow": "Your next step",
-      "promoHeadline": "Find your ballot. Make your voice heard.",
-      "promoBody": "Look for SEIU 503’s October 5 email, “Vote on Contract Ratification Now!” Voting is online; informational meetings do not include a vote.",
+      "type": "contract_victory",
+      "eyebrow": "Ratified · October 15, 2026",
+      "headline": "We have a new contract!",
+      "summary": "Higher education members voted 97% to ratify our new contract. We won 3% COLAs on November 1, 2026 and November 1, 2027, full steps each year and workplace protections.",
+      "promoEyebrow": "Our new contract",
+      "promoHeadline": "Know what we won. Know what comes next.",
+      "promoBody": "Read the ratification announcement and our guide to key dates, protected benefits and the work still ahead.",
       "details": [
         {
-          "label": "Strike status",
-          "value": "Called off September 28, 2026. Report to work as scheduled."
+          "label": "Contract status",
+          "value": "Ratified. SEIU 503 announced the result October 15, 2026."
         },
         {
-          "label": "Voting cutoff",
-          "value": "Exact closing date and time awaiting confirmation (Pacific time)."
+          "label": "COLA dates",
+          "value": "3% on November 1, 2026; 3% on November 1, 2027."
         }
       ],
       "ctas": [
         {
           "id": "primary",
-          "label": "Voting information",
-          "href": "/2026-bargaining/#vote",
+          "label": "Read the ratification news",
+          "href": "/news/2026-10-15-we-have-a-new-contract.html",
           "style": "primary"
         },
         {
           "id": "secondary",
-          "label": "Meetings & Zoom details",
-          "href": "/2026-bargaining/#ratification-meetings",
+          "label": "What our new contract means",
+          "href": "/news/2026-10-16-what-our-new-contract-means.html",
           "style": "secondary"
         },
         {
           "id": "tertiary",
-          "label": "Get ballot help",
-          "href": "/2026-bargaining/#vote",
+          "label": "Read SEIU 503’s agreement summary",
+          "href": "https://seiu503.org/member_news/2026-higher-ed-tentative-agreement-summary/",
           "style": "outline"
         }
       ],
       "actionPage": {
-        "headline": "Our tentative agreement is ready for member review.",
-        "body": "The strike has been called off. Review the tentative agreement summary and attend an informational meeting.",
-        "nextStep": "Use your own SEIU 503 ballot email to vote online. Contact our union if you need ballot help."
+        "headline": "We have a new contract!",
+        "body": "Higher education members voted 97% to ratify our new contract. We won 3% COLAs on November 1, 2026 and November 1, 2027, full steps each year and workplace protections.",
+        "nextStep": "Read the announcement and contract explainer, then share them with a coworker."
+      },
+      "image": {
+        "src": "/images/78573217-cbca-431e-af2e-c9c2a5ff4e27-damien-speaks.webp",
+        "alt": "OSU bargaining delegate Damien Manassa speaks during the Higher Education Bargaining Conference.",
+        "width": 2560,
+        "height": 1707
+      }
+    },
+    "contract-ratified-2026": {
+      "slug": "contract-ratified-2026",
+      "type": "contract_victory",
+      "eyebrow": "Ratified · October 15, 2026",
+      "headline": "We have a new contract!",
+      "summary": "Higher education members voted 97% to ratify our new contract. We won 3% COLAs on November 1, 2026 and November 1, 2027, full steps each year and workplace protections.",
+      "promoEyebrow": "Our new contract",
+      "promoHeadline": "Know what we won. Know what comes next.",
+      "promoBody": "Read the ratification announcement and our guide to key dates, protected benefits and the work still ahead.",
+      "details": [
+        {
+          "label": "Contract status",
+          "value": "Ratified. SEIU 503 announced the result October 15, 2026."
+        },
+        {
+          "label": "COLA dates",
+          "value": "3% on November 1, 2026; 3% on November 1, 2027."
+        }
+      ],
+      "ctas": [
+        {
+          "id": "primary",
+          "label": "Read the ratification news",
+          "href": "/news/2026-10-15-we-have-a-new-contract.html",
+          "style": "primary"
+        },
+        {
+          "id": "secondary",
+          "label": "What our new contract means",
+          "href": "/news/2026-10-16-what-our-new-contract-means.html",
+          "style": "secondary"
+        },
+        {
+          "id": "tertiary",
+          "label": "Read SEIU 503’s agreement summary",
+          "href": "https://seiu503.org/member_news/2026-higher-ed-tentative-agreement-summary/",
+          "style": "outline"
+        }
+      ],
+      "actionPage": {
+        "headline": "We have a new contract!",
+        "body": "Higher education members voted 97% to ratify our new contract. We won 3% COLAs on November 1, 2026 and November 1, 2027, full steps each year and workplace protections.",
+        "nextStep": "Read the announcement and contract explainer, then share them with a coworker."
       },
       "image": {
         "src": "/images/78573217-cbca-431e-af2e-c9c2a5ff4e27-damien-speaks.webp",
@@ -517,48 +568,48 @@
     }
   },
   "fallback": {
-    "slug": "ratification-2026",
-    "type": "ratification",
-    "eyebrow": "Updated October 6, 2026 · Local 083",
-    "headline": "Our agreement. Our vote.",
-    "summary": "The strike was called off September 28. Our tentative agreement is now before members for ratification. Review the summary, bring your questions to a meeting, and use your personal ballot email to vote.",
-    "promoEyebrow": "Your next step",
-    "promoHeadline": "Find your ballot. Make your voice heard.",
-    "promoBody": "Look for SEIU 503’s October 5 email, “Vote on Contract Ratification Now!” Voting is online; informational meetings do not include a vote.",
+    "slug": "contract-ratified-2026",
+    "type": "contract_victory",
+    "eyebrow": "Ratified · October 15, 2026",
+    "headline": "We have a new contract!",
+    "summary": "Higher education members voted 97% to ratify our new contract. We won 3% COLAs on November 1, 2026 and November 1, 2027, full steps each year and workplace protections.",
+    "promoEyebrow": "Our new contract",
+    "promoHeadline": "Know what we won. Know what comes next.",
+    "promoBody": "Read the ratification announcement and our guide to key dates, protected benefits and the work still ahead.",
     "details": [
       {
-        "label": "Strike status",
-        "value": "Called off September 28, 2026. Report to work as scheduled."
+        "label": "Contract status",
+        "value": "Ratified. SEIU 503 announced the result October 15, 2026."
       },
       {
-        "label": "Voting cutoff",
-        "value": "Exact closing date and time awaiting confirmation (Pacific time)."
+        "label": "COLA dates",
+        "value": "3% on November 1, 2026; 3% on November 1, 2027."
       }
     ],
     "ctas": [
       {
         "id": "primary",
-        "label": "Voting information",
-        "href": "/2026-bargaining/#vote",
+        "label": "Read the ratification news",
+        "href": "/news/2026-10-15-we-have-a-new-contract.html",
         "style": "primary"
       },
       {
         "id": "secondary",
-        "label": "Meetings & Zoom details",
-        "href": "/2026-bargaining/#ratification-meetings",
+        "label": "What our new contract means",
+        "href": "/news/2026-10-16-what-our-new-contract-means.html",
         "style": "secondary"
       },
       {
         "id": "tertiary",
-        "label": "Get ballot help",
-        "href": "/2026-bargaining/#vote",
+        "label": "Read SEIU 503’s agreement summary",
+        "href": "https://seiu503.org/member_news/2026-higher-ed-tentative-agreement-summary/",
         "style": "outline"
       }
     ],
     "actionPage": {
-      "headline": "Our tentative agreement is ready for member review.",
-      "body": "The strike has been called off. Review the tentative agreement summary and attend an informational meeting.",
-      "nextStep": "Use your own SEIU 503 ballot email to vote online. Contact our union if you need ballot help."
+      "headline": "We have a new contract!",
+      "body": "Higher education members voted 97% to ratify our new contract. We won 3% COLAs on November 1, 2026 and November 1, 2027, full steps each year and workplace protections.",
+      "nextStep": "Read the announcement and contract explainer, then share them with a coworker."
     },
     "image": {
       "src": "/images/78573217-cbca-431e-af2e-c9c2a5ff4e27-damien-speaks.webp",

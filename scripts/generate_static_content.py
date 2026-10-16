@@ -547,15 +547,18 @@ def build(root: Path = ROOT) -> list[Path]:
     source = update_json_ld(source, lambda graph: update_events_graph(graph, events))
     events_path.write_text(source, encoding="utf-8")
 
+    action_path = root / "data" / "current-action.json"
+    actions = json.loads(action_path.read_text(encoding="utf-8")) if action_path.exists() else {}
+    ratified = actions.get("actions", {}).get(actions.get("defaultAction"), {}).get("type") == "contract_victory"
     home_path = root / "index.html"
     source = home_path.read_text(encoding="utf-8")
     if 'id="ratification-meetings"' in source:
-        source = replace_element_inner(source, "ratification-meetings", render_meetings(events_all))
+        source = replace_element_inner(source, "ratification-meetings", render_meetings(events_all, ratified=ratified))
     hub_path = root / "2026-bargaining" / "index.html"
     if hub_path.exists():
         hub_source = hub_path.read_text(encoding="utf-8")
         if 'id="ratification-meetings"' in hub_source:
-            hub_source = replace_element_inner(hub_source, "ratification-meetings", render_meetings(events_all))
+            hub_source = replace_element_inner(hub_source, "ratification-meetings", render_meetings(events_all, ratified=ratified))
             hub_path.write_text(hub_source, encoding="utf-8")
     if 'id="homepage-action"' in source:
         actions = json.loads((root / "data" / "current-action.json").read_text(encoding="utf-8"))

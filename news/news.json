@@ -1,6 +1,50 @@
 [
   {
     "status": "published",
+    "title": "We Did It \u2013 We Have a New Contract!",
+    "description": "Higher education members voted 97% to ratify our new contract: 3% COLAs in 2026 and 2027, full annual steps and workplace protections.",
+    "url": "/news/2026-10-15-we-have-a-new-contract.html",
+    "image": "/images/logo.png",
+    "alt": "SEIU Local 503 logo",
+    "tags": [
+      "Bargaining",
+      "2026 Bargaining",
+      "Contract"
+    ],
+    "author": {
+      "name": "Your Higher Education Bargaining Team",
+      "title": "Higher Education Bargaining Team"
+    },
+    "publishedAt": "2026-10-15",
+    "createdAt": "2026-10-15",
+    "updatedAt": "2026-10-16",
+    "featured": true,
+    "language": "en"
+  },
+  {
+    "status": "published",
+    "title": "What our new contract means: key dates and next steps",
+    "description": "Pay dates, the 2028 reopener, protected benefits and the negotiations still ahead.",
+    "url": "/news/2026-10-16-what-our-new-contract-means.html",
+    "image": "/images/logo.png",
+    "alt": "SEIU Local 503 logo",
+    "tags": [
+      "Bargaining",
+      "2026 Bargaining",
+      "Contract"
+    ],
+    "author": {
+      "name": "Local 083",
+      "title": "Local 083"
+    },
+    "publishedAt": "2026-10-16",
+    "createdAt": "2026-10-16",
+    "updatedAt": "2026-10-16",
+    "featured": false,
+    "language": "en"
+  },
+  {
+    "status": "published",
     "title": "Nominations open for Membership Coordinator",
     "description": "Nominate yourself or a fellow member October 14\u2013November 13 to help welcome coworkers and strengthen our union.",
     "url": "/news/2026-10-14-membership-coordinator-nominations.html",
@@ -39,7 +83,7 @@
     "publishedAt": "2026-09-28",
     "createdAt": "2026-09-28",
     "updatedAt": "2026-09-28",
-    "featured": true,
+    "featured": false,
     "language": "en"
   },
   {
