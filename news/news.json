@@ -1,6 +1,28 @@
 [
   {
     "status": "published",
+    "title": "We won a 3% raise starting November 1",
+    "description": "Our ratified contract delivers a 3% cost-of-living increase effective November 1, 2026, for covered Oregon State University classified staff.",
+    "url": "/news/2026-11-02-we-won-three-percent.html",
+    "image": "/images/56963056-31e1-4cb8-8605-ed4baf0a6236-osu-western-campus-view-from-lpsc.webp",
+    "alt": "Western Greenhouses and surrounding Oregon State University buildings and research fields, viewed from atop LPSC.",
+    "tags": [
+      "Bargaining",
+      "Contract",
+      "2026 Bargaining"
+    ],
+    "author": {
+      "name": "SEIU Local 503, Local 083",
+      "title": "Local 083"
+    },
+    "publishedAt": "2026-11-02",
+    "createdAt": "2026-11-02",
+    "updatedAt": "2026-11-02",
+    "featured": true,
+    "language": "en"
+  },
+  {
+    "status": "published",
     "title": "2026 Higher Ed contract summary for OSU classified staff",
     "description": "A Local 083 reference for Oregon State University staff, adapted from SEIU 503\u2019s October 2 bargaining update.",
     "url": "/news/2026-10-16-higher-ed-contract-summary.html",
