@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Local 083//Events//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:20261119-osu-membership-meeting@local083.org
+DTSTAMP:20261116T160000Z
+DTSTART:20261119T200000Z
+DTEND:20261119T210000Z
+SUMMARY:OSU Membership Meeting
+LOCATION:Memorial Union room 211\, Oregon State University\; or Zoom
+DESCRIPTION:Celebrate our contract win and discuss changes facing higher e
+ ducation.\nZoom: https://seiu503-org.zoom.us/j/86470761763?pwd=2EgOFumTad
+ arj3BFQHbLhxDFXDD9u0.1
+URL:https://www.local083.org/events/2026-11-19-OSU-Membership-Meeting.html
+END:VEVENT
+END:VCALENDAR

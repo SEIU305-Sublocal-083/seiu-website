@@ -5,8 +5,16 @@
     <link>https://www.local083.org</link>
     <description>Combined news and event updates from SEIU Local 503 at Oregon State University.</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 02 Nov 2026 08:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 19 Nov 2026 08:00:00 GMT</lastBuildDate>
     <atom:link href="https://www.local083.org/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>[Event] OSU Membership Meeting</title>
+      <link>https://www.local083.org/events/2026-11-19-OSU-Membership-Meeting.html</link>
+      <guid isPermaLink="false">event:2026-11-19:OSU Membership Meeting:combined</guid>
+      <description>Celebrate our contract win and talk about the changes facing higher education. Join Local 083 on November 19, noon–1 p.m. Pacific, in MU 211 or on Zoom. | Date: 2026-11-19 | Time: Noon–1 p.m. Pacific | Location: Memorial Union room 211, or Zoom</description>
+      <pubDate>Thu, 19 Nov 2026 08:00:00 GMT</pubDate>
+      <category>Membership Meeting</category>
+    </item>
     <item>
       <title>[News] We won a 3% raise. Here’s when you’ll see it.</title>
       <link>https://www.local083.org/news/2026-11-02-we-won-three-percent.html</link>

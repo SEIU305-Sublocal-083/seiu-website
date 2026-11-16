@@ -1,6 +1,21 @@
 {
-  "asOf": "2026-10-15",
+  "asOf": "2026-11-16",
   "events": [
+    {
+      "date": "2026-11-19",
+      "time": "Noon–1 p.m. Pacific",
+      "title": "OSU Membership Meeting",
+      "description": "Celebrate our contract win and talk about the changes facing higher education. Join Local 083 on November 19, noon–1 p.m. Pacific, in MU 211 or on Zoom.",
+      "type": "Membership Meeting",
+      "url": "/events/2026-11-19-OSU-Membership-Meeting.html",
+      "featured": true,
+      "location_detail": "Memorial Union room 211, or Zoom",
+      "schema_location_name": "Memorial Union room 211",
+      "schema_start_date": "2026-11-19T12:00:00-08:00",
+      "schema_end_date": "2026-11-19T13:00:00-08:00",
+      "virtual_url": "https://seiu503-org.zoom.us/j/86470761763?pwd=2EgOFumTadarj3BFQHbLhxDFXDD9u0.1",
+      "calendar_link": "/events/ical/2026-11-19-OSU-Membership-Meeting.ics"
+    },
     {
       "date": "2026-10-15",
       "time": "Noon–1 p.m. Pacific · Program begins 12:15 p.m.",
