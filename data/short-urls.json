@@ -94,5 +94,11 @@
     "target": "https://local083.us18.list-manage.com/subscribe?u=0eab8f11133c965a81c06f0cd&id=50e99d5915",
     "title": "Local 083 Email Updates",
     "description": "Sign up for bargaining updates, meeting reminders and ways to take action with our union at Oregon State University."
+  },
+  {
+    "slug": "hecc-survey",
+    "target": "https://survey.eu.qualtrics.com/jfe/form/SV_eFMEp4J46tQmVue",
+    "title": "Oregon HB 4124 public survey",
+    "description": "Go directly to the public survey about Oregon’s colleges and universities."
   }
 ]
