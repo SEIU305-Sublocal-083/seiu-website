@@ -1,6 +1,27 @@
 [
   {
     "status": "published",
+    "title": "Oregon\u2019s HB 4124 public higher education survey",
+    "description": "Oregon\u2019s HB 4124 study seeks input from classified staff, friends and family about public colleges and universities. Survey deadline: Dec. 4, 2026.",
+    "url": "/news/2026-11-24-oregon-hb-4124-survey.html",
+    "image": "/images/bcc4cf8b-f5d8-4e17-a506-5a4e304eb05e-osu-memorial-union.webp",
+    "alt": "The front entrance of Oregon State University\u2019s Memorial Union.",
+    "tags": [
+      "Higher Education",
+      "HB 4124"
+    ],
+    "author": {
+      "name": "SEIU Local 503, Local 083",
+      "title": "Local 083"
+    },
+    "publishedAt": "2026-11-24",
+    "createdAt": "2026-11-24",
+    "updatedAt": "2026-11-24",
+    "featured": false,
+    "language": "en"
+  },
+  {
+    "status": "published",
     "title": "We won a 3% raise. Here\u2019s when you\u2019ll see it.",
     "description": "Our new contract raises base pay effective Nov. 1. Here\u2019s how your pay period affects your November paycheck.",
     "url": "/news/2026-11-02-we-won-three-percent.html",

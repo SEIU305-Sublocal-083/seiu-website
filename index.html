@@ -565,20 +565,20 @@
         {
           "@type": "ListItem",
           "position": 1,
+          "url": "https://www.local083.org/news/2026-11-24-oregon-hb-4124-survey.html",
+          "name": "Oregon’s HB 4124 public higher education survey"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
           "url": "https://www.local083.org/news/2026-11-02-we-won-three-percent.html",
           "name": "We won a 3% raise. Here’s when you’ll see it."
         },
         {
           "@type": "ListItem",
-          "position": 2,
+          "position": 3,
           "url": "https://www.local083.org/news/2026-10-16-higher-ed-contract-summary.html",
           "name": "2026 Higher Ed contract summary for OSU classified staff"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "url": "https://www.local083.org/news/2026-10-16-what-our-new-contract-means.html",
-          "name": "What our new contract means: key dates and next steps"
         }
       ]
     },
@@ -715,6 +715,29 @@
             <a class="btn btn-secondary" href="/news/2026-10-16-higher-ed-contract-summary.html" data-action-tertiary data-ph-event="take_action_click" data-ph-label="Read our contract summary" data-ph-metadata="{}">Read our contract summary</a>
         </div>
 </section>
+    <section id="hb4124-survey-callout" aria-labelledby="hb4124-survey-heading" hidden>
+        <div class="container mx-auto px-6 pt-6">
+            <div class="flex flex-col items-start gap-4 rounded-lg border border-border-color bg-brand-purple-light p-5 md:flex-row md:items-center md:justify-between">
+                <div>
+                    <h2 id="hb4124-survey-heading" class="text-xl font-bold text-brand-purple-dark">Oregon higher education survey closes <time datetime="2026-12-04">Dec. 4</time></h2>
+                    <p class="mt-1 text-text-secondary">OSU classified staff, friends, and family can all take part.</p>
+                </div>
+                <a class="btn btn-outline shrink-0" href="/news/2026-11-24-oregon-hb-4124-survey.html">See survey details</a>
+            </div>
+        </div>
+    </section>
+    <script>
+        (() => {
+            const callout = document.getElementById('hb4124-survey-callout');
+            const closesAt = Date.parse('2026-12-05T00:00:00-08:00');
+            const updateCallout = () => { callout.hidden = Date.now() >= closesAt; };
+            updateCallout();
+            window.addEventListener('pageshow', updateCallout);
+            if (!callout.hidden) {
+                window.setTimeout(updateCallout, Math.min(closesAt - Date.now(), 2147483647));
+            }
+        })();
+    </script>
 <section class="worker-help" aria-labelledby="worker-help-heading">
         <div class="container mx-auto px-6 py-6 md:py-7">
             <div class="worker-help-inner">
@@ -775,12 +798,12 @@
                 </article>
                 <div class="space-y-6">
                     <article class="news-card bg-white rounded-2xl border border-border-color overflow-hidden group">
-                        <a href="/news/2026-10-16-higher-ed-contract-summary.html" class="block news-card-media aspect-[16/7]" aria-label="Read 2026 Higher Ed contract summary for OSU classified staff"><img src="/images/logo.png" alt="SEIU Local 503 logo" loading="lazy" decoding="async" width="1200" height="675"></a>
-                        <div class="p-5 md:p-6"><div class="flex items-center gap-3 text-xs mb-3"><span class="font-bold uppercase tracking-wide text-brand-purple">Bargaining</span><span class="text-text-secondary">October 16, 2026</span></div><h3 class="font-bold text-xl md:text-2xl leading-tight mb-3">2026 Higher Ed contract summary for OSU classified staff</h3><p class="text-text-secondary text-sm leading-relaxed">A Local 083 reference for Oregon State University staff, adapted from SEIU 503’s October 2 bargaining update.</p><a href="/news/2026-10-16-higher-ed-contract-summary.html" class="text-brand-purple font-bold mt-4 inline-block group-hover:underline">Read the story →</a></div>
+                        <a href="/news/2026-11-24-oregon-hb-4124-survey.html" class="block news-card-media aspect-[16/7]" aria-label="Read Oregon’s HB 4124 public higher education survey"><img src="/images/bcc4cf8b-f5d8-4e17-a506-5a4e304eb05e-osu-memorial-union.webp" alt="The front entrance of Oregon State University’s Memorial Union." loading="lazy" decoding="async" width="1200" height="675"></a>
+                        <div class="p-5 md:p-6"><div class="flex items-center gap-3 text-xs mb-3"><span class="font-bold uppercase tracking-wide text-brand-purple">Higher Education</span><span class="text-text-secondary">November 24, 2026</span></div><h3 class="font-bold text-xl md:text-2xl leading-tight mb-3">Oregon’s HB 4124 public higher education survey</h3><p class="text-text-secondary text-sm leading-relaxed">Oregon’s HB 4124 study seeks input from classified staff, friends and family about public colleges and universities. Survey deadline: Dec. 4, 2026.</p><a href="/news/2026-11-24-oregon-hb-4124-survey.html" class="text-brand-purple font-bold mt-4 inline-block group-hover:underline">Read the story →</a></div>
                     </article>
                     <article class="news-card bg-white rounded-2xl border border-border-color overflow-hidden group">
-                        <a href="/news/2026-10-16-what-our-new-contract-means.html" class="block news-card-media aspect-[16/7]" aria-label="Read What our new contract means: key dates and next steps"><img src="/images/logo.png" alt="SEIU Local 503 logo" loading="lazy" decoding="async" width="1200" height="675"></a>
-                        <div class="p-5 md:p-6"><div class="flex items-center gap-3 text-xs mb-3"><span class="font-bold uppercase tracking-wide text-brand-purple">Bargaining</span><span class="text-text-secondary">October 16, 2026</span></div><h3 class="font-bold text-xl md:text-2xl leading-tight mb-3">What our new contract means: key dates and next steps</h3><p class="text-text-secondary text-sm leading-relaxed">Pay dates, the 2028 reopener, protected benefits and the negotiations still ahead.</p><a href="/news/2026-10-16-what-our-new-contract-means.html" class="text-brand-purple font-bold mt-4 inline-block group-hover:underline">Read the story →</a></div>
+                        <a href="/news/2026-10-16-higher-ed-contract-summary.html" class="block news-card-media aspect-[16/7]" aria-label="Read 2026 Higher Ed contract summary for OSU classified staff"><img src="/images/logo.png" alt="SEIU Local 503 logo" loading="lazy" decoding="async" width="1200" height="675"></a>
+                        <div class="p-5 md:p-6"><div class="flex items-center gap-3 text-xs mb-3"><span class="font-bold uppercase tracking-wide text-brand-purple">Bargaining</span><span class="text-text-secondary">October 16, 2026</span></div><h3 class="font-bold text-xl md:text-2xl leading-tight mb-3">2026 Higher Ed contract summary for OSU classified staff</h3><p class="text-text-secondary text-sm leading-relaxed">A Local 083 reference for Oregon State University staff, adapted from SEIU 503’s October 2 bargaining update.</p><a href="/news/2026-10-16-higher-ed-contract-summary.html" class="text-brand-purple font-bold mt-4 inline-block group-hover:underline">Read the story →</a></div>
                     </article>
                 </div>
 </div>
